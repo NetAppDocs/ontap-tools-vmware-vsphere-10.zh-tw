@@ -1,5 +1,5 @@
 ---
-permalink: concept/asup.html 
+permalink: concepts/asup.html 
 sidebar: sidebar 
 keywords:  
 summary: 此機制可主動監控系統健全狀況、並自動傳送訊息給NetApp技術支援、您的內部支援組織及支援合作夥伴。AutoSupport雖然根據預設會啟用技術支援的支援功能、但您必須設定正確的選項、並擁有有效的郵件主機、才能將訊息傳送給內部支援組織。AutoSupport 
