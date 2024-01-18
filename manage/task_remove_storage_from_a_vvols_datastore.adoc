@@ -35,6 +35,9 @@ DELETE
 ----
   DELETE /api/v1/vcenters/cdded9ad-6bsd-4c9e-b44g-691250bfe2df/vvols/datastores/datastore-28?delete_volumes=true
 ----
+
+NOTE: 刪除 vVols 資料存放區工作流程會刪除資料存放區 - Volume （如果您已將 delete_volume ）旗標設為 true 、無論資料存放區 - Volume 是受管理還是未受管理。
+
 * 刪除 vVols 資料存放區、不要從儲存區刪除磁碟區
 
 

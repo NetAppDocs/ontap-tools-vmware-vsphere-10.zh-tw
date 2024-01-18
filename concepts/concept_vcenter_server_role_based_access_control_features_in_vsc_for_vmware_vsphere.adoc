@@ -38,7 +38,7 @@ vCenter Server提供角色型存取控制（RBAC）、可讓您控制vSphere物�
 
 NOTE: vCenter Server 角色適用於 ONTAP 工具 vCenter 使用者、而非系統管理員。依預設、系統管理員擁有產品的完整存取權、不需要指派角色給他們。
 
-使用者和群組並未指派角色給他們。身為 vCenter Server 角色的一部分、即可存取角色。
+使用者和群組可以成為 vCenter Server 角色的一部分、藉此存取角色。
 
 
 

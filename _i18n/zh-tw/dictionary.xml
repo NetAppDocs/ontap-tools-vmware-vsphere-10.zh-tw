@@ -404,7 +404,6 @@
   <block id="ce7cb9480d630713fc44a2f9e2273a42" category="list-text">按一下 * 新增 * 圖示。</block>
   <block id="ef59b5af74d1b1aa24395b9491647640" category="list-text">輸入儲存供應商的連線資訊：</block>
   <block id="77cef77e665ad7d002465ac0ebd7fb15" category="list-text">名稱：任何使用者易記的名稱、例如「 ScaleoutVP 」</block>
-  <block id="8830b67cd089d24cc92948e8271a67b0" category="list-text">網址：<block ref="9db1fbe5367e07ad476cea37f9aa812e" category="inline-link-rx"></block> - URL 中的名稱對應於在部署單一 vCenter 部署（或）多 vCenter 部署的單一 vCenter 部署（或）網域名稱期間所提供的虛擬 IP 。</block>
   <block id="7a7e4311e3d4256bb5dc8666f51daccb" category="list-text">認證：在 OVA 部署期間提供的 &lt;VASA Provider UserName&gt;/&lt; VASA Provider password&gt; 。</block>
   <block id="fbce45ba9d44733fbab7b187a96af41e" category="list-text">在 VASA 註冊之後、按一下 * 確定 * 。
 請確定其列在儲存設備供應商下方、且狀態為線上。</block>
@@ -795,7 +794,6 @@ vCenter 8 在精簡資源配置中、將容量提高至 256GB LUN 。</block>
   <block id="344687b1f8337fc7dd37917a74d46f9a" category="cell">執行動作的實體。VMware vCenter 物件包括資料中心、資料夾、資源池、叢集、主機、 和 VM</block>
   <block id="05206c56912863d79578b5fcb147092f" category="paragraph">若要成功完成工作、您必須擁有適當的 vCenter Server RBAC 角色。在工作期間、 ONTAP 工具會先檢查使用者的 vCenter Server 角色、然後再檢查使用者的 ONTAP 權限。</block>
   <block id="aafdd15db41596697a2eae0a7f4a1e48" category="admonition">vCenter Server 角色適用於 ONTAP 工具 vCenter 使用者、而非系統管理員。依預設、系統管理員擁有產品的完整存取權、不需要指派角色給他們。</block>
-  <block id="f8482d25f67ff16f85cd357691527065" category="paragraph">使用者和群組並未指派角色給他們。身為 vCenter Server 角色的一部分、即可存取角色。</block>
   <block id="0f9feaf083615e8846e538d5b34566ac" category="section-title">有關指派和修改 vCenter Server 角色的重點</block>
   <block id="3314432e9743e55f152832883016d5bb" category="paragraph">如果您想限制 vSphere 物件和工作的存取、只需要設定 vCenter Server 角色。否則、您可以以系統管理員的身分登入。此登入可讓您自動存取所有vSphere物件。</block>
   <block id="5fb4985540d209a017332028f425ead8" category="paragraph">指派角色的位置會決定使用者可以執行的 ONTAP 工具工作。您可以隨時修改一個角色。
@@ -837,5 +835,10 @@ vCenter 8 在精簡資源配置中、將容量提高至 256GB LUN 。</block>
   <block id="956040396bc93fbe70e3c9e235f5bfdb" category="sidebar">存取ONTAP VMware工具維護主控台</block>
   <block id="0460583622f03a52d7693094d6fa2452" category="sidebar">概念</block>
   <block id="99da96b7c57595264a2d5f3ba294a0af" category="sidebar">角色型存取控制</block>
-  <block id="96ab5f4eecc9217c7e8b30303647f507" category="sidebar">關於以角色為基礎ONTAP 的存取控制功能之概述</block>
+  <block id="d24271a1f22c82f9f35e39eb3c1987a9" category="list-text">網址：<block ref="9db1fbe5367e07ad476cea37f9aa812e" category="inline-link-rx"></block> - URL 中的名稱對應於在部署單一 vCenter 部署（或）多 vCenter 部署的單一 vCenter 部署（或）網域名稱期間所提供的虛擬 IP 。將憑證新增至 URL 。相同的憑證會發佈至 vCenter 。</block>
+  <block id="706d26bec853805e4de29044300749ad" category="list-text">系統管理員使用者名稱和系統管理員密碼：這是用來登入 * ONTAP tools* UI 的密碼。</block>
+  <block id="b910beb5fe2953d304ea1b38de1c4fa3" category="list-text">從商業 CA 取得 CA 憑證（根、葉和中介憑證）。</block>
+  <block id="31b887a5d4bfcf42237476c03005131d" category="paragraph">使用者和群組可以成為 vCenter Server 角色的一部分、藉此存取角色。</block>
+  <block id="8a52f25f3fca1f3b4922e7e5dc09fb04" category="admonition">刪除 vVols 資料存放區工作流程會刪除資料存放區 - Volume （如果您已將 delete_volume ）旗標設為 true 、無論資料存放區 - Volume 是受管理還是未受管理。</block>
+  <block id="d0119a1425315c47822975d16de6de70" category="sidebar">ONTAP 工具的角色型存取控制概觀</block>
 </blocks>

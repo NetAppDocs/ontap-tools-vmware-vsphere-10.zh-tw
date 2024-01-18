@@ -25,7 +25,7 @@ summary: 您可以使用自我簽署的憑證或 CA 簽署的憑證、將 VASA �
 . 輸入儲存供應商的連線資訊：
 +
 .. 名稱：任何使用者易記的名稱、例如「 ScaleoutVP 」
-.. 網址： https://<name>/virtualization/version.xml[] - URL 中的名稱對應於在部署單一 vCenter 部署（或）多 vCenter 部署的單一 vCenter 部署（或）網域名稱期間所提供的虛擬 IP 。
+.. 網址： https://<name>/virtualization/version.xml[] - URL 中的名稱對應於在部署單一 vCenter 部署（或）多 vCenter 部署的單一 vCenter 部署（或）網域名稱期間所提供的虛擬 IP 。將憑證新增至 URL 。相同的憑證會發佈至 vCenter 。
 .. 認證：在 OVA 部署期間提供的 <VASA Provider UserName>/< VASA Provider password> 。
 
 
