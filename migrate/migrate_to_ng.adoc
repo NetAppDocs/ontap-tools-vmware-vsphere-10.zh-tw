@@ -33,7 +33,7 @@ NOTE: 身為現有使用者、您必須先從 9.10/9.11 取得 OVA 備份、然�
 ----
 iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 ----
-. 部署適用於 ONTAP 工具的 OVA for VMware vSphere 10.0 版本。請參閱 link:../qsg_10.html["VMware工具快速入門ONTAP"]
+. 部署適用於 ONTAP 工具的 OVA for VMware vSphere 10.0 版本。請參閱 link:../deploy/qsg_10.html["VMware工具快速入門ONTAP"]
 . 新增您想要移轉至 ONTAP 工具的 vCenter 以取得 VMware vSphere 10.0 版本。請參閱 link:../configure/add_vcenter.html["新增 vCenter"]。
 . 從遠端外掛程式 vCenter API 本機內建儲存後端。請參閱 link:../configure/onboard_svm.html["內建儲存後端"]。將儲存設備新增為本機範圍以進行移轉。
 . 使用下列 API 進行移轉：

@@ -441,7 +441,6 @@
   <block id="f6a8c4418598dbac9139a7fe52e99cd9" category="admonition">身為現有使用者、您必須先從 9.10/9.11 取得 OVA 備份、然後再升級至 9.10D 修補程式或 9.11D 修補程式</block>
   <block id="2db68a279bc2b75d7d1a4b6e68d05ff4" category="list-text">在適用於 VMware vSphere 9.10D2 和 9.11D4 的現有 ONTAP 工具上啟用「 Derby 連接埠 1527 」。若要啟用連接埠、請使用 root 使用者登入 CLI 、然後執行下列命令：</block>
   <block id="e695b432b77d6bddfcb785c76f5e5442" category="inline-link-macro">VMware工具快速入門ONTAP</block>
-  <block id="6f6b7bd58886693f11eb96bd0341b5b3" category="list-text">部署適用於 ONTAP 工具的 OVA for VMware vSphere 10.0 版本。請參閱 <block ref="a02083ee995a4c6975877ba810ab5474" category="inline-link-macro-rx"></block></block>
   <block id="17a7ed8efe05072366e69496ed1711fb" category="list-text">新增您想要移轉至 ONTAP 工具的 vCenter 以取得 VMware vSphere 10.0 版本。請參閱 <block ref="a10f9e2fb5f93213a95f892ddd0bf865" category="inline-link-macro-rx"></block>。</block>
   <block id="184c4f313c0a230f7a83d7121fa485d7" category="inline-link-macro">內建儲存後端</block>
   <block id="bf632d416dbc3267749473a4eedebc79" category="list-text">從遠端外掛程式 vCenter API 本機內建儲存後端。請參閱 <block ref="3019410685f421965726529ee880cf27" category="inline-link-macro-rx"></block>。將儲存設備新增為本機範圍以進行移轉。</block>
@@ -675,7 +674,6 @@ vVols虛擬機器摘要報告功能表提供所有使用SAN vVols資料存放區
   <block id="ff31982aef870d546d52f49bb30ef34b" category="section-title">部署需求</block>
   <block id="26d3524e83da73ce160fdf15b9ee1f7f" category="paragraph">在部署適用於 VMware vSphere 的 ONTAP 工具之前、您應該先熟悉部署套件的空間需求、以及一些基本主機系統需求。</block>
   <block id="f4930bf161a0a7075db869066f0839f9" category="paragraph">您可以將 ONTAP 工具搭配 Windows vCenter Server 或 VMware vCenter Server VirtualAppliance （ vCSA ）使用。您必須在支援的 vSphere 上部署 ONTAP 工具、其中包含 ESXi 系統。</block>
-  <block id="ec86808f81c82b9651e18a844d1ea19f" category="paragraph">如需詳細資訊、請參閱 <block ref="cab16d3be602ba465c507fec284cffbd" category="inline-link-macro-rx"></block></block>
   <block id="86f56c72e0832c1bb59b9394dbcb0853" category="section-title">VMware工具需求ONTAP</block>
   <block id="dfa57bc5abba0952197bf25265b987c7" category="list-text">下載.ova檔案。</block>
   <block id="a81177e1cbc66e893d0b2b880b7fb4f4" category="list-text">vCenter Server執行個體的登入認證。</block>
@@ -841,4 +839,6 @@ vCenter 8 在精簡資源配置中、將容量提高至 256GB LUN 。</block>
   <block id="31b887a5d4bfcf42237476c03005131d" category="paragraph">使用者和群組可以成為 vCenter Server 角色的一部分、藉此存取角色。</block>
   <block id="8a52f25f3fca1f3b4922e7e5dc09fb04" category="admonition">刪除 vVols 資料存放區工作流程會刪除資料存放區 - Volume （如果您已將 delete_volume ）旗標設為 true 、無論資料存放區 - Volume 是受管理還是未受管理。</block>
   <block id="d0119a1425315c47822975d16de6de70" category="sidebar">ONTAP 工具的角色型存取控制概觀</block>
+  <block id="9984e4b52821af66b163b37639e5ffca" category="list-text">部署適用於 ONTAP 工具的 OVA for VMware vSphere 10.0 版本。請參閱 <block ref="09991ee05a1b93f3c38bbfed0e5d1010" category="inline-link-macro-rx"></block></block>
+  <block id="e5317f6738020b54574baa6f35cf9f92" category="paragraph">如需詳細資訊、請參閱 <block ref="cab16d3be602ba465c507fec284cffbd" category="inline-link-macro-rx"></block></block>
 </blocks>
