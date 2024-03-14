@@ -15,7 +15,7 @@ summary: 您可以使用 ONTAP 工具和 ONTAP 系統管理員隨附的 JSON 檔
 
 *您需要的是什麼*
 
-* 您應該已使用 \https ： <loadbalancerIP> ： 8443/virtualization / 使用者權限 /user_roles.zip 、從 ONTAP 工具下載 ONTAP 權限檔案。
+* 您應該已使用從 ONTAP 工具下載 ONTAP 權限檔案 `\https://<loadbalancerIP>:8443/virtualization/user-privileges/users_roles.zip`。
 +
 
 NOTE: 您可以在叢集或直接儲存虛擬機器（ SVM ）層級建立使用者。您也可以在不使用 user_roles.json 檔案的情況下建立使用者、如果是這樣做、您必須在 SVM 層級擁有一組最低權限。

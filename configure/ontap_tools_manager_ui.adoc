@@ -26,7 +26,7 @@ ONTAP 工具可執行：
 * 記錄套件下載
 
 
-若要存取 ONTAP 工具 UI 、請啟動 https://loadBalanceIP:8443/virtualization/ui/[] 從瀏覽器登入、並使用部署期間提供的 ONTAP 工具管理員認證登入。
+若要存取 ONTAP 工具 UI 、請啟動 `\https://loadBalanceIP:8443/virtualization/ui/` 從瀏覽器登入、並使用部署期間提供的 ONTAP 工具管理員認證登入。
 
 image::../media/ontap_tools_manager.png[ONTAP 工具管理器 UI]
 

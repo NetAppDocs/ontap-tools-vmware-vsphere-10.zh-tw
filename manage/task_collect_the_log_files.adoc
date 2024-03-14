@@ -15,7 +15,7 @@ summary: 您可以從 ONTAP 工具圖形化使用者介面（ GUI ）中提供�
 
 *步驟*
 
-. 上市 https://loadBalanceIP:8443/virtualization/ui/[] 從部署期間提供 ONTAP 工具管理員認證的瀏覽器。
+. 上市 `\https://loadBalanceIP:8443/virtualization/ui/` 從部署期間提供 ONTAP 工具管理員認證的瀏覽器。
 . 從側欄中選擇 * 日誌套件 * 。
 +
 此作業可能需要數分鐘的時間。

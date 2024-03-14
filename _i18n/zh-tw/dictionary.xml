@@ -275,7 +275,6 @@
   <block id="88e2b3b526ba4e178ae29fd3079bdbfe" category="summary">您可以使用 ONTAP 工具和 ONTAP 系統管理員隨附的 JSON 檔案、設定新的使用者角色來管理儲存後端。</block>
   <block id="47929bf09df6c8f0f0361e68f281ea29" category="paragraph">您可以使用 ONTAP 工具和 ONTAP 系統管理員隨附的 JSON 檔案、設定新的使用者角色和權限來管理儲存後端。</block>
   <block id="6e511cfe87a95df884e3eeb9f86e7f6c" category="paragraph">*您需要的是什麼*</block>
-  <block id="660df50b4a5374980fdf792a56f7f8fa" category="list-text">您應該已使用 \https ： &lt;loadbalancerIP&gt; ： 8443/virtualization / 使用者權限 /user_roles.zip 、從 ONTAP 工具下載 ONTAP 權限檔案。</block>
   <block id="03370342849465520eebddf710012fb0" category="admonition">您可以在叢集或直接儲存虛擬機器（ SVM ）層級建立使用者。您也可以在不使用 user_roles.json 檔案的情況下建立使用者、如果是這樣做、您必須在 SVM 層級擁有一組最低權限。</block>
   <block id="9baaec212ea7cc94549bac65152b30f9" category="list-text">您應該已以儲存後端的系統管理員權限登入。</block>
   <block id="33cb2eeaa8ed39dc8e17a80d28ad882c" category="list-text">解壓縮下載的<block ref="7f922dba99ab8084641c5a38eed2214d" prefix=" " category="inline-code"></block> 檔案：</block>
@@ -360,7 +359,6 @@
   <block id="431131d0beb0c4676312767a56da7f4b" category="summary">vCenter 是可讓您控制主機、虛擬機器（ VM ）和儲存後端的中央管理平台。</block>
   <block id="612aa7a1930dd6f3ed723264e94c2a7e" category="doc">新增 vCenter</block>
   <block id="9f65fe2e1d78de824bf3eadfc84dcb76" category="paragraph">您可以使用單一 ONTAP 工具執行個體來新增及管理多個 vCenter 、以適用於 VMware vCenter 10.0 。</block>
-  <block id="b95dce2bcc7adc6e60834ff81ca5af5d" category="list-text">上市<block ref="e068378fd08c8099e0a9b67e1ace0a53" category="inline-link-rx"></block> 從部署期間提供 ONTAP 工具管理員認證的瀏覽器。</block>
   <block id="7381f9313b931dde25f155f59fb3be63" category="list-text">從側邊列選取 vCenter</block>
   <block id="a56ab30c3fa2c56c499feecf7b173c5d" category="list-text">選擇 * 新增 * 至具有 vCenter IP 位址 / 主機名稱、使用者名稱、密碼和連接埠的主機板內建 vCenter 。</block>
   <block id="ed05b72b00296d4ab8e08f703c69cf9c" category="paragraph">請參閱 <block ref="fef8f4e7151721135aee00bc2c3cdcc6" category="inline-link-macro-rx"></block>。</block>
@@ -419,7 +417,6 @@
   <block id="6a2a753f23f929a7e63dfdcca93ad8b5" category="paragraph">儲存後端是從 ONTAP 工具管理程式或公有 API 新增時的全域、從 vCenter API 新增時則是本機的。
 範例：對於多租戶設定、您可以全域新增儲存後端（叢集）、並在本機新增 SVM 以使用直接 SVM 認證。</block>
   <block id="af2c5b945e20e23dc75787cf093c5d9f" category="list-text">記錄套件下載</block>
-  <block id="bb23f693be2a0f4972ca64c8a621cd2b" category="paragraph">若要存取 ONTAP 工具 UI 、請啟動<block ref="e068378fd08c8099e0a9b67e1ace0a53" category="inline-link-rx"></block> 從瀏覽器登入、並使用部署期間提供的 ONTAP 工具管理員認證登入。</block>
   <block id="37960991e64430632025d4f9e59e3070" category="image-alt">ONTAP 工具管理器 UI</block>
   <block id="e39f043c7b33aada178210c63dc687b2" category="paragraph">您可以選擇 * 不再顯示 * 選項、在您從同一個瀏覽器再次登入時、不會看到此快顯視窗。</block>
   <block id="0b116b89d80e19bf956dfc85f50bc1e9" category="summary">需要資訊。</block>
@@ -833,7 +830,6 @@ vCenter 8 在精簡資源配置中、將容量提高至 256GB LUN 。</block>
   <block id="956040396bc93fbe70e3c9e235f5bfdb" category="sidebar">存取ONTAP VMware工具維護主控台</block>
   <block id="0460583622f03a52d7693094d6fa2452" category="sidebar">概念</block>
   <block id="99da96b7c57595264a2d5f3ba294a0af" category="sidebar">角色型存取控制</block>
-  <block id="d24271a1f22c82f9f35e39eb3c1987a9" category="list-text">網址：<block ref="9db1fbe5367e07ad476cea37f9aa812e" category="inline-link-rx"></block> - URL 中的名稱對應於在部署單一 vCenter 部署（或）多 vCenter 部署的單一 vCenter 部署（或）網域名稱期間所提供的虛擬 IP 。將憑證新增至 URL 。相同的憑證會發佈至 vCenter 。</block>
   <block id="706d26bec853805e4de29044300749ad" category="list-text">系統管理員使用者名稱和系統管理員密碼：這是用來登入 * ONTAP tools* UI 的密碼。</block>
   <block id="b910beb5fe2953d304ea1b38de1c4fa3" category="list-text">從商業 CA 取得 CA 憑證（根、葉和中介憑證）。</block>
   <block id="31b887a5d4bfcf42237476c03005131d" category="paragraph">使用者和群組可以成為 vCenter Server 角色的一部分、藉此存取角色。</block>
@@ -841,4 +837,8 @@ vCenter 8 在精簡資源配置中、將容量提高至 256GB LUN 。</block>
   <block id="d0119a1425315c47822975d16de6de70" category="sidebar">ONTAP 工具的角色型存取控制概觀</block>
   <block id="9984e4b52821af66b163b37639e5ffca" category="list-text">部署適用於 ONTAP 工具的 OVA for VMware vSphere 10.0 版本。請參閱 <block ref="09991ee05a1b93f3c38bbfed0e5d1010" category="inline-link-macro-rx"></block></block>
   <block id="e5317f6738020b54574baa6f35cf9f92" category="paragraph">如需詳細資訊、請參閱 <block ref="cab16d3be602ba465c507fec284cffbd" category="inline-link-macro-rx"></block></block>
+  <block id="dae8459d0e2ebd11c707cda235a5e574" category="paragraph">若要存取 ONTAP 工具 UI 、請啟動<block ref="1910f09ff940f1765a7dd530bdeb5127" prefix=" " category="inline-code"></block> 從瀏覽器登入、並使用部署期間提供的 ONTAP 工具管理員認證登入。</block>
+  <block id="99c32328fc9914bedd703b6f5db4812f" category="list-text">您應該已使用從 ONTAP 工具下載 ONTAP 權限檔案<block ref="7f922dba99ab8084641c5a38eed2214d" prefix=" " category="inline-code"></block>。</block>
+  <block id="6be14525037bcd46eae29cee0ba163b7" category="list-text">網址：<block ref="e4f02d6075674fe650d716797297966f" prefix=" " category="inline-code"></block> - URL 中的名稱對應於在部署單一 vCenter 部署（或）多 vCenter 部署的單一 vCenter 部署（或）網域名稱期間所提供的虛擬 IP 。將憑證新增至 URL 。相同的憑證會發佈至 vCenter 。</block>
+  <block id="734f31344c53092d434b6ffc00072ad9" category="list-text">上市<block ref="1910f09ff940f1765a7dd530bdeb5127" prefix=" " category="inline-code"></block> 從部署期間提供 ONTAP 工具管理員認證的瀏覽器。</block>
 </blocks>

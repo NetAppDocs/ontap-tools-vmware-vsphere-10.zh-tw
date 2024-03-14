@@ -21,7 +21,7 @@ vCenter 是集中管理平台、可讓您控制主機、虛擬機器和儲存後
 
 *步驟*
 
-. 上市 https://loadBalanceIP:8443/virtualization/ui/[] 從部署期間提供 ONTAP 工具管理員認證的瀏覽器。
+. 上市 `\https://loadBalanceIP:8443/virtualization/ui/` 從部署期間提供 ONTAP 工具管理員認證的瀏覽器。
 . 從側邊列選取 vCenter
 . 選擇 * 新增 * 至具有 vCenter IP 位址 / 主機名稱、使用者名稱、密碼和連接埠的主機板內建 vCenter 。
 . 瀏覽至 * 儲存設備後端 * 頁面、然後選取 * 新增至主機名稱、使用者名稱、密碼和連接埠的主機板內建儲存後端 * （ ONTAP 叢集）。
@@ -38,7 +38,7 @@ vCenter 清單頁面會顯示相關的儲存後端數量。每個 vCenter 都可
 
 *步驟*
 
-. 上市 https://loadBalanceIP:8443/virtualization/ui/[] 從部署期間提供 ONTAP 工具管理員認證的瀏覽器。
+. 上市 `\https://loadBalanceIP:8443/virtualization/ui/` 從部署期間提供 ONTAP 工具管理員認證的瀏覽器。
 . 從側邊列選取 vCenter 。
 . 按一下您要與儲存設備後端建立關聯或取消關聯的 vCenter 垂直省略符號。
 . 根據您要執行的操作，選擇 * 關聯或取消關聯儲存後端 * 。
@@ -53,7 +53,7 @@ vCenter 清單頁面會顯示相關的儲存後端數量。每個 vCenter 都可
 
 請依照下列步驟修改 vCenter 。
 
-. 上市 https://loadBalanceIP:8443/virtualization/ui/[] 從部署期間提供 ONTAP 工具管理員認證的瀏覽器。
+. 上市 `\https://loadBalanceIP:8443/virtualization/ui/` 從部署期間提供 ONTAP 工具管理員認證的瀏覽器。
 . 從側邊列選取 vCenter
 . 按一下您要修改的 vCenter 上的垂直省略符號、然後選取 * 修改 * 。
 . 修改 vCenter 詳細資料、然後選取 * 修改 * 。
@@ -65,7 +65,7 @@ vCenter 清單頁面會顯示相關的儲存後端數量。每個 vCenter 都可
 
 移除 vCenter 之前、您需要移除附加至 vCenter 的所有儲存後端。
 
-. 上市 https://loadBalanceIP:8443/virtualization/ui/[] 從部署期間提供 ONTAP 工具管理員認證的瀏覽器。
+. 上市 `\https://loadBalanceIP:8443/virtualization/ui/` 從部署期間提供 ONTAP 工具管理員認證的瀏覽器。
 . 從側邊列選取 vCenter
 . 按一下您要移除的 vCenter 上的垂直省略符號、然後選取 * 移除 * 。
 +

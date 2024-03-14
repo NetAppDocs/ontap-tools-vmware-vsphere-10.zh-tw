@@ -19,7 +19,7 @@ vCenter 清單頁面會顯示相關的儲存後端數量。每個 vCenter 都可
 
 *步驟*
 
-. 上市 https://loadBalanceIP:8443/virtualization/ui/[] 從部署期間提供 ONTAP 工具管理員認證的瀏覽器。
+. 上市 `\https://loadBalanceIP:8443/virtualization/ui/` 從部署期間提供 ONTAP 工具管理員認證的瀏覽器。
 . 從側邊列選取 vCenter 。
 . 按一下您要與儲存設備後端建立關聯的 vCenter 垂直省略符號。
 . 從快顯視窗的下拉式清單中選取儲存後端。

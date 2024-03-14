@@ -19,7 +19,7 @@ vCenter 是可讓您控制主機、虛擬機器（ VM ）和儲存後端的中�
 
 *步驟*
 
-. 上市 https://loadBalanceIP:8443/virtualization/ui/[] 從部署期間提供 ONTAP 工具管理員認證的瀏覽器。
+. 上市 `\https://loadBalanceIP:8443/virtualization/ui/` 從部署期間提供 ONTAP 工具管理員認證的瀏覽器。
 . 從側邊列選取 vCenter
 . 選擇 * 新增 * 至具有 vCenter IP 位址 / 主機名稱、使用者名稱、密碼和連接埠的主機板內建 vCenter 。
 
