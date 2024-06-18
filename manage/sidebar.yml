@@ -4,31 +4,63 @@ title: 管理ONTAP 各種工具
 entries:
 - title: 管理資料存放區
   entries:
-  - title: 擴充或縮減 vVol Datastore 的儲存容量
-    url: "/manage/expand_storage_of_vvol_datastore.html"
-  - title: 刪除 vVols 資料存放區
-    url: "/manage/task_remove_storage_from_a_vvols_datastore.html"
-  - title: 掛載及卸載 vVols 資料存放區
-    url: "/manage/task_mount_a_vvols_datastore.html"
+  - title: 掛載 NFS 和 VMFS 資料存放區
+    url: "/manage/mount-datastores-on-host.html"
+  - title: 掛載 vVols 資料存放區
+    url: "/manage/mount-a-vvols-datastore.html"
+  - title: 調整 NFS 和 VMFS 資料存放區的大小
+    url: "/manage/resize-datastores.html"
+  - title: 展開 vVol 資料存放區
+    url: "/manage/expand-storage-of-vvol-datastore.html"
+  - title: 壓縮 vVols 資料存放區
+    url: "/manage/remove-storage-from-a-vvols-datastore.html"
+  - title: 刪除資料存放區
+    url: "/manage/delete-vvols.html"
+  - title: 資料存放區的 ONTAP 儲存檢視
+    url: "/manage/storage-view-datastore.html"
+  - title: 虛擬機器儲存檢視
+    url: "/manage/virtual-machine-storage-view-datastore.html"
+- title: 管理儲存臨界值
+  url: "/manage/manage-storage-threshold.html"
 - title: 管理儲存後端
-  url: "/manage/storage_backend.html"
-- title: 管理 vCenter
-  url: "/manage/manage_vcenter.html"
-- title: 管理 vVol 生命週期
-  url: "/manage/vvol_lifecycle_management.html"
-- title: 託管 iGroup 和匯出原則
-  url: "/manage/igroup_management.html"
-- title: 存取ONTAP VMware工具維護主控台
+  url: "/manage/storage-backend.html"
+- title: 管理 vCenter Server 執行個體
+  url: "/manage/manage-vcenter.html"
+- title: 管理憑證
+  url: "/manage/certificate-manage.html"
+- title: 管理 igroup 和匯出原則
+  url: "/manage/igroup-management.html"
+- title: 存取適用於 VMware vSphere 維護主控台的 ONTAP 工具
   entries:
-  - title: 功能概述：工具維護主控台ONTAP
-    url: "/manage/reference_maintenance_console_of_ontap_tools_for_vmware_vsphere.html"
+  - title: VMware vSphere 維護主控台的 ONTAP 工具總覽
+    url: "/manage/maintenance-console.html"
   - title: 設定遠端診斷存取
-    url: "/manage/task_configure_vasa_provider_to_use_ssh_for_remote_diag_access.html"
+    url: "/manage/configure-remote-diagnostic-access.html"
   - title: 在其他節點上啟動 SSH
-    url: "/manage/start_the_ssh_on_other_nodes.html"
+    url: "/manage/start-the-ssh-on-other-nodes.html"
   - title: 更新 vCenter 和 ONTAP 認證
-    url: "/manage/update_vcenter_ontap_credentials.html"
+    url: "/manage/update-vcenter-credentials.html"
+- title: ONTAP 工具報告
+  url: "/manage/reports.html"
 - title: 收集記錄檔
-  url: "/manage/task_collect_the_log_files.html"
-- title: 探索
-  url: "/manage/discovery.html"
+  url: "/manage/collect-the-log-files.html"
+- title: 管理虛擬機器
+  entries:
+  - title: 移轉或複製虛擬機器的考量事項
+    url: "/manage/migrate-virtual-machines.html"
+  - title: 將具有 NFS 和 VMFS 資料存放區的虛擬機器移轉至 vVols 資料存放區
+    url: "/manage/migrate-standard-virtual-machines-to-vvols-datastores.html"
+  - title: Vasa 清理
+    url: "/manage/delete-virtual-machines.html"
+- title: 修改ESXi主機設定
+  url: "/manage/edit-esxi-host-settings.html"
+- title: 管理密碼
+  entries:
+  - title: 變更 ONTAP 工具管理員密碼
+    url: "/manage/change-manager-password.html"
+  - title: 重設 ONTAP 工具管理員密碼
+    url: "/manage/reset-manager-password.html"
+  - title: 重設應用程式使用者密碼
+    url: "/manage/reset-app-password.html"
+  - title: 重設維護主控台使用者密碼
+    url: "/manage/reset-maint-password.html"

@@ -2,23 +2,35 @@
 section: configure
 title: 設定ONTAP VMware工具
 entries:
-- title: 管理網路存取
-  url: "/configure/ip_whitelisting.html"
-- title: 設定使用者角色和權限
-  url: "/configure/task_configure_user_role_and_privileges.html"
 - title: ONTAP toolTools Manager 使用者介面
-  url: "/configure/ontap_tools_manager_ui.html"
-- title: 新增 vCenter
-  url: "/configure/add_vcenter.html"
+  url: "/configure/manager-user-interface.html"
+- title: 新增及管理 vCenter Server
+  url: "/configure/add-vcenter.html"
+- title: 將 VASA 提供者登錄至 vCenter Server
+  url: "/configure/registration-process.html"
+- title: 驗證已註冊的 VASA 供應商
+  url: "/configure/verify-registration.html"
+- title: 安裝NFS VAAI外掛程式
+  url: "/configure/install-nfs-vaai-plug-in.html"
+- title: 更新主機資料
+  url: "/configure/update-host-data.html"
+- title: 設定 ESXi 主機設定
+  entries:
+  - title: 設定 ESXi 伺服器多重路徑和逾時設定
+    url: "/configure/configure-esx-server-multipath-and-timeout-settings.html"
+  - title: 設定 ESXi 主機值
+    url: "/configure/esxi-host-values.html"
+- title: 探索儲存系統與主機
+  url: "/configure/discover-storage-systems-and-hosts.html"
 - title: 新增儲存後端
-  url: "/configure/add_storage_backend.html"
-- title: 將儲存後端與 vCenter 建立關聯
-  url: "/configure/associate_storage_backend.html"
-- title: 內建儲存後端（ SVM 或叢集）與 vCenter
-  url: "/configure/onboard_svm.html"
-- title: 將 VASA Provider 登錄至 vCenter
-  url: "/configure/register_vasa.html"
-- title: 建立 VVols 資料存放區
-  url: "/configure/create_vvols_datastore.html"
-- title: 驗證已註冊的 SVM
-  url: "/configure/verify_registered_svm.html"
+  url: "/configure/add-storage-backend.html"
+- title: 將儲存後端與 vCenter Server 建立關聯
+  url: "/configure/associate-storage-backend.html"
+- title: 設定網路存取
+  url: "/configure/configure-network-access.html"
+- title: 設定 ONTAP 使用者角色和權限
+  url: "/configure/configure-user-role-and-privileges.html"
+- title: 適用於 VMware vSphere 外掛程式儀表板的 NetApp ONTAP 工具總覽
+  url: "/configure/dashboard-overview.html"
+- title: 建立資料存放區
+  url: "/configure/create-vvols-datastore.html"
