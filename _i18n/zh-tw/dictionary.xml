@@ -45,7 +45,6 @@
   <block id="97157b0bbe0ba304414559c34c463fa8" category="section-title">最低儲存與應用程式需求：</block>
   <block id="17d884d1bc0b828c55d255e092457a6d" category="cell">儲存設備、主機和應用程式</block>
   <block id="253b40ae359ba25b56231803430c4873" category="cell">ONTAP</block>
-  <block id="8887a9a417a1629326acdb917d224337" category="cell">VMware vSphere</block>
   <block id="42094e9e4a0f05012b8d6753300a1657" category="cell">ESXi主機</block>
   <block id="6a81c846c8c35b839d7586abc329dfda" category="cell">vCenter 伺服器</block>
   <block id="cc7378d924a7a641ed80e623576e3981" category="cell">VASA供應商</block>
@@ -72,7 +71,6 @@
   <block id="0ab827837bc64b58b05cd348d8091ccd" category="list-text">預設會選取 * 啟用 ASUP* 核取方塊。</block>
   <block id="668e412f320c49b9f89a8e8605221e62" category="list-text">維護使用者密碼：此密碼可用來授予「 Maint Console 選項」的存取權。</block>
   <block id="5465c5a8e21220567f3ba4f1efaac90d" category="list-text">在 * 自訂範本 * &gt; * 部署組態 * 視窗中、輸入下列詳細資料：</block>
-  <block id="344e7fea24fbe3dae5345953d18ee85c" category="list-text">輸入 ONTAP/SVM 密碼。</block>
   <block id="08c09a05323f6950d8f48ace64dcce65" category="list-text">依預設會啟用主要 VM 。請勿變更此選項。</block>
   <block id="c62a64bea2e2d5c666e24dfb5d069512" category="list-text">在 * 自訂範本 * &gt; * 內容庫詳細資料 * 視窗中、輸入 * 內容庫名稱 * 和 * OVF 範本名稱 * 。</block>
   <block id="263c52df144ff2a8cb1c5fb283b06e3b" category="list-text">在 * 自訂範本 * &gt; * 節點組態 * 視窗中、輸入所有三個節點的 OVA 網路內容。</block>
@@ -847,9 +845,7 @@ Vasa Provider Settings 區段顯示所選 vCenter Server 的 VASA Provider 登�
   <block id="a57c0ce4d3d1909f36fd6d1a7910403f" category="cell">記憶體（ GB ）</block>
   <block id="7749f88b50568c3684b1ec4d9887097a" category="cell">最低版本需求</block>
   <block id="2402f961ea404a2d19f517d27391d5ce" category="cell">ONTAP 9.12.1 、 9.13.1 或 9.14.1 的最新修補程式版本</block>
-  <block id="4a5720859f5b334d0e52f781b6d0866b" category="cell">VMware 7.0U3 、 8.0U1 或 8.0U2</block>
   <block id="ec1d455e2f0ce4adc778f46d4fbf159f" category="cell">ESXi 7.0.3</block>
-  <block id="25ae27c71592ed325ef896fdb496c487" category="cell">vCenter 7.0U3 、 8.0U1 或 8.0U2</block>
   <block id="88d1955de012defb14b2db6f4797ff20" category="cell">10.1.1</block>
   <block id="4ee667a9190fbad5088c191cedc77afb" category="paragraph">您應該在自訂 ONTAP 工具部署時、考慮一些需求。</block>
   <block id="4de4e6307c23d1e06ba251e848109d58" category="paragraph">這是指派給系統管理員帳戶的密碼。基於安全考量、建議密碼長度為 8 至 30 個字元、且至少包含一個上方、下方、一位數及一個特殊字元。</block>
@@ -929,9 +925,6 @@ Vasa Provider Settings 區段顯示所選 vCenter Server 的 VASA Provider 登�
 輸入下列詳細資料：
 ...應用程式使用者名稱和密碼：此使用者名稱和密碼用於在 vCenter Server 中登錄 VASA 提供者和 SRA 。
 ...預設會選取 * 啟用 ASUP* 核取方塊。</block>
-  <block id="51491a1b63f1ab74ff3d5c3f04737d97" category="paragraph">+
-AutoSupport 只能在部署期間啟用或停用。</block>
-  <block id="06dada7d059c163e436d8babbfe496b2" category="list-text">系統管理員使用者名稱和系統管理員密碼：這是用來登入 ONTAP 工具管理員的密碼。</block>
   <block id="2b86a57a5ac0aad5d414c4e50460a2d9" category="list-text">當您要使用直接新增的 SVM 使用者帳戶時、請選取 * 啟用 SVM 範圍 * 選項。若要使用 ONTAP 叢集、請勿選取核取方塊。</block>
   <block id="7bf4b753fd6180b89cfa814803b686df" category="admonition">啟用 SVM 範圍時、您應該已啟用 SVM 支援、並提供管理 IP 位址。</block>
   <block id="5068ca71ed06e693eb275de382372bac" category="admonition">此處提供的資訊將在安裝過程中驗證、以瞭解正確的模式。若有差異、會在網路主控台上顯示錯誤訊息、並提示您更正所提供的任何不正確資訊。</block>
@@ -1079,17 +1072,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="041bb037e3c06caf84dedc58c6457aab" category="list-text">在 * 選取網路 * 視窗中、為每個來源網路選取目的地網路。</block>
   <block id="33f9aca743a2e76b383f29162f592587" category="admonition">您需要保留負載平衡器 IP 位址和 Kubernetes API Server IP 位址。您可以變更節點 IP 位址、也可以保留相同的 IP 位址。</block>
   <block id="95a5639e9ced3c2a924d88f72bf15202" category="list-text">應用程式使用者名稱和密碼：此使用者名稱和密碼用於在 vCenter Server 中登錄 VASA 提供者和 SRA 。這可能與初始部署期間提供的使用者名稱和密碼不同。</block>
-  <block id="e0d1be9dd9681bb313cf7fc3d4d2466a" category="paragraph">AutoSupport 只能在部署期間啟用或停用。</block>
-  <block id="d760d8124a3b7b4f25d7a060fbbe28c2" category="list-text">系統管理員使用者名稱和系統管理員密碼：這是用來登入 ONTAP 工具管理員的密碼。這可能與初始部署期間提供的使用者名稱和密碼不同。</block>
-  <block id="fbc464170efb8207d41115c5aa6b9f5c" category="list-text">維護使用者密碼：用於授予維護主控台選項的存取權。</block>
-  <block id="56a705dd58842237be39c9dc6690dc11" category="list-text">在 * 自訂範本 * &gt; * 部署組態 * 視窗中、輸入部署期間提供的詳細資料。本節中的所有值應與初始部署期間提供的值相同、資料 LIF 值除外。</block>
-  <block id="1878c6b5e06a450ebbda55598dd1f46c" category="admonition">儲存 SVM 名稱不應像儲存還原資料的位置一樣變更。這也適用於直接新增的 SVM 使用者帳戶。</block>
-  <block id="8996b03753e9ce7a80c11afe0264c52b" category="list-text">如果是 HA 部署還原、請提供下列詳細資料：</block>
-  <block id="1f53b41bbade1ab389a3607b4142c02b" category="list-text">內容庫詳細資料。</block>
-  <block id="740a5b1a45f3bf1d6aafe19c7e697d76" category="list-text">vCenter 組態詳細資料。</block>
-  <block id="6451c3c167ea5dc647d10405f29fbe55" category="list-text">在「 * 自訂範本 * &gt; * 節點組態 * 」視窗中、輸入您嘗試恢復、非 HA 或 HA 設定的詳細資料。</block>
-  <block id="8c5fb624497b2b75cfb141fd905af66d" category="list-text">選擇 *OK* 或 * 取消 * 時、將再次驗證提供的值。您有三次修正任何值的準備。如果您在 3 次嘗試中未能修正、產品安裝將會停止、建議您嘗試在新的 VM 上安裝。</block>
-  <block id="195da22c42b67fa5228bd7b955f4c001" category="list-text">安裝成功之後、 Web 主控台會顯示 VMware vSphere 的 ONTAP 工具狀態。安裝成功之後、您應該依照中的準則、手動編輯硬體需求 <block ref="6def0b647efb922e7343ea3e904763b4" category="inline-link-macro-rx"></block> 頁面。</block>
   <block id="dd47efe31efd4cc6180876f236c1c622" category="doc">下載適用於 VMware vSphere 的 ONTAP 工具</block>
   <block id="4c322557b2037165ab2dfd286fa6a839" category="paragraph">您可以下載<block ref="daf4de58883c030f033f07e61debf025" prefix=" " category="inline-code"></block> 檔案中包含二進位檔案（ _.ova_ ）、以及用於 VMware vSphere 之 ONTAP 工具的簽署憑證<block ref="c28762f698ce57f013f1f9dff01575ab" category="inline-link-rx"></block>。</block>
   <block id="5a3fc9b654cc05d821feead33114167a" category="paragraph">部署完成後、適用於 VMware vSphere 和 VASA 產品的 ONTAP 工具會安裝在您的環境中。根據預設、當您決定後續部署模式、並根據您的需求選擇是否啟用 VASA Provider 時、適用於 VMware vSphere 的 ONTAP 工具就會立即開始運作。請參閱 <block ref="a322950c1b9e940cddaca5a47e2d5895" category="inline-link-macro-rx"></block> 以取得詳細資料。</block>
@@ -1106,7 +1088,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
 事先規劃部署、並決定您想要如何在環境中設定 VMware vSphere 的 ONTAP 工具。</block>
   <block id="e34466eda4e5b5f68501a10425c10513" category="paragraph">在繼續部署之前、以下是適用於 VMware vSphere 需求的 ONTAP 工具：</block>
   <block id="1584251f717b5c5b67df88454cbd8688" category="list-text">（選用）用於自動化使用者：收集 NetApp 提供的 Postman 集合 JSON 檔案。</block>
-  <block id="44e7cf5dfde42bfb03c0f3e90458f84e" category="list-text">用於部署 OVA 的父 vCenter Server 認證。</block>
   <block id="d8cea021ae68f06628331588ee1f7b9f" category="list-text">請確定部署 OVA 的主機或資源集區具有中所述的最低資源 <block ref="6def0b647efb922e7343ea3e904763b4" category="inline-link-macro-rx"></block> 區段。</block>
   <block id="3aa072fa38b0383a0d289fde6a7bdb7c" category="list-text">vCenter Server 執行個體的登入認證、 VMware vSphere 的 ONTAP 工具將會連線至部署後進行登錄。</block>
   <block id="0d129795e915c1dfe3e328d2bb4d641e" category="list-text">對於非 HA 部署、您需要三個可用的 IP 位址：負載平衡器一個可用的 IP 位址、 Kubernetes 控制面一個可用的 IP 位址、節點一個 IP 位址。對於 HA 部署、除了這三個 IP 位址、您還需要兩個 IP 位址來處理第二個和第三個節點。
@@ -1128,7 +1109,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="888a77f5ac0748b6c8001822417df8b6" category="list-text">傳輸協定</block>
   <block id="85c3dba7de47b75da65759dc70b8b923" category="list-text">Kubernetes 控制平面的虛擬 IP 位址。</block>
   <block id="a3163c4ad052022f35412b6401e0b839" category="list-text">HA / 非 HA 下拉式選單</block>
-  <block id="0013740280b976265b3a365f87034e52" category="list-text">主機名稱清單）</block>
   <block id="1d05598e5b2e831093de6c37162ef10e" category="list-text">IP 位址（字串）</block>
   <block id="511ff4e20173d429ce366128f541bc37" category="list-text">內容庫名稱</block>
   <block id="e32539630c3af1f9f5940e0473d0ed81" category="list-text">OVF 範本名稱</block>
@@ -1651,7 +1631,6 @@ _\https ： //https/docs/api_ &lt;ip_address&gt;</block>
   <block id="7ceb96cf2f53ab82cf68115087e42798" category="inline-link">VMware vSphere文件：變更儲存供應商設定</block>
   <block id="b16f93be354af7771dc8708241003863" category="paragraph"><block ref="b16f93be354af7771dc8708241003863" category="inline-link-rx"></block></block>
   <block id="6deaa5e1cafca832bac1b468485b9454" category="section-title">儲存設定</block>
-  <block id="c98cb9d5c24721c2e52ce120aae0abef" category="paragraph">在高度擴充的環境中、您應該設定的值<block ref="e7a7316b2dab3875c5aa0977c256ae38" prefix=" " category="inline-code"></block> 和<block ref="b6c033f4806640a2a2858512cf9f8c1b" prefix=" " category="inline-code"></block> 逾時時間間隔為 99,999 秒。</block>
   <block id="00a510939945fb6eb144a70baf6f9fd4" category="admonition">指定的逾時時間間隔為最大值。您不需要等待達到最大逾時時間。大多數命令都會在設定的最大逾時時間間隔內完成。</block>
   <block id="b2dacb077897e6e20eab5019528b0b4d" category="paragraph">有關修改SAN Provider設定的VMware文件有更多資訊。</block>
   <block id="c106a2cd545fb9665a990784905584ee" category="inline-link">VMware Site Recovery Manager文件：變更儲存設定</block>
@@ -1867,4 +1846,39 @@ HA 和非 HA 部署均支援升級。</block>
   <block id="6956cfc9382ccb41c8ac57f99255b409" category="sidebar">驗證複寫的儲存系統</block>
   <block id="437c283786a19efa2a883c2776477f2a" category="sidebar">移轉至適用於 VMware vSphere 版本的最新 ONTAP 工具</block>
   <block id="a2fa58344be7fbd9a2be0320a8df0f77" category="sidebar">升級ONTAP 功能</block>
+  <block id="42ac03a8bab25efc61489f3923976820" category="summary">如果您忘記了 ONTAP 工具管理員密碼、可以使用 ONTAP 工具為 VMware vSphere 維護主控台所產生的權杖來重設管理員認證。</block>
+  <block id="5f479a62f2104046972d10f2cbf88255" category="paragraph">當您達到逾時時時、請增加的值<block ref="e7a7316b2dab3875c5aa0977c256ae38" prefix=" " category="inline-code"></block> 和<block ref="b6c033f4806640a2a2858512cf9f8c1b" prefix=" " category="inline-code"></block> 更高的價值。</block>
+  <block id="2aa80bb65f090b8d6c9ff632d1836a2b" category="list-text">用於部署 OVA 的父 vCenter Server 認證。父 vCenter Server 密碼不應包含這些特殊字元（ $ 、 ' 、 " ）</block>
+  <block id="7443ebb7d3e5fd61a07b688ed33f3c1c" category="list-text">主機名稱清單</block>
+  <block id="78188fd22202c681b7a1e12f470fb065" category="paragraph">AutoSupport 只能在部署期間啟用或停用。
+...在 *ASUP Proxy URL* 欄位中、提供此 URL 以避免 AutoSupport 資料傳輸的防火牆封鎖。
+...系統管理員使用者名稱和系統管理員密碼：這是用來登入 ONTAP 工具管理員的密碼。這可能與初始部署期間提供的使用者名稱和密碼不同。
+...在 *NTP Servers* 欄位中輸入您的 NTP 伺服器資訊。
+...維護使用者密碼：用於授予維護主控台選項的存取權。
+。在 * 自訂範本 * &gt; * 部署組態 * 視窗中、輸入部署期間提供的詳細資料。本節中的所有值應與初始部署期間提供的值相同、資料 LIF 值除外。</block>
+  <block id="59ccb8025c048802013b2da5a2e36f2e" category="admonition">儲存 SVM 名稱不應像儲存還原資料的位置一樣變更。這也適用於直接新增的 SVM 使用者帳戶。
+。如果是 HA 部署還原、請提供下列詳細資料：
+...內容庫詳細資料。
+...vCenter 組態詳細資料。
+。在「 * 自訂範本 * &gt; * 節點組態 * 」視窗中、輸入您嘗試恢復、非 HA 或 HA 設定的詳細資料。
+。查看 * 準備完成 * 視窗中的詳細資料、選取 * 完成 * 。</block>
+  <block id="4a3c1579f0245205d5b4f1e7a0fb0199" category="paragraph">+
+在建立部署工作時、進度會顯示在 vSphere 工作列中。
+。在工作完成後開啟虛擬機器電源。</block>
+  <block id="ac13898d80338928a374c608bab436b1" category="paragraph">+
+安裝隨即開始。您可以在 VM 的 Web 主控台中追蹤安裝進度。
+在安裝過程中、將驗證節點組態。在 OVF 表單的自訂範本下的不同區段下提供的輸入都會經過驗證。若有任何差異、對話方塊會提示您採取修正行動。
+。在對話方塊提示中進行必要的變更。使用 Tab 鍵瀏覽面板以輸入您的值 * 確定 * 或 * 取消 * 。
+。選擇 *OK* 或 * 取消 * 時、將再次驗證提供的值。您有三次修正任何值的準備。如果您在 3 次嘗試中未能修正、產品安裝將會停止、建議您嘗試在新的 VM 上安裝。
+。安裝成功之後、 Web 主控台會顯示 VMware vSphere 的 ONTAP 工具狀態。安裝成功之後、您應該依照中的準則、手動編輯硬體需求 <block ref="6def0b647efb922e7343ea3e904763b4" category="inline-link-macro-rx"></block> 頁面。</block>
+  <block id="a84fd12354047a6ec2a5b6b1711524f5" category="cell">vCenter 7.0U3</block>
+  <block id="b5a405460149721025d3f0b33b133321" category="list-text">輸入 ONTAP/SVM 密碼。此儲存 VM 的 ONTP/SVM 登入密碼不應包含這些特殊字元（ $ 、 ' 、 " ）。</block>
+  <block id="94f46bf8acbeafbae8c2da9d2cc27158" category="paragraph">AutoSupport 只能在部署期間啟用或停用。
+...在 *ASUP Proxy URL* 欄位中、提供此 URL 以避免 AutoSupport 資料傳輸的防火牆封鎖。
+...系統管理員使用者名稱和系統管理員密碼：這是用來登入 ONTAP 工具管理員的密碼。
+...在 *NTP Servers* 欄位中輸入您的 NTP 伺服器資訊。
+...維護使用者密碼：此密碼可用來授予「 Maint Console 選項」的存取權。
+。在 * 自訂範本 * &gt; * 部署組態 * 視窗中、輸入下列詳細資料：</block>
+  <block id="b8237d978365427c8b91b5f11293f5e5" category="paragraph">+
+<block ref="89d79dbcc89ba4076180d653020a5110" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>

@@ -50,13 +50,10 @@ summary: 在部署適用於 VMware vSphere 的 ONTAP 工具之前、您應該先
 | ONTAP | ONTAP 9.12.1 、 9.13.1 或 9.14.1 的最新修補程式版本 
 
 
-| VMware vSphere | VMware 7.0U3 、 8.0U1 或 8.0U2 
-
-
 | ESXi主機 | ESXi 7.0.3 
 
 
-| vCenter 伺服器 | vCenter 7.0U3 、 8.0U1 或 8.0U2 
+| vCenter 伺服器 | vCenter 7.0U3 
 
 
 | VASA供應商 | 3.0 
