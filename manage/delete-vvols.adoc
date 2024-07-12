@@ -13,7 +13,7 @@ summary: 刪除資料存放區動作會刪除資料存放區。在 NFS 或 VMFS 
 [role="lead"]
 vCenter Server 中所有已探索到 VMware vSphere 或託管 VVols 資料存放區的 ONTAP 工具都支援從資料存放區移除儲存區動作。此動作可讓您從 vVols 資料存放區移除 Volume 。
 
-當特定磁碟區上有 VVols 時、會停用移除選項。除了從資料存放區移除磁碟區外、您還可以刪除 ONTAP 儲存區上選取的磁碟區。
+當特定磁碟區上有 VVols 時、移除選項會停用。除了從資料存放區移除磁碟區外、您還可以刪除 ONTAP 儲存區上選取的磁碟區。
 
 從 vCenter Server 中適用於 VMware vSphere 的 ONTAP 工具刪除資料存放區工作、可執行下列動作：
 

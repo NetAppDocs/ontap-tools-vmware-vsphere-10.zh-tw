@@ -32,7 +32,7 @@ summary: 您應該在環境中部署適用於 VMware vSphere 的 ONTAP 工具、
 . 內容庫範本一旦上傳、就不應在部署後刪除、因為它將在重新開機時使用。
 . 在強制使用自訂 CA 憑證的多 vCenter 部署中、將憑證所在的網域名稱對應至虛擬 IP 位址。對網域名稱執行 _nslookup_ 檢查、以檢查網域是否已解析為指定的 IP 位址。應使用負載平衡器 IP 位址的網域名稱和 IP 位址來建立憑證。
 . IPv4/IPv6 支援的 VLAN - 不支援 Pure IPv6 。同時具有 IPv6 和 IPv4 位址的 VLAN 支援混合模式。
-. 提供給 vCenter Server 以進行時間同步的 NTP 伺服器。
+. 提供給 vCenter Server 進行時間同步的 NTP 伺服器。
 . 部署 OVA 之節點或 VM 的靜態 IP 位址組態詳細資料（必填）及其他詳細資料。
 +
 .. vCenter Server 主機名稱（部署 OVA 的 vCenter ）

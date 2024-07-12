@@ -6,7 +6,7 @@ entries:
   entries:
   - title: 掛載 NFS 和 VMFS 資料存放區
     url: "/manage/mount-datastores-on-host.html"
-  - title: 掛載 vVols 資料存放區
+  - title: 掛載vVols資料存放區
     url: "/manage/mount-a-vvols-datastore.html"
   - title: 調整 NFS 和 VMFS 資料存放區的大小
     url: "/manage/resize-datastores.html"
@@ -66,3 +66,5 @@ entries:
     url: "/manage/reset-maint-password.html"
 - title: 清理磁碟區
   url: "/manage/delete-deployment.html"
+- title: 保護主機叢集
+  url: "/manage/protect-cluster.html"

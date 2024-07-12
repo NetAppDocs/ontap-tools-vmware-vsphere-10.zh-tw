@@ -1,0 +1,36 @@
+---
+permalink: manage/protect-cluster.html 
+sidebar: sidebar 
+keywords: vVols datastore,delete vVol 
+summary: 刪除資料存放區動作會刪除資料存放區。在 NFS 或 VMFS 資料存放區的情況下、會出現一個對話方塊、其中包含使用資料存放區的 VM 清單。 
+---
+= 保護主機叢集
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+:firstname: [.lead]
+:author: [.lead]
+:authorinitials: [
+:authors: [.lead]
+:revdate: ONTAP tools for VMware vSphere manages protection of a host cluster.
+
+
+屬於所選 SVM （掛載於叢集的一或多個主機上）的所有資料存放區、都會在主機叢集下受到保護（適用於 SMas ）。
+
+.先決條件
+在保護主機叢集之前，請確定符合下列條件：。主機叢集只有一個 SVM 的資料存放區。SVM （ SB ）版本應大於 9.15.1 。任何安裝在主機叢集上的資料存放區都不應掛載到叢集外的任何主機上。。安裝在主機叢集上的所有資料存放區都必須是 VMFS 資料存放區。。任何安裝在主機叢集上的構成資料存放區的 FlexVol / LUN 、都不應是任何現有 CG 的一部分。。任何 FlexVol 或 LUN 都不應是 SnapMirror 關係的一部分
+
+.步驟
+. 使用登入 vSphere 用戶端 `\https://vcenterip/ui`
+. 在主機叢集上按一下滑鼠右鍵、然後選取 * NetApp ONTAP tools* > * Protect Cluster* 。
+. 在 Protect cluster （保護叢集）視窗中、輸入要保護的資料存放區的保護設定。主機叢集只能有一個 SVM （叢集）的資料存放區。
+. 選取其中一個目標 ONTAP 叢集和儲存 VM 選項。
+. 選取 * 啟用本機 Snapshot * 核取方塊、將本機快照原則附加至資料存放區的備份磁碟區。
+. 選取 * 啟用 SnapMirror* 核取方塊至和 * 新增關係 * 、以使用選取的 AutomatedFailoverDuplex 原則、目標叢集和目標儲存 VM 來保護資料存放區。
+. 對於統一組態、請選取 * 統一主機組態 * 切換按鈕至 true 。
+. 根據統一的主機組態切換按鈕選擇、為每個主機提供 * 主機鄰近 * 或 * 存取 * 。
+. 選取*「Add*」。
+. 檢閱摘要頁面、然後選取保護。
+
+
+工作會在 vCenter 上建立。使用產生的 JobID 來監控工作。
