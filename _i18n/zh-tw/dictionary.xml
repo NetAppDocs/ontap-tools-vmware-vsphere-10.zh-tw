@@ -1776,7 +1776,6 @@ _\https ： //https/docs/api_ &lt;ip_address&gt;</block>
   <block id="ab912edc5760deb33b4733d3d0cd7edc" category="list-text">選取頁面右側的 * 建立 * 。</block>
   <block id="1b363a673c183e8f6180915f94b60037" category="list-text">選取頁面右側的 * 動作 * 、然後選取 * 匯入項目 * 並匯入 OVA 檔案。</block>
   <block id="a640a03a856b5e3aae702472813c834b" category="list-text">系統管理員使用者名稱和系統管理員密碼：這是用來登入 ONTAP 工具管理員的密碼。</block>
-  <block id="e4784e1bb3bd818491d6767390ee6d49" category="list-text">在 * 傳輸協定 * 欄位中選取 NFS 、 iSCSI 、 NVMe / TCP 或 NVMe / FC 。</block>
   <block id="7fba027b53fe0361b3e204e33ff5d78d" category="list-text">輸入 ONTP/SVM 使用者名稱。Trident 需要有 ONTP/SVM 使用者名稱和密碼、才能在進階或 HA 部署時建立儲存服務資料的磁碟區、並在節點故障期間從磁碟區恢復資料。</block>
   <block id="5152e3b7ceb6dfd9a3bf166aa65ef895" category="list-text">只有在需要雙堆疊時、才能在部署的網路上輸入 IPv6 位址。</block>
   <block id="d41b8ccbeee15bda2042a49f14f4aa0c" category="paragraph">安裝隨即開始。您可以在 VM 的 Web 主控台中追蹤安裝進度。在安裝過程中、會驗證節點組態。在 OVF 表單的自訂範本下的不同區段下提供的輸入都會經過驗證。若有任何差異、對話方塊會提示您採取修正行動。</block>
@@ -1790,8 +1789,6 @@ _\https ： //https/docs/api_ &lt;ip_address&gt;</block>
   <block id="e3737327f930d4c72818d209bfcf6259" category="paragraph">AutoSupport 只能在部署期間啟用或停用。...在 *ASUP Proxy URL* 欄位中、提供此 URL 以避免 AutoSupport 資料傳輸的防火牆封鎖。...系統管理員使用者名稱和系統管理員密碼：這是用來登入 ONTAP 工具管理員的密碼。這可能與初始部署期間提供的使用者名稱和密碼不同。...在 *NTP Servers* 欄位中輸入您的 NTP 伺服器資訊。...維護使用者密碼：用於授予維護主控台選項的存取權。。在 * 自訂範本 * &gt; * 部署組態 * 視窗中、輸入部署期間提供的詳細資料。本節中的所有值應與初始部署期間提供的值相同、資料 LIF 值除外。</block>
   <block id="8d6f4234d5e392c6af4a7f7a63466a02" category="paragraph">+ 開始安裝。您可以在 VM 的 Web 主控台中追蹤安裝進度。在安裝過程中、會驗證節點組態。在 OVF 表單的自訂範本下的不同區段下提供的輸入都會經過驗證。若有任何差異、對話方塊會提示您採取修正行動。。在對話方塊提示中進行必要的變更。使用 Tab 鍵瀏覽面板以輸入您的值 * 確定 * 或 * 取消 * 。。選擇 *OK* 或 * 取消 * 時、將再次驗證提供的值。ONTAP Tools for VMware 可讓您嘗試三次修正任何無效值。如果三次嘗試後仍無法修正問題、產品安裝將會停止、建議您嘗試在新的 VM 上安裝。。安裝成功之後、 Web 主控台會顯示 VMware vSphere 的 ONTAP 工具狀態。安裝成功之後、您應該依照頁面中的準則、手動編輯硬體需求 <block ref="6def0b647efb922e7343ea3e904763b4" category="inline-link-macro-rx"></block> 。</block>
   <block id="51bc5399ec09a540c942908f434a6727" category="section-title">最低儲存與應用程式需求</block>
-  <block id="6e49cbaea696f892ae53c9a0995b93cd" category="cell">ONTAP 9.13.1 、 9.14.1 和 9.15.1 的最新修補程式版本。</block>
-  <block id="a9d9d1b0257dda96d595bd00149cccdb" category="cell">10.2%</block>
   <block id="4bcb36ab655842162169378c79643b23" category="summary">VMware vSphere 的單一 ONTAP 工具執行個體可管理多個 vCenter Server 執行個體。VMware vSphere 的 ONTAP 工具是以 VASA Provider 的自我簽署憑證來部署。有了這項功能、 VVols 資料存放區只能管理一個 vCenter Server 執行個體。</block>
   <block id="c461f736da6382202e4d5e2cb330125b" category="paragraph">VMware vSphere 的單一 ONTAP 工具執行個體可管理多個 vCenter Server 執行個體。VMware vSphere 的 ONTAP 工具是以 VASA Provider 的自我簽署憑證來部署。有了這項功能、 VVols 資料存放區只能管理一個 vCenter Server 執行個體。當您管理多個 vCenter Server 執行個體、且想要在多個 vCenter Server 執行個體上啟用 vVols 功能時、您需要使用 ONTAP tools Manager 介面將自我簽署的憑證變更為自訂 CA 憑證。您可以使用相同的介面來更新或重新整理所有憑證。</block>
   <block id="a2587697ec1c091500e1ebcb1fb42235" category="list-text">在 * 升級憑證至自訂 CA* 快顯視窗中、上傳伺服器憑證、伺服器憑證私密金鑰、根 CA 憑證及中繼憑證檔案。工具提示提供憑證的說明。</block>
@@ -1812,18 +1809,6 @@ _\https ： //https/docs/api_ &lt;ip_address&gt;</block>
   <block id="942cf885b18078ee60d85d8f60fdd3bb" category="list-text">選擇 * 僅變更儲存設備 * 、然後按一下 * 下一步 * 。</block>
   <block id="ad4926bc91a1588104b73a5c2567773a" category="list-text">選取符合您要移轉之資料存放區功能的虛擬磁碟格式、 VM 儲存原則和 vVol 資料存放區。單擊 * 下一步 * 。</block>
   <block id="4f3d8287647170b16320a50c9b202bcf" category="doc">掛載vVols資料存放區</block>
-  <block id="36e1355079ba82b06508974d2c01905d" category="doc">保護主機叢集</block>
-  <block id="df5fc4c5860b228222af73dea5081d49" category="paragraph">屬於所選 SVM （掛載於叢集的一或多個主機上）的所有資料存放區、都會在主機叢集下受到保護（適用於 SMas ）。</block>
-  <block id="33e9b7450e4681b65d656e9bf374d3a2" category="paragraph">在保護主機叢集之前，請確定符合下列條件：。主機叢集只有一個 SVM 的資料存放區。SVM （ SB ）版本應大於 9.15.1 。任何安裝在主機叢集上的資料存放區都不應掛載到叢集外的任何主機上。。安裝在主機叢集上的所有資料存放區都必須是 VMFS 資料存放區。。任何安裝在主機叢集上的構成資料存放區的 FlexVol / LUN 、都不應是任何現有 CG 的一部分。。任何 FlexVol 或 LUN 都不應是 SnapMirror 關係的一部分</block>
-  <block id="2a1efdf83826a56993bfba5b5a635373" category="list-text">在主機叢集上按一下滑鼠右鍵、然後選取 * NetApp ONTAP tools* &gt; * Protect Cluster* 。</block>
-  <block id="5cef65058acde71f54351729c4d4aae0" category="list-text">在 Protect cluster （保護叢集）視窗中、輸入要保護的資料存放區的保護設定。主機叢集只能有一個 SVM （叢集）的資料存放區。</block>
-  <block id="f602a92649e69bfb5e514f1f7e6ec2e3" category="list-text">選取其中一個目標 ONTAP 叢集和儲存 VM 選項。</block>
-  <block id="4edbc81d130e38bf5282945e677bae74" category="list-text">選取 * 啟用本機 Snapshot * 核取方塊、將本機快照原則附加至資料存放區的備份磁碟區。</block>
-  <block id="d8377abd09ba6f445ff59b4cd7998e60" category="list-text">選取 * 啟用 SnapMirror* 核取方塊至和 * 新增關係 * 、以使用選取的 AutomatedFailoverDuplex 原則、目標叢集和目標儲存 VM 來保護資料存放區。</block>
-  <block id="2fd9549357e908dd8c088fe87589817e" category="list-text">對於統一組態、請選取 * 統一主機組態 * 切換按鈕至 true 。</block>
-  <block id="cc86829e222178f4a897942d9fe91b66" category="list-text">根據統一的主機組態切換按鈕選擇、為每個主機提供 * 主機鄰近 * 或 * 存取 * 。</block>
-  <block id="7b1742183451ff119f53d562e7bbe3c5" category="list-text">檢閱摘要頁面、然後選取保護。</block>
-  <block id="5d641001c5c7b915643b5170f746e9be" category="paragraph">工作會在 vCenter 上建立。使用產生的 JobID 來監控工作。</block>
   <block id="20ae9dd256071c9a70e603a7793d8869" category="paragraph">適用於 VMware vSphere 外掛程式的 ONTAP 工具可提供虛擬機器和資料存放區的報告。當您在 vCenter 用戶端的捷徑區段中選取適用於 VMware vSphere 外掛程式的 NetApp ONTAP 工具圖示時、使用者介面會導覽至概觀頁面。選取報告索引標籤以檢視虛擬機器和資料存放區報告。</block>
   <block id="f7a2e0b6ed3f51220e81b2d1a0df9298" category="paragraph">「虛擬機器」報告會顯示已探索到的虛擬機器清單（至少應有一個磁碟來自 ONTAP 儲存型資料存放區）、其中包含效能指標。展開 VM 記錄時、會顯示所有與磁碟相關的資料存放區資訊。</block>
   <block id="4e740e8d009ff8d0ca15216304e1e027" category="paragraph">您可以使用「管理欄」選項來隱藏或顯示不同的欄。</block>
@@ -1844,15 +1829,8 @@ _\https ： //https/docs/api_ &lt;ip_address&gt;</block>
   <block id="a2e55f135d38f547623aac8e3523ca89" category="list-text">若要更新 vCenter 認證、請執行命令：</block>
   <block id="4b2505432ca227b6c7b2991e5b223d7d" category="list-text">若要更新資料 LIF 、請執行命令：</block>
   <block id="d8fadf5b37e6090e5c48155442e6dd13" category="list-text">按一下右窗格中的 * 監控 * 索引標籤。</block>
-  <block id="c20372b10311b40a3f12981f90015dec" category="paragraph">支援從適用於 VMware vSphere 9.10D2 、 9.11D4 、 9.12 和 9.13 版本的 ONTAP 工具移轉至 10.2 版本。</block>
-  <block id="9ba556089b0ea8a71ed1d4f63f954d02" category="list-text">部署適用於 ONTAP 工具的 OVA for VMware vSphere 10.2 版本。</block>
-  <block id="bd0f2e6bf32427dcda6828d92fdc2bb7" category="list-text">新增您要移轉至 ONTAP 工具的 vCenter Server 執行個體、以取得 VMware vSphere 10.2 版本。請參閱 <block ref="28e8d51b831bb2b416c05f461b67f7df" category="inline-link-macro-rx"></block></block>
-  <block id="6d1879a84e19ef83d0b9cc05a65ac444" category="list-text">只有在觸發資料存放區探索工作（可能需要 30 分鐘才能觸發）之後、才能在適用於 VMware vSphere 10.2 的 ONTAP 工具中看到從適用於 VMware vSphere 9.xx 的 ONTAP 工具移轉的 NFS 和 VMFS 資料存放區。確認 ONTAP 工具的「 VMware vSphere 外掛程式 UI 」頁面的「概觀」頁面中是否顯示資料存放區。</block>
-  <block id="6d97df629c9c16b4d9a0dcf9a97cf50d" category="list-text">請依照中的步驟、在保護和恢復站台上安裝適用於 VMware vSphere 10.2 介面卡的 ONTAP 工具 <block ref="c2b5ee5d8065c08146407751d4d3a3d6" category="inline-link-macro-rx"></block></block>
-  <block id="f2f34eedd3398b474ec363008e4f96c1" category="list-text">新增您要移轉至 ONTAP 工具的 vCenter Server 執行個體、以取得 VMware vSphere 10.2 版本。請參閱。 <block ref="946669e64e0e42585f18099dec81ec03" category="inline-link-macro-rx"></block></block>
   <block id="3afd1d6d6eee36d82c692f7555428de3" category="list-text">將適用於 VMware vSphere 儲存供應商的 ONTAP 工具新增至 vCenter Server 和 <block ref="5d4adca70c5644b1b13c61d5e49e1ff7" category="inline-link-macro-rx"></block>。</block>
   <block id="e93b5d3770694f17c18a300557f18fd2" category="paragraph">一旦舊版 VASA 供應商停止、 vCenter Server 就會容錯移轉至適用於 VMware vSphere 的 ONTAP 工具。所有的資料存放區和 VM 都可以存取、並可從適用於 VMware vSphere 的 ONTAP 工具取得。</block>
-  <block id="910d7f663c0ecfbd5ffa3a1f61a9f541" category="paragraph">成功移轉之後、將 ONTAP 工具 10.2 登錄至 vCenter Server 之後、請執行下列步驟：</block>
   <block id="aa37ece429cdd8d8eb8497434085200a" category="summary">部署 SRM 應用裝置之後、您應該在 SRM 應用裝置上設定 SRA 。成功設定的 SRA 可讓 SRM 應用裝置與 SRA 通訊、以進行災難恢復管理。您應將適用於 VMware vSphere 認證的工具（ IP 位址和管理員密碼）儲存在 SRM 應用裝置中、以便在 SRM 應用裝置和 ONTAP 之間進行通訊。</block>
   <block id="7f1de51a94944bdde2c4458094963297" category="paragraph">部署 SRM 應用裝置之後、您應該在 SRM 應用裝置上設定 SRA 。成功設定的 SRA 可讓 SRM 應用裝置與 SRA 通訊、以進行災難恢復管理。您應將適用於 VMware vSphere 認證（ IP 位址）的工具儲存在 SRM 應用裝置中、以便在 SRM 應用裝置和 ONTAP 之間進行通訊。</block>
   <block id="3eed86b47b47a45bf41f076589a64165" category="paragraph">SRM 應用裝置上的 SRA 組態會將 SRA 認證儲存在 SRM 應用裝置中。</block>
@@ -1875,8 +1853,18 @@ _\https ： //https/docs/api_ &lt;ip_address&gt;</block>
   <block id="d43a71ae180632566a3e174280cb4453" category="paragraph">您應該已經執行了主題中提到的步驟 <block ref="2844354f8ed275182ec054cfc4f78370" category="inline-link-macro-rx"></block>。</block>
   <block id="71a16bd19bda0e91c90a56e37682dc0d" category="list-text">執行 Perl 命令、以新認證設定 SRA ：</block>
   <block id="a40a3427484ba9037317f84856abff69" category="list-text">選取所需的陣列配對、並驗證對應的詳細資料。</block>
-  <block id="cfde4c1ad1c585a7cc3eb6944c2c2297" category="summary">當您從適用於 VMware vSphere 10.0 和 10.1 的 ONTAP 工具升級至 10.2 時、系統會建立一個還原磁碟區、並將所有必要的詳細資料記錄到還原磁碟區中。</block>
-  <block id="a24408ea1ff869c3683365ba548dfa2d" category="paragraph">當您從適用於 VMware vSphere 10.0 和 10.1 的 ONTAP 工具升級至 10.2 時、系統會建立一個還原磁碟區、並將所有必要的詳細資料記錄到還原磁碟區中。如果您需要恢復組態、可使用恢復 Volume 來恢復 VMware vSphere 設定的 ONTAP 工具。如果您正在執行 VMware vSphere 10.2 的 ONTAP 工具修補程式層級升級、則會使用相同的還原磁碟區、並重新整理詳細資料。HA 和非 HA 部署均支援升級。</block>
   <block id="a780a238f22a802c24a2182aea27323f" category="paragraph">* 在 vCenter 中擷取適用於 VMware vSphere VM 的 ONTAP 工具快照（ HA 部署時為 3 個 VM 、非 HA 部署時為 1 個 VM ） *</block>
-  <block id="bcb59ed8656cede47cff74ddfd5a154f" category="sidebar">適用於 VMware vSphere 10.2 文件的 ONTAP 工具</block>
+  <block id="6d2010d4e5297c8351863ce46a5c8da3" category="list-text">在 * 傳輸協定 * 欄位中選取 NFS 或 iSCSI 。</block>
+  <block id="2402f961ea404a2d19f517d27391d5ce" category="cell">ONTAP 9.12.1 、 9.13.1 或 9.14.1 的最新修補程式版本</block>
+  <block id="88d1955de012defb14b2db6f4797ff20" category="cell">10.1</block>
+  <block id="246912033b1b0195389ee2e1bbbb4194" category="paragraph">支援從適用於 VMware vSphere 9.10D2 、 9.11D4 、 9.12 和 9.13 版本的 ONTAP 工具移轉至 10.1 版本。</block>
+  <block id="2e2a1bc69765f559199ac318acd2a7d7" category="list-text">部署適用於 ONTAP 工具的 OVA for VMware vSphere 10.1 版本。</block>
+  <block id="9f24f41794806941dd2aeb79a4491cc8" category="list-text">新增您要移轉至 ONTAP 工具的 vCenter Server 執行個體、以取得 VMware vSphere 10.1 版本。請參閱 <block ref="28e8d51b831bb2b416c05f461b67f7df" category="inline-link-macro-rx"></block></block>
+  <block id="4a03a1c1f0cc7fc87194ca50c15f95d1" category="list-text">只有在觸發資料存放區探索工作（可能需要 30 分鐘才能觸發）之後、才能在適用於 VMware vSphere 10.1 的 ONTAP 工具中看到從適用於 VMware vSphere 9.xx 的 ONTAP 工具移轉的 NFS 和 VMFS 資料存放區。確認 ONTAP 工具的「 VMware vSphere 外掛程式 UI 」頁面的「概觀」頁面中是否顯示資料存放區。</block>
+  <block id="84f820da6ba65a6cab821392a70f4e42" category="list-text">請依照中的步驟、在保護和恢復站台上安裝適用於 VMware vSphere 10.1 介面卡的 ONTAP 工具 <block ref="c2b5ee5d8065c08146407751d4d3a3d6" category="inline-link-macro-rx"></block></block>
+  <block id="c75271fb1b456df4f20e50dc78c6f11d" category="list-text">新增您要移轉至 ONTAP 工具的 vCenter Server 執行個體、以取得 VMware vSphere 10.1 版本。請參閱。 <block ref="946669e64e0e42585f18099dec81ec03" category="inline-link-macro-rx"></block></block>
+  <block id="d3f31e51d90c6cd2652af74dae461781" category="paragraph">成功移轉之後、將 ONTAP 工具 10.1 登錄至 vCenter Server 之後、請執行下列步驟：</block>
+  <block id="33857256a63a7aef7c5bdd248e2cbd12" category="summary">當您從適用於 VMware vSphere 10.0 和 10.1 的 ONTAP 工具升級至 10.1 時、系統會建立一個還原磁碟區、並將所有必要的詳細資料記錄到還原磁碟區中。</block>
+  <block id="05138d33f74ef24966432b76ee85d18f" category="paragraph">當您從適用於 VMware vSphere 10.0 和 10.1 的 ONTAP 工具升級至 10.1 時、系統會建立一個還原磁碟區、並將所有必要的詳細資料記錄到還原磁碟區中。如果您需要恢復組態、可使用恢復 Volume 來恢復 VMware vSphere 設定的 ONTAP 工具。如果您正在執行 VMware vSphere 10.1 的 ONTAP 工具修補程式層級升級、則會使用相同的還原磁碟區、並重新整理詳細資料。HA 和非 HA 部署均支援升級。</block>
+  <block id="2a18716f8022631c1d2fd79a8fbb75e8" category="sidebar">適用於 VMware vSphere 10.1 文件的 ONTAP 工具</block>
 </blocks>

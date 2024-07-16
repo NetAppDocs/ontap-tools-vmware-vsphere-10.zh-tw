@@ -66,5 +66,3 @@ entries:
     url: "/manage/reset-maint-password.html"
 - title: 清理磁碟區
   url: "/manage/delete-deployment.html"
-- title: 保護主機叢集
-  url: "/manage/protect-cluster.html"

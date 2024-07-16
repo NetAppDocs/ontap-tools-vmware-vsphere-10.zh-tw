@@ -47,7 +47,7 @@ summary: 在部署適用於 VMware vSphere 的 ONTAP 工具之前、您應該先
 | 儲存設備、主機和應用程式 | 最低版本需求 
 
 
-| ONTAP | ONTAP 9.13.1 、 9.14.1 和 9.15.1 的最新修補程式版本。 
+| ONTAP | ONTAP 9.12.1 、 9.13.1 或 9.14.1 的最新修補程式版本 
 
 
 | ESXi主機 | ESXi 7.0.3 
@@ -59,7 +59,7 @@ summary: 在部署適用於 VMware vSphere 的 ONTAP 工具之前、您應該先
 | VASA供應商 | 3.0 
 
 
-| ova 應用程式 | 10.2% 
+| ova 應用程式 | 10.1 
 |===
 互通性對照表工具（ IMT ）包含有關支援版本的 ONTAP 、 vCenter Server 、 ESXi 主機和外掛應用程式的最新資訊。
 
