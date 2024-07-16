@@ -188,10 +188,6 @@
   <block id="87c93b9816d806cccc58f0b610872eda" category="list-text">輸入<block ref="a87ff679a2f3e71d9181a67b7542122c" prefix=" " category="inline-code"></block> 選擇 Support and Diagnostics 。</block>
   <block id="ef7a1860bfa2c5f2ea33155989f85ee5" category="list-text">輸入<block ref="c4ca4238a0b923820dcc509a6f75849b" prefix=" " category="inline-code"></block> 以選取 Access 診斷 Shell 。</block>
   <block id="78efad1f6bb75b53e0c5236fd154c135" category="list-text">輸入<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> 以繼續。</block>
-  <block id="6e1ee8250e4dc3ce6e26c0ebdbaab54a" category="list-text">視需要更新認證：</block>
-  <block id="512e6df6579ba9be187fcdaf015cd5e6" category="paragraph">otv 更新 --ontapUsername &lt;new username&gt; --ontapPassword &lt;new password&gt;</block>
-  <block id="7291058dd83795e1ab1d74629e7b59d5" category="paragraph">otv-update --vcentrUsername &lt;new username&gt; --vcentrPassword &lt;new password&gt;</block>
-  <block id="1c7a1c71a372b297fb2ddde652f24fcc" category="paragraph">otv 更新 --dataLif &lt;new Datalif IP&gt;</block>
   <block id="f2bf379ad5a0f05a54bbcdb5678a796e" category="inline-image-macro">播放按鈕</block>
   <block id="0b8a80106a177e9178ec383905046532" category="cell">*主控台功能表*</block>
   <block id="2c639d8cf692c100e3eba8b611821414" category="cell">*選項*</block>
@@ -1696,7 +1692,6 @@ _\https ： //https/docs/api_ &lt;ip_address&gt;</block>
 在建立部署工作時、進度會顯示在 vSphere 工作列中。
 。在工作完成後開啟虛擬機器電源。</block>
   <block id="a84fd12354047a6ec2a5b6b1711524f5" category="cell">vCenter 7.0U3</block>
-  <block id="b5a405460149721025d3f0b33b133321" category="list-text">輸入 ONTAP/SVM 密碼。此儲存 VM 的 ONTP/SVM 登入密碼不應包含這些特殊字元（ $ 、 ' 、 " ）。</block>
   <block id="b8237d978365427c8b91b5f11293f5e5" category="paragraph">+
 <block ref="89d79dbcc89ba4076180d653020a5110" category="inline-image-macro-rx" type="image"></block></block>
   <block id="99126fb772977a83acb4723e429a29c0" category="admonition">請勿將 ONTAP 工具 VMware vSphere 虛擬機器部署在其管理的 VVols 資料存放區上。</block>
@@ -1825,9 +1820,6 @@ _\https ： //https/docs/api_ &lt;ip_address&gt;</block>
   <block id="62d979a8af29380891d017376cb44c65" category="section-title">移除儲存設備後端</block>
   <block id="9ca9be4cf1830049310642af0d8597cf" category="paragraph">移除儲存後端之前、您需要刪除附加至儲存後端的所有資料存放區。請依照下列步驟移除儲存後端。</block>
   <block id="492536f303a280d3ebdae80179b9c31a" category="list-text">按一下右窗格中的 * 組態 * 索引標籤。</block>
-  <block id="167eaea484341a685fe24829668ec35c" category="list-text">若要更新 ONTAP 認證、請執行命令：</block>
-  <block id="a2e55f135d38f547623aac8e3523ca89" category="list-text">若要更新 vCenter 認證、請執行命令：</block>
-  <block id="4b2505432ca227b6c7b2991e5b223d7d" category="list-text">若要更新資料 LIF 、請執行命令：</block>
   <block id="d8fadf5b37e6090e5c48155442e6dd13" category="list-text">按一下右窗格中的 * 監控 * 索引標籤。</block>
   <block id="3afd1d6d6eee36d82c692f7555428de3" category="list-text">將適用於 VMware vSphere 儲存供應商的 ONTAP 工具新增至 vCenter Server 和 <block ref="5d4adca70c5644b1b13c61d5e49e1ff7" category="inline-link-macro-rx"></block>。</block>
   <block id="e93b5d3770694f17c18a300557f18fd2" category="paragraph">一旦舊版 VASA 供應商停止、 vCenter Server 就會容錯移轉至適用於 VMware vSphere 的 ONTAP 工具。所有的資料存放區和 VM 都可以存取、並可從適用於 VMware vSphere 的 ONTAP 工具取得。</block>
@@ -1867,4 +1859,8 @@ _\https ： //https/docs/api_ &lt;ip_address&gt;</block>
   <block id="33857256a63a7aef7c5bdd248e2cbd12" category="summary">當您從適用於 VMware vSphere 10.0 和 10.1 的 ONTAP 工具升級至 10.1 時、系統會建立一個還原磁碟區、並將所有必要的詳細資料記錄到還原磁碟區中。</block>
   <block id="05138d33f74ef24966432b76ee85d18f" category="paragraph">當您從適用於 VMware vSphere 10.0 和 10.1 的 ONTAP 工具升級至 10.1 時、系統會建立一個還原磁碟區、並將所有必要的詳細資料記錄到還原磁碟區中。如果您需要恢復組態、可使用恢復 Volume 來恢復 VMware vSphere 設定的 ONTAP 工具。如果您正在執行 VMware vSphere 10.1 的 ONTAP 工具修補程式層級升級、則會使用相同的還原磁碟區、並重新整理詳細資料。HA 和非 HA 部署均支援升級。</block>
   <block id="2a18716f8022631c1d2fd79a8fbb75e8" category="sidebar">適用於 VMware vSphere 10.1 文件的 ONTAP 工具</block>
+  <block id="344e7fea24fbe3dae5345953d18ee85c" category="list-text">輸入 ONTAP/SVM 密碼。</block>
+  <block id="cea5a13834803a12adaeb249165351df" category="list-text">輸入<block ref="c81e728d9d4c2f636f067f89cc14862c" prefix=" " category="inline-code"></block> 以選取系統組態功能表。</block>
+  <block id="86ce6e9c3af571980099ca308cd245e3" category="list-text">輸入<block ref="45c48cce2e2d7fbdea1afc51c7c6ad26" prefix=" " category="inline-code"></block> 以變更 ONTAP 認證。</block>
+  <block id="207c00a73dde0270cc0fbc7ce9c5f2fd" category="list-text">輸入<block ref="d3d9446802a44259755d38e6d163e820" prefix=" " category="inline-code"></block> 以變更 vCenter 認證。</block>
 </blocks>

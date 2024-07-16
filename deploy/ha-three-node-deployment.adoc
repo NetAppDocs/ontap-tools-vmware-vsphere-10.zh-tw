@@ -88,7 +88,7 @@ NOTE: 啟用 SVM 範圍時、您應該已啟用 SVM 支援、並提供管理 IP 
 .. 輸入 ONTAP 叢集或 SVM ONTAP/SVM Data LIF 。資料 LIF 應屬於所選的傳輸協定。例如、如果選取 iSCSI 傳輸協定、則應提供 iSCSI 資料 LIF 。
 .. 對於 Storage VM 、您可以選擇提供 ONTAP 的預設儲存 VM 詳細資料、或是建立新的儲存 VM 。選取「啟用 SVM 範圍」時、請勿在 * 儲存 VM* 欄位中輸入值、因為此欄位會被忽略。
 .. 輸入 ONTP/SVM 使用者名稱。Trident 需要有 ONTP/SVM 使用者名稱和密碼、才能在進階或 HA 部署時建立儲存服務資料的磁碟區、並在節點故障期間從磁碟區恢復資料。
-.. 輸入 ONTAP/SVM 密碼。此儲存 VM 的 ONTP/SVM 登入密碼不應包含這些特殊字元（ $ 、 ' 、 " ）。
+.. 輸入 ONTAP/SVM 密碼。
 .. 依預設會啟用主要 VM 。請勿變更此選項。
 
 
