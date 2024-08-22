@@ -24,9 +24,6 @@ NOTE: 您可以在叢集或直接在儲存虛擬機器（ SVM ）層級建立使
 * 您應該已以儲存後端的系統管理員權限登入。
 
 
-
-NOTE: 您可以在叢集層級或 SVM 層級建立使用者。您也可以在不使用 user_roles.json 檔案的情況下建立使用者、如果是這樣做、您必須在 SVM 層級擁有一組最低權限。
-
 *步驟*
 
 . 擷取下載的 _\https ： <loadbalancerIP> ： 8443/virtualization / 使用者權限 /users_roles.zip_ 檔案。

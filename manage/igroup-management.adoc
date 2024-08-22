@@ -11,7 +11,7 @@ summary: 在 ONTAP 中、匯出原則用於提供對主機的磁碟區資料路�
 
 
 [role="lead"]
-在 ONTAP 中、匯出原則用於提供對主機的 Volume 資料路徑存取、而啟動器群組（ igroup ）則用於提供對 ESXi 主機的邏輯單元編號（ LUN ）資料路徑存取。
+在 ONTAP 中、匯出原則用於提供對主機的 Volume 資料路徑存取、而啟動器群組（ igroup ）則用於提供對 ESXi 主機的邏輯單元編號（ LUN ）資料路徑存取。適用於 VMware vSphere 的 ONTAP 工具可讓您輕鬆直覺地建立 igroup 、並提供豐富的端對端工作流程。為了確保一致性、不支援在儲存平台上直接建立 iGroup 。
 
 當虛擬磁碟區資料存放區建立或掛載至 vCenter Server 中的主機時、主機必須根據資料存放區的傳輸協定類型、獲得對磁碟區（ NFS ）或 LUN （ iSCSI ）的存取權。
 

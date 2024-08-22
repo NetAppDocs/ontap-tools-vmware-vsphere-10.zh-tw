@@ -28,7 +28,7 @@ summary: 在部署適用於 VMware vSphere 的 ONTAP 工具之前、您應該先
 |===
 
 
-| 部署類型 | CPU | 記憶體（ GB ） 
+| * 部署類型 * | * CPU* | * 記憶體（ GB ） * 
 
 
 | 小（ S ） | 8. | 16. 
@@ -39,6 +39,8 @@ summary: 在部署適用於 VMware vSphere 的 ONTAP 工具之前、您應該先
 
 | 大（ L ） | 16. | 32. 
 |===
+如link:../deploy/config-limits.html["部署 VMware vSphere ONTAP 工具的組態限制"]需詳細資訊、請參閱。
+
 
 
 == 最低儲存與應用程式需求

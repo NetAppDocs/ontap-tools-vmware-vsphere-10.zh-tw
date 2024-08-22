@@ -26,11 +26,11 @@ summary: 您應該先設定儲存系統、再執行 Site Recovery Manager （ SR
 有關安裝SRM的說明文件、請參閱VMware網站。
 
 +
-https://www.vmware.com/support/pubs/srm_pubs.html["VMware Site Recovery Manager文件"]
+https://docs.vmware.com/en/Site-Recovery-Manager/index.html["VMware Site Recovery Manager文件"]
 
 * SRA
 +
-介面卡安裝在SRM上。
+介面卡已安裝在 SRM 上。
 
 
 
@@ -58,7 +58,7 @@ https://www.vmware.com/support/pubs/srm_pubs.html["VMware Site Recovery Manager�
 如需安裝SRM的相關文件、請參閱VMware網站。
 
 +
-https://www.vmware.com/support/pubs/srm_pubs.html["VMware Site Recovery Manager文件"]
+https://docs.vmware.com/en/Site-Recovery-Manager/index.html["VMware Site Recovery Manager文件"]
 
 * SRA
 +
