@@ -66,27 +66,3 @@ summary: 在部署適用於 VMware vSphere 的 ONTAP 工具之前、您應該先
 互通性對照表工具（ IMT ）包含有關支援版本的 ONTAP 、 vCenter Server 、 ESXi 主機和外掛應用程式的最新資訊。
 
 https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src=IMT["互通性對照表工具"^]
-
-
-
-== 其他部署考量
-
-您應該在自訂 ONTAP 工具部署時、考慮一些需求。
-
-
-
-=== 應用程式使用者密碼
-
-這是指派給系統管理員帳戶的密碼。基於安全考量、建議密碼長度為 8 至 30 個字元、且至少包含一個上方、下方、一位數及一個特殊字元。
-
-
-
-=== 應用裝置維護主控台認證資料
-
-您應該使用「 maint 」使用者名稱來存取維護主控台。您可以在部署期間設定「maint」使用者的密碼。您可以在 vCenter Server 中的 VM 重新啟動期間、使用「重新啟動來賓作業系統」選項來變更密碼。
-
-
-
-=== 應用裝置網路內容
-
-指定有效的 DNS 主機名稱（不合格）、以及 VMware vSphere ONTAP 工具的靜態 IP 位址和其他網路參數。所提供的 IP 位址應可從部署期間所選的 VLAN 網路存取。適用於 VMware vSphere 10.1 版本的 ONTAP 工具不支援 DHCP 。所有這些參數都是正確安裝和操作所需的。

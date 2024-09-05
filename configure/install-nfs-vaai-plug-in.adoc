@@ -33,8 +33,8 @@ summary: 您可以使用適用於 VMware vSphere 的 ONTAP 工具、安裝適用
 . 從 ONTAP Tools for VMware vSphere 首頁按一下 * 設定 * 。
 . 按一下「* NFS VAAI工具*索引標籤」。
 . 當 VAAI 外掛程式上傳至 vCenter Server 時、請在 * 現有版本 * 區段中選取 * 變更 * 。如果 VAAI 外掛程式未上傳至 vCenter Server 、請選取 * 上傳 * 按鈕。
-. 瀏覽並選取 `.vib` 檔案、然後按一下 * 上傳 * 將檔案上傳至 ONTAP 工具。
-. 按一下 * 在 EXSI 主機上安裝 * 、選取要安裝 NFS VAAI 外掛程式的 ESXi 主機、然後按一下 * 安裝 * 。
+. 瀏覽並選取 `.vib`檔案、然後按一下 * 上傳 * 將檔案上傳至 ONTAP 工具。
+. 按一下 * 在 ESXI 主機上安裝 * 、選取要安裝 NFS VAAI 外掛程式的 ESXi 主機、然後按一下 * 安裝 * 。
 +
 只會顯示符合外掛程式安裝資格的 ESXi 主機。您應依照螢幕上的指示完成安裝。您可以在 vSphere Web Client 的「近期工作」區段中監控安裝進度。
 

@@ -125,5 +125,23 @@ NOTE: 本頁提供的錯誤代碼僅供參考。如果錯誤持續發生、或�
 
 
 | 088 | 設定日誌輪轉為日誌檔失敗 | 重試升級。 
+
+
+| 089 | 變更摘要記錄輪轉組態檔的擁有權失敗 | 重試升級。 
+
+
+| 091 | iSCSI 升級失敗 | 重試升級。 
+
+
+| 092 | iSCSI 復原失敗 | 重試升級。 
+
+
+| 093 | Trident 升級失敗 | 重試升級。 
+
+
+| 094 | Trident 復原失敗 | 重試升級。 
+
+
+| 095 | Debian 升級失敗 | 無法恢復以進行 debian 升級。服務已升級、新的 Pod 將會執行 
 |===
 深入瞭解 https://kb.netapp.com/data-mgmt/OTV/VSC_Kbs/How_to_restore_ONTAP_tools_for_VMware_vSphere_if_upgrade_fails_from_version_10.0_to_10.1["如果從 10.0 版升級至 10.1 版失敗、如何還原適用於 VMware vSphere 的 ONTAP 工具"]

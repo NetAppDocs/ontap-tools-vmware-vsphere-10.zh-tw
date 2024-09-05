@@ -35,10 +35,11 @@ summary: 適用於 VMware vSphere 的 ONTAP 工具的「組態」索引標籤下
 .步驟
 . 從 vSphere Client 導覽至 VMFS 資料存放區。
 . 按一下右窗格中的 * 組態 * 索引標籤。
-. 選擇 * NetApp ONTAP tools* > * ONTAP Storage* 。右窗格中會出現 * 儲存詳細資料 * 和 * LUN 詳細資料 * 。
+. 選擇 * NetApp ONTAP tools* > * ONTAP Storage* 。在 NVMe / TCP 或 NVMe / FC 傳輸協定的情況下、 * 儲存詳細資料 * 和 * LUN 詳細資料 * 或 * 命名空間詳細資料 * 會出現在右窗格中。
 +
 ** 儲存詳細資料頁面包含儲存後端、集合和磁碟區的相關資訊。
 ** LUN 詳細資料頁面包含與 LUN 相關的資料。
+** 在 VMFS 資料存放區使用 NVMe / TCP 或 NVMe / FC 傳輸協定時、「命名空間」詳細資料頁面會包含與命名空間相關的資料。
 
 
 
@@ -53,6 +54,6 @@ summary: 適用於 VMware vSphere 的 ONTAP 工具的「組態」索引標籤下
 . 選擇 * NetApp ONTAP tools* > * ONTAP Storage* 。
 . ONTAP 儲存檢視會列出所有磁碟區。您可以從 ONTAP 儲存窗格中展開或移除儲存設備。
 +
-依照中的指示操作 link:../manage/expand-storage-of-vvol-datastore.html["展開 VVols 資料存放區"] 新增 vVols 資料存放區和的區段 link:../manage/remove-storage-from-a-vvols-datastore.html["壓縮 vVols 資料存放區"] 區段以刪除資料存放區。
+請依照link:../manage/expand-storage-of-vvol-datastore.html["展開 VVols Datastore"]一節中的指示來新增 vVols 資料存放區、以及link:../manage/remove-storage-from-a-vvols-datastore.html["壓縮 vVols 資料存放區"]一節來刪除資料存放區。
 
 

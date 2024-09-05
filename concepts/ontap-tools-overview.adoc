@@ -11,9 +11,7 @@ summary: 適用於 VMware vSphere 的 ONTAP 工具是虛擬機器生命週期管
 
 
 [role="lead"]
-適用於 VMware vSphere 的 ONTAP 工具是一組用於虛擬機器生命週期管理的工具。它與 VMware 生態系統整合、有助於資料存放區資源配置、並為虛擬機器提供基本保護。適用於 VMware vSphere 的 ONTAP 工具可讓管理員順暢地管理儲存生命週期管理
-
-適用於 VMware vSphere 10.1 版本的 ONTAP 工具是一套可水平擴充、事件導向、微服務的集合、部署為開放式虛擬應用裝置（ OVA ）。此版本已將 REST API 整合至 ONTAP 。
+適用於 VMware vSphere 的 ONTAP 工具是一組用於虛擬機器生命週期管理的工具。它與 VMware 生態系統整合、有助於資料存放區資源配置、並為虛擬機器提供基本保護。適用於 VMware vSphere 的 ONTAP 工具是一組可水平擴充、事件導向的微服務、部署為開放式虛擬應用裝置（ OVA ）。此版本已將 REST API 整合至 ONTAP 。
 
 適用於 VMware vSphere 的 ONTAP 工具包括：
 

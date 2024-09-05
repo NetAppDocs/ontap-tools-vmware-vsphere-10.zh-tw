@@ -25,7 +25,7 @@ SRA支援叢集層級的管理和SVM層級的管理。如果您在叢集層級�
 
 *步驟*
 
-. 在SRM中、按一下「* Array Manager*」、然後按一下「*新增Array Manager*」。
+. 在 SRM 中、按一下 * Array Manager* 、然後按一下 * 新增 Array Manager* 。
 . 輸入以下資訊、以說明SRM中的陣列：
 +
 .. 在「*顯示名稱*」欄位中輸入識別陣列管理程式的名稱。

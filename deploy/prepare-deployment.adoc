@@ -23,7 +23,7 @@ summary: 您應該在環境中部署適用於 VMware vSphere 的 ONTAP 工具、
 . 設定及設定vCenter Server環境。
 . 下載 _.ova_ 檔案。
 . （選用）用於自動化使用者：收集 NetApp 提供的 Postman 集合 JSON 檔案。
-. 用於部署 OVA 的父 vCenter Server 認證。父 vCenter Server 密碼不應包含這些特殊字元（ $ 、 ' 、 " ）
+. 用於部署 OVA 的父 vCenter Server 認證。父 vCenter Server 密碼不應包含這些特殊字元（ $ 、 ' 、 " ）。
 . 請確定部署 OVA 的主機或資源集區具有中所述的最低資源 link:../deploy/sizing-requirements.html["部署 VMware vSphere ONTAP 工具的必要條件"] 區段。
 . vCenter Server 執行個體的登入認證、 VMware vSphere 的 ONTAP 工具將會連線至部署後進行登錄。
 . 刪除瀏覽器快取。

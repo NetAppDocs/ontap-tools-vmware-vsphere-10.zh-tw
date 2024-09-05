@@ -6,6 +6,8 @@ entries:
   entries:
   - title: 掛載 NFS 和 VMFS 資料存放區
     url: "/manage/mount-datastores-on-host.html"
+  - title: 卸載 NFS 和 VMFS 資料存放區
+    url: "/manage/unmount-datastores-on-host.html"
   - title: 掛載vVols資料存放區
     url: "/manage/mount-a-vvols-datastore.html"
   - title: 調整 NFS 和 VMFS 資料存放區的大小
@@ -15,7 +17,7 @@ entries:
   - title: 壓縮 vVols 資料存放區
     url: "/manage/remove-storage-from-a-vvols-datastore.html"
   - title: 刪除資料存放區
-    url: "/manage/delete-vvols.html"
+    url: "/manage/delete-ds.html"
   - title: 資料存放區的 ONTAP 儲存檢視
     url: "/manage/storage-view-datastore.html"
   - title: 虛擬機器儲存檢視
@@ -38,7 +40,7 @@ entries:
     url: "/manage/configure-remote-diagnostic-access.html"
   - title: 在其他節點上啟動 SSH
     url: "/manage/start-the-ssh-on-other-nodes.html"
-  - title: 更新 vCenter 和 ONTAP 認證
+  - title: 更新 vCenter 伺服器和 ONTAP 認證
     url: "/manage/update-vcenter-credentials.html"
 - title: ONTAP 工具報告
   url: "/manage/reports.html"
@@ -66,3 +68,9 @@ entries:
     url: "/manage/reset-maint-password.html"
 - title: 清理磁碟區
   url: "/manage/delete-deployment.html"
+- title: 管理主機叢集保護
+  entries:
+  - title: 修改主機叢集保護
+    url: "/manage/edit-hostcluster-protection.html"
+  - title: 移除主機叢集保護
+    url: "/manage/delete-hostcluster-protection.html"

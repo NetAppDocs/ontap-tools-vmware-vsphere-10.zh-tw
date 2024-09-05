@@ -32,5 +32,7 @@ entries:
   url: "/configure/configure-user-role-and-privileges.html"
 - title: 適用於 VMware vSphere 外掛程式儀表板的 NetApp ONTAP 工具總覽
   url: "/configure/dashboard-overview.html"
+- title: 建立主機叢集保護
+  url: "/configure/protect-cluster.html"
 - title: 建立資料存放區
   url: "/configure/create-vvols-datastore.html"
