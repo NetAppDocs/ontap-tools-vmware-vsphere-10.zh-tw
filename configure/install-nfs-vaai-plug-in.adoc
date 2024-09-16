@@ -11,7 +11,7 @@ summary: 您可以使用適用於 VMware vSphere 的 ONTAP 工具、安裝適用
 
 
 [role="lead"]
-您可以使用適用於 VMware vSphere 的 ONTAP 工具、安裝適用於 VMware vStorage API for Array Integration （ VAAI ）的 NetApp NFS 外掛程式。
+您可以使用適用於 VMware vSphere 的 ONTAP 工具、安裝適用於 vSphere API for Array Integration （ VAAI ）的 NetApp NFS 外掛程式。
 
 *您需要的是什麼*
 
@@ -43,3 +43,16 @@ summary: 您可以使用適用於 VMware vSphere 的 ONTAP 工具、安裝適用
 當 VMware 管理員重新開機 ESXi 主機時、適用於 VMware vSphere 的 ONTAP 工具會自動偵測 NFS VAAI 外掛程式。您不需要執行其他步驟來啟用外掛程式。
 
 
+
+
+
+=== 為 VAAI 複本卸載設定正確的 NFS 匯出原則
+
+在 NFS 環境中設定 VAAI 時、匯出原則規則應以下列需求為考量：
+
+* 相關的 Volume 需要允許 NFSv4 呼叫。
+* 根使用者應保持 root 身分、所有交會父磁碟區均應允許 NFSv4 。
+* 需要在相關的 NFS 伺服器上設定 VAAI 支援選項。
+
+
+如需程序的詳細資訊、請參閱 https://kb.netapp.com/on-prem/ontap/DM/VAAI/VAAI-KBs/Configure_the_correct_NFS_export_policies_for_VAAI_copy_offload["為 VAAI 複本卸載設定正確的 NFS 匯出原則"]知識庫文章。

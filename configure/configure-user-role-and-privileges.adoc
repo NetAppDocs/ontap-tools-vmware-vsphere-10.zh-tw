@@ -141,3 +141,80 @@ sti115_vsim_ucs630f_aggr1 vserver show-aggregates                               
 
 | /API | 唯讀 | 叢集使用者應該擁有此權限、才能取得正確的儲存後端狀態。否則、 ONTAP 工具管理員會顯示「未知」的儲存後端狀態。 
 |===
+
+
+=== 將適用於 VMware vSphere 10.1 使用者的 ONTAP 工具升級為 10.2 使用者
+
+如果 VMware vSphere 10.1 的 ONTAP 工具使用者是使用 json 檔案建立的叢集範圍使用者、請在 ONTAP CLI 上使用管理員使用者執行下列命令、以升級至 10.2 版本。
+
+如需產品功能：
+
+* VSC
+* VSC 和 VASA Provider
+* VSC 和 SRA
+* VSC 、 VASA Provider 和 SRA 。
+
+
+叢集 Privileges ：
+
+_security 登入角色 create -role <existing-role-name> -cmddirname "vserver NVMe namespace show" -access all_
+
+_security 登入角色 create -role <existing-role-name> -cmddirname "vserver NVMe subsystem show" -access all_
+
+_security 登入角色 create -role <existing-role-name> -cmddirname "vserver NVMe subsystem host show" -access all_
+
+_security 登入角色 create -role <existing-role-name> -cmddirname "vserver NVMe subsystem map show" -access all_
+
+_security 登入角色 create -role <existing-role-name> -cmddirname "vserver NVMe show-interface" -access read_
+
+_security 登入角色 create -role <existing-role-name> -cmddirname "vserver NVMe subsystem host add " -access all_
+
+_security 登入角色 create -role <existing-role-name> -cmddirname "vserver NVMe subsystem map add" -access all_
+
+_security 登入角色 create -role <existing-role-name> -cmddirname "vserver NVMe 命名空間刪除 " -access all_
+
+_security 登入角色 create -role <existing-role-name> -cmddirname "vserver NVMe subsystem delete" -access all_
+
+_security 登入角色 create -role <existing-role-name> -cmddirname "vserver NVMe subsystem host remove" -access all_
+
+_security 登入角色 create -role <existing-role-name> -cmddirname "vserver NVMe subsystem map remove" -access all_
+
+如果 VMware vSphere 10.1 的 ONTAP 工具使用者是使用 json 檔案建立的 SVM 範圍使用者、請使用管理員使用者在 ONTAP CLI 上執行下列命令、以升級至 10.2 版本。
+
+SVM Privileges ：
+
+_security 登入角色 create -role <existing-role-name> -cmddirname "vserver NVMe namespace show" -access all -vserver <vserver-name> _
+
+_security 登入角色 create -role <existing-role-name> -cmddirname "vserver NVMe subsystem show" -access all -vserver <vserver-name> _
+
+_security 登入角色 create -role <existing-role-name> -cmddirname "vserver NVMe subsystem host show" -access all -vserver <vserver-name> _
+
+_security 登入角色 create -role <existing-role-name> -cmddirname "vserver NVMe subsystem map show" -access all -vserver <vserver-name> _
+
+_security 登入角色 create -role <existing-role-name> -cmddirname "vserver NVMe show-interface" -access read -vserver <vserver-name> _
+
+_security 登入角色 create -role <existing-role-name> -cmddirname "vserver NVMe subsystem host add " -access all -vserver <vserver-name> _
+
+_security 登入角色 create -role <existing-role-name> -cmddirname "vserver NVMe subsystem map add" -access all -vserver <vserver-name> _
+
+_security 登入角色 create -role <existing-role-name> -cmddirname "vserver NVMe 命名空間刪除 " -access all -vserver <vserver-name> _
+
+_security 登入角色 create -role <existing-role-name> -cmddirname "vserver NVMe subsystem delete" -access all -vserver <vserver-name> _
+
+_security 登入角色 create -role <existing-role-name> -cmddirname "vserver NVMe subsystem host remove" -access all -vserver <vserver-name> _
+
+_security 登入角色 create -role <existing-role-name> -cmddirname "vserver NVMe subsystem map remove" -access all -vserver <vserver-name> _
+
+將命令 _vserver NVMe 命名空間 show_ 和 _vserver NVMe 子系統 show_ 新增至現有角色、會新增下列命令。
+
+[listing]
+----
+vserver nvme namespace create
+
+vserver nvme namespace modify
+
+vserver nvme subsystem create
+
+vserver nvme subsystem modify
+
+----

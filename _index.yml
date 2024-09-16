@@ -27,9 +27,13 @@ indexpage:
       url: "/protect/enable-storage-replication-adapter.html"
   - title: 更多資源
     links:
-    - title: 適用於 VMware vSphere 的舊版 ONTAP 工具文件
+    - title: 適用於 VMware vSphere 10.1 的 ONTAP 工具文件
+      url: https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere-101/index.html
+    - title: 適用於 VMware vSphere 9 的舊版 ONTAP 工具文件
       url: https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=63792
     - title: NetApp知識庫ONTAP -資訊工具
       url: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/VSC_and_VASA_Provider
     - title: NetApp社群ONTAP -功能強大的工具
       url: https://community.netapp.com/t5/VMware-Solutions-Discussions/bd-p/vmware-solutions-discussions
+    - title: 瞭解 VMware vSphere with ONTAP
+      url: https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-vsphere-overview.html#why-ontap-for-vsphere

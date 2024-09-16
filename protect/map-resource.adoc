@@ -18,7 +18,7 @@ summary: 您應該對應受保護站台和還原站台上的資源、以便將�
 您應該已連線到受保護的網站和還原網站。
 
 
-NOTE: 在Site Recovery Manager（SRM）中、資源可以是資源集區、ESXi主機或vSphere叢集。
+NOTE: 在 VMware Live Site Recovery 中、資源可以是資源集區、 ESXi 主機或 vSphere 叢集。
 
 *步驟*
 

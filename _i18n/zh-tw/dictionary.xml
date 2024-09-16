@@ -389,7 +389,6 @@
   <block id="c03bc8dea77957c05715c985399fb113" category="list-text">選取 * 關聯儲存後端 * 選項、將 vCenter Server 執行個體與所需的儲存後端建立關聯。</block>
   <block id="3a0689f041b08d0026691257176a98a0" category="summary">您可以使用適用於 VMware vSphere 的 ONTAP 工具、安裝適用於 VMware vStorage API for Array Integration （ VAAI\ ）的 NetApp NFS 外掛程式。</block>
   <block id="e1f59101bee140f72feebf78fe15f214" category="doc">安裝NFS VAAI外掛程式</block>
-  <block id="a5b8801a0ba9635ef23bd70071c67750" category="paragraph">您可以使用適用於 VMware vSphere 的 ONTAP 工具、安裝適用於 VMware vStorage API for Array Integration （ VAAI ）的 NetApp NFS 外掛程式。</block>
   <block id="bf25ac3fc5bee2b3ec36e32661767682" category="inline-link">適用於VMware VAAI的NetApp NFS外掛程式</block>
   <block id="b06b2ee29e6deda3faf9551f7a95a102" category="list-text">您應該已下載適用於 VAAI 的 NFS 外掛程式安裝套件 <block ref="74f7b54ea713d9f5b69839982911bbf7" prefix="(" category="inline-code"></block>）來自 NetApp 支援網站 。<block ref="e6fae45561f1786d6f3534aff65b3377" category="inline-link-rx"></block></block>
   <block id="2cbf3acde0066a81e3f588aacafd10d4" category="list-text">您應該已安裝 ESXi 主機 7.0U3 最新版修補程式、以及 ONTAP 9.12.1Px （最新版 P ） 9.13.1Px 、 9.14.1Px 或更新版本。</block>
@@ -856,7 +855,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="371f2af35c3d593cb0efc6e2989b7d16" category="section-title">ONTAP 工具管理器</block>
   <block id="a39a4228addf857a8cc9e8fe734663cb" category="section-title">開放式虛擬應用裝置（ OVA ）</block>
   <block id="c9f5ca447815e462c7d32fff356e728e" category="paragraph">ova 是一套開放式標準、用於封裝及散佈必須在虛擬機器上執行的虛擬應用裝置或軟體。</block>
-  <block id="bfbd6000516e794a62754b4144ff4157" category="paragraph">SRA 是安裝在 SRM 應用裝置內的儲存廠商專屬軟體。此介面卡可在 Site Recovery Manager 與儲存虛擬機器（ SVM ）層級的儲存控制器之間、以及叢集層級組態之間進行通訊。</block>
   <block id="3298716a4d6cee7cbe7a2a663e211fd7" category="section-title">儲存虛擬機器（ SVM ）</block>
   <block id="93f9c78c8d180c415934eb15d4de3dcf" category="paragraph">與在 Hypervisor 上執行的虛擬機器一樣、 SVM 是一個邏輯實體、可將實體資源抽象化。SVM 包含資料磁碟區和一或多個生命體、可透過這些生命體將資料提供給用戶端。</block>
   <block id="b974fadb0566d9c95961ac569d7d7be3" category="section-title">虛擬機器檔案系統（ VMFS ）</block>
@@ -865,8 +863,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="2d08064a233b59569e0969cc89ff1c77" category="paragraph">VVols 為虛擬機器所使用的儲存設備提供磁碟區層級抽象化。它包含多項優點、可替代傳統 LUN 的使用方式。vVol 資料存放區通常與單一 LUN 相關聯、該 LUN 可作為 vVols 的容器。</block>
   <block id="c50f2e348b4fba38341d27b8208f8bb1" category="section-title">VM 儲存原則</block>
   <block id="6cfe864129eb89d3d7838d439bc7e8d9" category="paragraph">VM 儲存原則是在 vCenter Server 的原則和設定檔下建立。對於 vVols 、請使用 NetApp vVols 儲存類型提供者的規則來建立規則集。</block>
-  <block id="f11c4cc510a050644bd15b5b2c8fe90b" category="section-title">VMware Site Recovery Manager （ SRM ）</block>
-  <block id="25a67d76b6c398d49fafaa56e5aaaacd" category="paragraph">SRM 可為 VMware 虛擬環境提供營運不中斷、災難恢復、站台移轉及不中斷營運的測試功能。</block>
   <block id="9c966bb66c3f7b3890693e1fe9b3468f" category="section-title">VMware vSphere API for Storage A感知 （ VASA ）</block>
   <block id="902f8374c2cb1f01140d44e3741911c1" category="paragraph">Vasa 是一組 API 、可將儲存陣列與 vCenter Server 整合以進行管理。此架構以多個元件為基礎、包括處理 VMware vSphere 與儲存系統之間通訊的 VASA Provider 。</block>
   <block id="1e75c3aefc057fba3eb404b66908f202" category="section-title">VMware vSphere 儲存 API - 陣列整合（ VAAI ）</block>
@@ -1081,8 +1077,6 @@ _\https ： //https/docs/api_ &lt;ip_address&gt;</block>
   <block id="f7f3984fa732d05af01413abe0c139fa" category="summary">您應該配對使用 vSphere Client 建立的受保護網站和還原網站、以啟用 Storage Replication Adapter （ SRA ）來探索儲存系統。</block>
   <block id="31f39e1dd44660cbf064de93a5ac5fe9" category="doc">配對受保護和恢復站台</block>
   <block id="7156f9669ad3e8dc5543b26c90b677b9" category="paragraph">您應該配對使用 vSphere Client 建立的受保護網站和還原網站、以啟用 Storage Replication Adapter （ SRA ）來探索儲存系統。</block>
-  <block id="55f9395cfa441b1f8063a2839d538f3c" category="admonition">儲存複寫介面卡（SRA）不支援連出SnapMirror組態。SnapMirror連出組態是指將來源磁碟區複寫到兩個不同目的地的組態。當 SRM 需要從其目的地恢復虛擬機時、這些問題會在恢復期間產生問題。</block>
-  <block id="ca04ddc73aae6ab19dc2e5b6362aff34" category="list-text">您應該在受保護的網站和還原網站上安裝 Site Recovery Manager （ SRM ）。</block>
   <block id="153de28c544cedf1d0476c82a497c1d4" category="list-text">您應該在受保護的網站和還原網站上安裝 SRA 。</block>
   <block id="0cb204757fc030d9ca635551827fb5fc" category="list-text">按一下*物件*&gt;*動作*&gt;*配對站台*。</block>
   <block id="175196fb642ea5ad4b3eb3694afac00f" category="list-text">在「配對站台恢復管理員伺服器」對話方塊中、輸入受保護站台平台服務控制器的位址、然後按一下*下一步*。</block>
@@ -1097,9 +1091,6 @@ _\https ： //https/docs/api_ &lt;ip_address&gt;</block>
   <block id="f0b89458744ef827ff23713551229aa7" category="list-text">您應該已部署 ONTAP 工具。</block>
   <block id="0fd28be9959e611e7350a85da18ec3d2" category="list-text">您應該已下載過 SRA 介面卡<block ref="d6f1afa70d6145a212d9dc6bc8a2fa64" prefix=" " category="inline-code"></block> 檔案來自<block ref="c28762f698ce57f013f1f9dff01575ab" category="inline-link-rx"></block>。</block>
   <block id="3cd3d1462bf37583e74346e9e49e0712" category="list-text">選取 * 新介面卡 * 。</block>
-  <block id="b1fb84ee8230e3e0cf8f6ea25e31815a" category="list-text">將SRA外掛程式的_.tar.gz_安裝程式上傳至SRM。</block>
-  <block id="62e2395b9502450403c7d739423410eb" category="list-text">重新掃描介面卡、確認已在 SRM 儲存複寫介面卡上更新詳細資料
-頁面。</block>
   <block id="c88f553be5a81e83a1a2cd590af81efb" category="summary">您應該設定預留位置資料存放區、以便在受保護虛擬機器（ VM ）的還原站台上、將其保留在 vCenter 庫存中。預留位置資料存放區不需要太大、因為預留位置的VM很小、而且只使用數百或更少的KB。</block>
   <block id="a079415d00c6083e09f585ea2ed56548" category="doc">設定預留位置資料存放區</block>
   <block id="b2beb4d07aac60ef0509b65054500a7c" category="paragraph">您應該設定預留位置資料存放區、以便在受保護虛擬機器（ VM ）的還原站台上、將其保留在 vCenter 庫存中。預留位置資料存放區不需要太大、因為預留位置的VM很小、而且只使用數百或更少的KB。</block>
@@ -1112,7 +1103,6 @@ _\https ： //https/docs/api_ &lt;ip_address&gt;</block>
   <block id="8f3d1b277e0dbea837f55587d2d62dcd" category="summary">您應該建立保護群組、以保護受保護站台上的一組虛擬機器。</block>
   <block id="3ef7adcba4fd1c35e2debd8e209d9c47" category="doc">設定保護群組</block>
   <block id="2d1feca885442920df4a76e66f4b88de" category="paragraph">您應確保來源站台和目標站台均設定為下列項目：</block>
-  <block id="9e7fafcc17a65440606d84ceb4e654c9" category="list-text">安裝相同版本的SRM</block>
   <block id="460fd136eab61e2db49d5f457f164f87" category="list-text">配對的受保護與恢復站台</block>
   <block id="e438ef52a4347c4c5df1158aecfbabec" category="list-text">來源與目的地資料存放區應掛載於個別站台</block>
   <block id="74bdf365bbc7a26268d2593a0697fb5b" category="list-text">登入 vCenter Server 、然後按一下 * 站台恢復 * &gt; * 保護群組 * 。</block>
@@ -1123,36 +1113,25 @@ _\https ： //https/docs/api_ &lt;ip_address&gt;</block>
   <block id="3ec3afd258436b0602e7b898eedbf8db" category="paragraph">複寫群組上的所有虛擬機器都會新增至保護群組。</block>
   <block id="3bafeb6f773f96336dfd3d5f7f966bba" category="list-text">選取現有的恢復計畫、或按一下「*新增至新的恢復計畫*」來建立新計畫。</block>
   <block id="aeeb33a98931ed155510009c93a039a0" category="list-text">在「準備完成」索引標籤中、檢閱您所建立之保護群組的詳細資料、然後按一下「*完成*」。</block>
-  <block id="f300b633d34eb5cda6cc96a42e5bbb25" category="summary">您應該先設定儲存系統、再執行 Site Recovery Manager （ SRM ）的儲存複寫介面卡（ SRA ）。</block>
   <block id="97daabed54f11ac04f0838fb633676b3" category="doc">為 SAN 和 NAS 環境設定 SRA</block>
-  <block id="b9d97945088b80f838a082f326da006a" category="paragraph">您應該先設定儲存系統、再執行 Site Recovery Manager （ SRM ）的儲存複寫介面卡（ SRA ）。</block>
   <block id="f222eba86de49df529ce1b0bd8136570" category="paragraph">您應該在受保護的站台和還原站台上安裝下列程式：</block>
-  <block id="56d43ad1a280ada5e16fd2960ae44b32" category="list-text">SRM</block>
-  <block id="03b870ced8b149ca765fa1ffe2f8b770" category="paragraph">有關安裝SRM的說明文件、請參閱VMware網站。</block>
-  <block id="4617dd5a7193927c5552182931541c9c" category="inline-link">VMware Site Recovery Manager文件</block>
   <block id="406292f3c5b20715e348f48fa5e6d6e3" category="list-text">SRA</block>
   <block id="39d642e40fbcd108eb0ab15715ee349d" category="list-text">確認主ESXi主機已連線至受保護站台上主要儲存系統的LUN。</block>
   <block id="c295c005211b8c46c7e8ae09f97dae78" category="list-text">確認 LUN 位於具有的 igroup 中<block ref="0d6ab6a77645c5e5eca594cd0178560d" prefix=" " category="inline-code"></block> 選項在主儲存系統上設為 _VMware_ 。</block>
   <block id="a340d4cdfac0ffa0f805506a4dcc486a" category="paragraph">您可以透過驗證 ESXi 主機是否已在 SVM 或上連接本機 LUN 來執行此動作<block ref="855f251760f36b28957ff0a7b42be36a" prefix=" " category="inline-code"></block> SVM 上的命令。
 檢查 ESXi 主機中對應 LUN 的 LUN 存取權、以驗證 iSCSI 連線能力。</block>
-  <block id="1eb176cea5abcd7b2040e0863742d426" category="paragraph">如需安裝SRM的相關文件、請參閱VMware網站。</block>
-  <block id="1a4c02d907de9cf09a31d1f5f6ab334f" category="paragraph">介面卡安裝在SRM和SRA伺服器上。</block>
   <block id="bdeb77edc25aca768d0b70a5251e91d6" category="list-text">確認受保護站台的資料存放區包含已向vCenter Server註冊的虛擬機器。</block>
   <block id="2c1418946774ea2b6a511fb53b6e6726" category="list-text">確認受保護站台的ESXi主機已從儲存虛擬機器（SVM）掛載NFS匯出磁碟區。</block>
-  <block id="12b9fac59cdb8d19d27d9bb7abdc97d5" category="list-text">使用Array Manager精靈將陣列新增至SRM時、請確認「* NFS Addresses *（* NFS位址*）」欄位中已指定有效位址、例如有NFS匯出的IP位址、主機名稱或FQDN。</block>
   <block id="c15f6cdb57f72faef1aa17926a9bf11b" category="list-text">使用<block ref="df911f0151f9ef021d410b4be5060972" prefix=" " category="inline-code"></block> 在恢復站台上的每個 ESXi 主機上執行命令、以驗證主機是否有 VMkernel 連接埠、可存取用於從 SVM 匯出 NFS 的 IP 位址。</block>
   <block id="9f3b4e502e54057e8ea3bc344de9cf8f" category="summary">設定儲存複寫介面卡（ SRA ）之後、您應該確認受保護的站台和還原站台已成功配對。受保護站台和還原站台都應該可以探索複寫的儲存系統。</block>
   <block id="79d8a92408e3c5cb0a892432af2c8045" category="doc">驗證複寫的儲存系統</block>
   <block id="9e6567846f3b6c9a8e1d38a420da704c" category="paragraph">設定儲存複寫介面卡（ SRA ）之後、您應該確認受保護的站台和還原站台已成功配對。受保護站台和還原站台都應該可以探索複寫的儲存系統。</block>
   <block id="8beb897fce777c3277508139c7915a20" category="list-text">您應該已設定儲存系統。</block>
-  <block id="46befd28b937c2b3ba5e67e1d720903c" category="list-text">您應該已使用 SRM Array Manager 配對受保護的站台和還原站台。</block>
   <block id="7ceb2eab648208033ac8e2800ced40ef" category="list-text">您應該先啟用 FlexClone 授權和 SnapMirror 授權、然後再執行測試、容錯移轉作業和 SRA 容錯移轉作業。</block>
   <block id="71efe8ad619e3e3d48e0a978e35c5446" category="list-text">登入vCenter Server。</block>
   <block id="d391b9b18b1b004fbc0f4ac49a921710" category="list-text">瀏覽至*站台恢復*&gt;*陣列型複寫*。</block>
   <block id="8bb83fccb484f1f0daa29d9b57c5cf9a" category="paragraph">儲存系統應在受保護的站台和恢復站台中探索、狀態應為「已啟用」。</block>
-  <block id="652ad8bc056a4a1827fa19aee589e718" category="summary">若要讓SRM與SRA通訊、如果您已修改認證資料、則應更新SRM伺服器上的SRA認證資料。</block>
   <block id="dfb1f7e164fa9a18cdccdd70cc836871" category="doc">更新SRA認證資料</block>
-  <block id="ee51889e9927730735b810a56b6257a4" category="inline-link-macro">在 SRM 應用裝置上設定 SRA</block>
   <block id="bc5ad92fecd3f6eeb4473c9df6479d46" category="list-text"><block ref="4609acba202877f99742342f4195d95e" prefix="" category="inline-code"></block></block>
   <block id="a505f8df337aa6363aedcbf7da761b22" category="summary">您應該對應受保護網站和還原網站上的資料夾、以便在資料夾之間進行通訊。</block>
   <block id="16dac3a3c7de93aedd97c33f658f9028" category="doc">設定資料夾對應</block>
@@ -1165,31 +1144,20 @@ _\https ： //https/docs/api_ &lt;ip_address&gt;</block>
   <block id="dfa5d044985f5ffcb33239e7e7f02f4f" category="paragraph">「資料夾對應」頁面會顯示受保護的站台資源和恢復站台資源。您可以針對環境中的其他網路執行相同的步驟。</block>
   <block id="ab6fe2f57f912e70a50c692b568b9324" category="summary">您應該對應受保護站台和還原站台上的資源、以便將虛擬機器設定為容錯移轉至一組主機或另一組主機。</block>
   <block id="7e4aa301715707912ba8ed9cba9c0eb7" category="doc">設定資源對應</block>
-  <block id="caeb76e03a32069563fffdb32d55954a" category="admonition">在Site Recovery Manager（SRM）中、資源可以是資源集區、ESXi主機或vSphere叢集。</block>
   <block id="881a8180069b4ef6ce578dc05747c26c" category="list-text">在Manage（管理）選項卡中，選擇* Resource Mappings（資源映射）*。</block>
   <block id="19e61e235692dd382ea607cb28ec7bd8" category="list-text">按一下 * 新增 * 以建立新的資源對應。</block>
   <block id="ca61b18f56707ba483d313f4fd42d21b" category="paragraph">此時會出現「建立資源對應」精靈。</block>
   <block id="20586b09df186411bee0e3968b2ef2dd" category="list-text">在Create Resource Mapping精靈 中、執行下列步驟：</block>
   <block id="3c16183aac3a35635bd37651c6e30ca9" category="paragraph">「資源對應」頁面會顯示受保護的站台資源和恢復站台資源。您可以針對環境中的其他網路執行相同的步驟。</block>
-  <block id="cd2685641396761c6f3ba6bd284a62b6" category="doc">在 SRM 應用裝置上設定 SRA</block>
   <block id="9efe335a21c7ed7fb03853b29d60db35" category="paragraph">您應該已經從下載了_tar.gz_檔案<block ref="0e1d5eb136c80762086cbb6a49f15235" category="inline-link-rx"></block>。</block>
-  <block id="7031c53bfcae1c83e261523e07d0c753" category="list-text">在 SRM 應用裝置畫面上、按一下 * 儲存複寫介面卡 * &gt; * 新介面卡 * 。</block>
-  <block id="d75bd630a4a4d5d445ca5dcb7d3bf5c4" category="list-text">將_.tar.gz_檔案上傳至SRM。</block>
-  <block id="aa4f1b473a61ae34105656a9bcd6e2e4" category="list-text">使用系統管理員帳戶、使用 putty 登入 SRM 應用裝置。</block>
   <block id="bef92ccaf2eaa0578e6024bf1bbf9ea7" category="list-text">使用命令切換至 root 使用者：<block ref="ed4421a15b86845cfea13385b427b340" prefix=" " category="inline-code"></block></block>
-  <block id="e51f1b9a003185993b4e02d1d807d0e4" category="list-text">使用 ONTAP 工具來設定 SRM 、以取得 VMware vSphere IP 位址和密碼、命令如下：<block ref="83f30183bb230f5e651ad5daf51de6eb" prefix=" " category="inline-code"></block></block>
   <block id="eec423b8c8e795c4422b564b889c72ba" category="admonition">您需要在單引號內提供密碼值、以確保 Perl 指令碼不會將密碼中的特殊字元讀取為輸入的分隔符號。</block>
-  <block id="14b43dd2552a2c17dce082e25a8b784a" category="list-text">重新掃描介面卡、確認「 SRM 儲存複寫介面卡」頁面上的詳細資料已更新。</block>
   <block id="3e06c9490934f18ce97a637bf06b781e" category="paragraph">此時會顯示一則成功訊息、確認儲存認證資料已儲存。SRA可以使用提供的IP位址、連接埠和認證、與SRA伺服器通訊。</block>
-  <block id="56432a21668094f186d5ab119b91103a" category="summary">您可以使用Site Recovery Manager（SRM）的Array Manager精靈來設定儲存複寫介面卡（SRA）、以啟用SRM與儲存虛擬機器（SVMs）之間的互動。</block>
   <block id="e19aa5b1d5cc9af071d6a8aaa3d6133b" category="doc">使用Array Manager設定SRA</block>
-  <block id="162e9c2c35038a17f958fbf922755a04" category="paragraph">您可以使用Site Recovery Manager（SRM）的Array Manager精靈來設定儲存複寫介面卡（SRA）、以啟用SRM與儲存虛擬機器（SVM）之間的互動。</block>
-  <block id="6631d60cf5ca66d42db81cd09cca033b" category="list-text">您應該已在 SRM 中配對受保護的站台和還原站台。</block>
   <block id="76d60258ae9519f2e750508c02117351" category="list-text">您應該先設定已登入的儲存設備、然後再設定陣列管理員。</block>
   <block id="f4edbbba44fbefe7bf6f5c4bc22763ac" category="list-text">您應該已設定並複寫受保護站台和恢復站台之間的 SnapMirror 關係。</block>
   <block id="aea831da533b866659e6c7f178c6d573" category="list-text">您應該已啟用 SVM 管理生命來啟用多租戶。</block>
   <block id="a80d024f2a7c355dc177c761f433822b" category="paragraph">SRA支援叢集層級的管理和SVM層級的管理。如果您在叢集層級新增儲存設備、則可以探索叢集中所有 SVM 並執行作業。如果您在SVM層級新增儲存設備、則只能管理該特定SVM。</block>
-  <block id="f261d04be54b549afdd31002593bbb29" category="list-text">輸入以下資訊、以說明SRM中的陣列：</block>
   <block id="1ab0ff4eb911cc78d5eb0f4853b1351c" category="list-text">在「*顯示名稱*」欄位中輸入識別陣列管理程式的名稱。</block>
   <block id="c2ec82204a228daa91ba9e84fa95f375" category="list-text">在「* SRA類型*」欄位中、選取*《NetApp儲存複寫介面卡for ONTAP Rise*》。</block>
   <block id="b679ceeadb8258b066c691d0bd3d1425" category="list-text">輸入連線至叢集或SVM的資訊：</block>
@@ -1210,7 +1178,6 @@ _\https ： //https/docs/api_ &lt;ip_address&gt;</block>
   <block id="9e28f23a92c9abcf9ad62bef3a78490f" category="summary">您應該根據儲存複寫介面卡（ SRA ）的建議設定來設定儲存逾時時間間隔、以便在高度擴充的環境中發揮最佳效能。</block>
   <block id="0665e266b8a667d47913e7a384e164d3" category="paragraph">您應該根據儲存複寫介面卡（ SRA ）的建議設定來設定儲存逾時時間間隔、以便在高度擴充的環境中發揮最佳效能。</block>
   <block id="383c9f9f08441de49a64fa51e25ad9c9" category="section-title">儲存供應商設定</block>
-  <block id="68c185224c05d2129a14987da1b847a6" category="paragraph">您應該在SRM上為擴充環境設定下列逾時值：</block>
   <block id="d82fe6db018dee28465d1cfa5d82a46d" category="cell">*進階設定*</block>
   <block id="837aba0a8aff2313403af838d63d1905" category="cell">*超時值*</block>
   <block id="f1b44a8212d147c13bae14404ec82d1a" category="paragraph"><block ref="cfb1af8547e34b1470b19edbde9418b8" prefix="" category="inline-code"></block></block>
@@ -1223,11 +1190,9 @@ _\https ： //https/docs/api_ &lt;ip_address&gt;</block>
   <block id="8febbf8519703d62abe5d2086aa5386b" category="paragraph">設定高值（例如： 99999 ）</block>
   <block id="c30b7c029fe2d9044307db1e0f6ea417" category="paragraph">您也應該啟用<block ref="227c938fa0f7b152cce7b139b698bf4c" prefix=" " category="inline-code"></block> 選項。</block>
   <block id="7ceb96cf2f53ab82cf68115087e42798" category="inline-link">VMware vSphere文件：變更儲存供應商設定</block>
-  <block id="b16f93be354af7771dc8708241003863" category="paragraph"><block ref="b16f93be354af7771dc8708241003863" category="inline-link-rx"></block></block>
   <block id="6deaa5e1cafca832bac1b468485b9454" category="section-title">儲存設定</block>
   <block id="00a510939945fb6eb144a70baf6f9fd4" category="admonition">指定的逾時時間間隔為最大值。您不需要等待達到最大逾時時間。大多數命令都會在設定的最大逾時時間間隔內完成。</block>
   <block id="c106a2cd545fb9665a990784905584ee" category="inline-link">VMware Site Recovery Manager文件：變更儲存設定</block>
-  <block id="ea75df2f0ee3a53782c8c6b7a94cb283" category="paragraph"><block ref="ea75df2f0ee3a53782c8c6b7a94cb283" category="inline-link-rx"></block></block>
   <block id="2159a3bf8db76f7d77e80538e9941cab" category="summary">您應該對應受保護網站和還原網站上的網路、以便在它們之間進行通訊。</block>
   <block id="f9db3cd2b1be9139f944eb07d33427eb" category="doc">設定網路對應</block>
   <block id="dc93626e4e57c8b4d053c8c2dda38bd5" category="paragraph">您應該在兩個站台上設定 VM 網路、 ESXi 主機和資料夾等資源對應、以便將每個資源從受保護站台對應到還原站台的適當資源。</block>
@@ -1248,13 +1213,10 @@ _\https ： //https/docs/api_ &lt;ip_address&gt;</block>
   <block id="37470572c4c0d1df68b6e2c9cf86ecf9" category="paragraph">移轉之前、請確定其中一個站台處於受保護狀態、另一個站台處於恢復狀態。</block>
   <block id="064e145ea2f6bfb5bc6045ba1fb3a818" category="admonition">如果容錯移轉剛剛完成且重新保護擱置、請勿移轉。完成重新保護、然後執行移轉。
 同樣適用於測試恢復計畫。恢復計畫測試完成後、請清理測試恢復、然後開始移轉。</block>
-  <block id="6b49b7321f202d0fd9af959e06616543" category="list-text">請執行下列步驟、在 SRM UI 中刪除適用於 VMware vSphere 9.xx 版本的工具 ONTAP 介面卡：</block>
-  <block id="ce8ea8eb081b443ff1b8a1a7fc246850" category="list-text">前往 SRM 組態管理頁面</block>
   <block id="0bb95f551fcbc064f5de91693d368db6" category="list-text">前往儲存複寫介面卡區段</block>
   <block id="232d0e465aee7b5200e7b62306c225ae" category="list-text">按一下「 Kebab 」功能表、然後按一下「 * 重設組態 * 」</block>
   <block id="016028ae8dab91fa4005e97b8161e840" category="list-text">單擊 "Kebab " 菜單並選擇 "*Delete*"</block>
   <block id="77efba168b5a2059c2d20a1e2673f5d1" category="paragraph">在保護站點和恢復站點上執行這些步驟。</block>
-  <block id="9c05b43ac756f3fc9a0e02542edb990d" category="list-text">在「 SRM UI 」頁面中、執行 * 探索陣列 * 和 * 探索裝置 * 作業、並驗證這些裝置是否顯示在移轉之前。</block>
   <block id="519560f6fd07a96b2ba7c35fc86da502" category="section-title">Vasa 提供者移轉步驟</block>
   <block id="0052540e6b71b0dead0bb00933d9a68d" category="list-text">在適用於 VMware vSphere 的現有 ONTAP 工具上啟用 Derby 連接埠 1527 。若要啟用連接埠、請使用 root 使用者登入 CLI 、然後執行下列命令：</block>
   <block id="c713abd43a97c8915e6503cd7f93ad36" category="list-text">發出下列 API 呼叫以進行移轉：</block>
@@ -1392,7 +1354,6 @@ _\https ： //https/docs/api_ &lt;ip_address&gt;</block>
   <block id="fc7f17ed33d951dfbd3445c149321837" category="sidebar">移轉適用於 VMware vSphere 的 ONTAP 工具</block>
   <block id="cb879d6b2b33e094cf730b0a0881b07a" category="sidebar">使用適用於 VMware vSphere 的 ONTAP 工具</block>
   <block id="eaf78ca462bf848b7c59c410077002b6" category="sidebar">保護資料存放區</block>
-  <block id="61a99f785393d77e79ad0730010056a5" category="sidebar">適用於 VMware vSphere 的舊版 ONTAP 工具文件</block>
   <block id="cac6cd9e650cdc4d7120d3f0cceba925" category="sidebar">新增及管理 vCenter Server</block>
   <block id="fbbd8350e625abcdc720a38414ee983f" category="sidebar">將 VASA 提供者登錄至 vCenter Server</block>
   <block id="1030a4736944c363305ecfdc816d75b0" category="sidebar">設定 ESXi 主機設定</block>
@@ -1438,14 +1399,12 @@ _\https ： //https/docs/api_ &lt;ip_address&gt;</block>
 執行下列命令以尋找第一個 igroup 名稱：</block>
   <block id="c26071422bbf92a43331f2741632aca9" category="paragraph">_kubectl -n trident GET tbc trident -backend -o yaml| grep igroupName: | awk -F':' '{print $2}'_</block>
   <block id="497c71b0c5006d96abb762b862d3b40a" category="paragraph">其他 igroup 名稱以 VM 的主機名稱開頭。</block>
-  <block id="3642e7476d2c39d4c6204e36acaa5431" category="list-text">執行下列命令以刪除 SRM 機器資料夾快取的 ONTAP 工具使用者名稱密碼：</block>
   <block id="98ea8bb5748846a8eb48ec17775dd65c" category="list-text"><block ref="73be5ab307e7055f684cc317b6aff741" prefix="" category="inline-code"></block></block>
   <block id="9aac114d9a8bbe576d39d35cf5fad65b" category="list-text"><block ref="5ec1d0f6687a4c1e0107632871d4a131" prefix="" category="inline-code"></block></block>
   <block id="be886d30990ecb1cd7da9458a1301ba3" category="list-text"><block ref="ed73a6dfaf2769c449bcf6ac1257b40e" prefix="" category="inline-code"></block></block>
   <block id="2a7f66eb3c213058f0136bcf65d63f11" category="list-text"><block ref="1c2934a64ebf7e159bf45c1e6c30b478" prefix="" category="inline-code"></block></block>
   <block id="d2ef96c1cd4e9e918af9cc6fe693d19c" category="list-text"><block ref="3e82875f30595fcc3e2ea7112a52aec3" prefix="" category="inline-code"></block></block>
   <block id="d6dc3fa77b8368a0795d43ba5098caec" category="list-text"><block ref="f82187243129e0447d2310deb9687edf" prefix="" category="inline-code"></block> 您需要針對密碼值提供單一報價。</block>
-  <block id="ae9e134b52cf2ea444919f84285ae485" category="paragraph">ONTAP 工具管理員可透過託管的 vCenter Server 執行個體和已建立的儲存後端、為 VMware vSphere 管理員提供更多的 ONTAP 工具控制權。ONTAP tools Manger 可協助管理 vCenter Server 執行個體、儲存設備後端、憑證、密碼和記錄套件下載。</block>
   <block id="b7d863d6846eaf1689410c02279f9ea6" category="doc">新增儲存後端</block>
   <block id="3cfe1abd2c991601dea204cde0b4d546" category="paragraph">此工作可協助您建置 ONTAP 叢集。當您使用 ONTAP Tools Manager 新增儲存後端時、儲存後端會新增至全域叢集。將全域叢集與 vCenter Server 執行個體建立關聯、以啟用 SVM 使用者來進行 vVols 資料存放區資源配置。</block>
   <block id="11d338a3b0af56cfdced607e83e44a27" category="admonition">當您使用 vSphere 用戶端 UI 新增儲存後端時、 vVols 資料存放區不支援直接新增 SVM 使用者。</block>
@@ -1527,9 +1486,6 @@ _\https ： //https/docs/api_ &lt;ip_address&gt;</block>
   <block id="d8fadf5b37e6090e5c48155442e6dd13" category="list-text">按一下右窗格中的 * 監控 * 索引標籤。</block>
   <block id="3afd1d6d6eee36d82c692f7555428de3" category="list-text">將適用於 VMware vSphere 儲存供應商的 ONTAP 工具新增至 vCenter Server 和 <block ref="5d4adca70c5644b1b13c61d5e49e1ff7" category="inline-link-macro-rx"></block>。</block>
   <block id="e93b5d3770694f17c18a300557f18fd2" category="paragraph">一旦舊版 VASA 供應商停止、 vCenter Server 就會容錯移轉至適用於 VMware vSphere 的 ONTAP 工具。所有的資料存放區和 VM 都可以存取、並可從適用於 VMware vSphere 的 ONTAP 工具取得。</block>
-  <block id="aa37ece429cdd8d8eb8497434085200a" category="summary">部署 SRM 應用裝置之後、您應該在 SRM 應用裝置上設定 SRA 。成功設定的 SRA 可讓 SRM 應用裝置與 SRA 通訊、以進行災難恢復管理。您應將適用於 VMware vSphere 認證的工具（ IP 位址和管理員密碼）儲存在 SRM 應用裝置中、以便在 SRM 應用裝置和 ONTAP 之間進行通訊。</block>
-  <block id="7f1de51a94944bdde2c4458094963297" category="paragraph">部署 SRM 應用裝置之後、您應該在 SRM 應用裝置上設定 SRA 。成功設定的 SRA 可讓 SRM 應用裝置與 SRA 通訊、以進行災難恢復管理。您應將適用於 VMware vSphere 認證（ IP 位址）的工具儲存在 SRM 應用裝置中、以便在 SRM 應用裝置和 ONTAP 之間進行通訊。</block>
-  <block id="3eed86b47b47a45bf41f076589a64165" category="paragraph">SRM 應用裝置上的 SRA 組態會將 SRA 認證儲存在 SRM 應用裝置中。</block>
   <block id="5dca53226c3a1262b461c063e61fd9e1" category="list-text">執行命令<block ref="ab64b2f5839594835c3c4d3e3c725c7c" prefix=" " category="inline-code"></block> 以瀏覽至記錄目錄。</block>
   <block id="1678c2984a8ccc5f17124abb9acb5bb8" category="list-text">在記錄位置輸入命令、以取得 SRA 使用的泊塢視窗 ID ：<block ref="c3933049d26fccba0396e7760f0fba06" prefix=" " category="inline-code"></block></block>
   <block id="d5d2ad55b774ba92aef91e985c285c4b" category="list-text">若要登入容器 ID 、請輸入命令：<block ref="1b6eefce0212551da88d489c9ed8f5e9" prefix=" " category="inline-code"></block></block>
@@ -1540,18 +1496,15 @@ _\https ： //https/docs/api_ &lt;ip_address&gt;</block>
   <block id="c296e8788b295e89d6f8e1bfcd28b6ff" category="list-text">確認恢復站台上的 ESXi 主機與儲存虛擬機器（ SVM ）有適當的 iSCSI 連線。次要站台 ESXi 主機應可存取次要站台儲存設備、且主要站台 ESXi 主機應可存取主要站台儲存設備。</block>
   <block id="0cd8afb704226b6e22e0e52f54ef48ba" category="section-title">為 NAS 環境設定 SRA</block>
   <block id="f2752e6caaa6a7299132353ae30a162b" category="summary">適用於 VMware vSphere 的 ONTAP 工具可讓您選擇啟用 SRA 功能來設定災難恢復。</block>
-  <block id="3a471908933d4b5cc2b8aa6e91739e41" category="list-text">使用 URL 登入 SRM 應用裝置管理介面：、然後前往 VMware SRM 應用裝置管理介<block ref="bdf0203c0900e161332057d261c69ba5" prefix=" " category="inline-code"></block>面中的儲存複寫介面卡。</block>
   <block id="3b204745724768bca001c3a2060e50d1" category="list-text">選擇 * 自動準備對應至具有相符名稱的資料夾 * 、然後按一下 * 下一步 * 。</block>
   <block id="51a24aec0d2aefedac755d5648602767" category="list-text">選取受保護站台和還原站台所需的資料中心物件、然後按一下 * 新增對應 * 。</block>
   <block id="3fe42195c23f54944aea2da2ed4b723c" category="list-text">選取先前用來建立反向對應的物件、然後按一下 * 完成 * 。</block>
   <block id="7fa438f9d261a519dd8e0870c68c752d" category="list-text">選取 * 自動準備對應至具有相符名稱的網路 * 、然後按一下 * 下一步 * 。</block>
   <block id="31eaa05ff0db5b24f55f9ba8a07eb25c" category="list-text">選擇 * 自動準備具有匹配名稱的資源的映射 * ，然後單擊 * 下一步 * 。</block>
-  <block id="d43a71ae180632566a3e174280cb4453" category="paragraph">您應該已經執行了主題中提到的步驟 <block ref="2844354f8ed275182ec054cfc4f78370" category="inline-link-macro-rx"></block>。</block>
   <block id="71a16bd19bda0e91c90a56e37682dc0d" category="list-text">執行 Perl 命令、以新認證設定 SRA ：</block>
   <block id="a40a3427484ba9037317f84856abff69" category="list-text">選取所需的陣列配對、並驗證對應的詳細資料。</block>
   <block id="a780a238f22a802c24a2182aea27323f" category="paragraph">* 在 vCenter 中擷取適用於 VMware vSphere VM 的 ONTAP 工具快照（ HA 部署時為 3 個 VM 、非 HA 部署時為 1 個 VM ） *</block>
   <block id="2e2a1bc69765f559199ac318acd2a7d7" category="list-text">部署適用於 ONTAP 工具的 OVA for VMware vSphere 10.1 版本。</block>
-  <block id="84f820da6ba65a6cab821392a70f4e42" category="list-text">請依照中的步驟、在保護和恢復站台上安裝適用於 VMware vSphere 10.1 介面卡的 ONTAP 工具 <block ref="c2b5ee5d8065c08146407751d4d3a3d6" category="inline-link-macro-rx"></block></block>
   <block id="d3f31e51d90c6cd2652af74dae461781" category="paragraph">成功移轉之後、將 ONTAP 工具 10.1 登錄至 vCenter Server 之後、請執行下列步驟：</block>
   <block id="cea5a13834803a12adaeb249165351df" category="list-text">輸入<block ref="c81e728d9d4c2f636f067f89cc14862c" prefix=" " category="inline-code"></block> 以選取系統組態功能表。</block>
   <block id="86ce6e9c3af571980099ca308cd245e3" category="list-text">輸入<block ref="45c48cce2e2d7fbdea1afc51c7c6ad26" prefix=" " category="inline-code"></block> 以變更 ONTAP 認證。</block>
@@ -1580,7 +1533,6 @@ _\https ： //https/docs/api_ &lt;ip_address&gt;</block>
   <block id="76dc611d6ebaafc66cc0879c71b5db5c" category="cell">128</block>
   <block id="a767227b9eba64196b4788edef7ac1b7" category="cell">約 100k</block>
   <block id="38c5b65e97cdb4c6de7600ae7479af40" category="section-title">適用於 VMware vSphere 的工具 - 儲存複寫介面卡（ ONTAP ）</block>
-  <block id="747389dd88507b473bef28a38f605585" category="paragraph">下表顯示使用適用於 VMware vSphere 的 ONTAP 工具的每個 SRM 執行個體所支援的數量。</block>
   <block id="bff4a5ed353e2265f8bc7ee336bcb8a8" category="cell">* vCenter 部署規模 *</block>
   <block id="e8ae9f0392263b55e4580177a75c948e" category="cell">* 小 *</block>
   <block id="f3e6e184202c9901024fa409f2c24cb1" category="cell">* 中 *</block>
@@ -1596,8 +1548,6 @@ _\https ： //https/docs/api_ &lt;ip_address&gt;</block>
   <block id="e49da487a27e7484579695ad7765c888" category="cell">虛擬機器數量</block>
   <block id="1bd69c7df3112fb9a584fbd9edfc6c90" category="cell">4000</block>
   <block id="708be71b9ab6e0a84252760579ade9f1" category="cell">7000</block>
-  <block id="d037256bbf0f0260699fa03968eba2cf" category="paragraph">下表顯示適用於 VMware vSphere 部署規模的 SRM 數量和對應的 ONTAP 工具。</block>
-  <block id="3a1a412e50cda82ae9e433b202ecc21a" category="cell">* SRM 執行個體數 *</block>
   <block id="6be4728a24ecd589d1ceed4bba75de25" category="cell">* ONTAP 工具部署規模 *</block>
   <block id="e107d10db282d343eb4fc9317e44b024" category="cell">最多 4 個</block>
   <block id="2660064e68655415da2628c2ae2f7592" category="cell">小</block>
@@ -1613,8 +1563,6 @@ _\https ： //https/docs/api_ &lt;ip_address&gt;</block>
   <block id="9062a44d27a4f37689abd458521d9079" category="paragraph">如<block ref="e6f7130920699b61d596eeb5119cbced" category="inline-link-macro-rx"></block>需詳細資訊、請參閱。</block>
   <block id="c09f9ab815eaddacaa1dc798048be564" category="paragraph">在 ONTAP 中、匯出原則用於提供對主機的 Volume 資料路徑存取、而啟動器群組（ igroup ）則用於提供對 ESXi 主機的邏輯單元編號（ LUN ）資料路徑存取。適用於 VMware vSphere 的 ONTAP 工具可讓您輕鬆直覺地建立 igroup 、並提供豐富的端對端工作流程。為了確保一致性、不支援在儲存平台上直接建立 iGroup 。</block>
   <block id="ab8c04758635a74f379d11d4d8d6dd6d" category="paragraph">您應該使用部署的 ONTAP 工具 for VMware vSphere 的 * Summary （摘要） * 索引標籤來存取維護主控台。當您按一下<block ref="e47dca9fdf7d5de4c84091183b635b44" category="inline-image-macro-rx" type="image"></block>時，維護主控台就會啟動。</block>
-  <block id="a1b160da533b2cfee0734b4e536da205" category="paragraph"><block ref="a1b160da533b2cfee0734b4e536da205" category="inline-link-rx"></block></block>
-  <block id="783dbbcc9c265d80adfea7bac4a2d980" category="paragraph">介面卡已安裝在 SRM 上。</block>
   <block id="f02f2c757f889d163cf5903890ac95ef" category="sidebar">組態限制</block>
   <block id="ae9e13b66877a85be97724063f459ec2" category="section-title">一致性群組</block>
   <block id="eba11c7a4079ec571b88361adcae2df5" category="inline-link">一致性群組</block>
@@ -1808,7 +1756,6 @@ _\https ： //https/docs/api_ &lt;ip_address&gt;</block>
   <block id="6d1879a84e19ef83d0b9cc05a65ac444" category="list-text">只有在觸發資料存放區探索工作（可能需要 30 分鐘才能觸發）之後、才能在適用於 VMware vSphere 10.2 的 ONTAP 工具中看到從適用於 VMware vSphere 9.xx 的 ONTAP 工具移轉的 NFS 和 VMFS 資料存放區。確認 ONTAP 工具的「 VMware vSphere 外掛程式 UI 」頁面的「概觀」頁面中是否顯示資料存放區。</block>
   <block id="f2f34eedd3398b474ec363008e4f96c1" category="list-text">新增您要移轉至 ONTAP 工具的 vCenter Server 執行個體、以取得 VMware vSphere 10.2 版本。請參閱。 <block ref="946669e64e0e42585f18099dec81ec03" category="inline-link-macro-rx"></block></block>
   <block id="1c9a04fa9475b21ef9be5e7bd0f30822" category="list-text">從遠端外掛 vCenter 伺服器 API 本機建立內建儲存後端。將儲存設備新增為本機範圍以進行移轉。</block>
-  <block id="266bcd4b381daecdf6ce46cc3cb55488" category="list-text">在 SRM 中、按一下 * Array Manager* 、然後按一下 * 新增 Array Manager* 。</block>
   <block id="1f80017cff7192214efc53298c1489d3" category="list-text">選取您受保護的網站、然後按一下 * 管理 * 。</block>
   <block id="1c511a264bbd662cde1cfebeb069c175" category="list-text">選取適當的資料存放區、然後按一下 * 確定 * 。</block>
   <block id="74b27627165f74c84a8f31981da59bce" category="list-text">指定保護群組、方向的名稱和說明、然後按一下 * 下一步 * 。</block>
@@ -1846,4 +1793,96 @@ _\https ： //https/docs/api_ &lt;ip_address&gt;</block>
   <block id="9b69ea2dc9e7a75dc2e6d51a798b7c4e" category="paragraph">適用於 VMware vSphere 的 ONTAP 工具是一組可水平擴充、事件導向的微服務、部署為開放式虛擬應用裝置（ OVA ）。此版本已將 REST API 整合至 ONTAP 。</block>
   <block id="5cf2ee241dad8c2f06781c1f8cde814d" category="cell">ONTAP 9 。 12.1 、 9.13.1 、 9.14.1 和 9.15.1 的最新修補程式版本。</block>
   <block id="c20372b10311b40a3f12981f90015dec" category="paragraph">支援從適用於 VMware vSphere 9.10D2 、 9.11D4 、 9.12 和 9.13 版本的 ONTAP 工具移轉至 10.2 版本。</block>
+  <block id="9c914c30102fcf893634491740cba696" category="paragraph">ONTAP 工具管理員可透過託管的 vCenter Server 執行個體和已建立的儲存後端、為 VMware vSphere 管理員提供更多的 ONTAP 工具控制權。ONTAP Tools Manager 可協助管理 vCenter Server 執行個體、儲存設備後端、憑證、密碼和記錄套件下載。</block>
+  <block id="81d59d981388d591597f0840a1778f7c" category="paragraph">SRA 是安裝在 VMware Live Site Recovery 應用裝置內的儲存廠商專屬軟體。此介面卡可在 Site Recovery Manager 與儲存虛擬機器（ SVM ）層級的儲存控制器之間、以及叢集層級組態之間進行通訊。</block>
+  <block id="4fb2d974d1e232174a0545c1d40f5345" category="section-title">VMware Live Site Recovery</block>
+  <block id="1d722888e5f73607abb8bf4b2938744c" category="paragraph">VMware Live Site Recovery 可為 VMware 虛擬環境提供營運不中斷、災難恢復、站台移轉及不中斷營運的測試功能。</block>
+  <block id="489718a7ec98d7c9043bb7d8e021398c" category="section-title">將適用於 VMware vSphere 10.1 使用者的 ONTAP 工具升級為 10.2 使用者</block>
+  <block id="e189254c231c7dcd34530ab75115b200" category="paragraph">如果 VMware vSphere 10.1 的 ONTAP 工具使用者是使用 json 檔案建立的叢集範圍使用者、請在 ONTAP CLI 上使用管理員使用者執行下列命令、以升級至 10.2 版本。</block>
+  <block id="605caedbbf37df4c8a64351c8698690d" category="paragraph">如需產品功能：</block>
+  <block id="66d8073e2bee2f887f0a4b000fd4018a" category="list-text">VSC</block>
+  <block id="11032269c7440d479ebdfed54df8983e" category="list-text">VSC 和 VASA Provider</block>
+  <block id="492e7a46a25d7c5e1486eba727a4233d" category="list-text">VSC 和 SRA</block>
+  <block id="d629e0f9a84197a983a23f2f90b0b08a" category="list-text">VSC 、 VASA Provider 和 SRA 。</block>
+  <block id="1ef8110d8ea5f9d520ea22f1ee0e1879" category="paragraph">叢集 Privileges ：</block>
+  <block id="2c980ca2b98595a219bfc4433cb596cf" category="paragraph">_security 登入角色 create -role &lt;existing-role-name&gt; -cmddirname "vserver NVMe namespace show" -access all_</block>
+  <block id="49918875a309549e1412d96862a21196" category="paragraph">_security 登入角色 create -role &lt;existing-role-name&gt; -cmddirname "vserver NVMe subsystem show" -access all_</block>
+  <block id="d8fe6e8ed5b7d5b20b668c466285d700" category="paragraph">_security 登入角色 create -role &lt;existing-role-name&gt; -cmddirname "vserver NVMe subsystem host show" -access all_</block>
+  <block id="199881478924f26a59f5514f3c1550ee" category="paragraph">_security 登入角色 create -role &lt;existing-role-name&gt; -cmddirname "vserver NVMe subsystem map show" -access all_</block>
+  <block id="b891ffe7d6124b11ff4ce4eb1d1b2ee1" category="paragraph">_security 登入角色 create -role &lt;existing-role-name&gt; -cmddirname "vserver NVMe show-interface" -access read_</block>
+  <block id="eb6c61c0081101129527225636e40c97" category="paragraph">_security 登入角色 create -role &lt;existing-role-name&gt; -cmddirname "vserver NVMe subsystem host add " -access all_</block>
+  <block id="debe05b56bfb310c975d41cd97c76a07" category="paragraph">_security 登入角色 create -role &lt;existing-role-name&gt; -cmddirname "vserver NVMe subsystem map add" -access all_</block>
+  <block id="8d3a2560a448ee3eddc804ff88026179" category="paragraph">_security 登入角色 create -role &lt;existing-role-name&gt; -cmddirname "vserver NVMe 命名空間刪除 " -access all_</block>
+  <block id="23ae123087ed1b8607470840a23ef352" category="paragraph">_security 登入角色 create -role &lt;existing-role-name&gt; -cmddirname "vserver NVMe subsystem delete" -access all_</block>
+  <block id="301ba6f12701ec396d7ed4ddcd10eb2c" category="paragraph">_security 登入角色 create -role &lt;existing-role-name&gt; -cmddirname "vserver NVMe subsystem host remove" -access all_</block>
+  <block id="3f92a510e867ff8c9654f1a9d78d7256" category="paragraph">_security 登入角色 create -role &lt;existing-role-name&gt; -cmddirname "vserver NVMe subsystem map remove" -access all_</block>
+  <block id="b5076c18bade0b411ea86d0ae81fed83" category="paragraph">如果 VMware vSphere 10.1 的 ONTAP 工具使用者是使用 json 檔案建立的 SVM 範圍使用者、請使用管理員使用者在 ONTAP CLI 上執行下列命令、以升級至 10.2 版本。</block>
+  <block id="ac49fe994923e737311f3ca00af0c41a" category="paragraph">SVM Privileges ：</block>
+  <block id="6ae1f45115015d96b1b6c36617ec4c94" category="paragraph">_security 登入角色 create -role &lt;existing-role-name&gt; -cmddirname "vserver NVMe namespace show" -access all -vserver &lt;vserver-name&gt; _</block>
+  <block id="8c001ffb2b3a01c3fbbc6dde42029eb0" category="paragraph">_security 登入角色 create -role &lt;existing-role-name&gt; -cmddirname "vserver NVMe subsystem show" -access all -vserver &lt;vserver-name&gt; _</block>
+  <block id="6189135ecb532eb246137875c3f9b7dc" category="paragraph">_security 登入角色 create -role &lt;existing-role-name&gt; -cmddirname "vserver NVMe subsystem host show" -access all -vserver &lt;vserver-name&gt; _</block>
+  <block id="d07bbd45386f2488da60b45fbb4973f3" category="paragraph">_security 登入角色 create -role &lt;existing-role-name&gt; -cmddirname "vserver NVMe subsystem map show" -access all -vserver &lt;vserver-name&gt; _</block>
+  <block id="7fff01c58a2e857e96c05c3df9d52254" category="paragraph">_security 登入角色 create -role &lt;existing-role-name&gt; -cmddirname "vserver NVMe show-interface" -access read -vserver &lt;vserver-name&gt; _</block>
+  <block id="c6e8c5c1b6aa1f68e01b19750ac01fe9" category="paragraph">_security 登入角色 create -role &lt;existing-role-name&gt; -cmddirname "vserver NVMe subsystem host add " -access all -vserver &lt;vserver-name&gt; _</block>
+  <block id="87989e888fd0df664805ada6465cf871" category="paragraph">_security 登入角色 create -role &lt;existing-role-name&gt; -cmddirname "vserver NVMe subsystem map add" -access all -vserver &lt;vserver-name&gt; _</block>
+  <block id="5d41672426f411e756a4f66892159625" category="paragraph">_security 登入角色 create -role &lt;existing-role-name&gt; -cmddirname "vserver NVMe 命名空間刪除 " -access all -vserver &lt;vserver-name&gt; _</block>
+  <block id="3378051ca8595d565a2aa9f355dad63d" category="paragraph">_security 登入角色 create -role &lt;existing-role-name&gt; -cmddirname "vserver NVMe subsystem delete" -access all -vserver &lt;vserver-name&gt; _</block>
+  <block id="900ab615cb0b69371787d676b2d30046" category="paragraph">_security 登入角色 create -role &lt;existing-role-name&gt; -cmddirname "vserver NVMe subsystem host remove" -access all -vserver &lt;vserver-name&gt; _</block>
+  <block id="2914fec8c6d9818079914b9b8cb6298a" category="paragraph">_security 登入角色 create -role &lt;existing-role-name&gt; -cmddirname "vserver NVMe subsystem map remove" -access all -vserver &lt;vserver-name&gt; _</block>
+  <block id="599c83eeb4cf9aa9a7147d39be6bd9a6" category="paragraph">將命令 _vserver NVMe 命名空間 show_ 和 _vserver NVMe 子系統 show_ 新增至現有角色、會新增下列命令。</block>
+  <block id="0b6608365eac52ef503495b26a3e9b1f" category="paragraph">您可以使用適用於 VMware vSphere 的 ONTAP 工具、安裝適用於 vSphere API for Array Integration （ VAAI ）的 NetApp NFS 外掛程式。</block>
+  <block id="d9f27aaf5ae6bd3eb465792e14cafec5" category="section-title">為 VAAI 複本卸載設定正確的 NFS 匯出原則</block>
+  <block id="2dfc2d6cb8bd212554f059fbb234cecf" category="paragraph">在 NFS 環境中設定 VAAI 時、匯出原則規則應以下列需求為考量：</block>
+  <block id="88328c1c70d6d0322b7c07bf6d9760c8" category="list-text">相關的 Volume 需要允許 NFSv4 呼叫。</block>
+  <block id="81b7f8451857d47e62047334509e0b36" category="list-text">根使用者應保持 root 身分、所有交會父磁碟區均應允許 NFSv4 。</block>
+  <block id="805928a0c13b6e1b2d20173f40408bd7" category="list-text">需要在相關的 NFS 伺服器上設定 VAAI 支援選項。</block>
+  <block id="93cda38e25aee6138627f64e6c259593" category="paragraph">如需程序的詳細資訊、請參閱<block ref="e6212f694a3524de381ff5a79b542f51" category="inline-link-rx"></block>知識庫文章。</block>
+  <block id="810eb1be62c2223bbb6ff683af2508bd" category="paragraph">下表顯示使用適用於 VMware vSphere 的 ONTAP 工具、每個 VMware Live Site Recovery 執行個體所支援的數量。</block>
+  <block id="beadd6cb6100e1a0cce84603ccb7105a" category="paragraph">下表顯示 VMware Live Site Recovery 的數量、以及對應的 VMware vSphere 部署規模 ONTAP 工具。</block>
+  <block id="df0d7eb56e12922cca30035472c40aa7" category="cell">* VMware Live Site Recovery 執行個體數 *</block>
+  <block id="d6efc4dcb0d701b8153c2ef1af6e22b9" category="list-text">執行下列步驟、在 VMware Live Site Recovery UI 中刪除適用於 VMware vSphere 9.xx 版本的工具 ONTAP 介面卡：</block>
+  <block id="de7cd16aa682868ad900edd519b06059" category="list-text">前往 VMware Live Site Recovery 組態管理頁面</block>
+  <block id="e6af441b9194db7f4427a1199ae8c274" category="inline-link-macro">在 VMware Live Site Recovery 應用裝置上設定 SRA</block>
+  <block id="9bf06b478ac6a48afec45b6081899c00" category="list-text">請依照中的步驟、在保護和恢復站台上安裝適用於 VMware vSphere 10.1 介面卡的 ONTAP 工具 <block ref="200275c92830164958f040bec21a478e" category="inline-link-macro-rx"></block></block>
+  <block id="f24af9463aafeb0a644c3f3baddedb00" category="list-text">在「 VMware Live Site Recovery UI 」頁面中、執行 * 探索陣列 * 和 * 探索裝置 * 作業、並驗證這些裝置是否顯示在移轉之前。</block>
+  <block id="0b3582622e579cb352e246015d6ca171" category="summary">您可以使用 VMware Live Site Recovery 的 Array Manager 精靈來設定 Storage Replication Adapter （ SRA ）、以啟用 VMware Live Site Recovery 與儲存虛擬機器（ SVMs ）之間的互動。</block>
+  <block id="fe3a4c2227170fc60976b4e12c53d157" category="paragraph">您可以使用 VMware Live Site Recovery 的 Array Manager 精靈來設定 Storage Replication Adapter （ SRA ）、以啟用 VMware Live Site Recovery 與儲存虛擬機器（ SVM ）之間的互動。</block>
+  <block id="986d9b60b2308d9411e69051124f1e90" category="list-text">您應該已在 VMware Live Site Recovery 中配對受保護的站台和還原站台。</block>
+  <block id="83d479d6142f609752232069f2e45305" category="list-text">在 VMware Live Site Recovery 中、按一下 * Array Manager* 、然後按一下 * 新增 Array Manager* 。</block>
+  <block id="a276fae7dadb74c9d51a7a7823f174bc" category="list-text">請輸入下列資訊、以說明 VMware Live Site Recovery 中的陣列：</block>
+  <block id="bba4b1edcf0645b5356e4f3ffed77b3a" category="summary">部署 VMware Live Site Recovery 應用裝置之後、您應該在 VMware Live Site Recovery 應用裝置上設定 SRA 。成功設定的 SRA 可讓 VMware Live Site Recovery 應用裝置與 SRA 通訊、以進行災難恢復管理。您應該將 VMware vSphere 認證的工具（ IP 位址和管理員密碼）儲存在 VMware Live Site Recovery 應用裝置中、以便在 VMware Live Site Recovery 應用裝置和 ONTAP 之間進行通訊。</block>
+  <block id="ac7f1666af7e74993cdbf1eb27d64168" category="paragraph">部署 VMware Live Site Recovery 應用裝置之後、您應該在 VMware Live Site Recovery 應用裝置上設定 SRA 。成功設定的 SRA 可讓 VMware Live Site Recovery 應用裝置與 SRA 通訊、以進行災難恢復管理。您應該將適用於 VMware vSphere 認證的工具（ IP 位址）儲存在 VMware Live Site Recovery 應用裝置中、以便在 VMware Live Site Recovery 應用裝置和 ONTAP 之間進行通訊。</block>
+  <block id="21e557aeec91fdacbde971d5f1de9806" category="paragraph">VMware Live Site Recovery 應用裝置上的 SRA 組態會將 SRA 認證儲存在 VMware Live Site Recovery 應用裝置中。</block>
+  <block id="2fdef650865ae2c93b66f0f8c3481d33" category="list-text">在 VMware Live Site Recovery 應用裝置畫面上、按一下 * 儲存複寫介面卡 * &gt; * 新介面卡 * 。</block>
+  <block id="7ebae8ab4249a32272c6182685fb369b" category="list-text">將 .tar.gz_ 檔案上傳至 VMware Live Site Recovery 。</block>
+  <block id="e94e8319bfdee87f64f751c05ceaa14e" category="list-text">使用系統管理員帳戶、使用 putty 登入 VMware Live Site Recovery 應用程式。</block>
+  <block id="08155ff6aa2057ea9c3c11ad9a0e78c9" category="list-text">使用 ONTAP 工具來設定 VMware Live Site Recovery 以取得 VMware vSphere IP 位址和密碼、命令如下：<block ref="83f30183bb230f5e651ad5daf51de6eb" prefix=" " category="inline-code"></block></block>
+  <block id="60979ebd2e27db419252e2b56556ea91" category="list-text">重新掃描介面卡、確認「 VMware Live Site Recovery Storage Replication Adapters （ VMware Live Site Recovery 儲存複寫介面卡）」頁面上的詳細資料已更新。</block>
+  <block id="8e6f017dbd3eba811685ff6bf60372e5" category="list-text">安裝的 VMware Live Site Recovery 版本相同</block>
+  <block id="7b1dbf4673b204ff52118b225f9154bf" category="paragraph">您應該在 VMware Live Site Recovery 上針對擴充環境設定下列逾時值：</block>
+  <block id="e164323b5cce43e95866eb2640776865" category="paragraph"><block ref="e164323b5cce43e95866eb2640776865" category="inline-link-rx"></block></block>
+  <block id="b33d5fcf11274a869f9e11c1a59f0aed" category="paragraph"><block ref="b33d5fcf11274a869f9e11c1a59f0aed" category="inline-link-rx"></block></block>
+  <block id="b20ccd4ba538ec482298b894f6a0437e" category="summary">您應該先設定儲存系統、再執行 Storage Replication Adapter （ SRA ） for VMware Live Site Recovery 。</block>
+  <block id="c031f6f2a8dcb171b23de55cec95fc3a" category="paragraph">您應該先設定儲存系統、再執行 Storage Replication Adapter （ SRA ） for VMware Live Site Recovery 。</block>
+  <block id="84dd7fb9943b147c95a8074d22954775" category="paragraph">VMware 網站上有安裝 VMware Live Site Recovery 的相關文件。</block>
+  <block id="4de2c2cc8da509c592b09bc5114c2360" category="inline-link">關於 VMware Live Site Recovery</block>
+  <block id="fa1073d8b1d22f5d4b220d1a14c1c5e6" category="paragraph"><block ref="fa1073d8b1d22f5d4b220d1a14c1c5e6" category="inline-link-rx"></block></block>
+  <block id="7285a921f077fca33245569e2e0b7b8d" category="paragraph">介面卡安裝在 VMware Live Site Recovery 上。</block>
+  <block id="2467510d19a9c4f9eee4a00341a74b62" category="paragraph">有關安裝 VMware Live Site Recovery 的說明文件、請參閱 VMware 網站。</block>
+  <block id="17935256185c49fb0cf4cd4c4d27c3e9" category="paragraph">介面卡安裝在 VMware Live Site Recovery 和 SRA 伺服器上。</block>
+  <block id="bfbfb5bc1330e788e3f387d36887c71f" category="list-text">使用 Array Manager 精靈將陣列新增至 VMware Live Site Recovery 時、請確認在 * NFS 位址 * 欄位中指定了有效的位址、例如 NFS 匯出所在的 IP 位址、主機名稱或 FQDN 。</block>
+  <block id="ccc1c774c930be50b0755d16bd1d24f7" category="list-text">使用 URL ：登入 VMware Live Site Recovery 應用裝置管理介面<block ref="bdf0203c0900e161332057d261c69ba5" prefix=" " category="inline-code"></block>、然後前往 VMware Live Site Recovery 應用裝置管理介面中的 Storage Replication Adapters 。</block>
+  <block id="b68c9ef41cc9baad79e9d936239d54ce" category="list-text">將適用於 SRA 外掛程式的 .tar.gz_ 安裝程式上傳至 VMware Live Site Recovery 。</block>
+  <block id="00ec528fa77cc5bd426cb0521f2dfe6f" category="list-text">重新掃描介面卡、確認「 VMware Live Site Recovery Storage Replication Adapters （ VMware Live Site Recovery 儲存複寫介面卡）」頁面上的詳細資料已更新。</block>
+  <block id="de958ca4246386d24c708fb5f2871258" category="admonition">在 VMware Live Site Recovery 中、資源可以是資源集區、 ESXi 主機或 vSphere 叢集。</block>
+  <block id="7a81ea7b61ebfaa106b42abac78e427a" category="admonition">儲存複寫介面卡（SRA）不支援連出SnapMirror組態。SnapMirror連出組態是指將來源磁碟區複寫到兩個不同目的地的組態。當 VMware Live Site Recovery 需要從其目的地恢復虛擬機時、這會在恢復期間造成問題。</block>
+  <block id="2268184944a360ac30d7effc3f458ecb" category="list-text">您應該在受保護的網站和還原網站上安裝 VMware Live Site Recovery 。</block>
+  <block id="9edf84271808a5c15b41bb81868d40cb" category="summary">若要讓 VMware Live Site Recovery 與 SRA 通訊、如果您已修改認證、則應更新 VMware Live Site Recovery 伺服器上的 SRA 認證。</block>
+  <block id="7427d0cf7230792f39aef3b63b2efed4" category="inline-link-macro">在 VMware Live Site Recovery 應用裝置上設定 SRA</block>
+  <block id="234e9bf11d28f2eb5743a4afd467b352" category="paragraph">您應該已經執行了主題中提到的步驟 <block ref="63dec5e0603452dbccad6eca584eafe1" category="inline-link-macro-rx"></block>。</block>
+  <block id="ea3aed5969a29eebb3849662acbdc1ca" category="list-text">執行下列命令以刪除 VMware Live Site Recovery Machine 資料夾快取的 ONTAP 工具使用者名稱密碼：</block>
+  <block id="12aad99311cc30ce7ff1a450a29c3ec0" category="list-text">您應該已使用 VMware Live Site Recovery 陣列管理員配對受保護的站台和還原站台。</block>
+  <block id="c8af2a359991324c5027f67981fcf118" category="sidebar">適用於 VMware vSphere 10.1 的 ONTAP 工具文件</block>
+  <block id="425e3f9f511fc3cc32fb57688da1ec81" category="sidebar">適用於 VMware vSphere 9 的舊版 ONTAP 工具文件</block>
+  <block id="ee3ab12b14efcd93221e2e76410a3142" category="sidebar">瞭解 VMware vSphere with ONTAP</block>
 </blocks>

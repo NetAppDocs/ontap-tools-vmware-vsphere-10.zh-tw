@@ -17,7 +17,7 @@ summary: 您應該根據儲存複寫介面卡（ SRA ）的建議設定來設定
 
 == 儲存供應商設定
 
-您應該在SRM上為擴充環境設定下列逾時值：
+您應該在 VMware Live Site Recovery 上針對擴充環境設定下列逾時值：
 
 |===
 
@@ -56,7 +56,7 @@ summary: 您應該根據儲存複寫介面卡（ SRA ）的建議設定來設定
 
 如需修改 Storage Provider 設定的詳細資訊、請參閱 VMware 文件。
 
-https://docs.vmware.com/en/Site-Recovery-Manager/8.7/com.vmware.srm.admin.doc/GUID-E4060824-E3C2-4869-BC39-76E88E2FF9A0.html["VMware vSphere文件：變更儲存供應商設定"]
+https://docs.vmware.com/en/VMware-Live-Site-Recovery/9.0/vmware-live-site-recovery/GUID-E4060824-E3C2-4869-BC39-76E88E2FF9A0.html["VMware vSphere文件：變更儲存供應商設定"]
 
 
 
@@ -69,4 +69,4 @@ NOTE: 指定的逾時時間間隔為最大值。您不需要等待達到最大�
 
 如需詳細資訊、請參閱 VMware 修改 SAN Provider 設定的文件。
 
-https://docs.vmware.com/en/Site-Recovery-Manager/8.7/com.vmware.srm.admin.doc/GUID-711FD223-50DB-414C-A2A7-3BEB8FAFDBD9.html["VMware Site Recovery Manager文件：變更儲存設定"]
+https://docs.vmware.com/en/VMware-Live-Site-Recovery/9.0/vmware-live-site-recovery/GUID-711FD223-50DB-414C-A2A7-3BEB8FAFDBD9.html["VMware Site Recovery Manager文件：變更儲存設定"]

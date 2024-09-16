@@ -49,9 +49,9 @@ NOTE: 身為現有使用者、您必須先從目前版本取得 OVA 備份、然
 NOTE: 如果容錯移轉剛剛完成且重新保護擱置、請勿移轉。完成重新保護、然後執行移轉。
 同樣適用於測試恢復計畫。恢復計畫測試完成後、請清理測試恢復、然後開始移轉。
 
-. 請執行下列步驟、在 SRM UI 中刪除適用於 VMware vSphere 9.xx 版本的工具 ONTAP 介面卡：
+. 執行下列步驟、在 VMware Live Site Recovery UI 中刪除適用於 VMware vSphere 9.xx 版本的工具 ONTAP 介面卡：
 +
-.. 前往 SRM 組態管理頁面
+.. 前往 VMware Live Site Recovery 組態管理頁面
 .. 前往儲存複寫介面卡區段
 .. 按一下「 Kebab 」功能表、然後按一下「 * 重設組態 * 」
 .. 單擊 "Kebab " 菜單並選擇 "*Delete*"
@@ -60,8 +60,8 @@ NOTE: 如果容錯移轉剛剛完成且重新保護擱置、請勿移轉。完�
 
 
 
-. 請依照中的步驟、在保護和恢復站台上安裝適用於 VMware vSphere 10.1 介面卡的 ONTAP 工具 link:../protect/configure-on-srm-appliance.html["在 SRM 應用裝置上設定 SRA"]
-. 在「 SRM UI 」頁面中、執行 * 探索陣列 * 和 * 探索裝置 * 作業、並驗證這些裝置是否顯示在移轉之前。
+. 請依照中的步驟、在保護和恢復站台上安裝適用於 VMware vSphere 10.1 介面卡的 ONTAP 工具 link:../protect/configure-on-srm-appliance.html["在 VMware Live Site Recovery 應用裝置上設定 SRA"]
+. 在「 VMware Live Site Recovery UI 」頁面中、執行 * 探索陣列 * 和 * 探索裝置 * 作業、並驗證這些裝置是否顯示在移轉之前。
 
 
 

@@ -10,7 +10,7 @@ entries:
     url: "/protect/configure-storage-replication-adapter-for-san-environment.html"
   - title: 為高度擴充的環境設定 SRA
     url: "/protect/configure-storage-replication-adapter-for-highly-scaled-environment.html"
-- title: 在 SRM 應用裝置上設定 SRA
+- title: 在 VMware Live Site Recovery 應用裝置上設定 SRA
   url: "/protect/configure-on-srm-appliance.html"
 - title: 更新SRA認證資料
   url: "/protect/update-credentials.html"
