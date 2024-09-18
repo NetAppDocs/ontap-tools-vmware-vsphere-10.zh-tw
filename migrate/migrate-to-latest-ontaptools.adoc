@@ -31,10 +31,6 @@ NOTE: 身為現有使用者、您必須先從目前版本取得 OVA 備份、然
 . 新增您要移轉至 ONTAP 工具的 vCenter Server 執行個體、以取得 VMware vSphere 10.2 版本。請參閱 link:../configure/add-vcenter.html["新增及管理 vCenter Server 執行個體"]
 . 從適用於 VMware vSphere 外掛 vCenter 伺服器 API 的 ONTAP 工具、在本機上建置儲存後端。將儲存設備新增為本機範圍的儲存設備、以進行移轉。
 . 只有在觸發資料存放區探索工作（可能需要 30 分鐘才能觸發）之後、才能在適用於 VMware vSphere 10.2 的 ONTAP 工具中看到從適用於 VMware vSphere 9.xx 的 ONTAP 工具移轉的 NFS 和 VMFS 資料存放區。確認 ONTAP 工具的「 VMware vSphere 外掛程式 UI 」頁面的「概觀」頁面中是否顯示資料存放區。
-. 部署適用於 ONTAP 工具的 OVA for VMware vSphere 10.1 版本。
-. 新增您要移轉至 ONTAP 工具的 vCenter Server 執行個體、以取得 VMware vSphere 10.2 版本。請參閱 link:../configure/add-vcenter.html["新增及管理 vCenter Server 執行個體"]
-. 從適用於 VMware vSphere 外掛 vCenter API 的 ONTAP 工具、在本機上建置儲存後端。將儲存設備新增為本機範圍的儲存設備、以進行移轉。
-. 只有在觸發資料存放區探索工作（可能需要 30 分鐘才能觸發）之後、才能在適用於 VMware vSphere 10.2 的 ONTAP 工具中看到從適用於 VMware vSphere 9.xx 的 ONTAP 工具移轉的 NFS 和 VMFS 資料存放區。確認 ONTAP 工具的「 VMware vSphere 外掛程式 UI 」頁面的「概觀」頁面中是否顯示資料存放區。
 
 
 
@@ -60,7 +56,7 @@ NOTE: 如果容錯移轉剛剛完成且重新保護擱置、請勿移轉。完�
 
 
 
-. 請依照中的步驟、在保護和恢復站台上安裝適用於 VMware vSphere 10.1 介面卡的 ONTAP 工具 link:../protect/configure-on-srm-appliance.html["在 VMware Live Site Recovery 應用裝置上設定 SRA"]
+. 請依照中的步驟、在保護和恢復站台上安裝適用於 VMware vSphere 10.2 介面卡的 ONTAP 工具 link:../protect/configure-on-srm-appliance.html["在 VMware Live Site Recovery 應用裝置上設定 SRA"]
 . 在「 VMware Live Site Recovery UI 」頁面中、執行 * 探索陣列 * 和 * 探索裝置 * 作業、並驗證這些裝置是否顯示在移轉之前。
 
 
@@ -226,7 +222,7 @@ NOTE: UUID 是移轉後 API 回應時傳回的移轉 UUID 。
 ====
 
 
-成功移轉之後、將 ONTAP 工具 10.1 登錄至 vCenter Server 之後、請執行下列步驟：
+成功移轉之後、將 ONTAP 工具 10.2 登錄至 vCenter Server 之後、請執行下列步驟：
 
 * 重新整理所有主機上的憑證。
 * 執行資料存放區（ DS ）和虛擬機器（ VM ）作業之前、請先等待一段時間。等待時間取決於設定中存在的主機數量、 DS 和 VM 。當您不等待時、作業可能會間歇性失敗。

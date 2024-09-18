@@ -1208,7 +1208,6 @@ _\https ： //https/docs/api_ &lt;ip_address&gt;</block>
   <block id="a00d4477c9c1974aff09f6ea5b44859d" category="paragraph">「網路對應」頁面會顯示受保護的站台資源和恢復站台資源。您可以針對環境中的其他網路執行相同的步驟。</block>
   <block id="3dd0b6cbf926605abe281a83613cb23c" category="admonition">身為現有使用者、您必須先從目前版本取得 OVA 備份、然後再升級至修補程式版本。</block>
   <block id="135dda3ac3096b9bd31ceb04b513c216" category="section-title">一般移轉步驟</block>
-  <block id="eece6ba8141877366a154b925c32a9f5" category="list-text">從適用於 VMware vSphere 外掛 vCenter API 的 ONTAP 工具、在本機上建置儲存後端。將儲存設備新增為本機範圍的儲存設備、以進行移轉。</block>
   <block id="a556515aafd07bfe4c2dfa6abbaa4ccb" category="section-title">SRA 移轉步驟</block>
   <block id="37470572c4c0d1df68b6e2c9cf86ecf9" category="paragraph">移轉之前、請確定其中一個站台處於受保護狀態、另一個站台處於恢復狀態。</block>
   <block id="064e145ea2f6bfb5bc6045ba1fb3a818" category="admonition">如果容錯移轉剛剛完成且重新保護擱置、請勿移轉。完成重新保護、然後執行移轉。
@@ -1504,8 +1503,6 @@ _\https ： //https/docs/api_ &lt;ip_address&gt;</block>
   <block id="71a16bd19bda0e91c90a56e37682dc0d" category="list-text">執行 Perl 命令、以新認證設定 SRA ：</block>
   <block id="a40a3427484ba9037317f84856abff69" category="list-text">選取所需的陣列配對、並驗證對應的詳細資料。</block>
   <block id="a780a238f22a802c24a2182aea27323f" category="paragraph">* 在 vCenter 中擷取適用於 VMware vSphere VM 的 ONTAP 工具快照（ HA 部署時為 3 個 VM 、非 HA 部署時為 1 個 VM ） *</block>
-  <block id="2e2a1bc69765f559199ac318acd2a7d7" category="list-text">部署適用於 ONTAP 工具的 OVA for VMware vSphere 10.1 版本。</block>
-  <block id="d3f31e51d90c6cd2652af74dae461781" category="paragraph">成功移轉之後、將 ONTAP 工具 10.1 登錄至 vCenter Server 之後、請執行下列步驟：</block>
   <block id="cea5a13834803a12adaeb249165351df" category="list-text">輸入<block ref="c81e728d9d4c2f636f067f89cc14862c" prefix=" " category="inline-code"></block> 以選取系統組態功能表。</block>
   <block id="86ce6e9c3af571980099ca308cd245e3" category="list-text">輸入<block ref="45c48cce2e2d7fbdea1afc51c7c6ad26" prefix=" " category="inline-code"></block> 以變更 ONTAP 認證。</block>
   <block id="207c00a73dde0270cc0fbc7ce9c5f2fd" category="list-text">輸入<block ref="d3d9446802a44259755d38e6d163e820" prefix=" " category="inline-code"></block> 以變更 vCenter 認證。</block>
@@ -1587,7 +1584,6 @@ _\https ： //https/docs/api_ &lt;ip_address&gt;</block>
   <block id="2b1af6f75eb17029e34abc0a1219ad91" category="list-text">在主機系統或主機叢集或資料中心上按一下滑鼠右鍵、然後選取 * NetApp ONTAP tools* &gt; * Create Datastore* 。</block>
   <block id="f72f57410286ed6d906bcd47b23e2804" category="list-text">在 *Storage* 窗格中，選擇 *Platform* 和 *storage VM* 。在 * 進階選項 * 區段中、視情況選取自訂匯出原則（適用於 NFS 傳輸協定）或自訂啟動器群組名稱（適用於 iSCSI 和 FC 傳輸協定）。</block>
   <block id="a78a02bb1fc75e90c0aa8b7d5ee977d3" category="list-text">在主機系統或主機叢集或資料中心上按一下滑鼠右鍵、然後選取 * NetApp ONTAP tools* &gt; * Create Datastore* 。</block>
-  <block id="cf15c96a94a1c3b116a75ddc813146c7" category="paragraph">虛擬機器檔案系統（ VMFS ）是專為在 VMware vSphere 環境中儲存虛擬機器檔案而設計的叢集式檔案系統。它可讓多個 ESXi 主機同時存取相同的虛擬機器檔案、提供 VMotion 和高可用度等功能。在您開始之前、請先檢查下列項目、然後再繼續：</block>
   <block id="5574a2ea8c4feb96a776c4e8ce8a26dd" category="list-text">對於 ONTAP 儲存端的每個傳輸協定、必須啟用個別的服務和 LIF 。</block>
   <block id="00e94fd17e3b9474f70e512906843f21" category="list-text">如果您使用的是 NVMe / TCP 傳輸協定、請執行下列步驟來設定 ESXi 主機：</block>
   <block id="e08175c6fa64cba68719dea85ebd9d34" category="inline-link">VMware相容性指南</block>
@@ -1843,7 +1839,6 @@ _\https ： //https/docs/api_ &lt;ip_address&gt;</block>
   <block id="d6efc4dcb0d701b8153c2ef1af6e22b9" category="list-text">執行下列步驟、在 VMware Live Site Recovery UI 中刪除適用於 VMware vSphere 9.xx 版本的工具 ONTAP 介面卡：</block>
   <block id="de7cd16aa682868ad900edd519b06059" category="list-text">前往 VMware Live Site Recovery 組態管理頁面</block>
   <block id="e6af441b9194db7f4427a1199ae8c274" category="inline-link-macro">在 VMware Live Site Recovery 應用裝置上設定 SRA</block>
-  <block id="9bf06b478ac6a48afec45b6081899c00" category="list-text">請依照中的步驟、在保護和恢復站台上安裝適用於 VMware vSphere 10.1 介面卡的 ONTAP 工具 <block ref="200275c92830164958f040bec21a478e" category="inline-link-macro-rx"></block></block>
   <block id="f24af9463aafeb0a644c3f3baddedb00" category="list-text">在「 VMware Live Site Recovery UI 」頁面中、執行 * 探索陣列 * 和 * 探索裝置 * 作業、並驗證這些裝置是否顯示在移轉之前。</block>
   <block id="0b3582622e579cb352e246015d6ca171" category="summary">您可以使用 VMware Live Site Recovery 的 Array Manager 精靈來設定 Storage Replication Adapter （ SRA ）、以啟用 VMware Live Site Recovery 與儲存虛擬機器（ SVMs ）之間的互動。</block>
   <block id="fe3a4c2227170fc60976b4e12c53d157" category="paragraph">您可以使用 VMware Live Site Recovery 的 Array Manager 精靈來設定 Storage Replication Adapter （ SRA ）、以啟用 VMware Live Site Recovery 與儲存虛擬機器（ SVM ）之間的互動。</block>
@@ -1885,4 +1880,8 @@ _\https ： //https/docs/api_ &lt;ip_address&gt;</block>
   <block id="c8af2a359991324c5027f67981fcf118" category="sidebar">適用於 VMware vSphere 10.1 的 ONTAP 工具文件</block>
   <block id="425e3f9f511fc3cc32fb57688da1ec81" category="sidebar">適用於 VMware vSphere 9 的舊版 ONTAP 工具文件</block>
   <block id="ee3ab12b14efcd93221e2e76410a3142" category="sidebar">瞭解 VMware vSphere with ONTAP</block>
+  <block id="c81176933931ab131bb0e0556e02bad1" category="paragraph">虛擬機器檔案系統（ VMFS ）是專為在 VMware vSphere 環境中儲存虛擬機器檔案而設計的叢集式檔案系統。它可讓多個 ESXi 主機同時存取相同的虛擬機器檔案、提供 VMotion 和高可用度等功能。</block>
+  <block id="5482792d8f62d9c636f95fc96476727d" category="paragraph">請先檢查下列項目再繼續：</block>
+  <block id="2557cccd5218f319091e35b938bd9d10" category="list-text">請依照中的步驟、在保護和恢復站台上安裝適用於 VMware vSphere 10.2 介面卡的 ONTAP 工具 <block ref="200275c92830164958f040bec21a478e" category="inline-link-macro-rx"></block></block>
+  <block id="910d7f663c0ecfbd5ffa3a1f61a9f541" category="paragraph">成功移轉之後、將 ONTAP 工具 10.2 登錄至 vCenter Server 之後、請執行下列步驟：</block>
 </blocks>
