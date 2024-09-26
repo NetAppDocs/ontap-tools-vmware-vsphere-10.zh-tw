@@ -11,19 +11,16 @@ summary: 儲存設備後端是 ESXi 主機用於資料儲存的系統。
 
 
 [role="lead"]
-儲存設備後端是 ESXi 主機用於資料儲存的系統。
+儲存設備後端是 ESXi 主機用於資料儲存的系統。您可以使用 ONTAP 工具管理員或 vSphere 用戶端 UI 來新增儲存後端。
 
 *關於此工作*
 
 此工作可協助您建置 ONTAP 叢集。當您使用 ONTAP Tools Manager 新增儲存後端時、儲存後端會新增至全域叢集。將全域叢集與 vCenter Server 執行個體建立關聯、以啟用 SVM 使用者來進行 vVols 資料存放區資源配置。
 
-
-NOTE: 當您使用 vSphere 用戶端 UI 新增儲存後端時、 vVols 資料存放區不支援直接新增 SVM 使用者。
-
-
-
-== 使用 ONTAP Tools Manager 新增儲存後端
-
+[role="tabbed-block"]
+====
+.使用 ONTAP 工具管理器
+--
 
 NOTE: 從 ONTAP 工具管理員或 ONTAP 工具 API 新增儲存後端時、即為全域。從 vCenter Server API 新增時、儲存後端是本機的。例如、在多租戶設定中、您可以全域新增儲存後端（叢集）、並在本機新增 SVM 以使用 SVM 使用者認證。
 
@@ -40,9 +37,11 @@ NOTE: 支援 IPv4 和 IPv6 管理階層。也支援具有管理生命體的 SVM 
 
 
 
+--
+.使用 vSphere 用戶端 UI
+--
 
-
-== 使用 vSphere 用戶端 UI 新增儲存後端：
+NOTE: 當您使用 vSphere 用戶端 UI 新增儲存後端時、 vVols 資料存放區不支援直接新增 SVM 使用者。
 
 . 使用登入 vSphere 用戶端 `\https://vcenterip/ui`
 . 在捷徑頁面中、按一下外掛程式區段下方的 * NetApp ONTAP tools* 。
@@ -55,3 +54,6 @@ NOTE: 您可以新增叢集型認證、以及 IPv4 和 IPv6 管理階層、或�
 
 
 清單隨即重新整理、您可以在清單中看到新增的儲存後端。
+
+--
+====

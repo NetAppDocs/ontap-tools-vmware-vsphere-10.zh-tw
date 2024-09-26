@@ -143,7 +143,7 @@ sti115_vsim_ucs630f_aggr1 vserver show-aggregates                               
 |===
 
 
-=== 將適用於 VMware vSphere 10.1 使用者的 ONTAP 工具升級為 10.2 使用者
+== 將適用於 VMware vSphere 10.1 使用者的 ONTAP 工具升級為 10.2 使用者
 
 如果 VMware vSphere 10.1 的 ONTAP 工具使用者是使用 json 檔案建立的叢集範圍使用者、請在 ONTAP CLI 上使用管理員使用者執行下列命令、以升級至 10.2 版本。
 

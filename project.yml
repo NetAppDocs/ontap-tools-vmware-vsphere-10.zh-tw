@@ -19,6 +19,7 @@ sidebar:
   - section: protect
   - section: manage
   - section: upgrade
+  - section: recover
   - section: migrate
   - section: automation
   - title: 法律聲明

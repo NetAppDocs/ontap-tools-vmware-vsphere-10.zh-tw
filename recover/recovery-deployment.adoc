@@ -1,5 +1,5 @@
 ---
-permalink: deploy/recovery-deployment.html 
+permalink: recover/recovery-deployment.html 
 sidebar: sidebar 
 keywords:  
 summary: 如果您遺失用於 VMware vSphere 設定的 ONTAP 工具、但 ONTAP 仍在運作、則可以使用 ONTAP 來恢復用於 VMware vSphere 設定的 ONTAP 工具。當您遺失設定時、請將設定正常關閉。 
@@ -58,4 +58,4 @@ NOTE: 啟用 SVM 範圍時、您應該已啟用 SVM 支援、並提供管理 IP 
 
 安裝成功之後、 Web 主控台會顯示 VMware vSphere 的 ONTAP 工具狀態。
 
-安裝成功之後、您應該依照頁面中的準則、手動編輯硬體需求 link:../deploy/sizing-requirements.html["部署 VMware vSphere ONTAP 工具的必要條件"] 。
+安裝成功之後、您應該依照頁面中的準則、手動編輯硬體需求 link:../deploy/prerequisites.html["部署 VMware vSphere ONTAP 工具的必要條件"] 。
