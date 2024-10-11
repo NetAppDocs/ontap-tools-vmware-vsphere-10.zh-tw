@@ -43,7 +43,7 @@ summary: 在部署適用於 VMware vSphere 的 ONTAP 工具之前、您應該先
 
 | 大（ L ） | 16. | 32. 
 |===
-如link:../deploy/config-limits.html["部署 VMware vSphere ONTAP 工具的組態限制"]需詳細資訊、請參閱。
+請參閱下方 < 部署適用於 VMware vSphere 的 ONTAP 工具組態限制 > 一節以取得更多詳細資料。
 
 
 

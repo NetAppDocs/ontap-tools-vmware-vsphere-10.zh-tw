@@ -1486,7 +1486,6 @@ _\https ： //https/docs/api_ &lt;ip_address&gt;</block>
   <block id="f4eabc000ad2416081f1f8bc62960f34" category="cell">* 部署類型 *</block>
   <block id="cd0e7d46f22aa5207ca306eeab997625" category="cell">* CPU*</block>
   <block id="5a4776483c0990d54df47e0a2478facc" category="cell">* 記憶體（ GB ） *</block>
-  <block id="9062a44d27a4f37689abd458521d9079" category="paragraph">如<block ref="e6f7130920699b61d596eeb5119cbced" category="inline-link-macro-rx"></block>需詳細資訊、請參閱。</block>
   <block id="c09f9ab815eaddacaa1dc798048be564" category="paragraph">在 ONTAP 中、匯出原則用於提供對主機的 Volume 資料路徑存取、而啟動器群組（ igroup ）則用於提供對 ESXi 主機的邏輯單元編號（ LUN ）資料路徑存取。適用於 VMware vSphere 的 ONTAP 工具可讓您輕鬆直覺地建立 igroup 、並提供豐富的端對端工作流程。為了確保一致性、不支援在儲存平台上直接建立 iGroup 。</block>
   <block id="ab8c04758635a74f379d11d4d8d6dd6d" category="paragraph">您應該使用部署的 ONTAP 工具 for VMware vSphere 的 * Summary （摘要） * 索引標籤來存取維護主控台。當您按一下<block ref="e47dca9fdf7d5de4c84091183b635b44" category="inline-image-macro-rx" type="image"></block>時，維護主控台就會啟動。</block>
   <block id="ae9e13b66877a85be97724063f459ec2" category="section-title">一致性群組</block>
@@ -1668,7 +1667,6 @@ _\https ： //https/docs/api_ &lt;ip_address&gt;</block>
   <block id="58ee9210196e8f4558d87b26bba5bc19" category="paragraph">如果資料存放區是受保護主機叢集的一部分、則會顯示警告訊息。</block>
   <block id="303fed3350b929d95f1f937c9d4e0032" category="admonition">如果已卸載受保護的資料存放區、則退出保護設定可能會導致部分保護。請參閱<block ref="7f22d9c478ecf91907e72215f8fe7f7b" category="inline-link-macro-rx"></block>以啟用完整保護。</block>
   <block id="929d4b31f1c50c6c72409f0bf4ba7863" category="doc">從適用於 VMware vSphere 9.x 的 ONTAP 工具移轉至 10.2</block>
-  <block id="5ddb4f14bcf9ccda5a654d01d9537cd7" category="admonition">建議僅在安裝程式僅為 VASA 提供者功能提供服務時、才移轉 VMware vSphere 9.xx 的 ONTAP 工具設定。</block>
   <block id="9ba556089b0ea8a71ed1d4f63f954d02" category="list-text">部署適用於 ONTAP 工具的 OVA for VMware vSphere 10.2 版本。</block>
   <block id="0073dc7bd5514abf0999b550aa754930" category="list-text">從適用於 VMware vSphere 外掛 vCenter 伺服器 API 的 ONTAP 工具、在本機上建置儲存後端。將儲存設備新增為本機範圍的儲存設備、以進行移轉。</block>
   <block id="6d1879a84e19ef83d0b9cc05a65ac444" category="list-text">只有在觸發資料存放區探索工作（可能需要 30 分鐘才能觸發）之後、才能在適用於 VMware vSphere 10.2 的 ONTAP 工具中看到從適用於 VMware vSphere 9.xx 的 ONTAP 工具移轉的 NFS 和 VMFS 資料存放區。確認 ONTAP 工具的「 VMware vSphere 外掛程式 UI 」頁面的「概觀」頁面中是否顯示資料存放區。</block>
@@ -1903,4 +1901,7 @@ _\https ： //https/docs/api_ &lt;ip_address&gt;</block>
   <block id="bcb303519e38c6fa54f97973b5fa43ac" category="paragraph">SRA 實作 VMware Site Recovery Manager （ SRM ）規格型災難恢復（ DR ）解決方案。透過 SRM 整合的 SnapMirror 主動式同步可支援災難恢復規劃和協調解決方案、以提供透明的應用程式容錯移轉。</block>
   <block id="5dd03e8d039863e563e049be198c3fd3" category="sidebar">版本資訊</block>
   <block id="ed8359854c43609fca7bc8a46cca9eac" category="sidebar">ONTAP 工具 9 和 ONTAP 工具 10 的功能比較</block>
+  <block id="4e005c882cc1edecc6f4ea8355bca7b4" category="paragraph">請參閱下方 &lt; 部署適用於 VMware vSphere 的 ONTAP 工具組態限制 &gt; 一節以取得更多詳細資料。</block>
+  <block id="38d6f95d0d958810c2a3735385b13b81" category="admonition">建議僅在安裝程式僅為 VASA 提供者功能提供服務時、才移轉 VMware vSphere 9.x 的 ONTAP 工具設定。</block>
+  <block id="62ff1a79568cb8455f7bd93a686848b3" category="admonition">從適用於 VMware vSphere 9.x 的 ONTAP 工具移轉至 10.2 之後、含 NVMe / FC 傳輸協定的 vVols 資料存放區無法運作、因為 ONTAP 工具 10.2 只支援含 VMFS 資料存放區的 NVMe 。</block>
 </blocks>
