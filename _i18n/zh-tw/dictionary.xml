@@ -1902,6 +1902,7 @@ _\https ： //https/docs/api_ &lt;ip_address&gt;</block>
   <block id="4e005c882cc1edecc6f4ea8355bca7b4" category="paragraph">請參閱下方 &lt; 部署適用於 VMware vSphere 的 ONTAP 工具組態限制 &gt; 一節以取得更多詳細資料。</block>
   <block id="38d6f95d0d958810c2a3735385b13b81" category="admonition">建議僅在安裝程式僅為 VASA 提供者功能提供服務時、才移轉 VMware vSphere 9.x 的 ONTAP 工具設定。</block>
   <block id="62ff1a79568cb8455f7bd93a686848b3" category="admonition">從適用於 VMware vSphere 9.x 的 ONTAP 工具移轉至 10.2 之後、含 NVMe / FC 傳輸協定的 vVols 資料存放區無法運作、因為 ONTAP 工具 10.2 只支援含 VMFS 資料存放區的 NVMe 。</block>
-  <block id="3a3be4ef9c2ffae0f29834b33de5a0ac" category="list-text">請確定您有三個可用的 IP 位址可供非 HA 部署使用：一個可用的 IP 位址供負載平衡器使用、一個可用的 IP 位址供 Kubernetes 控制面使用、一個 IP 位址供節點使用。對於 HA 部署、除了這三個 IP 位址、您還需要兩個 IP 位址來處理第二個和第三個節點。在指派 HA 和非 HA 部署之前、應先將主機名稱對應至 DNS 上的可用 IP 位址。HA 部署中的所有五個 IP 位址都應位於選取用於部署的同一個 VLAN 上。</block>
   <block id="78ea61f628036a39a60fcb38cdcb0095" category="list-text">在「*配對站台恢復管理員伺服器*」對話方塊中、輸入受保護站台平台服務控制器的位址、然後按一下「*下一步*」。</block>
+  <block id="310782e61fec1bb5ccb93c0b13bfd162" category="list-text">請確定您有三個可用的 IP 位址可供非 HA 部署使用：一個可用的 IP 位址供負載平衡器使用、一個可用的 IP 位址供 Kubernetes 控制面使用、一個 IP 位址供節點使用。對於 HA 部署、除了這三個 IP 位址、您還需要兩個 IP 位址來處理第二個和第三個節點。在指派 HA 和非 HA 部署之前、應先將主機名稱對應至 DNS 上的可用 IP 位址。HA 部署中的所有五個 IP 位址和非 HA 部署中的三個 IP 位址都應位於選取用於部署的同一個 VLAN 上。</block>
+  <block id="598d1a03a9fabe277211c3c65adbfbc6" category="admonition">應用程式使用者名稱和密碼是在 ONTAP 工具部署期間設定的。這是 VASA 供應商 /SRA 登錄所需的項目。</block>
 </blocks>
