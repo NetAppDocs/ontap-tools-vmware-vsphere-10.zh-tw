@@ -308,9 +308,6 @@
   <block id="27e514c64c8a3970155422f887b4e4c9" category="cell">ESXi 主機相容性卡</block>
   <block id="37a7aee5902e5e8b7d36af678ff3baf3" category="cell">此卡片會根據設定群組 / 類別、顯示所有 ESXi 主機（針對所選 vCenter ）設定的整體相容性狀態、以及建議的 NetApp 主機設定。
 您可以按一下「套用建議的設定」連結來套用建議的設定。您可以按一下「問題 / 未知」來查看主機清單。</block>
-  <block id="ea87c4ef97995827b2d23fec795f9cbd" category="summary">您可以在 ESXi 主機上執行隨選探索、以取得儲存資料的最新更新。</block>
-  <block id="de458ad6ecb99cfc8e4cc7fa762462c4" category="doc">更新主機資料</block>
-  <block id="6099322beed408d39a0c31a402ba9f04" category="list-text">在 * 更新主機資料 * 快顯視窗中、選取 * 是 * 以重新開始探索所有已連線的儲存系統。</block>
   <block id="1772747eceb4be4c72a7b0ba5c7c5a67" category="summary">您可以使用適用於 VMware vSphere 和 ONTAP System Manager 的 ONTAP 工具隨附的 JSON 檔案、設定新的使用者角色來管理儲存後端。</block>
   <block id="fde3f7a850bbaaac2a3706bf8c7df54c" category="doc">設定 ONTAP 使用者角色和權限</block>
   <block id="322c3ffbc77c8245a48d32406a927fb6" category="paragraph">您可以使用適用於 VMware vSphere 和 ONTAP System Manager 的 ONTAP 工具隨附的 JSON 檔案、設定新的使用者角色和權限來管理儲存後端。</block>
@@ -1301,9 +1298,7 @@ _\https ： //https/docs/api_ &lt;ip_address&gt;</block>
   <block id="721041095b64df665034c0b19c967475" category="sidebar">適用於 VMware vSphere 的 ONTAP 工具的高可用度</block>
   <block id="01c23a6022de21870627c656bac73ece" category="sidebar">使用REST API自動化</block>
   <block id="f724dfae8a2bb3b34e049dcedf88d10d" category="sidebar">保護資料存放區和虛擬機器</block>
-  <block id="30dcbadaeab2008f15a279a602f8b6e2" category="sidebar">設定儲存系統以進行災難恢復</block>
   <block id="25890161c3df1f2618234e8f48e2c18b" category="sidebar">為高度擴充的環境設定 SRA</block>
-  <block id="3d7d171ecad1cba0c2d8d707b648b023" category="sidebar">設定受保護和恢復站台</block>
   <block id="a239701adb72159a71164b036c18a53a" category="sidebar">設定受保護和恢復站台資源</block>
   <block id="6956cfc9382ccb41c8ac57f99255b409" category="sidebar">驗證複寫的儲存系統</block>
   <block id="a2fa58344be7fbd9a2be0320a8df0f77" category="sidebar">升級ONTAP 功能</block>
@@ -1524,7 +1519,6 @@ _\https ： //https/docs/api_ &lt;ip_address&gt;</block>
   <block id="521a15c47fb41d8055141333f4c3f248" category="inline-link">透過 RDMA 或 NVMe over TCP 介面卡新增軟體 NVMe</block>
   <block id="7b30cf0bf941c59665059610f32765b2" category="list-text">對於 VMware vSphere 7 版本、請遵循 VMware 網站上的指示<block ref="78ea54819b62ddbcd655a4671d8a5b88" category="inline-link-rx"></block>來設定 NVMe / TCP 軟體介面卡。針對 VMware vSphere 8 版本、請遵循<block ref="d7f2ab4a5e61632cb53ab17b5775b973" category="inline-link-rx"></block>設定 NVMe / TCP 軟體介面卡。</block>
   <block id="f897e941469c1def0ceaad5904784393" category="inline-link">如何使用 vSphere 8.0 Update 1 和 ONTAP 9 。 13.1 設定適用於 VMFS 資料存放區的 NVMe / TCP</block>
-  <block id="81dc7c047ef799c2030ebccbe36d3322" category="list-text"><block ref="6c4ebf1ca886332539cd9c26d849d11e" category="inline-link-macro-rx"></block>在 ESXi 主機上執行動作。如需詳細資訊、請參閱<block ref="08964a7c7e6cd9155ed7286907a68824" category="inline-link-rx"></block></block>
   <block id="b52744b7fe6a50a639b45ebe19c17f96" category="list-text">如果您使用的是 NVMe / FC 傳輸協定、請執行下列步驟來設定 ESXi 主機：</block>
   <block id="0d2e4cff54d6f550e6b15a47007a161c" category="list-text">在 ESXi 主機上啟用 NVMe over Fabrics （ NVMe of ）。</block>
   <block id="802068251371051bc6ae5a5f001b4460" category="list-text">完成 SCSI 分區。</block>
@@ -1839,7 +1833,6 @@ _\https ： //https/docs/api_ &lt;ip_address&gt;</block>
   <block id="c93b5a9d65c77be9a5dfa309362afe22" category="sidebar">新增 vCenter Server</block>
   <block id="3d7fe3e43f9f24fffe5ed0d546d12f13" category="sidebar">部署ONTAP 各種工具</block>
   <block id="4b10c0328f31fc426beffe86fb80aa8e" category="sidebar">恢復 ONTAP 工具</block>
-  <block id="d3dc6537536e641facaa2e80efee8fc5" category="sidebar">恢復您的 ONTAP 工具</block>
   <block id="65411d7178112726bcaf549fb0afd1f2" category="paragraph">支援從適用於 VMware vSphere 9.10D2 、 9.11D4 、 9.12D1 及 9.13D2 版本的 ONTAP 工具移轉至 10.2 版本。</block>
   <block id="7cf21d459cdbb9c2a1e4864da9f56b5a" category="summary">瞭解適用於 VMware vSphere 9 的 ONTAP 工具和適用於 VMware vSphere 10 的 ONTAP 工具功能比較</block>
   <block id="8db6f8bda67c3085df85aeea7d620ac7" category="doc">適用於 VMware vSphere 9 的 ONTAP 工具和適用於 VMware vSphere 10 的 ONTAP 工具功能比較</block>
@@ -1905,4 +1898,8 @@ _\https ： //https/docs/api_ &lt;ip_address&gt;</block>
   <block id="78ea61f628036a39a60fcb38cdcb0095" category="list-text">在「*配對站台恢復管理員伺服器*」對話方塊中、輸入受保護站台平台服務控制器的位址、然後按一下「*下一步*」。</block>
   <block id="310782e61fec1bb5ccb93c0b13bfd162" category="list-text">請確定您有三個可用的 IP 位址可供非 HA 部署使用：一個可用的 IP 位址供負載平衡器使用、一個可用的 IP 位址供 Kubernetes 控制面使用、一個 IP 位址供節點使用。對於 HA 部署、除了這三個 IP 位址、您還需要兩個 IP 位址來處理第二個和第三個節點。在指派 HA 和非 HA 部署之前、應先將主機名稱對應至 DNS 上的可用 IP 位址。HA 部署中的所有五個 IP 位址和非 HA 部署中的三個 IP 位址都應位於選取用於部署的同一個 VLAN 上。</block>
   <block id="598d1a03a9fabe277211c3c65adbfbc6" category="admonition">應用程式使用者名稱和密碼是在 ONTAP 工具部署期間設定的。這是 VASA 供應商 /SRA 登錄所需的項目。</block>
+  <block id="9fc56e301e08de92885a49e832294c9b" category="list-text"><block ref="d7dfa373f3b590500a261c503f3d702f" category="inline-link-macro-rx"></block>在 ESXi 主機上執行動作。如需詳細資訊、請參閱<block ref="08964a7c7e6cd9155ed7286907a68824" category="inline-link-rx"></block></block>
+  <block id="1bf63b567c68de7fcd78fcc89f42f93c" category="sidebar">使用主機叢集保護來保護</block>
+  <block id="d8ddfdd9298e5862ca00168195c4be29" category="sidebar">使用 SRA 保護來保護</block>
+  <block id="f6af7ed15ad67767270b003672cdfdbb" category="sidebar">恢復您的 ONTAP 工具設定</block>
 </blocks>

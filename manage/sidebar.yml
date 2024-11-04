@@ -2,8 +2,12 @@
 section: manage
 title: 管理ONTAP 各種工具
 entries:
+- title: 適用於 VMware vSphere 外掛程式儀表板的 NetApp ONTAP 工具總覽
+  url: "/configure/dashboard-overview.html"
 - title: 管理資料存放區
   entries:
+  - title: 建立資料存放區
+    url: "/configure/create-vvols-datastore.html"
   - title: 掛載 NFS 和 VMFS 資料存放區
     url: "/manage/mount-datastores-on-host.html"
   - title: 卸載 NFS 和 VMFS 資料存放區
@@ -54,6 +58,8 @@ entries:
     url: "/manage/migrate-standard-virtual-machines-to-vvols-datastores.html"
   - title: Vasa 清理
     url: "/manage/delete-virtual-machines.html"
+- title: 探索儲存系統與主機
+  url: "/configure/discover-storage-systems-and-hosts.html"
 - title: 修改ESXi主機設定
   url: "/manage/edit-esxi-host-settings.html"
 - title: 管理密碼
