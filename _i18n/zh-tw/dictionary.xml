@@ -243,8 +243,6 @@
   <block id="7cd974572a0712e3f4e007a1ceb0f760" category="paragraph">當您在 ONTAP 工具中移除 vCenter Server 執行個體時、會自動執行下列動作：</block>
   <block id="32d5cbccaec76a2688c3f202f4a0fc0c" category="list-text">外掛程式已取消註冊。</block>
   <block id="bc4832cad0eb15905b3945a4b071a06d" category="list-text">移除外掛程式權限和外掛程式角色。</block>
-  <block id="d5fb672b62a493a68492dfcdac746c0b" category="summary">確認已登入的 SVM 列於 vCenter 用戶端 UI 的 VASA Provider 之下。</block>
-  <block id="53d752e3cc33b6d74616d71f03425e0f" category="doc">驗證已註冊的 VASA 供應商</block>
   <block id="b05db788b95e64cca7587ea1c9a8d4fe" category="paragraph">確認已登入的 VASA 提供者已列於 vCenter 用戶端 UI 的 VASA 提供者和遠端外掛程式 UI 之下。</block>
   <block id="12c4b643913312ffb0ca49cedfcedd35" category="list-text">若要從 vCenter 用戶端 UI 驗證 VASA Provider 、請執行下列步驟：</block>
   <block id="45b4fd4eef700c8aca7d8e7d745b8cbd" category="list-text">在儲存供應商 / 儲存設備後端之下、確認已登入的 VASA 供應商已正確列出。</block>
@@ -1902,4 +1900,5 @@ _\https ： //https/docs/api_ &lt;ip_address&gt;</block>
   <block id="1bf63b567c68de7fcd78fcc89f42f93c" category="sidebar">使用主機叢集保護來保護</block>
   <block id="d8ddfdd9298e5862ca00168195c4be29" category="sidebar">使用 SRA 保護來保護</block>
   <block id="f6af7ed15ad67767270b003672cdfdbb" category="sidebar">恢復您的 ONTAP 工具設定</block>
+  <block id="a2635d75789f249837881cc5136979e1" category="paragraph">*完成後*</block>
 </blocks>

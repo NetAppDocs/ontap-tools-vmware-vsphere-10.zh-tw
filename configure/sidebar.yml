@@ -6,8 +6,6 @@ entries:
   url: "/configure/add-vcenter.html"
 - title: 將 VASA 提供者登錄至 vCenter Server
   url: "/configure/registration-process.html"
-- title: 驗證已註冊的 VASA 供應商
-  url: "/configure/verify-registration.html"
 - title: 安裝NFS VAAI外掛程式
   url: "/configure/install-nfs-vaai-plug-in.html"
 - title: 設定 ESXi 主機設定
