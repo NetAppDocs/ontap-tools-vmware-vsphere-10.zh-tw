@@ -24,6 +24,9 @@ NOTE: 從適用於 VMware vSphere 9.x 的 ONTAP 工具移轉至 10.2 之後、�
 支援從適用於 VMware vSphere 9.10D2 、 9.11D4 、 9.12D1 及 9.13D2 版本的 ONTAP 工具移轉至 10.2 版本。
 
 
+NOTE: 如果您使用適用於 VMware vSphere 9.13P1 版本的 ONTAP 工具，則應在移轉至 10.2 版本之前升級至 9.13D2 。
+
+
 NOTE: 身為現有使用者、您必須先從目前版本取得 OVA 備份、然後再升級至修補程式版本。
 
 

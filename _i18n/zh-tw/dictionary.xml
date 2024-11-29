@@ -1901,4 +1901,6 @@ _\https ： //https/docs/api_ &lt;ip_address&gt;</block>
   <block id="d8ddfdd9298e5862ca00168195c4be29" category="sidebar">使用 SRA 保護來保護</block>
   <block id="f6af7ed15ad67767270b003672cdfdbb" category="sidebar">恢復您的 ONTAP 工具設定</block>
   <block id="a2635d75789f249837881cc5136979e1" category="paragraph">*完成後*</block>
+  <block id="7770bd163d7ff3ef18fb8fde03d271ba" category="list-text">在 HA 部署模式中，請勿在部署後重新命名 VM 名稱。</block>
+  <block id="c1d3c828ba9f7365c33657c18574ce0d" category="admonition">如果您使用適用於 VMware vSphere 9.13P1 版本的 ONTAP 工具，則應在移轉至 10.2 版本之前升級至 9.13D2 。</block>
 </blocks>
