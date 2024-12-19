@@ -1907,4 +1907,6 @@ _\https ： //https/docs/api_ &lt;ip_address&gt;</block>
   <block id="2000e83d945563ce0118bc3b5c5f6fbc" category="list-text">使用 admin Privileges 登入叢集。</block>
   <block id="9d65b5cebe69c5a066b9142b67334767" category="list-text">若要設定叢集 ONTAP 工具角色，請選取 * 叢集 * &gt; * 設定 * &gt; * 使用者與角色 * 窗格。</block>
   <block id="5aa0457cc95965b125467f8be60fadcf" category="list-text">若要設定叢集 SVM ONTAP 工具角色，請選取 * 儲存 SVM* &gt; * 設定 * &gt; * 使用者與角色 * 窗格</block>
+  <block id="f6e2644fce556a8207829c90c0760e9e" category="inline-link">非 HA 進階和 HA 組態的先決條件</block>
+  <block id="e919c4d13d770923e879fa844b30c21a" category="list-text">在非 HA 進階和 HA 組態中安裝適用於 VMware vSphere 10.2 的 ONTAP 工具之前，請參閱知識庫文章：<block ref="e4dee65de4069a83bb14c7c7d5ee3ead" category="inline-link-rx"></block></block>
 </blocks>
