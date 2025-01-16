@@ -1754,7 +1754,7 @@ _\https ： //https/docs/api_ &lt;ip_address&gt;</block>
   <block id="a5cc260611cf9a7ec571425794a59970" category="cell">這是用戶端要求的預設連接埠，例如取得，放置，刪除或監看 etcd 金鑰值存放區中的金鑰。</block>
   <block id="3779e775af387afae4fbbd33fdd7f842" category="cell">2380 （ TCP ）</block>
   <block id="8251f4d10510ac6bdb1df6c86a270877" category="cell">這是 etcd 叢集的伺服器對伺服器通訊預設連接埠，用於 etcd 用於資料複寫和一致性所依賴的 raft Consensus 演算法。</block>
-  <block id="347a316e2a67da5316e6d8a2397b2805" category="cell">7472 （ TCP + UDP ）</block>
+  <block id="347a316e2a67da5316e6d8a2397b2805" category="cell">7472 （ TCP+UDP ）</block>
   <block id="daf6d8a8d78132982e15d86e6c438d2c" category="cell">這是 Prometheus 計量服務連接埠。</block>
   <block id="8c340be6a89ca97c4af7b42628cbc335" category="cell">7946 （ TCP+UDP ）</block>
   <block id="d0c5d9fb3af3553dbc8aa2d531b38b8f" category="cell">此連接埠用於 Docker 的容器網路探索。</block>
@@ -2008,4 +2008,5 @@ _\https ： //https/docs/api_ &lt;ip_address&gt;</block>
   <block id="3c8480343462c93f8ec9ed8f6c4a4282" category="sidebar">適用於 VMware vSphere 10.2 的 ONTAP 工具文件</block>
   <block id="2e0332b2709dcff7df5d28c654c54066" category="sidebar">適用於 VMware vSphere 10.3 的 ONTAP 工具</block>
   <block id="3d7d171ecad1cba0c2d8d707b648b023" category="sidebar">設定受保護和恢復站台</block>
+  <block id="039f647b3ad55c89a6a5ff0d6109bd4f" category="paragraph">適用於 VMware vSphere 10.3 的 ONTAP 工具可擴充對 VMFS 和 vVol 資料存放區及其各自 VM 的觀察指標支援。</block>
 </blocks>

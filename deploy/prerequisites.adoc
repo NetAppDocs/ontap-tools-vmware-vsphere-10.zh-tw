@@ -172,7 +172,7 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 | 2380 （ TCP ） | 這是 etcd 叢集的伺服器對伺服器通訊預設連接埠，用於 etcd 用於資料複寫和一致性所依賴的 raft Consensus 演算法。 
 
 
-| 7472 （ TCP + UDP ） | 這是 Prometheus 計量服務連接埠。 
+| 7472 （ TCP+UDP ） | 這是 Prometheus 計量服務連接埠。 
 
 
 | 7946 （ TCP+UDP ） | 此連接埠用於 Docker 的容器網路探索。 
