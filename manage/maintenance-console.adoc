@@ -32,6 +32,7 @@ NOTE: 您應該設定的密碼 `diag` 使用者同時啟用遠端診斷。
 . 顯示伺服器狀態摘要
 . 變更 VASA 提供者服務和 SRA 服務的記錄層級
 . 停用 AutoSupport
+. 更新 AutoSupport Proxy URL
 
 
 
@@ -71,6 +72,8 @@ NOTE: 您應該設定的密碼 `diag` 使用者同時啟用遠端診斷。
  a| 
 . 存取診斷Shell
 . 啟用遠端診斷存取
+. 提供 vCenter 認證以進行備份
+. 進行備份
 
 
 |===

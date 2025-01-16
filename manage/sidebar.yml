@@ -2,8 +2,12 @@
 section: manage
 title: 管理ONTAP 各種工具
 entries:
-- title: 適用於 VMware vSphere 外掛程式儀表板的 NetApp ONTAP 工具總覽
+- title: 適用於 VMware vSphere 儀表板的 ONTAP 工具概觀
   url: "/configure/dashboard-overview.html"
+- title: ONTAP toolTools Manager 使用者介面
+  url: "/configure/manager-user-interface.html"
+- title: 編輯應用裝置設定
+  url: "/manage/edit-appliance-settings.html"
 - title: 管理資料存放區
   entries:
   - title: 建立資料存放區
@@ -34,8 +38,6 @@ entries:
   url: "/manage/manage-vcenter.html"
 - title: 管理憑證
   url: "/manage/certificate-manage.html"
-- title: 管理 igroup 和匯出原則
-  url: "/manage/igroup-management.html"
 - title: 存取適用於 VMware vSphere 維護主控台的 ONTAP 工具
   entries:
   - title: VMware vSphere 維護主控台的 ONTAP 工具總覽
@@ -80,3 +82,5 @@ entries:
     url: "/manage/edit-hostcluster-protection.html"
   - title: 移除主機叢集保護
     url: "/manage/delete-hostcluster-protection.html"
+- title: 接近零 RPO
+  url: "/manage/enable-backup.html"

@@ -21,4 +21,5 @@ summary: 適用於 VMware vSphere 的 ONTAP 工具是虛擬機器生命週期管
 * 用於 VM 精細管理的 Vasa Provider
 * 儲存原則型管理
 * 儲存複寫介面卡（SRA）
+* SnapMirror 主動式同步（ SMAS ）
 

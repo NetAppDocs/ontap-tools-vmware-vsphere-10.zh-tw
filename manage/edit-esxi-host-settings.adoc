@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 您可以使用ONTAP VMware vSphere的支援功能儀表板來編輯ESXi主機設定。 
 ---
-= 使用ONTAP VMware ESXi工具修改ESXi主機設定
+= 修改ESXi主機設定
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

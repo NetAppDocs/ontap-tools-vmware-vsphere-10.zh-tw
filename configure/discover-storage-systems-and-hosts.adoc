@@ -43,6 +43,6 @@ summary: 當您第一次在 vSphere Client 中執行適用於 VMware vSphere 的
 
 探索程序完成後、請執行下列動作：
 
-* 使用適用於 VMware vSphere 的 ONTAP 工具、為在介面卡設定欄、 MPIO 設定欄或 NFS 設定欄中顯示警示圖示的主機設定 ESXi 主機設定。
+* 使用適用於 VMware vSphere 的 ONTAP 工具，為在介面卡設定欄， MPIO 設定欄或 NFS 設定欄中顯示警示圖示的主機設定 ESXi 主機設定。
 * 提供儲存系統認證資料。
 

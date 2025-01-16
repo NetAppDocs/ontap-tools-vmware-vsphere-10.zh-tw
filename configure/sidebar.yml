@@ -4,7 +4,7 @@ title: 設定ONTAP VMware工具
 entries:
 - title: 新增 vCenter Server
   url: "/configure/add-vcenter.html"
-- title: 將 VASA 提供者登錄至 vCenter Server
+- title: 將 VASA Provider 登錄至 vCenter Server
   url: "/configure/registration-process.html"
 - title: 安裝NFS VAAI外掛程式
   url: "/configure/install-nfs-vaai-plug-in.html"
@@ -22,3 +22,5 @@ entries:
   url: "/configure/associate-storage-backend.html"
 - title: 設定網路存取
   url: "/configure/configure-network-access.html"
+- title: 建立資料存放區
+  url: "/configure/create-vvols-datastore.html"

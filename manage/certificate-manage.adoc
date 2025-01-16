@@ -11,29 +11,66 @@ summary: VMware vSphere 的單一 ONTAP 工具執行個體可管理多個 vCente
 
 
 [role="lead"]
-VMware vSphere 的單一 ONTAP 工具執行個體可管理多個 vCenter Server 執行個體。VMware vSphere 的 ONTAP 工具是以 VASA Provider 的自我簽署憑證來部署。有了這項功能、 VVols 資料存放區只能管理一個 vCenter Server 執行個體。當您管理多個 vCenter Server 執行個體、且想要在多個 vCenter Server 執行個體上啟用 vVols 功能時、您需要使用 ONTAP tools Manager 介面將自我簽署的憑證變更為自訂 CA 憑證。您可以使用相同的介面來更新或重新整理所有憑證。
+VMware vSphere 的單一 ONTAP 工具執行個體可管理多個 vCenter Server 執行個體。
+
+請確定已發行憑證的網域名稱已對應至多 vCenter 部署中的虛擬 IP 位址，其中必須有自訂 CA 憑證。會執行 _nslookup_ 檢查網域名稱、以檢查網域是否已解析為預期的 IP 位址。應使用負載平衡器 IP 位址的網域名稱和 IP 位址來建立憑證。
 
 
 NOTE: 將自我簽署的 CA 升級至自訂 CA 時、不支援對應至不同網域的不同負載平衡器 IP 位址。
+
+[role="tabbed-block"]
+====
+.ONTAP 工具憑證
+--
+ONTAP 工具索引標籤會顯示憑證類型（自我簽署 /CA 簽署）和網域名稱等詳細資料。在部署期間，預設會產生自我簽署的憑證。您可以續約憑證或將憑證升級至 CA 。
 
 *步驟*
 
 . 從網路瀏覽器啟動 ONTAP 工具管理員： `\https://loadBalanceIP:8443/virtualization/ui/`
 . 使用您在部署期間提供的 VMware vSphere 管理員認證 ONTAP 工具登入。
-. 選擇 * 憑證 * > * VASA 供應商 * > * 更新 * 選項以更新憑證。
+. 選擇 * 憑證 * > * ONTAP 工具 * > * 更新 * 選項以更新憑證。
 +
 
-NOTE: 系統將會離線、直到憑證續約為止。
+NOTE: 如果憑證已過期或即將到期，您可以更新憑證。系統將會離線，直到憑證續約，您將登出使用者介面。
 
-. 若要將自我簽署的憑證升級為自訂 CA 憑證、請選取 * 憑證 * > * VASA 供應商 * > * 升級至 CA* 選項。
++
+* 續訂 * 是唯一在憑證類型為 CA 簽署時可用的選項。對於 CA 簽署的憑證，會出現一個對話方塊，您可以在其中提供伺服器憑證，私密金鑰，根 CA 和中繼憑證詳細資料。
+
+. 若要將自我簽署的憑證升級為自訂 CA 憑證，請選取 * 憑證 * > * ONTAP 工具 * > * 升級至 CA* 選項。
 +
 .. 在 * 升級憑證至自訂 CA* 快顯視窗中、上傳伺服器憑證、伺服器憑證私密金鑰、根 CA 憑證及中繼憑證檔案。工具提示提供憑證的說明。
 .. 輸入您產生此憑證的網域名稱。
 .. 按一下*升級*。
 +
 
-NOTE: 系統將會離線、直到升級完成為止。
+NOTE: 系統將會離線，直到升級完成為止，您將會登出使用者介面。不允許從 CA 簽署的憑證切換為自我簽署的憑證。
 
 
 
 
+
+--
+.Vasa 供應商憑證
+--
+VMware vSphere 的 ONTAP 工具是以 VASA Provider 的自我簽署憑證來部署。有了這項功能、 VVols 資料存放區只能管理一個 vCenter Server 執行個體。當您管理多個 vCenter Server 執行個體、且想要在多個 vCenter Server 執行個體上啟用 vVols 功能時、您需要使用 ONTAP tools Manager 介面將自我簽署的憑證變更為自訂 CA 憑證。
+
+*步驟*
+
+. 從網路瀏覽器啟動 ONTAP 工具管理員： `\https://loadBalanceIP:8443/virtualization/ui/`
+. 使用您在部署期間提供的 VMware vSphere 管理員認證 ONTAP 工具登入。
+. 選擇 * 憑證 * > * VASA Provider* 或 * ONTAP 工具 * > * 更新 * 選項以更新憑證。
+. 若要將自我簽署的憑證升級為自訂 CA 憑證，請選取 * 憑證 * > * VASA Provider* 或 * ONTAP tools* > * Upgrade to CA* 選項。
++
+.. 在 * 升級憑證至自訂 CA* 快顯視窗中、上傳伺服器憑證、伺服器憑證私密金鑰、根 CA 憑證及中繼憑證檔案。工具提示提供憑證的說明。
+.. 輸入您產生此憑證的網域名稱。
+.. 按一下*升級*。
++
+
+NOTE: 系統將會離線，直到升級完成為止，您將會登出使用者介面。不允許從 CA 簽署的憑證切換為自我簽署的憑證。
+
+
+
+
+
+--
+====

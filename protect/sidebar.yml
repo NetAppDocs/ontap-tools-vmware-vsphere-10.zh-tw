@@ -18,10 +18,12 @@ entries:
     url: "/protect/configure-on-srm-appliance.html"
   - title: 更新SRA認證資料
     url: "/protect/update-credentials.html"
-  - title: 設定保護群組
-    url: "/protect/configure-protection-groups.html"
-  - title: 配對受保護和恢復站台
-    url: "/protect/pair-protected-and-recovery-sites.html"
+  - title: 設定受保護和恢復站台
+    entries:
+    - title: 設定保護群組
+      url: "/protect/configure-protection-groups.html"
+    - title: 配對受保護和恢復站台
+      url: "/protect/pair-protected-and-recovery-sites.html"
   - title: 設定受保護和恢復站台資源
     entries:
     - title: 設定網路對應

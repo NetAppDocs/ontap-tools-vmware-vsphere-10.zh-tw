@@ -16,7 +16,7 @@ summary: 您可以使用適用於 VMware vSphere 的 ONTAP 工具、安裝適用
 *您需要的是什麼*
 
 * 您應該已下載適用於 VAAI 的 NFS 外掛程式安裝套件 (`.vib`）來自 NetApp 支援網站 。 https://mysupport.netapp.com/site/products/all/details/nfsplugin-vmware-vaai/downloads-tab["適用於VMware VAAI的NetApp NFS外掛程式"]
-* 您應該已安裝 ESXi 主機 7.0U3 最新版修補程式、以及 ONTAP 9.12.1Px （最新版 P ） 9.13.1Px 、 9.14.1Px 或更新版本。
+* 您應該已安裝 ESXi 主機 7.0U3 最新版修補程式，以及 ONTAP 9.14.1 ， 9.15.1 和 9.16.0 。
 * 您應該已開啟ESXi主機電源、並已掛載NFS資料存放區。
 * 您應該已設定的值 `DataMover.HardwareAcceleratedMove`、 `DataMover.HardwareAcceleratedInit`和 `VMFS3.HardwareAcceleratedLocking` 主機設定為「 '1' 」。
 +

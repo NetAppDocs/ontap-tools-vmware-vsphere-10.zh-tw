@@ -35,11 +35,12 @@ summary: 適用於 VMware vSphere 的 ONTAP 工具的「組態」索引標籤下
 .步驟
 . 從 vSphere Client 導覽至 VMFS 資料存放區。
 . 按一下右窗格中的 * 組態 * 索引標籤。
-. 選擇 * NetApp ONTAP tools* > * ONTAP Storage* 。在 NVMe / TCP 或 NVMe / FC 傳輸協定的情況下、 * 儲存詳細資料 * 和 * LUN 詳細資料 * 或 * 命名空間詳細資料 * 會出現在右窗格中。
+. 選擇 * NetApp ONTAP tools* > * ONTAP Storage* 。視傳輸協定而定， * 儲存詳細資料 * 和 * LUN 詳細資料 * 或 * 命名空間詳細資料 * 會顯示在右窗格中。
 +
 ** 儲存詳細資料頁面包含儲存後端、集合和磁碟區的相關資訊。
 ** LUN 詳細資料頁面包含與 LUN 相關的資料。
 ** 在 VMFS 資料存放區使用 NVMe / TCP 或 NVMe / FC 傳輸協定時、「命名空間」詳細資料頁面會包含與命名空間相關的資料。
+** ASA R2 系統型資料存放區不會顯示 Volume 和 Aggregate 詳細資料。
 
 
 
@@ -47,6 +48,9 @@ summary: 適用於 VMware vSphere 的 ONTAP 工具的「組態」索引標籤下
 
 
 == VVols 資料存放區的 ONTAP 儲存檢視
+
+
+NOTE: ASA R2 型 VVols 資料存放區不支援此檢視。
 
 .步驟
 . 從 vSphere Client 導覽至 vVols 資料存放區。

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ONTAP tools,Storage Replication Adapter 
 summary: 在部署適用於 VMware vSphere 的 ONTAP 工具之前、您應該先熟悉部署套件的空間需求、以及一些基本的主機系統需求。 
 ---
-= 部署 VMware vSphere ONTAP 工具的必要條件
+= VMware vSphere 部署的 ONTAP 工具先決條件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -21,8 +21,8 @@ summary: 在部署適用於 VMware vSphere 的 ONTAP 工具之前、您應該先
 
 * * 每個節點的安裝套件空間需求 *
 +
-** 10 GB 適用於精簡配置的安裝
-** 248 GB 、適用於完整佈建的安裝
+** 15 GB 適用於精簡配置的安裝
+** 348 GB 、適用於完整佈建的安裝
 
 
 * * 每個節點的主機系統規模需求 *
@@ -32,19 +32,23 @@ summary: 在部署適用於 VMware vSphere 的 ONTAP 工具之前、您應該先
 |===
 
 
-| * 部署類型 * | * CPU* | * 記憶體（ GB ） * 
+| * 部署類型 * | * CPU* | * 記憶體（ GB ） * | * 磁碟空間（ GB ）密集佈建 * 
 
 
-| 小（ S ） | 8. | 16. 
+| 非 HA 小型 | 9 | 18 | 350 
 
 
-| 中（ M ） | 12. | 24. 
+| 非 HA 媒體 | 13 | 26 | 350 
 
 
-| 大（ L ） | 16. | 32. 
+| HA Small | 27 | 54 | 1050 
+
+
+| HA 媒體 | 39 | 78 | 1050 
+
+
+| HA 大型 | 51 | 102. | 1050 
 |===
-請參閱下方 < 部署適用於 VMware vSphere 的 ONTAP 工具組態限制 > 一節以取得更多詳細資料。
-
 
 
 == 最低儲存與應用程式需求
@@ -53,7 +57,7 @@ summary: 在部署適用於 VMware vSphere 的 ONTAP 工具之前、您應該先
 | 儲存設備、主機和應用程式 | 最低版本需求 
 
 
-| ONTAP | ONTAP 9 。 12.1 、 9.13.1 、 9.14.1 和 9.15.1 的最新修補程式版本。 
+| ONTAP | 9.14.1 ， 9.15.1 和 9.16.0 。FAS ， ASA A 系列， ASA C 系列， AFF A 系列， AFF C 系列和 ASA R2 。 
 
 
 | ESXi主機 | ESXi 7.0.3 
@@ -65,7 +69,7 @@ summary: 在部署適用於 VMware vSphere 的 ONTAP 工具之前、您應該先
 | VASA供應商 | 3.0 
 
 
-| ova 應用程式 | 10.2% 
+| ova 應用程式 | 10.3 
 |===
 互通性對照表工具（ IMT ）包含有關支援版本的 ONTAP 、 vCenter Server 、 ESXi 主機和外掛應用程式的最新資訊。
 
@@ -80,22 +84,22 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 |===
 
 
-| *部署* | *類型* | * 虛擬工具數 * | * 主機數 * | * 傳輸協定類型 * 
+| *部署* | *類型* | * 虛擬工具數 * | * 主機數 * 
 
 
-| 輕鬆部署 | 小（ S ） | 約 12 、 000 | 32. | NFS 、 iSCSI 
+| 非 HA | 小（ S ） | 約 12 、 000 | 32. 
 
 
-| 輕鬆部署 | 中（ M ） | 約 24 萬 | 64 | NFS 、 iSCSI 
+| 非 HA | 中（ M ） | 約 24 萬 | 64 
 
 
-| 高可用度 | 小（ S ） | 約 24 萬 | 64 | NFS 、 iSCSI 
+| 高可用度 | 小（ S ） | 約 24 萬 | 64 
 
 
-| 高可用度 | 中（ M ） | 約 50 萬 | 128 | NFS 、 iSCSI 
+| 高可用度 | 中（ M ） | 約 50 萬 | 128 
 
 
-| 高可用度 | 大（ L ） | 約 100k | 256 [ 注意 ] 表格中的主機數量顯示來自多個 vCenter 的主機總數。 | NFS 、 iSCSI 
+| 高可用度 | 大（ L ） | 約 100k | 256 [ 注意 ] 表格中的主機數量顯示來自多個 vCenter 的主機總數。 
 |===
 如需每個節點主機系統規模調整需求的詳細資訊link:../deploy/prerequisites.html["部署 VMware vSphere ONTAP 工具的必要條件"]、請參閱。
 
@@ -143,22 +147,70 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 
 
 
+== 連接埠需求
+
+下表概述 NetApp 使用的網路連接埠及其用途。確保這些連接埠是開放且可存取的，以利在系統內正常運作和通訊。請確定已設定必要的網路組態，以允許這些連接埠上的流量正常運作，使相關服務正常運作。視您的安全性原則而定，您可能需要設定防火牆或其他安全設備，以允許網路中的此流量。
+
+|===
+
+
+| *連接埠* | *說明* 
+
+
+| 22 （ TCP ） | Ansible 在叢集資源配置期間使用此 SSH 連接埠進行通訊。此連接埠是變更維護使用者密碼，狀態訊息等功能所必需的，在 HA 組態的情況下，也需要更新所有三個節點上的值。 
+
+
+| 443 （ TCP ） | 這是 VASA 提供者服務的傳入通訊通道連接埠。Vasa 提供者自我簽署的憑證和自訂 CA 憑證是託管在此連接埠上。 
+
+
+| 8443 （ TCP ） | 此連接埠可透過 swagger 和 Manager 使用者介面應用程式來裝載 API 文件。 
+
+
+| 2379 （ TCP ） | 這是用戶端要求的預設連接埠，例如取得，放置，刪除或監看 etcd 金鑰值存放區中的金鑰。 
+
+
+| 2380 （ TCP ） | 這是 etcd 叢集的伺服器對伺服器通訊預設連接埠，用於 etcd 用於資料複寫和一致性所依賴的 raft Consensus 演算法。 
+
+
+| 7472 （ TCP + UDP ） | 這是 Prometheus 計量服務連接埠。 
+
+
+| 7946 （ TCP+UDP ） | 此連接埠用於 Docker 的容器網路探索。 
+
+
+| 9083 （ TCP ） | 此連接埠是供 VASA 供應商服務使用的內部服務連接埠。 
+
+
+| 1162 （ UDP ） | 這是 SNMP 設陷封包連接埠。 
+
+
+| 6443 （ TCP ） | 來源： RKE2 代理節點。目的地： REK2 伺服器節點。說明： Kubernetes API 
+
+
+| 9345 （ TCP ） | 來源： RKE2 代理節點。目的地： REK2 伺服器節點。說明： REK2 監督 API 
+
+
+| 8472 （ TCP+UDP ） | 當使用 fl2el VXLAN 時，所有節點都必須能夠透過 UDP 連接埠 8472 到達其他節點。來源：所有 RKE2 節點。目的地：所有 REK2 節點。說明：使用 VXLAN 的 Canal CNI 
+
+
+| 10250 （ TCP ） | 來源：所有 RKE2 節點。目的地：所有 REK2 節點。說明： Kubelet 指標 
+
+
+| 30000-32767 （ TCP ） | 來源：所有 RKE2 節點。目的地：所有 REK2 節點。說明： NodePort 連接埠範圍 
+
+
+| 123 （ TCP ） | ntpd 使用此連接埠來執行 NTP 伺服器的驗證。 
+|===
+
+
 == 部署前檢查
 
 在繼續部署之前、請先確定已備好下列項目：
 
 * vCenter Server 環境已設定及設定。
-* （選用）對於自動化使用者： NetApp 提供的 Postman 集合 JSON 檔案會收集到。
 * 部署 OVA 的父 vCenter Server 認證已就緒。
-+
-
-NOTE: 父 vCenter Server 密碼不應包含這些特殊字元（ $ 、 ' 、 " ）。
-
 * 您擁有 vCenter Server 執行個體的登入認證、 VMware vSphere 的 ONTAP 工具將會連線至部署後進行註冊。
 * 瀏覽器快取已刪除。
-* 請確定您有三個可用的 IP 位址可供非 HA 部署使用：一個可用的 IP 位址供負載平衡器使用、一個可用的 IP 位址供 Kubernetes 控制面使用、一個 IP 位址供節點使用。對於 HA 部署、除了這三個 IP 位址、您還需要兩個 IP 位址來處理第二個和第三個節點。在指派 HA 和非 HA 部署之前、應先將主機名稱對應至 DNS 上的可用 IP 位址。HA 部署中的所有五個 IP 位址和非 HA 部署中的三個 IP 位址都應位於選取用於部署的同一個 VLAN 上。
-
-
+* 請確定您有三個可用的 IP 位址可供非 HA 部署使用：一個可用的 IP 位址供負載平衡器使用、一個可用的 IP 位址供 Kubernetes 控制面使用、一個 IP 位址供節點使用。對於 HA 部署、除了這三個 IP 位址、您還需要兩個 IP 位址來處理第二個和第三個節點。指派之前、主機名稱應對應至 DNS 上的可用 IP 位址。所有五個 IP 位址都應位於選擇用於部署的同一個 VLAN 上。
 * 請確定已發行憑證的網域名稱已對應至多 vCenter 部署中的虛擬 IP 位址、其中必須有自訂 CA 憑證。會執行 _nslookup_ 檢查網域名稱、以檢查網域是否已解析為預期的 IP 位址。應使用負載平衡器 IP 位址的網域名稱和 IP 位址來建立憑證。
-* 在非 HA 進階和 HA 組態中安裝適用於 VMware vSphere 10.2 的 ONTAP 工具之前，請參閱知識庫文章： https://kb.netapp.com/on-prem/ontap/da/NAS/NAS-KBs/pre-requisites_for_installing_OTV_10.1_and_10.2_in_NonHA_Advanced_and_HA["非 HA 進階和 HA 組態的先決條件"]
 

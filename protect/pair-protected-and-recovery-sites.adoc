@@ -13,9 +13,6 @@ summary: 您應該配對使用 vSphere Client 建立的受保護網站和還原�
 [role="lead"]
 您應該配對使用 vSphere Client 建立的受保護網站和還原網站、以啟用 Storage Replication Adapter （ SRA ）來探索儲存系統。
 
-
-NOTE: 儲存複寫介面卡（SRA）不支援連出SnapMirror組態。SnapMirror連出組態是指將來源磁碟區複寫到兩個不同目的地的組態。當 VMware Live Site Recovery 需要從其目的地恢復虛擬機時、這會在恢復期間造成問題。
-
 *您需要的是什麼*
 
 * 您應該在受保護的網站和還原網站上安裝 VMware Live Site Recovery 。
