@@ -708,141 +708,14 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="86087fc8fd9dd51486dc3c430bf6abac" category="cell">此角色可讓您修改儲存設備。此角色也包含與探索角色和建立儲存角色相關聯的所有權限。</block>
   <block id="a62ba12e7d9cf0e95b53a7ef0ccc6987" category="cell">此角色可讓您銷毀儲存設備。此角色也包含與探索角色、建立儲存角色及修改儲存角色相關的所有權限。</block>
   <block id="9aba481264947da03013bacc0bdb5337" category="paragraph">如果您使用適用於 VMware vSphere 的 ONTAP 工具、也應該設定原則型管理（ PBM ）角色。此角色可讓您使用儲存原則來管理儲存設備。這項職務要求您也必須設定「探索」角色。</block>
-  <block id="5f5192bbcb78a1952f0c1de27add636d" category="summary">存取API可在您開始使用API之前、先提供一些觀點、讓您在即時設定中使用更複雜的工作流程程序。</block>
-  <block id="6f800f16fa2f6cc79e50877afd6a63ea" category="doc">開始使用REST API</block>
-  <block id="fa5c00786ec8e725c475f243f896380c" category="paragraph">您可以快速開始使用適用於 VMware vSphere REST API 的 ONTAP 工具。存取API可在您開始使用API之前、先提供一些觀點、讓您在即時設定中使用更複雜的工作流程程序。</block>
-  <block id="b10a8db164e0754105b7a99be72e3fe5" category="section-title">您好：World</block>
-  <block id="e6cc5e45bd046642f9fb680d6739d7fd" category="paragraph">您可以在系統上執行簡單命令、開始使用適用於 VMware vSphere REST API 的 ONTAP 工具、並確認其可用度。</block>
   <block id="135b308ed83c53f1516b7c754566d1c4" category="list-title">開始之前</block>
-  <block id="d35295349c96319976125d2295393ac0" category="list-text">請確定系統上有Curl公用程式可用。</block>
-  <block id="832f7b2b1efea4397918df5d6a77294e" category="list-text">適用於 VMware vSphere 伺服器的 ONTAP 工具 IP 位址或主機名稱</block>
-  <block id="f59f21c2861931d779d39f5711d60be6" category="list-text">擁有存取 VMware vSphere REST API ONTAP 工具權限的帳戶使用者名稱和密碼。</block>
-  <block id="da932131b500d8e907961663d8ef346b" category="admonition">如果您的認證資料包含特殊字元、您必須根據您使用的Shell、以Curl可接受的方式來設定其格式。例如、您可以在每個特殊字元之前插入反斜槓、或將整個字元換行<block ref="133e1b8eda335c4c7f7a508620ca7f10" prefix=" " category="inline-code"></block> 單引號中的字串。</block>
-  <block id="48c7c41b72e1d678923ce3571aa65b2d" category="paragraph-title">步驟</block>
-  <block id="34d07047db39e17aa64415185872d7ba" category="paragraph">在命令列介面上執行下列命令、以擷取外掛程式資訊：</block>
-  <block id="016102d7f7027f4ec05121416c47259c" category="paragraph"><block ref="d7aacb5ab235e8ea9ffe1d2ca3f09c46" prefix="" category="inline-code"></block></block>
-  <block id="ab6f9bbbd6d40b1f24817d6aecb81f9d" category="paragraph"><block ref="f2c814248d385aa127395dbcd2585e06" prefix="" category="inline-code"></block></block>
-  <block id="0c18d1276ce1aa636415ddb70d628488" category="summary">說明如何使用 REST API 來執行多個 ONTAP 工具以執行 VMware vSphere 管理作業。REST API會透過Swagger網頁公開。</block>
-  <block id="0c889d77d71512ceb7241bd0f6d6ca23" category="doc">REST API總覽</block>
-  <block id="c330f595b02061ecdc25ecb17672913c" category="paragraph">REST API 可用於執行多種 ONTAP 工具、以執行 VMware vSphere 管理作業。REST API會透過Swagger網頁公開。</block>
-  <block id="11f00f575ae2ef170b7ce5ba13ff4781" category="paragraph">您可以存取 Swagger 網頁、網址為 \https://loadbalancerIP:8443/_ 、以顯示 REST API 文件、以及手動發出 API 呼叫。</block>
-  <block id="9a6f34cb1082502a6afd96556dec761f" category="admonition">所有 API 都有 swagger 頁面中提到的要求本文和範例。本節所提供的工作流程和範例僅供參考。</block>
-  <block id="527df4f1ccd81173595bb685c8266938" category="summary">您可以透過本機 ONTAP 系統上的 Swagger UI 來存取 ONTAP REST API 文件。</block>
-  <block id="95b1a4018b5f1cefffdc18991e0fd8f5" category="doc">透過 Swagger UI 存取適用於 VMware vSphere API 的 ONTAP 工具參考文件</block>
-  <block id="161fbe930f63fa83671b46be2b2b3d58" category="paragraph">您應該擁有下列項目：</block>
-  <block id="f9f1769b9ec1d047022000f65ca5c05a" category="list-text">知識集區管理LIF的IP位址或主機名稱ONTAP</block>
-  <block id="f2c6f5ac63b1ff8994bac2da18ed694c" category="list-text">具有存取 ONTAP REST API 權限的帳戶使用者名稱和密碼</block>
-  <block id="16f20abf4a7cb0a347b84a8585743c43" category="list-text">在瀏覽器中輸入URL、然後按* Enter *：
-_\https ： //https/docs/api_ &lt;ip_address&gt;</block>
-  <block id="a64f9f553a037daa06b0333e4f974c7c" category="list-text">使用 ONTAP 帳戶登入</block>
-  <block id="382dcdb42dd365fa6d100546e6d7a4d7" category="paragraph">ONTAP API 文件頁面會顯示、並在主要資源中組織 API 呼叫
-類別位於底部。</block>
-  <block id="b7998fdfa579757468dfd6407b7df0e3" category="list-text">如需個別API呼叫的範例、請向下捲動至*叢集*類別、然後按一下* Get /cluster *。</block>
-  <block id="3c09024082538b393ae85161883b78ab" category="summary">您可以ONTAP 使用多種不同的方法來存取靜態API。</block>
-  <block id="20e6657503c09b23dd000fa27ddc5cc7" category="doc">如何存取適用於 VMware vSphere REST API 的 ONTAP 工具</block>
-  <block id="933f7bf924b9ab3c423ac46225afd9c7" category="section-title">適用於 VMware vSphere API 的 ONTAP 工具線上文件頁面</block>
-  <block id="ab8a406d9f7f9d15ebedd520911bf0ef" category="paragraph">您可以從適用於 VMware vSphere 外掛程式的 NetApp ONTAP 工具支援頁面中的超連結存取 Swagger 。</block>
-  <block id="af945751c0efb1d33830b48e2e17c2e6" category="paragraph">用於存取API最新版本文件頁面的URL格式為：</block>
-  <block id="07189fcc640ffa4ecc043942258a8fc6" category="paragraph">「 https ： ////docs/API &lt;loadbalancer_ip_address&gt; 」</block>
-  <block id="26af4f060203125bc0739a38e9ddfa2b" category="section-title">自訂軟體與工具</block>
-  <block id="ffbba6018a0b637f1a55c4b05779c1c3" category="paragraph">您可以使用多種不同的程式設計語言和工具、存取適用於 VMware vSphere API 的 ONTAP 工具。熱門選項包括Python、Java、Curl和PowerShell。使用API的程式、指令碼或工具會做為REST Web服務用戶端。使用程式設計語言可深入瞭解 API 、並提供自動化 ONTAP 工具以進行 VMware vSphere 管理的機會。</block>
-  <block id="9670d5b867b93341fdec8b7aadfdba79" category="paragraph">用於直接存取最新版API的基礎URL格式如下：</block>
-  <block id="b62c382502f5a7724851aff63073a5b0" category="paragraph">「 https ： &lt;loadbalancer_ip_address&gt; / API 」</block>
-  <block id="433c12a33fdba27dd646123b380a2c4e" category="paragraph">若要存取支援多個版本的特定API版本、URL格式如下：</block>
-  <block id="383d966886384e9939a6e4b9de3f5bea" category="paragraph">「 https ： &lt;loadbalancer_ip_address&gt; / API/v1 」</block>
-  <block id="fc004b0a2e525fdc279e93342807a662" category="summary">您可以透過HTTP要求中設定的參數和變數來控制API呼叫的處理方式。</block>
-  <block id="ee083ff11ffc430b7230624e8985e88c" category="doc">控制API要求的輸入變數</block>
   <block id="957a8c35c28e967701ff975f1d7182d5" category="section-title">HTTP方法</block>
-  <block id="504b3e70c32650134b8928f353c98158" category="paragraph">ONTAP 工具支援的 VMware vSphere REST API HTTP 方法如下表所示。</block>
-  <block id="ed96d2fc76580fb63f9f0408276dd927" category="admonition">並非所有的HTTP方法都可在每個REST端點上使用。</block>
-  <block id="3ded167f4ad4afb85c6ace5862e27ba0" category="cell">HTTP方法</block>
   <block id="7528035a93ee69cedb1dbddb2f0bfcc8" category="cell">取得</block>
-  <block id="0decd4a1f47d9c9f9601109afe0d9a4e" category="cell">擷取資源執行個體或集合上的物件屬性。</block>
   <block id="a02439ec229d8be0e74b0c1602392310" category="cell">貼文</block>
-  <block id="fb9e1a48a4257dee6289fcb9c187cc7d" category="cell">根據提供的輸入建立新的資源執行個體。</block>
   <block id="32f68a60cef40faedbc6af20298c1a1e" category="cell">刪除</block>
   <block id="eef129331314d2c9f4c4a5b0fdde3c7e" category="cell">刪除現有的資源執行個體。</block>
   <block id="3e75383a5992a6d15fb81e872e46e256" category="cell">放入</block>
-  <block id="2071d14ff2885e064879040ea18a09e5" category="cell">修改現有的資源執行個體。</block>
-  <block id="736943e80c16e2be98d8595e6376e4ee" category="section-title">要求標頭</block>
-  <block id="406537306d9a15baf8ae1febe4afdec1" category="paragraph">您應該在HTTP要求中包含多個標頭。</block>
-  <block id="f64aadb713838867dd5f6cb3d02558a0" category="section-title">內容類型</block>
-  <block id="c29560cde9e7309356bf9bb27ace99c7" category="paragraph">如果要求本文包含JSON,則此標頭應設定為_application/json_。</block>
   <block id="c4408d335012a56ff58937d78050efad" category="section-title">接受</block>
-  <block id="2746025afdf3b4921a2c5d71d5bf62c3" category="paragraph">此標頭應設定為_application/json_。</block>
-  <block id="9cd8a2455b1839ff98ef70c05b9b5983" category="section-title">授權</block>
-  <block id="78ea3bb2b55ad98896cff83f4d15f205" category="paragraph">基本驗證應使用以 base64 字串編碼的使用者名稱和密碼進行設定。</block>
-  <block id="a3ba8461439f7d0176ef3944696ea2ac" category="section-title">申請本文</block>
-  <block id="973ab3cad185dec8eac7662330e49f1c" category="paragraph">申請本文的內容會因特定通話而有所不同。HTTP要求本文包含下列其中一項：</block>
-  <block id="b86f5c6ed2b7d52e2940495dc8a984f4" category="list-text">具有輸入變數的Json物件</block>
-  <block id="ce2c8aed9c2fa0cfbed56cbda4d8bf07" category="list-text">空白</block>
-  <block id="ac860c2e604ebd01436860da72828954" category="section-title">篩選物件</block>
-  <block id="0438b035fcfcfd3b3c333dd8d993e532" category="paragraph">發出使用Get的API呼叫時、您可以根據任何屬性來限制或篩選傳回的物件。例如、您可以指定要符合的確切值：</block>
-  <block id="1fc998fba92eac6c354078a63d749232" category="paragraph"><block ref="9f076f2b1cbf046a6f73c579be1c3ca0" prefix="" category="inline-code"></block></block>
-  <block id="fd412bde4d95f6a11ca6eb5291ec5055" category="paragraph">除了完全相符的運算子、其他運算子也可傳回一系列值的一組物件。適用於 VMware vSphere REST API 的 ONTAP 工具支援下表所示的篩選運算子。</block>
-  <block id="e1b3ec89ead7f83a9245ed5c9cacfdbf" category="cell">營運者</block>
-  <block id="43ec3e5dee6e706af7766fffea512721" category="cell">=</block>
-  <block id="495c04002891bebf41bc3b56507f6d6b" category="cell">等於</block>
-  <block id="524a50782178998021a88b8cd4c8dcd8" category="cell">&lt;</block>
-  <block id="ad647e4ae904c7ed54ee93040d8298c7" category="cell">小於</block>
-  <block id="cedf8da05466bb54708268b3c694a78f" category="cell">&gt;</block>
-  <block id="05824b7be006782aaefd1fdb97c71e06" category="cell">大於</block>
-  <block id="a7eeaea90b4e8312b88abcd178019929" category="cell">&amp;l;=</block>
-  <block id="28d1141142e2cbb29e657b69a044ddf4" category="cell">小於或等於</block>
-  <block id="3a1e9b87c94b54dec1202b5ca6539806" category="cell">&gt;=</block>
-  <block id="798fe01fcb2754a295b6937ed885a69a" category="cell">大於或等於</block>
-  <block id="15a8022d0ed9cd9c2a2e756822703eb4" category="cell">更新</block>
-  <block id="3a2d5fe857d8f9541136a124c2edec6c" category="cell">或</block>
-  <block id="9033e0e305f247c0c3c80d0c7848c8b3" category="cell">！</block>
-  <block id="9bc7de899cf1c0d3ada046cd81f96aff" category="cell">不等於</block>
-  <block id="3389dae361af79b04c9c8e7057f60cc6" category="cell">*</block>
-  <block id="05a8a074dcf1a74c3e6c55d4f730a475" category="cell">貪婪的萬用字元</block>
-  <block id="f3c93baa1e74d313b05f6891f58a4530" category="paragraph">您也可以使用* null *關鍵字或其否定*！null *做為查詢的一部分、根據是否設定特定欄位來傳回物件集合。</block>
-  <block id="5260f8fe460e79195a4c88c011e51342" category="admonition">任何未設定的欄位通常都會排除在相符查詢之外。</block>
-  <block id="6d8c6f6bd33a2c5ad3268242ca5ff59b" category="section-title">要求特定物件欄位</block>
-  <block id="3195a941efa016d87e87f54db2226a79" category="paragraph">根據預設、使用Get發出API呼叫時、只會傳回唯一識別物件的屬性。這組最小欄位可做為每個物件的金鑰、而且會根據物件類型而有所不同。您可以使用選取其他物件內容<block ref="d05b6ed7d2345020440df396d6da7f73" prefix=" " category="inline-code"></block> 以下列方式查詢參數：</block>
-  <block id="c679b8eaf3069c4f7bffc461e34b95fb" category="section-title">一般或標準欄位</block>
-  <block id="8aca4f931f0c66b003614a9f6cdbb501" category="paragraph">指定*功能變數=*以擷取最常用的物件欄位。這些欄位通常會保留在本機伺服器記憶體中、或只需少量處理即可存取。使用Get搭配URL路徑金鑰（UUID）之後、傳回的物件內容相同。</block>
-  <block id="36579447315838f79ada095ab26bf693" category="section-title">所有欄位</block>
-  <block id="d89fcd8c35307904ba8719856b606ebb" category="paragraph">指定*功能變數=***以擷取所有物件欄位、包括需要額外伺服器處理才能存取的欄位。</block>
-  <block id="a686d83a73b66e60196ab98b2632e7da" category="section-title">自訂欄位選擇</block>
-  <block id="d2d353f9dda5271bad41d3e7e0a85b8e" category="paragraph">使用* field=&lt;field_name&gt;*來指定所需的確切欄位。要求多個欄位時、值應以無空格的逗號分隔。</block>
-  <block id="e8145dd54cca5af37c6636e941e14f5e" category="admonition">最佳實務做法是、務必找出您想要的特定欄位。您只能在需要時擷取一組通用欄位或所有欄位。哪些欄位被分類為一般欄位、並使用_Fields =*傳回、由NetApp根據內部效能分析來決定。欄位的分類可能會在未來的版本中變更。</block>
-  <block id="8b9514b4e7a0d660f91152d4a5baf424" category="section-title">排序輸出集中的物件</block>
-  <block id="760ed1003f95d4d8f38b6a7862a1fcd6" category="paragraph">資源集合中的記錄會以物件定義的預設順序傳回。您可以使用變更訂單<block ref="da3ad3b4322b19b609e4fa9d0a98a97b" prefix=" " category="inline-code"></block> 查詢參數的欄位名稱和排序方向如下：</block>
-  <block id="42ac83dab536d4c72f5e57b001e9d1b7" category="paragraph"><block ref="5c4be89fa58910749118c299d7146409" prefix="" category="inline-code"></block></block>
-  <block id="ec8ebedbd75e137e3d60f61956a459a3" category="paragraph">例如、您可以依遞增順序、以遞減順序排序類型欄位、然後依ID排序：</block>
-  <block id="ae95344c2bcf9d6ce4630f98e0438896" category="paragraph"><block ref="e725b51939475fb54936bc15ff698a67" prefix="" category="inline-code"></block></block>
-  <block id="20687dcab7f3b4cba9b39b22c38c8ad5" category="list-text">如果您指定排序欄位但未提供方向、則會以遞增順序排序這些值。</block>
-  <block id="c1b49548ca5d2466ba6ba83d2979b184" category="list-text">在包含多個參數時、您應以逗號分隔欄位。</block>
-  <block id="245272e0c4968634df98eb3e43fe7188" category="section-title">擷取集合中的物件時分頁</block>
-  <block id="6151e9d3df64b1356357d21e15fdcf59" category="paragraph">當使用 Get 來存取同類型物件集合時、適用於 VMware vSphere 的 ONTAP 工具會根據兩個限制、嘗試傳回盡可能多的物件。您可以使用要求上的其他查詢參數來控制這些限制。針對特定Get要求所達成的第一個限制會終止要求、因此會限制傳回的記錄數目。</block>
-  <block id="77f9234bccd7df3df5de9766fc1ee88a" category="admonition">如果要求在重複所有物件之前結束、回應會包含擷取下一批記錄所需的連結。</block>
-  <block id="9b694e5a19d32713635e80d596a204af" category="section-title">限制物件數量</block>
-  <block id="b6d10b2319c50121a995ce56d9a78fb5" category="paragraph">根據預設、 VMware vSphere 的 ONTAP 工具會針對 GET 要求傳回最多 10 、 000 個物件。您可以使用_mast_Records_query參數來變更此限制。例如：</block>
-  <block id="ca70aeac050e5deeb2d294566c856b35" category="paragraph"><block ref="6442f0c42ddfbf1a4d6374ad73dea2eb" prefix="" category="inline-code"></block></block>
-  <block id="cb5652e059687de540fb7ab71200a4e3" category="paragraph">根據相關的時間限制、以及系統中物件的總數、傳回的物件數量可以小於有效的上限。</block>
-  <block id="cec4fc9be41c96cfd5b0d11b548d1a5e" category="section-title">限制擷取物件所用的時間</block>
-  <block id="a6422605eda5232370b98ff9dd129108" category="paragraph">根據預設、 VMware vSphere 的 ONTAP 工具會在 GET 要求允許的時間內傳回盡可能多的物件。預設的逾時時間為15秒。您可以使用_reture_timeout_查詢參數來變更此限制。例如：</block>
-  <block id="4f2ca89743f0c1642129bde507459575" category="paragraph"><block ref="2eef2059f1d9935a31cf756727a21ca4" prefix="" category="inline-code"></block></block>
-  <block id="cca254a24814ec91f1f1b7933614e633" category="paragraph">傳回的物件數目可能小於有效的上限、這取決於物件數量的相關限制、以及系統中的物件總數。</block>
-  <block id="2dadc767979da8ab1576ee0aa8da5e21" category="section-title">縮小結果集</block>
-  <block id="ab92d69f97ee430d4048a43a5452659c" category="paragraph">如有需要、您可以將這兩個參數與其他查詢參數結合、以縮小結果集範圍。例如、下列項目最多會傳回指定時間之後產生的10個EMS事件：</block>
-  <block id="89163f6e2498a9f894e7813e6de46b08" category="paragraph"><block ref="3a4009b6b07614ee155d4af5ecfaf8bc" prefix="" category="inline-code"></block></block>
-  <block id="5394a0e51a0e30e195e0299ede162a02" category="paragraph">您可以針對物件發出多個分頁要求。每次後續的API呼叫都應根據最後結果集中的最新事件、使用新的時間值。</block>
-  <block id="050a8c11f48cd555f6e5e6bab96225d6" category="section-title">大小屬性</block>
-  <block id="721165b216d0f852ad3d9fd6e430dbe1" category="paragraph">某些API呼叫所使用的輸入值以及某些查詢參數均為數值。您可以選擇使用下表所示的字尾、而不是提供以位元組為單位的整數。</block>
-  <block id="56e6ddd1cb6cec596b433440dfb21c17" category="cell">後置</block>
-  <block id="ab57fd0432e25d5b3013133a1c910d56" category="cell">KB</block>
-  <block id="9664b7d53f6c3f95743d9d5e1e03e0f6" category="cell">KB千位元組（1024位元組）或Kibibibyte</block>
-  <block id="8d8fcc1abd550c5f25dbfaa57d59cb67" category="cell">MB</block>
-  <block id="1bfdb499a2daaef53342602344b219d2" category="cell">MB MB（KB x 1024位元組）或百萬位元組</block>
-  <block id="79cba1185463850dedba31f172f1dc5b" category="cell">GB</block>
-  <block id="9a19cb477310ba69217d25ed9ca7c242" category="cell">GB GB GB（MB x 1024位元組）或GB</block>
-  <block id="ff88442a425c06d961f97bccb11ddf5d" category="cell">TB</block>
-  <block id="db6eb0e01af53f05894f9ad1203350c6" category="cell">TB TB TB（GB x 1024字節）或TB字節</block>
-  <block id="cd203ccd68b84de1c5df8fd890e104e0" category="cell">PB</block>
-  <block id="ac22fdf0c10c83edf98e803174984090" category="cell">PB PB PB（TB x 1024 bytes）或pibibbytes</block>
   <block id="f7f3984fa732d05af01413abe0c139fa" category="summary">您應該配對使用 vSphere Client 建立的受保護網站和還原網站、以啟用 Storage Replication Adapter （ SRA ）來探索儲存系統。</block>
   <block id="31f39e1dd44660cbf064de93a5ac5fe9" category="doc">配對受保護和恢復站台</block>
   <block id="7156f9669ad3e8dc5543b26c90b677b9" category="paragraph">您應該配對使用 vSphere Client 建立的受保護網站和還原網站、以啟用 Storage Replication Adapter （ SRA ）來探索儲存系統。</block>
@@ -1110,7 +983,6 @@ _\https ： //https/docs/api_ &lt;ip_address&gt;</block>
   <block id="6bc1d2c44eecf063e620d732e6c3e492" category="sidebar">vCenter Server 權限</block>
   <block id="a9f3de4f2df78227aea2ac4a6b2e7aef" category="sidebar">建議的 ONTAP 角色</block>
   <block id="721041095b64df665034c0b19c967475" category="sidebar">適用於 VMware vSphere 的 ONTAP 工具的高可用度</block>
-  <block id="01c23a6022de21870627c656bac73ece" category="sidebar">使用REST API自動化</block>
   <block id="f724dfae8a2bb3b34e049dcedf88d10d" category="sidebar">保護資料存放區和虛擬機器</block>
   <block id="25890161c3df1f2618234e8f48e2c18b" category="sidebar">為高度擴充的環境設定 SRA</block>
   <block id="a239701adb72159a71164b036c18a53a" category="sidebar">設定受保護和恢復站台資源</block>
@@ -2009,4 +1881,155 @@ _\https ： //https/docs/api_ &lt;ip_address&gt;</block>
   <block id="2e0332b2709dcff7df5d28c654c54066" category="sidebar">適用於 VMware vSphere 10.3 的 ONTAP 工具</block>
   <block id="3d7d171ecad1cba0c2d8d707b648b023" category="sidebar">設定受保護和恢復站台</block>
   <block id="039f647b3ad55c89a6a5ff0d6109bd4f" category="paragraph">適用於 VMware vSphere 10.3 的 ONTAP 工具可擴充對 VMFS 和 vVol 資料存放區及其各自 VM 的觀察指標支援。</block>
+  <block id="01e681f5a8de12d6be77dfc0e567c731" category="summary">VMware vSphere 10 REST API 參考的 ONTAP 工具包含所有 API 呼叫的詳細資料。此參考資料在開發自動化應用程式時非常實用。</block>
+  <block id="d2f73ce531661447cb475cb1f2d2e3bf" category="doc">適用於 VMware vSphere 10 REST API 之 ONTAP 工具的 API 參考</block>
+  <block id="ae1e8fd3c75f65498c54084ccfaf3047" category="paragraph">您可以透過 Swagger UI 線上存取適用於 VMware vSphere 10 REST API 的 ONTAP 工具文件。您需要適用於 VMware vSphere 10 閘道服務和連接埠的 ONTAP 工具 IP 位址或 FQDN 。</block>
+  <block id="08abdf16d81e0cbba6b259bea49cdf99" category="list-text">在瀏覽器中輸入下列 URL ，以適當的 IP 位址和連接埠組合來取代變數，然後按下 *Enter* 。</block>
+  <block id="6ff8508bd0ad0da36fc04c76066c464c" category="paragraph"><block ref="4c9882763c7aaf0e39789953130b5809" prefix="" category="inline-code"></block></block>
+  <block id="938f1047c15f00fdd0cbfc8e4cfa15e1" category="paragraph">* 範例 *</block>
+  <block id="95d36d22664f8854f7a69597b5d159e9" category="paragraph"><block ref="bcaca837447d687465d80574c1488516" prefix="" category="inline-code"></block></block>
+  <block id="029cd27c82b397ce647ab6fdab6ce96b" category="list-text">以個別 API 呼叫為例，向下捲動至「 *vCenters 」類別，然後按一下端點旁的「 Get * 」<block ref="22d8515b1a0806aac1067186e4429b4c" prefix=" " category="inline-code"></block></block>
+  <block id="9e2559913ee384f282b7c8922d9c892e" category="summary">您可以使用 Curl 發出 API 呼叫，開始使用適用於 VMware vSphere 10 REST API 的 ONTAP 工具。</block>
+  <block id="25aa7ee97346651715a55a99bba91d34" category="doc">第一次使用 ONTAP 工具進行 VMware vSphere 10 REST API 呼叫</block>
+  <block id="190ffd22724cdd7dfb04a0d2211e12bd" category="paragraph">您應該檢閱 Curl 範例所需的資訊和參數。</block>
+  <block id="f8ad24507fa09d903436c3525e8e9d3f" category="paragraph-title">必要資訊</block>
+  <block id="4c6a9048ac276eb9391ebe2abd8e0c0d" category="paragraph">您需要下列項目：</block>
+  <block id="112ab2a5a85b5a3c5e85046e1604d105" category="list-text">適用於 VMware vSphere 10 IP 位址或 FQDN 的 ONTAP 工具，以及連接埠</block>
+  <block id="6d6423832c50665dadd867e3c67e504f" category="list-text">ONTAP tools Manager 管理員的認證（使用者名稱和密碼）</block>
+  <block id="f2081dc24b29bb5a138819e4d3388b68" category="paragraph-title">參數與變數</block>
+  <block id="226752f860521d9c0712124e8150c7be" category="paragraph">以下所示的捲髮範例包括 Bash 樣式變數。您可以在 Bash 環境中設定這些變數，或在發出命令之前手動更新這些變數。如果您設定變數，則 Shell 會在執行每個命令之前，將值取代為這些值。下表說明這些變數。</block>
+  <block id="47c14840d8e15331fa420b9b2f757cd9" category="cell">變動</block>
+  <block id="fa15b0d6419dfb51864af28640b46c50" category="cell">$FQDN_IP_port</block>
+  <block id="efad8dda7813f2f61e59fee9de5685d6" category="cell">ONTAP 工具管理員的完整網域名稱或 IP 位址，以及連接埠編號。</block>
+  <block id="6c1da12e96e7c12b338227bbad7cd8d6" category="cell">$MyUser</block>
+  <block id="b3b52329271b1c813d865bd3430ae0eb" category="cell">ONTAP 工具管理員帳戶的使用者名稱。</block>
+  <block id="10994ee890089799ef98bd935dda382e" category="cell">$MyPassword</block>
+  <block id="92a0f772935e69502901a4b26e6ea4a1" category="cell">與 ONTAP 工具管理員使用者名稱相關的密碼。</block>
+  <block id="31740ff30d8989f8731a7aa9804037d9" category="cell">$access_token</block>
+  <block id="c5ee7f5f35e3c470c8e8b9454338235e" category="cell">ONTAP 工具管理員所發出的存取權杖。</block>
+  <block id="34ca808d2fbc6b479eae5050e7d1f0cd" category="paragraph">Linux CLI 的下列命令和輸出說明如何設定及顯示變數：</block>
+  <block id="5f165fc040c2d67a1c762d4992cfd3ad" category="section-title">步驟 1 ：取得存取權杖</block>
+  <block id="c3a5aea28e3c833fa7fb488eac1f890b" category="paragraph">您需要取得存取權杖才能使用 REST API 。以下是如何申請存取權杖的範例。您應該以適當的環境值來取代。</block>
+  <block id="aacc5a70f620b045087d925821bd671e" category="paragraph">複製並儲存回應中提供的存取權杖。</block>
+  <block id="5ae6bfa5e93581b8f03eef7ec9d31b21" category="section-title">步驟 2 ：發出 REST API 呼叫</block>
+  <block id="e35953edb90a1aa9f24be40109966b36" category="paragraph">擁有存取權杖之後，您可以使用 Curl 來發出 REST API 呼叫。包括在第一步中取得的存取權杖。</block>
+  <block id="e0da47631d6f2648f3a36bde7e269c3b" category="listing-title">Curl範例</block>
+  <block id="e77c6880701fcbe894a878111bcb9ca8" category="paragraph">JSON 回應包含設定為 ONTAP 工具管理員的 VMware vCenter 執行個體清單。</block>
+  <block id="bf93d289f74793d6a72e909b5fc9cca0" category="summary">適用於 VMware vSphere 10 的 ONTAP 工具是一組用於虛擬機器生命週期管理的工具。其中包含強大的 REST API ，可作為自動化程序的一部分使用。</block>
+  <block id="10a7a63d5f7f3ff2c6438bb0f95d5494" category="doc">瞭解適用於 VMware vSphere 10 REST API 的 ONTAP 工具</block>
+  <block id="8ed6428212b41847f33c5db651c2aa70" category="section-title">REST Web服務基礎</block>
+  <block id="9e1fbdb44af04bcec2aeaa02a0374832" category="paragraph">Representational State Transfer （ REST ）是一種用於建立分散式 Web 應用程式的樣式，包括網路服務 API 的設計。它建立了一組技術，用於揭露伺服器型資源並管理其狀態。</block>
+  <block id="b0fcdfb2c58efafaace08609d3e95f6d" category="paragraph-title">資源和狀態表示</block>
+  <block id="58b5d7d3ac91e5d496cb361d0f6d5ace" category="paragraph">資源是 REST Web 服務應用程式的基礎元件。設計 REST API 時有兩項重要的初始工作：</block>
+  <block id="cffc973837b1552a3c62d15a0a02dca0" category="list-text">識別系統或伺服器型資源</block>
+  <block id="b1c112dff346df8f223cab36c5c0604b" category="list-text">定義資源狀態和相關的狀態轉換作業</block>
+  <block id="a45c3425ff6af29eaf7bfe965fcd8f88" category="paragraph">用戶端應用程式可以透過定義完善的訊息流程來顯示及變更資源狀態。</block>
+  <block id="34d23bd6dd51b3238872241264de74bf" category="paragraph-title">HTTP 訊息</block>
+  <block id="1179c71c84b4d7a8614fcc6541a55e88" category="paragraph">超文字傳輸協定（ HTTP ）是 Web 服務用戶端和伺服器用來交換有關資源的訊息的傳輸協定。它遵循 CRUD 模型，以建立，讀取，更新及刪除一般作業為基礎。HTTP 傳輸協定包括要求和回應標頭，以及回應狀態代碼。</block>
+  <block id="1d569ac5d527081ee4fa316da144f4ed" category="paragraph-title">JSON 資料格式化</block>
+  <block id="6bbcb060053c7d65bb870650b05080eb" category="paragraph">雖然有多種訊息格式可用，但最受歡迎的選項是 JavaScript 物件表示法（ JSON ）。JSON 是以純文字表示簡單資料結構的產業標準，用於傳輸描述資源和所需動作的狀態資訊。</block>
+  <block id="2fae32629d4ef4fc6341f1751b405e45" category="paragraph-title">安全性</block>
+  <block id="ea288d064f7533a546b1d51c58a66f0b" category="paragraph">安全性是 REST API 的重要層面。除了用於保護網路上 HTTP 流量的傳輸層安全性（ TLS ）傳輸協定外，適用於 VMware vSphere 10 REST API 的 ONTAP 工具也會使用存取權杖進行驗證。您需要取得存取權杖，並在後續的 API 呼叫中使用它。</block>
+  <block id="01480a89d67ec4bd3886317483878e03" category="paragraph-title">支援非同步要求</block>
+  <block id="5ff9ea1e93ec4247f77d5572721ef380" category="paragraph">適用於 VMware vSphere 10 REST API 的 ONTAP 工具會同步執行大部分的要求，並在作業完成時傳回狀態代碼。它也支援非同步處理，以處理需要較長時間才能完成的工作。</block>
+  <block id="85a37144ab554873deea56aa55eabc63" category="section-title">ONTAP toolTools Manager 環境</block>
+  <block id="e06ff039f00c0a1d73976133549b5c46" category="paragraph">您應該考慮 ONTAP 工具管理員環境的幾個層面。</block>
+  <block id="76c3fe1d90eec0f4dbe5dd8bf85ff05b" category="paragraph-title">虛擬機器</block>
+  <block id="c256f323fa290d7d44d55a41351b43c3" category="paragraph">適用於 VMware vSphere 10 的 ONTAP 工具是使用 vSphere 遠端外掛程式架構來部署。軟體（包括 REST API 的支援）會在獨立的虛擬機器中執行。</block>
+  <block id="b213ee322b1762505374c8ee6d84f177" category="paragraph-title">ONTAP 工具 IP 位址</block>
+  <block id="1543737af385e98b263eb837cefbed68" category="paragraph">適用於 VMware vSphere 10 的 ONTAP 工具會公開單一 IP 位址，提供通往虛擬機器功能的閘道。您需要在初始設定期間提供位址，並將其指派給內部負載平衡器元件。此位址可供 ONTAP tools&gt; 管理員使用者介面使用，並可直接存取 Swagger 文件頁面和 REST API 。</block>
+  <block id="be1cd531936ba46a2647fa7dd8d85828" category="paragraph-title">兩個 REST API</block>
+  <block id="3a77755c4eaf7897cda1f7db8e722428" category="inline-link">ONTAP 自動化</block>
+  <block id="5de3d520a303cddad4df07a561f32c63" category="paragraph">除了適用於 VMware vSphere 10 REST API 的 ONTAP 工具之外， ONTAP 叢集還擁有自己的 REST API 。ONTAP 工具管理員使用 ONTAP REST API 做為用戶端來執行儲存相關工作。請務必記住，這兩個 API 是獨立且不同的。如需 ONTAP REST API 的詳細資訊，請參閱<block ref="2d4aebc414c2e9f6455c923c16f6303c" category="inline-link-rx"></block>文件。</block>
+  <block id="20516199cb9481d285d518fc11cdca0a" category="summary">REST 會建立一組通用的技術和最佳實務做法，但每個 API 的確切實作可能會因設計選擇而異。使用 ONTAP 工具之前，您應該先熟悉 VMware vSphere 10 REST API 的設計方式。</block>
+  <block id="73e04cfa7b08e07a2220873d48382c98" category="doc">適用於 VMware vSphere 10 REST API 的 ONTAP 工具實作詳細資料</block>
+  <block id="19ec08da81a826d919d64ab860845c04" category="inline-link-macro">API 參考資料</block>
+  <block id="3a7801515e8905c5c1b58caba299deae" category="paragraph">REST API 包括數種資源類別，例如 vCenter 和 Aggregate 。如需詳細資訊，請參閱<block ref="f993b2671c2a028bb49c8687852396a0" category="inline-link-macro-rx"></block>。</block>
+  <block id="45cd4354f07a1ab359a1cc263ed79868" category="section-title">如何存取REST API</block>
+  <block id="655869188533f107f8244bd668d07902" category="paragraph">您可以透過 ONTAP 工具負載平衡器 IP 位址和連接埠來存取 VMware vSphere 10 REST API 的 ONTAP 工具。完整 URL 有幾個部分，包括：</block>
+  <block id="2380e443be52c3a8babdac8a3660044f" category="list-text">ONTAP 工具 IP 位址和連接埠</block>
+  <block id="7d1d9327371097419bdf83ffa671d2f2" category="list-text">API 版本</block>
+  <block id="bbf5c9c73b20bfa79e158e8eeb77c470" category="list-text">資源類別</block>
+  <block id="e6e84e4970cb2f91fac914024e7baf80" category="list-text">特定資源</block>
+  <block id="33fb1e3ea3bf8658ae3a5a56799992ad" category="paragraph">您需要在初始設定期間設定 IP 位址，而且連接埠永遠是 8443 。此外，對於 VMware vSphere 10 執行個體的特定 ONTAP 工具， URL 的第一部分是固定的。只有資源類別和特定資源會因端點而異。</block>
+  <block id="2b8e805ca5043f79e7d7895b37f35f24" category="admonition">以下範例中的 IP 位址和連接埠值僅供說明之用。您必須針對環境變更這些值。</block>
+  <block id="d66885731813874c4dabe678de135836" category="paragraph-title">存取驗證服務的範例</block>
+  <block id="d7593fde749e66b8acd303f60946cc1c" category="paragraph"><block ref="85aef1afd5758ea88a9da531790b9beb" prefix="" category="inline-code"></block></block>
+  <block id="37ce291feb740401bb26a4bcbdf918c9" category="paragraph">此 URL 可用於使用 POST 方法要求存取權杖。</block>
+  <block id="ca2d4582209691db052fbd2c60f9f562" category="paragraph-title">列出 vCenter 伺服器的範例</block>
+  <block id="51d2f920de63fca9d095d187b7d6e131" category="paragraph"><block ref="8966dcc71fcdaf44a08f9124e1d70fb0" prefix="" category="inline-code"></block></block>
+  <block id="24194695bb79b6d8c33b4828f530acf5" category="paragraph">此 URL 可用於使用 GET 方法，要求已定義的 vCenter 伺服器執行個體清單。</block>
+  <block id="7ab91fd48b58ce1ea4cada1f1a4e1808" category="section-title">HTTP詳細資料</block>
+  <block id="756ebff3bca8295fe64008e02bb36be6" category="paragraph">適用於 VMware vSphere 10 REST API 的 ONTAP 工具使用 HTTP 及相關參數來處理資源執行個體和集合。HTTP實作的詳細資料如下。</block>
+  <block id="042aa0a27ac3cee02b1b53beb8e4a111" category="paragraph">REST API 支援的 HTTP 方法或動詞如下表所示。</block>
+  <block id="4c3880bb027f159e801041b1021e88e8" category="cell">方法</block>
+  <block id="8ecfde6cfb333d8f81de0672a75b159c" category="cell">CRUD</block>
+  <block id="7a1a5f3e79fdc91edf2f5ead9d66abb4" category="cell">讀取</block>
+  <block id="034aca0a59cf5f755b56ff0e7a3d2faa" category="cell">擷取資源執行個體或集合的物件屬性。當與集合一起使用時，這會視為清單作業。</block>
+  <block id="686e697538050e4664636337cc3b834f" category="cell">建立</block>
+  <block id="dab70249a81ca66a3d22ab410ef021a9" category="cell">根據輸入參數建立新的資源執行個體。</block>
+  <block id="6b328273cc49d43e9c2e399042be392d" category="cell">使用隨附的Json要求本文來更新整個資源執行個體。不會由使用者修改的金鑰值會保留下來。</block>
+  <block id="06c620d6076e01f68380b53a426ccf45" category="cell">要求將要求中的一組選取變更套用至資源執行個體。</block>
+  <block id="f2a6c498fb90ee345d997f888fce3b18" category="cell">刪除</block>
+  <block id="61967c09828f8562a1a95fc9f6fd0151" category="section-title">要求和回應標頭</block>
+  <block id="3161915a502f7dd153d9e9c3b9ce5d86" category="paragraph">下表摘要列出 REST API 使用的最重要 HTTP 標頭。</block>
+  <block id="bf50d5e661106d0abe925af3c2e6f7e7" category="cell">標頭</block>
+  <block id="a1fa27779242b4902f7ae3bdd5c6d508" category="cell">類型</block>
+  <block id="81098f701c45e252a078b3eee62f0dab" category="cell">使用注意事項</block>
+  <block id="15c2d85f1fae22a3c3a0594510a1f611" category="cell">申請</block>
+  <block id="fcc5591447e85130af8ef80203f214b4" category="cell">這是用戶端應用程式可以接受的內容類型。有效值包括 '\*/*' 或<block ref="d1f5a9d446c6cec2cf63545e8163e585" prefix=" " category="inline-code"></block>。</block>
+  <block id="27e609fa34c63bdd66a44eac9027c817" category="cell">X-auth</block>
+  <block id="03a782daddc7d3b959264503c09fa71d" category="cell">包含存取權杖，可識別透過用戶端應用程式發出要求的使用者。</block>
+  <block id="dc105ac52c237f9f09c74b0767f64f74" category="cell">內容類型</block>
+  <block id="d64ed3e9c10229648e069f56e32f4c8e" category="cell">回應</block>
+  <block id="f0f2464004c8835c0d059c35d1f73ba4" category="cell">由伺服器根據要求標頭傳回<block ref="c4408d335012a56ff58937d78050efad" prefix=" " category="inline-code"></block>。</block>
+  <block id="2974f783f17d54a41f4040c8daa90545" category="section-title">HTTP 狀態代碼</block>
+  <block id="4d2dab0f16d4faba319968bb4f554c83" category="paragraph">REST API 使用的 HTTP 狀態代碼如下所述。</block>
+  <block id="ca0dbad92a874b2f69b549293387925e" category="cell">程式碼</block>
+  <block id="7277de5f2ed6f17c61f1f25594591a82" category="cell">意義</block>
+  <block id="3644a684f98ea8fe223c713b77189a77" category="cell">200</block>
+  <block id="e0aa021e21dddbd6d8cecec71e9cf564" category="cell">好的</block>
+  <block id="ebe8cd0cd7287699e570e52e72202209" category="cell">表示未建立新資源執行個體的通話成功。</block>
+  <block id="757b505cfd34c64c85ca5b5690ee5293" category="cell">201</block>
+  <block id="0eceeb45861f9585dd7a97a3e36f85c6" category="cell">已建立</block>
+  <block id="ee1b2304db98c9dc895c168c5c3e2d95" category="cell">已成功建立具有資源執行個體唯一識別碼的物件。</block>
+  <block id="854d6fae5ee42911677c739ee1734486" category="cell">202</block>
+  <block id="382ab522931673c11e398ead1b7b1678" category="cell">已接受</block>
+  <block id="6ea0874423a44f55cc8ee103147a4bb0" category="cell">已接受要求，並建立背景工作來執行要求。</block>
+  <block id="274ad4786c3abca69fa097b85867d9a4" category="cell">204</block>
+  <block id="8386bf720b8b55126f9551c6678647f9" category="cell">無內容</block>
+  <block id="aae60f64e8a8cfaba50bb2292348bc3c" category="cell">雖然未傳回任何內容、但要求仍成功。</block>
+  <block id="18d8042386b79e2c279fd162df0205c8" category="cell">400</block>
+  <block id="0fc30646d5cf22910283967bf24ebf66" category="cell">錯誤要求</block>
+  <block id="d61713af1a9c56d51f7fb3873bed7e92" category="cell">無法辨識或不適當的要求輸入。</block>
+  <block id="816b112c6105b3ebd537828a39af4818" category="cell">401</block>
+  <block id="e06d1ba70f1331e9f9a113cc2f887d3f" category="cell">未獲授權</block>
+  <block id="521a106379f6926504948326fd953a38" category="cell">使用者未經授權，必須進行驗證。</block>
+  <block id="bbf94b34eb32268ada57a3be5062fe7d" category="cell">403</block>
+  <block id="722969577a96ca3953e84e3d949dee81" category="cell">禁止</block>
+  <block id="8df9e8f24b204c91ad0a9031f9c09a16" category="cell">由於授權錯誤、存取遭拒。</block>
+  <block id="4f4adcbf8c6f66dcfc8a3282ac2bf10a" category="cell">404</block>
+  <block id="9e076f5885f5cc16a4b5aeb8de4adff5" category="cell">找不到</block>
+  <block id="24ff0a9484d837d82e7f8f8218e196b6" category="cell">要求中提及的資源不存在。</block>
+  <block id="a96b65a721e561e1e3de768ac819ffbb" category="cell">409</block>
+  <block id="f1d4ac54357cc0932f385d56814ba7e4" category="cell">衝突</block>
+  <block id="47a99fc0005eeb289896eda4eb4b708a" category="cell">建立物件的嘗試失敗、因為物件已經存在。</block>
+  <block id="cee631121c2ec9232f3a2f028ad5c89b" category="cell">500</block>
+  <block id="8f8913c1f755436db84ae169e37c61f9" category="cell">內部錯誤</block>
+  <block id="03f0e0f686ebd5f796ca9febd1723676" category="cell">伺服器發生一般內部錯誤。</block>
+  <block id="c75f7811d70d17dbcd88e9d03752cbed" category="section-title">驗證</block>
+  <block id="e9e6a27d4bfbd7f5042800de53a926bb" category="paragraph">使用存取權杖執行用戶端對 REST API 的驗證。權杖和驗證程序的相關特性包括：</block>
+  <block id="73005c4ee1b6da331856852270bb4928" category="list-text">用戶端必須使用 ONTAP tools Manager 管理認證（使用者名稱和密碼）來要求權杖。</block>
+  <block id="f9c59a96248bb30ec8fe1f39c8b4902a" category="list-text">Token 格式化為 JSON Web Token （ JWT ）。</block>
+  <block id="43a0f271454bd2f46f0629ca623fd6e6" category="list-text">每個權杖都會在 60 分鐘後過期。</block>
+  <block id="b2e958775d667e0a227cfddbcebd684f" category="list-text">用戶端的 API 要求必須在要求標頭中包含權杖<block ref="27e609fa34c63bdd66a44eac9027c817" prefix=" " category="inline-code"></block>。</block>
+  <block id="8921c3b98c12a84674b91d6afb231018" category="inline-link-macro">您的第一次 REST API 呼叫</block>
+  <block id="97464d8b78e344ca1b8dbef846959c30" category="paragraph">如需索取及使用存取權杖的範例，請參閱<block ref="02f9c42fec62e806982e89939749ac1d" category="inline-link-macro-rx"></block>。</block>
+  <block id="a629cb231a04093c2a17e9137fcc8b2e" category="section-title">同步和非同步要求</block>
+  <block id="a7fdec025c999a2d4658d175b36b6816" category="paragraph">大部分 REST API 呼叫都會快速完成，因此會同步執行。也就是說，他們會在申請完成後傳回狀態代碼（例如 200 ）。使用背景工作以非同步方式完成執行所需時間較長的要求。</block>
+  <block id="ee0683b0f9214e5957ad88b24d1d0692" category="paragraph">發出非同步執行的 API 呼叫後，伺服器會傳回 202 HTTP 狀態代碼。這表示申請已被接受，但尚未完成。您可以查詢背景工作以判斷其狀態，包括成功或失敗。</block>
+  <block id="c6484bc2fdbc6f333ba72fd2ff67490d" category="paragraph">非同步處理可用於多種類型的長時間執行作業，包括資料存放區和 vVol 作業。如需詳細資訊，請參閱 Swagger 頁面上 REST API 的工作管理員類別。</block>
+  <block id="3672cc73e8f241c0e99fa671f7d984c5" category="sidebar">使用 REST API 自動化</block>
+  <block id="90182eba2ac7240af5b5cb5ba83a8c1b" category="sidebar">瞭解 REST API</block>
+  <block id="d58b759501469292f5d0464d265c376c" category="sidebar">REST實作</block>
 </blocks>
