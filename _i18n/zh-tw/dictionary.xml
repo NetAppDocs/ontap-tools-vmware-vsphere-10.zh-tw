@@ -92,10 +92,7 @@
   <block id="d428ebb7ac02e1484781b38a799a4f99" category="paragraph">*您需要的是什麼*</block>
   <block id="0b116b89d80e19bf956dfc85f50bc1e9" category="summary">需要資訊。</block>
   <block id="87b9292b96462f70c7dfb870481b1445" category="list-text">從快顯視窗的下拉式清單中選取儲存後端。</block>
-  <block id="b2ed14efa60f0218dbe29d217936db05" category="list-text">工作完成後、請驗證移轉報告。您可以在 jobData 中看到來自工作回應的報告。</block>
-  <block id="940a68f40b0387ef09c8890b5f3351a3" category="list-text">使用下列 API 執行修補程式移轉：</block>
   <block id="603041e40db447bbdd32fd4b4c2f994d" category="admonition">UUID 是移轉後 API 回應時傳回的移轉 UUID 。</block>
-  <block id="c433a687863536676c660d246d95f8f1" category="paragraph">一旦修補程式移轉 API 成功、所有 VM 都將符合儲存原則。</block>
   <block id="07fdc7a244250b2e1c9e6533ff0ea4e0" category="paragraph">用於移轉的刪除 API 為：</block>
   <block id="6b50b8836085008a8950ddeafeb7453a" category="list-text">重新整理所有主機上的憑證。</block>
   <block id="f14c276c07197ebef1394a5a219087a1" category="cell">*說明*</block>
@@ -242,7 +239,6 @@
   <block id="db02bd2307c791062e633781a3c11af0" category="list-text">vCenter Server 執行個體管理 - 將 vCenter Server 執行個體新增及管理至 ONTAP 工具。</block>
   <block id="7642832535ff83a877a05e578e6e55f7" category="list-text">儲存後端管理：將 ONTAP 儲存叢集新增及管理至適用於 VMware vSphere 的 ONTAP 工具、並將其對應至全球已登入的 vCenter Server 執行個體。</block>
   <block id="ce3d50f0dc891fd49131a5879ff0cfbb" category="list-text">記錄套件下載：收集適用於 VMware vSphere 的 ONTAP 工具記錄檔。</block>
-  <block id="68ab2bf8c2ce15ec9d7b00c479775a7e" category="list-text">密碼管理 - 重設使用者的 OVA 應用程式密碼。</block>
   <block id="201e0f05da35ce967557e2ecf9f130be" category="paragraph">若要存取 ONTAP 工具管理員、請啟動<block ref="1910f09ff940f1765a7dd530bdeb5127" prefix=" " category="inline-code"></block> 從瀏覽器登入、並使用您在部署期間提供的 ONTAP 工具登入 VMware vSphere 管理員認證。</block>
   <block id="3fae23455f0376a5d42734cbd65edc69" category="summary">當您第一次在 vSphere Client 中執行適用於 VMware vSphere 的 ONTAP 工具時、適用於 VMware vSphere 的 ONTAP 工具會探索 ESXi 主機、其 LUN 和 NFS 匯出、以及擁有這些 LUN 和匯出的 NetApp 儲存系統。</block>
   <block id="8fd43ee482a4e281b8feee6762fb22d2" category="doc">探索儲存系統與主機</block>
@@ -847,15 +843,9 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="6753f4982155708aac37a1bd3bef1245" category="paragraph">「Create Network Mapping」（建立網路對應）精靈隨即出現。</block>
   <block id="6211d5bb29b9c1509eb64e37fd1af6f4" category="list-text">在Create Network MappingWizard（建立網路對應精靈）中、執行下列步驟：</block>
   <block id="a00d4477c9c1974aff09f6ea5b44859d" category="paragraph">「網路對應」頁面會顯示受保護的站台資源和恢復站台資源。您可以針對環境中的其他網路執行相同的步驟。</block>
-  <block id="3dd0b6cbf926605abe281a83613cb23c" category="admonition">身為現有使用者、您必須先從目前版本取得 OVA 備份、然後再升級至修補程式版本。</block>
   <block id="135dda3ac3096b9bd31ceb04b513c216" category="section-title">一般移轉步驟</block>
   <block id="a556515aafd07bfe4c2dfa6abbaa4ccb" category="section-title">SRA 移轉步驟</block>
-  <block id="37470572c4c0d1df68b6e2c9cf86ecf9" category="paragraph">移轉之前、請確定其中一個站台處於受保護狀態、另一個站台處於恢復狀態。</block>
-  <block id="064e145ea2f6bfb5bc6045ba1fb3a818" category="admonition">如果容錯移轉剛剛完成且重新保護擱置、請勿移轉。完成重新保護、然後執行移轉。
-同樣適用於測試恢復計畫。恢復計畫測試完成後、請清理測試恢復、然後開始移轉。</block>
-  <block id="0bb95f551fcbc064f5de91693d368db6" category="list-text">前往儲存複寫介面卡區段</block>
   <block id="77efba168b5a2059c2d20a1e2673f5d1" category="paragraph">在保護站點和恢復站點上執行這些步驟。</block>
-  <block id="0052540e6b71b0dead0bb00933d9a68d" category="list-text">在適用於 VMware vSphere 的現有 ONTAP 工具上啟用 Derby 連接埠 1527 。若要啟用連接埠、請使用 root 使用者登入 CLI 、然後執行下列命令：</block>
   <block id="c713abd43a97c8915e6503cd7f93ad36" category="list-text">發出下列 API 呼叫以進行移轉：</block>
   <block id="4b2e39d58448cd6246edaab6e2789245" category="paragraph">* HTTP 方法和端點 *</block>
   <block id="0b0231c1815d06ad4701a091ce91a740" category="paragraph">此 REST API 呼叫使用下列方法和端點。</block>
@@ -892,31 +882,16 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   " 狀態 " ： " 執行中 "
 }</block>
   <block id="ec874bf582309d24e5c0f1f38429fb73" category="inline-link-macro">將 VASA Provider 登錄至 vCenter Server</block>
-  <block id="5fec27e27d789740b1557e43765e8712" category="list-text">從維護主控台停止適用於 VMware vSphere 儲存供應商 9.10/9.11/9.12/9.13 VASA Provider 服務的 ONTAP 工具。</block>
   <block id="63bc9a3997d66d835d9f3ec29451407d" category="cell">修補程式</block>
   <block id="41e9abb5d58ca11ff36c3067c273a762" category="paragraph">修補程式「 /api/v1/vCenter/56d373bd-4163-44f9-a872-9adabb008ca9/Migrate-jobs/84dr73bd-9173-65r7-w345-8ufdbb887d43</block>
   <block id="bdfee7ad87d9004e1091e6e1762d0e84" category="paragraph">* JSON 輸入範例 *</block>
-  <block id="80d6f8b7b33941158bf11590d8f340f5" category="paragraph">要求主體是空的、用於修補作業。</block>
   <block id="cef9fa1aa0d8c4bd89bf89cf8cbb5cae" category="paragraph">/api/v1/vCents/{vcguid}/Migration-jobs/{Migration_id}</block>
-  <block id="f45df61923075bce3925756b5ef238ac" category="paragraph">此 API 會依移轉 ID 刪除移轉、並刪除指定 vCenter Server 上的移轉。</block>
-  <block id="02b629daee69a13e1d9e1bb586f9aeaa" category="list-text">執行資料存放區（ DS ）和虛擬機器（ VM ）作業之前、請先等待一段時間。等待時間取決於設定中存在的主機數量、 DS 和 VM 。當您不等待時、作業可能會間歇性失敗。</block>
   <block id="07959986337388ebd736dc282a14afca" category="paragraph">* 啟用診斷 *</block>
-  <block id="070fdd3da4ee331b0ced27113978cc9a" category="list-text">從 vCenter Server 開啟 ONTAP 工具的主控台。</block>
   <block id="589c4957e1e0bb7b0bf55fa835dbaf3d" category="list-text">輸入 *y* 以設定您選擇的密碼。</block>
-  <block id="f6026db814a9f3dd7f8b744a321a37f6" category="paragraph">* 備份 MongoDB*</block>
-  <block id="3ad298269c982c99cdf89686fc99f90e" category="paragraph">執行下列命令以備份 MongoDB ：</block>
   <block id="0a01c0c2d00b20ff323dc6b25ceb30a5" category="list-text">kN 執行 -it NtV-MongoDB-0sh - kn 是 kubectl -n NtV-system 的別名。</block>
-  <block id="6ac951df6c4326c0b5ba21fb03e462b0" category="list-text">ENV | Grep MongoDB_root_password - 在 Pod 中執行此命令。</block>
-  <block id="56773b08cc852ed52964549dfb9fc61e" category="list-text">'exit' - 執行此動作即可從 Pod 中取出。</block>
-  <block id="93c8b0f299af9bd0eec6a1b971e57816" category="list-text">kN 執行 NtV-MongoDB-0--mongodump -u root -p MongoDB_root_password --archive =/tmp/mongodb-backup.gz --gzip - 執行此命令以取代上述命令中設定的 Mongo_root_password 。</block>
-  <block id="e3a9f4dcb4a04b10f748467637c474e9" category="list-text">KN CP NTV-MongoDB-0:/tmp/mongodb-backup.gz ./mongodb-backup.gz - 執行此命令、將使用上述命令建立的 MongoDB 備份從 Pod 複製到主機。</block>
-  <block id="7511ae8db149d434a6d995197e107fcb" category="list-text">執行 'kn Get PVC' 命令並儲存命令的輸出。</block>
   <block id="bfc1d4c138c87f77e5b639193ca91674" category="list-text">使用下列其中一種方法、逐一拍攝所有磁碟區的快照：</block>
   <block id="bcf0e596a358c1cb63fd717d9fa47cd7" category="list-text">從 CLI 執行命令 _volume snapshot create -vserver &lt;vserver_name&gt; -volume &lt;volume_name&gt; -snapshot &lt;snapshot_name&gt; _</block>
-  <block id="37bdbf0e3834e7af7a371007e55bb5b8" category="list-text">從 ONTAP 系統管理員使用者介面、在搜尋列中依磁碟區名稱搜尋該磁碟區、然後按一下該名稱來開啟該磁碟區。移至快照並新增該磁碟區的快照。</block>
   <block id="c3710cf1c44da535612cf08236cee98f" category="list-text">在 vSphere 用戶端使用者介面中、選取虛擬機器。</block>
-  <block id="0c7449d65eaf3d8213f7d1d7f8e79d1c" category="paragraph">在執行升級之前、請從記錄套件中刪除已完成且前置字首為「 genere-support-bundle-job 」的 Pod 。
-如果正在產生支援套件、請等待其完成、然後刪除 Pod 。</block>
   <block id="b06f0e274f6c746f0d30521b5c7f392e" category="list-text">將適用於 VMware vSphere 的 ONTAP 工具升級 ISO 上傳至內容庫。</block>
   <block id="dd5382558ec4a47dfbc203fb25698772" category="list-text">在主 VM 頁面中，選擇 * Actions * &gt; * Edit Settings*</block>
   <block id="54a029420d74c0dff69239155cf510b5" category="inline-image-macro">編輯設定</block>
@@ -1297,7 +1272,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="fb9ce87f03a0429d0af0760d01b74612" category="cell">095</block>
   <block id="b5e39b37a2c811e88e1f07aa15f0ba15" category="summary">HA 和非 HA 部署均支援升級。</block>
   <block id="7504b99fb3697e6b7b59cd3c56ab26b7" category="paragraph">如果您要從適用於 VMware vSphere 10.0 的 ONTAP 工具升級至 10.1 、則必須先完成下列步驟、才能繼續執行升級工作：</block>
-  <block id="aadafc361893326b48d9ad9299ddff34" category="list-text">在 * CD/DVD 磁碟機 * 欄位下的編輯設定視窗中、選取內容庫 ISO 檔案。</block>
   <block id="174e0bb9fd863076b8b78d2ca9e0dd08" category="sidebar">掛載 NFS 和 VMFS 資料存放區</block>
   <block id="41d4fa725cfb558559b7183adeea1e30" category="sidebar">卸載 NFS 和 VMFS 資料存放區</block>
   <block id="e6e4c7644f1b4ac0c9a1fa2e3a633259" category="sidebar">展開 vVol 資料存放區</block>
@@ -1353,7 +1327,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="d6efc4dcb0d701b8153c2ef1af6e22b9" category="list-text">執行下列步驟、在 VMware Live Site Recovery UI 中刪除適用於 VMware vSphere 9.xx 版本的工具 ONTAP 介面卡：</block>
   <block id="de7cd16aa682868ad900edd519b06059" category="list-text">前往 VMware Live Site Recovery 組態管理頁面</block>
   <block id="e6af441b9194db7f4427a1199ae8c274" category="inline-link-macro">在 VMware Live Site Recovery 應用裝置上設定 SRA</block>
-  <block id="f24af9463aafeb0a644c3f3baddedb00" category="list-text">在「 VMware Live Site Recovery UI 」頁面中、執行 * 探索陣列 * 和 * 探索裝置 * 作業、並驗證這些裝置是否顯示在移轉之前。</block>
   <block id="0b3582622e579cb352e246015d6ca171" category="summary">您可以使用 VMware Live Site Recovery 的 Array Manager 精靈來設定 Storage Replication Adapter （ SRA ）、以啟用 VMware Live Site Recovery 與儲存虛擬機器（ SVMs ）之間的互動。</block>
   <block id="fe3a4c2227170fc60976b4e12c53d157" category="paragraph">您可以使用 VMware Live Site Recovery 的 Array Manager 精靈來設定 Storage Replication Adapter （ SRA ）、以啟用 VMware Live Site Recovery 與儲存虛擬機器（ SVM ）之間的互動。</block>
   <block id="986d9b60b2308d9411e69051124f1e90" category="list-text">您應該已在 VMware Live Site Recovery 中配對受保護的站台和還原站台。</block>
@@ -1536,13 +1509,9 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="35b4916fa7f87e2934afc9aa83571dfc" category="paragraph">只會顯示符合外掛程式安裝資格的 ESXi 主機。您應依照螢幕上的指示完成安裝。您可以在 vSphere Web Client 的「近期工作」區段中監控安裝進度。</block>
   <block id="6dc52c7290e3cfc8eb925243061b7551" category="list-text">憑證管理 - 將自我簽署的憑證變更為自訂 CA 憑證，並更新或重新整理 VASA Provider 和 ONTAP 工具的所有憑證。</block>
   <block id="f8e55333fdf93a54b9c4999e28d01f1c" category="inline-image-macro">ONTAP 工具管理員儀表板概觀</block>
-  <block id="69a8f62bd40b2285b7006bc878f63e59" category="paragraph">ONTAP toolsManager 概述一節可協助管理應用裝置組態，例如服務管理，節點大小擴充和高可用度（ HA ）功能。此外，您也可以監控與節點相關的整體 ONTAP 工具資訊，例如健全狀況，網路詳細資料和警示。<block ref="eaff07db9f9bd4c788b59cf5ac2e6f5e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="438feb29c72033a1e461b5f8627d139d" category="cell">應用裝置卡</block>
-  <block id="21a9feeb29c1c0a30517eb98535f5202" category="cell">應用裝置卡提供整體 ONTAP 工具應用裝置狀態。它會顯示應用裝置組態詳細資料及啟用的服務狀態。如需 ONTAP 工具應用裝置的其他詳細資料，請按一下 * 檢視詳細資料 * 連結。當有正在進行的編輯設備設定動作工作時，應用裝置入口小程式會顯示工作的狀態和詳細資料。</block>
   <block id="2ba512cd332d9fb8cdb8eaaa68126426" category="cell">警示卡</block>
-  <block id="2a1cd4a592ca1d01c6e03390d7a6d5d1" category="cell">警示卡會依類型列出 ONTAP 工具警示，包括 HA 節點層級警示。您可以按一下計數文字（超連結）來檢視警示清單。此連結會將您路由至以所選類型篩選的警示檢視頁面。</block>
   <block id="3c3237ebddf22ec92cfa91fee8b87db8" category="cell">ONTAP 工具節點卡</block>
-  <block id="50d0b4e12fbe47a8699d3c2d31ef6505" category="cell">ONTAP 工具節點卡會顯示節點名稱，節點 VM 名稱，狀態及所有網路相關資料的節點清單。您可以按一下 * 檢視詳細資料 * 來檢視與所選節點相關的其他詳細資料。[ 附註 ] 如果是非 HA 設定，則只會顯示一個節點。如果是 HA ，則會顯示三個節點。</block>
   <block id="c749ba6a66c9c4d365591fada904e866" category="list-text">主機叢集上安裝的所有資料存放區都必須是含 iSCSI / FC 傳輸協定的 VMFS 資料存放區。不支援含 NVMe / FC 和 NVMe / TCP 傳輸協定的 VVols ， NFS 或 VMFS 資料存放區。</block>
   <block id="6107bfa2400c41e392656bedd41adf70" category="list-text">在 * 保護叢集 * 視窗中、建立作業期間僅支援刪除動作。您可以刪除並重新新增保護。在修改主機叢集保護作業期間、可使用編輯選項。您可以使用省略符號功能表選項來編輯或刪除關聯。</block>
   <block id="79f9acbcb92275b6970c0803108ab558" category="paragraph">vCenter 工作會以工作 ID 詳細資料建立，進度會顯示在「最近的工作」面板中。這是一項非同步工作、使用者介面只會顯示要求提交狀態、不會等待工作完成。</block>
@@ -1751,22 +1720,12 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="0e098cc28d02ba04dfc24f8fb59c1fd1" category="admonition">ASA R2 型 VVols 資料存放區不支援此檢視。</block>
   <block id="c46965d55afff0a89c0bb3bd26c0a653" category="summary">移轉儲存資料時、會使用 REST API 手動建立儲存後端。移轉 VASA Provider 資料時，資料會從現有的 Derby 資料庫匯出，並匯入至 MongoDB 資料庫。</block>
   <block id="e43b5fd407b2bc9fda1a39851a48f9bb" category="doc">從適用於 VMware vSphere 9.x 的 ONTAP 工具移轉至 10.3</block>
-  <block id="f729a2cd0859c6ed3e1a05f2799ab893" category="admonition">建議僅在安裝程式僅為 VASA Provider 功能提供服務時，才移轉 VMware vSphere 9.xx 的 ONTAP 工具設定。</block>
-  <block id="6572323c8c420a17787c730db23bfe73" category="admonition">從 ONTAP Tools for VMware vScist 9.x 移轉至 10.3 之後，含 NVMe / FC 傳輸協定的 vVols 資料存放區無法運作，因為 ONTAP 工具 10.3 僅支援含 VMFS 資料存放區的 NVMe 。</block>
-  <block id="fedbcbfcba84e0f83145c9556e237d18" category="paragraph">支援從適用於 VMware vSphere 9.12D1 和 9.13D2 版本的 ONTAP 工具移轉至 10.3 版本。</block>
   <block id="98db65da9a06955541a5451543410fde" category="list-text">部署適用於 ONTAP 工具的 OVA for VMware vSphere 10.3 版本。</block>
-  <block id="df773402e8f2ed0ab0c0814bc876c2b4" category="list-text">新增您要移轉至 ONTAP 工具的 vCenter Server 執行個體、以取得 VMware vSphere 10.3 版本。請參閱 <block ref="fbc3413db4202f1fe331f16af6b38f13" category="inline-link-macro-rx"></block></block>
-  <block id="528ca6fe76d1644ad915c3bc45c4d63d" category="list-text">只有在觸發資料存放區探索工作（可能需要 30 分鐘才能觸發）之後、才能在適用於 VMware vSphere 10.3 的 ONTAP 工具中看到從適用於 VMware vSphere 9.xx 的 ONTAP 工具移轉的 NFS 和 VMFS 資料存放區。確認 ONTAP 工具的「 VMware vSphere 外掛程式 UI 」頁面的「概觀」頁面中是否顯示資料存放區。</block>
-  <block id="c86e769a3ebdcd57610a068230678ec7" category="list-text">按一下省略符號功能表，然後按一下 * 重設組態 *</block>
-  <block id="96069341a33c50a0ef5c1407a1fd182f" category="list-text">按一下省略符號功能表，然後選取 * 刪除 *</block>
   <block id="b81b2046e8a2fa467c645a47a0ade5d0" category="list-text">請依照中的步驟、在保護和恢復站台上安裝適用於 VMware vSphere 10.3 介面卡的 ONTAP 工具 <block ref="200275c92830164958f040bec21a478e" category="inline-link-macro-rx"></block></block>
   <block id="b7b423b5e37e418ae4659bcf83c729b5" category="section-title">Vasa Provider 移轉步驟</block>
-  <block id="2cd7a3049fe96503b7de6e7f7aa952df" category="list-text">新增您要移轉至 ONTAP 工具的 vCenter Server 執行個體、以取得 VMware vSphere 10.3 版本。請參閱。 <block ref="946669e64e0e42585f18099dec81ec03" category="inline-link-macro-rx"></block></block>
   <block id="2d3feeef6331c15c90e4aea5b6cc1e41" category="list-text">將適用於 VMware vSphere 儲存供應商的 ONTAP 工具新增至 vCenter Server 和 <block ref="a322950c1b9e940cddaca5a47e2d5895" category="inline-link-macro-rx"></block>。</block>
   <block id="ffdec42d5d13cecca850e153f75748ec" category="paragraph">請勿刪除 VASA Provider 。</block>
-  <block id="b5a25fbe7772c238f78e903d293f5308" category="paragraph">一旦舊版 VASA Provider 停止， vCenter Server 就會容錯移轉至適用於 VMware vSphere 的 ONTAP 工具。所有的資料存放區和 VM 都可以存取、並可從適用於 VMware vSphere 的 ONTAP 工具取得。</block>
   <block id="29d0e7add25c8163223dbcb531abf7d0" category="paragraph">成功移轉之後、將 ONTAP 工具 10.3 登錄至 vCenter Server 之後、請執行下列步驟：</block>
-  <block id="b6d81ca221627275f71a12c9cd54aaf8" category="paragraph">從舊版 ONTAP 工具 for VMware vSphere 移轉至 10.3 版本之後，請重新掃描 SRA 介面卡，確認詳細資料已在「 VMware Live Site Recovery Storage Replication Adapters 」頁面上更新。</block>
   <block id="8e9a07c053d2ef05978af8e903731d91" category="paragraph">瞭解從適用於 VMware vSphere 9 的 ONTAP 工具移轉至適用於 VMware vSphere 10.1 或更新版本的 ONTAP 工具是否適合您。如需最新的相容性資訊，請參閱<block ref="0aaf04254af18646f3d246cd4a4b417d" category="inline-link-rx"></block>。</block>
   <block id="073983521d52887782f4ac8fcd628e60" category="cell">ONTAP 工具 10.2 以上版本</block>
   <block id="f4950bb5572ea7201d6246f4bd786edd" category="cell">適用於 ONTAP 工具 10.2 的 ONTAP 9.12.1 至 ONTAP 9.15.1 ，適用於 ONTAP 工具 10.3 的 ONTAP 9.14.1 ， 9.15.1 及 9.16.0 。</block>
@@ -1823,17 +1782,12 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="2298090c8808f9e231d33a417e9f8fda" category="cell">重新整理次要節點上的資源失敗</block>
   <block id="1ca37d27a58b0a0a35fd38c8f42f39fc" category="admonition">適用於 VMware vSphere 10.3 的 ONTAP 工具支援零 RPO 。</block>
   <block id="e085c3225ffce6bb698ac8cf50cc0dc4" category="doc">從適用於 VMware vSphere 10.x 的 ONTAP 工具升級至 10.3</block>
-  <block id="c45b0da6267d1b3ac800c0b030304702" category="paragraph">HA 和非 HA 部署均支援升級。支援的升級路徑有：</block>
   <block id="b82f42f52ac5fdc3e618aefefe8a32c4" category="cell">適用於 VMware vSphere 10.1 和 10.2 組態的 ONTAP 工具</block>
   <block id="b3b9272a2c469166be75d90b4b3c80cc" category="cell">適用於 VMware vSphere 10.3 組態的 ONTAP 工具</block>
   <block id="55fccd63301cc56ac04a1c6d2f582d36" category="cell">非 HA 和先進的小型企業</block>
   <block id="2f876f935e1583f150a8df2b2a6edbf0" category="cell">非 HA 和進階媒體</block>
   <block id="4bab1341c76020b5f6d28c63555579b4" category="cell">進階小型</block>
   <block id="8cd81bc4ea1b977ea6e585721caa4349" category="cell">進階媒體</block>
-  <block id="d2326859c3dfbf997316b902ffdd2b00" category="admonition">支援從適用於 VM 軟體 vSphere 10.1 和 10.2 到 10.3 的 ONTAP 工具進行升級。不支援從 ONTAP 工具 10.0 直接升級至 10.3 。</block>
-  <block id="1a66f7eb5566c2688b2d5d921d9eef6f" category="paragraph">對於非 HA 升級，請關閉 ONTAP 工具 VM 和 HA 升級，然後關閉第一個節點的電源，再對虛擬機器（ VM ）設定進行下列變更。</block>
-  <block id="b646416d8819b3149b9593d11ae9e16f" category="list-text">在每個節點上新增額外的 100 GB 硬碟，因為服務資料是儲存在 VM 本機上。</block>
-  <block id="fc5ce7eb2b2cb08c38ec14e4d238751d" category="list-text">根據部署的風格，變更已關閉電源的虛擬機器的 CPU 和記憶體。啟用 CPU 和 RAM 的 Hot 外掛程式。</block>
   <block id="1b6cfd8c0ad7fbb4f3aad55904bed183" category="cell">10.3 部署類型</block>
   <block id="5d86ea2686b1b1322f7a0284c0f51191" category="cell">每個節點的 CPU （核心）</block>
   <block id="5c42add8c77b8db0c96fe2b4bd853355" category="cell">每個節點的記憶體（ GB ）</block>
@@ -1848,35 +1802,18 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="662e7928456061bbc4ff15203f731479" category="cell">HA 大型</block>
   <block id="70efdf2ec9b086079795c442636b55fb" category="cell">17</block>
   <block id="e369853df766fa44e1ed0ff613f563bd" category="cell">34</block>
-  <block id="87d8a82ad972c59e0687fe82cccc2694" category="list-text">在完成變更後，開啟虛擬機器電源，並等待服務進入執行中狀態。</block>
-  <block id="c2bf492958f9a5af46545d2cbb870e2f" category="list-text">如果是 HA 部署，請變更資源，啟用 CPU 和 RAM 的 Hot 外掛程式，並為第二個和第三個節點新增 100 GB 硬碟。無需重新啟動這些節點。</block>
-  <block id="22a804da0dd55275401036ab63b714e8" category="list-text">如果應用裝置是以 ONTAP 工具 10.1 或 10.2 版本部署為本機路徑（易於部署），則必須在升級前先執行無磁碟快照。</block>
   <block id="8a6126b328272cba568f4c25bb25de85" category="list-text">輸入 *4* 以選擇 * 支援與診斷 * 。</block>
   <block id="1e137377f709a1d14e9081a633895f6d" category="list-text">輸入 *2* 以選擇 * 啟用遠端診斷存取 * 。</block>
-  <block id="a285f3b4aeefb88ca2fd8666fcd325b0" category="list-text">從終端機 / 終端機登入 VM IP 位址，使用者身分為「 iag 」，密碼為上一步設定的密碼。</block>
   <block id="6628bd5e9dbb13f60147cfc8d04cb977" category="paragraph">* 拍攝所有 Volume 的 quaise 快照 *</block>
   <block id="a6d135b70268e6dae6e2414dc9c7e465" category="inline-link">拍攝虛擬機器的快照</block>
   <block id="557eb1dc4f7a93540b6e414ed969c26c" category="list-text">移至「快照」標籤、然後按一下「 * 拍攝快照 * 」按鈕。拍攝虛擬機器的靜默快照。如需詳細資訊，請參閱<block ref="f606a1111a1f40f1cc809e71ec5c1234" category="inline-link-rx"></block>。</block>
-  <block id="1b2929d74bbfce8f97efe465aa7ef62a" category="paragraph">您需要新增大小為 100GB 的額外硬碟機（ HDD ），以進行任何類型的升級。執行下列工作以新增 HDD 。</block>
-  <block id="5919e650880cfeabf035fac93b2a3d51" category="list-text">在單一節點組態中選取虛擬機器，或選取 HA 組態中的所有三個虛擬機器。</block>
   <block id="f0032c952bebc43c75710433e2994c19" category="list-text">在虛擬機器上按一下滑鼠右鍵，然後選取 * 新增裝置 * &gt; * 硬碟 *</block>
-  <block id="24b529fa7fe637c09879ca05c8c7c2c3" category="list-text">在 * 新硬碟 * 欄位中，新增大小為 100 GB 的 HDD 。</block>
   <block id="91228eef6e9a7bdc25cdad1b40b153b6" category="list-text">按一下 * 套用 *</block>
-  <block id="635d38999d7fdd67d78a58a7fd2c957c" category="paragraph">新增硬碟之後，請針對個別組態更新 VM 的資源，然後重新啟動主要 VM 。</block>
-  <block id="b2c62309c8e6bb5418cb5e49fdc348d4" category="paragraph">將會建立新的 HDD 。動態儲存資源配置程式會使用此 HDD 來建立或複寫磁碟區。</block>
   <block id="51d976aa6e2371bc36e19441158b8e08" category="paragraph">升級至適用於 VMware vSphere 10.3 的 ONTAP 工具之後，您可以：</block>
-  <block id="4919e6f9219e550bfd4f15862ca7c4e1" category="list-text">從管理器 UI 停用服務</block>
-  <block id="cd45571610eaf41dc79736a925d0dd90" category="list-text">從非 HA 設定移至 HA 設定</block>
-  <block id="3d7a5459b11b0dd9ed444d6d42cd9d4c" category="list-text">將非 HA 小型組態擴充至非 HA 媒體或 HA 中型或大型組態。</block>
-  <block id="573cfbe6133f4358783c68d68d4d7733" category="list-text">如果是非 HA 升級，請重新啟動 ONTAP 工具 VM 以反映變更。如果是 HA 升級，請重新啟動第一個節點，以反映節點上的變更。</block>
-  <block id="f305a79263533021079634e7a636a791" category="paragraph">從 VMware vSphere 的舊版工具升級至 10.3 版後，請重新掃描 ONTAP 介面卡，確認詳細資料已在「 VMware Live Site Recovery Storage Replication Adapters 」頁面上更新。</block>
   <block id="12da67bb345ae219e1ec7b1f8d8f09dd" category="paragraph">成功升級後，請使用下列程序，手動從 ONTAP 刪除 Trident 磁碟區：</block>
-  <block id="fc95380c03a9e2251e07f1937e36341b" category="admonition">如果 VMware vSphere 10.1 或 10.2 的 ONTAP 工具是非 HA 小型或非 HA 媒體（本機路徑）組態，則不需要執行這些步驟。</block>
   <block id="528fcc96313b41a079cf4a618d21bc56" category="list-text">輸入 *4* 選擇 * Support and Diagnostics* （ * 支援與診斷 * ）功能表。</block>
-  <block id="7c7165f05246a4a849b52f09cdc55f2e" category="list-text">輸入 *1* 以選擇 * 存取診斷 Shell * 選項。</block>
   <block id="69fc33706a999a8497eea8a0a1410092" category="list-text">執行下列命令</block>
   <block id="4c4796167c3422541c6e31f440e40302" category="list-text">輸入 ONTAP 使用者名稱和密碼</block>
-  <block id="cb0777e7c086fec2eb034fbc83e6ea2c" category="paragraph">這會刪除 ONTAP 中所有用於 VMware vSphere 10.1/10.2 之 ONTAP 工具的 Trident Volume 。</block>
   <block id="3c8480343462c93f8ec9ed8f6c4a4282" category="sidebar">適用於 VMware vSphere 10.2 的 ONTAP 工具文件</block>
   <block id="2e0332b2709dcff7df5d28c654c54066" category="sidebar">適用於 VMware vSphere 10.3 的 ONTAP 工具</block>
   <block id="3d7d171ecad1cba0c2d8d707b648b023" category="sidebar">設定受保護和恢復站台</block>
@@ -2032,4 +1969,75 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="3672cc73e8f241c0e99fa671f7d984c5" category="sidebar">使用 REST API 自動化</block>
   <block id="90182eba2ac7240af5b5cb5ba83a8c1b" category="sidebar">瞭解 REST API</block>
   <block id="d58b759501469292f5d0464d265c376c" category="sidebar">REST實作</block>
+  <block id="cfd78a7adbcd7e4e099e4150d96d4189" category="list-text">密碼管理 - 重設使用者的 OVA 應用程式密碼。</block>
+  <block id="86e9662d627799ea9b0d956617badc77" category="paragraph">ONTAP toolsManager 總覽一節可協助管理應用裝置組態，例如服務管理，節點大小升級和高可用度（ HA ）功能。您也可以監控與節點相關的 ONTAP 工具整體資訊，例如健全狀況，網路詳細資料和警示。</block>
+  <block id="eaff07db9f9bd4c788b59cf5ac2e6f5e" category="paragraph"><block ref="eaff07db9f9bd4c788b59cf5ac2e6f5e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9190f42ee5e75c97614269214dfcb136" category="cell">應用裝置卡提供 ONTAP 工具應用裝置的整體狀態。它會顯示應用裝置組態詳細資料及啟用的服務狀態。如需 ONTAP 工具應用裝置的其他資訊，請按一下 * 檢視詳細資料 * 連結。當編輯應用裝置設定動作工作正在進行中時，應用裝置 Portlet 會顯示工作的狀態和詳細資料。</block>
+  <block id="faf239172dda3b91c4655d9bbde63c82" category="cell">警示卡會依類型列出 ONTAP 工具警示，包括 HA 節點層級警示。您可以按一下計數文字（超連結）來檢視警示清單。連結會將您路由至警示檢視頁面，並依選取的類型篩選。</block>
+  <block id="0e347dbe23febdf1001ed9dfb3e15bc1" category="cell">ONTAP 工具節點卡會顯示節點名稱，節點 VM 名稱，狀態及所有網路相關資料的節點清單。您可以按一下 * 檢視詳細資料 * 來檢視與所選節點相關的其他詳細資料。[ 附註 ] 在非 HA 設定中，只會顯示一個節點。在 HA 設定中，會顯示三個節點。</block>
+  <block id="8c5a94dd08e58279f7461d929aa633e6" category="paragraph">移轉儲存資料時、會使用 REST API 手動建立儲存後端。移轉 VASA Provider 資料時，資料會從現有的 Derby 資料庫匯出，並匯入至 MongoDB 資料庫。</block>
+  <block id="b191a7ff08bb6435186d922c59ff1907" category="admonition">只有當設定僅為 VASA Provider 功能提供服務時，您才應移轉適用於 VMware vSphere 9.xx 的 ONTAP 工具設定。</block>
+  <block id="656a2ce4c62bd399a29a0cc087a7eb83" category="admonition">從適用於 VMware vSphere 9.x 的 ONTAP 工具移轉至 10.3 之後，含 NVMe / FC 傳輸協定的 vVols 資料存放區無法運作，因為 ONTAP 工具 10.3 只支援使用 VMFS 資料存放區的 NVMe 。</block>
+  <block id="f9f52fdfc3b658d087ef0d1715cc2008" category="paragraph">您可以從適用於 VMware vSphere 9.12D1 和 9.13D2 版本的 ONTAP 工具移轉至 10.3 。</block>
+  <block id="12f864a7f79090b1b0f169109899eb43" category="admonition">在升級至修補程式版本之前，您必須從目前版本取得 OVA 備份。</block>
+  <block id="6a52711c7181000aac8a9b276baf324a" category="list-text">新增您要移轉至 ONTAP 工具的 vCenter Server 執行個體，以取得 VMware vSphere 10.3 版本。請參閱 <block ref="fbc3413db4202f1fe331f16af6b38f13" category="inline-link-macro-rx"></block></block>
+  <block id="9a8e25e84fe96275dbb27d27d2cca595" category="list-text">只有在觸發資料存放區探索工作（可能需要 30 分鐘才能觸發）之後、才能在適用於 VMware vSphere 10.3 的 ONTAP 工具中看到從適用於 VMware vSphere 9.xx 的 ONTAP 工具移轉的 NFS 和 VMFS 資料存放區。確認「 VMware vSphere 外掛程式 UI 」頁面 ONTAP 工具的「概觀」頁面上是否顯示資料存放區。</block>
+  <block id="b4c20aabb2d8056ffe9e2b60a0164bf2" category="paragraph">移轉之前，請確定其中一個站台處於受保護狀態，另一個站台處於恢復狀態。</block>
+  <block id="c7c25af309bd84b7749f1862027abc3f" category="admonition">如果容錯移轉剛剛完成，且重新保護擱置中，請勿移轉。完成重新保護，然後執行移轉。完成恢復計畫測試後，請清理測試恢復並開始移轉。</block>
+  <block id="0f47e7ab13b9f8031de10689d97b861b" category="list-text">移至 * 儲存複寫介面卡 * 區段</block>
+  <block id="c28d0a48f388c92ed3ec2fccafeb15ea" category="list-text">按一下省略符號功能表，然後選取 * 重設組態 *</block>
+  <block id="1c5f97ee40c90341d1819bd10d046a29" category="list-text">按一下省略符號功能表，然後選取 * 刪除 *</block>
+  <block id="e7563198149b4ef22a580dcc695a13ec" category="list-text">在「 VMware Live Site Recovery UI 」頁面上，執行 * 探索陣列 * 和 * 探索裝置 * 作業，並驗證這些裝置在移轉之前是否顯示正常。</block>
+  <block id="e316aaa000b8dea913558dbe47e2ab03" category="list-text">在適用於 VMware vSphere 的現有 ONTAP 工具上啟用 Derby 連接埠 1527 。若要啟用連接埠，請使用 root 使用者登入 CLI ，然後執行下列命令：</block>
+  <block id="fdb5b6876d97a075f0bc2a07cd4be907" category="list-text">部署適用於 VMware vSphere 10.3 的 OVA for ONTAP 工具。</block>
+  <block id="34b17f133cdce8c13fd8b812b8c11211" category="list-text">新增您要移轉至 ONTAP 工具的 vCenter Server 執行個體，以取得 VMware vSphere 10.3 版本。請參閱。 <block ref="946669e64e0e42585f18099dec81ec03" category="inline-link-macro-rx"></block></block>
+  <block id="142e4d3f8edb2747fa0e3d260133b8c1" category="paragraph">工作完成後、請驗證移轉報告。報告是工作資料的一部分，可從工作回應中看到。</block>
+  <block id="009dbe214d15197679fe0b95a8a01cc3" category="list-text">從維護主控台停止適用於 VMware vSphere 儲存供應商 9.10/9.11/9.12/9.13 VASA Provider 服務的 ONTAP 工具。</block>
+  <block id="4bf6186a3a16efffdaebdafdd4fcaf4b" category="paragraph">一旦停止舊的 VASA Provider ， vCenter Server 就會容錯移轉至適用於 VMware vSphere 的 ONTAP 工具。所有的資料存放區和 VM 都可以存取、並可從適用於 VMware vSphere 的 ONTAP 工具取得。</block>
+  <block id="ba5c200a0d4600ec4fe2ef79c26593b8" category="list-text">使用下列 API 執行修補程式移轉：</block>
+  <block id="f663ec26fcc5dbf0e82a2df73c30a3e3" category="paragraph">要求主體是空的，用於修補作業。</block>
+  <block id="e4453a0aab117b65b26edb59d78793fd" category="paragraph">一旦修補程式移轉 API 成功執行，所有 VM 都會遵守儲存原則。</block>
+  <block id="cd6f62989595e510d57e7b407691336a" category="paragraph">此 API 會依移轉 ID 刪除移轉，並刪除指定 vCenter Server 上的移轉。</block>
+  <block id="9a43f64b9545dfa5ddfcc70dbc73d001" category="list-text">執行資料存放區（ DS ）和虛擬機器（ VM ）作業之前、請先等待一段時間。等待時間取決於設定中的主機數量， DS 和 VM 。當您不等待時、作業可能會間歇性失敗。</block>
+  <block id="d338e834d62b1cf850a89cbfdf1d9bd7" category="paragraph">從舊版工具 for VMware vSphere 移轉至 10.3 之後，請重新掃描 ONTAP 介面卡，確認詳細資料已在「 VMware Live Site Recovery Storage Replication Adapters 」頁面上更新。</block>
+  <block id="422c2a3517291219d45e5d0be95be9d1" category="paragraph">升級後，如果虛擬機器規範狀態已過期，請使用下列步驟重新套用虛擬機器儲存原則：</block>
+  <block id="15e560ab707fa2bf2b7b0833adbe8bb9" category="list-text">瀏覽至資料存放區，然後選取 * 摘要 * &gt; * VM 儲存原則 * 。</block>
+  <block id="578a0636e92ae2e1b6afe3bdc7c9f9b3" category="paragraph">在 * VM 儲存原則相容性 * 下，您可以看到法規遵循狀態。它顯示為 * 過時 *</block>
+  <block id="325367fe0120f7c1592bf3028da84bee" category="list-text">選取儲存 VM 原則和對應的 VM</block>
+  <block id="c16f1c2a54634bdad6dee177f8131ef5" category="list-text">選取 * 套用 *</block>
+  <block id="b180a96ee0634f423c4629bca8858873" category="paragraph">在 * VM 儲存原則相容性 * 下的法規遵循狀態現在顯示為相容。</block>
+  <block id="bd6bc908cf442363948229bac8df6193" category="list-text">來源和目的地叢集必須先建立相同的自訂 SnapMirror 排程，才能執行 ONTAP 工作流程。</block>
+  <block id="53fa6655b37323ab66a83f1beb9f66c1" category="paragraph">HA 和非 HA 部署皆支援升級。支援的升級路徑有：</block>
+  <block id="6057f03ffe4bbf8fd9e051002f4f22bb" category="admonition">支援從適用於 VMware vSphere 10.1 和 10.2 到 10.3 的 ONTAP 工具升級。不支援從 ONTAP 工具 10.0 直接升級至 10.3 。</block>
+  <block id="a37e11c372d948a69c1ca06f96f29654" category="paragraph">如果是非 HA 升級，請關閉 ONTAP 工具 VM 的電源，如果是 HA 升級，請先關閉第一個節點的電源，然後再對虛擬機器（ VM ）設定進行下列變更。</block>
+  <block id="360d7dde1452a41a726a072836e13df3" category="list-text">將額外的 100 GB 硬碟新增至每個節點，因為服務資料會儲存在虛擬機器的本機上。</block>
+  <block id="d542d6e6bfec95dca9488d55ed772578" category="list-text">根據部署的風格，變更已關閉電源的 VM 的 CPU 和記憶體。啟用 CPU 和 RAM 的 Hot 外掛程式。</block>
+  <block id="fdd3abbed4073b09c3b2a7f9316d5c88" category="list-text">變更完成後開啟虛擬機器電源，並等待服務進入執行中狀態。</block>
+  <block id="ff305864530c5baf345b9688bd0631f4" category="list-text">如果是 HA 部署，請變更資源，啟用 CPU 和 RAM 的熱插件，並為第二個和第三個節點新增 100 GB 硬碟。無需重新啟動這些節點。</block>
+  <block id="aaa3919b119a4a5719987a826b3f426c" category="list-text">如果應用裝置是以 ONTAP 工具 10.1 或 10.2 部署為本機路徑（簡易部署），則必須在升級前先執行一次「不活動」快照。</block>
+  <block id="c1da67abb88e41cb6c66ffcb6aa791c1" category="list-text">從 vCenter Server 開啟 ONTAP 工具的主控台。</block>
+  <block id="8f6d00eacbf6d4158bc6e74700b0499e" category="list-text">從終端機 / 終端機登入 VM IP 位址，使用者身分為「 iag 」，以及在前一步驟中設定的密碼。</block>
+  <block id="2528cd48cce125276b1d088b78c23ac4" category="paragraph">* 備份 MongoDB*</block>
+  <block id="968d0c04f7a1680429ceb1db128906cd" category="paragraph">執行下列命令以備份 MongoDB ：</block>
+  <block id="54efa270b0d74ef97f3590c0aae1393d" category="list-text">在 Pod 中執行 _env | grep MongoDB_root_password_ 命令。</block>
+  <block id="97493984eff3f2fe92f1d3aa5ec1c13a" category="list-text">執行 _exit_ 命令以離開 Pod 。</block>
+  <block id="91e2ec0f0dd7d843927f5c85366a02ec" category="list-text">執行 _kn 執行 NTV-MongoDB-0--mongodump -u root -p MongoDB_root_password --archive=/tmp/mongodb-backup.gz --gzip_ 命令，以取代上述命令設定的 Mongo_root_password 。</block>
+  <block id="4728f0b778ffa8e0ae5be992c59e144b" category="list-text">執行 _kn CP NTV-MongoDB-0:/tmp/mongodb-backup.gz ./MongoDB-backup.gz_ 命令，將使用上述命令建立的 MongoDB 備份從 Pod 複製到主機。</block>
+  <block id="8694eb97cf4ec570d09d33becf6a8eed" category="list-text">執行 'kn Get PVC' 命令並儲存命令輸出。</block>
+  <block id="a9e8526531fd29e961f43f5bb243319e" category="list-text">在 ONTAP 系統管理員使用者介面中，依磁碟區名稱在搜尋列中搜尋，然後按一下該名稱來開啟該磁碟區。移至快照並新增該磁碟區的快照。</block>
+  <block id="07cf559ee7bbc8841180f1dd59c2917f" category="paragraph">在執行升級之前，請先從記錄套件中刪除已完成的 Pod ，並以「 genere-support-bundle-job 」為首碼。如果正在產生支援套件、請等待其完成、然後刪除 Pod 。</block>
+  <block id="7817c7412ad536f5c02bd959934f66d5" category="paragraph">對於任何類型的升級，您都需要新增額外的 100 GB 硬碟（ HDD ）。若要新增 HDD ，請執行下列工作。</block>
+  <block id="11873b433682caa870371cc1631ef90f" category="list-text">在單一節點組態中選取虛擬機器，或在 HA 組態中選取全部三個虛擬機器。</block>
+  <block id="3fed8c7b63099eeb7748cc54424abfec" category="list-text">在 * 新硬碟 * 欄位中新增 100 GB HDD 。</block>
+  <block id="cd457aeee08a9f6476660a1f15284160" category="paragraph">新增硬碟後，請針對個別組態更新 VM 資源，然後重新啟動主要 VM 。</block>
+  <block id="82c4bde04ac809c6d15f232949e072ce" category="paragraph">將會建立新的 HDD 。動態儲存資源配置程式會使用此 HDD 來產生或複寫磁碟區。</block>
+  <block id="ef9e53e40d78d57abe78283a3603eb4e" category="list-text">在「編輯設定」視窗的「 *CD/DVD 磁碟機 * 」欄位下，選取內容庫 ISO 檔案。</block>
+  <block id="e4965c8171d689acf2bfafb148ebfaa8" category="list-text">從管理器 UI 停用服務</block>
+  <block id="c8c29d2a26286541354fc8e377f3b6ce" category="list-text">從非 HA 設定移至 HA 設定</block>
+  <block id="4521a8bb9c231770ace79aca6602dc13" category="list-text">將非 HA 小型組態擴充為非 HA 媒體或 HA 中型或大型組態。</block>
+  <block id="48f74593cd55f85759914f3614a0c3b9" category="list-text">如果是非 HA 升級，請重新啟動 ONTAP 工具 VM 以反映變更。如果是 HA 升級，請重新啟動第一個節點，以反映節點上的變更。</block>
+  <block id="29c35069673bbb39e41492464283c461" category="paragraph">從 VMware vSphere 的舊版工具升級到 10.3 之後，請重新掃描 ONTAP 介面卡，確認詳細資料已在「 VMware Live Site Recovery Storage Replication Adapters 」頁面上更新。</block>
+  <block id="97157e33a0e033b7effd56e6305b9030" category="admonition">如果 VMware vSphere 10.1 或 10.2 的 ONTAP 工具是採用非 HA 小型或中型（本機路徑）組態，則不需要執行這些步驟。</block>
+  <block id="3ff3da4c344f1ccca0d255803305cce9" category="list-text">輸入 *1* 以選擇 * 存取診斷 Shell * 選項。</block>
+  <block id="a1f81812b9996ffae82950938651b560" category="paragraph">這會刪除 ONTAP 工具 for VMware vSphere 10.1/10.2 中 ONTAP 中使用的所有 Trident Volume 。</block>
 </blocks>
