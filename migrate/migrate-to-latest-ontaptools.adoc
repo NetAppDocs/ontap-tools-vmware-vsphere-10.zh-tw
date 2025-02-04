@@ -244,3 +244,7 @@ NOTE: UUID 是移轉後 API 回應時傳回的移轉 UUID 。
 在 * VM 儲存原則相容性 * 下的法規遵循狀態現在顯示為相容。
 
 
+
+*相關資訊*
+
+link:../upgrade/upgrade-ontap-tools.html["從適用於 VMware vSphere 10.x 的 ONTAP 工具升級至 10.3"]

@@ -899,7 +899,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="98ea8bb5748846a8eb48ec17775dd65c" category="list-text"><block ref="73be5ab307e7055f684cc317b6aff741" prefix="" category="inline-code"></block></block>
   <block id="9aac114d9a8bbe576d39d35cf5fad65b" category="list-text"><block ref="5ec1d0f6687a4c1e0107632871d4a131" prefix="" category="inline-code"></block></block>
   <block id="be886d30990ecb1cd7da9458a1301ba3" category="list-text"><block ref="ed73a6dfaf2769c449bcf6ac1257b40e" prefix="" category="inline-code"></block></block>
-  <block id="2a7f66eb3c213058f0136bcf65d63f11" category="list-text"><block ref="1c2934a64ebf7e159bf45c1e6c30b478" prefix="" category="inline-code"></block></block>
   <block id="d2ef96c1cd4e9e918af9cc6fe693d19c" category="list-text"><block ref="3e82875f30595fcc3e2ea7112a52aec3" prefix="" category="inline-code"></block></block>
   <block id="d6dc3fa77b8368a0795d43ba5098caec" category="list-text"><block ref="f82187243129e0447d2310deb9687edf" prefix="" category="inline-code"></block> 您需要針對密碼值提供單一報價。</block>
   <block id="b7d863d6846eaf1689410c02279f9ea6" category="doc">新增儲存後端</block>
@@ -2055,4 +2054,8 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="b639159ff2a793aff96fa54f36b5fe54" category="list-text">移至「 Snapshots 」（快照）標籤，然後選取「 * 拍攝 Snapshot* 」按鈕。拍攝虛擬機器的靜默快照。如需詳細資訊，請參閱<block ref="f606a1111a1f40f1cc809e71ec5c1234" category="inline-link-rx"></block>。</block>
   <block id="901db5b8a2bb826f006539770e8329a4" category="list-text">在虛擬機器上按一下滑鼠右鍵，然後選取 * 新增裝置 * &gt; * 硬碟 *</block>
   <block id="2c2d3019834934bb25449edddc396321" category="list-text">選取 ISO 檔案，然後選取 * 確定 * 。在 *CD/DVD 驅動器 * 字段中選擇 Connected （已連接）複選框。<block ref="af57a506b85774ef3a9f849e2b26e258" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d33f2a600ba4fe43084a26e95e4908c0" category="paragraph">*相關資訊*</block>
+  <block id="588c54ba24d4dc42aed4a00de280a6c7" category="paragraph"><block ref="588c54ba24d4dc42aed4a00de280a6c7" category="inline-link-macro-rx"></block></block>
+  <block id="7cef36111f48deb0a1c06475a0a59b80" category="list-text"><block ref="02abbf483718c447a62821a5783286ae" prefix="" category="inline-code"></block></block>
+  <block id="b59a60fbe3c8f0c4a205eb54707a7c99" category="paragraph"><block ref="b59a60fbe3c8f0c4a205eb54707a7c99" category="inline-link-macro-rx"></block></block>
 </blocks>

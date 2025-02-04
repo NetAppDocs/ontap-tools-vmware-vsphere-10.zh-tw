@@ -175,3 +175,7 @@ sudo python3 /home/maint/scripts/ontap_cleanup.py
 
 
 這會刪除 ONTAP 工具 for VMware vSphere 10.1/10.2 中 ONTAP 中使用的所有 Trident Volume 。
+
+*相關資訊*
+
+link:../migrate/migrate-to-latest-ontaptools.html["從適用於 VMware vSphere 9.x 的 ONTAP 工具移轉至 10.3"]
