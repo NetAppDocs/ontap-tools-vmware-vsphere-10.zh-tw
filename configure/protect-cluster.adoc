@@ -25,7 +25,7 @@ summary: 適用於 VMware vSphere 的 ONTAP 工具可管理主機叢集的保護
 
 
 .步驟
-. 使用登入 vSphere 用戶端 `\https://vcenterip/ui`
+. 使用登入 vSphere 用戶端 `\https://<vcenterip>/<ui>`
 . 在主機叢集上按一下滑鼠右鍵、然後選取 * NetApp ONTAP tools* > * Protect Cluster* 。
 . 在 Protect cluster （保護叢集）視窗中、會自動填入資料存放區類型和來源儲存虛擬機器（ VM ）詳細資料。選取資料存放區連結以檢視受保護的資料存放區。
 . 輸入 * 一致性群組名稱 * 。
@@ -35,17 +35,17 @@ summary: 適用於 VMware vSphere 的 ONTAP 工具可管理主機叢集的保護
 原則類型可以是「非同步」或「自動化的 FailOverDuplex 」。
 
 +
-當您將 SnapMirror 關係新增為 AutomatedFailOverDuplex 類型原則時、必須將目標儲存 VM 新增為儲存後端至部署 VMware vSphere ONTAP 工具的相同 vCenter 。
+當您將 SnapMirror 關係新增為 AutomatedFailOverDuplex 類型原則時，您必須將目標儲存 VM 新增為儲存後端，以部署適用於 VMware vSphere 的 ONTAP 工具。
 
 +
-在 AutomatedFailOverDuplex 原則類型中、有統一且不一致的主機組態。當您選取 * 統一主機組態 * 切換按鈕時、主機啟動器群組組組態會在目標站台上隱含複寫。如需詳細資訊、請參閱link:../concepts/ontap-tools-concepts-terms.html["關鍵概念與詞彙"]
+在 AutomatedFailOverDuplex 原則類型中，有統一且不統一的主機組態。當您選取 * 統一主機組態 * 切換按鈕時、主機啟動器群組組組態會在目標站台上隱含複寫。如需詳細資訊、請參閱link:../concepts/ontap-tools-concepts-terms.html["關鍵概念與詞彙"]
 
 . 如果您選擇使用非一致的主機組態、請為該叢集內的每個主機選取主機存取（來源 / 目標）。
 . 選取*「Add*」。
-. 在 * 保護叢集 * 視窗中、建立作業期間僅支援刪除動作。您可以刪除並重新新增保護。在修改主機叢集保護作業期間、可使用編輯選項。您可以使用省略符號功能表選項來編輯或刪除關聯。
+. 在 * 保護叢集 * 視窗中，您無法在建立作業期間編輯受保護的叢集。您可以再次刪除並新增保護。在修改主機叢集保護作業期間，可使用編輯選項。您可以使用省略符號功能表選項來編輯或刪除關聯。
 . 選擇 * 保護 * 按鈕。
 +
-vCenter 工作會以工作 ID 詳細資料建立，進度會顯示在「最近的工作」面板中。這是一項非同步工作、使用者介面只會顯示要求提交狀態、不會等待工作完成。
+vCenter 工作會以工作 ID 詳細資料建立，其進度會顯示在「最近的工作」面板中。這是一項非同步工作；使用者介面只會顯示要求提交狀態，不會等待工作完成。
 
 . 若要檢視受保護的主機叢集、請瀏覽至 * NetApp ONTAP tools* > * Protection * > * 主機叢集關係 * 。
 

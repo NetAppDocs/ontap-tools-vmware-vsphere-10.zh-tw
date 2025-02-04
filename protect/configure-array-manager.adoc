@@ -25,7 +25,7 @@ SRA支援叢集層級的管理和SVM層級的管理。如果您在叢集層級�
 
 *步驟*
 
-. 在 VMware Live Site Recovery 中、按一下 * Array Manager* 、然後按一下 * 新增 Array Manager* 。
+. 在 VMware Live Site Recovery 中，選擇 *Array Manager* > *Add Array Manager* 。
 . 請輸入下列資訊、以說明 VMware Live Site Recovery 中的陣列：
 +
 .. 在「*顯示名稱*」欄位中輸入識別陣列管理程式的名稱。
@@ -62,7 +62,7 @@ NOTE: 設定陣列管理員時、您應該使用與 ONTAP 工具中儲存系統�
 
 
 . 單擊 * 下一步 * 。
-. 驗證是否已找到陣列並顯示在 Add Array Manager （添加陣列管理器）窗口的底部，然後單擊 *Finish （ * 完成）。
+. 驗證是否已發現陣列並顯示在 Add Array Manager （添加陣列管理器）窗口的底部，然後選擇 *Finish （完成） * 。
 
 
 您可以使用適當的SVM管理IP位址和認證、對還原站台執行相同的步驟。在Add Array Manager精靈的「Enable Array Pairs（啟用陣列配對）」畫面中、您應確認已選取正確的陣列配對、且該配對顯示為「Ready to be enabled（已準備好啟用）」。

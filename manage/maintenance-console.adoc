@@ -18,7 +18,7 @@ summary: 您可以使用 ONTAP 工具的維護主控台來管理應用程式、�
 
 NOTE: 您應該設定的密碼 `diag` 使用者同時啟用遠端診斷。
 
-您應該使用部署的 ONTAP 工具 for VMware vSphere 的 * Summary （摘要） * 索引標籤來存取維護主控台。當您按一下image:../media/launch-maintenance-console.gif["播放按鈕"]時，維護主控台就會啟動。
+您應該使用部署的 ONTAP 工具 for VMware vSphere 的 * Summary （摘要） * 索引標籤來存取維護主控台。選取image:../media/launch-maintenance-console.gif["播放按鈕"]時，維護主控台即會啟動。
 
 |===
 

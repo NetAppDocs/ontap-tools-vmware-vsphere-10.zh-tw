@@ -18,7 +18,7 @@ NOTE: 從 ONTAP 工具管理員產生記錄時、會包含所有 vCenter Server 
 
 *步驟*
 
-. 從網路瀏覽器啟動 ONTAP 工具管理員： `\https://loadBalanceIP:8443/virtualization/ui/`
+. 從網路瀏覽器啟動 ONTAP 工具管理員： `\https://loadBalancerIP:8443/virtualization/ui/`
 . 使用您在部署期間提供的 VMware vSphere 管理員認證 ONTAP 工具登入。
 . 從側欄中選擇 * 日誌套件 * 。
 +
@@ -34,7 +34,7 @@ NOTE: 從 ONTAP 工具管理員產生記錄時、會包含所有 vCenter Server 
 請遵循下列步驟、使用 vCenter 用戶端 UI 產生記錄套件組合：
 
 .步驟
-. 使用登入 vSphere 用戶端 `\https://vcenterip/ui`
+. 使用登入 vSphere 用戶端 `\https://<vcenterip>/<ui>`
 . 從 vSphere Client 首頁、前往 * 支援 * > * 記錄套件 * > * 產生 * 。
 . 提供記錄套件標籤並產生記錄套件組合。
 產生檔案時、您可以看到下載選項。下載可能需要一些時間。

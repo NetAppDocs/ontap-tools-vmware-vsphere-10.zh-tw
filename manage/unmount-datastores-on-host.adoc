@@ -15,7 +15,7 @@ summary: 卸載資料存放區動作會從 ESXi 主機卸載 NFS 或 VMFS 資料
 
 *步驟*
 
-. 使用登入 vSphere 用戶端 `\https://vcenterip/ui`
+. 使用登入 vSphere 用戶端 `\https://<vcenterip>/<ui>`
 . 在 NFS 或 VMFS 資料存放區物件上按一下滑鼠右鍵、然後選取 * 卸載資料存放區 * 。
 +
 此時會開啟一個對話方塊、並列出已掛載資料存放區的 ESXi 主機。在受保護的資料存放區上執行作業時、畫面上會顯示警告訊息。

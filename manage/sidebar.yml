@@ -74,8 +74,6 @@ entries:
     url: "/manage/reset-app-password.html"
   - title: 重設維護主控台使用者密碼
     url: "/manage/reset-maint-password.html"
-- title: 清理磁碟區
-  url: "/manage/delete-deployment.html"
 - title: 管理主機叢集保護
   entries:
   - title: 修改主機叢集保護
@@ -84,3 +82,7 @@ entries:
     url: "/manage/delete-hostcluster-protection.html"
 - title: 接近零 RPO
   url: "/manage/enable-backup.html"
+- title: 終止 ONTAP 工具部署
+  url: "/manage/uninstall-deployment.html"
+- title: 清理磁碟區
+  url: "/manage/delete-deployment.html"

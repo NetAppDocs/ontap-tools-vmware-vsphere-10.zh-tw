@@ -55,7 +55,7 @@ NOTE: vCenter Server 角色適用於適用於 VMware vSphere vCenter 使用者�
 
 為了簡化使用 vCenter Server 權限和 RBAC 的過程、適用於 VMware vSphere 的 ONTAP 工具提供適用於 VMware vSphere 角色的標準 ONTAP 工具、可讓您針對 VMware vSphere 工作執行重要的 ONTAP 工具。還有一個唯讀角色、可讓您檢視資訊、但不執行任何工作。
 
-您可以按一下 vSphere Client 首頁上的 * 角色 * 、檢視適用於 VMware vSphere 標準角色的 ONTAP 工具。ONTAP 工具 for VMware vSphere 提供的角色可讓您執行下列工作：
+您可以在 vSphere Client 首頁上選取 * 角色 * ，以檢視適用於 VMware vSphere 標準角色的 ONTAP 工具。ONTAP 工具 for VMware vSphere 提供的角色可讓您執行下列工作：
 
 |===
 

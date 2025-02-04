@@ -27,7 +27,7 @@ _cat /opt/netapp/meta/Ansible _vars.yaml | grep -i protocol_
 +
 _kubectl 描述持續性磁碟區 | Grep internalName | awk -F'=' ' ' ｛ print $2 ｝ '_
 
-. 從 vCenter Server 刪除 VM 、請參閱 https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vm_admin.doc/GUID-27E53D26-F13F-4F94-8866-9C6CFA40471C.html["從 vCenter Server 或資料存放區移除 VM 或 VM 範本"]
-. 從 ONTAP 系統管理員刪除磁碟區、請參閱 https://docs.netapp.com/us-en/ontap/volumes/delete-flexvol-task.html["刪除FlexVol 一個流通量"]。在 CLI 命令中提供 FlexVolume 的確切名稱以刪除該 Volume 。
-. 如果是 iSCSI 部署、請從 ONTAP 刪除 SAN igroup 、請參閱 https://docs.netapp.com/us-en/ontap/san-admin/manage-san-initiators-task.html["檢視及管理SAN啟動器和群組"]。
+. 從 vCenter Server 刪除 VM ，請參閱 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-virtual-machine-administration-guide-8-0/managing-virtual-machinesvsphere-vm-admin/adding-and-removing-virtual-machinesvsphere-vm-admin.html#GUID-376174FE-F936-4BE4-B8C2-48EED42F110B-en["移除並重新登錄 VM 和 VM 範本"]
+. 從 ONTAP 系統管理程式刪除磁碟區，請 https://docs.netapp.com/us-en/ontap/volumes/delete-flexvol-task.html["刪除FlexVol 一個流通量"]參閱。在 CLI 命令中提供 FlexVolume 的確切名稱以刪除該 Volume 。
+. 如果是 iSCSI 部署，請從 ONTAP 中刪除 SAN igroup ，請參閱 https://docs.netapp.com/us-en/ontap/san-admin/manage-san-initiators-task.html["檢視及管理SAN啟動器和群組"]。
 

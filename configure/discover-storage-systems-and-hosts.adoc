@@ -36,7 +36,7 @@ summary: 當您第一次在 vSphere Client 中執行適用於 VMware vSphere 的
 此動作將重新開始探索所有已連線的儲存系統、可能需要幾分鐘的時間。是否要繼續？ "
 
 . 按一下「*是*」。
-. 選取狀態為的探索到儲存控制器 `Authentication Failure`、然後按一下 * 動作 * > * 修改 * 。
+. 選取狀態為的探索到的儲存控制器 `Authentication Failure`，然後選取 * 動作 * > * 修改 * 。
 . 在「*修改儲存系統*」對話方塊中填寫必要資訊。
 . 對所有儲存控制器重複步驟 4 和 5 `Authentication Failure` 狀態。
 

@@ -29,5 +29,5 @@ VMware vSphere 10 REST API 參考的 ONTAP 工具包含所有 API 呼叫的詳�
 +
 `\https://10.61.25.33:8443/`
 
-. 以個別 API 呼叫為例，向下捲動至「 *vCenters 」類別，然後按一下端點旁的「 Get * 」 `/virtualization/api/v1/vcenters`
+. 以個別 API 呼叫為例，向下捲動至「 *vCenters 」類別，然後選取端點旁的「 Get * 」 `/virtualization/api/v1/vcenters`
 

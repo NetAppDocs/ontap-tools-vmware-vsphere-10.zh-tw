@@ -101,7 +101,7 @@ NOTE: 支援從適用於 VMware vSphere 10.1 和 10.2 到 10.3 的 ONTAP 工具�
 * 使用下列其中一種方法、逐一拍攝所有磁碟區的快照：
 +
 ** 從 CLI 執行命令 _volume snapshot create -vserver <vserver_name> -volume <volume_name> -snapshot <snapshot_name> _
-** 在 ONTAP 系統管理員使用者介面中，依磁碟區名稱在搜尋列中搜尋，然後按一下該名稱來開啟該磁碟區。移至快照並新增該磁碟區的快照。
+** 從 ONTAP 系統管理員使用者介面，在搜尋列中依磁碟區名稱搜尋該磁碟區，然後選取該名稱來開啟該磁碟區。移至快照並新增該磁碟區的快照。
 
 
 
@@ -109,7 +109,7 @@ NOTE: 支援從適用於 VMware vSphere 10.1 和 10.2 到 10.3 的 ONTAP 工具�
 * 在 vCenter 中擷取適用於 VMware vSphere VM 的 ONTAP 工具快照（ HA 部署時為 3 個 VM 、非 HA 部署時為 1 個 VM ） *
 
 * 在 vSphere 用戶端使用者介面中、選取虛擬機器。
-* 移至「快照」標籤、然後按一下「 * 拍攝快照 * 」按鈕。拍攝虛擬機器的靜默快照。如需詳細資訊，請參閱 https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vm_admin.doc/GUID-9720B104-9875-4C2C-A878-F1C351A4F3D8.html["拍攝虛擬機器的快照"^]。
+* 移至「 Snapshots 」（快照）標籤，然後選取「 * 拍攝 Snapshot* 」按鈕。拍攝虛擬機器的靜默快照。如需詳細資訊，請參閱 https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vm_admin.doc/GUID-9720B104-9875-4C2C-A878-F1C351A4F3D8.html["拍攝虛擬機器的快照"^]。
 
 
 在執行升級之前，請先從記錄套件中刪除已完成的 Pod ，並以「 genere-support-bundle-job 」為首碼。如果正在產生支援套件、請等待其完成、然後刪除 Pod 。
@@ -131,8 +131,7 @@ NOTE: 支援從適用於 VMware vSphere 10.1 和 10.2 到 10.3 的 ONTAP 工具�
 . 將適用於 VMware vSphere 的 ONTAP 工具升級 ISO 上傳至內容庫。
 . 在主 VM 頁面中，選擇 * Actions * > * Edit Settings*
 . 在「編輯設定」視窗的「 *CD/DVD 磁碟機 * 」欄位下，選取內容庫 ISO 檔案。
-. 選取 ISO 檔案、然後按一下 * 確定 * 。在 *CD/DVD 驅動器 * 字段中選擇 Connected （已連接）複選框。
-image:../media/primaryvm-edit-settings.png["編輯設定"]
+. 選取 ISO 檔案，然後選取 * 確定 * 。在 *CD/DVD 驅動器 * 字段中選擇 Connected （已連接）複選框。image:../media/primaryvm-edit-settings.png["編輯設定"]
 . 從 vCenter Server 開啟 ONTAP 工具的主控台。
 . 以維護使用者身分登入。
 . 輸入 *3* 選擇系統組態功能表。
