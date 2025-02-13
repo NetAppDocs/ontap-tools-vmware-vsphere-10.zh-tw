@@ -13,8 +13,7 @@ summary: 您可以使用 VMware Live Site Recovery 的 Array Manager 精靈來�
 [role="lead"]
 您可以使用 VMware Live Site Recovery 的 Array Manager 精靈來設定 Storage Replication Adapter （ SRA ）、以啟用 VMware Live Site Recovery 與儲存虛擬機器（ SVM ）之間的互動。
 
-*您需要的是什麼*
-
+.開始之前
 * 您應該已在 VMware Live Site Recovery 中配對受保護的站台和還原站台。
 * 您應該先設定已登入的儲存設備、然後再設定陣列管理員。
 * 您應該已設定並複寫受保護站台和恢復站台之間的 SnapMirror 關係。
@@ -23,8 +22,7 @@ summary: 您可以使用 VMware Live Site Recovery 的 Array Manager 精靈來�
 
 SRA支援叢集層級的管理和SVM層級的管理。如果您在叢集層級新增儲存設備、則可以探索叢集中所有 SVM 並執行作業。如果您在SVM層級新增儲存設備、則只能管理該特定SVM。
 
-*步驟*
-
+.步驟
 . 在 VMware Live Site Recovery 中，選擇 *Array Manager* > *Add Array Manager* 。
 . 請輸入下列資訊、以說明 VMware Live Site Recovery 中的陣列：
 +
@@ -61,7 +59,7 @@ NOTE: 設定陣列管理員時、您應該使用與 ONTAP 工具中儲存系統�
 
 
 
-. 單擊 * 下一步 * 。
+. 選擇*下一步*。
 . 驗證是否已發現陣列並顯示在 Add Array Manager （添加陣列管理器）窗口的底部，然後選擇 *Finish （完成） * 。
 
 

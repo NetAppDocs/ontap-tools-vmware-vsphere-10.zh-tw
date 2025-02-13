@@ -11,7 +11,7 @@ summary: 您可以使用ONTAP VMware vSphere的VMware VMware vCenter功能、在
 
 
 [role="lead"]
-您可以使用ONTAP VMware vSphere的VMware VMware vCenter功能、在ESXi主機上設定逾時和其他值、以確保最佳效能和成功的容錯移轉。適用於 VMware vSphere 的 ONTAP 工具集的價值是以內部 NetApp 測試為基礎。
+使用適用於 VMware vSphere 的 ONTAP 工具，您可以在 ESXi 主機上設定逾時和其他值，以確保最佳效能和成功容錯移轉。適用於 VMware vSphere 的 ONTAP 工具集的價值是以內部 NetApp 測試為基礎。
 
 您可以在ESXi主機上設定下列值：
 
@@ -40,7 +40,7 @@ summary: 您可以使用ONTAP VMware vSphere的VMware VMware vCenter功能、在
 
 == MPIO 設定
 
-MPIO 設定可定義 NetApp 儲存系統的偏好路徑。MPIO 設定可決定哪些可用路徑已最佳化（而非透過互連纜線的非最佳化路徑）、並將偏好的路徑設定為這些路徑之一。
+MPIO 設定可定義 NetApp 儲存系統的偏好路徑。它們會判斷哪些可用路徑已最佳化（而非透過互連纜線的非最佳化路徑），並將偏好的路徑設為其中一條路徑。
 
 在高效能環境中、或是當您使用單一 LUN 資料存放區測試效能時、請考慮將循環（ VMW_PSP_RR ）路徑選擇原則（ PSP ）的負載平衡設定、從預設的 IOPS 設定 1000 變更為 1 。
 

@@ -19,7 +19,7 @@ summary: 適用於 VMware vSphere 的 ONTAP 工具的「組態」索引標籤下
 
 .步驟
 . 從 vSphere Client 導覽至 NFS 資料存放區。
-. 按一下右窗格中的 * 組態 * 索引標籤。
+. 選擇右窗格中的 * 組態 * 標籤。
 . 選擇 * NetApp ONTAP tools* > * ONTAP Storage* 。右窗格中會出現 * 儲存詳細資料 * 和 * NFS 詳細資料 * 。
 +
 ** 儲存詳細資料頁面包含儲存後端、集合和磁碟區的相關資訊。
@@ -34,7 +34,7 @@ summary: 適用於 VMware vSphere 的 ONTAP 工具的「組態」索引標籤下
 
 .步驟
 . 從 vSphere Client 導覽至 VMFS 資料存放區。
-. 按一下右窗格中的 * 組態 * 索引標籤。
+. 選擇右窗格中的 * 組態 * 標籤。
 . 選擇 * NetApp ONTAP tools* > * ONTAP Storage* 。視傳輸協定而定， * 儲存詳細資料 * 和 * LUN 詳細資料 * 或 * 命名空間詳細資料 * 會顯示在右窗格中。
 +
 ** 儲存詳細資料頁面包含儲存後端、集合和磁碟區的相關資訊。
@@ -54,7 +54,7 @@ NOTE: ASA R2 型 VVols 資料存放區不支援此檢視。
 
 .步驟
 . 從 vSphere Client 導覽至 vVols 資料存放區。
-. 按一下右窗格中的 * 組態 * 索引標籤。
+. 選擇右窗格中的 * 組態 * 標籤。
 . 選擇 * NetApp ONTAP tools* > * ONTAP Storage* 。
 . ONTAP 儲存檢視會列出所有磁碟區。您可以從 ONTAP 儲存窗格中展開或移除儲存設備。
 +

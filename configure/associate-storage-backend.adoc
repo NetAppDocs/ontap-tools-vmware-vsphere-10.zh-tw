@@ -17,8 +17,7 @@ vCenter Server 清單頁面會顯示相關的儲存後端數量。每個 vCenter
 
 此工作可協助您在儲存後端和已登入的 vCenter Server 執行個體之間建立全域對應。
 
-*步驟*
-
+.步驟
 . 從網路瀏覽器啟動 ONTAP 工具管理員： `\https://loadBalancerIP:8443/virtualization/ui/`
 . 使用您在部署期間提供的 VMware vSphere 管理員認證 ONTAP 工具登入。
 . 從側邊列選取 vCenter 。

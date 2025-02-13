@@ -13,7 +13,7 @@ summary: 提供ONTAP 本次VMware vSphere之VMware vSphere版本的重要資訊�
 [role="lead"]
 瞭解適用於 VMware vSphere 10.3 的 ONTAP 工具所提供的全新增強功能。
 
-如需新功能與增強功能的完整清單，請參閱xref:whats-new.adoc[適用於 VMware vSphere 10.3 的 ONTAP 工具的新功能]。
+有關新功能和增強功能的完整列表，請參閱xref:whats-new.adoc[適用於 VMware vSphere 10.3 的 ONTAP 工具的新功能]。
 
 若要深入瞭解從適用於 VMware vSphere 9 的 ONTAP 工具移轉至 ONTAP 工具 10.3 是否適合您的部署xref:ontap-tools-9-ontap-tools-10-feature-comparison.adoc[適用於 VMware vSphere 9 的 ONTAP 工具和適用於 VMware vSphere 10 的 ONTAP 工具功能比較]、請參閱。支援從適用於 VMware vSphere 9.12-D 的 ONTAP 工具和 9.13-D 版本移轉至適用於 VMware vSphere 10.3 的 ONTAP 工具。
 

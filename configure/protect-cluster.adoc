@@ -13,7 +13,7 @@ summary: 適用於 VMware vSphere 的 ONTAP 工具可管理主機叢集的保護
 [role="lead"]
 適用於 VMware vSphere 的 ONTAP 工具可管理主機叢集的保護。屬於所選 SVM 並掛載於叢集一或多個主機上的所有資料存放區、都會受到主機叢集的保護。
 
-.先決條件
+.開始之前
 確保符合下列先決條件：
 
 * 主機叢集只有一個 SVM 的資料存放區。
@@ -38,7 +38,7 @@ summary: 適用於 VMware vSphere 的 ONTAP 工具可管理主機叢集的保護
 當您將 SnapMirror 關係新增為 AutomatedFailOverDuplex 類型原則時，您必須將目標儲存 VM 新增為儲存後端，以部署適用於 VMware vSphere 的 ONTAP 工具。
 
 +
-在 AutomatedFailOverDuplex 原則類型中，有統一且不統一的主機組態。當您選取 * 統一主機組態 * 切換按鈕時、主機啟動器群組組組態會在目標站台上隱含複寫。如需詳細資訊、請參閱link:../concepts/ontap-tools-concepts-terms.html["關鍵概念與詞彙"]
+在 AutomatedFailOverDuplex 原則類型中，有統一且不統一的主機組態。當您選取 * 統一主機組態 * 切換按鈕時、主機啟動器群組組組態會在目標站台上隱含複寫。如需詳細資訊、請 link:../concepts/ontap-tools-concepts-terms.html["關鍵概念與詞彙"]參閱。
 
 . 如果您選擇使用非一致的主機組態、請為該叢集內的每個主機選取主機存取（來源 / 目標）。
 . 選取*「Add*」。

@@ -19,8 +19,7 @@ ONTAP 工具應用裝置最初部署在單一節點非 HA 組態中。您可以�
 
 確保您提供的 OVA 範本與第一個節點具有相同的 OVA 版本。
 
-*步驟*
-
+.步驟
 . 從網路瀏覽器啟動 ONTAP 工具管理員： `\https://loadBalancerIP:8443/virtualization/ui/`
 . 使用您在部署期間提供的 VMware vSphere 管理員認證 ONTAP 工具登入。
 . 在概述區段中選取 * 編輯應用裝置設定 * 。

@@ -25,8 +25,7 @@ summary: 在部署適用於 VMware vSphere 的 ONTAP 工具之前、您應該先
 ** 348 GB 、適用於完整佈建的安裝
 
 
-* * 每個節點的主機系統規模需求 *
-根據部署規模和每個節點的建議記憶體如下表所示：
+* * 主機系統規模調整需求 * 根據部署規模建議的記憶體，如下表所示：
 
 
 |===
@@ -41,13 +40,13 @@ summary: 在部署適用於 VMware vSphere 的 ONTAP 工具之前、您應該先
 | 非 HA 媒體 | 13 | 26 | 350 
 
 
-| HA Small | 27 | 54 | 1050 
+| HA 小型（累積三個節點） | 27 | 54 | 1050 
 
 
-| HA 媒體 | 39 | 78 | 1050 
+| HA 媒體（累積三個節點） | 39 | 78 | 1050 
 
 
-| HA 大型 | 51 | 102. | 1050 
+| HA 大型（累積三個節點） | 51 | 102. | 1050 
 |===
 
 
@@ -143,7 +142,7 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 
 | 超過 8 個 | 大 
 |===
-如需詳細資訊、請 https://docs.vmware.com/en/VMware-Live-Recovery/services/vmware-live-site-recovery/GUID-3AD7D565-8A27-450C-8493-7B53F995BB14.html["VMware Live Site Recovery 的營運限制"]參閱。
+如需詳細資訊、請 https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/9-0/overview/site-recovery-manager-system-requirements/operational-limits-of-site-recovery-manager.html["VMware Live Site Recovery 的營運限制"]參閱。
 
 
 

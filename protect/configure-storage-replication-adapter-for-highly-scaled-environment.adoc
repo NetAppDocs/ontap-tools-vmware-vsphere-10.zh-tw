@@ -54,9 +54,7 @@ summary: 您應該根據儲存複寫介面卡（ SRA ）的建議設定來設定
 |===
 您也應該啟用 `StorageProvider.autoResignatureMode` 選項。
 
-如需修改 Storage Provider 設定的詳細資訊、請參閱 VMware 文件。
-
-https://docs.vmware.com/en/VMware-Live-Site-Recovery/9.0/vmware-live-site-recovery/GUID-E4060824-E3C2-4869-BC39-76E88E2FF9A0.html["VMware vSphere文件：變更儲存供應商設定"]
+如需修改儲存設備供應商設定的詳細資訊，請參閱 https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/9-0/how-do-i-protect-my-environment/advanced-srm-configuration/reconfigure-srm-settings/change-storage-provider-settings.html["變更儲存供應商設定"]。
 
 
 
@@ -67,6 +65,4 @@ https://docs.vmware.com/en/VMware-Live-Site-Recovery/9.0/vmware-live-site-recove
 
 NOTE: 指定的逾時時間間隔為最大值。您不需要等待達到最大逾時時間。大多數命令都會在設定的最大逾時時間間隔內完成。
 
-如需詳細資訊、請參閱 VMware 修改 SAN Provider 設定的文件。
-
-https://docs.vmware.com/en/VMware-Live-Site-Recovery/9.0/vmware-live-site-recovery/GUID-711FD223-50DB-414C-A2A7-3BEB8FAFDBD9.html["VMware Site Recovery Manager文件：變更儲存設定"]
+如需修改 SAN Provider 設定，請參閱 https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/9-0/how-do-i-protect-my-environment/advanced-srm-configuration/reconfigure-srm-settings/change-storage-settings.html["變更儲存設定"]。

@@ -100,9 +100,9 @@ NOTE: VMware vSphere 7.0 U3 及更新版本支援 NVMe / TCP 傳輸協定。不�
 
 .. 驗證網路介面卡（ NIC ）廠商是否支援採用 NVMe / TCP 傳輸協定的 ESXi NIC 。
 .. 根據 NIC 廠商規格、為 NVMe / TCP 設定 ESXi NIC 。
-.. 使用 VMware vSphere 7 版本時、請遵循 VMware 網站上的指示 https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.storage.doc/GUID-D047AFDD-BC68-498B-8488-321753C408C2.html#GUID-D047AFDD-BC68-498B-8488-321753C408C2["為 NVMe over TCP 介面卡設定 VMkernel Binding"]來設定 NVMe / TCP 連接埠繫結。使用 VMware vSphere 8 版本時、請遵循 https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-storage/GUID-5F776E6E-62B1-445D-854C-BEA689DD4C92.html#GUID-D047AFDD-BC68-498B-8488-321753C408C2["在 ESXi 上設定 NVMe over TCP"]設定 NVMe / TCP 連接埠繫結。
-.. 對於 VMware vSphere 7 版本、請遵循 VMware 網站上的指示 https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.storage.doc/GUID-8BBD672E-0829-4CF2-84B2-26A3A89ABD2E.html["啟用透過 RDMA 或 NVMe over TCP 軟體介面卡的 NVMe"]來設定 NVMe / TCP 軟體介面卡。針對 VMware vSphere 8 版本、請遵循 https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-storage/GUID-F4B42510-9E6D-4446-816A-5012866E0038.html#GUID-8BBD672E-0829-4CF2-84B2-26A3A89ABD2E["透過 RDMA 或 NVMe over TCP 介面卡新增軟體 NVMe"]設定 NVMe / TCP 軟體介面卡。
-.. link:../configure/discover-storage-systems-and-hosts.html["探索儲存系統與主機"]在 ESXi 主機上執行動作。如需詳細資訊、請參閱 https://community.netapp.com/t5/Tech-ONTAP-Blogs/How-to-Configure-NVMe-TCP-with-vSphere-8-0-Update-1-and-ONTAP-9-13-1-for-VMFS/ba-p/445429["如何使用 vSphere 8.0 Update 1 和 ONTAP 9 。 13.1 設定適用於 VMFS 資料存放區的 NVMe / TCP"]
+.. 使用 VMware vSphere 7 版本時、請遵循 VMware 網站上的指示 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-storage-7-0/about-vmware-nvme-storage/configure-adapters-for-nvme-over-tcp-storage/configure-vmkernel-binding-for-the-tcp-adapter.html["為 NVMe over TCP 介面卡設定 VMkernel Binding"]來設定 NVMe / TCP 連接埠繫結。使用 VMware vSphere 8 版本時、請遵循 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-storage-8-0/about-vmware-nvme-storage/configuring-nvme-over-tcp-on-esxi.html["在 ESXi 上設定 NVMe over TCP"]設定 NVMe / TCP 連接埠繫結。
+.. 針對 VMware vSphere 7 版本，請依照第頁的指示 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-storage-7-0/about-vmware-nvme-storage/add-software-nvme-over-rdma-or-nvme-over-tcp-adapters.html["啟用透過 RDMA 或 NVMe over TCP 軟體介面卡的 NVMe"]來設定 NVMe / TCP 軟體介面卡。針對 VMware vSphere 8 版本、請遵循 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-storage-8-0/about-vmware-nvme-storage/configuring-nvme-over-rdma-roce-v2-on-esxi/add-software-nvme-over-rdma-or-nvme-over-tcp-adapters.html["透過 RDMA 或 NVMe over TCP 介面卡新增軟體 NVMe"]設定 NVMe / TCP 軟體介面卡。
+.. link:../configure/discover-storage-systems-and-hosts.html["探索儲存系統與主機"]在 ESXi 主機上執行動作。如需詳細資訊、請 https://community.netapp.com/t5/Tech-ONTAP-Blogs/How-to-Configure-NVMe-TCP-with-vSphere-8-0-Update-1-and-ONTAP-9-13-1-for-VMFS/ba-p/445429["如何使用 vSphere 8.0 Update 1 和 ONTAP 9 。 13.1 設定適用於 VMFS 資料存放區的 NVMe / TCP"]參閱。
 
 
 * 如果您使用的是 NVMe / FC 傳輸協定、請執行下列步驟來設定 ESXi 主機：
@@ -122,29 +122,29 @@ NOTE: VMware vSphere 7.0 U3 及更新版本支援 NVMe / TCP 傳輸協定。不�
 
 .步驟
 . 使用登入 vSphere 用戶端 `\https://<vcenterip>/<ui>`
-. 在主機系統或主機叢集或資料存放區上按一下滑鼠右鍵、然後選取 * NetApp ONTAP tools* > * Create Datastore* 。
-. 在 * 類型 * 窗格中、在 * 資料存放區類型 * 中選取 VMFS 。
-. 在 * 名稱和傳輸協定 * 窗格中、輸入資料存放區名稱、大小和傳輸協定資訊。如果您選擇將新的資料存放區新增至現有的 VMFS 資料存放區叢集，請在 * 進階選項 * 下選取資料存放區叢集選取器。
-. 在 * Storage* 窗格中選取儲存 VM 。在窗格的 * 進階選項 * 區段中提供 * 自訂啟動器群組名稱 * （選用）。您可以為資料存放區選擇現有的 igroup 、也可以使用自訂名稱建立新的 igroup 。
+. 在主機系統或主機叢集或資料中心上按一下滑鼠右鍵、然後選取 * NetApp ONTAP tools* > * Create Datastore* 。
+. 選取 VMFS 資料存放區類型。
+. 在 *Name and Protocol* 窗格中輸入資料存放區名稱，大小和傳輸協定資訊。如果您選擇將新的資料存放區新增至現有的 VMFS 資料存放區叢集，請在 * 進階選項 * 下選取資料存放區叢集選取器。
+. 在 * Storage* 窗格中選取儲存 VM 。在窗格的 * 進階選項 * 區段中提供 * 自訂啟動器群組名稱 * （選用）。您可以為資料存放區選擇現有的 igroup ，或使用自訂名稱建立新的 igroup 。
 +
-當傳輸協定選取為 NVMe / FC 或 NVMe / TCP 時、會建立新的命名空間子系統、並用於命名空間對應。根據預設、命名空間子系統是使用包含資料存放區名稱的自動產生名稱來建立。您可以在 *Storage* 窗格進階選項的 * 自訂命名空間子系統名稱 * 欄位中重新命名命名命名空間子系統。
+當傳輸協定選取為 NVMe / FC 或 NVMe / TCP 時、會建立新的命名空間子系統、並用於命名空間對應。根據預設，命名空間子系統是使用自動產生的名稱（包括資料存放區名稱）建立。您可以在 *Storage* 窗格的進階選項中的 * 自訂命名空間子系統名稱 * 欄位中重新命名命名命名空間子系統。
 
 . 從 * 儲存屬性 * 窗格：
 +
 .. 從下拉式功能表中選取 * Aggregate * 。
 +
 
-NOTE: 對於 ASA R2 儲存系統，不需要 * Aggregate * 選項，因為 ASA R2 儲存設備是分類式儲存設備。當您選擇 ASA R2 類型 SVM 時，儲存屬性頁面會顯示啟用 QoS 的選項。
+NOTE: 對於 ASA R2 儲存系統， * Aggregate * 選項並不需要，因為 ASA R2 儲存設備是分類式儲存設備。當您選擇 ASA R2 類型 SVM 時，儲存屬性頁面會顯示啟用 QoS 的選項。
 
-.. 根據所選的傳輸協定，儲存單元（ LUN/ 命名空間）是以 Thin 類型的空間保留建立的。
-.. 視需要選取 * 使用現有的 Volume * 和 * 啟用 QoS* 選項，並視需要提供詳細資料。
+.. 根據所選的傳輸協定，儲存單元（ LUN/ 命名空間）是以 Thin 類型的空間保留建立。
+.. 選擇 * 使用現有的 Volume * ， * 視需要啟用 QoS* 選項，並視需要提供詳細資料。
 +
 
-NOTE: 在 ASA R2 儲存類型中，磁碟區建立或選擇不適用於儲存單元建立（ LUN/ 命名空間），因此不會顯示這些選項。
+NOTE: 在 ASA R2 儲存類型中，磁碟區建立或選擇不適用於儲存單元建立（ LUN/ 命名空間）。因此不會顯示這些選項。
 
 +
 
-NOTE: 如果是使用 NVMe / FC 或 NVMe / TCP 傳輸協定建立 VMFS 資料存放區、您就無法使用現有的磁碟區、您應該建立新的磁碟區。
+NOTE: 如果是使用 NVMe / FC 或 NVMe / TCP 傳輸協定建立 VMFS 資料存放區，則您無法使用現有的磁碟區，因此應該建立新的磁碟區。
 
 
 
@@ -152,7 +152,7 @@ NOTE: 如果是使用 NVMe / FC 或 NVMe / TCP 傳輸協定建立 VMFS 資料存
 
 
 
-NOTE: 如果您是在受保護的叢集上建立資料存放區、則會看到一則唯讀訊息「 The datastore is mounted on a protected Cluster （資料存放區正在受保護的叢集上掛載）」。VMFS 資料存放區會建立並掛載於所有主機上。
+NOTE: 如果您要在受保護的叢集上建立資料存放區，則會看到一則唯讀訊息「 The datastore is mounted on a protected Cluster （資料存放區正在受保護的叢集上掛載）」。VMFS 資料存放區會建立並掛載於所有主機上。
 
 --
 ====

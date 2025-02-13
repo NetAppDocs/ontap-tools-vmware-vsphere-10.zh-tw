@@ -19,8 +19,7 @@ VMware vSphere的支援VMware vSphere工具可檢查及設定ESXi主機多重路
 
 視您的組態和系統負載而定，此程序可能需要很長時間。工作進度會顯示在「近期工作」面板中。
 
-*步驟*
-
+.步驟
 . 從 VMware vSphere Web 用戶端首頁，選取 * 主機與叢集 * 。
 . 在主機上按一下滑鼠右鍵、然後選取 * NetApp ONTAP tools* > * 更新主機資料 * 。
 . 在 VMware vSphere Web Client 的捷徑頁面上，選取外掛程式區段下方的 * NetApp ONTAP tools* 。

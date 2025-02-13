@@ -13,8 +13,7 @@ summary: 您可以為 VMware vSphere 設定 ONTAP 工具、以啟用對診斷使
 [role="lead"]
 您可以為 VMware vSphere 設定 ONTAP 工具、以啟用對診斷使用者的 SSH 存取。
 
-*您需要的是什麼*
-
+.開始之前
 您的 vCenter Server 執行個體應啟用 VASA Provider 擴充功能。
 
 *關於此工作*
@@ -26,15 +25,14 @@ summary: 您可以為 VMware vSphere 設定 ONTAP 工具、以啟用對診斷使
 +
 ** 時間到了。
 +
-登入工作階段只在隔天午夜前有效。
+登入工作階段僅在隔天午夜之前有效。
 
 ** 您可以使用SSH再次以診斷使用者身分登入。
 
 
 
 
-*步驟*
-
+.步驟
 . 從 vCenter Server 開啟 VASA Provider 的主控台。
 . 以維護使用者身分登入。
 . 輸入 `4` 選擇 Support and Diagnostics 。

@@ -13,8 +13,7 @@ summary: 您可以使用適用於 VMware vSphere 和 ONTAP System Manager 的 ON
 [role="lead"]
 您可以使用適用於 VMware vSphere 和 ONTAP System Manager 的 ONTAP 工具隨附的 JSON 檔案、設定新的使用者角色和權限來管理儲存後端。
 
-*您需要的是什麼*
-
+.開始之前
 * 您應該已使用下列方法從適用於 VMware vSphere 的 ONTAP 工具下載 ONTAP 權限檔案： https ： <loadbalancerIP> ： 8443/virtualization / 使用者權限 /users_roles.zip 。
 * 您應該已使用從 ONTAP 工具下載 ONTAP 權限檔案 `\https://<loadbalancerIP>:8443/virtualization/user-privileges/users_roles.zip`。
 +
@@ -24,8 +23,7 @@ NOTE: 您可以在叢集或直接在儲存虛擬機器（ SVM ）層級建立使
 * 您應該已以儲存後端的系統管理員權限登入。
 
 
-*步驟*
-
+.步驟
 . 擷取下載的 _\https ： <loadbalancerIP> ： 8443/virtualization / 使用者權限 /users_roles.zip_ 檔案。
 . 使用叢集的叢集管理 IP 位址存取 ONTAP 系統管理員。
 . 使用 admin Privileges 登入叢集。若要設定使用者，請執行下列步驟：
