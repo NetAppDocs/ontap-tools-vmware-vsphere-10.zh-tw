@@ -1,6 +1,6 @@
 ---
 section: manage
-title: 管理ONTAP 各種工具
+title: 管理適用於 VMware vSphere 的 ONTAP 工具
 entries:
 - title: 適用於 VMware vSphere 儀表板的 ONTAP 工具概觀
   url: "/configure/dashboard-overview.html"
@@ -10,8 +10,6 @@ entries:
   url: "/manage/edit-appliance-settings.html"
 - title: 管理資料存放區
   entries:
-  - title: 建立資料存放區
-    url: "/configure/create-vvols-datastore.html"
   - title: 掛載 NFS 和 VMFS 資料存放區
     url: "/manage/mount-datastores-on-host.html"
   - title: 卸載 NFS 和 VMFS 資料存放區

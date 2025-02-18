@@ -33,7 +33,7 @@ summary: 您可以為 VMware vSphere 設定 ONTAP 工具、以啟用對診斷使
 
 
 .步驟
-. 從 vCenter Server 開啟 VASA Provider 的主控台。
+. 從vCenter Server開啟主控台至VASA Provider。
 . 以維護使用者身分登入。
 . 輸入 `4` 選擇 Support and Diagnostics 。
 . 輸入 `2`以選取啟用遠端診斷存取。

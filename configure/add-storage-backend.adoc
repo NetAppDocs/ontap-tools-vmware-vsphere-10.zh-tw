@@ -38,10 +38,10 @@ NOTE: 支援 IPv4 和 IPv6 位址管理階層。
 
 
 --
-.使用 vSphere 用戶端 UI
+.使用 vSphere 用戶端使用者介面
 --
 
-NOTE: 當您使用 vSphere 用戶端 UI 新增儲存後端時， vVols 資料存放區不支援直接新增 SVM 使用者。
+NOTE: 當您使用 vSphere 用戶端使用者介面新增儲存後端時， vVols 資料存放區不支援直接新增 SVM 使用者。
 
 . 使用登入 vSphere 用戶端 `\https://<vcenterip>/<ui>`
 . 在捷徑頁面中，選取外掛程式區段下方的 * NetApp ONTAP tools* 。

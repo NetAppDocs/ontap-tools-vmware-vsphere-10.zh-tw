@@ -1,6 +1,6 @@
 ---
 section: configure
-title: 設定ONTAP VMware工具
+title: 設定ONTAP VMware vSphere的各種功能
 entries:
 - title: 新增 vCenter Server
   url: "/configure/add-vcenter.html"

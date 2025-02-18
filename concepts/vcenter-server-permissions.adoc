@@ -61,7 +61,7 @@ NOTE: 為了簡化 vCenter Server RBAC 的使用、適用於 VMware vSphere 的 
 
 == vSphere物件
 
-權限與vSphere物件相關聯、例如vCenter Server、ESXi主機、虛擬機器、資料存放區、資料中心、 和資料夾。您可以將權限指派給任何vSphere物件。vCenter Server會根據指派給vSphere物件的權限、決定誰可以在該物件上執行哪些工作。針對 VMware vSphere 特定工作的 ONTAP 工具、權限只會在根資料夾層級（ vCenter Server ）指派和驗證、而不會在任何其他實體上指派和驗證。除了 VAAI 外掛程式作業、此作業會針對相關的 ESXi 主機驗證權限。
+權限會與 vSphere 物件相關聯，例如 vCenter Server ， ESXi 主機，虛擬機器，資料存放區，資料中心和資料夾。您可以將權限指派給任何vSphere物件。vCenter Server會根據指派給vSphere物件的權限、決定誰可以在該物件上執行哪些工作。針對 VMware vSphere 特定工作的 ONTAP 工具、權限只會在根資料夾層級（ vCenter Server ）指派和驗證、而不會在任何其他實體上指派和驗證。除了 VAAI 外掛程式作業、此作業會針對相關的 ESXi 主機驗證權限。
 
 
 

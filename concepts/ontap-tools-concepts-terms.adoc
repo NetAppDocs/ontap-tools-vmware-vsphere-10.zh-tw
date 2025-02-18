@@ -15,9 +15,15 @@ summary: 下節說明文件中所使用的主要概念和詞彙。
 
 
 
-=== ASA r2
+=== ASA r2 系統
 
 全新的 NetApp ASA R2 系統（ ASA A1K ， ASA A70 和 ASA A90 ）提供統一化的硬體與軟體解決方案，可針對僅限 SAN 的客戶需求，提供簡化的體驗。 https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["瞭解 ASA R2 儲存系統"]。
+
+
+
+=== AutoSupport
+
+此機制可主動監控系統健全狀況、並自動傳送訊息給NetApp技術支援、您的內部支援組織及支援合作夥伴。AutoSupport
 
 
 
@@ -78,6 +84,12 @@ RPO 是資料備份或複寫頻率的衡量標準。它代表停機後必須恢�
 === SnapMirror 主動式同步（ SMAS ）
 
 SnapMirror 主動式同步可讓業務服務持續運作、即使整個站台故障也沒問題、支援應用程式使用次要複本以透明方式容錯移轉。需要手動介入或自訂指令碼、才能使用 SnapMirror 主動同步觸發容錯移轉。詳細瞭解 https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/index.html["SnapMirror 主動同步"]。
+
+
+
+=== 儲存設備後端
+
+儲存設備後端是 ESXi 主機用來儲存虛擬機器檔案，資料和其他資源的基礎儲存基礎架構。儲存後端可讓 ESXi 主機存取及管理持續資料，為虛擬化環境提供必要的儲存功能與效能。
 
 
 

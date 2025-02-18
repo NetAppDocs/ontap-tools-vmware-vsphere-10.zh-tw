@@ -2,7 +2,7 @@
 permalink: manage/migrate-virtual-machines.html 
 sidebar: sidebar 
 keywords:  
-summary: 移轉資料中心內現有的虛擬機器時、您應該注意一些考量事項。 
+summary: 在資料中心中移轉現有虛擬機器時，您應該注意一些考量事項。 
 ---
 = 移轉或複製虛擬機器的考量事項
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 移轉資料中心內現有的虛擬機器時、您應該注意一些�
 
 
 [role="lead"]
-移轉資料中心中的現有虛擬機器時、您應該瞭解一些考量事項。
+移轉資料中心內現有的虛擬機器時，您應該注意到一些考量事項。
 
 
 
