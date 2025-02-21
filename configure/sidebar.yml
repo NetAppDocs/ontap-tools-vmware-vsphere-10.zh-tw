@@ -9,11 +9,7 @@ entries:
 - title: 安裝NFS VAAI外掛程式
   url: "/configure/install-nfs-vaai-plug-in.html"
 - title: 設定 ESXi 主機設定
-  entries:
-  - title: 設定 ESXi 伺服器多重路徑和逾時設定
-    url: "/configure/configure-esx-server-multipath-and-timeout-settings.html"
-  - title: 設定 ESXi 主機值
-    url: "/configure/esxi-host-values.html"
+  url: "/configure/configure-esx-server-multipath-and-timeout-settings.html"
 - title: 設定 ONTAP 使用者角色和權限
   url: "/configure/configure-user-role-and-privileges.html"
 - title: 新增儲存後端

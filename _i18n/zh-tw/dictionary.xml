@@ -255,7 +255,6 @@
   <block id="72eb6abf9272757a5494f0d1f1c91658" category="cell">存取層級</block>
   <block id="f5791a18ace280c34a57c2ee7a726d7b" category="cell">用於</block>
   <block id="c0408daa39083be454279f1fca2118d9" category="cell">在本機新增叢集的情況下取得 SVM 組態。</block>
-  <block id="0b249e5cb515a51c79589c2459adbaf6" category="summary">您可以使用ONTAP VMware vSphere的VMware VMware vCenter功能、在ESXi主機上設定逾時和其他值、以確保最佳效能和成功的容錯移轉。適用於 VMware vSphere 的 ONTAP 工具集的價值是以內部 NetApp 測試為基礎。</block>
   <block id="a883deebdfbfeb611d06d3f55178ccbf" category="doc">設定 ESXi 主機值</block>
   <block id="9232ab7e918fc93452c2dc7c8fab1b8c" category="paragraph">您可以在ESXi主機上設定下列值：</block>
   <block id="ab9d8dfb65807487a899df1683e128fa" category="section-title">HA/CNA 介面卡設定</block>
@@ -1199,7 +1198,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="06933067aafd48425d67bcb01bba5cb6" category="cell">更新</block>
   <block id="5dd03e8d039863e563e049be198c3fd3" category="sidebar">版本資訊</block>
   <block id="ed8359854c43609fca7bc8a46cca9eac" category="sidebar">ONTAP 工具 9 和 ONTAP 工具 10 的功能比較</block>
-  <block id="598d1a03a9fabe277211c3c65adbfbc6" category="admonition">應用程式使用者名稱和密碼是在 ONTAP 工具部署期間設定的。這是 VASA 供應商 /SRA 登錄所需的項目。</block>
   <block id="1bf63b567c68de7fcd78fcc89f42f93c" category="sidebar">使用主機叢集保護來保護</block>
   <block id="d8ddfdd9298e5862ca00168195c4be29" category="sidebar">使用 SRA 保護來保護</block>
   <block id="a2635d75789f249837881cc5136979e1" category="paragraph">*完成後*</block>
@@ -1323,7 +1321,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="f0585a6acfa5b4078673a8a1c0d350ac" category="cell">22 （ TCP ）</block>
   <block id="07ac8d53698f067d7d278deb303748d3" category="cell">Ansible 在叢集資源配置期間使用此 SSH 連接埠進行通訊。此連接埠是變更維護使用者密碼，狀態訊息等功能所必需的，在 HA 組態的情況下，也需要更新所有三個節點上的值。</block>
   <block id="5d778c994f28bde711dfc3896d087acc" category="cell">443 （ TCP ）</block>
-  <block id="13a1c454aee21c16e72ab8733d5644a5" category="cell">這是 VASA 提供者服務的傳入通訊通道連接埠。Vasa 提供者自我簽署的憑證和自訂 CA 憑證是託管在此連接埠上。</block>
   <block id="51e1729ebe78aa6583c2806bd5982eb7" category="cell">8443 （ TCP ）</block>
   <block id="05820e7e588ce97dc4656c92f1b83966" category="cell">此連接埠可透過 swagger 和 Manager 使用者介面應用程式來裝載 API 文件。</block>
   <block id="2a03194d164e0f03a76cc41099ff8988" category="cell">2379 （ TCP ）</block>
@@ -1335,7 +1332,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="8c340be6a89ca97c4af7b42628cbc335" category="cell">7946 （ TCP+UDP ）</block>
   <block id="d0c5d9fb3af3553dbc8aa2d531b38b8f" category="cell">此連接埠用於 Docker 的容器網路探索。</block>
   <block id="4669594dac40249be880d63ece4e60fd" category="cell">9083 （ TCP ）</block>
-  <block id="65edc2a79bfdeeed4b3c0d4383d7abda" category="cell">此連接埠是供 VASA 供應商服務使用的內部服務連接埠。</block>
   <block id="e44129481d47005dcb6572a5d35961cb" category="cell">1162 （ UDP ）</block>
   <block id="ef2d924bd68e8697255e5349875213c7" category="cell">這是 SNMP 設陷封包連接埠。</block>
   <block id="219b39abc603cd5da84b03eac4802e2b" category="cell">6443 （ TCP ）</block>
@@ -1403,7 +1399,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="b6b9d4100dc66eb2a9d44485b61f0fba" category="paragraph">vCenter Server 清單頁面會顯示相關的儲存後端數量。每個 vCenter Server 執行個體都可以選擇與儲存後端建立關聯或取消關聯。此工作可協助您在儲存後端和已登入的 vCenter Server 執行個體之間建立全域對應。</block>
   <block id="425455a0df6d10586a41711a1553bfae" category="inline-link">建立虛擬機器進行複製</block>
   <block id="681d233e491ad7e8ec82fd9193581181" category="paragraph">如需詳細資訊，請參閱<block ref="276aed995f6320cbafa4bfe03cc7ac04" category="inline-link-rx"></block>。</block>
-  <block id="67d8055ce447427d2190d1100319cddc" category="paragraph">對於具有 ASA R2 儲存類型的 Windows VM ，當您拍攝虛擬機器快照時，它將是唯讀快照。當 VM 有開機呼叫時， VASA Provider 會使用唯讀快照建立 LUN ，然後啟用其 IOPS 。在關機要求期間， VASA 供應商會刪除建立的 LUN ，然後停用 IOPS 。</block>
   <block id="70a4eccd665ed7fc2f16889dd9f717de" category="paragraph">您可以在最近的工作面板中追蹤進度。</block>
   <block id="a1a77ce2be2c879d158a13c22d948645" category="admonition">ASA R2 型 VVols 資料存放區不支援壓縮 vVols 資料存放區作業。</block>
   <block id="e3ad07a7efc1e8b336d03741c1f32de2" category="doc">ONTAP 工具報告</block>
@@ -1789,12 +1784,9 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="d7c513071870643e06bdd5a2952a3848" category="list-text">選擇 * 保護 * 按鈕。</block>
   <block id="5522fdca4065fd1e9ed7b389f3a8e7b2" category="paragraph">vCenter 工作會以工作 ID 詳細資料建立，其進度會顯示在「最近的工作」面板中。這是一項非同步工作；使用者介面只會顯示要求提交狀態，不會等待工作完成。</block>
   <block id="ded8026201084be2fda01a73c0b6a45c" category="summary">您可以使用適用於 VMware vSphere 遠端外掛程式介面的 ONTAP 工具，向 vCenter Server 執行個體註冊 VASA Provider 。</block>
-  <block id="609d93e638a93ef3fbaff21b075792f5" category="paragraph">您可以使用適用於 VMware vSphere 的 ONTAP 工具，向 vCenter Server 執行個體註冊 VASA Provider 。VASA Provider Settings （ VASA 提供者設定）區段會顯示所選 vCenter Server 的 VASA Provider 登錄狀態。</block>
   <block id="dbf218ab7bc36005b7fdd93dda1f6eda" category="list-text">在外掛程式區段下，選取 * 快速鍵 * &gt; * NetApp ONTAP tools* 。</block>
   <block id="1767c8dcd2dacb5056d2a398b5761669" category="list-text">選擇 * 設定 * &gt; * VASA 提供者設定 * 。VASA Provider 登錄狀態會顯示為「未登錄」。</block>
   <block id="600ff4b29760f4ad12573092ddf700ed" category="list-text">選擇 * 註冊 * 按鈕以註冊 VASA 提供者。</block>
-  <block id="df1a39c4f4e7ca54718d4638a0fbe196" category="list-text">輸入 VASA 提供者的名稱，並提供 ONTAP 工具以取得 VMware vSphere 應用程式使用者認證，然後選取 * 註冊 * 。</block>
-  <block id="f4a7e7e14fab1c3d711985600e2ee7f0" category="list-text">成功登錄和重新整理頁面後，會顯示已登錄的 VASA 供應商的狀態，名稱和版本。註冊後，將會啟動取消註冊動作。</block>
   <block id="2a8d2860baf78d6dcd2ba9cf54828350" category="paragraph">確認已登入的 VASA Provider 已列於 vCenter 用戶端的 VASA Provider 之下：</block>
   <block id="b2d759d8409be83670d858be76d08a57" category="list-text">瀏覽至 vCenter Server 執行個體。</block>
   <block id="31cbb70f53b2d4a961916f4f580b9afa" category="list-text">選擇 * 儲存供應商 * &gt; * 組態 * 。確認已登入的 VASA Provider 已正確列出。</block>
@@ -1857,9 +1849,7 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="33338c06d0b18b2f71e85923222b72e5" category="paragraph">請依照本節中的指示，順利終止適用於 VMware vSphere 部署的 ONTAP 工具。</block>
   <block id="5a542b803059205c8fd2335844a87295" category="admonition">終止適用於 VMware vSphere 的 ONTAP 工具將會刪除工具中的所有資料。</block>
   <block id="f0833ce92c23eb056dde238669740988" category="list-text"><block ref="523efdef8100699453c6b07ce8f4921c" category="inline-link-macro-rx"></block>在適用於 VMware vSphere 的 ONTAP 工具上建立。</block>
-  <block id="1e51d74fa593c2d20970490a2e9adbe0" category="list-text">使用下列步驟，從所有 vCenter 伺服器取消註冊 VASA 提供者：</block>
   <block id="446b6ba7fba75a7ecc60d88a968956a4" category="list-text">在 ONTAP 工具中，選取畫面底部的 * 設定 * &gt; * VASA 提供者設定 * &gt; * 取消登錄 * 選項。</block>
-  <block id="ff58dfdcb939738020bc3b48ae83b617" category="list-text">在 *Unregister VASA provider* 頁面中，提供應用程式使用者認證，然後選取 * Unregister* 。</block>
   <block id="60ba17bf2537f7f153738b7a53985263" category="list-text">取消所有儲存後端與 vCenter Server 執行個體的關聯。請參閱 <block ref="8743d7af4f3d1585e8a908d41950b1ae" category="inline-link-macro-rx"></block>。</block>
   <block id="b2aac3a919762e9dd0f89ef1b3999500" category="list-text">刪除所有儲存設備後端。請參閱 <block ref="c97897721457f9108ce9caf2b3f0d235" category="inline-link-macro-rx"></block>。</block>
   <block id="39ebf4e5b2fe43c5d1e039f8afb8a330" category="list-text">從 VMware Live Site Recovery 移除 SRA 介面卡：</block>
@@ -1967,14 +1957,12 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="2da89430805560f209041c63cfb2f20f" category="list-text">在快顯視窗中，上傳伺服器憑證，伺服器憑證私密金鑰，根 CA 憑證和中繼憑證檔案。</block>
   <block id="ca148a970e5b5a81a77ce6e27a1e6a55" category="list-text">輸入您產生此憑證的網域名稱，然後升級憑證。</block>
   <block id="96e25bc2ea7c946d5cb80df5623b04f4" category="admonition">系統將會離線，直到升級完成為止，您將會登出 ONTAP 工具管理員介面。</block>
-  <block id="b0c94213de0564c17f37b032d9d91905" category="open-title">升級 VASA 供應商憑證</block>
   <block id="4d8920fb51dbe2e0eeb3d23c3b11224b" category="paragraph">VMware vSphere 的 ONTAP 工具是以 VASA Provider 的自我簽署憑證來部署。有了這項功能、 VVols 資料存放區只能管理一個 vCenter Server 執行個體。當您管理多個 vCenter Server 執行個體並想要在其中啟用 vVols 功能時，您需要將自我簽署的憑證變更為自訂 CA 憑證。</block>
   <block id="81914abf558d30aee207170f7eb62743" category="list-text">選取 * 憑證 * &gt; * VASA Provider* 或 * ONTAP 工具 * &gt; * 更新 * 以更新憑證。</block>
   <block id="fafffe2e2a76baaa761981b13de575ba" category="list-text">選取 * 憑證 * &gt; * VASA Provider* 或 * ONTAP 工具 * &gt; * 升級至 CA* ，將自我簽署的憑證升級為自訂 CA 憑證。</block>
   <block id="6ab10f666dd4d5c8df15f3d1ec4b0587" category="list-text">選取 * 變更 * 以實作變更。</block>
   <block id="3d7fb394c85bb4d38079573b5a7dd241" category="paragraph">登入工作階段僅在隔天午夜之前有效。</block>
   <block id="4a724ef496ce3cb45c0d4dd43ce4a1cf" category="doc">使用ONTAP VMware ESXi工具修改ESXi主機設定</block>
-  <block id="e275b0caaa6d0402ee0e31d7da910bcf" category="paragraph"><block ref="e275b0caaa6d0402ee0e31d7da910bcf" category="inline-link-macro-rx"></block></block>
   <block id="cc307b25622cbd7026f0a8c0e553a4df" category="list-text">進行必要變更後，請選取 * 儲存 * 。</block>
   <block id="20d541172ecc7e2d477ce2738120938c" category="list-text">選取 * 保護 * 。</block>
   <block id="ec4a1dbd6ed28379905f9f6ea733a254" category="list-text">選取符合您要移轉之資料存放區功能的虛擬磁碟格式、 VM 儲存原則和 vVol 資料存放區。</block>
@@ -2039,7 +2027,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="cecfed09fac678ab192681a3f210d345" category="list-text">當主機叢集受到統一組態的保護時，則會停用裝載資料存放區選項。</block>
   <block id="39037b551a4495c32d5aa53bb3952e75" category="list-text">在左側導覽窗格中，選取包含主機的資料中心。</block>
   <block id="54862297571dca9382bb198a79d53cf3" category="list-text">若要在主機或主機叢集上掛載 NFS/VMFS 資料存放區，請按一下滑鼠右鍵，然後選取 * NetApp ONTAP tools* &gt; * Mount Datastores* 。</block>
-  <block id="c28ad89693a8ed5dd2d20a231db5b96f" category="paragraph">若要重設管理員密碼、您需要使用適用於 VMware vSphere 維護主控台的 ONTAP 工具來產生重設權杖。...從 vCenter Server 開啟維護主控台。輸入「 2 」以選擇「系統組態」選項。輸入「 3 」以變更「 Maint 」使用者密碼。</block>
   <block id="fa946c7b8b00ac3d8f1845bdcf279074" category="paragraph">您無法從所有主機上卸載資料存放區。使用者介面建議您改用刪除資料存放區作業。</block>
   <block id="0cd5eb24f781f0b49a6c666e5220c98c" category="list-text">只有在觸發資料存放區探索工作（可能需要 30 分鐘才能觸發）之後、才能在適用於 VMware vSphere 10.3 的 ONTAP 工具中看到從適用於 VMware vSphere 9.xx 的 ONTAP 工具移轉的 NFS 和 VMFS 資料存放區。確認「 VMware vSphere 外掛程式」使用者介面之 ONTAP 工具的「概觀」頁面上是否顯示資料存放區。</block>
   <block id="a0e42a34ad94909291f9863e606095c3" category="list-text">請執行下列步驟，在 VMware Live Site Recovery 使用者介面中刪除適用於 VMware vSphere 9.xx 版本的工具 ONTAP 介面卡：</block>
@@ -2052,4 +2039,19 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="4de1c4f6191ac837f89defd159014d4f" category="sidebar">設定ONTAP VMware vSphere的各種功能</block>
   <block id="dc2afa03f9d9070dcc18808c51d3b403" category="sidebar">管理適用於 VMware vSphere 的 ONTAP 工具</block>
   <block id="dd018bb6638d4453bb4643baac23fad3" category="sidebar">升級適用於 VMware vSphere 的 ONTAP 工具</block>
+  <block id="8ce287b63bedf11bff1339b770533de1" category="paragraph">您可以使用適用於 VMware vSphere 的 ONTAP 工具，向 vCenter Server 執行個體註冊 VASA Provider 。VASA Provider 設定區段會顯示所選 vCenter Server 的 VASA Provider 登錄狀態。</block>
+  <block id="30219dec23be3c12e0dc980cd1686912" category="list-text">輸入 VASA Provider 的名稱，並提供 ONTAP 工具以取得 VMware vSphere 應用程式使用者認證，然後選取 * 註冊 * 。</block>
+  <block id="9d097d858bfbec2ad77c2f37fa3f2b14" category="list-text">成功登錄和重新整理頁面後，會顯示已登錄的 VASA Provider 的狀態，名稱和版本。註冊後，將會啟動取消註冊動作。</block>
+  <block id="9bb143d7a2036a80e106dc066c6b01f2" category="cell">這是 VASA Provider 服務傳入通訊的傳輸連接埠。Vasa Provider 自我簽署憑證和自訂 CA 憑證均裝載於此連接埠。</block>
+  <block id="131790b08b90f216c8731a6e1a071001" category="cell">此連接埠是 VASA Provider 服務的內部使用服務連接埠。</block>
+  <block id="f86285920a635060c5823a8276628377" category="open-title">升級 VASA Provider 憑證</block>
+  <block id="bfa75497fc09ee1e1a68a164c43dbf33" category="paragraph"><block ref="bfa75497fc09ee1e1a68a164c43dbf33" category="inline-link-macro-rx"></block></block>
+  <block id="7276496c35fbec54a8fb3dface57c5bb" category="paragraph">對於具有 ASA R2 儲存類型的 Windows VM ，當您拍攝虛擬機器快照時，它將是唯讀快照。當 VM 有開機呼叫時， VASA Provider 會使用唯讀快照建立 LUN ，然後啟用其 IOPS 。在關機要求期間， VASA Provider 會刪除建立的 LUN ，然後停用 IOPS 。</block>
+  <block id="378348480ef2745d6f8b174eaac75780" category="paragraph">若要重設管理員密碼、您需要使用適用於 VMware vSphere 維護主控台的 ONTAP 工具來產生重設權杖。</block>
+  <block id="35baad0cee1a9c308249049e655932ff" category="list-text">從 vCenter Server 開啟維護主控台</block>
+  <block id="0728c65962557eb1d00ebeef0418b72c" category="list-text">輸入「 2 」以選取「系統組態」選項</block>
+  <block id="5c4950449fdd46ff4c3981422e3fd6ff" category="list-text">輸入「 3 」以變更「 Maint 」使用者密碼。</block>
+  <block id="27668debe2a46165745d80fe01711790" category="list-text">使用下列步驟，從所有 vCenter 伺服器取消登錄 VASA Provider ：</block>
+  <block id="89cc07c4865380b62ec83b09b399b504" category="list-text">在 * 取消登錄 VASA Provider* 頁面中，提供應用程式使用者認證，然後選取 * 取消登錄 * 。</block>
+  <block id="4dbcaa40dfd796f9c86fd033df9508db" category="admonition">應用程式使用者名稱和密碼是在 ONTAP 工具部署期間設定的。這是 VASA Provider/SRA 登錄所需的項目。</block>
 </blocks>

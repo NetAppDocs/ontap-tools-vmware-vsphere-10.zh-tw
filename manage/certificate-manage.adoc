@@ -55,7 +55,7 @@ NOTE: 系統將會離線，直到升級完成為止，您將會登出 ONTAP 工�
 
 
 --
-.升級 VASA 供應商憑證
+.升級 VASA Provider 憑證
 --
 VMware vSphere 的 ONTAP 工具是以 VASA Provider 的自我簽署憑證來部署。有了這項功能、 VVols 資料存放區只能管理一個 vCenter Server 執行個體。當您管理多個 vCenter Server 執行個體並想要在其中啟用 vVols 功能時，您需要將自我簽署的憑證變更為自訂 CA 憑證。
 

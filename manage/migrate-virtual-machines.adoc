@@ -60,4 +60,4 @@ VMware 目前不支援複製到 VM 範本的虛擬機器。
 
 您也無法保護具有記憶體 Snapshot 的未受保護虛擬機器。在此版本中、您應該先刪除記憶體快照、再啟用虛擬機器保護。
 
-對於具有 ASA R2 儲存類型的 Windows VM ，當您拍攝虛擬機器快照時，它將是唯讀快照。當 VM 有開機呼叫時， VASA Provider 會使用唯讀快照建立 LUN ，然後啟用其 IOPS 。在關機要求期間， VASA 供應商會刪除建立的 LUN ，然後停用 IOPS 。
+對於具有 ASA R2 儲存類型的 Windows VM ，當您拍攝虛擬機器快照時，它將是唯讀快照。當 VM 有開機呼叫時， VASA Provider 會使用唯讀快照建立 LUN ，然後啟用其 IOPS 。在關機要求期間， VASA Provider 會刪除建立的 LUN ，然後停用 IOPS 。

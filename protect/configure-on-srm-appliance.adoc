@@ -35,7 +35,7 @@ NOTE: 您需要在單引號內提供密碼值、以確保 Perl 指令碼不會�
 
 +
 
-NOTE: 應用程式使用者名稱和密碼是在 ONTAP 工具部署期間設定的。這是 VASA 供應商 /SRA 登錄所需的項目。
+NOTE: 應用程式使用者名稱和密碼是在 ONTAP 工具部署期間設定的。這是 VASA Provider/SRA 登錄所需的項目。
 
 . 重新掃描介面卡、確認「 VMware Live Site Recovery Storage Replication Adapters （ VMware Live Site Recovery 儲存複寫介面卡）」頁面上的詳細資料已更新。
 

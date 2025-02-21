@@ -159,7 +159,7 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 | 22 （ TCP ） | Ansible 在叢集資源配置期間使用此 SSH 連接埠進行通訊。此連接埠是變更維護使用者密碼，狀態訊息等功能所必需的，在 HA 組態的情況下，也需要更新所有三個節點上的值。 
 
 
-| 443 （ TCP ） | 這是 VASA 提供者服務的傳入通訊通道連接埠。Vasa 提供者自我簽署的憑證和自訂 CA 憑證是託管在此連接埠上。 
+| 443 （ TCP ） | 這是 VASA Provider 服務傳入通訊的傳輸連接埠。Vasa Provider 自我簽署憑證和自訂 CA 憑證均裝載於此連接埠。 
 
 
 | 8443 （ TCP ） | 此連接埠可透過 swagger 和 Manager 使用者介面應用程式來裝載 API 文件。 
@@ -177,7 +177,7 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 | 7946 （ TCP+UDP ） | 此連接埠用於 Docker 的容器網路探索。 
 
 
-| 9083 （ TCP ） | 此連接埠是供 VASA 供應商服務使用的內部服務連接埠。 
+| 9083 （ TCP ） | 此連接埠是 VASA Provider 服務的內部使用服務連接埠。 
 
 
 | 1162 （ UDP ） | 這是 SNMP 設陷封包連接埠。 
