@@ -3,9 +3,7 @@ section: protect
 title: 保護資料存放區和虛擬機器
 entries:
 - title: 使用主機叢集保護來保護
-  entries:
-  - title: 建立主機叢集保護
-    url: "/configure/protect-cluster.html"
+  url: "/configure/protect-cluster.html"
 - title: 使用 SRA 保護來保護
   entries:
   - title: 啟用SRA來保護資料存放區
@@ -19,11 +17,7 @@ entries:
   - title: 更新SRA認證資料
     url: "/protect/update-credentials.html"
   - title: 設定受保護和恢復站台
-    entries:
-    - title: 設定保護群組
-      url: "/protect/configure-protection-groups.html"
-    - title: 配對受保護和恢復站台
-      url: "/protect/pair-protected-and-recovery-sites.html"
+    url: "/protect/configure-protection-groups.html"
   - title: 設定受保護和恢復站台資源
     entries:
     - title: 設定網路對應

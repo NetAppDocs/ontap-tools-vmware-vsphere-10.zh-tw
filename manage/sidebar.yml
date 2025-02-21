@@ -80,7 +80,7 @@ entries:
     url: "/manage/delete-hostcluster-protection.html"
 - title: 接近零 RPO
   url: "/manage/enable-backup.html"
-- title: 終止 ONTAP 工具部署
+- title: 解除安裝 ONTAP 工具部署
   url: "/manage/uninstall-deployment.html"
 - title: 清理磁碟區
   url: "/manage/delete-deployment.html"

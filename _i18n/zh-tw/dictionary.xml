@@ -598,7 +598,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="eef129331314d2c9f4c4a5b0fdde3c7e" category="cell">刪除現有的資源執行個體。</block>
   <block id="3e75383a5992a6d15fb81e872e46e256" category="cell">放入</block>
   <block id="c4408d335012a56ff58937d78050efad" category="section-title">接受</block>
-  <block id="f7f3984fa732d05af01413abe0c139fa" category="summary">您應該配對使用 vSphere Client 建立的受保護網站和還原網站、以啟用 Storage Replication Adapter （ SRA ）來探索儲存系統。</block>
   <block id="31f39e1dd44660cbf064de93a5ac5fe9" category="doc">配對受保護和恢復站台</block>
   <block id="7156f9669ad3e8dc5543b26c90b677b9" category="paragraph">您應該配對使用 vSphere Client 建立的受保護網站和還原網站、以啟用 Storage Replication Adapter （ SRA ）來探索儲存系統。</block>
   <block id="153de28c544cedf1d0476c82a497c1d4" category="list-text">您應該在受保護的網站和還原網站上安裝 SRA 。</block>
@@ -975,7 +974,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="81ef6507a13da5635951bc5b533deb59" category="inline-link">TR-4684</block>
   <block id="bcfcba3d84c95eb110df0649ab05c280" category="paragraph">如需搭配 VMware vSphere 7.0 使用 NVMe / FC 的詳細資訊、請參閱<block ref="27816f9f9cf7e278691c8ea8c1dd01dc" category="inline-link-rx"></block>和<block ref="a23d4cc1b9464bb497e26d387d612153" category="inline-link-rx"></block>。</block>
   <block id="973e35fe570f98dc6e1c5fe1bd6b5876" category="summary">適用於 VMware vSphere 的 ONTAP 工具可管理主機叢集的保護。</block>
-  <block id="46bf98dea599db077d28c3e2f58a655a" category="doc">建立主機叢集保護</block>
   <block id="dd4ee610bd1d035c73bc0cbcd80e46da" category="paragraph">確保符合下列先決條件：</block>
   <block id="7c923b6532ecd9637deac92eebf7333a" category="list-text">主機叢集只有一個 SVM 的資料存放區。</block>
   <block id="abd2c79ea68f2d7802d6d7a46312971e" category="list-text">安裝在主機叢集上的資料存放區不應掛載於叢集外的任何主機上。</block>
@@ -1845,9 +1843,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="eed7fc96f746813cb6dc7931e0b308b0" category="list-text">選取垂直省略符號功能表，然後選取 * 移除 * 。</block>
   <block id="1b46a38e17199ae5d2201aa53d2f0fe9" category="paragraph">當您選取儲存後端下的父叢集或子叢集時，可以看到元件的整體摘要。當您選取父叢集時，您可以使用「動作」下拉式清單來執行探索儲存，修改及移除作業。</block>
   <block id="3192ac3fc20742576276f99f96eb7d0b" category="summary">依照本節的指示，順利終止用於 VMware vSphere 部署的 ONTAP 工具。</block>
-  <block id="d1a23a03023137fd38165cea715f27d9" category="doc">終止 ONTAP 工具部署</block>
-  <block id="33338c06d0b18b2f71e85923222b72e5" category="paragraph">請依照本節中的指示，順利終止適用於 VMware vSphere 部署的 ONTAP 工具。</block>
-  <block id="5a542b803059205c8fd2335844a87295" category="admonition">終止適用於 VMware vSphere 的 ONTAP 工具將會刪除工具中的所有資料。</block>
   <block id="f0833ce92c23eb056dde238669740988" category="list-text"><block ref="523efdef8100699453c6b07ce8f4921c" category="inline-link-macro-rx"></block>在適用於 VMware vSphere 的 ONTAP 工具上建立。</block>
   <block id="446b6ba7fba75a7ecc60d88a968956a4" category="list-text">在 ONTAP 工具中，選取畫面底部的 * 設定 * &gt; * VASA 提供者設定 * &gt; * 取消登錄 * 選項。</block>
   <block id="60ba17bf2537f7f153738b7a53985263" category="list-text">取消所有儲存後端與 vCenter Server 執行個體的關聯。請參閱 <block ref="8743d7af4f3d1585e8a908d41950b1ae" category="inline-link-macro-rx"></block>。</block>
@@ -2054,4 +2049,7 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="27668debe2a46165745d80fe01711790" category="list-text">使用下列步驟，從所有 vCenter 伺服器取消登錄 VASA Provider ：</block>
   <block id="89cc07c4865380b62ec83b09b399b504" category="list-text">在 * 取消登錄 VASA Provider* 頁面中，提供應用程式使用者認證，然後選取 * 取消登錄 * 。</block>
   <block id="4dbcaa40dfd796f9c86fd033df9508db" category="admonition">應用程式使用者名稱和密碼是在 ONTAP 工具部署期間設定的。這是 VASA Provider/SRA 登錄所需的項目。</block>
+  <block id="cd8867ea57955f19f3087c7262d1186d" category="doc">解除安裝 ONTAP 工具部署</block>
+  <block id="f54e212052df635bcc70d25302fd583e" category="paragraph">解除安裝適用於 VMware vSphere 的 ONTAP 工具會刪除工具中的所有資料。</block>
+  <block id="9ebcd4f583a00c985808cafa9e416f71" category="sidebar">將適用於 VMware vSphere 9.x 的 ONTAP 工具移轉至 10.3</block>
 </blocks>

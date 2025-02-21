@@ -4,17 +4,14 @@ sidebar: sidebar
 keywords: ONTAP tools,Storage Replication Adapter 
 summary: 依照本節的指示，順利終止用於 VMware vSphere 部署的 ONTAP 工具。 
 ---
-= 終止 ONTAP 工具部署
+= 解除安裝 ONTAP 工具部署
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-請依照本節中的指示，順利終止適用於 VMware vSphere 部署的 ONTAP 工具。
-
-
-NOTE: 終止適用於 VMware vSphere 的 ONTAP 工具將會刪除工具中的所有資料。
+解除安裝適用於 VMware vSphere 的 ONTAP 工具會刪除工具中的所有資料。
 
 .步驟
 . 從 ONTAP 工具管理的 VMware vSphere 資料存放區移除所有虛擬機器。您可以刪除這些資料（請參閱 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-virtual-machine-administration-guide-8-0/managing-virtual-machinesvsphere-vm-admin/adding-and-removing-virtual-machinesvsphere-vm-admin.html#GUID-376174FE-F936-4BE4-B8C2-48EED42F110B-en["移除並重新登錄 VM 和 VM 範本"]），或使用 https://techdocs.broadcom.com/it/it/vmware-cis/vsphere/vsphere/8-0/vcenter-and-host-management-8-0/migrating-virtual-machines-host-management/migration-with-vmotion-host-management/migration-with-storage-vmotion-host-management.html["Storage VMotion"]將其移至非託管資料存放區。
