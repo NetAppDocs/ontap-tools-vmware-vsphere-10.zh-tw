@@ -6,7 +6,9 @@ entries:
   url: "/configure/dashboard-overview.html"
 - title: ONTAP toolTools Manager 使用者介面
   url: "/configure/manager-user-interface.html"
-- title: 編輯應用裝置設定
+- title: 為 VMware vSphere 服務啟用 ONTAP 工具
+  url: "/manage/enable-services.html"
+- title: 變更適用於 VMware vSphere 組態的 ONTAP 工具
   url: "/manage/edit-appliance-settings.html"
 - title: 管理資料存放區
   entries:
@@ -78,6 +80,10 @@ entries:
     url: "/manage/edit-hostcluster-protection.html"
   - title: 移除主機叢集保護
     url: "/manage/delete-hostcluster-protection.html"
+- title: 停用 AutoSupport
+  url: "/manage/disable-autosupport.html"
+- title: 更新 AutoSupport Proxy URL
+  url: "/manage/update-proxyurl.html"
 - title: 接近零 RPO
   url: "/manage/enable-backup.html"
 - title: 解除安裝 ONTAP 工具部署
