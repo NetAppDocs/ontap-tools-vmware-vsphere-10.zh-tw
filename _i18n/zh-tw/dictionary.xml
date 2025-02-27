@@ -85,7 +85,6 @@
   <block id="fa12509cfb8e8ccded16e2a254e988c4" category="list-text">選取*「Add*」。</block>
   <block id="87b9292b96462f70c7dfb870481b1445" category="list-text">從快顯視窗的下拉式清單中選取儲存後端。</block>
   <block id="603041e40db447bbdd32fd4b4c2f994d" category="admonition">UUID 是移轉後 API 回應時傳回的移轉 UUID 。</block>
-  <block id="07fdc7a244250b2e1c9e6533ff0ea4e0" category="paragraph">用於移轉的刪除 API 為：</block>
   <block id="6b50b8836085008a8950ddeafeb7453a" category="list-text">重新整理所有主機上的憑證。</block>
   <block id="f14c276c07197ebef1394a5a219087a1" category="cell">*說明*</block>
   <block id="d59f94015529940d2e6778d013097380" category="summary">vCenter 是集中管理平台、可讓您控制主機、虛擬機器和儲存後端。</block>
@@ -724,7 +723,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="63bc9a3997d66d835d9f3ec29451407d" category="cell">修補程式</block>
   <block id="41e9abb5d58ca11ff36c3067c273a762" category="paragraph">修補程式「 /api/v1/vCenter/56d373bd-4163-44f9-a872-9adabb008ca9/Migrate-jobs/84dr73bd-9173-65r7-w345-8ufdbb887d43</block>
   <block id="bdfee7ad87d9004e1091e6e1762d0e84" category="paragraph">* JSON 輸入範例 *</block>
-  <block id="cef9fa1aa0d8c4bd89bf89cf8cbb5cae" category="paragraph">/api/v1/vCents/{vcguid}/Migration-jobs/{Migration_id}</block>
   <block id="07959986337388ebd736dc282a14afca" category="paragraph">* 啟用診斷 *</block>
   <block id="589c4957e1e0bb7b0bf55fa835dbaf3d" category="list-text">輸入 *y* 以設定您選擇的密碼。</block>
   <block id="0a01c0c2d00b20ff323dc6b25ceb30a5" category="list-text">kN 執行 -it NtV-MongoDB-0sh - kn 是 kubectl -n NtV-system 的別名。</block>
@@ -1144,7 +1142,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="db846111e857460f56cbf51ec88e1faa" category="section-title">移除 vCenter Server 執行個體</block>
   <block id="9d7b692a21eb697ecb2b728a45d820e9" category="list-text">從側邊列選取適用的 vCenter Server 執行個體</block>
   <block id="53b6d9a27611577cca2fc7f28a47183c" category="admonition">移除 vCenter Server 執行個體後、應用程式將不再維護這些執行個體。</block>
-  <block id="c93b5a9d65c77be9a5dfa309362afe22" category="sidebar">新增 vCenter Server</block>
   <block id="7cf21d459cdbb9c2a1e4864da9f56b5a" category="summary">瞭解適用於 VMware vSphere 9 的 ONTAP 工具和適用於 VMware vSphere 10 的 ONTAP 工具功能比較</block>
   <block id="8db6f8bda67c3085df85aeea7d620ac7" category="doc">適用於 VMware vSphere 9 的 ONTAP 工具和適用於 VMware vSphere 10 的 ONTAP 工具功能比較</block>
   <block id="9ed4a475dd3705157a9fed8811f63ce2" category="inline-link">NetApp 互通性對照表工具</block>
@@ -1187,7 +1184,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="5aa0457cc95965b125467f8be60fadcf" category="list-text">若要設定叢集 SVM ONTAP 工具角色，請選取 * 儲存 SVM* &gt; * 設定 * &gt; * 使用者與角色 * 窗格</block>
   <block id="ef0a0294be4f16882c4e18df7a17b72f" category="paragraph">您可以使用維護主控台選項 * 應用程式組態 * &gt; * 停用 AutoSupport * 來停用 AutoSupport 。建議您保持啟用狀態。啟用 AutoSupport 有助於加速問題偵測、並協助更快解決問題。系統會收集 AutoSupport 資訊、並將其儲存在本機、即使 AutoSupport 已停用。不過、它不會將報告傳送至任何網路。您需要使用第一個 VM 的維護主控台來提供 Proxy URL 。使用選項 * 應用程式組態 * &gt; * 更新 AutoSupport Proxy URL* 來輸入 Proxy URL 。</block>
   <block id="e995d56efd9e31d97825dd79be4d1383" category="inline-link">瞭解 ASA R2 儲存系統</block>
-  <block id="5b1c546117e368c44e82ae035c45be9d" category="paragraph">全新的 NetApp ASA R2 系統（ ASA A1K ， ASA A70 和 ASA A90 ）提供統一化的硬體與軟體解決方案，可針對僅限 SAN 的客戶需求，提供簡化的體驗。<block ref="f9c69c3c94cab41a57233cdf7452c3d6" category="inline-link-rx"></block>。</block>
   <block id="e3d3af7525d3e3fb797e7dad595bc6a3" category="section-title">恢復點目標（ RPO ）</block>
   <block id="881eb19c557d05be93005ed4bcf1f120" category="paragraph">RPO 是資料備份或複寫頻率的衡量標準。它代表停機後必須恢復資料的時間點，才能恢復業務營運。例如，如果組織有 4 小時的 RPO ，則在發生災難時，它可以容忍最多 4 小時的資料遺失。</block>
   <block id="1f8552f10eb7513163cf1762849c2bcd" category="list-text">使用 admin Privileges 登入叢集。若要設定使用者，請執行下列步驟：</block>
@@ -1208,7 +1204,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="3ce635f0fbf3a9f1cd9709aa0a4edb7d" category="section-title">將適用於 VMware vSphere 10.1 使用者的 ONTAP 工具升級為 10.3 使用者</block>
   <block id="1e881b0096e32efd8f76e57798bfb5be" category="paragraph">如果 VMware vSphere 10.1 的 ONTAP 工具使用者是使用 json 檔案建立的叢集範圍使用者、請在 ONTAP CLI 上使用管理員使用者執行下列命令、以升級至 10.3 版本。</block>
   <block id="59ce3cdcb64efaf0360e7ca205dc328e" category="paragraph">如果 VMware vSphere 10.1 的 ONTAP 工具使用者是使用 json 檔案建立的 SVM 範圍使用者、請使用管理員使用者在 ONTAP CLI 上執行下列命令、以升級至 10.3 版本。</block>
-  <block id="86d82f563697cadf4cd70dd1f81981f5" category="paragraph">Create datastore 巨集指令精靈支援建立 NFS ， VMFS 和 vVols 資料存放區。</block>
   <block id="0f8e6a0c5a16a490062aa9802999b596" category="list-text">您只能在受保護的叢集上建立 VMFS 資料存放區。將 VMFS 資料存放區新增至受保護的叢集時、資料存放區會自動受到保護。</block>
   <block id="9ff5d4b4efce8f3dada6ea961efce12d" category="list-text">只有在主機具有非同步關係時，才能在主機上建立 VMFS 資料存放區。</block>
   <block id="99ffb35f7a315e5b9ff4015fcee0ac1b" category="paragraph">從 VMware vSphere 10.3 的 ONTAP 工具開始，您可以使用 ASA R2 類型的 ONTAP 儲存設備來建立 vVols 資料存放區。在 ASA R2 系統上建立的 VVols 資料存放區是以精簡版 vVol 的空間效率建立。Vasa Provider 會在建立 vVol 資料存放區工作流程期間，建立容器和所需的傳輸協定端點。此容器不會有任何備份磁碟區。</block>
@@ -1260,7 +1255,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="aa4b6b62ba667064e973028ccfaba3af" category="admonition">您應該將內容庫儲存在共享的資料存放區、這樣叢集中的所有主機都可以存取它。您必須先建立內容庫以儲存 OVA ，然後再將應用裝置設定變更為 HA 組態。內容庫範本一旦上傳，就不應在部署後刪除。</block>
   <block id="3d408fd9ee71e5590c9d127632f486ff" category="admonition">若要稍後啟用 HA 部署，則不應將裝載 ONTAP 工具的虛擬機器直接部署在 ESXi 主機上。而是應將其部署在叢集或資源集區上。</block>
   <block id="8fc66c32d9085d19a2b350fb78e96657" category="paragraph">如果您還沒有合適的內容庫，請使用下列步驟建立：</block>
-  <block id="8f059bfa91977298a44c980b287d6091" category="admonition">如果您只打算使用小型單一節點部署，則不需要建立內容庫。</block>
   <block id="75e558b408663f8095495e2f3ccd77f2" category="paragraph">請確定您已將 OVA 匯入內容庫。</block>
   <block id="2866bbf24409f82bd4b074e071e1aa1b" category="list-text"><block ref="daf4de58883c030f033f07e61debf025" prefix=" " category="inline-code"></block>從下載包含適用於 VMware vSphere 的 ONTAP 工具二進位檔案（ _.ova_ ）和簽署憑證<block ref="c28762f698ce57f013f1f9dff01575ab" category="inline-link-rx"></block>的檔案。如果您已將 OVA 匯入內容庫，您可以跳過此步驟並繼續下一步，因為您可以直接從內容庫部署。</block>
   <block id="a8dd039d7118472ec1580db699aa661d" category="admonition">切勿將適用於 VMware vSphere 虛擬機器的 ONTAP 工具儲存在他們所管理的 VVols 資料存放區上。</block>
@@ -1644,7 +1638,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="ba5c200a0d4600ec4fe2ef79c26593b8" category="list-text">使用下列 API 執行修補程式移轉：</block>
   <block id="f663ec26fcc5dbf0e82a2df73c30a3e3" category="paragraph">要求主體是空的，用於修補作業。</block>
   <block id="e4453a0aab117b65b26edb59d78793fd" category="paragraph">一旦修補程式移轉 API 成功執行，所有 VM 都會遵守儲存原則。</block>
-  <block id="cd6f62989595e510d57e7b407691336a" category="paragraph">此 API 會依移轉 ID 刪除移轉，並刪除指定 vCenter Server 上的移轉。</block>
   <block id="9a43f64b9545dfa5ddfcc70dbc73d001" category="list-text">執行資料存放區（ DS ）和虛擬機器（ VM ）作業之前、請先等待一段時間。等待時間取決於設定中的主機數量， DS 和 VM 。當您不等待時、作業可能會間歇性失敗。</block>
   <block id="422c2a3517291219d45e5d0be95be9d1" category="paragraph">升級後，如果虛擬機器規範狀態已過期，請使用下列步驟重新套用虛擬機器儲存原則：</block>
   <block id="15e560ab707fa2bf2b7b0833adbe8bb9" category="list-text">瀏覽至資料存放區，然後選取 * 摘要 * &gt; * VM 儲存原則 * 。</block>
@@ -2052,4 +2045,7 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="9f147a250dd9a5cd9d9745eb3f5f7668" category="paragraph">更新 AutoSupport Proxy URL ，確保在使用 Proxy 伺服器進行網路存取控制或安全措施的情況下， AutoSupport 功能正常運作。它可讓 AutoSupport 資料透過適當的 Proxy 進行路由，實現安全傳輸與法規遵循。</block>
   <block id="8b1bce08d5421e10a7f1c336b269cbd5" category="list-text">輸入 4 以選取 * 更新 AutoSupport Proxy URL* 。</block>
   <block id="24bbb6c78509566d72fa3e18de92a0fe" category="list-text">輸入 Proxy URL 。</block>
+  <block id="cea51b5f4b8c25d096d54257d5d0348e" category="paragraph">新的 NetApp ASA R2 系統提供統一化的硬體與軟體解決方案，可針對僅限 SAN 的客戶需求，提供簡化的體驗。<block ref="f9c69c3c94cab41a57233cdf7452c3d6" category="inline-link-rx"></block>。</block>
+  <block id="9401e344ca7f0cbda5f2f0b48709397f" category="paragraph">在主機叢集層級建立資料存放區時，會在所有目的地主機上建立並掛載資料存放區。只有當您擁有所需的 Privileges 時，才能看到此選項。</block>
+  <block id="1dd9aa2a5203b6e1a1980842e9af2082" category="paragraph">* 建立內容庫 * 如果您只打算使用小型單一節點部署，則不需要建立內容庫。</block>
 </blocks>

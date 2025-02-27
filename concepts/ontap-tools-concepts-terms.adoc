@@ -17,7 +17,7 @@ summary: 下節說明文件中所使用的主要概念和詞彙。
 
 === ASA r2 系統
 
-全新的 NetApp ASA R2 系統（ ASA A1K ， ASA A70 和 ASA A90 ）提供統一化的硬體與軟體解決方案，可針對僅限 SAN 的客戶需求，提供簡化的體驗。 https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["瞭解 ASA R2 儲存系統"]。
+新的 NetApp ASA R2 系統提供統一化的硬體與軟體解決方案，可針對僅限 SAN 的客戶需求，提供簡化的體驗。 https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["瞭解 ASA R2 儲存系統"]。
 
 
 

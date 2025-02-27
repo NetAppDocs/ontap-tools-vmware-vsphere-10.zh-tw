@@ -25,8 +25,7 @@ NOTE: 若要稍後啟用 HA 部署，則不應將裝載 ONTAP 工具的虛擬機
 
 如果您還沒有合適的內容庫，請使用下列步驟建立：
 
-
-NOTE: 如果您只打算使用小型單一節點部署，則不需要建立內容庫。
+* 建立內容庫 * 如果您只打算使用小型單一節點部署，則不需要建立內容庫。
 
 .  `.zip`從下載包含適用於 VMware vSphere 的 ONTAP 工具二進位檔案（ _.ova_ ）和簽署憑證 https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab["NetApp 支援網站"^]的檔案。
 . 使用登入 vSphere 用戶端 `\https://<vcenterip>/<ui>`
