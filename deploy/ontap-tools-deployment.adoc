@@ -27,7 +27,7 @@ NOTE: 若要稍後啟用 HA 部署，則不應將裝載 ONTAP 工具的虛擬機
 
 * 建立內容庫 * 如果您只打算使用小型單一節點部署，則不需要建立內容庫。
 
-.  `.zip`從下載包含適用於 VMware vSphere 的 ONTAP 工具二進位檔案（ _.ova_ ）和簽署憑證 https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab["NetApp 支援網站"^]的檔案。
+.  `.zip`從下載包含適用於 VMware vSphere 的 ONTAP 工具二進位檔案（ _.ova_ ）和簽署憑證 https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp 支援網站"^]的檔案。
 . 使用登入 vSphere 用戶端 `\https://<vcenterip>/<ui>`
 . 選取 vSphere 用戶端旁的水平省略號、然後選取 * 內容庫 * 。
 . 選取頁面右側的 * 建立 * 。
@@ -45,7 +45,7 @@ NOTE: 如需詳細資訊、請參閱 https://blogs.vmware.com/vsphere/2020/01/cr
 NOTE: 在繼續部署之前、請在安裝 ONTAP 工具期間、將資源清冊上的叢集分散式資源排程器（ DRS ）設定為「保守」。如此可確保 VM 在安裝期間不會移轉。
 
 .步驟
-.  `.zip`從下載包含適用於 VMware vSphere 的 ONTAP 工具二進位檔案（ _.ova_ ）和簽署憑證 https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab["NetApp 支援網站"^]的檔案。如果您已將 OVA 匯入內容庫，您可以跳過此步驟並繼續下一步，因為您可以直接從內容庫部署。
+.  `.zip`從下載包含適用於 VMware vSphere 的 ONTAP 工具二進位檔案（ _.ova_ ）和簽署憑證 https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp 支援網站"^]的檔案。如果您已將 OVA 匯入內容庫，您可以跳過此步驟並繼續下一步，因為您可以直接從內容庫部署。
 . 登入 vSphere 伺服器。
 . 瀏覽至您建立的資源集區、叢集或您要部署 OVA 的主機。
 . 以滑鼠右鍵按一下所需位置、然後選取 * 部署 OVF 範本 ...* 。

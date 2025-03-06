@@ -588,7 +588,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="f5687be176cf7331c8455f99c17ffcf2" category="paragraph">受保護和還原站台都會顯示在「物件」對話方塊中。</block>
   <block id="22bf2e5e3e861785a0e8f1eb7bd7492e" category="doc">啟用SRA來保護資料存放區</block>
   <block id="f8159a1f10595cc4a80126746a124cb1" category="list-text">您應該已設定 vCenter Server 執行個體和已設定的 ESXi 主機。</block>
-  <block id="0fd28be9959e611e7350a85da18ec3d2" category="list-text">您應該已下載過 SRA 介面卡<block ref="d6f1afa70d6145a212d9dc6bc8a2fa64" prefix=" " category="inline-code"></block> 檔案來自<block ref="c28762f698ce57f013f1f9dff01575ab" category="inline-link-rx"></block>。</block>
   <block id="3cd3d1462bf37583e74346e9e49e0712" category="list-text">選取 * 新介面卡 * 。</block>
   <block id="c88f553be5a81e83a1a2cd590af81efb" category="summary">您應該設定預留位置資料存放區、以便在受保護虛擬機器（ VM ）的還原站台上、將其保留在 vCenter 庫存中。預留位置資料存放區不需要太大、因為預留位置的VM很小、而且只使用數百或更少的KB。</block>
   <block id="a079415d00c6083e09f585ea2ed56548" category="doc">設定預留位置資料存放區</block>
@@ -632,7 +631,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="7e4aa301715707912ba8ed9cba9c0eb7" category="doc">設定資源對應</block>
   <block id="20586b09df186411bee0e3968b2ef2dd" category="list-text">在Create Resource Mapping精靈 中、執行下列步驟：</block>
   <block id="3c16183aac3a35635bd37651c6e30ca9" category="paragraph">「資源對應」頁面會顯示受保護的站台資源和恢復站台資源。您可以針對環境中的其他網路執行相同的步驟。</block>
-  <block id="9efe335a21c7ed7fb03853b29d60db35" category="paragraph">您應該已經從下載了_tar.gz_檔案<block ref="0e1d5eb136c80762086cbb6a49f15235" category="inline-link-rx"></block>。</block>
   <block id="bef92ccaf2eaa0578e6024bf1bbf9ea7" category="list-text">使用命令切換至 root 使用者：<block ref="ed4421a15b86845cfea13385b427b340" prefix=" " category="inline-code"></block></block>
   <block id="eec423b8c8e795c4422b564b889c72ba" category="admonition">您需要在單引號內提供密碼值、以確保 Perl 指令碼不會將密碼中的特殊字元讀取為輸入的分隔符號。</block>
   <block id="3e06c9490934f18ce97a637bf06b781e" category="paragraph">此時會顯示一則成功訊息、確認儲存認證資料已儲存。SRA可以使用提供的IP位址、連接埠和認證、與SRA伺服器通訊。</block>
@@ -1116,7 +1114,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="5482792d8f62d9c636f95fc96476727d" category="paragraph">請先檢查下列項目再繼續：</block>
   <block id="da6388fdc3d2fad794be9aa033101c19" category="open-title">使用 ONTAP 工具管理器</block>
   <block id="6245e46af5a3bdaf57696763c4214c70" category="doc">新增 vCenter Server 執行個體</block>
-  <block id="9d0c1154faecde38baf4c2a1e8f8e9e6" category="list-text"><block ref="daf4de58883c030f033f07e61debf025" prefix=" " category="inline-code"></block>從下載包含適用於 VMware vSphere 的 ONTAP 工具二進位檔案（ _.ova_ ）和簽署憑證<block ref="c28762f698ce57f013f1f9dff01575ab" category="inline-link-rx"></block>的檔案。</block>
   <block id="76c9f2fd0b61e8f84a42f7ab8d5ce641" category="admonition">如需詳細資訊、請參閱<block ref="b5992e6d058c0c347b7f52b58c58c7d5" category="inline-link-rx"></block>部落格。</block>
   <block id="6b373c8cb8fb1cd1a92b3762ada8ce1d" category="paragraph">您可以在 VM 的 Web 主控台中追蹤安裝進度。</block>
   <block id="1e496ca2f7a66d863132588473f14de2" category="section-title">系統需求</block>
@@ -1251,7 +1248,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="3d408fd9ee71e5590c9d127632f486ff" category="admonition">若要稍後啟用 HA 部署，則不應將裝載 ONTAP 工具的虛擬機器直接部署在 ESXi 主機上。而是應將其部署在叢集或資源集區上。</block>
   <block id="8fc66c32d9085d19a2b350fb78e96657" category="paragraph">如果您還沒有合適的內容庫，請使用下列步驟建立：</block>
   <block id="75e558b408663f8095495e2f3ccd77f2" category="paragraph">請確定您已將 OVA 匯入內容庫。</block>
-  <block id="2866bbf24409f82bd4b074e071e1aa1b" category="list-text"><block ref="daf4de58883c030f033f07e61debf025" prefix=" " category="inline-code"></block>從下載包含適用於 VMware vSphere 的 ONTAP 工具二進位檔案（ _.ova_ ）和簽署憑證<block ref="c28762f698ce57f013f1f9dff01575ab" category="inline-link-rx"></block>的檔案。如果您已將 OVA 匯入內容庫，您可以跳過此步驟並繼續下一步，因為您可以直接從內容庫部署。</block>
   <block id="a8dd039d7118472ec1580db699aa661d" category="admonition">切勿將適用於 VMware vSphere 虛擬機器的 ONTAP 工具儲存在他們所管理的 VVols 資料存放區上。</block>
   <block id="b2beb53e07d823dec2c2ea3f5bc86599" category="list-text">在 * 選取虛擬機器的名稱和資料夾 * 視窗中，輸入虛擬機器名稱，然後選取虛擬機器的位置。如果勾選 * 自訂此虛擬機器的硬體 * 核取方塊，則會先啟用名為 * 自訂硬體 * 的步驟，然後再進入 * 準備完成 * 視窗。</block>
   <block id="84cc92b833510ebb4c14b968eaac82ce" category="admonition">不支援 Pure IPv6 。同時具有 IPv6 和 IPv4 位址的 VLAN 支援混合模式。</block>
@@ -2047,4 +2043,8 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="3bf1c404c0b424b9520fcc0dc5fb8998" category="list-text">請依照中的步驟、在保護和恢復站台上安裝適用於 VMware vSphere 10.3 介面卡的 ONTAP 工具 <block ref="9b6610ae0d9b3f2df042445cc8433cf4" category="inline-link-macro-rx"></block></block>
   <block id="0789cade62ba5a348d7e1ed5a15e5429" category="summary">部署 VMware Live Site Recovery 應用裝置之後，您應該在 VMware Live Site Recovery 應用裝置上設定 SRA 。成功設定的 SRA 可讓 VMware Live Site Recovery 應用裝置與 SRA 通訊、以進行災難恢復管理。您應該將 VMware vSphere 認證的工具（ IP 位址和管理員密碼）儲存在 VMware Live Site Recovery 應用裝置中、以便在 VMware Live Site Recovery 應用裝置和 ONTAP 之間進行通訊。</block>
   <block id="ca19ccb681ec240b3ba2bef453f35015" category="paragraph">部署 VMware Live Site Recovery 應用裝置之後，您應該在 VMware Live Site Recovery 應用裝置上設定 SRA 。成功設定的 SRA 可讓 VMware Live Site Recovery 應用裝置與 SRA 通訊、以進行災難恢復管理。您應該將適用於 VMware vSphere 認證的工具（ IP 位址）儲存在 VMware Live Site Recovery 應用裝置中、以便在 VMware Live Site Recovery 應用裝置和 ONTAP 之間進行通訊。</block>
+  <block id="16f65f1a2c3859080a448540a2f81494" category="list-text"><block ref="daf4de58883c030f033f07e61debf025" prefix=" " category="inline-code"></block>從下載包含適用於 VMware vSphere 的 ONTAP 工具二進位檔案（ _.ova_ ）和簽署憑證<block ref="db8756d7f65d6a8e593e69ba45adbb2e" category="inline-link-rx"></block>的檔案。</block>
+  <block id="9ec5add7ee06ee04d0890fe8cedb44a5" category="list-text"><block ref="daf4de58883c030f033f07e61debf025" prefix=" " category="inline-code"></block>從下載包含適用於 VMware vSphere 的 ONTAP 工具二進位檔案（ _.ova_ ）和簽署憑證<block ref="db8756d7f65d6a8e593e69ba45adbb2e" category="inline-link-rx"></block>的檔案。如果您已將 OVA 匯入內容庫，您可以跳過此步驟並繼續下一步，因為您可以直接從內容庫部署。</block>
+  <block id="b0dfff6a1c3e295ea3b778c18fd97c19" category="paragraph">您應該已經從下載了 _tar.gz_ 檔案<block ref="2daaad32389df9c23111b0df1c3a53df" category="inline-link-rx"></block>。</block>
+  <block id="7f17c0be45130bf2b12d5bf5ec2ead98" category="list-text">您應該已<block ref="d6f1afa70d6145a212d9dc6bc8a2fa64" prefix=" " category="inline-code"></block>從下載過 SRA 介面卡檔案<block ref="db8756d7f65d6a8e593e69ba45adbb2e" category="inline-link-rx"></block>。</block>
 </blocks>
