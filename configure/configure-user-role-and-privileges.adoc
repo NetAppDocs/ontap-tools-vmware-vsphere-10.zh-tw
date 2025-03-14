@@ -49,9 +49,6 @@ NOTE: 您可以在叢集或直接在儲存虛擬機器（ SVM ）層級建立使
 新角色和使用者即會新增、您可以在已設定的角色下看到詳細權限。
 
 
-NOTE: 解除安裝作業不會移除 ONTAP 工具角色，但會移除 ONTAP 工具特定 Privileges 的當地語系化名稱，並在其後附加前置字元 `XXX missing privilege`。當您重新安裝適用於 VMware vSphere 的 ONTAP 工具或升級至較新版本時、所有適用於 VMware vSphere 角色和 ONTAP 工具專屬權限的標準 ONTAP 工具都會還原。
-
-
 
 == SVM Aggregate 對應需求
 

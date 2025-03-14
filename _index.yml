@@ -18,7 +18,7 @@ indexpage:
   - title: 使用適用於 VMware vSphere 的 ONTAP 工具
     links:
     - title: 設定角色型存取控制
-      url: "/concepts/vcenter-server-role-based-access-control-features.html"
+      url: "/concepts/rbac-learn-about.html"
     - title: 設定遠端診斷
       url: "/manage/configure-remote-diagnostic-access.html"
     - title: 適用於 VMware vSphere 的 ONTAP 工具的高可用度
@@ -27,10 +27,6 @@ indexpage:
       url: "/protect/enable-storage-replication-adapter.html"
   - title: 更多資源
     links:
-    - title: 適用於 VMware vSphere 10.2 的 ONTAP 工具文件
-      url: https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere-102/index.html
-    - title: 適用於 VMware vSphere 10.1 的 ONTAP 工具文件
-      url: https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere-101/index.html
     - title: 適用於 VMware vSphere 9 的舊版 ONTAP 工具文件
       url: https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=63792
     - title: NetApp 知識庫：適用於 VMware vSphere 的 ONTAP 工具
