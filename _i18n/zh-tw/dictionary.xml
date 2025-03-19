@@ -1542,12 +1542,10 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="a1f81812b9996ffae82950938651b560" category="paragraph">這會刪除 ONTAP 工具 for VMware vSphere 10.1/10.2 中 ONTAP 中使用的所有 Trident Volume 。</block>
   <block id="9c1b85c4b3c7f912b4954489e7d9f1ad" category="list-text">以個別 API 呼叫為例，向下捲動至「 *vCenters 」類別，然後選取端點旁的「 Get * 」<block ref="22d8515b1a0806aac1067186e4429b4c" prefix=" " category="inline-code"></block></block>
   <block id="ef78cf93c4b4adc658c8565b28ac853c" category="paragraph">如需索取及使用存取權杖的範例，請參閱<block ref="02f9c42fec62e806982e89939749ac1d" category="inline-link-macro-rx"></block>。</block>
-  <block id="7b0f795e746611f8d000c88ef7404ee7" category="list-text">從網路瀏覽器啟動 ONTAP 工具管理員：<block ref="77c71965079b644560fbebe7e17805d3" prefix=" " category="inline-code"></block></block>
   <block id="6700bd2d5a11f981faf541727c91e5eb" category="list-text">使用登入 vSphere 用戶端<block ref="9ad784043785fc1c1be39efefce3e216" prefix=" " category="inline-code"></block></block>
   <block id="3a3cf1aabccd549ecea01e8e5bd01415" category="list-text">在捷徑頁面中，選取外掛程式區段下方的 * NetApp ONTAP tools* 。</block>
   <block id="f017ca342576480350b43d2d7e7f73ae" category="summary">將 vCenter Server 執行個體新增至 VMware vSphere 的 ONTAP 工具，以設定，管理及保護 vCenter Server 環境中的虛擬資料存放區。</block>
   <block id="f05b95a344d62647f6489daf34512360" category="paragraph">透過與 vCenter 整合， ONTAP 工具可讓您直接從 vSphere 用戶端執行資源配置，快照和資料保護等儲存工作，無需切換至獨立的儲存管理主控台。</block>
-  <block id="f8539fd8796614c8ef01970c32bcf658" category="list-text">開啟網頁瀏覽器並瀏覽至 URL ：<block ref="77c71965079b644560fbebe7e17805d3" prefix=" " category="inline-code"></block></block>
   <block id="d5e2bc65733d04e5cb0f6d28bc9c86af" category="list-text">選取 * vCenters * &gt; * Add* 以內建 vCenter Server 執行個體。提供 vCenter IP 位址或主機名稱，使用者名稱，密碼和連接埠詳細資料。</block>
   <block id="3739ecac839d5ac8c0f3ea1f4faedcd4" category="paragraph">將 vCenter Server 執行個體新增至 ONTAP 工具會自動觸發下列動作：</block>
   <block id="e73ab0bb08227c7d6283172340ef4110" category="list-text">vCenter 用戶端外掛程式已登錄為遠端外掛程式。</block>
@@ -1594,7 +1592,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="eb4182715f8cde98563dc59ea36461d3" category="cell">NFS.Heartbeattimeout</block>
   <block id="e4da3b7fbbce2345d7772b0674a318d5" category="cell">5</block>
   <block id="0aa364b40943456fe1d59c4a4a6ee32d" category="list-text">瀏覽並選取<block ref="74f7b54ea713d9f5b69839982911bbf7" prefix=" " category="inline-code"></block>檔案，然後選取 * 上傳 * 將檔案上傳至 ONTAP 工具。</block>
-  <block id="741276b1afc1cd52f0ec6404edcf55de" category="paragraph">若要存取 ONTAP 工具管理員、請<block ref="77c71965079b644560fbebe7e17805d3" prefix=" " category="inline-code"></block>從瀏覽器啟動、然後使用您在部署期間提供的 VMware vSphere 管理員認證的 ONTAP 工具登入。</block>
   <block id="fb31aab466ef06ee817c945e4fe16b33" category="cell">應用裝置卡提供 ONTAP 工具應用裝置的整體狀態。它會顯示應用裝置組態詳細資料及啟用的服務狀態。如需 ONTAP 工具應用裝置的其他資訊，請選取 * 檢視詳細資料 * 連結。當編輯應用裝置設定動作工作正在進行中時，應用裝置 Portlet 會顯示工作的狀態和詳細資料。</block>
   <block id="96322cb1e08cb1a6e918061bfd2a7459" category="cell">警示卡會依類型列出 ONTAP 工具警示，包括 HA 節點層級警示。您可以選取數量文字（超連結）來檢視警示清單。連結會將您路由至警示檢視頁面，並依選取的類型篩選。</block>
   <block id="a353c311fd478f54264d2f3142183a7e" category="cell">ONTAP 工具節點卡會顯示節點名稱，節點 VM 名稱，狀態及所有網路相關資料的節點清單。您可以選擇 * 檢視詳細資料 * 來檢視與所選節點相關的其他詳細資料。[ 附註 ] 在非 HA 設定中，只會顯示一個節點。在 HA 設定中，會顯示三個節點。</block>
@@ -2072,4 +2069,7 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="3014a29195e86ef40c71c31cde3ad9e7" category="list-text">從 vCenter Server 關閉適用於 VMware vSphere VM 的 ONTAP 工具，然後刪除 VM 。</block>
   <block id="056110d308abee4fb5305efd8c8994d0" category="paragraph"><block ref="056110d308abee4fb5305efd8c8994d0" category="inline-link-macro-rx"></block></block>
   <block id="399a5cfe88876e091f96014da7798994" category="list-text">從 ONTAP 系統管理員使用者介面中，依磁碟區名稱在搜尋列中搜尋，然後選取該名稱來開啟該磁碟區。移至快照並新增該磁碟區的快照。</block>
+  <block id="af97740fd99b637615a0fe129d5fc42f" category="list-text">從網路瀏覽器啟動 ONTAP 工具管理員：<block ref="a2fad8db83c338dbc95675bd05c70607" prefix=" " category="inline-code"></block></block>
+  <block id="3fe306eaabad41057c3375dc9d2105d0" category="list-text">開啟網頁瀏覽器並瀏覽至 URL ：<block ref="a2fad8db83c338dbc95675bd05c70607" prefix=" " category="inline-code"></block></block>
+  <block id="76bb3525c98b82b9b4baedca4379aa0d" category="paragraph">若要存取 ONTAP 工具管理員、請<block ref="a2fad8db83c338dbc95675bd05c70607" prefix=" " category="inline-code"></block>從瀏覽器啟動、然後使用您在部署期間提供的 VMware vSphere 管理員認證的 ONTAP 工具登入。</block>
 </blocks>

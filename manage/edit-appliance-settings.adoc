@@ -18,7 +18,7 @@ summary: 您可以使用 ONTAP 工具管理員變更管理員密碼。
 確保您提供的 OVA 範本與節點 1 具有相同的 OVA 版本。節點 1 是最初部署 VMware vSphere OVA 之 ONTAP 工具的預設節點。
 
 .步驟
-. 從網路瀏覽器啟動 ONTAP 工具管理員： `\https://loadBalancerIP:8443/virtualization/ui/`
+. 從網路瀏覽器啟動 ONTAP 工具管理員： `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . 使用您在部署期間提供的 VMware vSphere 管理員認證 ONTAP 工具登入。
 . 在概述區段中選取 * 編輯應用裝置設定 * 。
 . 在 * 組態 * 區段中，您可以根據需求向上擴充以增加節點大小，並啟用 HA 組態。您需要 vCenter Server 認證才能進行任何變更。

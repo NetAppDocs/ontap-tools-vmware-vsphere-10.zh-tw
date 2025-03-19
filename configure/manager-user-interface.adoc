@@ -22,7 +22,7 @@ ONTAP 工具管理程式可協助：
 * 密碼管理 - 重設使用者的 OVA 應用程式密碼。
 
 
-若要存取 ONTAP 工具管理員、請 `\https://loadBalancerIP:8443/virtualization/ui/`從瀏覽器啟動、然後使用您在部署期間提供的 VMware vSphere 管理員認證的 ONTAP 工具登入。
+若要存取 ONTAP 工具管理員、請 `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`從瀏覽器啟動、然後使用您在部署期間提供的 VMware vSphere 管理員認證的 ONTAP 工具登入。
 
 ONTAP toolsManager 總覽一節可協助管理應用裝置組態，例如服務管理，節點大小升級和高可用度（ HA ）功能。您也可以監控與節點相關的 ONTAP 工具整體資訊，例如健全狀況，網路詳細資料和警示。
 

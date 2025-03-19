@@ -44,7 +44,7 @@ summary: 儲存設備後端是 ESXi 主機用於資料儲存的系統。
 
 您可以使用 ONTAP Tools Manager 執行全域 ONTAP 叢集的「修改」作業、步驟如下。
 
-. 從網路瀏覽器啟動 ONTAP 工具管理員： `\https://loadBalancerIP:8443/virtualization/ui/`
+. 從網路瀏覽器啟動 ONTAP 工具管理員： `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . 使用您在部署期間提供的 VMware vSphere 管理員認證 ONTAP 工具登入。
 . 從側邊列選取儲存設備後端。
 . 選取您要修改的儲存後端。
@@ -66,7 +66,7 @@ summary: 儲存設備後端是 ESXi 主機用於資料儲存的系統。
 
 您可以使用 ONTAP 工具管理員來執行全域 ONTAP 叢集的移除作業。
 
-. 從網路瀏覽器啟動 ONTAP 工具管理員： `\https://loadBalancerIP:8443/virtualization/ui/`
+. 從網路瀏覽器啟動 ONTAP 工具管理員： `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . 使用您在部署期間提供的 VMware vSphere 管理員認證 ONTAP 工具登入。
 . 從側欄中選擇 * 儲存後端 * 。
 . 選取您要移除的儲存後端

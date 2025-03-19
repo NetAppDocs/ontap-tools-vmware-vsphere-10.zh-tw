@@ -27,7 +27,7 @@ summary: 儲存設備後端是 ESXi 主機用於資料儲存的系統。
 NOTE: 在多租戶設定中，您可以全域新增儲存後端叢集，並在本機新增 SVM 以使用 SVM 使用者認證。
 
 .步驟
-. 從網路瀏覽器啟動 ONTAP 工具管理員： `\https://loadBalancerIP:8443/virtualization/ui/`
+. 從網路瀏覽器啟動 ONTAP 工具管理員： `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . 使用您在部署期間提供的 VMware vSphere 管理員認證 ONTAP 工具登入。
 . 從側欄中選擇 * 儲存後端 * 。
 . 新增儲存後端，並提供伺服器 IP 位址或 FQDN ，使用者名稱和密碼詳細資料。
