@@ -84,9 +84,9 @@ entries:
   url: "/manage/disable-autosupport.html"
 - title: 更新 AutoSupport Proxy URL
   url: "/manage/update-proxyurl.html"
-- title: 接近零 RPO
+- title: 建立備份並恢復設定
   url: "/manage/enable-backup.html"
-- title: 解除安裝 ONTAP 工具部署
+- title: 解除安裝適用於 VMware vSphere 的 ONTAP 工具
   url: "/manage/uninstall-deployment.html"
-- title: 清理磁碟區
+- title: 移除 FlexVol Volume
   url: "/manage/delete-deployment.html"

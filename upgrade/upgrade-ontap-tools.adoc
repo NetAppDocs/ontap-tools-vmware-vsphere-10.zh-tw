@@ -101,7 +101,7 @@ NOTE: 支援從適用於 VMware vSphere 10.1 和 10.2 到 10.3 的 ONTAP 工具�
 * 使用下列其中一種方法、逐一拍攝所有磁碟區的快照：
 +
 ** 從 CLI 執行命令 _volume snapshot create -vserver <vserver_name> -volume <volume_name> -snapshot <snapshot_name> _
-** 從 ONTAP 系統管理員使用者介面，在搜尋列中依磁碟區名稱搜尋該磁碟區，然後選取該名稱來開啟該磁碟區。移至快照並新增該磁碟區的快照。
+** 從 ONTAP 系統管理員使用者介面中，依磁碟區名稱在搜尋列中搜尋，然後選取該名稱來開啟該磁碟區。移至快照並新增該磁碟區的快照。
 
 
 
