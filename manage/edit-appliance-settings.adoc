@@ -15,7 +15,15 @@ summary: 您可以使用 ONTAP 工具管理員變更管理員密碼。
 
 *開始之前*
 
-確保您提供的 OVA 範本與節點 1 具有相同的 OVA 版本。節點 1 是最初部署 VMware vSphere OVA 之 ONTAP 工具的預設節點。
+* 請確定您的 OVA 範本與節點 1 的 OVA 版本相同。節點 1 是最初部署 VMware vSphere OVA 之 ONTAP 工具的預設節點。
+* 確保在部署期間啟用 CPU 熱新增和記憶體熱插拔。如果在部署期間未啟用，您可以在 vCenter 用戶端功能表下啟用這些功能。請依照下列指示，從 vCenter 用戶端啟用：
++
+** 在 * 清單 * 下瀏覽至 VMware vSphere 虛擬機器的 ONTAP 工具，然後選取 * 編輯設定 * 。
+** 在 *CPU* 選項下，選中 *Enable CPU Hot add* （啓用 CPU 熱添加 * ）複選框
+** 在 * 記憶體 * 選項下，勾選 * 記憶體熱插拔 * 的 * 啟用 * 核取方塊。
+
+
+
 
 .步驟
 . 從網路瀏覽器啟動 ONTAP 工具管理員： `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`

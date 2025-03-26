@@ -29,3 +29,5 @@ VMware vSphere 的 ONTAP 工具無需額外組態即可提供高可用度（ HA 
 
 
 NOTE: 適用於 VMware vSphere 的 ONTAP 工具不支援 vCenter HA 。
+
+若要啟用 HA 功能，應在部署期間或之後的 ONTAP 工具中，於 VMware vSphere VM 設定中啟用 CPU 熱新增和記憶體熱插拔。

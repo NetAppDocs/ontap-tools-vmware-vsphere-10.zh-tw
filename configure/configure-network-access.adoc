@@ -1,3 +1,9 @@
+---
+permalink: configure/configure-network-access.html 
+sidebar: sidebar 
+keywords: network access configuration, export policy, mount operation, ESXi hosts 
+summary: 如果您尚未設定網路存取，則 ESXi 主機的所有探索到的 IP 位址預設都會新增至匯出原則。 
+---
 = 設定網路存取
 :allow-uri-read: 
 :icons: font
