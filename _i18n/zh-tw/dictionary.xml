@@ -2071,12 +2071,118 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="0aac2e2d60f56941b22e0c247b2e8606" category="cell">從內容庫</block>
   <block id="7b8fae4ee3f2f1e2d2d1cd158ca75e12" category="cell">a. 按一下滑鼠右鍵並選取 * 部署 OVF 範本 ...* 。 b. 從 URL 選擇 OVA 檔案或瀏覽至其位置，然後選取 * 下一步 * 。</block>
   <block id="575d924a41fdcb33b439a56a8275b46b" category="cell">a. 移至內容庫並選取您要部署的文件庫項目。 b. 從此範本中選取 * 「動作」 * &gt; * 「新增虛擬機器」 *</block>
-  <block id="d59f2559d7708fc33ba709f85d5f7d8d" category="list-text">在 * 選擇名稱和資料夾 * 欄位中，輸入虛擬機器名稱並選擇其位置。若要啟用 HA 功能，請選取選項 * 自訂此虛擬機器的硬體 * ，此選項將會啟動名為 * 自訂硬體 * 的額外步驟，然後再前往 * 準備完成 * 視窗。</block>
   <block id="b13ea8b192f2e4c057e60ddf543e1bc9" category="list-text">選取組態和磁碟格式的儲存設備，然後選取 * 下一步 * 。</block>
-  <block id="a64b411fa059b361156bb9aff3333ea7" category="list-text">在 * 自訂硬體 * 視窗中，啟用 *CPU Hot add* 和 * 記憶體熱插拔 * 選項以允許 HA 功能。</block>
   <block id="0b6be1b11b1b2491526a1a563ceb2a11" category="list-text">請確定您的 OVA 範本與節點 1 的 OVA 版本相同。節點 1 是最初部署 VMware vSphere OVA 之 ONTAP 工具的預設節點。</block>
-  <block id="af4cd60bf02a555034a6503c98fdc067" category="list-text">確保在部署期間啟用 CPU 熱新增和記憶體熱插拔。如果在部署期間未啟用，您可以在 vCenter 用戶端功能表下啟用這些功能。請依照下列指示，從 vCenter 用戶端啟用：</block>
-  <block id="de91beac7bb1bb4fbe105fce9753292d" category="list-text">在 * 清單 * 下瀏覽至 VMware vSphere 虛擬機器的 ONTAP 工具，然後選取 * 編輯設定 * 。</block>
   <block id="f7681620b9623a6169557749d3cd3b06" category="list-text">在 *CPU* 選項下，選中 *Enable CPU Hot add* （啓用 CPU 熱添加 * ）複選框</block>
   <block id="e964c4252671b09bcb1a48909d126115" category="list-text">在 * 記憶體 * 選項下，勾選 * 記憶體熱插拔 * 的 * 啟用 * 核取方塊。</block>
+  <block id="5857f06e072b3f06a2eb3afb539401ad" category="summary">VMware vSphere ONTAP 工具入門包括幾個步驟。</block>
+  <block id="351db6e1fb020f982e8d1e2e04a3bbff" category="doc">高可用度（ HA ）部署工作流程</block>
+  <block id="5796a1458099f301d4addee1a242df6f" category="paragraph">如果您使用 vVols 資料存放區，則需要將 ONTAP 工具的初始部署擴充至高可用度（ HA ）組態，並啟用 VASA Provider 服務。</block>
+  <block id="06c2cea18679d64399783748fa367bdd" category="inline-image-macro">一</block>
+  <block id="ef559753bb37f5c75302bc058bd8ef18" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block>擴充部署</block>
+  <block id="f38c69c61a8659b3b04805a82b98a406" category="paragraph">您可以擴充 VMware vSphere 組態的 ONTAP 工具，以增加部署中的節點數量，並將組態變更為 HA 設定。</block>
+  <block id="80841c66bc065a4621fdb8223573f180" category="list-text"><block ref="80841c66bc065a4621fdb8223573f180" category="inline-link-macro-rx"></block></block>
+  <block id="aada29daee1d64ed0fe907043855cb7e" category="inline-image-macro">二</block>
+  <block id="e81b0e6462481fcd3413377a49eef929" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block>啟用服務</block>
+  <block id="c056ecd855e5405820342c3949fe830c" category="paragraph">若要設定 VVols 資料存放區，您必須啟用 VASA Provider 服務。向 vCenter 註冊 VASA 供應商，確保您的儲存原則符合 HA 需求，包括適當的網路和儲存組態。</block>
+  <block id="3fbec94821f3d895b930a04dc44657cc" category="paragraph">啟用服務，以使用適用於 VMware Site Recovery Manager （ SRM ）或 VMware Live Site Recovery （ VLSR ）的 ONTAP 工具儲存複寫介面卡（ SRA ）。</block>
+  <block id="d9fa12637706812af1872dd61fc64453" category="inline-link-macro">啟用 VASA Provider 和 SRA 服務</block>
+  <block id="c838d1e4bdb7f26f5aa0d841f7268233" category="list-text"><block ref="c838d1e4bdb7f26f5aa0d841f7268233" category="inline-link-macro-rx"></block></block>
+  <block id="ca8a2087e5557e317599344687a57391" category="inline-image-macro">三</block>
+  <block id="294b56b882b4cc00251358d85e1743e5" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block>升級憑證</block>
+  <block id="5394bde54cbbfc5ed2c3a7059ca709c6" category="paragraph">如果您使用 vVol 資料存放區搭配多個 vCenter Server 執行個體，請將自我簽署的憑證升級為憑證授權單位（ CA ）簽署的憑證。</block>
+  <block id="096078a372ad8b6c0fcc7c22ffe9a147" category="list-text"><block ref="096078a372ad8b6c0fcc7c22ffe9a147" category="inline-link-macro-rx"></block></block>
+  <block id="955e2530b35bd36732551d894e503a00" category="list-text">在 * 選擇名稱和資料夾 * 欄位中，輸入虛擬機器名稱並選擇其位置。</block>
+  <block id="02793e3182fbe0f0f175da7ab3e93d73" category="list-text">如果您使用的是 vCenter Server 8.0.3 版本，請選取選項 * 自訂此虛擬機器的硬體 * ，此選項將會啟動名為 * 自訂硬體 * 的額外步驟，然後再前往 * 準備完成 * 視窗。</block>
+  <block id="023e2f3d2e9fc24fbfa345f951d3739f" category="list-text">如果您使用的是 vCenter Server 7.0.3 版本，請遵循部署結束時的「後續行動？」一節中的步驟。</block>
+  <block id="6086b7cf0ed3f66a8f067f2609990958" category="list-text">使用 vCenter Server 8.0.3 版本時，請在 * 自訂硬體 * 視窗中，啟用 *CPU Hot add* 和 * 記憶體熱插拔 * 選項，以允許 HA 功能。</block>
+  <block id="97b6810eb76df77c1b712c70d530f60a" category="paragraph">如果您的 VMware vSphere 部署有 ONTAP 工具與 vCenter Server 7.0.2 ，請在部署之後遵循這些步驟。</block>
+  <block id="d2a87194163daac768f661ff8d1d3300" category="list-text">登入 vCenter 用戶端</block>
+  <block id="da93f5e9af6870a18b0865c5a2c7f8c4" category="list-text">瀏覽至 * 清單 * 下的 ONTAP 工具 for VMware vSphere 虛擬機器，然後選取 * 編輯設定 * 選項。</block>
+  <block id="9569971b9e4c597112b89f4886d293d8" category="doc">開始之前…</block>
+  <block id="92f29cff34d92bf4fc543c08273931a8" category="paragraph">在您繼續部署之前，請確定符合下列要求：</block>
+  <block id="5a2ebfb8baa378cfcfcba58bbb1380c2" category="cell">需求</block>
+  <block id="160341e19f4199f98bae44696b547c48" category="cell">您的狀態</block>
+  <block id="585f30e88e1aeab9267bdca1c7fb9b51" category="cell">vSphere 版本， ONTAP 版本和 ESXi 主機版本與 ONTP 工具版本相容。</block>
+  <block id="4902520b0fcc342236dd72f6de2ddae3" category="cell">（是）無</block>
+  <block id="8b7366926ee4d89536f11f5177addb76" category="cell">vCenter Server 環境已設定及設定</block>
+  <block id="da6a71f9d8e8c5292268f9ff7340889b" category="cell">瀏覽器快取已刪除</block>
+  <block id="cf8aabec008f017accfa8137e7cf2adb" category="cell">您擁有父 vCenter Server 認證</block>
+  <block id="8ac6a0d49e78c74c5c49f22d390c353f" category="cell">您擁有 vCenter Server 執行個體的登入認證， VMware vSphere 的 ONTAP 工具會在部署後連線至該執行個體進行登錄</block>
+  <block id="85bdb53ff90d5bbf90d739c48c458177" category="cell">憑證所核發的網域名稱會對應至多 vCenter 部署中的虛擬 IP 位址，其中必須有自訂 CA 憑證。</block>
+  <block id="c4903ebf8ac3e9e53d927ca4855aeab7" category="cell">您已對網域名稱執行 nsLOOKUP 檢查，以檢查網域是否已解析為預期的 IP 位址。</block>
+  <block id="006efd6c70d1fd5109a917632ca7d1f0" category="cell">憑證是以網域名稱和 ONTAP 工具 IP 位址建立。</block>
+  <block id="d828b14ed2b96fa8bafdeeab2e9bbb25" category="cell">可從 vCenter Server 存取 ONTAP 工具應用程式和內部服務。</block>
+  <block id="6285108ef2b20a382584e76cf96a61fb" category="cell">使用多租戶 SVM 時，每個 SVM 上都有 SVM 管理 LIF 。</block>
+  <block id="12da9e1a2888efc8f1956c95e7801089" category="section-title">部署工作表</block>
+  <block id="6d40840d55c07c7f9a1396724662354b" category="section-title">適用於單一節點部署</block>
+  <block id="bbd46d16a0b9c56c79719db1f0a2b9a8" category="paragraph">請使用下列工作表來收集 VMware vSphere 初始部署之 ONTAP 工具的必要資訊：適用於 VMware vSphere 初始部署的 ONTAP 工具：</block>
+  <block id="9b97b7bd5e0a87be7bf218224ada83cf" category="cell">需求</block>
+  <block id="d9fa81fca11f55d9fd9f33b399ab9cd6" category="cell">您的價值</block>
+  <block id="89d40dff7639b41cbef7fe2a44f484ba" category="cell">ONTAP 工具應用程式的 IP 位址</block>
+  <block id="8a446ff962c6ec80c26cad578454c2af" category="cell">用於節點間通訊的節點互連 IP 位址</block>
+  <block id="5759f8c1a9261b4c6c0c86f5089433b5" category="cell">第一個節點的 DNS 主機名稱</block>
+  <block id="68eeeed01bf11dc7edb656408cbfd0b6" category="cell">主要DNS伺服器</block>
+  <block id="9fab0542abb763e3e75e782994d85d07" category="cell">次要DNS伺服器</block>
+  <block id="a8887a6c969074f8ef768152e95c492b" category="cell">DNS 搜尋網域</block>
+  <block id="b2aa01474bea61170041c002c6ac208a" category="cell">主節點的 IPv4 位址</block>
+  <block id="8e7f18a32aaa409ac6db22c6061404a7" category="cell">IPv4 位址的子網路遮罩</block>
+  <block id="6eb16330b386af07329e0c9d0a1c2421" category="cell">IPv4 位址的預設閘道</block>
+  <block id="92abdbc0e1cb9b88fc2be7c70ef79e37" category="cell">IPv6 位址（選用）</block>
+  <block id="30eddb064c9ce9ee65db8631bcdd298e" category="cell">IPv6 首碼長度（選用）</block>
+  <block id="9c43cfe7668de6e1c829cb71613695fd" category="cell">IPv6 位址閘道（選用）</block>
+  <block id="5d9db3dc067e65b15c415367aa49d088" category="paragraph">為上述所有 IP 位址建立 DNS 記錄。指派主機名稱之前，請先將其對應至 DNS 上的可用 IP 位址。所有 IP 位址都應位於選取用於部署的同一個 VLAN 上。</block>
+  <block id="d787ab527a9696ea7563facce1bb1001" category="section-title">適用於高可用度（ HA ）部署</block>
+  <block id="9abf7bed343e21874d5cd1ae37e04b89" category="paragraph">除了單一節點部署需求之外，您還需要下列 HA 部署資訊：</block>
+  <block id="4f8c36cf923055f6ff175e557e968782" category="cell">第二個節點的 DNS 主機名稱</block>
+  <block id="3d86836a361e223ea8d773b7ff7df4a0" category="cell">第二個節點的 IP 位址</block>
+  <block id="670ea5f87243240203f65d4597b5720d" category="cell">第三個節點的 DNS 主機名稱</block>
+  <block id="b1b53041846844c0718e8af2d6f3e14c" category="cell">第三個節點的 IP 位址</block>
+  <block id="c45c6f4bee2108d6c980be118d3da754" category="section-title">網路防火牆組態</block>
+  <block id="15d12f4a88d7b390ab6d863be5684e1a" category="paragraph">開啟網路防火牆中 IP 位址所需的連接埠。ONTAP 工具必須能夠透過連接埠 443 到達此 LIF 。如需最新更新，請參閱<block ref="7a521441c6d35a506dc75f134ab3c694" category="inline-link-macro-rx"></block>。</block>
+  <block id="410dbf8e1f100ad53deb3ca66cb8ec8b" category="doc">VMware vSphere ONTAP 工具快速入門</block>
+  <block id="86339f91ab8e0352f8b9f8c35611a4ee" category="paragraph">VMware vSphere ONTAP 工具入門包括幾個步驟。本快速入門課程將引導您完成 VMware vSphere ONTAP 工具的初始設定。</block>
+  <block id="7261b4472f18d3e8c4584d0bb039ec79" category="inline-link-macro">HA 部署工作流程</block>
+  <block id="b95e3b604f6a59d80c159f8bcc30d45e" category="paragraph">一開始，您將部署 VMware vSphere 的 ONTAP 工具，做為小型單一節點組態，提供核心服務來支援 NFS 和 VMFS 資料存放區。如果您需要擴充組態以使用 vVols 資料存放區和高可用度（ HA ），您將在完成此工作流程後進行。如需詳細資訊、請<block ref="9ef467ebb813ac9bfc1579e0ba7d9e65" category="inline-link-macro-rx"></block>參閱。</block>
+  <block id="3b46ad0549cc1ae15c466e1539cac6cc" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block>規劃您的部署</block>
+  <block id="235431ffa3dee921fa339768f9c9a6c1" category="paragraph">確認您的 vSphere ， ONTAP 和 ESXi 主機版本與 ONTAP 工具版本相容。分配足夠的 CPU ，記憶體和磁碟空間。視您的安全性原則而定，您可能需要設定防火牆或其他安全設備，以允許網路流量。</block>
+  <block id="9ebdb7921f7484cee5e22c5bfd2470c8" category="paragraph">確保 vCenter Server 已安裝且可存取。</block>
+  <block id="34f56f271329ad2edd7685e71f328b53" category="list-text"><block ref="34f56f271329ad2edd7685e71f328b53" category="inline-link-rx"></block></block>
+  <block id="726c2dd94c40576d98fa58765ada32a2" category="list-text"><block ref="726c2dd94c40576d98fa58765ada32a2" category="inline-link-macro-rx"></block></block>
+  <block id="8fece025a1a8fef7018449bf104a2527" category="inline-link-macro">開始之前</block>
+  <block id="1497fccb0979c83f7f0501efa49af88e" category="list-text"><block ref="1497fccb0979c83f7f0501efa49af88e" category="inline-link-macro-rx"></block></block>
+  <block id="69182d9cdaae4040cb12f338633b33c7" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block>部署適用於 VMware vSphere 的 ONTAP 工具</block>
+  <block id="f8c086dad42ca07bf14eb7f233920f24" category="paragraph">一開始，您將部署 VMware vSphere 的 ONTAP 工具，做為小型單一節點組態，提供核心服務來支援 NFS 和 VMFS 資料存放區。如果您打算擴充組態以使用 vVols 資料存放區和高可用度（ HA ），您將在完成此工作流程後進行。若要成功擴充至 HA 組態，您必須確定已啟用 CPU 熱新增和記憶體熱插拔選項。</block>
+  <block id="e5470d0dab088b9c8b712af4be3801de" category="list-text"><block ref="e5470d0dab088b9c8b712af4be3801de" category="inline-link-macro-rx"></block></block>
+  <block id="d6f4de0e60c9b74a0f06b9c8cb7e5556" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block>新增 vCenter Server 執行個體</block>
+  <block id="b78f334f60c6b78034f4d3b7cf13f767" category="paragraph">將一或多個 vCenter Server 執行個體新增至 ONTAP 工具，以供 VMware vSphere 設定，管理及保護 vCenter Server 環境中的虛擬資料存放區。</block>
+  <block id="fbc3413db4202f1fe331f16af6b38f13" category="list-text"><block ref="fbc3413db4202f1fe331f16af6b38f13" category="inline-link-macro-rx"></block></block>
+  <block id="981b8fcee42e1e726a67a2b9a98ea6e9" category="inline-image-macro">四</block>
+  <block id="f876a7cbd467b5fe36bfff5b237cab15" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block>設定 ONTAP 使用者角色和 Privileges</block>
+  <block id="a3dce2225c6773b6233d6d06ca6524a1" category="paragraph">使用適用於 VMware vSphere 的 ONTAP 工具隨附的 JSON 檔案，設定新的使用者角色和 Privileges 來管理儲存後端。</block>
+  <block id="b3debf9a0a4da8901422599f88761e9e" category="list-text"><block ref="b3debf9a0a4da8901422599f88761e9e" category="inline-link-macro-rx"></block></block>
+  <block id="e5d9de39f7ca1ba2637e5640af3ae8aa" category="inline-image-macro">五</block>
+  <block id="78a9753ae84f65cfc93b9190109fdbe1" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block>設定儲存設備後端</block>
+  <block id="151c3727ca69fe365d30ca8b00d0ef02" category="paragraph">將儲存後端新增至 ONTAP 叢集。對於 vCenter 作為相關 SVM 租戶的多租戶設定，請使用 ONTAP 工具管理員來新增叢集。將儲存後端與 vCenter Server 建立關聯，以將其全域對應至已登入的 vCenter Server 執行個體。</block>
+  <block id="623727ddcf21460c69461e09290ff6e3" category="paragraph">使用 ONTAP 工具使用者介面，以叢集或 SVM 認證新增本機儲存設備後端。這些儲存後端僅限於單一 vCenter 。在本機使用叢集認證時，相關的 SVM 會自動對應至 vCenter 以管理 vVols 或 VMFS 。對於包括在內的 VMFS 管理， ONTAP 工具支援 SVM 認證，而不需要全域叢集。</block>
+  <block id="5e15cfab5137c8c5b07a50f9eb816e0a" category="list-text"><block ref="5e15cfab5137c8c5b07a50f9eb816e0a" category="inline-link-macro-rx"></block></block>
+  <block id="d0c12810d8bb376bdd62e0a7dcb8f3ef" category="inline-link-macro">將儲存後端與 vCenter Server 執行個體建立關聯</block>
+  <block id="349dea55081cba7988d2e74a569b149b" category="list-text"><block ref="349dea55081cba7988d2e74a569b149b" category="inline-link-macro-rx"></block></block>
+  <block id="e6fbc0b9673f8c86726688d7607fc8f5" category="inline-image-macro">六</block>
+  <block id="acfa27b57a294a787f715e773cc9d67b" category="paragraph-title"><block ref="ef78558f80439832e0f51cc22cee8b8c" category="inline-image-macro-rx" type="image"></block>如果您使用多個 vCenter Server ，請升級憑證</block>
+  <block id="7a141a550c6b7316b61d038ab322ca86" category="paragraph">使用多個 vCenter Server 時，請將自我簽署的憑證升級為憑證授權單位（ CA ）簽署的憑證。</block>
+  <block id="12e67aac3e7f9227cc35f8f047d7dc74" category="inline-image-macro">七</block>
+  <block id="85fa32c6f1935c07720a211f20305579" category="paragraph-title"><block ref="36915574c413876eaa75cbd48f69fd00" category="inline-image-macro-rx" type="image"></block>（選用）啟用 SRA 保護</block>
+  <block id="461016ffd7a6c7ca138e75fad0c9b7ce" category="paragraph">啟用 SRA 功能以設定災難恢復並保護 NFS 或 VMFS 資料存放區。</block>
+  <block id="9b6610ae0d9b3f2df042445cc8433cf4" category="list-text"><block ref="9b6610ae0d9b3f2df042445cc8433cf4" category="inline-link-macro-rx"></block></block>
+  <block id="24d27c169c2c881eb09a065116f2aa5c" category="inline-image-macro">八</block>
+  <block id="1f3c2366ee78e590a43f78ce3ec33af9" category="paragraph-title"><block ref="bf2dc80b0d3f76e4f77c4fce580f56c0" category="inline-image-macro-rx" type="image"></block>（選用）啟用 SnapMirror 主動式同步保護</block>
+  <block id="ae57d8d2be38d4fab048ad6bd6a53746" category="paragraph">為 VMware vSphere 設定 ONTAP 工具，以管理 SnapMirror 主動式同步的主機叢集保護。配對來源叢集和目的地叢集，以及 SVM 以進行 SnapMirror 主動式同步。這僅適用於 VMFS 資料存放區。</block>
+  <block id="5c77c00bef7fd2d8fb97abc8f2ff015a" category="list-text"><block ref="5c77c00bef7fd2d8fb97abc8f2ff015a" category="inline-link-macro-rx"></block></block>
+  <block id="24db11216549ee55172c33cf3def2f3f" category="inline-image-macro">九</block>
+  <block id="c5ee3ef473a8e2d4f3f8b40330e2bcd2" category="paragraph-title"><block ref="b37b448eff4f65237cf47b29bdd2817c" category="inline-image-macro-rx" type="image"></block>為您的 ONTAP 工具設定備份與還原，以進行 VMware vSphere 部署</block>
+  <block id="88b80af2218eb2102e518b088dd9ed76" category="paragraph">為 VMware vSphere 設定排程 ONTAP 工具的備份，以便在發生故障時恢復設定。</block>
+  <block id="67f34b44c083004610f6d70a0140a9aa" category="inline-link-macro">建立備份並恢復 ONTAP 工具設定</block>
+  <block id="a99f72442060cbc9b70a30a0deceb5ac" category="list-text"><block ref="a99f72442060cbc9b70a30a0deceb5ac" category="inline-link-macro-rx"></block></block>
+  <block id="4073f6bd126ab1197095ddfaadcb200f" category="list-text">確認已啟用 CPU 熱新增和記憶體熱插拔。</block>
 </blocks>
