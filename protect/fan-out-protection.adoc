@@ -1,0 +1,45 @@
+---
+permalink: protect/fan-out-protection.html 
+sidebar: sidebar 
+keywords:  
+summary: 在風扇輸出保護中，一致性群組會在第一個目的地 ONTAP 叢集上使用同步關係，並在第二個目的地 ONTAP 叢集上使用非同步關係，獲得雙重保護。 
+---
+= 風扇輸出保護
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在風扇輸出保護中，一致性群組會在第一個目的地 ONTAP 叢集上使用同步關係，並在第二個目的地 ONTAP 叢集上使用非同步關係，獲得雙重保護。建立，編輯及刪除 SnapMirror 主動式同步保護工作流程可維持同步保護。SRM 容錯移轉和重新保護工作流程，可維持非同步保護。
+
+為了建立扇出保護，您需要對等三個站台叢集和 SVM 。
+
+範例：
+
+|===
+
+
+| 如果 | 然後 
+
+
+ a| 
+* 來源一致性群組位於叢集 C1 和 SVM svm1 上
+* 第一個目的地一致性群組位於叢集 C2 和 SVM svm2 和上
+* 第二個目的地一致性群組位於叢集 C3 和 SVM svm3 上
+
+ a| 
+* 來源 ONTAP 叢集上的叢集對等關係將為（ C1 ， C2 ）和（ C1 ， C3 ）。
+* 第一個目的地 ONTAP 叢集上的叢集對等關係將為（ C2 ， C1 ）和（ C2 ， C3 ）和
+* 第二個目的地 ONTAP 叢集上的叢集對等關係將為（ C3 ， C1 ）和（ C3 ， C2 ）。
+* SVM 在來源 SVM 上的對等關係將為（ svm1 ， svm2 ）和（ svm1 ， svm3 ）。
+* 在第一個目的地 SVM 上執行 SVM 對等對等處理時，將會是（ svm2 ， svm1 ）和（ svm2 ， svm3 ）和
+* 在第二個目的地 SVM 上執行 SVM 對等對等項將為（ svm3 ， svm1 ）和（ svm3 ， svm2 ）。
+
+
+|===
+*步驟*
+
+. 建立新的佔位器資料存放區。請參閱 https://docs.vmware.com/en/Site-Recovery-Manager/8.7/com.vmware.srm.admin.doc/GUID-5D4C9F38-37CA-47D1-B43A-A1FED48A05A3.html["選取預留位置資料存放區"]
+. 將資料存放區新增至主機叢集保護link:../manage/edit-hostcluster-protection.html["修改受保護的主機叢集"]。您需要同時新增非同步和同步原則類型。
+

@@ -26,7 +26,7 @@ summary: 您可以編輯受保護主機叢集的 SnapMirror 關係。您可以�
 請使用此程序來監控主機叢集保護的狀態。您可以監控每個受保護的主機叢集、以及其保護狀態、 SnapMirror 關係、資料存放區和對應的 SnapMirror 狀態。
 
 .步驟
-. 使用登入 vSphere 用戶端 `\https://<vcenterip>/<ui>`
+. 登入 vSphere 用戶端。
 . 瀏覽至 * NetApp ONTAP tools* > * Protection * > * 主機叢集關係 * 。
 +
 保護欄下方的圖示會顯示保護狀態
@@ -41,7 +41,7 @@ summary: 您可以編輯受保護主機叢集的 SnapMirror 關係。您可以�
 使用此程序來保護新增的資料存放區或主機。您可以使用 vCenter 原生使用者介面、將新主機新增至受保護的叢集、或在主機叢集上建立新的資料存放區。
 
 .步驟
-. 使用登入 vSphere 用戶端 `\https://<vcenterip>/<ui>`
+. 登入 vSphere 用戶端。
 . 若要編輯受保護叢集的內容、您也可以
 +
 .. 瀏覽至 * NetApp ONTAP tools* > * Protection * > * 主機叢集關係 * ，在叢集上選取省略符號功能表，然後選取 * Edit* 或
@@ -65,7 +65,7 @@ vCenter 工作隨即建立、您可以在 * 最近的工作 * 面板中追蹤進
 == 新增 SnapMirror 關係
 
 .步驟
-. 使用登入 vSphere 用戶端 `\https://<vcenterip>/<ui>`
+. 登入 vSphere 用戶端。
 . 若要編輯受保護叢集的內容、您也可以
 +
 .. 瀏覽至 * NetApp ONTAP tools* > * Protection * > * 主機叢集關係 * ，在叢集上選取省略符號功能表，然後選取 * Edit* 或
@@ -91,7 +91,7 @@ vCenter 工作隨即建立、您可以在 * 最近的工作 * 面板中追蹤進
 刪除關係會在次要站台上觸發重新掃描、以將未對應的 LUN 從主機移除為作用中路徑。
 
 .步驟
-. 使用登入 vSphere 用戶端 `\https://<vcenterip>/<ui>`
+. 登入 vSphere 用戶端。
 . 若要編輯受保護叢集的內容、您也可以
 +
 .. 瀏覽至 * NetApp ONTAP tools* > * Protection * > * 主機叢集關係 * ，在叢集上選取省略符號功能表，然後選取 * Edit* 或
@@ -113,7 +113,7 @@ vCenter 工作隨即建立、您可以在 * 最近的工作 * 面板中追蹤進
 NOTE: 您無法編輯現有的非同步 SnapMirror 關係。
 
 .步驟
-. 使用登入 vSphere 用戶端 `\https://<vcenterip>/<ui>`
+. 登入 vSphere 用戶端。
 . 若要編輯受保護叢集的內容、您也可以
 +
 .. 瀏覽至 * NetApp ONTAP tools* > * Protection * > * 主機叢集關係 * ，在叢集上選取省略符號功能表，然後選取 * Edit* 或

@@ -28,8 +28,6 @@
   <block id="6364d3f0f495b6ab9dcf8d3b5c6e0b01" category="cell">32.</block>
   <block id="17d884d1bc0b828c55d255e092457a6d" category="cell">儲存設備、主機和應用程式</block>
   <block id="253b40ae359ba25b56231803430c4873" category="cell">ONTAP</block>
-  <block id="42094e9e4a0f05012b8d6753300a1657" category="cell">ESXi主機</block>
-  <block id="6a81c846c8c35b839d7586abc329dfda" category="cell">vCenter 伺服器</block>
   <block id="55c82b601deae028c1c5e87fd820923d" category="cell">3.0</block>
   <block id="e5677b5778cf8dd94afdb5343a7e6502" category="cell">ova 應用程式</block>
   <block id="e047b55bfbc6ebe2f16524db25c3d398" category="paragraph">互通性對照表工具（ IMT ）包含有關支援版本的 ONTAP 、 vCenter Server 、 ESXi 主機和外掛應用程式的最新資訊。</block>
@@ -37,7 +35,6 @@
   <block id="d9feb2b730ded2731ab499f4b64cca33" category="paragraph"><block ref="ccafd2400edf7c1aa273a76ad605940f" category="inline-link-rx"></block></block>
   <block id="78166ce4ccceeedfbf6aeb8682851072" category="paragraph">*關於此工作*</block>
   <block id="c9d092386ae73a6340bdea88112319d0" category="list-text">登入 vSphere 伺服器。</block>
-  <block id="23b73d362123204bbb0b2e4f075436e0" category="list-text">在工作完成後開啟虛擬機器電源。</block>
   <block id="9d2169c1c2855b78a7aeaa4f42d27dc7" category="inline-link">NetApp 支援網站</block>
   <block id="fc7420289587a37ba45ec23cf35bfe1b" category="list-text">提供文件庫名稱並建立內容庫。</block>
   <block id="9baaec212ea7cc94549bac65152b30f9" category="list-text">您應該已以儲存後端的系統管理員權限登入。</block>
@@ -79,7 +76,6 @@
   <block id="a00c50b90749f90a36742b8673eb5362" category="cell">/api/network/IP/ 介面</block>
   <block id="75a3ccbb7a9e84c450e2a4fa949a65dd" category="cell">Add Storage Backend （新增儲存後端）：識別管理 LIF 範圍為叢集 / SVM</block>
   <block id="d683f4893193b2031b9057d1e1d8107d" category="list-text">使用系統管理員認證登入。</block>
-  <block id="f13b700708b8d1b2903e01d04713cb09" category="admonition">檢查以確保根集合體未對應至 SVM 。</block>
   <block id="aee895c24ce8b1de4db4cd6c7eabc1e3" category="paragraph">使用下列 URI 檢查狀態：</block>
   <block id="f323831468d8f05429defe22a9e81256" category="list-text">從側欄中選擇 * 儲存後端 * 。</block>
   <block id="fa12509cfb8e8ccded16e2a254e988c4" category="list-text">選取*「Add*」。</block>
@@ -106,7 +102,6 @@
   <block id="978968aa0140e7645f3db01d1e5743c3" category="list-text">重新開機虛擬機器</block>
   <block id="c795b3f02d3ba272bf89b7228980a7c6" category="list-text">關閉虛擬機器</block>
   <block id="5b46d2f8a4a7ff7137a4bb6fa29137b6" category="list-text">變更時區</block>
-  <block id="69aa2ef4297619ec73e59bef53f84950" category="list-text">新增NTP伺服器</block>
   <block id="0d8d4a37bb7b3631cd84adf9f84a8ec2" category="list-text">增加監獄磁碟大小（/監獄）</block>
   <block id="f683581d3e75f05f9d9215f9b4696cef" category="list-text">升級</block>
   <block id="339cae1a7f46daaf1686251beb1b6886" category="list-text">安裝VMware Tools</block>
@@ -133,16 +128,12 @@
   <block id="d48f057485c79fea29ae606305f9eb86" category="list-text">輸入遠端診斷存取密碼。</block>
   <block id="7f228fe642db2c23792d7c5383792e8d" category="list-text">執行命令 _Sudo systemctl restart ssh_ 。</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">步驟</block>
-  <block id="01e377670806c0c1bb0a507160a3b7ad" category="paragraph">適用於 VMware vSphere 的 ONTAP 工具包括：</block>
   <block id="4c94c0434ea110b41df3e17bf583daa7" category="list-text">儲存原則型管理</block>
   <block id="02621f852bb8e8078b864aaa378a1b3b" category="paragraph">此角色可讓您新增儲存系統。</block>
   <block id="f3c1d0e4118d5d9501e1a7aeed19d224" category="list-text">主機故障</block>
   <block id="031f25fc50366090e766a7daac6c8eb8" category="list-text">網路故障</block>
   <block id="5dbd104bdc7a47539671685dc5a44228" category="list-text">虛擬機器故障（客體作業系統故障）</block>
   <block id="ac6681d26037734c3025c63e26866c77" category="list-text">應用程式ONTAP （VMware工具）當機</block>
-  <block id="6645e0ebb53d4b6e68be7936af3a8039" category="doc">AutoSupport</block>
-  <block id="31147c2932798eadd955620b17929169" category="paragraph">此機制可主動監控系統健全狀況、並自動傳送訊息給NetApp技術支援、您的內部支援組織及支援合作夥伴。AutoSupport</block>
-  <block id="73d5b42012a1c21cf5bfd7b8d27dba86" category="paragraph">當您第一次設定儲存系統時、預設會啟用此功能。AutoSupport啟用此功能24小時後、系統會開始傳送訊息給技術支援人員。AutoSupport AutoSupport</block>
   <block id="b5a7adde1af5c87d7fd797b6245c2a39" category="cell">說明</block>
   <block id="d4613ce1ce58f0172e8a4a07c9582cdf" category="cell">權限</block>
   <block id="a5cd3ed116608dac017f14c046ea56bf" category="cell">角色</block>
@@ -159,7 +150,6 @@
   <block id="dfcc398099d6a64026e51ab282e16253" category="sidebar">更多資源</block>
   <block id="0460583622f03a52d7693094d6fa2452" category="sidebar">概念</block>
   <block id="99da96b7c57595264a2d5f3ba294a0af" category="sidebar">角色型存取控制</block>
-  <block id="99c32328fc9914bedd703b6f5db4812f" category="list-text">您應該已使用從 ONTAP 工具下載 ONTAP 權限檔案<block ref="7f922dba99ab8084641c5a38eed2214d" prefix=" " category="inline-code"></block>。</block>
   <block id="198ed9d33d0ea5ef2037f6497ce3a42f" category="summary">適用於 VMware vSphere 的 ONTAP 工具會檢查及設定 ESXi 主機多重路徑設定和 HBA 逾時設定、這些設定最適合搭配 NetApp 儲存系統使用。</block>
   <block id="90844ba0025d985c5a9dd619dcba22e2" category="doc">設定 ESXi 伺服器多重路徑和逾時設定</block>
   <block id="cbed6a690169a39b735cd91952a313f3" category="paragraph">VMware vSphere的支援VMware vSphere工具可檢查及設定ESXi主機多重路徑設定、以及最適合搭配NetApp儲存系統使用的HBA逾時設定。ONTAP</block>
@@ -173,14 +163,6 @@
   <block id="7cd974572a0712e3f4e007a1ceb0f760" category="paragraph">當您在 ONTAP 工具中移除 vCenter Server 執行個體時、會自動執行下列動作：</block>
   <block id="32d5cbccaec76a2688c3f202f4a0fc0c" category="list-text">外掛程式已取消註冊。</block>
   <block id="bc4832cad0eb15905b3945a4b071a06d" category="list-text">移除外掛程式權限和外掛程式角色。</block>
-  <block id="d418b16c9420ea00709d4c60eb2f4123" category="list-text">在 * 類型 * 窗格中、選取 * 資料存放區類型 * 中的 vVols 。</block>
-  <block id="c541e6c09ab567adf5bace8dda1aa1fb" category="list-text">在 * 名稱與傳輸協定 * 窗格中、提供 * 資料存放區名稱 * 和 * 傳輸協定 * 資訊。</block>
-  <block id="2368a6b040d4adc2d37ac7169ec7c692" category="list-text">在 * 類型 * 窗格中、在 * 資料存放區類型 * 中選取 NFS 。</block>
-  <block id="2a9d2de19ec883fa633494c082a8bddc" category="list-text">在 * Storage* 窗格中、選取 * 平台 * 和 * 儲存 VM* 。您可以在 * 進階選項 * 區段中選取 * 自訂匯出原則 * 。</block>
-  <block id="d6912beeaac19fd0d96cc7553862efc5" category="list-text">* 非對稱 * 切換按鈕只有在平台下拉式選單中選取效能或容量時才會顯示。</block>
-  <block id="53a55f63b586976eed071f053f5bd93d" category="list-text">* 平台下拉式清單中的任何 * 選項可讓您查看 vCenter 的所有 SVM 、無論平台或非對稱式旗標為何。</block>
-  <block id="3be89e21b871a8b3f031c98d9feeed52" category="list-text">在 * 儲存屬性 * 窗格中、選取要建立磁碟區的集合體。在進階選項中、視需要選擇 * 空間保留 * 和 * 啟用 QoS* 。</block>
-  <block id="17e2d63e3b45ecbfe13bcc32fec929d0" category="paragraph">*開始之前*</block>
   <block id="422b0793eae20199839e73ad8d631758" category="summary">ONTAP 工具管理員可為 VMware vSphere 管理員提供更多的 ONTAP 工具控制權和功能、協助整體管理應用裝置、租戶和儲存設備後端。</block>
   <block id="24f4f4c7ab0964cf8eb5030afe996e5b" category="doc">ONTAP toolTools Manager 使用者介面</block>
   <block id="f6024f2dcccfeea20006cf84fd6a8ced" category="paragraph">ONTAP 工具管理程式可協助：</block>
@@ -214,13 +196,10 @@
   <block id="1772747eceb4be4c72a7b0ba5c7c5a67" category="summary">您可以使用適用於 VMware vSphere 和 ONTAP System Manager 的 ONTAP 工具隨附的 JSON 檔案、設定新的使用者角色來管理儲存後端。</block>
   <block id="fde3f7a850bbaaac2a3706bf8c7df54c" category="doc">設定 ONTAP 使用者角色和權限</block>
   <block id="322c3ffbc77c8245a48d32406a927fb6" category="paragraph">您可以使用適用於 VMware vSphere 和 ONTAP System Manager 的 ONTAP 工具隨附的 JSON 檔案、設定新的使用者角色和權限來管理儲存後端。</block>
-  <block id="e851bbdaa710a1277f829baaeeb738b5" category="list-text">您應該已使用下列方法從適用於 VMware vSphere 的 ONTAP 工具下載 ONTAP 權限檔案： https ： &lt;loadbalancerIP&gt; ： 8443/virtualization / 使用者權限 /users_roles.zip 。</block>
   <block id="5d0fbbf77d63dd4a6501929f5b229ee9" category="admonition">您可以在叢集或直接在儲存虛擬機器（ SVM ）層級建立使用者。您也可以在不使用 user_roles.json 檔案的情況下建立使用者、如果是這樣做、您必須在 SVM 層級擁有一組最低權限。</block>
-  <block id="43646e7149ab6454d53dccb48f546e65" category="list-text">擷取下載的 _\https ： &lt;loadbalancerIP&gt; ： 8443/virtualization / 使用者權限 /users_roles.zip_ 檔案。</block>
   <block id="e85e7085cb02b451ed0ba49e3f1febd6" category="list-text">使用叢集的叢集管理 IP 位址存取 ONTAP 系統管理員。</block>
   <block id="6689eaef2ac72f5df927cd96978a3e89" category="list-text">* 瀏覽 * 以選取並上傳 ONTAP Privileges JSON 檔案。</block>
   <block id="64d37b9f5522fbf3a1c422e4d3605497" category="paragraph">產品欄位會自動填入。</block>
-  <block id="3bf7f46e9f0a95a7cd2b53aa11857658" category="list-text">從產品功能下拉式功能表中選取所需的功能。</block>
   <block id="779686888fbe03e3c08f28ba40fcb7af" category="paragraph">根據所選的產品功能、 * 角色 * 欄位會自動填入。</block>
   <block id="431bcaaea69607d1cd0f214bfe7dd0a4" category="paragraph">新角色和使用者即會新增、您可以在已設定的角色下看到詳細權限。</block>
   <block id="bd1d9cebcaa5652fdca8a3f54ac1f5cb" category="paragraph">若要使用 SVM 使用者認證來配置資料存放區、 VMware vSphere 的內部 ONTAP 工具會在 API 後的資料存放區中指定的集合上建立磁碟區。ONTAP 不允許使用 SVM 使用者認證、在 SVM 上的未對應集合體上建立磁碟區。若要解決此問題、您需要使用 ONTAP REST API 或 CLI 將 SVM 對應至集合體、如此處所述。</block>
@@ -369,8 +348,6 @@
   <block id="eefb401515606432e535b2c010ca31a1" category="doc">資料存放區的 ONTAP 儲存檢視</block>
   <block id="c3e54de1629f4b952a428aa7d2126621" category="summary">在部署適用於 VMware vSphere 的 ONTAP 工具之前、您應該先熟悉部署套件的空間需求、以及一些基本的主機系統需求。</block>
   <block id="d2a731e17e932f5e2185dd4d0230dace" category="paragraph">您可以搭配 VMware vCenter Server 虛擬應用裝置（ vCSA ）使用適用於 VMware vSphere 的 ONTAP 工具。您應該在支援的 vSphere 用戶端（包括 ESXi 系統）上部署適用於 VMware vSphere 的 ONTAP 工具。</block>
-  <block id="7749f88b50568c3684b1ec4d9887097a" category="cell">最低版本需求</block>
-  <block id="ec1d455e2f0ce4adc778f46d4fbf159f" category="cell">ESXi 7.0.3</block>
   <block id="3c69aed3fe79d658207798783104200f" category="inline-link">建立及使用內容庫</block>
   <block id="310f705969896b4d59368edab71d1d87" category="list-text">查看 * 準備完成 * 視窗中的詳細資料、選取 * 完成 * 。</block>
   <block id="2982d64d666813e553487acfc3139e7b" category="paragraph">在建立部署工作時、進度會顯示在 vSphere 工作列中。</block>
@@ -418,7 +395,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="37f694751788b3dc354a33dbc6c1a1f5" category="cell">如果存在登錄 Pod 、請等待 Pod 準備就緒、然後重新啟動主要 VM 或重新部署。</block>
   <block id="682670d9ab0aaa4dc01895a59aa8f91b" category="cell">059</block>
   <block id="7c5bf5e2ca0f9731180ffb3efc2e805a" category="cell">KubeVip 部署失敗</block>
-  <block id="743e2e55daa2961bcf5d745b36fe5efd" category="cell">確保在部署期間所提供的 Kubernetes 控制平面和負載平衡器 IP 位址的虛擬 IP 位址屬於同一個 VLAN 、而且是可用的 IP 位址。如果所有先前的點都正確、請重新啟動。否則、請重新部署。</block>
   <block id="03b90eb112838f07e019adb36c4300ed" category="cell">060</block>
   <block id="5306e51695a608b281592d40e045255f" category="cell">操作員部署失敗</block>
   <block id="51cfbcff36da74a9fc47f3a5140f99f2" category="cell">重新啟動</block>
@@ -461,21 +437,15 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="a39a4228addf857a8cc9e8fe734663cb" category="section-title">開放式虛擬應用裝置（ OVA ）</block>
   <block id="c9f5ca447815e462c7d32fff356e728e" category="paragraph">ova 是一套開放式標準、用於封裝及散佈必須在虛擬機器上執行的虛擬應用裝置或軟體。</block>
   <block id="3298716a4d6cee7cbe7a2a663e211fd7" category="section-title">儲存虛擬機器（ SVM ）</block>
-  <block id="93f9c78c8d180c415934eb15d4de3dcf" category="paragraph">與在 Hypervisor 上執行的虛擬機器一樣、 SVM 是一個邏輯實體、可將實體資源抽象化。SVM 包含資料磁碟區和一或多個生命體、可透過這些生命體將資料提供給用戶端。</block>
   <block id="b974fadb0566d9c95961ac569d7d7be3" category="section-title">虛擬機器檔案系統（ VMFS ）</block>
-  <block id="141d43533739d798a1db616264424401" category="paragraph">VMFS 是專為在 VMware vSphere 環境中儲存虛擬機器檔案而設計的叢集式檔案系統。</block>
   <block id="54560a3123d5dd49f3c38f44783146d2" category="section-title">虛擬磁碟區（vVols）</block>
   <block id="2d08064a233b59569e0969cc89ff1c77" category="paragraph">VVols 為虛擬機器所使用的儲存設備提供磁碟區層級抽象化。它包含多項優點、可替代傳統 LUN 的使用方式。vVol 資料存放區通常與單一 LUN 相關聯、該 LUN 可作為 vVols 的容器。</block>
   <block id="c50f2e348b4fba38341d27b8208f8bb1" category="section-title">VM 儲存原則</block>
-  <block id="6cfe864129eb89d3d7838d439bc7e8d9" category="paragraph">VM 儲存原則是在 vCenter Server 的原則和設定檔下建立。對於 vVols 、請使用 NetApp vVols 儲存類型提供者的規則來建立規則集。</block>
   <block id="9c966bb66c3f7b3890693e1fe9b3468f" category="section-title">VMware vSphere API for Storage A感知 （ VASA ）</block>
-  <block id="902f8374c2cb1f01140d44e3741911c1" category="paragraph">Vasa 是一組 API 、可將儲存陣列與 vCenter Server 整合以進行管理。此架構以多個元件為基礎、包括處理 VMware vSphere 與儲存系統之間通訊的 VASA Provider 。</block>
   <block id="1e75c3aefc057fba3eb404b66908f202" category="section-title">VMware vSphere 儲存 API - 陣列整合（ VAAI ）</block>
   <block id="f342ea0503bb6e23ae2d63b919acac27" category="paragraph">VAAI 是一組 API 、可在 VMware vSphere ESXi 主機和儲存裝置之間進行通訊。這些 API 包括一組主機用來將儲存作業卸載到陣列的原始作業。VAAI 可大幅改善儲存密集工作的效能。</block>
   <block id="0b005ce81ed4bd887cfab261d9070079" category="section-title">vVols資料存放區</block>
-  <block id="db07ee4ed1ddb3f939892b140a23cd3a" category="paragraph">VVols 資料存放區是 VVols 容器的邏輯資料存放區呈現、由 VASA Provider 建立及維護。</block>
   <block id="6772d57ff19ee93553d25bf56f393392" category="section-title">零RPO</block>
-  <block id="b528f501fc8de0d95230ff4729b26803" category="paragraph">RPO 是指恢復點目標、這是在指定時間內可接受的資料遺失量。零 RPO 表示無法接受資料遺失。</block>
   <block id="c8ae2664c1636dc82742c9e4a7d61618" category="section-title">指派權限</block>
   <block id="8199d65907d89211dfcf977c5adaa6ea" category="summary">適用於 VMware vSphere 的 ONTAP 工具支援高可用度的 \(HA\) 組態、有助於在故障期間為 VMware vSphere 提供不中斷的 ONTAP 工具功能。</block>
   <block id="9624863e1bada8aa7f612552980aaa76" category="paragraph">適用於 VMware vSphere 的 ONTAP 工具支援高可用度（ HA ）組態、有助於在故障期間為 VMware vSphere 提供不中斷的 ONTAP 工具功能。</block>
@@ -632,7 +602,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="63bc9a3997d66d835d9f3ec29451407d" category="cell">修補程式</block>
   <block id="41e9abb5d58ca11ff36c3067c273a762" category="paragraph">修補程式「 /api/v1/vCenter/56d373bd-4163-44f9-a872-9adabb008ca9/Migrate-jobs/84dr73bd-9173-65r7-w345-8ufdbb887d43</block>
   <block id="bdfee7ad87d9004e1091e6e1762d0e84" category="paragraph">* JSON 輸入範例 *</block>
-  <block id="07959986337388ebd736dc282a14afca" category="paragraph">* 啟用診斷 *</block>
   <block id="589c4957e1e0bb7b0bf55fa835dbaf3d" category="list-text">輸入 *y* 以設定您選擇的密碼。</block>
   <block id="0a01c0c2d00b20ff323dc6b25ceb30a5" category="list-text">kN 執行 -it NtV-MongoDB-0sh - kn 是 kubectl -n NtV-system 的別名。</block>
   <block id="bfc1d4c138c87f77e5b639193ca91674" category="list-text">使用下列其中一種方法、逐一拍攝所有磁碟區的快照：</block>
@@ -705,7 +674,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="6956cfc9382ccb41c8ac57f99255b409" category="sidebar">驗證複寫的儲存系統</block>
   <block id="42ac03a8bab25efc61489f3923976820" category="summary">如果您忘記了 ONTAP 工具管理員密碼、可以使用 ONTAP 工具為 VMware vSphere 維護主控台所產生的權杖來重設管理員認證。</block>
   <block id="5f479a62f2104046972d10f2cbf88255" category="paragraph">當您達到逾時時時、請增加的值<block ref="e7a7316b2dab3875c5aa0977c256ae38" prefix=" " category="inline-code"></block> 和<block ref="b6c033f4806640a2a2858512cf9f8c1b" prefix=" " category="inline-code"></block> 更高的價值。</block>
-  <block id="a84fd12354047a6ec2a5b6b1711524f5" category="cell">vCenter 7.0U3</block>
   <block id="c5e37bc00c030bf0bbf393fbb0102c75" category="summary">刪除 VMware vSphere 部署的 ONTAP 工具之後、您應該清理部署期間建立的 FlexVolumes 。如果您已使用專用的 ONTAP 叢集進行部署、則應該清理 FlexVolumes 、因為部署會建立許多未使用的 FlexVolumes 、導致效能降低。</block>
   <block id="6aa67ccabd12c5a1df1d1b2ed5e708fe" category="paragraph">_cat /opt/netapp/meta/Ansible _vars.yaml | grep -i protocol_</block>
   <block id="a2b995300ba8f79cc278568247266c61" category="paragraph">_kubectl 描述持續性磁碟區 | Grep internalName | awk -F'=' ' ' ｛ print $2 ｝ '_</block>
@@ -722,10 +690,8 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="8b0c3808285b6b86f1bde63223594631" category="paragraph">本節列出未使用使用使用者 JSON 檔案所建立之非管理員全域範圍叢集使用者所需的最低權限。如果叢集已新增至本機範圍、建議您使用 JSON 檔案來建立使用者、因為適用於 VMware vSphere 的 ONTAP 工具不只需要在 ONTAP 上進行資源配置的讀取權限。</block>
   <block id="484cebc53125766b84254b2ca0899b9c" category="doc">建立資料存放區</block>
   <block id="190ba216e5abb93c1ba4ee19a2b96c79" category="section-title">建立 VVols 資料存放區</block>
-  <block id="ef728c8519a79414267cc16e51bf7c4f" category="paragraph">您可以使用新的磁碟區或現有的磁碟區來建立 vVols 資料存放區。您無法以現有和新磁碟區的混合形式建立 vVols 資料存放區。</block>
   <block id="4756276b2f8600b15e3b2537cf52faf5" category="section-title">建立 NFS 資料存放區</block>
   <block id="025fcf8a2aeeec85b0e969b7dc206ef0" category="paragraph">VMware 網路檔案系統（ NFS ）資料存放區使用 NFS 傳輸協定、透過網路將 ESXi 主機連線至共用儲存裝置。NFS 資料存放區通常用於 VMware vSphere 環境、並提供多項優點、例如簡易性和靈活度。</block>
-  <block id="2710b75030951da73f0267637e131179" category="admonition">Kerberos 驗證只有在選取 NFS 4.1 傳輸協定時才能使用。</block>
   <block id="7fb0d7d431a883d893699e725d41b19c" category="paragraph">NFS 資料存放區會建立並掛載於所有主機上。</block>
   <block id="3b79323c405b48e8e2d5fbc5960da84d" category="section-title">建立 VMFS 資料存放區</block>
   <block id="d16644a258624270fbc604b4a9c10811" category="paragraph">在高效能環境中、或是當您使用單一 LUN 資料存放區測試效能時、請考慮將循環（ VMW_PSP_RR ）路徑選擇原則（ PSP ）的負載平衡設定、從預設的 IOPS 設定 1000 變更為 1 。</block>
@@ -770,9 +736,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="86ce6e9c3af571980099ca308cd245e3" category="list-text">輸入<block ref="45c48cce2e2d7fbdea1afc51c7c6ad26" prefix=" " category="inline-code"></block> 以變更 ONTAP 認證。</block>
   <block id="207c00a73dde0270cc0fbc7ce9c5f2fd" category="list-text">輸入<block ref="d3d9446802a44259755d38e6d163e820" prefix=" " category="inline-code"></block> 以變更 vCenter 認證。</block>
   <block id="ab475951501b4995dc2913e61372d546" category="section-title">雙堆疊</block>
-  <block id="6fad70424d056d4284134202caa28cae" category="paragraph">雙堆疊網路是支援同時使用 IPv4 和 IPv6 位址的網路環境。</block>
-  <block id="c44d290e1f1de6d718f00f72c70dbd6b" category="paragraph">當您在主機叢集層級建立資料存放區時、會在目的地的所有主機上建立並掛載資料存放區、而且只有在目前使用者有權執行的情況下、才會啟用該動作。</block>
-  <block id="259450d9669b66ac4364e9fcbb6c06e6" category="list-text">在 * 名稱和傳輸協定 * 窗格中、輸入資料存放區名稱、大小和傳輸協定資訊。在進階選項中、選取 * 資料存放區叢集 * 和 * Kerberos 驗證 * 。</block>
   <block id="5541521d8d465590f0919510f29154b2" category="summary">部署 VMware vSphere ONTAP 工具的組態限制</block>
   <block id="96c7de8d06430bb8621d9ca29f8bf76b" category="paragraph">您可以使用下表做為指南、為 VMware vSphere 設定 ONTAP 工具。</block>
   <block id="4043f29990bf7ab4f6f8e863d6aaacfa" category="cell">*部署*</block>
@@ -813,39 +776,22 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="f4eabc000ad2416081f1f8bc62960f34" category="cell">* 部署類型 *</block>
   <block id="cd0e7d46f22aa5207ca306eeab997625" category="cell">* CPU*</block>
   <block id="5a4776483c0990d54df47e0a2478facc" category="cell">* 記憶體（ GB ） *</block>
-  <block id="ae9e13b66877a85be97724063f459ec2" category="section-title">一致性群組</block>
-  <block id="eba11c7a4079ec571b88361adcae2df5" category="inline-link">一致性群組</block>
-  <block id="0668b41054907094c1a4aab4f8e838d1" category="paragraph">一致性群組是以單一單元管理的磁碟區集合。在 ONTAP 中、一致性群組可為跨越多個磁碟區的應用程式工作負載提供簡易的管理和保護保證。深入瞭解<block ref="53f778179cc7ee2da9dcd6ff88e07f22" category="inline-link-rx"></block>。</block>
   <block id="4270d5032de4f1180467417459750041" category="section-title">NVMe 命名空間和子系統</block>
-  <block id="a808b19248024e982d85ac3646d7bf5b" category="paragraph">NVMe命名空間是一組可格式化為邏輯區塊的非揮發性記憶體。命名空間相當於FC和iSCSI傳輸協定的LUN、而NVMe子系統類似於igroup。NVMe子系統可與啟動器建立關聯、以便相關的啟動器存取子系統內的命名空間。</block>
-  <block id="a09155a336a104b7f9cfa8576cc317bb" category="section-title">SnapMirror 主動式同步（ SMAS ）</block>
   <block id="c0b79db5f258f0c991a383cbdbf001dd" category="inline-link">SnapMirror 主動同步</block>
-  <block id="cc3360d4f57f433c4bcf1fbb7183ebb7" category="paragraph">SnapMirror 主動式同步可讓業務服務持續運作、即使整個站台故障也沒問題、支援應用程式使用次要複本以透明方式容錯移轉。需要手動介入或自訂指令碼、才能使用 SnapMirror 主動同步觸發容錯移轉。詳細瞭解<block ref="51ec33761f23a6cc5cbb85c996201f16" category="inline-link-rx"></block>。</block>
   <block id="8e9ed19481c8eb7dd51ab53b6e29d603" category="section-title">統一且不一致的組態</block>
-  <block id="0512e2a82679369c41624007e96bc21e" category="list-text">* 統一主機存取 * 表示兩個站台的主機都會連線到兩個站台上儲存叢集的所有路徑。跨站台路徑會跨越距離延伸。</block>
   <block id="c5c3d303641c8de82dd1def68bca57a4" category="list-text">* 不統一的主機存取 * 表示每個站台中的主機僅連線到同一個站台中的叢集。不連接跨站台路徑和延伸路徑。</block>
-  <block id="807d1f4c65170af515dd6df899411e93" category="admonition">任何 SnapMirror 主動式同步部署都支援統一的主機存取；非統一的主機存取僅支援對稱式主動 / 主動式部署。</block>
   <block id="adbcecad06ff22a439836e6c9002cc82" category="section-title">vSphere Metro Storage 叢集</block>
   <block id="fdaedd61903be1be2102df0b95fd62f8" category="inline-link">VMware vSphere Metro Storage 叢集</block>
-  <block id="ab214a77aca7f1a5595c69a10b7f0c9d" category="paragraph">vSphere Metro Storage Cluster （ VMSC ）是一項技術、可在延伸叢集部署中啟用和支援 vSphere 。 NetApp MetroCluster 和 SnapMirror 主動式同步（前身為 SMBC ）支援 VMSC 解決方案。這些解決方案可在網域發生故障時、提供增強的營運持續性。恢復模式是根據您的特定組態選擇而定。深入瞭解<block ref="fae35a77d8fa39590c619f954aeac240" category="inline-link-rx"></block>。</block>
   <block id="743bb9eba37e39241a186d033a7c1e5d" category="list-text">在主機上按一下滑鼠右鍵、然後選取 * NetApp ONTAP tools* &gt; * 更新主機資料 * 。</block>
-  <block id="a2104e04e16a5328c37eb86f38533aab" category="list-text">如果父主機叢集受到自動化容錯移轉雙工原則類型（統一 / 非統一組態）關係的保護、則無法在主機上建立資料存放區。</block>
-  <block id="5574a2ea8c4feb96a776c4e8ce8a26dd" category="list-text">對於 ONTAP 儲存端的每個傳輸協定、必須啟用個別的服務和 LIF 。</block>
-  <block id="00e94fd17e3b9474f70e512906843f21" category="list-text">如果您使用的是 NVMe / TCP 傳輸協定、請執行下列步驟來設定 ESXi 主機：</block>
   <block id="e08175c6fa64cba68719dea85ebd9d34" category="inline-link">VMware相容性指南</block>
   <block id="72b09b662b0e75361f91362d0adfde15" category="list-text">檢閱<block ref="a6d0d92aff977bda14584dc7d272469a" category="inline-link-rx"></block></block>
-  <block id="e9e4d01bffe13c2dbe5e4d57dc2b4ed5" category="admonition">VMware vSphere 7.0 U3 及更新版本支援 NVMe / TCP 傳輸協定。不過、建議使用 VMware vSphere 8.0 及更新版本。</block>
-  <block id="af32540d65b68dd4ffe99fa4f536b21e" category="list-text">驗證網路介面卡（ NIC ）廠商是否支援採用 NVMe / TCP 傳輸協定的 ESXi NIC 。</block>
-  <block id="14db2df8fb05123f2db51ba24cbb8101" category="list-text">根據 NIC 廠商規格、為 NVMe / TCP 設定 ESXi NIC 。</block>
   <block id="4f425bfd3451c6bcedd3fd5a1ce0a26d" category="inline-link">為 NVMe over TCP 介面卡設定 VMkernel Binding</block>
   <block id="6d42fe15ef428c6dc66bed1e59a4e237" category="inline-link">在 ESXi 上設定 NVMe over TCP</block>
   <block id="a36819c9a38cba7c918742e034acfe59" category="inline-link">啟用透過 RDMA 或 NVMe over TCP 軟體介面卡的 NVMe</block>
   <block id="521a15c47fb41d8055141333f4c3f248" category="inline-link">透過 RDMA 或 NVMe over TCP 介面卡新增軟體 NVMe</block>
   <block id="f897e941469c1def0ceaad5904784393" category="inline-link">如何使用 vSphere 8.0 Update 1 和 ONTAP 9 。 13.1 設定適用於 VMFS 資料存放區的 NVMe / TCP</block>
   <block id="b52744b7fe6a50a639b45ebe19c17f96" category="list-text">如果您使用的是 NVMe / FC 傳輸協定、請執行下列步驟來設定 ESXi 主機：</block>
-  <block id="0d2e4cff54d6f550e6b15a47007a161c" category="list-text">在 ESXi 主機上啟用 NVMe over Fabrics （ NVMe of ）。</block>
   <block id="802068251371051bc6ae5a5f001b4460" category="list-text">完成 SCSI 分區。</block>
-  <block id="5f4022a89fa2916b88e95fd012e1aa5d" category="list-text">確保 ESXi 主機和 ONTAP 系統連接在實體層和邏輯層。</block>
   <block id="e453c56da63764c242859f9bf8ca4931" category="inline-link">設定SVM for FC</block>
   <block id="e6d87707afb4e94b68adbca153a0d259" category="paragraph">要爲 FC 協議配置 ONTAP SVM ，請參閱<block ref="e433f2b6cff4fad70c0f444b50873bf8" category="inline-link-rx"></block>。</block>
   <block id="c719ab5e5b2a188adebd62c0829a9f96" category="inline-link">適用於 ESXi 8.x 與 ONTAP 的 NVMe 主機組態</block>
@@ -920,23 +866,15 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="303fed3350b929d95f1f937c9d4e0032" category="admonition">如果已卸載受保護的資料存放區、則退出保護設定可能會導致部分保護。請參閱<block ref="7f22d9c478ecf91907e72215f8fe7f7b" category="inline-link-macro-rx"></block>以啟用完整保護。</block>
   <block id="0073dc7bd5514abf0999b550aa754930" category="list-text">從適用於 VMware vSphere 外掛 vCenter 伺服器 API 的 ONTAP 工具、在本機上建置儲存後端。將儲存設備新增為本機範圍的儲存設備、以進行移轉。</block>
   <block id="1c9a04fa9475b21ef9be5e7bd0f30822" category="list-text">從遠端外掛 vCenter 伺服器 API 本機建立內建儲存後端。將儲存設備新增為本機範圍以進行移轉。</block>
-  <block id="f43686bab1c60489c1eac5ecb1ec8c7b" category="cell">093</block>
-  <block id="ebf11048b18616fbd6ba58d38a1858be" category="cell">094</block>
   <block id="fb9ce87f03a0429d0af0760d01b74612" category="cell">095</block>
   <block id="b5e39b37a2c811e88e1f07aa15f0ba15" category="summary">HA 和非 HA 部署均支援升級。</block>
-  <block id="7504b99fb3697e6b7b59cd3c56ab26b7" category="paragraph">如果您要從適用於 VMware vSphere 10.0 的 ONTAP 工具升級至 10.1 、則必須先完成下列步驟、才能繼續執行升級工作：</block>
   <block id="174e0bb9fd863076b8b78d2ca9e0dd08" category="sidebar">掛載 NFS 和 VMFS 資料存放區</block>
   <block id="41d4fa725cfb558559b7183adeea1e30" category="sidebar">卸載 NFS 和 VMFS 資料存放區</block>
   <block id="e6e4c7644f1b4ac0c9a1fa2e3a633259" category="sidebar">展開 vVol 資料存放區</block>
   <block id="0b05bd7cf8d32e0eca345c170c1c2bdd" category="sidebar">更新 vCenter 伺服器和 ONTAP 認證</block>
   <block id="b380edc36b1ed383fd72d0b93d5857c5" category="sidebar">管理主機叢集保護</block>
   <block id="430cbe0d7261af556b6d05cea5b38e0e" category="sidebar">修改主機叢集保護</block>
-  <block id="3b5ecbf19ef44926d9273018c28f7e3c" category="paragraph">適用於 VMware vSphere 的 ONTAP 工具是一組用於虛擬機器生命週期管理的工具。它與 VMware 生態系統整合、有助於資料存放區資源配置、並為虛擬機器提供基本保護。</block>
-  <block id="9b69ea2dc9e7a75dc2e6d51a798b7c4e" category="paragraph">適用於 VMware vSphere 的 ONTAP 工具是一組可水平擴充、事件導向的微服務、部署為開放式虛擬應用裝置（ OVA ）。此版本已將 REST API 整合至 ONTAP 。</block>
-  <block id="9c914c30102fcf893634491740cba696" category="paragraph">ONTAP 工具管理員可透過託管的 vCenter Server 執行個體和已建立的儲存後端、為 VMware vSphere 管理員提供更多的 ONTAP 工具控制權。ONTAP Tools Manager 可協助管理 vCenter Server 執行個體、儲存設備後端、憑證、密碼和記錄套件下載。</block>
-  <block id="81d59d981388d591597f0840a1778f7c" category="paragraph">SRA 是安裝在 VMware Live Site Recovery 應用裝置內的儲存廠商專屬軟體。此介面卡可在 Site Recovery Manager 與儲存虛擬機器（ SVM ）層級的儲存控制器之間、以及叢集層級組態之間進行通訊。</block>
   <block id="4fb2d974d1e232174a0545c1d40f5345" category="section-title">VMware Live Site Recovery</block>
-  <block id="1d722888e5f73607abb8bf4b2938744c" category="paragraph">VMware Live Site Recovery 可為 VMware 虛擬環境提供營運不中斷、災難恢復、站台移轉及不中斷營運的測試功能。</block>
   <block id="605caedbbf37df4c8a64351c8698690d" category="paragraph">如需產品功能：</block>
   <block id="66d8073e2bee2f887f0a4b000fd4018a" category="list-text">VSC</block>
   <block id="11032269c7440d479ebdfed54df8983e" category="list-text">VSC 和 VASA Provider</block>
@@ -1006,8 +944,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="12aad99311cc30ce7ff1a450a29c3ec0" category="list-text">您應該已使用 VMware Live Site Recovery 陣列管理員配對受保護的站台和還原站台。</block>
   <block id="425e3f9f511fc3cc32fb57688da1ec81" category="sidebar">適用於 VMware vSphere 9 的舊版 ONTAP 工具文件</block>
   <block id="ee3ab12b14efcd93221e2e76410a3142" category="sidebar">瞭解 VMware vSphere with ONTAP</block>
-  <block id="c81176933931ab131bb0e0556e02bad1" category="paragraph">虛擬機器檔案系統（ VMFS ）是專為在 VMware vSphere 環境中儲存虛擬機器檔案而設計的叢集式檔案系統。它可讓多個 ESXi 主機同時存取相同的虛擬機器檔案、提供 VMotion 和高可用度等功能。</block>
-  <block id="5482792d8f62d9c636f95fc96476727d" category="paragraph">請先檢查下列項目再繼續：</block>
   <block id="da6388fdc3d2fad794be9aa033101c19" category="open-title">使用 ONTAP 工具管理器</block>
   <block id="6245e46af5a3bdaf57696763c4214c70" category="doc">新增 vCenter Server 執行個體</block>
   <block id="76c9f2fd0b61e8f84a42f7ab8d5ce641" category="admonition">如需詳細資訊、請參閱<block ref="b5992e6d058c0c347b7f52b58c58c7d5" category="inline-link-rx"></block>部落格。</block>
@@ -1057,12 +993,10 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="ed8359854c43609fca7bc8a46cca9eac" category="sidebar">ONTAP 工具 9 和 ONTAP 工具 10 的功能比較</block>
   <block id="1bf63b567c68de7fcd78fcc89f42f93c" category="sidebar">使用主機叢集保護來保護</block>
   <block id="d8ddfdd9298e5862ca00168195c4be29" category="sidebar">使用 SRA 保護來保護</block>
-  <block id="a2635d75789f249837881cc5136979e1" category="paragraph">*完成後*</block>
   <block id="73413dc748808c141555f95dacc368af" category="list-text">若要設定叢集 ONTAP 工具使用者，請選取 * 叢集 * &gt; * 設定 * &gt; * 使用者與角色 * 窗格。</block>
   <block id="122159aaab87ec5c9bfb746121abf088" category="list-text">若要設定 SVM ONTAP 工具使用者，請選取 * 儲存 SVM* &gt; * 設定 * &gt; * 使用者與角色 * 窗格。</block>
   <block id="9d65b5cebe69c5a066b9142b67334767" category="list-text">若要設定叢集 ONTAP 工具角色，請選取 * 叢集 * &gt; * 設定 * &gt; * 使用者與角色 * 窗格。</block>
   <block id="5aa0457cc95965b125467f8be60fadcf" category="list-text">若要設定叢集 SVM ONTAP 工具角色，請選取 * 儲存 SVM* &gt; * 設定 * &gt; * 使用者與角色 * 窗格</block>
-  <block id="ef0a0294be4f16882c4e18df7a17b72f" category="paragraph">您可以使用維護主控台選項 * 應用程式組態 * &gt; * 停用 AutoSupport * 來停用 AutoSupport 。建議您保持啟用狀態。啟用 AutoSupport 有助於加速問題偵測、並協助更快解決問題。系統會收集 AutoSupport 資訊、並將其儲存在本機、即使 AutoSupport 已停用。不過、它不會將報告傳送至任何網路。您需要使用第一個 VM 的維護主控台來提供 Proxy URL 。使用選項 * 應用程式組態 * &gt; * 更新 AutoSupport Proxy URL* 來輸入 Proxy URL 。</block>
   <block id="e995d56efd9e31d97825dd79be4d1383" category="inline-link">瞭解 ASA R2 儲存系統</block>
   <block id="e3d3af7525d3e3fb797e7dad595bc6a3" category="section-title">恢復點目標（ RPO ）</block>
   <block id="881eb19c557d05be93005ed4bcf1f120" category="paragraph">RPO 是資料備份或複寫頻率的衡量標準。它代表停機後必須恢復資料的時間點，才能恢復業務營運。例如，如果組織有 4 小時的 RPO ，則在發生災難時，它可以容忍最多 4 小時的資料遺失。</block>
@@ -1081,19 +1015,7 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="72f03d94c66157200753d4baac523d6f" category="paragraph">若要使用上述建立的 API 型角色建立新的 API 型使用者，請執行下列命令：</block>
   <block id="961d96e1f0a0f17d1a78e37f48137bc2" category="paragraph">若要解除鎖定帳戶，若要啟用對管理介面的存取，請執行下列命令：</block>
   <block id="3ce635f0fbf3a9f1cd9709aa0a4edb7d" category="section-title">將適用於 VMware vSphere 10.1 使用者的 ONTAP 工具升級為 10.3 使用者</block>
-  <block id="1e881b0096e32efd8f76e57798bfb5be" category="paragraph">如果 VMware vSphere 10.1 的 ONTAP 工具使用者是使用 json 檔案建立的叢集範圍使用者、請在 ONTAP CLI 上使用管理員使用者執行下列命令、以升級至 10.3 版本。</block>
-  <block id="59ce3cdcb64efaf0360e7ca205dc328e" category="paragraph">如果 VMware vSphere 10.1 的 ONTAP 工具使用者是使用 json 檔案建立的 SVM 範圍使用者、請使用管理員使用者在 ONTAP CLI 上執行下列命令、以升級至 10.3 版本。</block>
-  <block id="0f8e6a0c5a16a490062aa9802999b596" category="list-text">您只能在受保護的叢集上建立 VMFS 資料存放區。將 VMFS 資料存放區新增至受保護的叢集時、資料存放區會自動受到保護。</block>
-  <block id="9ff5d4b4efce8f3dada6ea961efce12d" category="list-text">只有在主機具有非同步關係時，才能在主機上建立 VMFS 資料存放區。</block>
-  <block id="99ffb35f7a315e5b9ff4015fcee0ac1b" category="paragraph">從 VMware vSphere 10.3 的 ONTAP 工具開始，您可以使用 ASA R2 類型的 ONTAP 儲存設備來建立 vVols 資料存放區。在 ASA R2 系統上建立的 VVols 資料存放區是以精簡版 vVol 的空間效率建立。Vasa Provider 會在建立 vVol 資料存放區工作流程期間，建立容器和所需的傳輸協定端點。此容器不會有任何備份磁碟區。</block>
-  <block id="8b44043bb6a0b04360c590fbec888956" category="list-text">請確定 VASA Provider 已向所選的 vCenter 登錄。</block>
-  <block id="079cb7dacffd0010ca8b567e0793a02f" category="list-text">對於 ASA R2 儲存系統中的 SVM 使用者， SVM 應對應至 Aggregate</block>
-  <block id="5defceb7bb23a52ffa8eda55ee02c802" category="admonition">ASA R2 儲存類型僅支援適用於 VVols 的 iSCSI 和 FC 傳輸協定。</block>
-  <block id="e6fa1662155a759bbefdb0296567ebe6" category="list-text">在 * Storage* 窗格中，選取您要建立資料存放區的儲存 VM 。在 * 進階選項 * 區段中、視情況選取自訂匯出原則（適用於 NFS 傳輸協定）或自訂啟動器群組名稱（適用於 iSCSI 和 FC 傳輸協定）。</block>
-  <block id="968523dd6877f4f0a416c205799ed41e" category="admonition">在 ASA R2 儲存類型 SVM 中，儲存單元（ LUN/ 命名空間）不會建立，因為資料存放區只是邏輯容器。</block>
-  <block id="0a25ee59738566fab422bd58433e8600" category="list-text">在 * 儲存屬性 * 窗格中、您可以建立新的磁碟區或使用現有的磁碟區。建立新磁碟區時、您可以在資料存放區上啟用 QoS 。此步驟不適用於使用 ASA R2 類型 ONTAP 儲存設備的 vVols 資料存放區，因為 vVol 資料存放區沒有備份磁碟區。依預設，每個 LUN 建立要求都會建立一個磁碟區。</block>
   <block id="349a6dfa3619aee6aee78d4371eb5cf8" category="list-text">從 * 儲存屬性 * 窗格：</block>
-  <block id="564d5871c9fec0bf22c4c5f37c28c50b" category="list-text">從下拉式功能表中選取 * Aggregate * 。</block>
   <block id="36d8439d85f01c3bc293f723943375a6" category="summary">當您在 vCenter 用戶端的捷徑區段中選取適用於 VMware vSphere 外掛程式的 ONTAP 工具圖示時，使用者介面會導覽至概要頁面。此頁面類似儀表板、提供 VMware vSphere 外掛程式的 ONTAP 工具摘要。</block>
   <block id="677e1ca12445d4fc6810ab8d8b674802" category="doc">適用於 VMware vSphere 儀表板的 ONTAP 工具概觀</block>
   <block id="bf6df769c30fc0c495c99d9c389503fd" category="paragraph">在概述頁面中，您可以執行 *Discovery* 動作。探索行動會在 vCenter 層級執行探索，以偵測任何新增或更新的儲存設備後端，主機，資料存放區和保護狀態 / 關係。您可以執行實體的隨選探索，而無需等待排程的探索。</block>
@@ -1141,52 +1063,30 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="68e32f2ca80884363d28d319b655230e" category="cell">非 HA 媒體</block>
   <block id="c51ce410c124a10e0db5e4b97fc2af39" category="cell">13</block>
   <block id="4e732ced3463d06de0ca9a15b6153677" category="cell">26</block>
-  <block id="a6a0d72da846dccd02e21fc959a36f78" category="cell">HA Small</block>
   <block id="02e74f10e0327ad868d138f2b4fdd6f0" category="cell">27</block>
   <block id="a684eceee76fc522773286a895bc8436" category="cell">54</block>
   <block id="5055cbf43fac3f7e2336b27310f0b9ef" category="cell">1050</block>
-  <block id="88bb746fd1145e0c925919ebc864b55b" category="cell">HA 媒體</block>
   <block id="d67d8ab4f4c10bf22aa353e27879133c" category="cell">39</block>
   <block id="35f4a8d465e6e1edc05f3d8ab658c551" category="cell">78</block>
-  <block id="dc0d449d8610df386b624416f13aa645" category="cell">HA 大型</block>
   <block id="2838023a778dfaecdc212708f721b788" category="cell">51</block>
   <block id="0451c056108f9b7a3d2a5ab1fc561256" category="cell">9.14.1 ， 9.15.1 和 9.16.0 。FAS ， ASA A 系列， ASA C 系列， AFF A 系列， AFF C 系列和 ASA R2 。</block>
   <block id="b2dd36bd4918e00f8b2e15e6d62a4b94" category="cell">VASA供應商</block>
-  <block id="4a920d14425c3a17ead55b4d93d9f5be" category="cell">10.3</block>
   <block id="41b07b979210ee3b74b8321a449a902e" category="cell">非 HA</block>
   <block id="76841410d8f9a6881e0b96f150e9cedf" category="section-title">連接埠需求</block>
   <block id="d254becfd1f24aefd56d5a76da23dc90" category="paragraph">下表概述 NetApp 使用的網路連接埠及其用途。確保這些連接埠是開放且可存取的，以利在系統內正常運作和通訊。請確定已設定必要的網路組態，以允許這些連接埠上的流量正常運作，使相關服務正常運作。視您的安全性原則而定，您可能需要設定防火牆或其他安全設備，以允許網路中的此流量。</block>
   <block id="5ddcf17f54788a5bb9148e8671562c06" category="cell">*連接埠*</block>
-  <block id="f0585a6acfa5b4078673a8a1c0d350ac" category="cell">22 （ TCP ）</block>
   <block id="07ac8d53698f067d7d278deb303748d3" category="cell">Ansible 在叢集資源配置期間使用此 SSH 連接埠進行通訊。此連接埠是變更維護使用者密碼，狀態訊息等功能所必需的，在 HA 組態的情況下，也需要更新所有三個節點上的值。</block>
-  <block id="5d778c994f28bde711dfc3896d087acc" category="cell">443 （ TCP ）</block>
-  <block id="51e1729ebe78aa6583c2806bd5982eb7" category="cell">8443 （ TCP ）</block>
   <block id="05820e7e588ce97dc4656c92f1b83966" category="cell">此連接埠可透過 swagger 和 Manager 使用者介面應用程式來裝載 API 文件。</block>
-  <block id="2a03194d164e0f03a76cc41099ff8988" category="cell">2379 （ TCP ）</block>
   <block id="a5cc260611cf9a7ec571425794a59970" category="cell">這是用戶端要求的預設連接埠，例如取得，放置，刪除或監看 etcd 金鑰值存放區中的金鑰。</block>
-  <block id="3779e775af387afae4fbbd33fdd7f842" category="cell">2380 （ TCP ）</block>
   <block id="8251f4d10510ac6bdb1df6c86a270877" category="cell">這是 etcd 叢集的伺服器對伺服器通訊預設連接埠，用於 etcd 用於資料複寫和一致性所依賴的 raft Consensus 演算法。</block>
-  <block id="347a316e2a67da5316e6d8a2397b2805" category="cell">7472 （ TCP+UDP ）</block>
   <block id="daf6d8a8d78132982e15d86e6c438d2c" category="cell">這是 Prometheus 計量服務連接埠。</block>
-  <block id="8c340be6a89ca97c4af7b42628cbc335" category="cell">7946 （ TCP+UDP ）</block>
   <block id="d0c5d9fb3af3553dbc8aa2d531b38b8f" category="cell">此連接埠用於 Docker 的容器網路探索。</block>
-  <block id="4669594dac40249be880d63ece4e60fd" category="cell">9083 （ TCP ）</block>
-  <block id="e44129481d47005dcb6572a5d35961cb" category="cell">1162 （ UDP ）</block>
   <block id="ef2d924bd68e8697255e5349875213c7" category="cell">這是 SNMP 設陷封包連接埠。</block>
-  <block id="219b39abc603cd5da84b03eac4802e2b" category="cell">6443 （ TCP ）</block>
   <block id="344246837eb9cebeda0390f27595098a" category="cell">來源： RKE2 代理節點。目的地： REK2 伺服器節點。說明： Kubernetes API</block>
-  <block id="107932c5d6c053c7051ef2946d13ecca" category="cell">9345 （ TCP ）</block>
   <block id="d1666d7b518ad556f4c40bbdc50656d1" category="cell">來源： RKE2 代理節點。目的地： REK2 伺服器節點。說明： REK2 監督 API</block>
-  <block id="3295f62f33609af7ff71d0af8e349ea7" category="cell">8472 （ TCP+UDP ）</block>
   <block id="8133e71f09aebd3b7b7114054e3996be" category="cell">當使用 fl2el VXLAN 時，所有節點都必須能夠透過 UDP 連接埠 8472 到達其他節點。來源：所有 RKE2 節點。目的地：所有 REK2 節點。說明：使用 VXLAN 的 Canal CNI</block>
-  <block id="b7a91dc8e0f6cc82a25ad1785dcedb6f" category="cell">10250 （ TCP ）</block>
   <block id="26e6b756f989b3caa29f4476282eb8a7" category="cell">來源：所有 RKE2 節點。目的地：所有 REK2 節點。說明： Kubelet 指標</block>
-  <block id="9f32d800eaefffbccdbd5e880f12b7a8" category="cell">30000-32767 （ TCP ）</block>
   <block id="8954b42ae621d3a93011debf55edbeaf" category="cell">來源：所有 RKE2 節點。目的地：所有 REK2 節點。說明： NodePort 連接埠範圍</block>
-  <block id="8b0a92e131bc34d4e903c131fd9cfbd1" category="cell">123 （ TCP ）</block>
-  <block id="35c211cc071efdc363887148f64e7983" category="cell">ntpd 使用此連接埠來執行 NTP 伺服器的驗證。</block>
-  <block id="899799bf5fac7afe26cbcc769ed8ad80" category="inline-link">適用於 VMware vSphere 10.3 的 ONTAP 工具注意事項</block>
-  <block id="021375f513cfa8c84971e1d3570f8f58" category="paragraph"><block ref="021375f513cfa8c84971e1d3570f8f58" category="inline-link-rx"></block></block>
   <block id="5f5053e002bb673864826817a2f5203c" category="paragraph">ONTAP 工具索引標籤會顯示憑證類型（自我簽署 /CA 簽署）和網域名稱等詳細資料。在部署期間，預設會產生自我簽署的憑證。您可以續約憑證或將憑證升級至 CA 。</block>
   <block id="043925c248050af88bd5572f4c47c484" category="list-text">若要將自我簽署的憑證升級為自訂 CA 憑證，請選取 * 憑證 * &gt; * ONTAP 工具 * &gt; * 升級至 CA* 選項。</block>
   <block id="21d108129175f5ff7e7d38e10818e345" category="list-text">如果 VMFS 資料存放區是在 ASA R2 系統上建立，而且是保護的一部分，則需要在刪除資料存放區之前先取消保護。</block>
@@ -1196,8 +1096,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="1ea68582c5812061ab6e0dec557f5c98" category="list-text">前往 VMware vSphere 外掛程式 ONTAP 工具概觀（儀表板）中的 * ESXi 主機相容性 * 入口小工具。</block>
   <block id="2e528e0090a590aef663fa1b0e9cbdc3" category="list-text">如果您已新增 ESXi 主機、保護狀態會顯示為「部分受保護」。選取 SnapMirror 設定下的省略符號功能表，然後選取 * 編輯 * 來設定新增 ESXi 主機的鄰近度。</block>
   <block id="f48c5996dde7700c4b8e02b156be64a9" category="list-text">選取 SnapMirror 設定下的省略符號功能表，然後選取 * 刪除 * 。</block>
-  <block id="d21289b9715739d521ff6caef69a0eb6" category="summary">由於 VMware vSphere 10.3 的 ONTAP 工具使用動態儲存資源配置程式，因此您無法達成零 RPO 。不過，您可以達成接近零 RPO 的目標。</block>
-  <block id="801f8e0562d879f86130e69cbce87379" category="paragraph">由於 VMware vSphere 10.3 的 ONTAP 工具使用動態儲存資源配置程式，因此您無法達成零 RPO 。不過，您可以達成接近零 RPO 的目標。若要達到接近零 RPO ，您需要建立設定的備份，並將其還原至新的虛擬機器。</block>
   <block id="c6f939dae0e5259bce57860afc541419" category="section-title">建立備份並下載備份檔案</block>
   <block id="7da533dd7cf119bc5d2fd71b38cfc352" category="list-text">輸入<block ref="a87ff679a2f3e71d9181a67b7542122c" prefix=" " category="inline-code"></block>以選擇 * 支援與診斷 * 。</block>
   <block id="0ffb851c60654455c01df466a395c905" category="list-text">輸入<block ref="eccbc87e4b5ce2fe28308fd9f2a7baf3" prefix=" " category="inline-code"></block>以選擇 * 啟用系統備份 * 選項。</block>
@@ -1210,7 +1108,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="f3339694a217b0e737161405c32883a8" category="paragraph">在檔案區段中，您可以看到目錄。目錄名稱將是 ONTAP 工具 IP 位址，其中點（ . ）會以底線取代，後綴為 _backup_ 。</block>
   <block id="28a3c71bc8b930cbb143a953b280ff77" category="list-text">如需更多備份資訊，請從 * 檔案 * &gt; * 下載 * 下載 backup_info.txt 檔案。</block>
   <block id="556b050ce914d18480d6ea30308c7790" category="section-title">恢復</block>
-  <block id="0257152c27ddf171a4b3edfc7ccd5e2e" category="paragraph">您需要為新虛擬機器使用相同的 ONTAP 工具 IP 位址（負載平衡器 IP ），而啟用服務，節點大小和 HA 模式等系統組態必須與初始部署相同。</block>
   <block id="48df8282c6ef2568bf19692f06e384d8" category="paragraph">請執行下列步驟，從備份檔案恢復設定。</block>
   <block id="f4390ce78cde74ea3d01d9bf8948585a" category="list-text">輸入<block ref="c81e728d9d4c2f636f067f89cc14862c" prefix=" " category="inline-code"></block>以選擇 * 啟用遠端診斷存取 * 選項，並建立新的診斷存取密碼。</block>
   <block id="2b14fa2b913f5dc1aee80e0410c21a00" category="list-text">從下載的目錄中選取任何一個備份。最新的備份檔案名稱會記錄在 _backup_info.txt_ 檔案中。</block>
@@ -1220,14 +1117,11 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="cc6f23548d79558cc785e66bb64756c5" category="paragraph">記錄會記錄在 /var/log/post-deploy-upgrade 記錄檔中。</block>
   <block id="0305dc99772d0a5c329839aa9316d5e1" category="list-text">成功還原之後，服務和 vCenter 物件就會還原。</block>
   <block id="8746628f0f2c5087a8e2a516211f31a4" category="doc">展開 vVols 資料存放區</block>
-  <block id="2a0e10d3d583ad5ef09d7693b1329038" category="admonition">展開 vVols 資料存放區作業不適用於 ASA R2 型 VVols 資料存放區。</block>
   <block id="7a8e7317ab9023c8e3dac44950232672" category="list-text">更新 AutoSupport Proxy URL</block>
   <block id="d51a3b8155ff2f65ec368b7278c07f16" category="list-text">提供 vCenter 認證以進行備份</block>
   <block id="1f3bf2522a0df56ad834875880cfcc04" category="list-text">進行備份</block>
   <block id="425455a0df6d10586a41711a1553bfae" category="inline-link">建立虛擬機器進行複製</block>
-  <block id="681d233e491ad7e8ec82fd9193581181" category="paragraph">如需詳細資訊，請參閱<block ref="276aed995f6320cbafa4bfe03cc7ac04" category="inline-link-rx"></block>。</block>
   <block id="70a4eccd665ed7fc2f16889dd9f717de" category="paragraph">您可以在最近的工作面板中追蹤進度。</block>
-  <block id="a1a77ce2be2c879d158a13c22d948645" category="admonition">ASA R2 型 VVols 資料存放區不支援壓縮 vVols 資料存放區作業。</block>
   <block id="e3ad07a7efc1e8b336d03741c1f32de2" category="doc">ONTAP 工具報告</block>
   <block id="180601e1ba64860fb737529d587c1244" category="summary">應用程式使用者密碼用於向 vCenter Server 登錄的 SRA 和 VASA Provider 。</block>
   <block id="3dfefa78e78119f274196be7062db3fe" category="list-text">在 *VASA / SRA 認證 * 畫面中，選取 * 重設密碼 * 。</block>
@@ -1235,48 +1129,21 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="b0bc3604d114546b6aae8777d8ac55fc" category="admonition">對於用於 VMware vSphere HA 部署的 ONTAP 工具，您應該變更主要節點（即 node1 ）上的維護主控台使用者密碼。</block>
   <block id="6af43bd137ddca6aadd0587323c669ae" category="paragraph">您可以在「最近的工作」面板中追蹤進度。</block>
   <block id="2797bd5927c3cbd3ea400a45d2884b54" category="paragraph">儲存後端頁面會列出所有儲存後端。您可以在新增的儲存設備後端執行探索儲存，修改及移除作業，而非在叢集下的個別子 SVM 上執行。</block>
-  <block id="0ae836564a89cedf23c9cb768ee35ac8" category="list-text">當 SVM 或叢集的分解屬性設為「 true 」時， ASA R2 叢集向下切入檢視不會包含「本機階層」索引標籤。</block>
   <block id="adbfd849396b043f4dcb2a476c5c8679" category="list-text">對於 ASA R2 SVM 系統，容量 Portlet 不會顯示出來。只有當 SVM 或叢集的分解內容設為「 true 」時，才需要容量入口網站。</block>
   <block id="a0232c1a7a8b2051db36fee0cee48ac5" category="list-text">對於 ASA R2 SVM 系統，基本資訊區段會顯示平台類型。</block>
   <block id="623a19a9d92512b6c3a5932066325ffa" category="paragraph">介面索引標籤提供有關介面的詳細資訊。</block>
   <block id="bbf638168b43bf582cecf10177afc3d2" category="paragraph">本機層索引標籤提供有關彙總清單的詳細資訊。</block>
   <block id="c46965d55afff0a89c0bb3bd26c0a653" category="summary">移轉儲存資料時、會使用 REST API 手動建立儲存後端。移轉 VASA Provider 資料時，資料會從現有的 Derby 資料庫匯出，並匯入至 MongoDB 資料庫。</block>
-  <block id="e43b5fd407b2bc9fda1a39851a48f9bb" category="doc">從適用於 VMware vSphere 9.x 的 ONTAP 工具移轉至 10.3</block>
-  <block id="98db65da9a06955541a5451543410fde" category="list-text">部署適用於 ONTAP 工具的 OVA for VMware vSphere 10.3 版本。</block>
   <block id="b7b423b5e37e418ae4659bcf83c729b5" category="section-title">Vasa Provider 移轉步驟</block>
   <block id="2d3feeef6331c15c90e4aea5b6cc1e41" category="list-text">將適用於 VMware vSphere 儲存供應商的 ONTAP 工具新增至 vCenter Server 和 <block ref="a322950c1b9e940cddaca5a47e2d5895" category="inline-link-macro-rx"></block>。</block>
   <block id="ffdec42d5d13cecca850e153f75748ec" category="paragraph">請勿刪除 VASA Provider 。</block>
-  <block id="29d0e7add25c8163223dbcb531abf7d0" category="paragraph">成功移轉之後、將 ONTAP 工具 10.3 登錄至 vCenter Server 之後、請執行下列步驟：</block>
   <block id="073983521d52887782f4ac8fcd628e60" category="cell">ONTAP 工具 10.2 以上版本</block>
-  <block id="f4950bb5572ea7201d6246f4bd786edd" category="cell">適用於 ONTAP 工具 10.2 的 ONTAP 9.12.1 至 ONTAP 9.15.1 ，適用於 ONTAP 工具 10.3 的 ONTAP 9.14.1 ， 9.15.1 及 9.16.0 。</block>
   <block id="f995a81db9639d1f6676a86caa7c78e5" category="cell">Vasa Provider 支援</block>
-  <block id="ac02d419043fd95f1ebe00675d9461a1" category="paragraph">瞭解適用於 VMware vSphere 10.3 的 ONTAP 工具所提供的全新增強功能。</block>
-  <block id="16e8deb7ec8db3834e1ec3294cd203bc" category="inline-xref-macro">適用於 VMware vSphere 10.3 的 ONTAP 工具的新功能</block>
-  <block id="2a558aacac847fe242b61a3bf4e771e0" category="paragraph">若要深入瞭解從適用於 VMware vSphere 9 的 ONTAP 工具移轉至 ONTAP 工具 10.3 是否適合您的部署<block ref="947428ca1064f8d19137fb8976698998" category="inline-xref-macro-rx"></block>、請參閱。支援從適用於 VMware vSphere 9.12-D 的 ONTAP 工具和 9.13-D 版本移轉至適用於 VMware vSphere 10.3 的 ONTAP 工具。</block>
-  <block id="61237500c1312a2c4f9b2b74dff2170b" category="inline-link">適用於 VMware vSphere 10.3 版本資訊的 ONTAP 工具</block>
-  <block id="c2ec10ddfa3de574244b7b99ca6f7938" category="summary">瞭解適用於 VMware vSphere 10.3 的 ONTAP 工具所提供的新功能。</block>
-  <block id="b01cee62177f4d25aa5def6464793c19" category="doc">適用於 VMware vSphere 10.3 的 ONTAP 工具的新增功能</block>
-  <block id="599efd55c5aee4c5df18abb2efc635dd" category="paragraph">支援新的平台和應用程式版本</block>
-  <block id="8371a5fa1d8bb0ae1bdd8912deb5c444" category="paragraph">適用於 VMware vSphere 10.3 的 ONTAP 工具現在支援下列平台和應用程式版本：</block>
-  <block id="4d1032a03aba1586feda4c8fab4c85dc" category="list-text">ONTAP 9.16.0 及更新版本</block>
-  <block id="a6c4332a582ef6d1a64d140186d0cf3a" category="list-text">VMware vSphere 8.0 U3</block>
-  <block id="b667d6fa97ff01756e88f3168db8444b" category="list-text">VMware Live Site Recovery 9.0</block>
-  <block id="64525fe0829fe69b75e39ae5ba1c0208" category="paragraph">易於部署</block>
-  <block id="99fae07115377a2806f5924d7e3ec9d2" category="paragraph">您現在可以在單一節點叢集上以最低需求部署適用於 VMware vSphere 10.3 的 ONTAP 工具，然後將其更新為高可用度（ HA ）或多節點部署。</block>
-  <block id="37286964f2cd52b6ac47a43d65710d1d" category="paragraph">無縫的資源配置與組態</block>
-  <block id="d73eba126fbd680dcae3b2e10f1cee53" category="paragraph">適用於 VMware vSphere 10.3 的 ONTAP 工具已移除與 Trident 相關的相依性，現在則使用動態儲存資源配置程式來啟用無縫的資源配置和組態。</block>
-  <block id="639a217896f764871645f4296d94b64f" category="paragraph">強化 REST API 驗證的安全性</block>
-  <block id="75c0128d8eccd009e0b2fb51dffe197c" category="paragraph">適用於 VMware vSphere 10.3 的 ONTAP 工具現在仰賴 CA 簽署的 ONTAP 工具 REST API 和使用者介面憑證，以提供更高的安全性。</block>
-  <block id="1e095c69621645fccc8f12cd7f35f6fc" category="paragraph">支援 ASA R2 系統</block>
-  <block id="a7fc1f2106f0f36a37c10c358564a7f3" category="paragraph">適用於 VMware vSphere 10.3 的 ONTAP 工具支援 ASA R2 系統上的 VMFS 資料存放區資源配置，可透過 SnapMirror Active Sync 和 SRA/VMware Live Site Recovery 來保護 VMFS 資料存放區。</block>
-  <block id="3d4851416f773d0391365da5adb2df3e" category="paragraph">提升觀察能力</block>
   <block id="03e9426221ac6cb0336a2ac030bb2e09" category="cell">請使用零 RPO 或快照型還原，然後重試升級。</block>
   <block id="699367f1b3c801b6c4400aae0b5b9f33" category="cell">請檢查 /var/log/upgrade-run.log ，然後重試升級。</block>
   <block id="6d9d5797fe617e2ac7643f8dd03066ec" category="cell">請依照下列步驟恢復 / 完成升級。1.啟用診斷 Shell 2 。執行命令： _Sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postupgrade _ 3 。請至 /var/log/post-deploy-upgrade.log 查看記錄</block>
   <block id="14283ba30ac4ac9edb7427caac16f983" category="cell">請執行下列步驟以恢復 / 完成升級。1.啟用診斷 Shell 2 。執行 _Sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postupgrade 命令 3.請至 /var/log/post-deploy-upgrade.log 查看記錄</block>
   <block id="8f61d962bdf356dffa9c5eef03bc96b0" category="cell">檢查 VM 網路設定是否與裝載 VM 的主機相容。您可以嘗試將虛擬機器移轉至其他主機，然後重新啟動。</block>
-  <block id="0ae50930586ee9a388768d402bd48b68" category="cell">動態儲存資源配置程式升級失敗</block>
-  <block id="53957c3da9c308bf9ee1db2c580255b7" category="cell">動態儲存資源配置程式復原失敗</block>
   <block id="ad31ff4743e0d2ef1673c8da265fa79a" category="cell">作業系統升級失敗</block>
   <block id="9bff86a80df1b0a07a9770ae7b28facb" category="cell">作業系統升級無法恢復。ONTAP 工具服務已升級，新的 Pod 將會執行。</block>
   <block id="dbf8788eda83a48f0d5c5888117030e5" category="cell">檢查升級記錄，然後重試升級。</block>
@@ -1298,15 +1165,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="2b5d6db0e60e657edda5976056981a00" category="cell">解除安裝動態儲存資源配置程式失敗</block>
   <block id="73278a4a86960eeb576a8fd4c9ec6997" category="cell">113</block>
   <block id="2298090c8808f9e231d33a417e9f8fda" category="cell">重新整理次要節點上的資源失敗</block>
-  <block id="1ca37d27a58b0a0a35fd38c8f42f39fc" category="admonition">適用於 VMware vSphere 10.3 的 ONTAP 工具支援零 RPO 。</block>
-  <block id="e085c3225ffce6bb698ac8cf50cc0dc4" category="doc">從適用於 VMware vSphere 10.x 的 ONTAP 工具升級至 10.3</block>
-  <block id="b82f42f52ac5fdc3e618aefefe8a32c4" category="cell">適用於 VMware vSphere 10.1 和 10.2 組態的 ONTAP 工具</block>
-  <block id="b3b9272a2c469166be75d90b4b3c80cc" category="cell">適用於 VMware vSphere 10.3 組態的 ONTAP 工具</block>
-  <block id="55fccd63301cc56ac04a1c6d2f582d36" category="cell">非 HA 和先進的小型企業</block>
-  <block id="2f876f935e1583f150a8df2b2a6edbf0" category="cell">非 HA 和進階媒體</block>
-  <block id="4bab1341c76020b5f6d28c63555579b4" category="cell">進階小型</block>
-  <block id="8cd81bc4ea1b977ea6e585721caa4349" category="cell">進階媒體</block>
-  <block id="1b6cfd8c0ad7fbb4f3aad55904bed183" category="cell">10.3 部署類型</block>
   <block id="5d86ea2686b1b1322f7a0284c0f51191" category="cell">每個節點的 CPU （核心）</block>
   <block id="5c42add8c77b8db0c96fe2b4bd853355" category="cell">每個節點的記憶體（ GB ）</block>
   <block id="6d9bbbb98d16e191da3c3d39c264093b" category="cell">每個節點的磁碟空間（ GB ）</block>
@@ -1324,14 +1182,11 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="1e137377f709a1d14e9081a633895f6d" category="list-text">輸入 *2* 以選擇 * 啟用遠端診斷存取 * 。</block>
   <block id="6628bd5e9dbb13f60147cfc8d04cb977" category="paragraph">* 拍攝所有 Volume 的 quaise 快照 *</block>
   <block id="a6d135b70268e6dae6e2414dc9c7e465" category="inline-link">拍攝虛擬機器的快照</block>
-  <block id="51d976aa6e2371bc36e19441158b8e08" category="paragraph">升級至適用於 VMware vSphere 10.3 的 ONTAP 工具之後，您可以：</block>
   <block id="12da67bb345ae219e1ec7b1f8d8f09dd" category="paragraph">成功升級後，請使用下列程序，手動從 ONTAP 刪除 Trident 磁碟區：</block>
   <block id="528fcc96313b41a079cf4a618d21bc56" category="list-text">輸入 *4* 選擇 * Support and Diagnostics* （ * 支援與診斷 * ）功能表。</block>
   <block id="69fc33706a999a8497eea8a0a1410092" category="list-text">執行下列命令</block>
   <block id="4c4796167c3422541c6e31f440e40302" category="list-text">輸入 ONTAP 使用者名稱和密碼</block>
-  <block id="2e0332b2709dcff7df5d28c654c54066" category="sidebar">適用於 VMware vSphere 10.3 的 ONTAP 工具</block>
   <block id="3d7d171ecad1cba0c2d8d707b648b023" category="sidebar">設定受保護和恢復站台</block>
-  <block id="039f647b3ad55c89a6a5ff0d6109bd4f" category="paragraph">適用於 VMware vSphere 10.3 的 ONTAP 工具可擴充對 VMFS 和 vVol 資料存放區及其各自 VM 的觀察指標支援。</block>
   <block id="01e681f5a8de12d6be77dfc0e567c731" category="summary">VMware vSphere 10 REST API 參考的 ONTAP 工具包含所有 API 呼叫的詳細資料。此參考資料在開發自動化應用程式時非常實用。</block>
   <block id="d2f73ce531661447cb475cb1f2d2e3bf" category="doc">適用於 VMware vSphere 10 REST API 之 ONTAP 工具的 API 參考</block>
   <block id="08abdf16d81e0cbba6b259bea49cdf99" category="list-text">在瀏覽器中輸入下列 URL ，以適當的 IP 位址和連接埠組合來取代變數，然後按下 *Enter* 。</block>
@@ -1394,7 +1249,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="19ec08da81a826d919d64ab860845c04" category="inline-link-macro">API 參考資料</block>
   <block id="3a7801515e8905c5c1b58caba299deae" category="paragraph">REST API 包括數種資源類別，例如 vCenter 和 Aggregate 。如需詳細資訊，請參閱<block ref="f993b2671c2a028bb49c8687852396a0" category="inline-link-macro-rx"></block>。</block>
   <block id="45cd4354f07a1ab359a1cc263ed79868" category="section-title">如何存取REST API</block>
-  <block id="655869188533f107f8244bd668d07902" category="paragraph">您可以透過 ONTAP 工具負載平衡器 IP 位址和連接埠來存取 VMware vSphere 10 REST API 的 ONTAP 工具。完整 URL 有幾個部分，包括：</block>
   <block id="2380e443be52c3a8babdac8a3660044f" category="list-text">ONTAP 工具 IP 位址和連接埠</block>
   <block id="7d1d9327371097419bdf83ffa671d2f2" category="list-text">API 版本</block>
   <block id="bbf5c9c73b20bfa79e158e8eeb77c470" category="list-text">資源類別</block>
@@ -1484,15 +1338,11 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="eaff07db9f9bd4c788b59cf5ac2e6f5e" category="paragraph"><block ref="eaff07db9f9bd4c788b59cf5ac2e6f5e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="8c5a94dd08e58279f7461d929aa633e6" category="paragraph">移轉儲存資料時、會使用 REST API 手動建立儲存後端。移轉 VASA Provider 資料時，資料會從現有的 Derby 資料庫匯出，並匯入至 MongoDB 資料庫。</block>
   <block id="b191a7ff08bb6435186d922c59ff1907" category="admonition">只有當設定僅為 VASA Provider 功能提供服務時，您才應移轉適用於 VMware vSphere 9.xx 的 ONTAP 工具設定。</block>
-  <block id="656a2ce4c62bd399a29a0cc087a7eb83" category="admonition">從適用於 VMware vSphere 9.x 的 ONTAP 工具移轉至 10.3 之後，含 NVMe / FC 傳輸協定的 vVols 資料存放區無法運作，因為 ONTAP 工具 10.3 只支援使用 VMFS 資料存放區的 NVMe 。</block>
-  <block id="f9f52fdfc3b658d087ef0d1715cc2008" category="paragraph">您可以從適用於 VMware vSphere 9.12D1 和 9.13D2 版本的 ONTAP 工具移轉至 10.3 。</block>
   <block id="12f864a7f79090b1b0f169109899eb43" category="admonition">在升級至修補程式版本之前，您必須從目前版本取得 OVA 備份。</block>
   <block id="b4c20aabb2d8056ffe9e2b60a0164bf2" category="paragraph">移轉之前，請確定其中一個站台處於受保護狀態，另一個站台處於恢復狀態。</block>
   <block id="c7c25af309bd84b7749f1862027abc3f" category="admonition">如果容錯移轉剛剛完成，且重新保護擱置中，請勿移轉。完成重新保護，然後執行移轉。完成恢復計畫測試後，請清理測試恢復並開始移轉。</block>
   <block id="0f47e7ab13b9f8031de10689d97b861b" category="list-text">移至 * 儲存複寫介面卡 * 區段</block>
   <block id="e316aaa000b8dea913558dbe47e2ab03" category="list-text">在適用於 VMware vSphere 的現有 ONTAP 工具上啟用 Derby 連接埠 1527 。若要啟用連接埠，請使用 root 使用者登入 CLI ，然後執行下列命令：</block>
-  <block id="fdb5b6876d97a075f0bc2a07cd4be907" category="list-text">部署適用於 VMware vSphere 10.3 的 OVA for ONTAP 工具。</block>
-  <block id="34b17f133cdce8c13fd8b812b8c11211" category="list-text">新增您要移轉至 ONTAP 工具的 vCenter Server 執行個體，以取得 VMware vSphere 10.3 版本。請參閱。 <block ref="946669e64e0e42585f18099dec81ec03" category="inline-link-macro-rx"></block></block>
   <block id="142e4d3f8edb2747fa0e3d260133b8c1" category="paragraph">工作完成後、請驗證移轉報告。報告是工作資料的一部分，可從工作回應中看到。</block>
   <block id="009dbe214d15197679fe0b95a8a01cc3" category="list-text">從維護主控台停止適用於 VMware vSphere 儲存供應商 9.10/9.11/9.12/9.13 VASA Provider 服務的 ONTAP 工具。</block>
   <block id="4bf6186a3a16efffdaebdafdd4fcaf4b" category="paragraph">一旦停止舊的 VASA Provider ， vCenter Server 就會容錯移轉至適用於 VMware vSphere 的 ONTAP 工具。所有的資料存放區和 VM 都可以存取、並可從適用於 VMware vSphere 的 ONTAP 工具取得。</block>
@@ -1507,14 +1357,9 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="c16f1c2a54634bdad6dee177f8131ef5" category="list-text">選取 * 套用 *</block>
   <block id="b180a96ee0634f423c4629bca8858873" category="paragraph">在 * VM 儲存原則相容性 * 下的法規遵循狀態現在顯示為相容。</block>
   <block id="bd6bc908cf442363948229bac8df6193" category="list-text">來源和目的地叢集必須先建立相同的自訂 SnapMirror 排程，才能執行 ONTAP 工作流程。</block>
-  <block id="53fa6655b37323ab66a83f1beb9f66c1" category="paragraph">HA 和非 HA 部署皆支援升級。支援的升級路徑有：</block>
-  <block id="6057f03ffe4bbf8fd9e051002f4f22bb" category="admonition">支援從適用於 VMware vSphere 10.1 和 10.2 到 10.3 的 ONTAP 工具升級。不支援從 ONTAP 工具 10.0 直接升級至 10.3 。</block>
   <block id="a37e11c372d948a69c1ca06f96f29654" category="paragraph">如果是非 HA 升級，請關閉 ONTAP 工具 VM 的電源，如果是 HA 升級，請先關閉第一個節點的電源，然後再對虛擬機器（ VM ）設定進行下列變更。</block>
-  <block id="360d7dde1452a41a726a072836e13df3" category="list-text">將額外的 100 GB 硬碟新增至每個節點，因為服務資料會儲存在虛擬機器的本機上。</block>
-  <block id="d542d6e6bfec95dca9488d55ed772578" category="list-text">根據部署的風格，變更已關閉電源的 VM 的 CPU 和記憶體。啟用 CPU 和 RAM 的 Hot 外掛程式。</block>
   <block id="fdd3abbed4073b09c3b2a7f9316d5c88" category="list-text">變更完成後開啟虛擬機器電源，並等待服務進入執行中狀態。</block>
   <block id="ff305864530c5baf345b9688bd0631f4" category="list-text">如果是 HA 部署，請變更資源，啟用 CPU 和 RAM 的熱插件，並為第二個和第三個節點新增 100 GB 硬碟。無需重新啟動這些節點。</block>
-  <block id="aaa3919b119a4a5719987a826b3f426c" category="list-text">如果應用裝置是以 ONTAP 工具 10.1 或 10.2 部署為本機路徑（簡易部署），則必須在升級前先執行一次「不活動」快照。</block>
   <block id="c1da67abb88e41cb6c66ffcb6aa791c1" category="list-text">從 vCenter Server 開啟 ONTAP 工具的主控台。</block>
   <block id="8f6d00eacbf6d4158bc6e74700b0499e" category="list-text">從終端機 / 終端機登入 VM IP 位址，使用者身分為「 iag 」，以及在前一步驟中設定的密碼。</block>
   <block id="2528cd48cce125276b1d088b78c23ac4" category="paragraph">* 備份 MongoDB*</block>
@@ -1534,13 +1379,11 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="c8c29d2a26286541354fc8e377f3b6ce" category="list-text">從非 HA 設定移至 HA 設定</block>
   <block id="4521a8bb9c231770ace79aca6602dc13" category="list-text">將非 HA 小型組態擴充為非 HA 媒體或 HA 中型或大型組態。</block>
   <block id="48f74593cd55f85759914f3614a0c3b9" category="list-text">如果是非 HA 升級，請重新啟動 ONTAP 工具 VM 以反映變更。如果是 HA 升級，請重新啟動第一個節點，以反映節點上的變更。</block>
-  <block id="29c35069673bbb39e41492464283c461" category="paragraph">從 VMware vSphere 的舊版工具升級到 10.3 之後，請重新掃描 ONTAP 介面卡，確認詳細資料已在「 VMware Live Site Recovery Storage Replication Adapters 」頁面上更新。</block>
   <block id="97157e33a0e033b7effd56e6305b9030" category="admonition">如果 VMware vSphere 10.1 或 10.2 的 ONTAP 工具是採用非 HA 小型或中型（本機路徑）組態，則不需要執行這些步驟。</block>
   <block id="3ff3da4c344f1ccca0d255803305cce9" category="list-text">輸入 *1* 以選擇 * 存取診斷 Shell * 選項。</block>
   <block id="a1f81812b9996ffae82950938651b560" category="paragraph">這會刪除 ONTAP 工具 for VMware vSphere 10.1/10.2 中 ONTAP 中使用的所有 Trident Volume 。</block>
   <block id="9c1b85c4b3c7f912b4954489e7d9f1ad" category="list-text">以個別 API 呼叫為例，向下捲動至「 *vCenters 」類別，然後選取端點旁的「 Get * 」<block ref="22d8515b1a0806aac1067186e4429b4c" prefix=" " category="inline-code"></block></block>
   <block id="ef78cf93c4b4adc658c8565b28ac853c" category="paragraph">如需索取及使用存取權杖的範例，請參閱<block ref="02f9c42fec62e806982e89939749ac1d" category="inline-link-macro-rx"></block>。</block>
-  <block id="6700bd2d5a11f981faf541727c91e5eb" category="list-text">使用登入 vSphere 用戶端<block ref="9ad784043785fc1c1be39efefce3e216" prefix=" " category="inline-code"></block></block>
   <block id="3a3cf1aabccd549ecea01e8e5bd01415" category="list-text">在捷徑頁面中，選取外掛程式區段下方的 * NetApp ONTAP tools* 。</block>
   <block id="f017ca342576480350b43d2d7e7f73ae" category="summary">將 vCenter Server 執行個體新增至 VMware vSphere 的 ONTAP 工具，以設定，管理及保護 vCenter Server 環境中的虛擬資料存放區。</block>
   <block id="f05b95a344d62647f6489daf34512360" category="paragraph">透過與 vCenter 整合， ONTAP 工具可讓您直接從 vSphere 用戶端執行資源配置，快照和資料保護等儲存工作，無需切換至獨立的儲存管理主控台。</block>
@@ -1557,7 +1400,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="76700e4e74402f1dc0cbb4ce13dfb8cf" category="list-text">在 * 套用建議的主機設定 * 視窗中，選取您要更新的主機以符合 NetApp 建議的設定，然後選取 * 下一步 * 。</block>
   <block id="b27fb30d1dcf9cc1da220014dcb65168" category="list-text">在摘要窗格中，檢查值並選擇 * 完成 * 。您可以在最近的工作面板中追蹤進度。</block>
   <block id="80ac2f9578a520b00361f7d4b685dc67" category="list-text">選取使用者所需的 Privileges （探索，建立儲存設備，修改儲存設備，銷毀儲存設備， NAS/SAN 角色），然後選取 * 新增 * 。</block>
-  <block id="5bef79143531cb99f88ff82457e4d120" category="list-text">在 * 摘要 * 窗格中檢閱您的選擇，然後選取 * 完成 * 。VVols Datastore 會建立並掛載於所有主機上。</block>
   <block id="f3c8bab9486f9f6a5044434c97e0dfcc" category="list-text">檢閱「 * 摘要 * 」窗格中的選項，然後選取「 * 完成 * 」。</block>
   <block id="6bf995e8d13cb233d08744ba59e31de6" category="list-text">檢閱 * 摘要 * 窗格中的資料存放區詳細資料，然後選取 * 完成 * 。</block>
   <block id="93e132ab01db0bd2143f644738deb530" category="cell">狀態卡會顯示儲存後端的數量，以及儲存後端和 VASA Provider 的整體健全狀況狀態。當所有儲存設備的後端狀態均正常時，儲存設備後端狀態會顯示 * 健全 * ，如果任何儲存後端有問題（未知 / 無法連線 / 降級狀態），則會顯示 * 不良 * 。選取工具提示以開啟儲存後端的狀態詳細資料。您可以選取任何儲存後端以取得更多詳細資料。* 其他 VASA 提供者狀態 * 連結顯示已在 vCenter Server 中登錄的 VASA 提供者目前狀態。</block>
@@ -1675,33 +1517,16 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="f04d5a39f552e53928ef021fc890d6c5" category="cell">適用於 iSCSI VMFS 和 NFS v3 資料存放區的 SRA 複寫結合 SMAS 和 VMware Live Site Recovery 的三站台保護。</block>
   <block id="901db5b8a2bb826f006539770e8329a4" category="list-text">在虛擬機器上按一下滑鼠右鍵，然後選取 * 新增裝置 * &gt; * 硬碟 *</block>
   <block id="2c2d3019834934bb25449edddc396321" category="list-text">選取 ISO 檔案，然後選取 * 確定 * 。在 *CD/DVD 驅動器 * 字段中選擇 Connected （已連接）複選框。<block ref="af57a506b85774ef3a9f849e2b26e258" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="d33f2a600ba4fe43084a26e95e4908c0" category="paragraph">*相關資訊*</block>
-  <block id="588c54ba24d4dc42aed4a00de280a6c7" category="paragraph"><block ref="588c54ba24d4dc42aed4a00de280a6c7" category="inline-link-macro-rx"></block></block>
   <block id="7cef36111f48deb0a1c06475a0a59b80" category="list-text"><block ref="02abbf483718c447a62821a5783286ae" prefix="" category="inline-code"></block></block>
-  <block id="b59a60fbe3c8f0c4a205eb54707a7c99" category="paragraph"><block ref="b59a60fbe3c8f0c4a205eb54707a7c99" category="inline-link-macro-rx"></block></block>
   <block id="9e4b907c843e481024589dd74ed9c0f5" category="paragraph">除了適用於 VMware vSphere 10 REST API 的 ONTAP 工具之外， ONTAP 叢集還擁有自己的 REST API 。ONTAP 工具管理員使用 ONTAP REST API 做為用戶端來執行儲存相關工作。請務必記住，這兩個 API 是獨立且不同的。如需詳細資訊、請<block ref="2d4aebc414c2e9f6455c923c16f6303c" category="inline-link-rx"></block>參閱。</block>
   <block id="442290d4045e6c10552f661da43a9706" category="paragraph">新增儲存後端可讓您建置 ONTAP 叢集。</block>
-  <block id="0333b8e59818e95f8c3464384f005977" category="paragraph">若要將儲存後端新增至多租戶架構中的全域範圍叢集，請使用 ONTAP 工具管理員新增儲存後端。將儲存後端新增至全域叢集之後，您必須將叢集與所需的 vCenter 租戶建立關聯。vCenter 租戶必須搭載所需的儲存虛擬機器（ Storage Virtual Machines ， SVM ）。這可讓 SVM 使用者配置 vVols 資料存放區。您可以使用 SVM 在 vCenter 中新增儲存設備。</block>
-  <block id="91310533ef068c4c3d95d7102fd2e7da" category="paragraph">若要將儲存後端新增至本機範圍叢集，請使用 vCenter 伺服器上的 ONTAP 工具外掛程式，直接新增 ONTAP 系統。</block>
   <block id="a761d3a6a5565687c80a0d269ca343c4" category="admonition">在多租戶設定中，您可以全域新增儲存後端叢集，並在本機新增 SVM 以使用 SVM 使用者認證。</block>
   <block id="9cb992b5ee53404c646502db030f7c27" category="list-text">新增儲存後端，並提供伺服器 IP 位址或 FQDN ，使用者名稱和密碼詳細資料。</block>
   <block id="60f27fc86b38229b1a666fd3c7b129f1" category="admonition">支援 IPv4 和 IPv6 位址管理階層。</block>
   <block id="1aa7bf4bed36956e632c48c6bb9fe6ba" category="admonition">若要直接新增 SVM 使用者，您可以新增叢集型認證，以及 IPv4 和 IPv6 位址管理階層，或是提供 SVM 管理 LIF 的 SVM 型認證。</block>
   <block id="3f297ef15cde0668e93b35f2752fd4fd" category="paragraph-title">接下來呢？</block>
   <block id="10492389e94efdebbb66f7b0cd8a1324" category="list-text">選擇*保存*。</block>
-  <block id="e4365b2f9588eb138888d2bae6c6ac55" category="list-text">使用 VMware vSphere 7 版本時、請遵循 VMware 網站上的指示<block ref="6b6e21be7e83380915b7a93b5de98cc6" category="inline-link-rx"></block>來設定 NVMe / TCP 連接埠繫結。使用 VMware vSphere 8 版本時、請遵循<block ref="5075091467dfddb38b411ec1bb554877" category="inline-link-rx"></block>設定 NVMe / TCP 連接埠繫結。</block>
-  <block id="0738bb2742892ec72b20fc7b75fe9434" category="list-text">針對 VMware vSphere 7 版本，請依照第頁的指示<block ref="562342ed7eb0295ae9f7a72ea788d31d" category="inline-link-rx"></block>來設定 NVMe / TCP 軟體介面卡。針對 VMware vSphere 8 版本、請遵循<block ref="1f8f8787602f2f92045aa29b0a3fa467" category="inline-link-rx"></block>設定 NVMe / TCP 軟體介面卡。</block>
-  <block id="9d596e014ec247e8a36a9d698795a54f" category="list-text"><block ref="c076a6b54534640d64418e3f25ccabbb" category="inline-link-macro-rx"></block>在 ESXi 主機上執行動作。如需詳細資訊、請<block ref="08964a7c7e6cd9155ed7286907a68824" category="inline-link-rx"></block>參閱。</block>
   <block id="bb9abdb0ecdc4e8ad5c61844a27d7f18" category="list-text">選取 VMFS 資料存放區類型。</block>
-  <block id="e402bcd72bd39747a6c313db6cf82245" category="list-text">在 *Name and Protocol* 窗格中輸入資料存放區名稱，大小和傳輸協定資訊。如果您選擇將新的資料存放區新增至現有的 VMFS 資料存放區叢集，請在 * 進階選項 * 下選取資料存放區叢集選取器。</block>
-  <block id="a72fa1b6283bc49d7a35448bc8066b82" category="list-text">在 * Storage* 窗格中選取儲存 VM 。在窗格的 * 進階選項 * 區段中提供 * 自訂啟動器群組名稱 * （選用）。您可以為資料存放區選擇現有的 igroup ，或使用自訂名稱建立新的 igroup 。</block>
-  <block id="b92a49b47aaba3383c46457e51f8c0e3" category="paragraph">當傳輸協定選取為 NVMe / FC 或 NVMe / TCP 時、會建立新的命名空間子系統、並用於命名空間對應。根據預設，命名空間子系統是使用自動產生的名稱（包括資料存放區名稱）建立。您可以在 *Storage* 窗格的進階選項中的 * 自訂命名空間子系統名稱 * 欄位中重新命名命名命名空間子系統。</block>
-  <block id="00ada22f90c98fe11bd33a45e83b1999" category="admonition">對於 ASA R2 儲存系統， * Aggregate * 選項並不需要，因為 ASA R2 儲存設備是分類式儲存設備。當您選擇 ASA R2 類型 SVM 時，儲存屬性頁面會顯示啟用 QoS 的選項。</block>
-  <block id="dad78f51ffa5cc75da90723bb5cbfabe" category="list-text">根據所選的傳輸協定，儲存單元（ LUN/ 命名空間）是以 Thin 類型的空間保留建立。</block>
-  <block id="e77dbde1a15a93146a6e8dade4132fbe" category="list-text">選擇 * 使用現有的 Volume * ， * 視需要啟用 QoS* 選項，並視需要提供詳細資料。</block>
-  <block id="a773526fcff88687996b249fcf52a4e9" category="admonition">在 ASA R2 儲存類型中，磁碟區建立或選擇不適用於儲存單元建立（ LUN/ 命名空間）。因此不會顯示這些選項。</block>
-  <block id="a12edc4e622d67446faed12a699ce69c" category="admonition">如果是使用 NVMe / FC 或 NVMe / TCP 傳輸協定建立 VMFS 資料存放區，則您無法使用現有的磁碟區，因此應該建立新的磁碟區。</block>
-  <block id="4e9c2fb6a8fbbc31672733b95f6185ee" category="admonition">如果您要在受保護的叢集上建立資料存放區，則會看到一則唯讀訊息「 The datastore is mounted on a protected Cluster （資料存放區正在受保護的叢集上掛載）」。VMFS 資料存放區會建立並掛載於所有主機上。</block>
   <block id="ff91c9509417650db07b3cfb867286fa" category="paragraph">在 * 確認 * 對話方塊中，確認您的選擇。</block>
   <block id="a4190631e34ccca7730e594f6655cc87" category="paragraph">使用適用於 VMware vSphere 的 ONTAP 工具，您可以在 ESXi 主機上設定逾時和其他值，以確保最佳效能和成功容錯移轉。適用於 VMware vSphere 的 ONTAP 工具集的價值是以內部 NetApp 測試為基礎。</block>
   <block id="6a56526090ecb77854d07be849799242" category="paragraph">MPIO 設定可定義 NetApp 儲存系統的偏好路徑。它們會判斷哪些可用路徑已最佳化（而非透過互連纜線的非最佳化路徑），並將偏好的路徑設為其中一條路徑。</block>
@@ -1734,7 +1559,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="721a0cb2e546dae89564af8a23d13306" category="cell">HA 大型（累積三個節點）</block>
   <block id="4c90abc26074daa0aa69e5fcd9bac645" category="paragraph">如需詳細資訊、請<block ref="39a0a12cac57df4f5e3df88c1e683703" category="inline-link-rx"></block>參閱。</block>
   <block id="10cd1f260e9855405e5e3b0b9fd330f5" category="list-text">對網域名稱執行 nsLOOKUP 檢查，檢查網域是否已解析為預期的 IP 位址。</block>
-  <block id="a1f792ad305382a9dcc1c8551581cb57" category="list-text">應使用網域名稱和負載平衡器 IP 位址來建立憑證。</block>
   <block id="f01050ae79f30f1986973e3e8b1d62e0" category="admonition">您無法從 CA 簽署的憑證切換至自我簽署的憑證。</block>
   <block id="49f94738c3644fbe9136c4a2d758c0e8" category="open-title">升級 ONTAP 工具憑證</block>
   <block id="d051d66420b4ab4228c2f209cd30a155" category="list-text">選取 * 憑證 * &gt; * ONTAP 工具 * &gt; * 更新 * 以更新憑證。</block>
@@ -1757,7 +1581,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="3ac063bd7a8e9b85e1a6cc3c07a304c3" category="list-text">選擇右窗格中的 * 組態 * 標籤。</block>
   <block id="41e0fa10828ee2d85cfd4c0ff833ac64" category="inline-link">Storage VMotion</block>
   <block id="6981bfa872a319e4f266c3733ce4e5c3" category="list-text">選取右窗格中的 * 監控 * 標籤。</block>
-  <block id="e53a5f7966ebf538ff3fbae3277020fa" category="list-text">新增您要移轉至 ONTAP 工具的 vCenter Server 執行個體，以取得 VMware vSphere 10.3 版本。請參閱。<block ref="fbc3413db4202f1fe331f16af6b38f13" category="inline-link-macro-rx"></block></block>
   <block id="e6cd86d61f4639c8a27006c6c29b3e9f" category="list-text">選擇*下一步*。</block>
   <block id="03c100e80bdd94d3eb4d85dffe4eaecb" category="list-text">在管理索引標籤中選取 * 預留位置資料存放區 * &gt; * 新增 * ，以建立新的預留位置資料存放區。</block>
   <block id="1766c36b7d852fbd898c8f3e8757adf1" category="inline-link">變更儲存供應商設定</block>
@@ -1773,22 +1596,15 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="e0b7ac4ee5dae1212e32e99c489c4e53" category="list-text">在管理選項卡中選擇 * 資源映射 * &gt; * 新建 * 以創建新的資源映射。</block>
   <block id="ed8dc3baa490877497f62cd225d8531a" category="list-text">選取 * 物件 * &gt; * 動作 * &gt; * 配對站台 * 。</block>
   <block id="a1b0bb7b5d54e1fb2449b091677a7277" category="paragraph">瞭解從適用於 VMware vSphere 9 的 ONTAP 工具移轉至適用於 VMware vSphere 10.1 或更新版本的 ONTAP 工具是否適合您。如需最新的相容性資訊，請參閱<block ref="0aaf04254af18646f3d246cd4a4b417d" category="inline-link-rx"></block>。</block>
-  <block id="4703b882263e89c7d597b2ada50fc99a" category="paragraph">有關新功能和增強功能的完整列表，請參閱<block ref="bc3843eace7f4e21a753a0095be21ba6" category="inline-xref-macro-rx"></block>。</block>
-  <block id="eac305d871d102753386a94dcd4e13bf" category="paragraph">如需詳細資訊，請參閱<block ref="94872377b6c91690a7121bf54978d0b3" category="inline-link-rx"></block>。您必須使用 NetApp 帳戶登入、或建立帳戶才能存取版本資訊。</block>
   <block id="ed05024ef185f71f630610fa2998b97c" category="list-text">移至「 Snapshots 」（快照）標籤，然後選取「 * 拍攝 Snapshot* 」按鈕。拍攝虛擬機器的靜默快照。如<block ref="cfbcb02d8f4029fded9e80960c9fdffc" category="inline-link-rx"></block>需詳細資訊，請參閱。</block>
   <block id="edeaa9dc153db64cc7a139687f690234" category="paragraph">您可以透過 Swagger 使用者介面，線上存取適用於 VMware vSphere 10 REST API 的 ONTAP 工具文件。您需要適用於 VMware vSphere 10 閘道服務和連接埠的 ONTAP 工具 IP 位址或 FQDN 。</block>
   <block id="fde1abb5537b55c34521d414267b3f70" category="section-title">ASA r2 系統</block>
   <block id="bd605fff7af6a2da2d78ab96c4c19217" category="section-title">儲存設備後端</block>
-  <block id="e11e4e825b2240bfaf05656d41f53cd9" category="paragraph">儲存設備後端是 ESXi 主機用來儲存虛擬機器檔案，資料和其他資源的基礎儲存基礎架構。儲存後端可讓 ESXi 主機存取及管理持續資料，為虛擬化環境提供必要的儲存功能與效能。</block>
   <block id="a6fd0b4332e8ac1bd18da3d605f3f558" category="open-title">使用 vSphere 用戶端使用者介面</block>
-  <block id="15d9ec0601efc7a09529f55671b2bf35" category="admonition">當您使用 vSphere 用戶端使用者介面新增儲存後端時， vVols 資料存放區不支援直接新增 SVM 使用者。</block>
   <block id="1371ece860fedc2eae03b50872f67242" category="list-text">新增儲存後端，並提供伺服器 IP 位址，使用者名稱，密碼和連接埠詳細資料。</block>
-  <block id="ced4c95f9fc4250c1aa74943c11ec206" category="list-text">您無法在具有一或多個受保護主機叢集的資料中心上建立資料存放區。</block>
-  <block id="60d8b8fa72f69251888a1e6ca934ed63" category="list-text">在主機系統或主機叢集或資料中心上按一下滑鼠右鍵，然後選取 * NetApp ONTAP tools* &gt; * Create Datastore* 。</block>
   <block id="be6209d3bb83a7fd9e539a7a650de2dc" category="list-text">右鍵單擊所需的數據中心，然後選擇 NetApp ONTAP tools*&gt;* Update Host Data* 。</block>
   <block id="4e6630988c8d5d2e339ab683b972f17c" category="paragraph">根據預設，在部署期間會為 ONTAP 工具和 VASA Provider 產生自我簽署的憑證。使用 ONTAP 工具管理員介面，您可以更新憑證或將其升級至自訂 CA 。在多個 vCenter 部署中，自訂 CA 憑證是必要的。</block>
   <block id="853d42cf6fdf63ba4697dcc8b9eada59" category="list-text">憑證所核發的網域名稱應對應至虛擬 IP 位址。</block>
-  <block id="292db4dba96726f00285658995af4df7" category="admonition">負載平衡器 IP 位址應對應至完整網域名稱（ FQDN ）。憑證應包含對應至負載平衡器 IP 位址的相同 FQDN ，其名稱應為主體或主體替代名稱。</block>
   <block id="02d844dfe5fd0fc7cd13020f356ee57c" category="list-text">在變更密碼快顯視窗中、輸入舊密碼和新密碼詳細資料。變更密碼的限制會顯示在使用者介面畫面上。</block>
   <block id="b8b09f632a0b8f73d042a76d983ea497" category="admonition">從 ONTAP 工具管理員產生記錄時、會包含所有 vCenter Server 執行個體的所有記錄。從 vCenter 用戶端使用者介面產生記錄的範圍為所選的 vCenter Server 。</block>
   <block id="b4c23769d8288509b67a8cd8c0c74fcf" category="paragraph">請遵循下列步驟，使用 vCenter 用戶端使用者介面產生記錄套件：</block>
@@ -1808,7 +1624,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="39037b551a4495c32d5aa53bb3952e75" category="list-text">在左側導覽窗格中，選取包含主機的資料中心。</block>
   <block id="54862297571dca9382bb198a79d53cf3" category="list-text">若要在主機或主機叢集上掛載 NFS/VMFS 資料存放區，請按一下滑鼠右鍵，然後選取 * NetApp ONTAP tools* &gt; * Mount Datastores* 。</block>
   <block id="fa946c7b8b00ac3d8f1845bdcf279074" category="paragraph">您無法從所有主機上卸載資料存放區。使用者介面建議您改用刪除資料存放區作業。</block>
-  <block id="0cd5eb24f781f0b49a6c666e5220c98c" category="list-text">只有在觸發資料存放區探索工作（可能需要 30 分鐘才能觸發）之後、才能在適用於 VMware vSphere 10.3 的 ONTAP 工具中看到從適用於 VMware vSphere 9.xx 的 ONTAP 工具移轉的 NFS 和 VMFS 資料存放區。確認「 VMware vSphere 外掛程式」使用者介面之 ONTAP 工具的「概觀」頁面上是否顯示資料存放區。</block>
   <block id="a0e42a34ad94909291f9863e606095c3" category="list-text">請執行下列步驟，在 VMware Live Site Recovery 使用者介面中刪除適用於 VMware vSphere 9.xx 版本的工具 ONTAP 介面卡：</block>
   <block id="989a54cf1e604ac6307e40dbc2072ca2" category="list-text">在 VMware Live Site Recovery 使用者介面頁面上，執行 * 探索陣列 * 和 * 探索裝置 * 作業，並驗證這些裝置在移轉之前是否顯示正常。</block>
   <block id="664d1c7a4b62c8e9260ce3fdf6ca12ed" category="admonition">在設定陣列管理員時，您應該針對用於 VMware vSphere 的 ONTAP 工具中儲存系統內建的儲存系統，使用相同的連線（ IP 位址）。例如、如果陣列管理員組態是 SVM 範圍、則應在 SVM 層級新增 ONTAP 工具下的 VMware vSphere 儲存設備。</block>
@@ -1833,15 +1648,10 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="5c4950449fdd46ff4c3981422e3fd6ff" category="list-text">輸入「 3 」以變更「 Maint 」使用者密碼。</block>
   <block id="4dbcaa40dfd796f9c86fd033df9508db" category="admonition">應用程式使用者名稱和密碼是在 ONTAP 工具部署期間設定的。這是 VASA Provider/SRA 登錄所需的項目。</block>
   <block id="f54e212052df635bcc70d25302fd583e" category="paragraph">解除安裝適用於 VMware vSphere 的 ONTAP 工具會刪除工具中的所有資料。</block>
-  <block id="9ebcd4f583a00c985808cafa9e416f71" category="sidebar">將適用於 VMware vSphere 9.x 的 ONTAP 工具移轉至 10.3</block>
   <block id="d15333fd508f1d73c6c7c18f9657c60b" category="summary">將儲存後端與 vCenter Server 建立關聯，以在儲存後端與已登入的 vCenter Server 執行個體之間建立全域對應。</block>
   <block id="f2b44f635f2072efed00e9602e1e2ff4" category="list-text">針對您要與儲存後端建立關聯的 vCenter Server 執行個體，選取垂直省略號。</block>
   <block id="199ed231411d6d659f29a3a7b2ea8db6" category="summary">第一次設定儲存系統時， AutoSupport 預設為啟用。在技術支援啟用 24 小時後，它會傳送訊息給技術支援人員。</block>
   <block id="c5adbf27ae2d8bfae599b0a24c10a95f" category="paragraph">第一次設定儲存系統時， AutoSupport 預設為啟用。在技術支援啟用 24 小時後，它會傳送訊息給技術支援人員。停用 AutoSupport 時，您將不再收到主動式支援和監控。</block>
-  <block id="e58a5d9f48a5cdc890b1cc0ed74ce0b4" category="admonition">建議您保持啟用 AutoSupport 。有助於加速問題偵測與解決。系統會收集 AutoSupport 資訊，並將其儲存在本機，即使停用也一樣。</block>
-  <block id="206c6d49d5c5796335731a0f4e58bfce" category="list-text">輸入 1 以選擇 * 應用程式組態 * 。</block>
-  <block id="751e721f42bb8bcac069e53bac5f873a" category="list-text">輸入 3 以選擇 * 停用 AutoSupport * 。</block>
-  <block id="3e4abab771250e025c846376cbe14b39" category="list-text">在確認對話方塊中輸入 y 。</block>
   <block id="cbd662f4329d81667a2e3c676911b7ad" category="doc">變更適用於 VMware vSphere 組態的 ONTAP 工具</block>
   <block id="9d9ea313f70ebddbbc3d882af75f5e27" category="paragraph">使用 ONTAP tooles Manager 可擴充 VMware vSphere 組態的 ONTAP 工具，以增加部署中的節點數量，或將組態變更為高可用度（ HA ）設定。VMware vSphere 應用程式的 ONTAP 工具最初部署在單一節點非 HA 組態中。</block>
   <block id="05cbe0f49011bed719b6be221d77d648" category="list-text">在 * 組態 * 區段中，您可以根據需求向上擴充以增加節點大小，並啟用 HA 組態。您需要 vCenter Server 認證才能進行任何變更。</block>
@@ -1855,10 +1665,8 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="949ade5949e752c9b4f748b78767cb9b" category="admonition">大部分的輸入選項都預先填入節點 1 網路詳細資料，以方便工作流程。不過，您可以先編輯輸入資料，再瀏覽精靈的最終頁面。只有在第一個節點上啟用 IPv6 位址時，才能輸入其他兩個節點的 IPv6 位址詳細資料。</block>
   <block id="5a3dd06e1dba58a23c8b8e8cc1b07e40" category="list-text">檢閱 * 摘要 * 區段中的詳細資料，並 * 儲存 * 變更。</block>
   <block id="4625cf8c2cfd4d7299bf041ace164a9e" category="doc">為 VMware vSphere 服務啟用 ONTAP 工具</block>
-  <block id="9fe60685734ac01c14b4766024bbb825" category="paragraph">管理程式可啟用 VASA Provider 等服務，使用 ONTAP 工具管理程式匯入 VVols 組態和災難恢復（ SRA ）。</block>
   <block id="8c0d7661d66e379665cc68d77a595468" category="paragraph">首次啟用服務時，您必須建立 VASA Provider 和 SRA 認證。這些功能可用於在 vCenter Server 上登錄或啟用 VASA Provider 和 SRA 服務。</block>
   <block id="7e436228231add180554f1acd06b74fc" category="admonition">停用任何選用服務之前，請確定由 ONTAP 工具管理的 vCenter Server 不會使用這些服務。</block>
-  <block id="54fbe99a0e3d1922e0a6e0da3cad38df" category="paragraph">只有在啟用 VASA Provider 服務時，才會顯示 * 允許匯入 vVols 組態 * 選項。此選項可讓 vVols 資料從 ONTAP tools 9.x 移轉至 ONTAP tools 10.3 。</block>
   <block id="ef1116c9ce2e3567875a69b012a5c5d8" category="list-text">當主機叢集受到統一組態的保護時，裝載資料存放區選項會停用。</block>
   <block id="f234e66a493b1542c97d72433c0faca6" category="paragraph">適用於 VMware vSphere 的 ONTAP 工具會在「組態」索引標籤中顯示資料存放區及其磁碟區的 ONTAP 儲存側視圖。</block>
   <block id="227564c7ae23f46cb9a10f5e6f37ebf8" category="list-text">從 vSphere 用戶端瀏覽至資料存放區。</block>
@@ -1866,16 +1674,11 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="2bff6d8315f7f8c6cf3c54e6e53d9698" category="cell">* 資料存放區類型 *</block>
   <block id="c961da7f498e50ff48715252d593d099" category="cell">* 可用資訊 *</block>
   <block id="69e64cda3f8125351b5e3c5ea7debf1d" category="cell">NFS 資料存放區</block>
-  <block id="74e31124e1e72252642c7463f8df3949" category="cell">「 * 儲存詳細資料 * 」頁面包含儲存後端，集合和磁碟區資訊。NFS 詳細資料頁面包含與 NFS 資料存放區相關的資料。</block>
   <block id="b5380e34617914719b059f6d55b97b66" category="cell">VMFS 資料存放區</block>
-  <block id="e90a62c0cabfdf4a4772ab497b68d3bb" category="cell">「 * 儲存詳細資料 * 」頁面包含儲存後端，集合和磁碟區資訊。「 *LUN 詳細資料 * 」頁面包含與 LUN 相關的資料。當 VMFS 資料存放區使用 NVMe / TCP 或 NVMe / FC 傳輸協定時， * 命名空間詳細資料 * 頁面會包含與命名空間相關的資料。ASA R2 儲存系統型資料存放區不會顯示 Volume 和 Aggregate 詳細資料。</block>
   <block id="e122a7a507ac1f580cc5b9f2632a851c" category="cell">VVols 資料存放區</block>
   <block id="c1a8e52dd0993e6a774c59c89bccf1e8" category="cell">列出所有磁碟區。您可以從 ONTAP 儲存窗格中展開或移除儲存設備。ASA R2 系統型 VVols 資料存放區不支援此檢視。</block>
   <block id="9f147a250dd9a5cd9d9745eb3f5f7668" category="paragraph">更新 AutoSupport Proxy URL ，確保在使用 Proxy 伺服器進行網路存取控制或安全措施的情況下， AutoSupport 功能正常運作。它可讓 AutoSupport 資料透過適當的 Proxy 進行路由，實現安全傳輸與法規遵循。</block>
-  <block id="8b1bce08d5421e10a7f1c336b269cbd5" category="list-text">輸入 4 以選取 * 更新 AutoSupport Proxy URL* 。</block>
-  <block id="24bbb6c78509566d72fa3e18de92a0fe" category="list-text">輸入 Proxy URL 。</block>
   <block id="cea51b5f4b8c25d096d54257d5d0348e" category="paragraph">新的 NetApp ASA R2 系統提供統一化的硬體與軟體解決方案，可針對僅限 SAN 的客戶需求，提供簡化的體驗。<block ref="f9c69c3c94cab41a57233cdf7452c3d6" category="inline-link-rx"></block>。</block>
-  <block id="9401e344ca7f0cbda5f2f0b48709397f" category="paragraph">在主機叢集層級建立資料存放區時，會在所有目的地主機上建立並掛載資料存放區。只有當您擁有所需的 Privileges 時，才能看到此選項。</block>
   <block id="40291729bc47db016ddfca9972ab2bda" category="list-text">從下拉式清單中選取儲存後端，將 vCenter Server 執行個體與所需的儲存後端建立關聯。</block>
   <block id="5a43e80953e87c7df463deaedcab9879" category="section-title">將儲存設備後端與 vCenter Server 執行個體分離</block>
   <block id="b5ae5420b0908ddbac99943f9b50285d" category="paragraph">vCenter Server 清單頁面會顯示相關的儲存後端數量。每個 vCenter Server 執行個體都可以選擇與儲存後端建立關聯或取消關聯。</block>
@@ -2042,9 +1845,7 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="80ca6447cbd8bd1ace2853c2fc7c8028" category="list-text">取得 FlexVol 磁碟區清單。</block>
   <block id="fde79a3ad6359be293ba5687504ff1e1" category="inline-link">移除並重新登錄 VM 和 VM 範本</block>
   <block id="0e430f76e438c52f413b9c67136dbe04" category="list-text">從 vCenter Server 移除 VM 。請參閱<block ref="c16fb322315174fa2c9720c74541cf45" category="inline-link-rx"></block>。</block>
-  <block id="b2dca496a096f8a331aea16e62f39944" category="list-text">從 ONTAP 系統管理員刪除 FlexVol Volume 。請參閱<block ref="eac8c90151648d7bc2ba6d1146004c9d" category="inline-link-rx"></block>。在用於刪除卷的 CLI 命令中，指定 FlexVol 卷的確切名稱。</block>
   <block id="5293b752fcab77f6d24ce6e77d0a5fac" category="list-text">如果是 iSCSI 部署，請從 ONTAP 儲存系統刪除 SAN igroup 。請參閱<block ref="14bc02d0e479c1e35338b733fac8ca0e" category="inline-link-rx"></block>。</block>
-  <block id="a34d6f600b9c98dba052166c92e151f2" category="doc">建立備份並恢復設定</block>
   <block id="05fe742ce534e2451c9fb5c15fce5bc2" category="paragraph">若要恢復設定，請關閉現有的虛擬機器，並使用初始部署中使用的 OVA 部署新的虛擬機器。</block>
   <block id="33338c06d0b18b2f71e85923222b72e5" category="summary">請依照本節中的指示，順利終止適用於 VMware vSphere 部署的 ONTAP 工具。</block>
   <block id="23829b8d6575f7cd3e20a5e92b475a9e" category="doc">解除安裝適用於 VMware vSphere 的 ONTAP 工具</block>
@@ -2185,4 +1986,286 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="67f34b44c083004610f6d70a0140a9aa" category="inline-link-macro">建立備份並恢復 ONTAP 工具設定</block>
   <block id="a99f72442060cbc9b70a30a0deceb5ac" category="list-text"><block ref="a99f72442060cbc9b70a30a0deceb5ac" category="inline-link-macro-rx"></block></block>
   <block id="4073f6bd126ab1197095ddfaadcb200f" category="list-text">確認已啟用 CPU 熱新增和記憶體熱插拔。</block>
+  <block id="1e98e4c05a8f5cfd1ddd0daba1e28284" category="paragraph">您可以透過 ONTAP 工具 IP 位址和連接埠來存取 VMware vSphere 10 REST API 的 ONTAP 工具。完整 URL 有幾個部分，包括：</block>
+  <block id="f347968a4de8b3b247caa682bf0f6240" category="section-title">一致性群組（ CG ）</block>
+  <block id="b36742dbca767f044c826ec8fbe9b099" category="inline-link">一致性群組</block>
+  <block id="5ca0efa0a6eaf1af922870995f7b1d96" category="paragraph">一致性群組是以單一單元管理的磁碟區集合。CGS 可同步處理，以確保儲存單元和磁碟區之間的資料一致性。在 ONTAP 中，它們可為跨越多個磁碟區的應用程式工作負載提供簡易的管理和保護保證。深入瞭解<block ref="730ae9662641ed0fdd9baf6d4eae07da" category="inline-link-rx"></block>。</block>
+  <block id="9eac467fd769a68fc8c2bbd01ce818d4" category="paragraph">雙堆疊網路是支援同時使用 IPv4 和 IPv6 位址的網路環境。</block>
+  <block id="85f9c12859f9ef21706534940f93412f" category="paragraph">NVMe命名空間是一組可格式化為邏輯區塊的非揮發性記憶體。命名空間相當於FC和iSCSI傳輸協定的LUN、而NVMe子系統類似於igroup。NVMe 子系統可以與啟動器建立關聯，以便相關的啟動器可以存取子系統內的命名空間。</block>
+  <block id="3d7ca86951916f1c838370d44ad24571" category="paragraph">ONTAP 工具管理員可透過託管的 vCenter Server 執行個體和已登入的儲存後端，為 VMware vSphere 管理員提供更多的 ONTAP 工具控制權。它有助於管理 vCenter Server 執行個體，儲存設備後端，憑證，密碼和記錄套件下載。</block>
+  <block id="40dabb8e3301dc76538fa75004a2c92d" category="paragraph">SnapMirror 主動式同步功能可讓企業服務持續運作，即使發生完整的站台故障，也能支援應用程式使用次要複本進行透明容錯移轉。不需要手動介入或自訂指令碼，即可觸發 SnapMirror 主動式同步的容錯移轉。深入瞭解<block ref="51ec33761f23a6cc5cbb85c996201f16" category="inline-link-rx"></block>。</block>
+  <block id="416eb13c424a197adbae4d97eeda27ca" category="paragraph">儲存設備後端是 ESXi 主機用來儲存虛擬機器檔案，資料和其他資源的基礎儲存基礎架構。它們可讓 ESXi 主機存取及管理持續性資料，為虛擬化環境提供所需的儲存功能與效能。</block>
+  <block id="ed10c289499acf6ca0b8ce6f1d8390ad" category="paragraph-title">全域叢集（儲存後端）</block>
+  <block id="db1d66c1a01c130b426288c498569de0" category="paragraph">只有 ONTAP 叢集認證才能使用的全域儲存後端，可透過 ONTAP 工具管理員介面進行登入。您可以使用 Minimal Privileges 來新增這些資源，以便探索 vVols 管理所需的基本叢集資源。通用叢集非常適合多租戶情境，在此情況下，將 SVM 使用者新增至本機以進行 vVols 管理。</block>
+  <block id="5b3649cc4aa51dc9124c980446af6baa" category="paragraph-title">本機儲存後端</block>
+  <block id="29e061fa6de1a0c0c3b12972cd6bf411" category="paragraph">以叢集或 SVM 認證為後端的本機儲存設備會透過 ONTAP 工具使用者介面新增，並僅限於 vCenter 。在本機使用叢集認證時，相關的 SVM 會自動對應至 vCenter ，以管理 vVols 或 VMFS 。對於包括在內的 VMFS 管理， ONTAP 工具支援 SVM 認證，而不需要全域叢集。</block>
+  <block id="d35000254eff180e9f797ebdccec4695" category="paragraph">SRA 是安裝在 VMware Live Site Recovery 應用裝置內的儲存廠商專用軟體。此介面卡可在 Site Recovery Manager 與儲存虛擬機器（ SVM ）層級的儲存控制器之間，以及叢集層級組態之間進行通訊。</block>
+  <block id="f1ad1eb7e2f4cd5717c74b427e4cc54e" category="paragraph">SVM 是 ONTAP 中的多租戶單位。與在 Hypervisor 上執行的虛擬機器一樣、 SVM 是一個邏輯實體、可將實體資源抽象化。SVM 包含資料磁碟區和一或多個生命體、可透過這些生命體將資料提供給用戶端。</block>
+  <block id="f30b9ca52573ae4e07e1d47a07aa8bf6" category="list-text">* 統一主機存取 * 表示兩個站台的主機都會連線到兩個站台上儲存叢集的所有路徑。跨站台路徑會跨越距離延伸。</block>
+  <block id="32e3115035ed1831322c88ce03af5c52" category="inline-link">ONTAP 中的 SnapMirror 作用中同步總覽</block>
+  <block id="61a01ef40449c7382afbe7d9f585de78" category="admonition">任何 SnapMirror 主動式同步部署都支援統一的主機存取；非統一的主機存取僅支援對稱式主動 / 主動式部署。深入瞭解<block ref="90f942fd5a37ab4e29fced42177889a8" category="inline-link-rx"></block>。</block>
+  <block id="cf0250ffb64c5b28b4fa608cd46f3dd5" category="paragraph">VMFS 是叢集式檔案系統，專為在 VMware vSphere 環境中儲存虛擬機器檔案而設計。</block>
+  <block id="84653c24dbab141b74f0a352877dbeac" category="paragraph">VM 儲存原則是在 vCenter Server 的原則和設定檔下建立。對於 vVols 、請使用 NetApp vVols 儲存類型提供者的規則來建立規則集。</block>
+  <block id="5f889e7e595395fa5adbf818e938c5c8" category="paragraph">VMware Live Site Recovery 原名為 Site Recovery Manager （ SRM ），可為 VMware 虛擬環境提供營運不中斷，災難恢復，站台移轉及不中斷營運的測試功能。</block>
+  <block id="8fc2832377269f6b67ea3ab1fee70ab2" category="paragraph">Vasa 是一組 API 、可將儲存陣列與 vCenter Server 整合以進行管理。此架構以多個元件為基礎，包括處理 VMware vSphere 與儲存系統之間通訊的 VASA Provider 。</block>
+  <block id="09b453929506305bd755adfef5851d73" category="paragraph">vSphere Metro Storage Cluster （ VMSC ）是一種架構，可在延伸叢集部署中啟用和支援 vSphere 。 NetApp MetroCluster 和 SnapMirror 主動式同步（前身為 SMBC ）支援 VMSC 解決方案。這些解決方案可在網域發生故障時、提供增強的營運持續性。恢復模式是根據您的特定組態選擇而定。深入瞭解<block ref="fae35a77d8fa39590c619f954aeac240" category="inline-link-rx"></block>。</block>
+  <block id="c543bc3c83149564eaaa08b4375f5b73" category="paragraph">VVols 資料存放區是 VASA Provider 所建立及維護的 VVols 容器的邏輯資料存放區表示法。</block>
+  <block id="46d5887698b4ff6635920edd7737e068" category="paragraph">RPO 是指恢復點目標，即在指定時間內可接受的資料遺失量。零 RPO 表示無法接受資料遺失。</block>
+  <block id="92e19cab5053b797a9992003d1875ca8" category="paragraph">適用於 VMware vSphere 的 ONTAP 工具是一組用於虛擬機器生命週期管理的工具。它與 VMware 生態系統整合，可協助資料存放區資源配置，並為虛擬機器提供基本保護。適用於 VMware vSphere 的 ONTAP 工具是一組可水平擴充，事件導向的微服務，部署為開放式虛擬應用裝置（ OVA ）。此版本將 REST API 與 ONTAP 整合。</block>
+  <block id="80cf0f2342cd77d47d9e4fa2a26e2e3f" category="paragraph">適用於 VMware vSphere 的 ONTAP 工具包含下列項目：</block>
+  <block id="bc30f334af33be1229c867ea2cde8672" category="paragraph">將儲存後端新增至 ONTAP 叢集。對於 vCenter 作為相關 SVM 租戶的多租戶設定，請使用 ONTAP 工具管理員來新增叢集。將儲存後端新增至全域叢集之後，您必須將叢集與所需的 vCenter 租戶建立關聯。vCenter 租戶必須搭載所需的儲存虛擬機器（ Storage Virtual Machines ， SVM ）。這可讓 SVM 使用者配置 vVols 資料存放區。您可以使用 SVM 在 vCenter 中新增儲存設備。</block>
+  <block id="7d20aa5f2c55f829e90526df371336d0" category="paragraph">若要將儲存後端新增至本機叢集，請使用 vCenter 伺服器上的 ONTAP 工具外掛程式。</block>
+  <block id="297578b752cb55b681d4f790f6be66ee" category="paragraph"><block ref="456cca003d9f01756d52d6978fb7648b" category="inline-link-macro-rx"></block>提供本節所使用詞彙的更多資訊。</block>
+  <block id="112fa4a14bcd73096ce0a79df18e90c8" category="admonition">透過 vSphere 用戶端使用者介面設定儲存後端時，請務必注意 vVols 資料存放區不支援直接新增 SVM 使用者。</block>
+  <block id="f112fce472a37331caaff255b19ba53d" category="list-text">您應該已使用下列方法從適用於 VMware vSphere 的 ONTAP 工具下載 ONTAP Privileges 檔案： https ： &lt;ONTAPtoolsIP&gt; ： 8443/virtualization / 使用者權限 /users_roles.zip 。</block>
+  <block id="bba28a18430d8b63217997697c799196" category="list-text">您應該已使用從 ONTAP 工具下載 ONTAP Privileges 檔案<block ref="37ba4e2f7974871d64576fb3f91d8d8a" prefix=" " category="inline-code"></block>。</block>
+  <block id="a3436af33b8b4a9134f232e721682327" category="list-text">擷取下載的 _\https ： &lt;ONTAPtoolsIP&gt; ： 8443/virtualization / 使用者權限 /users_roles.zip_ 檔案。</block>
+  <block id="e055f120249cefc71874d2e90154fb64" category="list-text">從下拉式清單中選取產品功能為 VSC ， VASA 供應商或 SRA 。</block>
+  <block id="6889ed9097181a67fffc7885fd10edb8" category="cell">/API/儲存 設備 / 可用性區域</block>
+  <block id="c50369242111ffdea771ff938c8477b4" category="cell">Saz 探索。適用於 ONTAP 9.16.1 版及 ASA R2 系統。</block>
+  <block id="3e335912f48992bbc87c811fb14493bb" category="paragraph">對於 ONTAP 9.16.1 版及更新版本上的 ASA R2 系統，請執行下列命令：</block>
+  <block id="b9763b71d17e12ceb3a1d3de6ac55fb7" category="paragraph">對於使用 JSON 檔案建立叢集範圍使用者的 VMware vSphere 10.1 使用者適用的 ONTAP 工具，請搭配使用者管理 Privileges 使用下列 ONTAP CLI 命令，以升級至 10.3 版本。</block>
+  <block id="2e5bf1632647158a35ef793b4a208b1a" category="paragraph">對於使用 json 檔案建立 SVM 範圍使用者的 VMware vSphere 10.1 ONTAP 工具，請使用 ONTAP CLI 命令搭配管理使用者 Privileges ，以升級至 10.3 版本。</block>
+  <block id="869c387dff81f44ebc05e4e11d99aa37" category="section-title">將適用於 VMware vSphere 10.3 使用者的 ONTAP 工具升級為 10.4 使用者</block>
+  <block id="a81696bc2c199bac5bd9158f0fd78e5a" category="paragraph">從 ONTAP 9.16.1 開始，將適用於 VMware vSphere 10.3 使用者的 ONTAP 工具升級至 10.4 使用者。</block>
+  <block id="ee528c59791ffd929d572b4d048f1a6d" category="paragraph">對於使用 JSON 檔案和 ONTAP 9.16.1 版或更新版本建立叢集範圍使用者的 VMware vSphere 10.3 使用者適用的 ONTAP 工具，請使用 ONTAP CLI 命令搭配管理使用者 Privileges 升級至 10.4 版。</block>
+  <block id="34df525e92a58bde07e0f100bb8d4484" category="summary">當您在主機叢集層級建立資料存放區時，會在目的地的所有主機上建立並掛載資料存放區，而且只有在目前使用者具有執行權限時，才會啟用該動作。</block>
+  <block id="dd6f4f5182d21711e4156a5897a4aa98" category="paragraph">當您在主機叢集層級建立資料存放區時，會在目的地的所有主機上建立並掛載資料存放區，而且只有在目前使用者具有執行權限時，才會啟用該動作。</block>
+  <block id="1559c009a021967e08b90c52ba46a076" category="paragraph">從適用於 VMware vSphere 10.3 的 ONTAP 工具開始，您可以在 ASA R2 系統上建立 vVols 資料存放區，並將空間效率視為 Thin vVol 。VASA Provider 會在建立 vVol 資料存放區時，建立容器和所需的傳輸協定端點。此容器不會有任何備份磁碟區。</block>
+  <block id="cbdb2b0adfdacb659ac1aac77e6c18d5" category="list-text">確保根集合體未對應至 SVM 。</block>
+  <block id="7fbb519a1b486c7351a3ff7676db7249" category="list-text">請確定 VASA Provider 已向所選 vCenter 登錄。</block>
+  <block id="1d0aa351217631d334a9e6f13fb17bc1" category="list-text">在 ASA R2 儲存系統中， SVM 應對應至 SVM 使用者的 Aggregate 。</block>
+  <block id="6046b698fd58e5428a62f0710f487a3d" category="list-text">在主機系統，主機叢集或資料中心上按一下滑鼠右鍵，然後選取 * NetApp ONTAP tools* &gt; * Create Datastore* 。</block>
+  <block id="194dfbc7d51392ff58ba2b80d36fd529" category="list-text">選取 vVols * Datastore 類型 * 。</block>
+  <block id="1870a2aa0cd0290ddebdd4f60c121814" category="list-text">輸入 * 資料存放區名稱 * 和 * 傳輸協定 * 資訊。</block>
+  <block id="44a6b64ae3a7fef2f349f72cf3e32eb2" category="admonition">ASA R2 系統支援 VVols 的 iSCSI 和 FC 傳輸協定。</block>
+  <block id="8dde1f10223f65a679d998e569d238c3" category="list-text">選取您要建立資料存放區的儲存 VM 。</block>
+  <block id="80d67086677891099603cd75cd0a26e8" category="list-text">在 * 進階選項 * 中選取 NFS 傳輸協定的自訂匯出原則，或 iSCSI 和 FC 傳輸協定的自訂啟動器群組名稱。</block>
+  <block id="fd81895c9b4eb40921c7e241c091a1cd" category="admonition">在 ASA R2 儲存系統類型 SVM 中，不會建立儲存單元（ LUN/ 命名空間），因為資料存放區只是邏輯容器。</block>
+  <block id="e31f7e9745380863f95d73e48e2fabbf" category="list-text">在 * 儲存屬性 * 窗格中，您可以建立新的磁碟區或使用現有的磁碟區。不過，您無法合併這兩種類型的磁碟區來建立 VVols 資料存放區。</block>
+  <block id="39355798de4906f96b13a31fd76a15e6" category="paragraph">建立新磁碟區時，您可以在資料存放區上啟用 QoS 。根據預設，每個 LUN 建立的要求都會建立一個磁碟區。此步驟不適用於使用 ASA R2 儲存系統的 VVols 資料存放區。</block>
+  <block id="0fd7bc4653af25af16b2d758e61bdb69" category="list-text">在 * 摘要 * 窗格中檢閱您的選擇，然後選取 * 完成 * 。</block>
+  <block id="9c5dfe48cc2df01e2958dbe84edea01d" category="list-text">在主機系統，主機叢集或資料中心上按一下滑鼠右鍵，然後選取 * NetApp ONTAP tools* &gt; * Create datastorate* 。</block>
+  <block id="b1bcbdb50b1755e033c184c27462229b" category="list-text">在 * 資料存放區類型 * 欄位中選取 NFS 。</block>
+  <block id="002da57ee8bba82828c8058c7d6cfecf" category="list-text">在 * 名稱和通訊協定 * 窗格中輸入資料存放區名稱，大小和通訊協定資訊。在進階選項中選取 * 資料存放區叢集 * 和 * Kerberos 驗證 * 。</block>
+  <block id="8d4768d2ffaf314b3ea87a21a27f7ec4" category="admonition">Kerberos 驗證只有在選取 NFS 4.1 傳輸協定時才能使用。</block>
+  <block id="7b2c27e8d2aac8a15e90a619cd860d4d" category="list-text">在 * Storage* 窗格中選擇 * 平台 * 和 * 儲存 VM* 。</block>
+  <block id="b48e3fbf26333d26d1456ba93f1a6c8f" category="list-text">如有必要，請在進階選項下選擇 * 自訂匯出原則 * ，但不建議這麼做。如果使用，請確保在 vCenter 中為所有物件執行探索。</block>
+  <block id="97e5c74d2bd0f78816caf0c5c9036a82" category="admonition">您無法使用 SVM 的預設 / 根 Volume 原則來建立 NFS 資料存放區。</block>
+  <block id="42d1ce422f23ede57a5c2e13f8855890" category="list-text">在進階選項中，只有在平台下拉式選單中選取效能或容量時，才會顯示 * 非對稱 * 切換按鈕。</block>
+  <block id="fa6c3148403311b0d64dfc44a5925b3a" category="list-text">當您在平台下拉式清單中選擇 * 任何 * 選項時，無論平台或非對稱式旗標為何，都可以看到屬於 vCenter 一部分的 SVM 。</block>
+  <block id="9792136eca2e8eeeaaaadba8f8ab6698" category="list-text">在 *Storage Attributes* 窗格中選擇用於創建卷的 Aggregate 。在進階選項中，視需要選擇 * 空間保留 * 和 * 啟用 QoS* 。</block>
+  <block id="75e766f4f92dedac7c450da6290d7948" category="paragraph">虛擬機器檔案系統（ VMFS ）是叢集式檔案系統，可在 VMware vSphere 環境中儲存虛擬機器檔案。VMFS 可讓多個 ESXi 主機同時存取相同的虛擬機器檔案，提供 VMotion 和高可用度等功能。</block>
+  <block id="b509a484695fc9dede674c75d0dbdf4c" category="paragraph">在受保護的叢集上：</block>
+  <block id="98562e41514ccd9988c54b097daff30f" category="list-text">您只能建立 VMFS 資料存放區。將 VMFS 資料存放區新增至受保護的叢集時、資料存放區會自動受到保護。</block>
+  <block id="48d56dfbe38f19ca7f59244a88bb72a6" category="list-text">您無法在具有一或多個受保護主機叢集的資料中心上建立資料存放區。</block>
+  <block id="66f50168459eae0266469713e2f223cb" category="list-text">如果父主機叢集受到「自動化容錯移轉雙工原則」類型（統一 / 非統一組態）的關係保護，則無法在 ESXi 主機上建立資料存放區。</block>
+  <block id="eba0151ad2986897d4c436b12f4c57d1" category="list-text">您只能在受非同步關係保護的 ESXi 主機上建立 VMFS 資料存放區。您無法在受「自動化容錯移轉雙工」原則保護的主機叢集的一部分 ESXi 主機上建立及掛載資料存放區。</block>
+  <block id="8b8c4acbfaa32c20453be6f1c9ea2fa8" category="list-text">為 ONTAP 儲存端的每個傳輸協定啟用服務和生命。</block>
+  <block id="7f6c7913516e4767bc8bd35a63c191e8" category="list-text">將 SVM 對應至 ASA R2 儲存系統中 SVM 使用者的 Aggregate 。</block>
+  <block id="a0846a676cbd19d7413fe8b8bc2f8bd7" category="list-text">如果您使用的是 NVMe / TCP 傳輸協定，請設定 ESXi 主機：</block>
+  <block id="29b77dc30cc5dd4f4a351085f2e36a3d" category="paragraph">VMware vSphere 7.0 U3 及更新版本支援 NVMe / TCP 傳輸協定。不過，建議使用 VMware vSphere 8.0 及更新版本。。驗證網路介面卡（ NIC ）廠商是否支援採用 NVMe / TCP 傳輸協定的 ESXi NIC 。。根據 NIC 廠商規格、為 NVMe / TCP 設定 ESXi NIC 。。使用 VMware vSphere 7 版本時、請遵循 VMware 網站上的指示<block ref="6b6e21be7e83380915b7a93b5de98cc6" category="inline-link-rx"></block>來設定 NVMe / TCP 連接埠繫結。使用 VMware vSphere 8 版本時、請遵循<block ref="5075091467dfddb38b411ec1bb554877" category="inline-link-rx"></block>設定 NVMe / TCP 連接埠繫結。。針對 VMware vSphere 7 版本，請依照第頁的指示<block ref="562342ed7eb0295ae9f7a72ea788d31d" category="inline-link-rx"></block>來設定 NVMe / TCP 軟體介面卡。對於 VMware vSphere 8 版本，請遵循<block ref="1f8f8787602f2f92045aa29b0a3fa467" category="inline-link-rx"></block>設定 NVMe / TCP 軟體介面卡。。<block ref="c076a6b54534640d64418e3f25ccabbb" category="inline-link-macro-rx"></block>在 ESXi 主機上執行動作。如需詳細資訊、請<block ref="08964a7c7e6cd9155ed7286907a68824" category="inline-link-rx"></block>參閱。</block>
+  <block id="042f6ce90cf2dd28865cb89c53b78f01" category="list-text">如果尚未啟用，請在 ESXi 主機上啟用 NVMe over Fabrics （ NVMe of ）。</block>
+  <block id="6d32e0f909f830ff089b630f466b4b3c" category="list-text">確保 ESXi 主機和 ONTAP 系統連接在實體層和邏輯層。</block>
+  <block id="54823624f3ec81a67f0dafc81ea0fac9" category="list-text">在 *Name and Protocol* 窗格中輸入資料存放區名稱，大小和傳輸協定資訊。如果您選擇將新的資料存放區新增至現有的 VMFS 資料存放區叢集，請在「進階選項」下選取資料存放區叢集選取器。</block>
+  <block id="4ae15faab2ddb24edfab9e1f2a21a432" category="list-text">在 * Storage* 窗格中選取儲存 VM 。根據需要在 * 進階選項 * 區段中提供 * 自訂啟動器群組名稱 * 。您可以為資料存放區選擇現有的 igroup ，或使用自訂名稱建立新的 igroup 。</block>
+  <block id="8823b9fdc728475a4110b5040cb6b444" category="paragraph">選取 NVMe / FC 或 NVMe / TCP 傳輸協定時，會建立新的命名空間子系統，並用於命名空間對應。命名空間子系統是使用包含資料存放區名稱的自動產生名稱來建立。您可以在 *Storage* 窗格的進階選項中的 * 自訂命名空間子系統名稱 * 欄位中重新命名命名命名空間子系統。</block>
+  <block id="255eccf71ba6b4ee2d909ccf7b5026ed" category="list-text">從下拉式選項中選取 * Aggregate * 。</block>
+  <block id="32a86c0594767e44071c436e0c7015bb" category="admonition">對於 ASA R2 儲存系統， * Aggregate * 選項不會顯示，因為 ASA R2 儲存設備是分類式儲存設備。當您選擇 ASA R2 儲存系統類型 SVM 時，儲存屬性頁會顯示啟用 QoS 的選項。</block>
+  <block id="8214e21b577b33c94b69ef51323e82e8" category="list-text">根據所選的傳輸協定，儲存單元（ LUN/ 命名空間）會以精簡型的空間保留空間來建立。</block>
+  <block id="dc0ab24bdf4db6958725df4e1f609923" category="admonition">從 ONTAP 9.16.1 開始， ASA R2 儲存系統每個叢集最多可支援 12 個節點。</block>
+  <block id="e41cfe946cd9c7506a7f309a0b72a63e" category="list-text">針對具有 12 個節點 SVM （異質叢集）的 ASA R2 儲存系統，選取 * 效能服務等級 * 。如果選取的 SVM 是同質叢集或使用 SVM 使用者，則無法使用此選項。</block>
+  <block id="f3086aaa2bbb60716115326f481f19ab" category="paragraph">「任何」是預設的效能服務層級（ PSL ）值。此設定會使用 ONTAP 平衡放置演算法建立儲存單元。不過，您可以視需要選擇效能或極致選項。</block>
+  <block id="3ed0179503d969a992907f7aff029c19" category="list-text">選擇 * 使用現有的 Volume * ， * 視需要啟用 QoS* 選項，並提供詳細資料。</block>
+  <block id="df1e154c647523177980035de77159d4" category="admonition">在 ASA R2 儲存類型中，磁碟區建立或選擇不適用於儲存單元建立（ LUN/ 命名空間）。因此不會顯示這些選項。</block>
+  <block id="c29e1d4bd6397307ba93bd0dd216c227" category="admonition">您無法使用現有的磁碟區來建立含 NVMe / FC 或 NVMe / TCP 傳輸協定的 VMFS 資料存放區；您應該建立新的磁碟區。</block>
+  <block id="3de0cdc5440bf11e10a706d7cb02ddf4" category="admonition">如果您在受保護的叢集上建立資料存放區，則會看到一則唯讀訊息：「資料存放區正在受保護的叢集上掛載。」</block>
+  <block id="fa979769527e7b1d194b620bae8b1f04" category="paragraph">VMFS 資料存放區會建立並掛載於所有主機上。</block>
+  <block id="8512ebbe1d362c6831db703766f01dd8" category="cell">vCenter</block>
+  <block id="8ac46b9a556fdf520bf3029497a75cdd" category="cell">vCenter 卡會顯示系統中 vCenter 的健全狀況狀態。</block>
+  <block id="f806b31e6783445c7553dc8f14311f55" category="cell">儲存設備後端卡會顯示系統中儲存設備後端的健全狀況狀態。</block>
+  <block id="01e12de62fa77fda2815719aed8ff892" category="paragraph-title">下一步</block>
+  <block id="65cfedc1257708b982a1843db9b46872" category="cell">049</block>
+  <block id="ad699fd6b0dac713392ad7f640657c5d" category="cell">對於網路和驗證 perl 指令碼，也會很快指派它們</block>
+  <block id="c595a26206f8ad83fff09e91f465b7ab" category="cell">確保在部署期間提供的 Kubernetes 控制平面和 ONTAP 工具的虛擬 IP 位址屬於同一個 VLAN ，而且是可用的 IP 位址。如果所有先前的點都正確、請重新啟動。否則、請重新部署。</block>
+  <block id="63adb58bc8d4f3d6765c38af7b6cdd72" category="paragraph">VMware vSphere 應用程式的 ONTAP 工具會部署為小型單一節點，並提供核心服務以支援 NFS 和 VMFS 資料存放區。ONTAP 工具部署程序可能需要 45 分鐘。</block>
+  <block id="3c4b541b5d5310d633c23010dd81989e" category="list-text">登入 vSphere 用戶端</block>
+  <block id="96b2088e72148a0b1230a8a1ce9ed374" category="list-text">如果未選取自動開啟 VM 的選項，請在完成工作後開啟 VM 電源。</block>
+  <block id="0665c15c8e67de0629e2fe45b734ea75" category="list-text">關閉 ONTAP 工具節點。</block>
+  <block id="265dbce80143757d1ceaac46974e6009" category="admonition">啟用備份時，每個 ONTAP 工具叢集在部署 VM 的資料存放區上需要另一個 50GB 的空間。因此，非 HA 需要 400 GB 的空間，而 HA 則需要總共 1100 GB 的空間。</block>
+  <block id="3fbe74eae84714fcfdd21edafe54f77f" category="cell">版本需求</block>
+  <block id="00a7a9b934cf295b0c55ccd69d08f6f6" category="cell">ONTAP 工具支援的 ESXi 主機</block>
+  <block id="a979e2bdcdd277cf8d9c469763d9bbf2" category="cell">7.0.3 之後</block>
+  <block id="4ce57c95c2e0d07896ad80d05f2db262" category="cell">ONTAP 工具支援 vCenter Server</block>
+  <block id="2917babee976ddb7acae4385de8ea868" category="cell">7.0U3 以上版本</block>
+  <block id="669ce1d03d9fa934e3a84459db318586" category="cell">10.4</block>
+  <block id="1354535f18a2310447c0fd43d952244c" category="cell">用於部署 ONTAP 工具虛擬機器的 ESXi 主機</block>
+  <block id="127d69665f43c1c73050a4cc7dc6e0da" category="cell">7.0 ， 7.0U1 ， 7.0U2 ， 7.0U3 ， 8.0 ， 8.0U1 及 8.0U3</block>
+  <block id="4c2e2546fd73ce517decb920a7fda907" category="cell">vCenter Server 可部署 ONTAP 工具虛擬機器</block>
+  <block id="c9aa6778e894ec4b3dcffe7a4940f428" category="cell">7.0 和 8.0</block>
+  <block id="74de20ed3426be46891750a9fda8af0e" category="admonition">從 VMware vSphere 10.4 的 ONTAP 工具開始，虛擬機器硬體會從版本 10 變更為 17 。</block>
+  <block id="dce365633ffb688b7532470dfaf4e118" category="cell">*傳輸協定*</block>
+  <block id="0c95054981de037de06e544a52eb3613" category="cell">8143</block>
+  <block id="b136ef5f6a01d816991fe3cf7a6ac763" category="cell">TCP</block>
+  <block id="a78ff8f5e1a40f03bf97db00bda0fb5f" category="cell">ONTAP 工具的 HTTP/HTTPS 連線。</block>
+  <block id="5bd529d5b07b647a8863cf71e98d651a" category="cell">8043</block>
+  <block id="cb4b69eb9bd10da82c15dca2f86a1385" category="cell">9060</block>
+  <block id="b6d767d2f8ed5d21a44b0e5886680cb9" category="cell">22</block>
+  <block id="13f3cf8c531952d72e5847c4183e6910" category="cell">443</block>
+  <block id="7e6b20d014d1c659e4eaf20dc2dcd7eb" category="cell">8443</block>
+  <block id="add217938e07bb1fd8796e0315b88c10" category="cell">2379</block>
+  <block id="da4902cb0bc38210839714ebdcf0efc3" category="cell">2380</block>
+  <block id="e5e6851e7f7ffd3530e7389e183aa468" category="cell">7472</block>
+  <block id="8962b8350728e2f6eb9cbbb07ca70d86" category="cell">TCP/UDP</block>
+  <block id="5d188b044333b4c62676e0d4f53dade7" category="cell">7946</block>
+  <block id="a44ba9086b2b83ccf2baf7c678723449" category="cell">9083</block>
+  <block id="abea47ba24142ed16b7d8fbf2c740e0d" category="cell">1162</block>
+  <block id="f5ef036b4d8b630721e51fe23489fbc9" category="cell">UDP</block>
+  <block id="c03afab54002887e7e1d27a1069e206c" category="cell">6443</block>
+  <block id="76444b3132fda0e2aca778051d776f1c" category="cell">9345</block>
+  <block id="6d1e481bdcf159961818823e652a7725" category="cell">8472</block>
+  <block id="a4b2529ef64aa741ab10320d0015b5fd" category="cell">TCP+UDP</block>
+  <block id="183f50a7700982a3ed18ff6d7a5777bf" category="cell">10250</block>
+  <block id="84826728868f63de4eeb2f3b77cd762b" category="cell">30000-32767</block>
+  <block id="202cb962ac59075b964b07152d234b70" category="cell">123</block>
+  <block id="caf50900f166353ae4848c8c5ddf3383" category="cell">ntpd 使用此連接埠來執行 NTP 伺服器的驗證。</block>
+  <block id="8c4743470c970199a9d1b885cf3df364" category="cell">137-139</block>
+  <block id="e68652501a313c2d1874782fb9aa6cc3" category="cell">SMB/Windows 共用封包。</block>
+  <block id="46d045ff5190f6ea93739da6c0aa19bc" category="cell">6789</block>
+  <block id="d64901cbc0ab46c670bc45c9b4a642a8" category="cell">Ceph 監控（週一）</block>
+  <block id="63bfd6e8f26d1d3537f4c5038264ef36" category="cell">3300</block>
+  <block id="1a8c8d3ae7b0bbd9509b8905da9fa100" category="cell">6800-7300</block>
+  <block id="3e78b2f1a88a42db241d9a8ac8a6c679" category="cell">Ceph Manager ， OSD 和檔案系統（ MDS ）。</block>
+  <block id="f033ab37c30201f73f142449d037028d" category="cell">80</block>
+  <block id="b1f7345122d52ddee0d7713bfad8b79b" category="cell">Ceph RADOS 閘道（ RGW ）</block>
+  <block id="d82d678e9583c1f5f283ec56fbf1abb7" category="cell">9080</block>
+  <block id="4b32bee2eb6c3d05fc70a5fb2dffcb1c" category="cell">VP HTTP/HTTPS 連線（僅適用於 IPv4 的 127.0.0.0/8 或 IPv6 的： 1/128 ）。</block>
+  <block id="66497dafb11e4eb14a710aba82842f2a" category="section-title">ONTAP 儲存設定</block>
+  <block id="b1f65147a07338ddacacf797fa8f8068" category="paragraph">為了確保 ONTAP 儲存設備與適用於 VMware vSphere 的 ONTAP 工具無縫整合，請考慮下列設定：</block>
+  <block id="89dcc1d78edaf637785c6ecfca413588" category="inline-link">瞭解 ONTAP 系統的 FC 和 FCoE 分區</block>
+  <block id="70b4e2df1c2bfeb98be224b551dbb572" category="list-text">如果您使用光纖通道（ FC ）進行儲存連線，請在 FC 交換器上設定分區，將 ESXi 主機與 SVM 的 FC 生命期連線。<block ref="b7794521bd71e03bf277ba88ec7edd58" category="inline-link-rx"></block></block>
+  <block id="172a02306231a2a4f49511d5b78568bd" category="inline-link">ONTAP 叢集對等關係</block>
+  <block id="01409d70514dee021d7a19fe33614d67" category="inline-link">ONTAP 叢集間 SVM 對等關係</block>
+  <block id="896541ee85adff34fb9f5a9c75ef9d3d" category="list-text">若要使用 ONTAP 工具管理的 SnapMirror 複寫， ONTAP 儲存管理員應先建立<block ref="c6246851dd06c6faec212d662b844298" category="inline-link-rx"></block>和在 ONTAP 中，<block ref="8c2edb06b2585f1e066ba3419010ff37" category="inline-link-rx"></block>然後再使用 SnapMirror 。</block>
+  <block id="bb100fc099bddcd082720c1ecea2ba20" category="inline-link">適用於 VMware vSphere 10.4 的 ONTAP 工具注意事項</block>
+  <block id="aa6ee07695aef0ef2f6d854c07da9e84" category="paragraph"><block ref="aa6ee07695aef0ef2f6d854c07da9e84" category="inline-link-rx"></block></block>
+  <block id="4ddf0a54cbd4011c0f6638920a78d55c" category="summary">輸入 NTP 伺服器詳細資料，以同步 ONTAP 工具應用裝置的時間時鐘。</block>
+  <block id="1af4b724396a358dfa2d652d366f3b1e" category="doc">新增 NTP 伺服器</block>
+  <block id="efcbb6ba0762cdbd007474f155ec2550" category="paragraph">輸入 NTP 伺服器詳細資料，以同步 ONTAP 工具應用裝置的時間時鐘。</block>
+  <block id="4e1d604c0e901626c8c595aff1f6f5cb" category="list-text">選擇 * 設定 * &gt; * NTP 伺服器 * &gt; * 編輯 * 選項。</block>
+  <block id="fb850533a33f02b124ad272897ef121b" category="list-text">輸入以逗號分隔的完整網域名稱（ FQDN ）， IPv4 或 IPv6 位址。</block>
+  <block id="05c34a380a0ae49dacf6345c10da7432" category="paragraph">重新整理至畫面以查看更新的值。</block>
+  <block id="2a4a0ef9d08fd46fb35d6a98a666d433" category="doc">將資料磁碟連接或分離至虛擬機器</block>
+  <block id="01a97dfe12e2f9c032ac7463adc8ce06" category="section-title">將資料磁碟附加至虛擬機器</block>
+  <block id="3d0b37e10deb5f72a29f03750fc903b2" category="paragraph">將資料磁碟附加至虛擬機器，以擴充儲存容量。</block>
+  <block id="4dbcb04ca3e1121d05222b8e32259d8c" category="list-text">在清單中的虛擬機器上按一下滑鼠右鍵，然後選取 * 編輯設定 * 。</block>
+  <block id="76572fc63d758b5070b688db82e3bcdf" category="list-text">在 * 虛擬硬體 * 標籤上，選取 * 現有硬碟 * 。</block>
+  <block id="766a79744dd3216c2dd4d491d63ec92c" category="list-text">選取磁碟所在的虛擬機器。</block>
+  <block id="0fff10b6b6397f740d5fe5954fb9be5a" category="list-text">選取您要附加的磁碟，然後選取 * 確定 *</block>
+  <block id="74c64262537db03cfa8e6847a0dd79e9" category="paragraph">硬碟會出現在虛擬硬體裝置清單中。</block>
+  <block id="dad0b1ef8b9ae3684996aab75055a82e" category="section-title">從虛擬機器分離資料磁碟</block>
+  <block id="6d6e9b53c43851ec46d9a62853a13c92" category="paragraph">您可以在不再需要資料磁碟時，將其分離至虛擬機器。當您將磁碟從虛擬機器上分離時，不會自動刪除該磁碟；它會保留在 ONTAP 儲存系統上。</block>
+  <block id="980a326c871c7a68f8a74d923ae91b94" category="list-text">將滑鼠指標移到磁碟上，然後選取 * 移除 * 。</block>
+  <block id="2f6aa0b46af57d651ab17a5c8bff37e7" category="admonition">磁碟即會從虛擬機器中移除。如果其他虛擬機器共用磁碟，則不會刪除磁碟檔案。</block>
+  <block id="a6136be50cd2f9a3597811b673e892d0" category="inline-link">新增硬碟至虛擬機器</block>
+  <block id="fcfc7eab04afc81b6dd34672d0ba5bb3" category="paragraph"><block ref="fcfc7eab04afc81b6dd34672d0ba5bb3" category="inline-link-rx"></block></block>
+  <block id="39d2588daa65a2f8e84916b15387b515" category="inline-link">將現有的硬碟新增至虛擬機器</block>
+  <block id="d9ee6d77c906099b0f1e4e59cb8a3413" category="paragraph"><block ref="d9ee6d77c906099b0f1e4e59cb8a3413" category="inline-link-rx"></block></block>
+  <block id="3cea73ba96fae85e9ca019810cfd5753" category="list-text">應使用網域名稱和 ONTAP 工具 IP 位址來建立憑證。</block>
+  <block id="24fd16ca0ad062cc74daf0720edc3ee7" category="admonition">ONTAP 工具 IP 位址應對應至完整網域名稱（ FQDN ）。憑證應包含對應至 ONTAP 工具 IP 位址的相同 FQDN ，並以主體或主體替代名稱命名。</block>
+  <block id="c177534364f5148483e550a73b24e216" category="list-text">刪除 FlexVol Volume 。請參閱<block ref="eac8c90151648d7bc2ba6d1146004c9d" category="inline-link-rx"></block>。在用於刪除卷的 CLI 命令中，指定 FlexVol 卷的確切名稱。</block>
+  <block id="610d2326ea36c18aadc89bb5f2fa639c" category="admonition">建議您保持啟用 AutoSupport 。有助於加速問題偵測與解決。系統會收集 AutoSupport 資訊，並將其儲存在本機，即使停用也一樣。但是，它不會將報告傳送至任何網路。</block>
+  <block id="43c278d3178deaffe0383c284311f59a" category="list-text">選擇 * 設定 * &gt; * 遙測 * &gt; * 編輯 * 選項。</block>
+  <block id="4e5c7884f316885125b30442136648b7" category="list-text">取消選取 AutoSupport 選項並儲存變更。</block>
+  <block id="829fcb43a07b2a88e1f5c7ab242ad7fa" category="admonition">若要在啟用非 HA 備份時移轉至 HA ，請先停用備份，然後在移轉後重新啟用。</block>
+  <block id="5e7466ddd18599433461e43aa614b44b" category="summary">從 VMware vSphere 10.3 的 ONTAP 工具開始，此應用裝置使用動態儲存資源配置程式，您無法達成零 RPO 。不過，您可以達成接近零 RPO 的目標。</block>
+  <block id="26b7a24c2fb682cdde72ced3aadfb1fc" category="paragraph">從 VMware vSphere 10.3 的 ONTAP 工具開始，此應用裝置使用動態儲存資源配置程式，您無法達成零 RPO 。不過，您可以達成接近零 RPO 的目標。若要達到接近零 RPO ，您需要建立設定的備份，並將其還原至新的虛擬機器。</block>
+  <block id="ac7b715393b89bac4b710e7aea826fbb" category="paragraph">您需要為新的虛擬機器使用相同的 ONTAP 工具 IP 位址，而啟用服務，節點大小和 HA 模式等系統組態必須與初始部署相同。</block>
+  <block id="9388b8f101226e86df67ddf2f1f8f8c5" category="summary">您可以使用 ONTAP 工具管理員變更管理員密碼，以啟用 VASA Provider 等服務，匯入 vVols 組態，以及使用 ONTAP 工具管理員進行災難恢復（ SRA ）。</block>
+  <block id="ae80821bc04ea97412a103f5a9cdea58" category="paragraph">只有在啟用 VASA Provider 服務時，才會顯示 * 允許匯入 vVols 組態 * 選項。此選項可讓 vVols 資料從 ONTAP tools 9.x 移轉至 ONTAP tools 10.4 。</block>
+  <block id="e5ea5ad9578577e69649af9a97651027" category="admonition">展開 vVols 資料存放區作業不適用於 ASA R2 系統型 vVols 資料存放區。</block>
+  <block id="fff6f63a28676182cb9ee6c87c52911e" category="paragraph">如需詳細資訊，請參閱<block ref="74392a6ed560b64c3e452acc2a7ab97a" category="inline-link-rx"></block>。</block>
+  <block id="7846abe7ddf5ac39a4f1d59f03a61e7d" category="admonition">ASA R2 系統型 vVols 資料存放區不支援壓縮 vVols 資料存放區作業。</block>
+  <block id="7e80b22daba2fc98d372c1fedd3205c6" category="list-text">當 SVM 或叢集的分解屬性設為「 true 」時， ASA R2 系統叢集向下切入檢視不會包含「本機階層」索引標籤。</block>
+  <block id="82df04ac7bcf366863db0b2868e698b6" category="cell">「 * 儲存詳細資料 * 」頁面包含儲存後端，集合和磁碟區資訊。「 *NFS 詳細資料」頁面包含與 NFS 資料存放區相關的資料。</block>
+  <block id="142b92f8974022c41936ada0973434a6" category="cell">「 * 儲存詳細資料 * 」頁面包含儲存後端，集合體，磁碟區和儲存可用性區域（ SAZ ）詳細資料。「 * 儲存單元詳細資料 * 」頁面包含儲存單元的詳細資料。</block>
+  <block id="d49d8a5effc0a522fa72d0ff457066df" category="list-text">輸入有效的 * Proxy URL* 並儲存變更。</block>
+  <block id="eb587ff6958c1e65b721306af8fa8e3b" category="paragraph">如果停用 AutoSupport ，則 Proxy URL 也會停用。</block>
+  <block id="936e3c96334eb643e687697ecc2f0c86" category="doc">從適用於 VMware vSphere 9.x 的 ONTAP 工具移轉至 10.4</block>
+  <block id="dd2485776e2f691d58e221698b0227d6" category="admonition">從適用於 VMware vSphere 9.x 的 ONTAP 工具移轉至 10.4 之後，含 NVMe / FC 傳輸協定的 vVols 資料存放區無法運作，因為 ONTAP 工具 10.4 只支援使用 VMFS 資料存放區的 NVMe 。</block>
+  <block id="455124ae9d3cd850bc1b96f5b1eaecf5" category="paragraph">您可以從適用於 VMware vSphere 9.12D1 和 9.13D2 版本的 ONTAP 工具移轉至 10.4 。</block>
+  <block id="305675e418fa7f87d5c522fec4e29a3d" category="list-text">部署適用於 VMware vSphere 10.4 的 OVA for ONTAP 工具。</block>
+  <block id="edd23d2208c7083037a6a7239078b01b" category="list-text">新增您要移轉至 ONTAP 工具的 vCenter Server 執行個體，以取得 VMware vSphere 10.4 版本。請參閱。<block ref="fbc3413db4202f1fe331f16af6b38f13" category="inline-link-macro-rx"></block></block>
+  <block id="db25cd2cc9c29a00b79913b04d076a99" category="list-text">只有在觸發資料存放區探索工作（可能需要 30 分鐘才能觸發）之後、才能在適用於 VMware vSphere 10.4 的 ONTAP 工具中看到從適用於 VMware vSphere 9.xx 的 ONTAP 工具移轉的 NFS 和 VMFS 資料存放區。確認「 VMware vSphere 外掛程式」使用者介面之 ONTAP 工具的「概觀」頁面上是否顯示資料存放區。</block>
+  <block id="08b728321d97902b07c2912dca9ded3a" category="list-text">新增您要移轉至 ONTAP 工具的 vCenter Server 執行個體，以取得 VMware vSphere 10.4 版本。請參閱。 <block ref="946669e64e0e42585f18099dec81ec03" category="inline-link-macro-rx"></block></block>
+  <block id="86a97fb35ea43c578a28dbf9b4600427" category="paragraph">成功移轉之後、將 ONTAP 工具 10.4 登錄至 vCenter Server 之後、請執行下列步驟：</block>
+  <block id="472d4465d1363ede67b4fdb4c6e0e1ff" category="inline-link-macro">從適用於 VMware vSphere 10.x 的 ONTAP 工具升級至 10.4</block>
+  <block id="601dd8c7000a195659d470e737339c2d" category="paragraph"><block ref="601dd8c7000a195659d470e737339c2d" category="inline-link-macro-rx"></block></block>
+  <block id="de07d353dcc67566b2f1a71fe30ec4aa" category="admonition">儲存複寫介面卡（ SRA ）支援在一致性群組上使用自動容錯移轉雙工和非同步關係 SnapMirror 類型的單一同步關係進行開機。但是，不支援在一致性群組上使用兩個非同步 SnapMirror 的開機，或在 Volume 上使用扇出 Snapscorors 。</block>
+  <block id="cdeb8a4a9786cfc45563b399c91bcce8" category="summary">在風扇輸出保護中，一致性群組會在第一個目的地 ONTAP 叢集上使用同步關係，並在第二個目的地 ONTAP 叢集上使用非同步關係，獲得雙重保護。</block>
+  <block id="e7fc5cd5d3b281daa6edd76ca9076d38" category="doc">風扇輸出保護</block>
+  <block id="7e6b27bdfe27b21cf49c575fe39989af" category="paragraph">在風扇輸出保護中，一致性群組會在第一個目的地 ONTAP 叢集上使用同步關係，並在第二個目的地 ONTAP 叢集上使用非同步關係，獲得雙重保護。建立，編輯及刪除 SnapMirror 主動式同步保護工作流程可維持同步保護。SRM 容錯移轉和重新保護工作流程，可維持非同步保護。</block>
+  <block id="847e23e660344e48eda89a17ed2fe895" category="paragraph">為了建立扇出保護，您需要對等三個站台叢集和 SVM 。</block>
+  <block id="786887572f6ef1c20f2d8177cb2f1639" category="cell">如果</block>
+  <block id="0e5243d9965540f62aac19a985f3f33e" category="cell">然後</block>
+  <block id="d5b8476ccfc73f0dfcc378bb8e87f596" category="list-text">來源一致性群組位於叢集 C1 和 SVM svm1 上</block>
+  <block id="cd2e03b62609e27f3b7bf85767e02805" category="list-text">第一個目的地一致性群組位於叢集 C2 和 SVM svm2 和上</block>
+  <block id="107261866291a4496e591e0dc5ae7bb0" category="list-text">第二個目的地一致性群組位於叢集 C3 和 SVM svm3 上</block>
+  <block id="96b7e0c99e3a74ef3737b4ed36363d8a" category="list-text">來源 ONTAP 叢集上的叢集對等關係將為（ C1 ， C2 ）和（ C1 ， C3 ）。</block>
+  <block id="2b709df32589b984386f20988b72d60a" category="list-text">第一個目的地 ONTAP 叢集上的叢集對等關係將為（ C2 ， C1 ）和（ C2 ， C3 ）和</block>
+  <block id="a0c3064c9d17305a713c69529f0edb07" category="list-text">第二個目的地 ONTAP 叢集上的叢集對等關係將為（ C3 ， C1 ）和（ C3 ， C2 ）。</block>
+  <block id="bba70a2cf736bdaefff46a56f7fa0f01" category="list-text">SVM 在來源 SVM 上的對等關係將為（ svm1 ， svm2 ）和（ svm1 ， svm3 ）。</block>
+  <block id="da8777f949732242aeb2cb138c90de77" category="list-text">在第一個目的地 SVM 上執行 SVM 對等對等處理時，將會是（ svm2 ， svm1 ）和（ svm2 ， svm3 ）和</block>
+  <block id="f525773d8656a060a38e96bd01d81fe1" category="list-text">在第二個目的地 SVM 上執行 SVM 對等對等項將為（ svm3 ， svm1 ）和（ svm3 ， svm2 ）。</block>
+  <block id="4839d2f25cc35b249d5db15efa1afd75" category="paragraph">*步驟*</block>
+  <block id="6f815e1b2741159d76d3d66389878de5" category="inline-link">選取預留位置資料存放區</block>
+  <block id="55092f0f894ce14245043edf4beb8b6e" category="list-text">建立新的佔位器資料存放區。請參閱<block ref="be1fd24d4dcaa49fc51bb9d037dbfbe3" category="inline-link-rx"></block></block>
+  <block id="fb9b74f07a06ab47cb2865075f009b08" category="list-text">將資料存放區新增至主機叢集保護<block ref="7f22d9c478ecf91907e72215f8fe7f7b" category="inline-link-macro-rx"></block>。您需要同時新增非同步和同步原則類型。</block>
+  <block id="0af8d7332d302602a2cbf947d60fb54f" category="cell">適用於 ONTAP 工具 10.2 的 ONTAP 9.12.1 至 ONTAP 9.15.1 ，適用於 ONTAP 工具 10.3 的 ONTAP 9.14.1 ， 9.15.1 及 9.16.0 。適用於 ONTAP 工具 10.4 的 ONTAP 9.14.1 ， 9.15.1 ， 9.16.0 和 9.16.1</block>
+  <block id="820b87be8b0ea0cbf45b52e4cfcb6b29" category="paragraph">瞭解適用於 VMware vSphere 10.4 的 ONTAP 工具所提供的全新增強功能。</block>
+  <block id="75d7a3fca31675c888d80d62c6b5e5b6" category="inline-xref-macro">適用於 VMware vSphere 10.4 的 ONTAP 工具的新功能</block>
+  <block id="d0ac2643534ae45f244af907f2ec0f1d" category="paragraph">有關新功能和增強功能的完整列表，請參閱<block ref="b243962e5f3c5df9db6e6c1d7b921996" category="inline-xref-macro-rx"></block>。</block>
+  <block id="43b9558fb2318111f19aaee1e3605970" category="paragraph">若要深入瞭解從適用於 VMware vSphere 9 的 ONTAP 工具移轉至 ONTAP 工具 10.4 是否適合您的部署<block ref="947428ca1064f8d19137fb8976698998" category="inline-xref-macro-rx"></block>、請參閱。支援從適用於 VMware vSphere 9.12-D 的 ONTAP 工具和 9.13-D 版本移轉至適用於 VMware vSphere 10.4 的 ONTAP 工具。</block>
+  <block id="ad51969fec18be07f3cc4ac9fd70c299" category="inline-link">適用於 VMware vSphere 10.4 版本資訊的 ONTAP 工具</block>
+  <block id="af65a4a3dd2537d4f0cd4a3bede8015b" category="paragraph">如需詳細資訊，請參閱<block ref="8f961178d2a138f817c36e7e7eff2119" category="inline-link-rx"></block>。您必須使用 NetApp 帳戶登入、或建立帳戶才能存取版本資訊。</block>
+  <block id="428e09093a5b5e13efc923ccfae1dad2" category="summary">瞭解適用於 VMware vSphere 10.4 的 ONTAP 工具所提供的新功能。</block>
+  <block id="9d4782829c731216c0b279379a87a5fc" category="doc">適用於 VMware vSphere 10.4 的 ONTAP 工具的新增功能</block>
+  <block id="015f6a5b5b40b24cb9e3b3904ef30f19" category="cell">支援 ASA R2 系統，每個叢集有 12 個節點</block>
+  <block id="e88ac2813481d20d319064af42301d6c" category="cell">適用於 VMware vSphere 10.4 的 ONTAP 工具支援 ASA R2 儲存系統的工作流程，每個叢集最多可有 12 個節點，可改善資料管理效率和擴充性。它支援含 iSCSI 和 FC 傳輸協定的 VVols 資料存放區，以及含 iSCSI ， FC 和 NVMe 傳輸協定的 VMFS 資料存放區，提供靈活且增強的儲存選項。</block>
+  <block id="7e65b49d19fd9bf52e5bdcee81b5573b" category="cell">ONTAP Tools Manager 使用者介面增強功能</block>
+  <block id="ca3bc9be5019e967114f107f66d35202" category="cell">您現在可以啟用 NTP 伺服器，以在整個環境中精確地同步時間，並設定遙測設定，從 ONTAP 工具管理員介面監控和分析系統效能。維護主控台不再提供這些設定。</block>
+  <block id="e438ef67c617e854a75d87bbcfa7f910" category="cell">增強的安全功能</block>
+  <block id="054fcd95af882565b3147fac65777004" category="cell">安全功能現在提供更強大的保護功能，並符合業界標準，提供健全且使用者友好的體驗，協助管理員更有效地管理 VMware 環境。</block>
+  <block id="f6850fe1f4e026e406bf9d50fc62123f" category="cell">強化的 SRA 災難恢復功能</block>
+  <block id="41c4c8b4e778694abddaccff1d86989d" category="cell">適用於 VMware vSphere 10.4 的 ONTAP 工具現在除了支援 SnapMirror 排程快照複本之外，還能使用 Site Recovery Appliance （ SRA ）搭配自訂命名快照，來支援災難恢復作業。</block>
+  <block id="a71d83915f8839e1da511021db1b3aa0" category="cell">052</block>
+  <block id="cd99372833b369446aa846af2f39b78a" category="cell">ISO 可能與目前版本相同，或是比目前版本高出兩個版本。</block>
+  <block id="860af320655d61b64d407609dbaebf4e" category="cell">使用與 ISO 版本相容的版本，從您目前的版本升級。</block>
+  <block id="c9e1074f5b3f9fc8ea15d152add07294" category="cell">104</block>
+  <block id="e7888a2cb1c91fe9f395748ba2ec921d" category="cell">重新啟動次要節點失敗</block>
+  <block id="e94acb1b5819de63beb9b9f517527f58" category="cell">逐一手動重新啟動節點</block>
+  <block id="f899139df5e1059396431415e770c6dd" category="cell">100</block>
+  <block id="a6b72063d57475994e292d7d02a67a6b" category="cell">核心復原失敗</block>
+  <block id="8c9611718f0422ac8dd0baf0903d22e5" category="cell">051</block>
+  <block id="6cae6284cc2ed85950cd3dc3382f1ff9" category="cell">動態儲存資源配置程式升級失敗</block>
+  <block id="9ecc47f248b7dc88e1a49bb69d9766ea" category="cell">檢查升級記錄，然後重試升級。</block>
+  <block id="88ddadec554e6dd3adfdd7eb1ceaef6b" category="cell">056</block>
+  <block id="96d29053755cef088a3a57e91d8ca942" category="cell">刪除移轉備份失敗</block>
+  <block id="d4cd0dabcf4caa22ad92fab40844c786" category="cell">不適用</block>
+  <block id="a5d53d3d414b95a5a57355a2a51b9dc5" category="admonition">不支援從 VMware vSphere 10.3 零 RPO 的 ONTAP 工具開始。</block>
+  <block id="1fb78266951be2e4b70ab1728353f23b" category="paragraph">您可以從適用於 VMware vSphere 10.2 或 10.3 的 ONTAP 工具升級至 10.4 。不過，不支援從 ONTAP 工具 10.0 或 10.1 直接升級至 10.4 。</block>
+  <block id="9b9935ad5969c28de13381a2e512b47c" category="paragraph">附註：</block>
+  <block id="4d803f2463e7fa94cba591b36f910252" category="list-text">在 ASA R2 系統中，您應先升級至適用於 VMware vSphere 10.4 with ONTAP 9.16.1 的 ONTAP 工具，再新增更多儲存可用性區域（ SAZ ）。</block>
+  <block id="60014b6033b092b9980ed9181fab235f" category="list-text">如果從適用於 VMware vSphere 10.2 或 10.3 的 ONTAP 工具升級至 10.4 版失敗，則不支援復原。若要恢復設定，請使用適用於 VMware vSphere 10.2 的 RPO for ONTAP 工具，以及適用於 VMware vSphere 10.3 的 ONTAP 工具近乎零的 RPO 或快照恢復。</block>
+  <block id="479c54eb8e4f6531f86dba44d74e6f19" category="paragraph">如果您是從適用於 VMware vSphere 10.2 或 10.3 的 ONTAP 工具進行升級，則必須先完成下列步驟，才能繼續執行升級工作： * 將額外的 100 GB 硬碟新增至每個節點，因為服務資料會儲存在本機 VM 上。* 根據您的部署風格，變更已關閉電源的 VM 的 CPU 和記憶體。啟用 CPU 和 RAM 的 Hot 外掛程式。</block>
+  <block id="26b17225b626fb9238849fd60eabdf60" category="paragraph">+</block>
+  <block id="02046ad0e82ff27f6e1774aa588fd853" category="cell">部署類型</block>
+  <block id="22fbf927c80a2927233c5934b041a811" category="list-text">如果使用 ONTAP 工具 10.2 將應用裝置部署為本機路徑（簡易部署），則必須在升級前先執行一次「不活動」快照。</block>
+  <block id="5c8bff2565556a46ee36cdd1e107b4be" category="paragraph">如果您要從適用於 VMware vSphere 10.0 的 ONTAP 工具升級至 10.1 ，則必須先完成下列步驟，才能繼續執行升級工作： * 啟用診斷 *</block>
+  <block id="cb702676cfcf110ca7a10beaa4efb62a" category="paragraph">升級至適用於 VMware vSphere 10.4 的 ONTAP 工具之後，您可以：</block>
+  <block id="d8f7e97e3245c4d37ee67ab9e2dc4485" category="paragraph">從 VMware vSphere 的舊版工具升級到 10.4 之後，請重新掃描 ONTAP 介面卡，確認詳細資料已在「 VMware Live Site Recovery Storage Replication Adapters 」頁面上更新。</block>
+  <block id="d3b3106ef8139d93f3b29ebcc961808a" category="paragraph"><block ref="d3b3106ef8139d93f3b29ebcc961808a" category="inline-link-macro-rx"></block></block>
+  <block id="fb029c6d9932bd7c5642df65930dc178" category="sidebar">適用於 VMware vSphere 10.4 的 ONTAP 工具</block>
+  <block id="0857bfd766eab16b4130e4efc5375da1" category="sidebar">建立備份並恢復 ONTAP 工具設定</block>
+  <block id="4a0289525221cf8ff283b68c2151b26c" category="sidebar">將適用於 VMware vSphere 9.x 的 ONTAP 工具移轉至 10.4</block>
 </blocks>

@@ -14,8 +14,8 @@ summary: 您可以使用適用於 VMware vSphere 和 ONTAP System Manager 的 ON
 您可以使用適用於 VMware vSphere 和 ONTAP System Manager 的 ONTAP 工具隨附的 JSON 檔案、設定新的使用者角色和權限來管理儲存後端。
 
 .開始之前
-* 您應該已使用下列方法從適用於 VMware vSphere 的 ONTAP 工具下載 ONTAP 權限檔案： https ： <loadbalancerIP> ： 8443/virtualization / 使用者權限 /users_roles.zip 。
-* 您應該已使用從 ONTAP 工具下載 ONTAP 權限檔案 `\https://<loadbalancerIP>:8443/virtualization/user-privileges/users_roles.zip`。
+* 您應該已使用下列方法從適用於 VMware vSphere 的 ONTAP 工具下載 ONTAP Privileges 檔案： https ： <ONTAPtoolsIP> ： 8443/virtualization / 使用者權限 /users_roles.zip 。
+* 您應該已使用從 ONTAP 工具下載 ONTAP Privileges 檔案 `\https://<ONTAPtoolsIP>:8443/virtualization/user-privileges/users_roles.zip`。
 +
 
 NOTE: 您可以在叢集或直接在儲存虛擬機器（ SVM ）層級建立使用者。您也可以在不使用 user_roles.json 檔案的情況下建立使用者、如果是這樣做、您必須在 SVM 層級擁有一組最低權限。
@@ -24,7 +24,7 @@ NOTE: 您可以在叢集或直接在儲存虛擬機器（ SVM ）層級建立使
 
 
 .步驟
-. 擷取下載的 _\https ： <loadbalancerIP> ： 8443/virtualization / 使用者權限 /users_roles.zip_ 檔案。
+. 擷取下載的 _\https ： <ONTAPtoolsIP> ： 8443/virtualization / 使用者權限 /users_roles.zip_ 檔案。
 . 使用叢集的叢集管理 IP 位址存取 ONTAP 系統管理員。
 . 使用 admin Privileges 登入叢集。若要設定使用者，請執行下列步驟：
 +
@@ -36,7 +36,7 @@ NOTE: 您可以在叢集或直接在儲存虛擬機器（ SVM ）層級建立使
 +
 產品欄位會自動填入。
 
-.. 從產品功能下拉式功能表中選取所需的功能。
+.. 從下拉式清單中選取產品功能為 VSC ， VASA 供應商或 SRA 。
 +
 根據所選的產品功能、 * 角色 * 欄位會自動填入。
 
@@ -146,6 +146,9 @@ sti115_vsim_ucs630f_aggr1 vserver show-aggregates                               
 
 
 | /api/network/IP/ 介面 | 唯讀 | Add Storage Backend （新增儲存後端）：識別管理 LIF 範圍為叢集 / SVM 
+
+
+| /API/儲存 設備 / 可用性區域 | 唯讀 | Saz 探索。適用於 ONTAP 9.16.1 版及 ASA R2 系統。 
 |===
 
 
@@ -257,6 +260,12 @@ security login rest-role create -role <role-name> -api /api/svm/svms -access rea
 [listing]
 ----
 security login rest-role create -role <role-name> -api /api/storage/storage-units -access all
+----
+對於 ONTAP 9.16.1 版及更新版本上的 ASA R2 系統，請執行下列命令：
+
+[listing]
+----
+security login rest-role create -role <role-name> -api /api/storage/availability-zones -access readonly
 ----
 
 
@@ -376,7 +385,7 @@ security login unlock -username testvpsraall -vserver C1_sti160-cluster
 
 == 將適用於 VMware vSphere 10.1 使用者的 ONTAP 工具升級為 10.3 使用者
 
-如果 VMware vSphere 10.1 的 ONTAP 工具使用者是使用 json 檔案建立的叢集範圍使用者、請在 ONTAP CLI 上使用管理員使用者執行下列命令、以升級至 10.3 版本。
+對於使用 JSON 檔案建立叢集範圍使用者的 VMware vSphere 10.1 使用者適用的 ONTAP 工具，請搭配使用者管理 Privileges 使用下列 ONTAP CLI 命令，以升級至 10.3 版本。
 
 如需產品功能：
 
@@ -410,7 +419,7 @@ _security 登入角色 create -role <existing-role-name> -cmddirname "vserver NV
 
 _security 登入角色 create -role <existing-role-name> -cmddirname "vserver NVMe subsystem map remove" -access all_
 
-如果 VMware vSphere 10.1 的 ONTAP 工具使用者是使用 json 檔案建立的 SVM 範圍使用者、請使用管理員使用者在 ONTAP CLI 上執行下列命令、以升級至 10.3 版本。
+對於使用 json 檔案建立 SVM 範圍使用者的 VMware vSphere 10.1 ONTAP 工具，請使用 ONTAP CLI 命令搭配管理使用者 Privileges ，以升級至 10.3 版本。
 
 SVM Privileges ：
 
@@ -448,4 +457,26 @@ vserver nvme subsystem create
 
 vserver nvme subsystem modify
 
+----
+
+
+== 將適用於 VMware vSphere 10.3 使用者的 ONTAP 工具升級為 10.4 使用者
+
+從 ONTAP 9.16.1 開始，將適用於 VMware vSphere 10.3 使用者的 ONTAP 工具升級至 10.4 使用者。
+
+對於使用 JSON 檔案和 ONTAP 9.16.1 版或更新版本建立叢集範圍使用者的 VMware vSphere 10.3 使用者適用的 ONTAP 工具，請使用 ONTAP CLI 命令搭配管理使用者 Privileges 升級至 10.4 版。
+
+如需產品功能：
+
+* VSC
+* VSC 和 VASA Provider
+* VSC 和 SRA
+* VSC 、 VASA Provider 和 SRA 。
+
+
+叢集 Privileges ：
+
+[listing]
+----
+security login role create -role <existing-role-name> -cmddirname "storage availability-zone show" -access all
 ----

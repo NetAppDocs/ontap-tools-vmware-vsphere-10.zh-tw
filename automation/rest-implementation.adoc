@@ -22,7 +22,7 @@ REST API 包括數種資源類別，例如 vCenter 和 Aggregate 。如需詳細
 
 == 如何存取REST API
 
-您可以透過 ONTAP 工具負載平衡器 IP 位址和連接埠來存取 VMware vSphere 10 REST API 的 ONTAP 工具。完整 URL 有幾個部分，包括：
+您可以透過 ONTAP 工具 IP 位址和連接埠來存取 VMware vSphere 10 REST API 的 ONTAP 工具。完整 URL 有幾個部分，包括：
 
 * ONTAP 工具 IP 位址和連接埠
 * API 版本

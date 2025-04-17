@@ -14,9 +14,12 @@ summary: 您可以從適用於 VMware vSphere 圖形化使用者介面（ GUI �
 更新 AutoSupport Proxy URL ，確保在使用 Proxy 伺服器進行網路存取控制或安全措施的情況下， AutoSupport 功能正常運作。它可讓 AutoSupport 資料透過適當的 Proxy 進行路由，實現安全傳輸與法規遵循。
 
 .步驟
-. 從 vCenter Server 開啟維護主控台。
-. 以維護使用者身分登入。
-. 輸入 1 以選擇 * 應用程式組態 * 。
-. 輸入 4 以選取 * 更新 AutoSupport Proxy URL* 。
-. 輸入 Proxy URL 。
+. 從網路瀏覽器啟動 ONTAP 工具管理員： `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+. 使用您在部署期間提供的 VMware vSphere 管理員認證 ONTAP 工具登入。
+. 從側邊列選取 * 設定 * 。
+. 選擇 * 設定 * > * 遙測 * > * 編輯 * 選項。
+. 輸入有效的 * Proxy URL* 並儲存變更。
++
+如果停用 AutoSupport ，則 Proxy URL 也會停用。
+
 

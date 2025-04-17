@@ -14,7 +14,7 @@ summary: 當您在 vCenter 物件檢視中的資料存放區物件上按一下�
 當您在 vCenter 物件檢視中的資料存放區物件上按一下滑鼠右鍵時，適用於 VMware vSphere 的 ONTAP 工具支援的動作會顯示在外掛程式區段下方。根據資料存放區類型和目前的使用者權限、會啟用特定動作。
 
 
-NOTE: 展開 vVols 資料存放區作業不適用於 ASA R2 型 VVols 資料存放區。
+NOTE: 展開 vVols 資料存放區作業不適用於 ASA R2 系統型 vVols 資料存放區。
 
 .步驟
 . 從 vSphere Client 首頁、選取 * 主機與叢集 * 。

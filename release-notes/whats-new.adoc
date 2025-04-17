@@ -1,64 +1,31 @@
 ---
 permalink: release-notes/whats-new.html 
 sidebar: sidebar 
-keywords: 'what"s new, release notes, 10.3, ONTAP tools for VMware vSphere' 
-summary: 瞭解適用於 VMware vSphere 10.3 的 ONTAP 工具所提供的新功能。 
+keywords: 'what"s new, release notes, 10.4, ONTAP tools for VMware vSphere' 
+summary: 瞭解適用於 VMware vSphere 10.4 的 ONTAP 工具所提供的新功能。 
 ---
-= 適用於 VMware vSphere 10.3 的 ONTAP 工具的新增功能
+= 適用於 VMware vSphere 10.4 的 ONTAP 工具的新增功能
 :allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
 
 
 [role="lead"]
-瞭解適用於 VMware vSphere 10.3 的 ONTAP 工具所提供的新功能。
+瞭解適用於 VMware vSphere 10.4 的 ONTAP 工具所提供的新功能。
 
 [cols="30%,70%"]
 |===
 | 更新 | 說明 
 
 
- a| 
-支援新的平台和應用程式版本
- a| 
-適用於 VMware vSphere 10.3 的 ONTAP 工具現在支援下列平台和應用程式版本：
-
-* ONTAP 9.16.0 及更新版本
-* VMware vSphere 8.0 U3
-* VMware Live Site Recovery 9.0
+| 支援 ASA R2 系統，每個叢集有 12 個節點 | 適用於 VMware vSphere 10.4 的 ONTAP 工具支援 ASA R2 儲存系統的工作流程，每個叢集最多可有 12 個節點，可改善資料管理效率和擴充性。它支援含 iSCSI 和 FC 傳輸協定的 VVols 資料存放區，以及含 iSCSI ， FC 和 NVMe 傳輸協定的 VMFS 資料存放區，提供靈活且增強的儲存選項。 
 
 
+| ONTAP Tools Manager 使用者介面增強功能 | 您現在可以啟用 NTP 伺服器，以在整個環境中精確地同步時間，並設定遙測設定，從 ONTAP 工具管理員介面監控和分析系統效能。維護主控台不再提供這些設定。 
 
 
- a| 
-易於部署
- a| 
-您現在可以在單一節點叢集上以最低需求部署適用於 VMware vSphere 10.3 的 ONTAP 工具，然後將其更新為高可用度（ HA ）或多節點部署。
+| 增強的安全功能 | 安全功能現在提供更強大的保護功能，並符合業界標準，提供健全且使用者友好的體驗，協助管理員更有效地管理 VMware 環境。 
 
 
-
- a| 
-無縫的資源配置與組態
- a| 
-適用於 VMware vSphere 10.3 的 ONTAP 工具已移除與 Trident 相關的相依性，現在則使用動態儲存資源配置程式來啟用無縫的資源配置和組態。
-
-
-
- a| 
-強化 REST API 驗證的安全性
- a| 
-適用於 VMware vSphere 10.3 的 ONTAP 工具現在仰賴 CA 簽署的 ONTAP 工具 REST API 和使用者介面憑證，以提供更高的安全性。
-
-
-
- a| 
-支援 ASA R2 系統
- a| 
-適用於 VMware vSphere 10.3 的 ONTAP 工具支援 ASA R2 系統上的 VMFS 資料存放區資源配置，可透過 SnapMirror Active Sync 和 SRA/VMware Live Site Recovery 來保護 VMFS 資料存放區。
-
-
-
- a| 
-提升觀察能力
- a| 
-適用於 VMware vSphere 10.3 的 ONTAP 工具可擴充對 VMFS 和 vVol 資料存放區及其各自 VM 的觀察指標支援。
-
+| 強化的 SRA 災難恢復功能 | 適用於 VMware vSphere 10.4 的 ONTAP 工具現在除了支援 SnapMirror 排程快照複本之外，還能使用 Site Recovery Appliance （ SRA ）搭配自訂命名快照，來支援災難恢復作業。 
 |===

@@ -14,12 +14,11 @@ summary: 第一次設定儲存系統時， AutoSupport 預設為啟用。在技�
 第一次設定儲存系統時， AutoSupport 預設為啟用。在技術支援啟用 24 小時後，它會傳送訊息給技術支援人員。停用 AutoSupport 時，您將不再收到主動式支援和監控。
 
 
-NOTE: 建議您保持啟用 AutoSupport 。有助於加速問題偵測與解決。系統會收集 AutoSupport 資訊，並將其儲存在本機，即使停用也一樣。
+NOTE: 建議您保持啟用 AutoSupport 。有助於加速問題偵測與解決。系統會收集 AutoSupport 資訊，並將其儲存在本機，即使停用也一樣。但是，它不會將報告傳送至任何網路。
 
 .步驟
-. 從 vCenter Server 開啟維護主控台。
-. 以維護使用者身分登入。
-. 輸入 1 以選擇 * 應用程式組態 * 。
-. 輸入 3 以選擇 * 停用 AutoSupport * 。
-. 在確認對話方塊中輸入 y 。
+. 從網路瀏覽器啟動 ONTAP 工具管理員： `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+. 使用您在部署期間提供的 VMware vSphere 管理員認證 ONTAP 工具登入。
+. 選擇 * 設定 * > * 遙測 * > * 編輯 * 選項。
+. 取消選取 AutoSupport 選項並儲存變更。
 

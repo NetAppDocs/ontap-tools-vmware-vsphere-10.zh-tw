@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: migrate 
 summary: 移轉儲存資料時、會使用 REST API 手動建立儲存後端。移轉 VASA Provider 資料時，資料會從現有的 Derby 資料庫匯出，並匯入至 MongoDB 資料庫。 
 ---
-= 從適用於 VMware vSphere 9.x 的 ONTAP 工具移轉至 10.3
+= 從適用於 VMware vSphere 9.x 的 ONTAP 工具移轉至 10.4
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -17,11 +17,11 @@ summary: 移轉儲存資料時、會使用 REST API 手動建立儲存後端。�
 NOTE: 只有當設定僅為 VASA Provider 功能提供服務時，您才應移轉適用於 VMware vSphere 9.xx 的 ONTAP 工具設定。
 
 
-NOTE: 從適用於 VMware vSphere 9.x 的 ONTAP 工具移轉至 10.3 之後，含 NVMe / FC 傳輸協定的 vVols 資料存放區無法運作，因為 ONTAP 工具 10.3 只支援使用 VMFS 資料存放區的 NVMe 。
+NOTE: 從適用於 VMware vSphere 9.x 的 ONTAP 工具移轉至 10.4 之後，含 NVMe / FC 傳輸協定的 vVols 資料存放區無法運作，因為 ONTAP 工具 10.4 只支援使用 VMFS 資料存放區的 NVMe 。
 
 *關於此工作*
 
-您可以從適用於 VMware vSphere 9.12D1 和 9.13D2 版本的 ONTAP 工具移轉至 10.3 。
+您可以從適用於 VMware vSphere 9.12D1 和 9.13D2 版本的 ONTAP 工具移轉至 10.4 。
 
 
 NOTE: 在升級至修補程式版本之前，您必須從目前版本取得 OVA 備份。
@@ -30,18 +30,17 @@ NOTE: 在升級至修補程式版本之前，您必須從目前版本取得 OVA 
 
 == 一般移轉步驟
 
-. 部署適用於 ONTAP 工具的 OVA for VMware vSphere 10.3 版本。
-. 新增您要移轉至 ONTAP 工具的 vCenter Server 執行個體，以取得 VMware vSphere 10.3 版本。請參閱。link:../configure/add-vcenter.html["新增 vCenter Server 執行個體"]
+. 部署適用於 VMware vSphere 10.4 的 OVA for ONTAP 工具。
+. 新增您要移轉至 ONTAP 工具的 vCenter Server 執行個體，以取得 VMware vSphere 10.4 版本。請參閱。link:../configure/add-vcenter.html["新增 vCenter Server 執行個體"]
 . 從適用於 VMware vSphere 外掛 vCenter 伺服器 API 的 ONTAP 工具、在本機上建置儲存後端。將儲存設備新增為本機範圍的儲存設備、以進行移轉。
-. 只有在觸發資料存放區探索工作（可能需要 30 分鐘才能觸發）之後、才能在適用於 VMware vSphere 10.3 的 ONTAP 工具中看到從適用於 VMware vSphere 9.xx 的 ONTAP 工具移轉的 NFS 和 VMFS 資料存放區。確認「 VMware vSphere 外掛程式」使用者介面之 ONTAP 工具的「概觀」頁面上是否顯示資料存放區。
+. 只有在觸發資料存放區探索工作（可能需要 30 分鐘才能觸發）之後、才能在適用於 VMware vSphere 10.4 的 ONTAP 工具中看到從適用於 VMware vSphere 9.xx 的 ONTAP 工具移轉的 NFS 和 VMFS 資料存放區。確認「 VMware vSphere 外掛程式」使用者介面之 ONTAP 工具的「概觀」頁面上是否顯示資料存放區。
 
 
 
 
 == SRA 移轉步驟
 
-*開始之前*
-
+.開始之前
 移轉之前，請確定其中一個站台處於受保護狀態，另一個站台處於恢復狀態。
 
 
@@ -72,8 +71,8 @@ NOTE: 如果容錯移轉剛剛完成，且重新保護擱置中，請勿移轉�
 ----
 iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 ----
-. 部署適用於 VMware vSphere 10.3 的 OVA for ONTAP 工具。
-. 新增您要移轉至 ONTAP 工具的 vCenter Server 執行個體，以取得 VMware vSphere 10.3 版本。請參閱。 link:../configure/add-vcenter.html["新增 vCenter Server 執行個體"]
+. 部署適用於 VMware vSphere 10.4 的 OVA for ONTAP 工具。
+. 新增您要移轉至 ONTAP 工具的 vCenter Server 執行個體，以取得 VMware vSphere 10.4 版本。請參閱。 link:../configure/add-vcenter.html["新增 vCenter Server 執行個體"]
 . 從遠端外掛 vCenter 伺服器 API 本機建立內建儲存後端。將儲存設備新增為本機範圍以進行移轉。
 . 發出下列 API 呼叫以進行移轉：
 +
@@ -199,17 +198,14 @@ NOTE: UUID 是移轉後 API 回應時傳回的移轉 UUID 。
 一旦修補程式移轉 API 成功執行，所有 VM 都會遵守儲存原則。
 
 ====
-+
-成功移轉之後、將 ONTAP 工具 10.3 登錄至 vCenter Server 之後、請執行下列步驟：
-
-+
-** 重新整理所有主機上的憑證。
-** 執行資料存放區（ DS ）和虛擬機器（ VM ）作業之前、請先等待一段時間。等待時間取決於設定中的主機數量， DS 和 VM 。當您不等待時、作業可能會間歇性失敗。
 
 
+.下一步
+成功移轉之後、將 ONTAP 工具 10.4 登錄至 vCenter Server 之後、請執行下列步驟：
 
+* 重新整理所有主機上的憑證。
+* 執行資料存放區（ DS ）和虛擬機器（ VM ）作業之前、請先等待一段時間。等待時間取決於設定中的主機數量， DS 和 VM 。當您不等待時、作業可能會間歇性失敗。
 
-*完成後*
 
 升級後，如果虛擬機器規範狀態已過期，請使用下列步驟重新套用虛擬機器儲存原則：
 
@@ -224,6 +220,5 @@ NOTE: UUID 是移轉後 API 回應時傳回的移轉 UUID 。
 
 
 
-*相關資訊*
-
-link:../upgrade/upgrade-ontap-tools.html["從適用於 VMware vSphere 10.x 的 ONTAP 工具升級至 10.3"]
+.相關資訊
+link:../upgrade/upgrade-ontap-tools.html["從適用於 VMware vSphere 10.x 的 ONTAP 工具升級至 10.4"]

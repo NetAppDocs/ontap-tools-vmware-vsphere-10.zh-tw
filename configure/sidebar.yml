@@ -19,4 +19,4 @@ entries:
 - title: 設定網路存取
   url: "/configure/configure-network-access.html"
 - title: 建立資料存放區
-  url: "/configure/create-vvols-datastore.html"
+  url: "/configure/create-datastore.html"

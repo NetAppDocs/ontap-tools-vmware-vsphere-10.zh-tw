@@ -31,8 +31,6 @@ NOTE: 您應該設定的密碼 `diag` 使用者同時啟用遠端診斷。
  a| 
 . 顯示伺服器狀態摘要
 . 變更 VASA 提供者服務和 SRA 服務的記錄層級
-. 停用 AutoSupport
-. 更新 AutoSupport Proxy URL
 
 
 
@@ -44,7 +42,6 @@ NOTE: 您應該設定的密碼 `diag` 使用者同時啟用遠端診斷。
 . 關閉虛擬機器
 . 變更「maint」使用者密碼
 . 變更時區
-. 新增NTP伺服器
 . 增加監獄磁碟大小（/監獄）
 . 升級
 . 安裝VMware Tools

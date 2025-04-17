@@ -14,7 +14,7 @@ summary: 您可以使用適用於 VMware vSphere 遠端外掛程式介面的 ONT
 您可以使用適用於 VMware vSphere 的 ONTAP 工具，向 vCenter Server 執行個體註冊 VASA Provider 。VASA Provider 設定區段會顯示所選 vCenter Server 的 VASA Provider 登錄狀態。
 
 .步驟
-. 使用登入 vSphere 用戶端 `\https://<vcenterip>/<ui>`
+. 登入 vSphere 用戶端。
 . 在外掛程式區段下，選取 * 快速鍵 * > * NetApp ONTAP tools* 。
 . 選擇 * 設定 * > * VASA 提供者設定 * 。VASA Provider 登錄狀態會顯示為「未登錄」。
 . 選擇 * 註冊 * 按鈕以註冊 VASA 提供者。
@@ -22,8 +22,7 @@ summary: 您可以使用適用於 VMware vSphere 遠端外掛程式介面的 ONT
 . 成功登錄和重新整理頁面後，會顯示已登錄的 VASA Provider 的狀態，名稱和版本。註冊後，將會啟動取消註冊動作。
 
 
-*完成後*
-
+.下一步
 確認已登入的 VASA Provider 已列於 vCenter 用戶端的 VASA Provider 之下：
 
 .步驟

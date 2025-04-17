@@ -26,7 +26,7 @@ vCenter Server 中所有已探索到 VMware vSphere 或託管 VVols 資料存放
 請依照下列步驟、從 vCenter Server 刪除 ONTAP 工具中的 NFS 、 VMFS 或 VVOL 資料存放區：
 
 .步驟
-. 使用登入 vSphere 用戶端 `\https://<vcenterip>/<ui>`
+. 登入 vSphere 用戶端。
 . 在主機系統或主機叢集或資料中心上按一下滑鼠右鍵，然後選取 * NetApp ONTAP tools* > * 刪除 datastori* 。
 +
 

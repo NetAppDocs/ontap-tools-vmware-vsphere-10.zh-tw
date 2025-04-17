@@ -32,3 +32,5 @@ entries:
       url: "/protect/configure-array-manager.html"
   - title: 驗證複寫的儲存系統
     url: "/protect/verify-the-replicated-storage-environment.html"
+  - title: 風扇輸出保護
+    url: "/protect/fan-out-protection.html"

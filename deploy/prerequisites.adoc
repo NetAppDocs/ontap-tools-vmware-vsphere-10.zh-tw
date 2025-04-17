@@ -49,27 +49,39 @@ summary: 在部署適用於 VMware vSphere 的 ONTAP 工具之前、您應該先
 | HA 大型（累積三個節點） | 51 | 102. | 1050 
 |===
 
+NOTE: 啟用備份時，每個 ONTAP 工具叢集在部署 VM 的資料存放區上需要另一個 50GB 的空間。因此，非 HA 需要 400 GB 的空間，而 HA 則需要總共 1100 GB 的空間。
+
+
 
 == 最低儲存與應用程式需求
 
 |===
-| 儲存設備、主機和應用程式 | 最低版本需求 
+| 儲存設備、主機和應用程式 | 版本需求 
 
 
 | ONTAP | 9.14.1 ， 9.15.1 和 9.16.0 。FAS ， ASA A 系列， ASA C 系列， AFF A 系列， AFF C 系列和 ASA R2 。 
 
 
-| ESXi主機 | ESXi 7.0.3 
+| ONTAP 工具支援的 ESXi 主機 | 7.0.3 之後 
 
 
-| vCenter 伺服器 | vCenter 7.0U3 
+| ONTAP 工具支援 vCenter Server | 7.0U3 以上版本 
 
 
 | VASA供應商 | 3.0 
 
 
-| ova 應用程式 | 10.3 
+| ova 應用程式 | 10.4 
+
+
+| 用於部署 ONTAP 工具虛擬機器的 ESXi 主機 | 7.0 ， 7.0U1 ， 7.0U2 ， 7.0U3 ， 8.0 ， 8.0U1 及 8.0U3 
+
+
+| vCenter Server 可部署 ONTAP 工具虛擬機器 | 7.0 和 8.0 
 |===
+
+NOTE: 從 VMware vSphere 10.4 的 ONTAP 工具開始，虛擬機器硬體會從版本 10 變更為 17 。
+
 互通性對照表工具（ IMT ）包含有關支援版本的 ONTAP 、 vCenter Server 、 ESXi 主機和外掛應用程式的最新資訊。
 
 https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src=IMT["互通性對照表工具"^]
@@ -151,50 +163,86 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 |===
 
 
-| *連接埠* | *說明* 
+| *連接埠* | *傳輸協定* | *說明* 
 
 
-| 22 （ TCP ） | Ansible 在叢集資源配置期間使用此 SSH 連接埠進行通訊。此連接埠是變更維護使用者密碼，狀態訊息等功能所必需的，在 HA 組態的情況下，也需要更新所有三個節點上的值。 
+| 8143 | TCP | ONTAP 工具的 HTTP/HTTPS 連線。 
 
 
-| 443 （ TCP ） | 這是 VASA Provider 服務傳入通訊的傳輸連接埠。Vasa Provider 自我簽署憑證和自訂 CA 憑證均裝載於此連接埠。 
+| 8043 | TCP | ONTAP 工具的 HTTP/HTTPS 連線。 
 
 
-| 8443 （ TCP ） | 此連接埠可透過 swagger 和 Manager 使用者介面應用程式來裝載 API 文件。 
+| 9060 | TCP | ONTAP 工具的 HTTP/HTTPS 連線。 
 
 
-| 2379 （ TCP ） | 這是用戶端要求的預設連接埠，例如取得，放置，刪除或監看 etcd 金鑰值存放區中的金鑰。 
+| 22 | TCP | Ansible 在叢集資源配置期間使用此 SSH 連接埠進行通訊。此連接埠是變更維護使用者密碼，狀態訊息等功能所必需的，在 HA 組態的情況下，也需要更新所有三個節點上的值。 
 
 
-| 2380 （ TCP ） | 這是 etcd 叢集的伺服器對伺服器通訊預設連接埠，用於 etcd 用於資料複寫和一致性所依賴的 raft Consensus 演算法。 
+| 443 | TCP | 這是 VASA Provider 服務傳入通訊的傳輸連接埠。Vasa Provider 自我簽署憑證和自訂 CA 憑證均裝載於此連接埠。 
 
 
-| 7472 （ TCP+UDP ） | 這是 Prometheus 計量服務連接埠。 
+| 8443 | TCP | 此連接埠可透過 swagger 和 Manager 使用者介面應用程式來裝載 API 文件。 
 
 
-| 7946 （ TCP+UDP ） | 此連接埠用於 Docker 的容器網路探索。 
+| 2379 | TCP | 這是用戶端要求的預設連接埠，例如取得，放置，刪除或監看 etcd 金鑰值存放區中的金鑰。 
 
 
-| 9083 （ TCP ） | 此連接埠是 VASA Provider 服務的內部使用服務連接埠。 
+| 2380 | TCP | 這是 etcd 叢集的伺服器對伺服器通訊預設連接埠，用於 etcd 用於資料複寫和一致性所依賴的 raft Consensus 演算法。 
 
 
-| 1162 （ UDP ） | 這是 SNMP 設陷封包連接埠。 
+| 7472 | TCP/UDP | 這是 Prometheus 計量服務連接埠。 
 
 
-| 6443 （ TCP ） | 來源： RKE2 代理節點。目的地： REK2 伺服器節點。說明： Kubernetes API 
+| 7946 | TCP/UDP | 此連接埠用於 Docker 的容器網路探索。 
 
 
-| 9345 （ TCP ） | 來源： RKE2 代理節點。目的地： REK2 伺服器節點。說明： REK2 監督 API 
+| 9083 | TCP | 此連接埠是 VASA Provider 服務的內部使用服務連接埠。 
 
 
-| 8472 （ TCP+UDP ） | 當使用 fl2el VXLAN 時，所有節點都必須能夠透過 UDP 連接埠 8472 到達其他節點。來源：所有 RKE2 節點。目的地：所有 REK2 節點。說明：使用 VXLAN 的 Canal CNI 
+| 1162 | UDP | 這是 SNMP 設陷封包連接埠。 
 
 
-| 10250 （ TCP ） | 來源：所有 RKE2 節點。目的地：所有 REK2 節點。說明： Kubelet 指標 
+| 6443 | TCP | 來源： RKE2 代理節點。目的地： REK2 伺服器節點。說明： Kubernetes API 
 
 
-| 30000-32767 （ TCP ） | 來源：所有 RKE2 節點。目的地：所有 REK2 節點。說明： NodePort 連接埠範圍 
+| 9345 | TCP | 來源： RKE2 代理節點。目的地： REK2 伺服器節點。說明： REK2 監督 API 
 
 
-| 123 （ TCP ） | ntpd 使用此連接埠來執行 NTP 伺服器的驗證。 
+| 8472 | TCP+UDP | 當使用 fl2el VXLAN 時，所有節點都必須能夠透過 UDP 連接埠 8472 到達其他節點。來源：所有 RKE2 節點。目的地：所有 REK2 節點。說明：使用 VXLAN 的 Canal CNI 
+
+
+| 10250 | TCP | 來源：所有 RKE2 節點。目的地：所有 REK2 節點。說明： Kubelet 指標 
+
+
+| 30000-32767 | TCP | 來源：所有 RKE2 節點。目的地：所有 REK2 節點。說明： NodePort 連接埠範圍 
+
+
+| 123 | TCP | ntpd 使用此連接埠來執行 NTP 伺服器的驗證。 
+
+
+| 137-139 | TCP/UDP | SMB/Windows 共用封包。 
+
+
+| 6789 | TCP | Ceph 監控（週一） 
+
+
+| 3300 | TCP | Ceph 監控（週一） 
+
+
+| 6800-7300 | TCP | Ceph Manager ， OSD 和檔案系統（ MDS ）。 
+
+
+| 80 | TCP | Ceph RADOS 閘道（ RGW ） 
+
+
+| 9080 | TCP | VP HTTP/HTTPS 連線（僅適用於 IPv4 的 127.0.0.0/8 或 IPv6 的： 1/128 ）。 
 |===
+
+
+== ONTAP 儲存設定
+
+為了確保 ONTAP 儲存設備與適用於 VMware vSphere 的 ONTAP 工具無縫整合，請考慮下列設定：
+
+* 如果您使用光纖通道（ FC ）進行儲存連線，請在 FC 交換器上設定分區，將 ESXi 主機與 SVM 的 FC 生命期連線。 https://docs.netapp.com/us-en/ontap/peering/create-cluster-relationship-93-later-task.html["瞭解 ONTAP 系統的 FC 和 FCoE 分區"]
+* 若要使用 ONTAP 工具管理的 SnapMirror 複寫， ONTAP 儲存管理員應先建立 https://docs.netapp.com/us-en/ontap/peering/create-cluster-relationship-93-later-task.html["ONTAP 叢集對等關係"]和在 ONTAP 中， https://docs.netapp.com/us-en/ontap/peering/create-intercluster-svm-peer-relationship-93-later-task.html["ONTAP 叢集間 SVM 對等關係"]然後再使用 SnapMirror 。
+

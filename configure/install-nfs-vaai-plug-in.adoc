@@ -24,7 +24,7 @@ NFS vStorage API for Array Integration （ NFS VAAI ）外掛程式是整合 VMw
 
 
 .步驟
-. 使用登入 vSphere 用戶端 `\https://<vcenterip>/<ui>`
+. 登入 vSphere 用戶端。
 . 在外掛程式區段下，選取 * 快速鍵 * > * NetApp ONTAP tools* 。
 . 選取 * 設定 * > * NFS VAAI 工具 * 。
 . 當 VAAI 外掛程式上傳至 vCenter Server 時、請在 * 現有版本 * 區段中選取 * 變更 * 。如果 VAAI 外掛程式未上傳至 vCenter Server 、請選取 * 上傳 * 按鈕。

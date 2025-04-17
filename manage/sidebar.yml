@@ -60,6 +60,8 @@ entries:
     url: "/manage/migrate-standard-virtual-machines-to-vvols-datastores.html"
   - title: Vasa 清理
     url: "/manage/delete-virtual-machines.html"
+  - title: 將資料磁碟連接或分離至虛擬機器
+    url: "/manage/attach-detach-disk.html"
 - title: 探索儲存系統與主機
   url: "/configure/discover-storage-systems-and-hosts.html"
 - title: 修改ESXi主機設定
@@ -84,7 +86,9 @@ entries:
   url: "/manage/disable-autosupport.html"
 - title: 更新 AutoSupport Proxy URL
   url: "/manage/update-proxyurl.html"
-- title: 建立備份並恢復設定
+- title: 新增 NTP 伺服器
+  url: "/manage/add-ntpserver.html"
+- title: 建立備份並恢復 ONTAP 工具設定
   url: "/manage/enable-backup.html"
 - title: 解除安裝適用於 VMware vSphere 的 ONTAP 工具
   url: "/manage/uninstall-deployment.html"

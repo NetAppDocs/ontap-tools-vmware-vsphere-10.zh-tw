@@ -6,7 +6,7 @@ indexpage:
   - title: 開始使用
     links:
     - title: 版本資訊
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3334864
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3343864
     - title: 深入瞭ONTAP 解VMware vSphere的各種功能
       url: "/concepts/ontap-tools-overview.html"
     - title: 部署適用於 VMware vSphere 的 ONTAP 工具
@@ -30,7 +30,7 @@ indexpage:
     - title: 適用於 VMware vSphere 9 的舊版 ONTAP 工具文件
       url: https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=63792
     - title: NetApp 知識庫：適用於 VMware vSphere 的 ONTAP 工具
-      url: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/VSC_and_VASA_Provider
+      url: https://kb.netapp.com/data-mgmt/OTV
     - title: NetApp 社群：適用於 VMware vSphere 的 ONTAP 工具
       url: https://community.netapp.com/t5/VMware-Solutions-Discussions/bd-p/vmware-solutions-discussions
     - title: 瞭解 VMware vSphere with ONTAP

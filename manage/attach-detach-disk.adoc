@@ -1,0 +1,49 @@
+---
+permalink: manage/attach-detach-disk.html 
+sidebar: sidebar 
+keywords:  
+summary: - 
+---
+= 將資料磁碟連接或分離至虛擬機器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+
+
+== 將資料磁碟附加至虛擬機器
+
+將資料磁碟附加至虛擬機器，以擴充儲存容量。
+
+.步驟
+. 登入 vSphere 用戶端。
+. 在清單中的虛擬機器上按一下滑鼠右鍵，然後選取 * 編輯設定 * 。
+. 在 * 虛擬硬體 * 標籤上，選取 * 現有硬碟 * 。
+. 選取磁碟所在的虛擬機器。
+. 選取您要附加的磁碟，然後選取 * 確定 *
+
+
+.結果
+硬碟會出現在虛擬硬體裝置清單中。
+
+
+
+== 從虛擬機器分離資料磁碟
+
+您可以在不再需要資料磁碟時，將其分離至虛擬機器。當您將磁碟從虛擬機器上分離時，不會自動刪除該磁碟；它會保留在 ONTAP 儲存系統上。
+
+.步驟
+. 登入 vSphere 用戶端。
+. 在清單中的虛擬機器上按一下滑鼠右鍵，然後選取 * 編輯設定 * 。
+. 將滑鼠指標移到磁碟上，然後選取 * 移除 * 。
++
+
+NOTE: 磁碟即會從虛擬機器中移除。如果其他虛擬機器共用磁碟，則不會刪除磁碟檔案。
+
+
+
+.相關資訊
+https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-virtual-machine-administration-guide-7-0/configuring-virtual-machine-hardwarevm-admin/virtual-disk-configurationvm-admin/add-a-hard-disk-to-a-virtual-machinevm-admin/add-a-new-hard-disk-to-a-virtual-machinevm-admin.html["新增硬碟至虛擬機器"]
+
+https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-virtual-machine-administration-guide-7-0/configuring-virtual-machine-hardwarevm-admin/virtual-disk-configurationvm-admin/add-a-hard-disk-to-a-virtual-machinevm-admin/add-an-existing-hard-disk-to-a-virtual-machinevm-admin.html["將現有的硬碟新增至虛擬機器"]

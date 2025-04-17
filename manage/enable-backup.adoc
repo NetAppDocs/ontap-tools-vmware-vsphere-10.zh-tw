@@ -2,16 +2,19 @@
 permalink: manage/enable-backup.html 
 sidebar: sidebar 
 keywords:  
-summary: 由於 VMware vSphere 10.3 的 ONTAP 工具使用動態儲存資源配置程式，因此您無法達成零 RPO 。不過，您可以達成接近零 RPO 的目標。 
+summary: 從 VMware vSphere 10.3 的 ONTAP 工具開始，此應用裝置使用動態儲存資源配置程式，您無法達成零 RPO 。不過，您可以達成接近零 RPO 的目標。 
 ---
-= 建立備份並恢復設定
+= 建立備份並恢復 ONTAP 工具設定
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-由於 VMware vSphere 10.3 的 ONTAP 工具使用動態儲存資源配置程式，因此您無法達成零 RPO 。不過，您可以達成接近零 RPO 的目標。若要達到接近零 RPO ，您需要建立設定的備份，並將其還原至新的虛擬機器。
+從 VMware vSphere 10.3 的 ONTAP 工具開始，此應用裝置使用動態儲存資源配置程式，您無法達成零 RPO 。不過，您可以達成接近零 RPO 的目標。若要達到接近零 RPO ，您需要建立設定的備份，並將其還原至新的虛擬機器。
+
+
+NOTE: 若要在啟用非 HA 備份時移轉至 HA ，請先停用備份，然後在移轉後重新啟用。
 
 
 
@@ -42,7 +45,7 @@ summary: 由於 VMware vSphere 10.3 的 ONTAP 工具使用動態儲存資源配�
 
 若要恢復設定，請關閉現有的虛擬機器，並使用初始部署中使用的 OVA 部署新的虛擬機器。
 
-您需要為新虛擬機器使用相同的 ONTAP 工具 IP 位址（負載平衡器 IP ），而啟用服務，節點大小和 HA 模式等系統組態必須與初始部署相同。
+您需要為新的虛擬機器使用相同的 ONTAP 工具 IP 位址，而啟用服務，節點大小和 HA 模式等系統組態必須與初始部署相同。
 
 請執行下列步驟，從備份檔案恢復設定。
 

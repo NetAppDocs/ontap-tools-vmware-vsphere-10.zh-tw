@@ -7,8 +7,10 @@ settings:
     pdf_enabled: true
     harmony_enabled: false
   versions:
-  - version-number: '10.3'
+  - version-number: '10.4'
     url: "/ontap-tools-vmware-vsphere-10"
+  - version-number: '10.3'
+    url: "/ontap-tools-vmware-vsphere-103"
   - version-number: '10.2'
     url: "/ontap-tools-vmware-vsphere-102"
   - version-number: '10.1'
@@ -18,7 +20,7 @@ settings:
   langs: zh-tw,us-en,de-de,es-es,fr-fr,it-it,pt-br,ja-jp,ko-kr,zh-cn
 sidebar:
   entries:
-  - title: 適用於 VMware vSphere 10.3 的 ONTAP 工具
+  - title: 適用於 VMware vSphere 10.4 的 ONTAP 工具
     url: "/index.html"
   - section: release-notes
   - section: concepts
