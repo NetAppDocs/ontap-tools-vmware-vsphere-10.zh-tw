@@ -15,11 +15,9 @@ summary: 儲存設備後端是 ESXi 主機用於資料儲存的系統。
 
 *關於此工作*
 
-將儲存後端新增至 ONTAP 叢集。對於 vCenter 作為相關 SVM 租戶的多租戶設定，請使用 ONTAP 工具管理員來新增叢集。將儲存後端新增至全域叢集之後，您必須將叢集與所需的 vCenter 租戶建立關聯。vCenter 租戶必須搭載所需的儲存虛擬機器（ Storage Virtual Machines ， SVM ）。這可讓 SVM 使用者配置 vVols 資料存放區。您可以使用 SVM 在 vCenter 中新增儲存設備。
+如果 vCenter 在多租戶設定中扮演相關 SVM 的租戶，請使用 ONTAP 工具管理員來新增叢集。將儲存後端與 vCenter Server 建立關聯，以將其全域對應至已登入的 vCenter Server 執行個體。vCenter 租戶必須搭載所需的儲存虛擬機器（ Storage Virtual Machines ， SVM ）。這可讓 SVM 使用者配置 vVols 資料存放區。您可以使用 SVM 在 vCenter 中新增儲存設備。
 
-若要將儲存後端新增至本機叢集，請使用 vCenter 伺服器上的 ONTAP 工具外掛程式。
-
-link:../concepts/ontap-tools-concepts-terms.html["關鍵概念與詞彙"]提供本節所使用詞彙的更多資訊。
+使用 ONTAP 工具使用者介面，以叢集或 SVM 認證新增本機儲存設備後端。這些儲存後端僅限於單一 vCenter 。在本機使用叢集認證時，相關的 SVM 會自動對應至 vCenter 以管理 vVols 或 VMFS 。對於包括在內的 VMFS 管理， ONTAP 工具支援 SVM 認證，而不需要全域叢集。
 
 [role="tabbed-block"]
 ====

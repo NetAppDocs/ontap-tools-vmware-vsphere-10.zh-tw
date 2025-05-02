@@ -21,6 +21,10 @@ summary: 將 vCenter Server 執行個體新增至 VMware vSphere 的 ONTAP 工�
 . 開啟網頁瀏覽器並瀏覽至 URL ： `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . 使用您在部署期間提供的 VMware vSphere 管理員認證 ONTAP 工具登入。
 . 選取 * vCenters * > * Add* 以內建 vCenter Server 執行個體。提供 vCenter IP 位址或主機名稱，使用者名稱，密碼和連接埠詳細資料。
++
+
+NOTE: 如果沒有管理員帳戶，您可以建立具有有限權限的自訂角色。如 link:../concepts/rbac-vcenter-use.html["使用 vCenter Server RBAC 搭配適用於 VMware vSphere 10 的 ONTAP 工具"] 需詳細資訊、請參閱。
+
 
 
 將 vCenter Server 執行個體新增至 ONTAP 工具會自動觸發下列動作：
