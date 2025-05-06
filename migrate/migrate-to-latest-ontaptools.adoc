@@ -51,13 +51,14 @@ NOTE: 如果容錯移轉已完成，但重新保護仍在擱置中，請勿開�
 .. 移至 * 儲存複寫介面卡 * 區段。
 .. 從省略號功能表中，選取 * 重設組態 * 。
 .. 從省略符號功能表中選取 * 刪除 * 。
+
+
+. 在保護站點和恢復站點上執行這些步驟。
 +
-在保護站點和恢復站點上執行這些步驟。
+.. 按照中的步驟安裝適用於 VMware vSphere 10.4 介面卡的 ONTAP 工具link:../protect/configure-on-srm-appliance.html["在 VMware Live Site Recovery 應用裝置上設定 SRA"]。
+.. 在 VMware Live Site Recovery 使用者介面頁面上，執行 * 探索陣列 * 和 * 探索裝置 * 作業，並確認裝置在移轉之前顯示為。
 
 
-
-. 按照中的步驟安裝適用於 VMware vSphere 10.4 介面卡的 ONTAP 工具link:../protect/configure-on-srm-appliance.html["在 VMware Live Site Recovery 應用裝置上設定 SRA"]。
-. 在 VMware Live Site Recovery 使用者介面頁面上，執行 * 探索陣列 * 和 * 探索裝置 * 作業，並確認裝置在移轉之前顯示為。
 
 
 
@@ -73,7 +74,13 @@ iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 . 部署適用於 VMware vSphere 10.4 的 OVA for ONTAP 工具。
 . 新增您要移轉至 ONTAP 工具的 vCenter Server 執行個體，以取得 VMware vSphere 10.4 版本。如需詳細資訊、請參閱 link:../configure/add-vcenter.html["新增 vCenter Server 執行個體"] 。
 . 從 vCenter 伺服器 API 本機上的 ONTAP 工具外掛程式內建儲存後端。
-. 從 Swagger 或 Postman 發佈下列 API 以進行移轉：
+. 從 Swagger 或 Postman 發出下列 API 以進行移轉。
++
+Curl -X POST https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/{vcguid}/migration[]
+
++
+您可以通過以下 URL 訪問 Swagger ：“ https://$FQDN_IP_PORT/, 例如： https://10.61.25.33:8443/[]。
+
 +
 []
 ====
@@ -95,7 +102,7 @@ iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 
 * 目前範例 *
 
-/api/v1/vCents/{vcguid}/Migration-jobs
+Curl -X POST https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/{vcguid}/migration-jobs[]
 
 * JSON 輸入範例 *
 
@@ -131,11 +138,11 @@ iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 }
 
 ====
-. 使用下列 URI 檢查狀態：
+. 使用 Swagger 中的下列 URI 檢查狀態：
 +
 [listing]
 ----
-https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?includeSubJobsAndTasks=true
+curl https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?includeSubJobsAndTasks=true
 ----
 +
 完成工作後，請檢閱移轉報告。此報告包含在工作資料中，可從工作回應存取。
@@ -149,8 +156,8 @@ https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?includeS
 +
 一旦停止舊的 VASA Provider ， vCenter Server 就會容錯移轉至適用於 VMware vSphere 的 ONTAP 工具。所有的資料存放區和 VM 都可以存取、並可從適用於 VMware vSphere 的 ONTAP 工具取得。
 
-. 只有在觸發資料存放區探索工作（可能需要 30 分鐘才能完成）之後，才能在適用於 VMware vSphere 10.4 的 ONTAP 工具中看到從 ONTAP 工具移轉的 NFS 和 VMFS 資料存放區。確認「 VMware vSphere 外掛程式」使用者介面之 ONTAP 工具的「概觀」頁面上是否顯示資料存放區。
-. 使用下列 API 執行修補程式移轉：
+. 只有在觸發資料存放區探索工作（可能需要 30 分鐘才能完成）之後，才能在適用於 VMware vSphere 10.4 的 ONTAP 工具中看到從 ONTAP 工具移轉的 NFS 和 VMFS 資料存放區。確認 ONTAP 工具的「 VMware vSphere 外掛程式」使用者介面頁面概觀頁面上是否顯示資料存放區。
+. 使用 Swagger 或 Postman 中的下列 API 執行修補程式移轉：
 +
 []
 ====
@@ -172,7 +179,7 @@ https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?includeS
 
 * 目前範例 *
 
-修補程式「 /api/v1/vCenter/56d373bd-4163-44f9-a872-9adabb008ca9/Migrate-jobs/84dr73bd-9173-65r7-w345-8ufdbb887d43
+Curl -X 修補程式 https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/56d373bd-4163-44f9-a872-9adabb008ca9/migration-jobs/84dr73bd-9173-65r7-w345-8ufdbb887d43[]
 
 * JSON 輸入範例 *
 
@@ -205,7 +212,7 @@ NOTE: UUID 是移轉後 API 所傳回的移轉 UUID 。
 .下一步
 完成移轉並將 ONTAP 工具 10.4 登錄至 vCenter Server 之後，請遵循下列步驟：
 
-* 重新整理所有主機上的憑證。
+* 等待 * 探索 * 完成，所有主機上的憑證都會自動重新整理。
 * 請在開始資料存放區和虛擬機器作業之前，預留足夠的時間。所需的等待時間會因組態中的主機，資料存放區和虛擬機器數量而異。若未能等待，可能會導致間歇性作業故障。
 
 

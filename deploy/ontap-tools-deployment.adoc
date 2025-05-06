@@ -80,7 +80,7 @@ NOTE: 切勿將適用於 VMware vSphere 虛擬機器的 ONTAP 工具儲存在其
 
 NOTE: 不支援 Pure IPv6 。同時包含 IPv6 和 IPv4 位址的 VLAN 支援混合模式。
 
-** ONTAP 工具 IP 位址是與 ONTAP 工具通訊的主要介面
+** ONTAP 工具 IP 位址是與 ONTAP 工具通訊的主要介面。
 ** IPv4 是節點組態的 IP 位址元件，可用於在節點上啟用診斷 Shell 和 SSH 存取，以進行除錯和維護。
 
 
