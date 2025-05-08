@@ -14,7 +14,7 @@ summary: 移轉儲存資料時、會使用 REST API 手動建立儲存後端。�
 在儲存資料移轉期間，會使用 REST API 手動建立儲存後端。VASA Provider 資料移轉包括從現有的 Derby 資料庫匯出資料，並將其匯入至 MongoDB 資料庫。
 
 
-NOTE: 只有在使用 VASA Provider 和 VVols 時，才需要從適用於 VMware vSphere 9.XX 的 ONTAP 工具進行移轉。
+NOTE: 只有在使用 VASA Provider 和 VVols 時，才需要從適用於 VMware vSphere 9.XX 的 ONTAP 工具進行移轉。在儲存探索程序期間，會探索 NFS 和 VMFS 資料存放區。
 
 
 NOTE: 從適用於 VMware vSphere 9.x 的 ONTAP 工具移轉至 10.4 之後，使用 NVMe / FC 傳輸協定的 VVols 資料存放區將無法運作，因為 ONTAP 工具 10.4 僅支援 VMFS 資料存放區的 NVMe 傳輸協定。

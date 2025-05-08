@@ -18,14 +18,14 @@ summary: 瞭解適用於 VMware vSphere 10.4 的 ONTAP 工具所提供的新功�
 | 更新 | 說明 
 
 
-| 支援 ASA R2 系統，每個叢集有 12 個節點 | 適用於 VMware vSphere 10.4 的 ONTAP 工具支援 ASA R2 儲存系統的工作流程，每個叢集最多可有 12 個節點，可改善資料管理效率和擴充性。它支援含 iSCSI 和 FC 傳輸協定的 VVols 資料存放區，以及含 iSCSI ， FC 和 NVMe 傳輸協定的 VMFS 資料存放區，提供靈活且增強的儲存選項。 
+| link:../configure/create-datastore.html["支援 ASA R2 系統，每個叢集有 12 個節點"] | 適用於 VMware vSphere 10.4 的 ONTAP 工具支援 ASA R2 儲存系統的工作流程，每個叢集最多可有 12 個節點，可改善資料管理效率和擴充性。它支援含 iSCSI 和 FC 傳輸協定的 VVols 資料存放區，以及含 iSCSI ， FC 和 NVMe 傳輸協定的 VMFS 資料存放區，提供靈活且增強的儲存選項。 
 
 
-| ONTAP Tools Manager 使用者介面增強功能 | 您現在可以啟用 NTP 伺服器，以在整個環境中精確地同步時間，並設定遙測設定，從 ONTAP 工具管理員介面監控和分析系統效能。維護主控台不再提供這些設定。 
+| link:../manage/add-ntpserver.html["ONTAP Tools Manager 使用者介面增強功能"] | 您現在可以啟用 NTP 伺服器，以在整個環境中精確地同步時間，並設定遙測設定，從 ONTAP 工具管理員介面監控和分析系統效能。維護主控台不再提供這些設定。 
 
 
 | 增強的安全功能 | 安全功能現在提供更強大的保護功能，並符合業界標準，提供健全且使用者友好的體驗，協助管理員更有效地管理 VMware 環境。 
 
 
-| 強化的 SRA 災難恢復功能 | 適用於 VMware vSphere 10.4 的 ONTAP 工具現在除了支援 SnapMirror 排程快照複本之外，還能使用 Site Recovery Appliance （ SRA ）搭配自訂命名快照，來支援災難恢復作業。 
+| link:../protect/enable-storage-replication-adapter.html["強化的 SRA 災難恢復功能"] | 適用於 VMware vSphere 10.4 的 ONTAP 工具現在除了支援 SnapMirror 排程快照複本之外，還能使用 Site Recovery Appliance （ SRA ）搭配自訂命名快照，來支援災難恢復作業。 
 |===

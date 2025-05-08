@@ -764,8 +764,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="3a69b34ce86dacb205936a8094f6c743" category="cell">大</block>
   <block id="bff7ca9974a0352c641d1a0709ae7c9f" category="inline-link">VMware Live Site Recovery 的營運限制</block>
   <block id="f4eabc000ad2416081f1f8bc62960f34" category="cell">* 部署類型 *</block>
-  <block id="cd0e7d46f22aa5207ca306eeab997625" category="cell">* CPU*</block>
-  <block id="5a4776483c0990d54df47e0a2478facc" category="cell">* 記憶體（ GB ） *</block>
   <block id="4270d5032de4f1180467417459750041" category="section-title">NVMe 命名空間和子系統</block>
   <block id="c0b79db5f258f0c991a383cbdbf001dd" category="inline-link">SnapMirror 主動同步</block>
   <block id="8e9ed19481c8eb7dd51ab53b6e29d603" category="section-title">統一且不一致的組態</block>
@@ -1043,12 +1041,9 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="ec40e9dacf33c1ee930d1b726ee5d873" category="doc">VMware vSphere 部署的 ONTAP 工具先決條件</block>
   <block id="b6aec62078a1c571750099cf3731114a" category="list-text">15 GB 適用於精簡配置的安裝</block>
   <block id="ce87eaff0d4703df952b0aafebf6a78a" category="list-text">348 GB 、適用於完整佈建的安裝</block>
-  <block id="768883b74383326d83c0df05849ff8d6" category="cell">* 磁碟空間（ GB ）密集佈建 *</block>
-  <block id="f6b569454a5123b8291e5aeb3ee9c76c" category="cell">非 HA 小型</block>
   <block id="45c48cce2e2d7fbdea1afc51c7c6ad26" category="cell">9</block>
   <block id="6f4922f45568161a8cdf4ad2299f6d23" category="cell">18</block>
   <block id="9de6d14fff9806d4bcd1ef555be766cd" category="cell">350</block>
-  <block id="68e32f2ca80884363d28d319b655230e" category="cell">非 HA 媒體</block>
   <block id="c51ce410c124a10e0db5e4b97fc2af39" category="cell">13</block>
   <block id="4e732ced3463d06de0ca9a15b6153677" category="cell">26</block>
   <block id="02e74f10e0327ad868d138f2b4fdd6f0" category="cell">27</block>
@@ -1523,10 +1518,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="56a156ef32c18392cd77249a4e9d04c5" category="inline-link">ONTAP 支援 NFSv4.2</block>
   <block id="26b3116c80531a47fa8562f359b1a573" category="paragraph"><block ref="26b3116c80531a47fa8562f359b1a573" category="inline-link-rx"></block></block>
   <block id="2fa5bdd6c63d27c52dc92f5e27deea70" category="paragraph">在 AutomatedFailOverDuplex 原則類型中，有統一且不統一的主機組態。當您選取 * 統一主機組態 * 切換按鈕時、主機啟動器群組組組態會在目標站台上隱含複寫。如需詳細資訊、請 <block ref="456cca003d9f01756d52d6978fb7648b" category="inline-link-macro-rx"></block>參閱。</block>
-  <block id="c01ef522cb5ee6461c57aa510b0f9dce" category="list-text">* 主機系統規模調整需求 * 根據部署規模建議的記憶體，如下表所示：</block>
-  <block id="bbab260bdbd12933b5aad202ac803e9c" category="cell">HA 小型（累積三個節點）</block>
-  <block id="ca38c9b2032228fad900b11b07470b17" category="cell">HA 媒體（累積三個節點）</block>
-  <block id="721a0cb2e546dae89564af8a23d13306" category="cell">HA 大型（累積三個節點）</block>
   <block id="4c90abc26074daa0aa69e5fcd9bac645" category="paragraph">如需詳細資訊、請<block ref="39a0a12cac57df4f5e3df88c1e683703" category="inline-link-rx"></block>參閱。</block>
   <block id="10cd1f260e9855405e5e3b0b9fd330f5" category="list-text">對網域名稱執行 nsLOOKUP 檢查，檢查網域是否已解析為預期的 IP 位址。</block>
   <block id="f01050ae79f30f1986973e3e8b1d62e0" category="admonition">您無法從 CA 簽署的憑證切換至自我簽署的憑證。</block>
@@ -2052,7 +2043,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="3c4b541b5d5310d633c23010dd81989e" category="list-text">登入 vSphere 用戶端</block>
   <block id="96b2088e72148a0b1230a8a1ce9ed374" category="list-text">如果未選取自動開啟 VM 的選項，請在完成工作後開啟 VM 電源。</block>
   <block id="0665c15c8e67de0629e2fe45b734ea75" category="list-text">關閉 ONTAP 工具節點。</block>
-  <block id="265dbce80143757d1ceaac46974e6009" category="admonition">啟用備份時，每個 ONTAP 工具叢集在部署 VM 的資料存放區上需要另一個 50GB 的空間。因此，非 HA 需要 400 GB 的空間，而 HA 則需要總共 1100 GB 的空間。</block>
   <block id="3fbe74eae84714fcfdd21edafe54f77f" category="cell">版本需求</block>
   <block id="00a7a9b934cf295b0c55ccd69d08f6f6" category="cell">ONTAP 工具支援的 ESXi 主機</block>
   <block id="a979e2bdcdd277cf8d9c469763d9bbf2" category="cell">7.0.3 之後</block>
@@ -2224,7 +2214,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="0c72f5748e7c096b829fa8c13bdb6b7f" category="list-text">IPv4 是節點組態的 IP 位址元件，可用於在節點上啟用診斷 Shell 和 SSH 存取，以進行除錯和維護。</block>
   <block id="b2594cd127874498d2bbfa55ff19c5f5" category="cell">ONTAP 工具用於內部通訊的虛擬 IP 位址</block>
   <block id="a9919517205886b598c13e9032a09059" category="paragraph">在儲存資料移轉期間，會使用 REST API 手動建立儲存後端。VASA Provider 資料移轉包括從現有的 Derby 資料庫匯出資料，並將其匯入至 MongoDB 資料庫。</block>
-  <block id="b7760802f5560cd215cd7dee93951bfd" category="admonition">只有在使用 VASA Provider 和 VVols 時，才需要從適用於 VMware vSphere 9.XX 的 ONTAP 工具進行移轉。</block>
   <block id="9060074cf56d9aadb36767f42ea21b34" category="admonition">從適用於 VMware vSphere 9.x 的 ONTAP 工具移轉至 10.4 之後，使用 NVMe / FC 傳輸協定的 VVols 資料存放區將無法運作，因為 ONTAP 工具 10.4 僅支援 VMFS 資料存放區的 NVMe 傳輸協定。</block>
   <block id="38376c135168fabdcdde30ebd8337b3c" category="paragraph">您可以從適用於 VMware vSphere 9.12D1 ， 9.13D2 和 9.13P2 版本的 ONTAP 工具移轉至適用於 VMware vSphere 10.4 的 ONTAP 工具。</block>
   <block id="8b8b53606264e9f2f6b3466d202a79e7" category="admonition">在升級至修補程式版本之前，您必須備份目前 ONTAP 工具的部署。</block>
@@ -2277,4 +2266,14 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="96b2fedcc932770f843418dedfe7f004" category="list-text">使用 Swagger 或 Postman 中的下列 API 執行修補程式移轉：</block>
   <block id="99a490d727b23ee47f3b441a7342d420" category="paragraph">Curl -X 修補程式<block ref="fd07e34d045cf59e25acb7168e60f530" category="inline-link-rx"></block></block>
   <block id="5db743b53293821cee54f2f6de3ecd01" category="list-text">等待 * 探索 * 完成，所有主機上的憑證都會自動重新整理。</block>
+  <block id="821d346df6abaf74ffd3d352413de8ff" category="list-text">* 主機系統規模調整需求 * 根據部署規模建議的記憶體，如下表所示。若要部署高可用度（ HA ），您需要使用表格中指定的應用裝置大小的三倍。</block>
+  <block id="a13a152159236a6645a22fae6e163217" category="cell">* 每個節點的 CPU *</block>
+  <block id="339a4871d6e4fe00637c32e9f180e4a4" category="cell">* 每個節點的記憶體（ GB ） *</block>
+  <block id="8bf7814538fb554d339918e8af1041b7" category="cell">* 每個節點的磁碟空間（ GB ）密集佈建 *</block>
+  <block id="8e1b11ef4c2ef1e1f2b2b515cc7d496b" category="cell">重要注意事項：大型部署僅適用於 HA 組態。</block>
+  <block id="1e1982b2e5b48af62e0f42cbc47ece79" category="admonition">啟用備份時，每個 ONTAP 工具叢集在部署 VM 的資料存放區上需要另一個 50GB 的空間。因此，非 HA 需要 400 GB 的空間，而 HA 則需要總共 1100 GB 的空間。</block>
+  <block id="6b20aec4ce81da173c6f34628ae6d34d" category="admonition">只有在使用 VASA Provider 和 VVols 時，才需要從適用於 VMware vSphere 9.XX 的 ONTAP 工具進行移轉。在儲存探索程序期間，會探索 NFS 和 VMFS 資料存放區。</block>
+  <block id="a30b2082cc14c7d77fb279a7ebc7b82a" category="cell"><block ref="a30b2082cc14c7d77fb279a7ebc7b82a" category="inline-link-macro-rx"></block></block>
+  <block id="104f0fc4c7f350b84c4cabfd2d187d9a" category="cell"><block ref="104f0fc4c7f350b84c4cabfd2d187d9a" category="inline-link-macro-rx"></block></block>
+  <block id="b2eac513dd0bf503b21a9173bc9d6a72" category="cell"><block ref="b2eac513dd0bf503b21a9173bc9d6a72" category="inline-link-macro-rx"></block></block>
 </blocks>
