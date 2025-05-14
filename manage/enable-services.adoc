@@ -19,7 +19,7 @@ summary: 您可以使用 ONTAP 工具管理員變更管理員密碼，以啟用 
 . 在概述區段中選取 * 編輯應用裝置設定 * 。
 . 在 * 服務 * 區段中，您可以根據需求啟用選用服務，例如 VASA Provider ， VVols 組態匯入及災難恢復（ SRA ）。
 +
-首次啟用服務時，您必須建立 VASA Provider 和 SRA 認證。這些功能可用於在 vCenter Server 上登錄或啟用 VASA Provider 和 SRA 服務。
+首次啟用服務時，您必須建立 VASA Provider 和 SRA 認證。這些功能可用於在 vCenter Server 上登錄或啟用 VASA Provider 和 SRA 服務。使用者名稱只能包含字母，數字和底線。密碼長度應介於 8 到 256 個字元之間。
 
 +
 

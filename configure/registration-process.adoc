@@ -18,7 +18,8 @@ summary: 您可以使用適用於 VMware vSphere 遠端外掛程式介面的 ONT
 . 在外掛程式區段下，選取 * 快速鍵 * > * NetApp ONTAP tools* 。
 . 選擇 * 設定 * > * VASA 提供者設定 * 。VASA Provider 登錄狀態會顯示為「未登錄」。
 . 選擇 * 註冊 * 按鈕以註冊 VASA 提供者。
-. 輸入 VASA Provider 的名稱，並提供 ONTAP 工具以取得 VMware vSphere 應用程式使用者認證，然後選取 * 註冊 * 。
+. 輸入 VASA Provider 的名稱和認證。使用者名稱只能包含字母，數字和底線。密碼長度應介於 8 到 256 個字元之間。
+. 選擇*註冊*。
 . 成功登錄和重新整理頁面後，會顯示已登錄的 VASA Provider 的狀態，名稱和版本。註冊後，將會啟動取消註冊動作。
 
 

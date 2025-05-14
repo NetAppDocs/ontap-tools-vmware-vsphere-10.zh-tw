@@ -898,7 +898,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="810eb1be62c2223bbb6ff683af2508bd" category="paragraph">下表顯示使用適用於 VMware vSphere 的 ONTAP 工具、每個 VMware Live Site Recovery 執行個體所支援的數量。</block>
   <block id="beadd6cb6100e1a0cce84603ccb7105a" category="paragraph">下表顯示 VMware Live Site Recovery 的數量、以及對應的 VMware vSphere 部署規模 ONTAP 工具。</block>
   <block id="df0d7eb56e12922cca30035472c40aa7" category="cell">* VMware Live Site Recovery 執行個體數 *</block>
-  <block id="de7cd16aa682868ad900edd519b06059" category="list-text">前往 VMware Live Site Recovery 組態管理頁面</block>
   <block id="0b3582622e579cb352e246015d6ca171" category="summary">您可以使用 VMware Live Site Recovery 的 Array Manager 精靈來設定 Storage Replication Adapter （ SRA ）、以啟用 VMware Live Site Recovery 與儲存虛擬機器（ SVMs ）之間的互動。</block>
   <block id="fe3a4c2227170fc60976b4e12c53d157" category="paragraph">您可以使用 VMware Live Site Recovery 的 Array Manager 精靈來設定 Storage Replication Adapter （ SRA ）、以啟用 VMware Live Site Recovery 與儲存虛擬機器（ SVM ）之間的互動。</block>
   <block id="986d9b60b2308d9411e69051124f1e90" category="list-text">您應該已在 VMware Live Site Recovery 中配對受保護的站台和還原站台。</block>
@@ -1497,15 +1496,10 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="6a56526090ecb77854d07be849799242" category="paragraph">MPIO 設定可定義 NetApp 儲存系統的偏好路徑。它們會判斷哪些可用路徑已最佳化（而非透過互連纜線的非最佳化路徑），並將偏好的路徑設為其中一條路徑。</block>
   <block id="89f7633ad6a1e114cebf9902aa42fd5c" category="paragraph">NFS vStorage API for Array Integration （ NFS VAAI ）外掛程式是整合 VMware vSphere 和 NFS 儲存陣列的軟體元件。使用適用於 VMware vSphere 的 ONTAP 工具安裝 NFS VAAI 外掛程式，以運用 NFS 儲存陣列的進階功能，將某些與儲存相關的作業從 ESXi 主機卸載到儲存陣列本身。</block>
   <block id="f9fcb823ee6471ecceb63c9625d2c8fc" category="list-text">下載<block ref="e6fae45561f1786d6f3534aff65b3377" category="inline-link-rx"></block>安裝套件。</block>
-  <block id="e27bb3e78ef59cd560e56215a182f3b3" category="list-text">請確定您擁有 ESXi 主機 7.0U3 最新修補程式或更新版本，以及 ONTAP 9.14.1 或更新版本。</block>
   <block id="a585389d21dd9fbdbdc15072bd5d7010" category="list-text">掛載 NFS 資料存放區。</block>
-  <block id="3efe2db5c0b83bc2774d6061359381ed" category="list-text">將 DataMover ． HardwareAcceleratedMove ， DataMover ． HardwareAcceleratedInit 和 VMFS3 ． HardwareAcceleratedLocking 主機設置的值設置爲“ 1 ”。若要自動設定這些值，請套用 EXSI 主機的建議設定。請參閱 <block ref="a13757a488cc72436349db8983ce6613" category="inline-link-macro-rx"></block>。</block>
-  <block id="957daa20d20cf15a7839d7e44ecdb2ab" category="list-text">使用 vserver NFS modify -vserver vserver_name -vStorage enabled 命令，在儲存虛擬機器（ SVM ）上啟用 vStorage 選項。</block>
-  <block id="d5676260c3a3d58c4d9ebd79f3558bac" category="list-text">請確定您擁有 vSphere 7.0U3 最新的修補程式版本。</block>
   <block id="0e57b7b27807ae2427ad1a654eca765e" category="list-text">選取 * 設定 * &gt; * NFS VAAI 工具 * 。</block>
   <block id="75650b415bb2c723c71117c59992e489" category="list-text">選取 * 安裝在 ESXi 主機 * ，選取要安裝 NFS VAAI 外掛程式的 ESXi 主機，然後選取 * 安裝 * 。</block>
   <block id="681ca77b2652713f7e6d867f281733ec" category="paragraph">只會顯示符合外掛程式安裝資格的 ESXi 主機。您可以在 vSphere Web Client 的「近期工作」區段中監控安裝進度。</block>
-  <block id="4969bf5d68bb071342161a9b29a23f5c" category="list-text">安裝完成後，您應該手動重新啟動 ESXi 主機。</block>
   <block id="d15e664257aa2207434ef9543a593a8d" category="paragraph">當 VMware 管理員重新啟動 ESXi 主機時，適用於 VMware vSphere 的 ONTAP 工具會自動偵測並啟用 NFS VAAI 外掛程式。</block>
   <block id="58eaebf972358f1cf03d386a4ade1a0f" category="paragraph-title">接下來呢？</block>
   <block id="90ba1578c2c367413063e7228d8586b5" category="paragraph">安裝 NFS VAAI 外掛程式並重新啟動 ESXi 主機之後，您必須針對 VAAI 複本卸載設定正確的 NFS 匯出原則。在 NFS 環境中設定 VAAI 時，請將匯出原則規則的下列需求設定為：</block>
@@ -1594,7 +1588,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="dc2afa03f9d9070dcc18808c51d3b403" category="sidebar">管理適用於 VMware vSphere 的 ONTAP 工具</block>
   <block id="dd018bb6638d4453bb4643baac23fad3" category="sidebar">升級適用於 VMware vSphere 的 ONTAP 工具</block>
   <block id="8ce287b63bedf11bff1339b770533de1" category="paragraph">您可以使用適用於 VMware vSphere 的 ONTAP 工具，向 vCenter Server 執行個體註冊 VASA Provider 。VASA Provider 設定區段會顯示所選 vCenter Server 的 VASA Provider 登錄狀態。</block>
-  <block id="30219dec23be3c12e0dc980cd1686912" category="list-text">輸入 VASA Provider 的名稱，並提供 ONTAP 工具以取得 VMware vSphere 應用程式使用者認證，然後選取 * 註冊 * 。</block>
   <block id="9d097d858bfbec2ad77c2f37fa3f2b14" category="list-text">成功登錄和重新整理頁面後，會顯示已登錄的 VASA Provider 的狀態，名稱和版本。註冊後，將會啟動取消註冊動作。</block>
   <block id="9bb143d7a2036a80e106dc066c6b01f2" category="cell">這是 VASA Provider 服務傳入通訊的傳輸連接埠。Vasa Provider 自我簽署憑證和自訂 CA 憑證均裝載於此連接埠。</block>
   <block id="131790b08b90f216c8731a6e1a071001" category="cell">此連接埠是 VASA Provider 服務的內部使用服務連接埠。</block>
@@ -1624,7 +1617,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="949ade5949e752c9b4f748b78767cb9b" category="admonition">大部分的輸入選項都預先填入節點 1 網路詳細資料，以方便工作流程。不過，您可以先編輯輸入資料，再瀏覽精靈的最終頁面。只有在第一個節點上啟用 IPv6 位址時，才能輸入其他兩個節點的 IPv6 位址詳細資料。</block>
   <block id="5a3dd06e1dba58a23c8b8e8cc1b07e40" category="list-text">檢閱 * 摘要 * 區段中的詳細資料，並 * 儲存 * 變更。</block>
   <block id="4625cf8c2cfd4d7299bf041ace164a9e" category="doc">為 VMware vSphere 服務啟用 ONTAP 工具</block>
-  <block id="8c0d7661d66e379665cc68d77a595468" category="paragraph">首次啟用服務時，您必須建立 VASA Provider 和 SRA 認證。這些功能可用於在 vCenter Server 上登錄或啟用 VASA Provider 和 SRA 服務。</block>
   <block id="7e436228231add180554f1acd06b74fc" category="admonition">停用任何選用服務之前，請確定由 ONTAP 工具管理的 vCenter Server 不會使用這些服務。</block>
   <block id="ef1116c9ce2e3567875a69b012a5c5d8" category="list-text">當主機叢集受到統一組態的保護時，裝載資料存放區選項會停用。</block>
   <block id="f234e66a493b1542c97d72433c0faca6" category="paragraph">適用於 VMware vSphere 的 ONTAP 工具會在「組態」索引標籤中顯示資料存放區及其磁碟區的 ONTAP 儲存側視圖。</block>
@@ -1991,7 +1983,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="1870a2aa0cd0290ddebdd4f60c121814" category="list-text">輸入 * 資料存放區名稱 * 和 * 傳輸協定 * 資訊。</block>
   <block id="44a6b64ae3a7fef2f349f72cf3e32eb2" category="admonition">ASA R2 系統支援 VVols 的 iSCSI 和 FC 傳輸協定。</block>
   <block id="8dde1f10223f65a679d998e569d238c3" category="list-text">選取您要建立資料存放區的儲存 VM 。</block>
-  <block id="80d67086677891099603cd75cd0a26e8" category="list-text">在 * 進階選項 * 中選取 NFS 傳輸協定的自訂匯出原則，或 iSCSI 和 FC 傳輸協定的自訂啟動器群組名稱。</block>
   <block id="fd81895c9b4eb40921c7e241c091a1cd" category="admonition">在 ASA R2 儲存系統類型 SVM 中，不會建立儲存單元（ LUN/ 命名空間），因為資料存放區只是邏輯容器。</block>
   <block id="e31f7e9745380863f95d73e48e2fabbf" category="list-text">在 * 儲存屬性 * 窗格中，您可以建立新的磁碟區或使用現有的磁碟區。不過，您無法合併這兩種類型的磁碟區來建立 VVols 資料存放區。</block>
   <block id="39355798de4906f96b13a31fd76a15e6" category="paragraph">建立新磁碟區時，您可以在資料存放區上啟用 QoS 。根據預設，每個 LUN 建立的要求都會建立一個磁碟區。此步驟不適用於使用 ASA R2 儲存系統的 VVols 資料存放區。</block>
@@ -2001,7 +1992,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="002da57ee8bba82828c8058c7d6cfecf" category="list-text">在 * 名稱和通訊協定 * 窗格中輸入資料存放區名稱，大小和通訊協定資訊。在進階選項中選取 * 資料存放區叢集 * 和 * Kerberos 驗證 * 。</block>
   <block id="8d4768d2ffaf314b3ea87a21a27f7ec4" category="admonition">Kerberos 驗證只有在選取 NFS 4.1 傳輸協定時才能使用。</block>
   <block id="7b2c27e8d2aac8a15e90a619cd860d4d" category="list-text">在 * Storage* 窗格中選擇 * 平台 * 和 * 儲存 VM* 。</block>
-  <block id="b48e3fbf26333d26d1456ba93f1a6c8f" category="list-text">如有必要，請在進階選項下選擇 * 自訂匯出原則 * ，但不建議這麼做。如果使用，請確保在 vCenter 中為所有物件執行探索。</block>
   <block id="97e5c74d2bd0f78816caf0c5c9036a82" category="admonition">您無法使用 SVM 的預設 / 根 Volume 原則來建立 NFS 資料存放區。</block>
   <block id="42d1ce422f23ede57a5c2e13f8855890" category="list-text">在進階選項中，只有在平台下拉式選單中選取效能或容量時，才會顯示 * 非對稱 * 切換按鈕。</block>
   <block id="fa6c3148403311b0d64dfc44a5925b3a" category="list-text">當您在平台下拉式清單中選擇 * 任何 * 選項時，無論平台或非對稱式旗標為何，都可以看到屬於 vCenter 一部分的 SVM 。</block>
@@ -2214,7 +2204,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="0c72f5748e7c096b829fa8c13bdb6b7f" category="list-text">IPv4 是節點組態的 IP 位址元件，可用於在節點上啟用診斷 Shell 和 SSH 存取，以進行除錯和維護。</block>
   <block id="b2594cd127874498d2bbfa55ff19c5f5" category="cell">ONTAP 工具用於內部通訊的虛擬 IP 位址</block>
   <block id="a9919517205886b598c13e9032a09059" category="paragraph">在儲存資料移轉期間，會使用 REST API 手動建立儲存後端。VASA Provider 資料移轉包括從現有的 Derby 資料庫匯出資料，並將其匯入至 MongoDB 資料庫。</block>
-  <block id="9060074cf56d9aadb36767f42ea21b34" category="admonition">從適用於 VMware vSphere 9.x 的 ONTAP 工具移轉至 10.4 之後，使用 NVMe / FC 傳輸協定的 VVols 資料存放區將無法運作，因為 ONTAP 工具 10.4 僅支援 VMFS 資料存放區的 NVMe 傳輸協定。</block>
   <block id="38376c135168fabdcdde30ebd8337b3c" category="paragraph">您可以從適用於 VMware vSphere 9.12D1 ， 9.13D2 和 9.13P2 版本的 ONTAP 工具移轉至適用於 VMware vSphere 10.4 的 ONTAP 工具。</block>
   <block id="8b8b53606264e9f2f6b3466d202a79e7" category="admonition">在升級至修補程式版本之前，您必須備份目前 ONTAP 工具的部署。</block>
   <block id="bf24d37a98e4819aab4f021ae207e4a2" category="list-text">新增您要移轉至 ONTAP 工具的 vCenter Server 執行個體，以取得 VMware vSphere 10.4 版本。如需詳細資訊、請參閱 <block ref="fbc3413db4202f1fe331f16af6b38f13" category="inline-link-macro-rx"></block> 。</block>
@@ -2222,7 +2211,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="46ec37b71ccf8c993dcbf7cb78fe2af7" category="admonition">如果容錯移轉已完成，但重新保護仍在擱置中，請勿開始移轉。在繼續移轉之前，請先確認重新保護程序已完成。如果正在進行測試容錯移轉，請清理測試容錯移轉並開始移轉。</block>
   <block id="da2f48d729eae4ca1010b4a077b66b02" category="list-text">請依照下列步驟，在 VMware 網站恢復中刪除適用於 VMware vSphere 9.xx 的工具 ONTAP 介面卡：</block>
   <block id="b2c26a87d051d5889e6d2e4ab1fc79de" category="list-text">移至 * 儲存複寫介面卡 * 區段。</block>
-  <block id="b80a5fe26546f4090c014df2108347ab" category="list-text">從省略號功能表中，選取 * 重設組態 * 。</block>
   <block id="1ab7bd22ce5077185a70517ea0db34ec" category="list-text">從省略符號功能表中選取 * 刪除 * 。</block>
   <block id="63fbd3cb55ffabae3747cd50140f1b47" category="list-text">按照中的步驟安裝適用於 VMware vSphere 10.4 介面卡的 ONTAP 工具<block ref="9b6610ae0d9b3f2df042445cc8433cf4" category="inline-link-macro-rx"></block>。</block>
   <block id="e3e32085ef48d00b185f9ae05a428520" category="list-text">在 VMware Live Site Recovery 使用者介面頁面上，執行 * 探索陣列 * 和 * 探索裝置 * 作業，並確認裝置在移轉之前顯示為。</block>
@@ -2272,8 +2260,18 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="8bf7814538fb554d339918e8af1041b7" category="cell">* 每個節點的磁碟空間（ GB ）密集佈建 *</block>
   <block id="8e1b11ef4c2ef1e1f2b2b515cc7d496b" category="cell">重要注意事項：大型部署僅適用於 HA 組態。</block>
   <block id="1e1982b2e5b48af62e0f42cbc47ece79" category="admonition">啟用備份時，每個 ONTAP 工具叢集在部署 VM 的資料存放區上需要另一個 50GB 的空間。因此，非 HA 需要 400 GB 的空間，而 HA 則需要總共 1100 GB 的空間。</block>
-  <block id="6b20aec4ce81da173c6f34628ae6d34d" category="admonition">只有在使用 VASA Provider 和 VVols 時，才需要從適用於 VMware vSphere 9.XX 的 ONTAP 工具進行移轉。在儲存探索程序期間，會探索 NFS 和 VMFS 資料存放區。</block>
   <block id="a30b2082cc14c7d77fb279a7ebc7b82a" category="cell"><block ref="a30b2082cc14c7d77fb279a7ebc7b82a" category="inline-link-macro-rx"></block></block>
   <block id="104f0fc4c7f350b84c4cabfd2d187d9a" category="cell"><block ref="104f0fc4c7f350b84c4cabfd2d187d9a" category="inline-link-macro-rx"></block></block>
   <block id="b2eac513dd0bf503b21a9173bc9d6a72" category="cell"><block ref="b2eac513dd0bf503b21a9173bc9d6a72" category="inline-link-macro-rx"></block></block>
+  <block id="310c2012d9e31c7b5fdc7c1d18ec2a5e" category="list-text">在進階選項下，您可以針對 NFS 傳輸協定選取 * 自訂匯出原則 * ，或是為 iSCSI 和 FC 傳輸協定選取自訂啟動器群組名稱，但不建議這麼做。如果您使用此選項，請確保在 vCenter 中為所有物件執行探索。</block>
+  <block id="f8337e74d8f6e6f2215578fb2c3707d0" category="list-text">您可以在進階選項下選取自訂匯出原則，但不建議這麼做。如果使用，請確保在 vCenter 中為所有物件執行探索。</block>
+  <block id="0882ef7c28701c98bdd62f72da8634a7" category="list-text">請確定您擁有 ESXi 主機和 vSphere 7.0U3 最新修補程式或更新版本，以及 ONTAP 9.14.1 或更新版本。</block>
+  <block id="2bf603021962a26e3bcb2bea93110c9f" category="list-text">安裝後手動重新啟動 ESXi 主機。</block>
+  <block id="ef3669e38cbe7dbc2c1702bdcefb324a" category="list-text">輸入 VASA Provider 的名稱和認證。使用者名稱只能包含字母，數字和底線。密碼長度應介於 8 到 256 個字元之間。</block>
+  <block id="b5249314aff5fae6b6de54ce7f13f16b" category="list-text">選擇*註冊*。</block>
+  <block id="7589490ed5e2b68e2f28beb45ecf3fca" category="paragraph">首次啟用服務時，您必須建立 VASA Provider 和 SRA 認證。這些功能可用於在 vCenter Server 上登錄或啟用 VASA Provider 和 SRA 服務。使用者名稱只能包含字母，數字和底線。密碼長度應介於 8 到 256 個字元之間。</block>
+  <block id="67b08defea5ec6059f6e7c54a1da7e7d" category="admonition">從適用於 VMware vSphere 9 的 ONTAP 工具移轉至 10.4 之後，使用 NVMe / FC 傳輸協定的 VVols 資料存放區將無法運作，因為 ONTAP 工具 10.4 僅支援 VMFS 資料存放區的 NVMe 傳輸協定。</block>
+  <block id="7c4cc8f57df0d72a910b2adf9c1dfc8a" category="list-text">前往 VMware Live Site Recovery 組態管理頁面</block>
+  <block id="3f6debbe365887c1e9cead81caac7ed5" category="list-text">從省略符號功能表中選取 * 重設組態 * 。</block>
+  <block id="89262eb49fd08637032ae5b8afc51a41" category="admonition">只有在使用 VASA Provider 和 VVols 時，才需要從 ONTAP Tools for VMware vSphere 9 進行移轉。在儲存探索程序期間，會探索 NFS 和 VMFS 資料存放區。</block>
 </blocks>
