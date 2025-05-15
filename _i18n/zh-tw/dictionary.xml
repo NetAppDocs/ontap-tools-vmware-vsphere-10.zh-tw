@@ -211,14 +211,12 @@
   <block id="a883deebdfbfeb611d06d3f55178ccbf" category="doc">設定 ESXi 主機值</block>
   <block id="9232ab7e918fc93452c2dc7c8fab1b8c" category="paragraph">您可以在ESXi主機上設定下列值：</block>
   <block id="ab9d8dfb65807487a899df1683e128fa" category="section-title">HA/CNA 介面卡設定</block>
-  <block id="d3c41b5a4cf556f3a598cc1221e08ee4" category="paragraph">設定 NetApp 儲存系統的建議 HBA 逾時設定。</block>
   <block id="c803cf4eb4cbf3a6b12b1e1cc3443970" category="section-title">MPIO 設定</block>
   <block id="5fc0e54193f8c3ad7e67febc376fc805" category="section-title">NFS設定</block>
   <block id="5f115b5221541c527e67a2b71da5fb5d" category="list-text">從側邊列選取 vCenter 。</block>
   <block id="3a0689f041b08d0026691257176a98a0" category="summary">您可以使用適用於 VMware vSphere 的 ONTAP 工具、安裝適用於 VMware vStorage API for Array Integration （ VAAI\ ）的 NetApp NFS 外掛程式。</block>
   <block id="e1f59101bee140f72feebf78fe15f214" category="doc">安裝NFS VAAI外掛程式</block>
   <block id="bf25ac3fc5bee2b3ec36e32661767682" category="inline-link">適用於VMware VAAI的NetApp NFS外掛程式</block>
-  <block id="ebfe914a124eb1ec0cc1d8f6d6c420cb" category="list-text">NetApp NFS VAAI 外掛程式 2.0.1 （組建 16 ）支援 vSphere 8.x 。</block>
   <block id="42e4695fefd280ddc3a6f11124586510" category="list-text">當 VAAI 外掛程式上傳至 vCenter Server 時、請在 * 現有版本 * 區段中選取 * 變更 * 。如果 VAAI 外掛程式未上傳至 vCenter Server 、請選取 * 上傳 * 按鈕。</block>
   <block id="062e7967273cea76dff9c3579a0c44db" category="doc">向 vCenter Server 執行個體登錄 VASA Provider</block>
   <block id="3f95368adb4475e89e1f4206049b54ad" category="summary">您可以使用「Mount vVols Datastore」（掛載vVols Datastore）對話方塊、將VMware Virtual Volumes（vVols）資料存放區掛載到一或多個其他主機。裝載資料存放區可讓儲存設備存取其他主機。您只能透過 API 卸載 vVols 資料存放區。</block>
@@ -1373,14 +1371,10 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="34708a7ee3c666f413240fedba4b042a" category="cell">此卡顯示依效能計量排序的前 10 個資料存放區。您可以選取標頭來取得所選度量的前 10 個資料存放區，並依遞增或遞減順序排序。在您變更或清除瀏覽器快取之前、對卡片所做的排序和篩選變更會持續存在。資料存放區類型下拉式清單可選取資料存放區類型： NFS 、 VMFS 或 vVols 。</block>
   <block id="4c2183bca6b89d1820fb11f5a1d938c8" category="cell">此卡片會根據設定群組 / 類別，顯示所有 ESXi 主機（針對所選 vCenter ）設定的整體相容性狀態，以及建議的 NetApp 主機設定。您可以選擇 * 套用建議的設定 * 連結來套用建議的設定。您可以選取主機的相容狀態，以查看主機清單。</block>
   <block id="62938ab037901a948099ef101beec571" category="list-text">選取狀態為的探索到的儲存控制器<block ref="b7aa7656b58c3a7862a86f5f8cd10336" prefix=" " category="inline-code"></block>，然後選取 * 動作 * &gt; * 修改 * 。</block>
-  <block id="3225a10b07f1580f10dee4abc3779e6c" category="cell">參數</block>
   <block id="c77eb099ccd3a59aa3a56c3c98c84669" category="cell">將此值設為 ...</block>
   <block id="117704664d6cada78ac3107380f63d23" category="cell">disk.QFullSampleSize.</block>
-  <block id="07b21acb18ec7b34bd91453e33448369" category="cell">32 適用於所有組態。設定此值有助於避免I/O錯誤。</block>
   <block id="f66a3c183f0e736240b77f8b755c880e" category="cell">disk.QFullThreshold</block>
-  <block id="ed6604a4485d16e1285db04ae3d4279f" category="cell">8 適用於所有組態。設定此值有助於避免I/O錯誤。</block>
   <block id="19c08de7404551288e1274186e039ef4" category="cell">Emulex FC HBA逾時</block>
-  <block id="6ea7e3b1d2b04c77c55309b1aaa41f8c" category="cell">預設值。</block>
   <block id="d46cddda4da7ec11f17472d11df95b68" category="cell">QLogic FC HBA逾時</block>
   <block id="83f499a540b1323009c200d6f8cc9396" category="cell">參數</block>
   <block id="c3b49a515dd0046685e06092642aa139" category="cell">net.TcpipHeapSize.</block>
@@ -2263,8 +2257,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="a30b2082cc14c7d77fb279a7ebc7b82a" category="cell"><block ref="a30b2082cc14c7d77fb279a7ebc7b82a" category="inline-link-macro-rx"></block></block>
   <block id="104f0fc4c7f350b84c4cabfd2d187d9a" category="cell"><block ref="104f0fc4c7f350b84c4cabfd2d187d9a" category="inline-link-macro-rx"></block></block>
   <block id="b2eac513dd0bf503b21a9173bc9d6a72" category="cell"><block ref="b2eac513dd0bf503b21a9173bc9d6a72" category="inline-link-macro-rx"></block></block>
-  <block id="310c2012d9e31c7b5fdc7c1d18ec2a5e" category="list-text">在進階選項下，您可以針對 NFS 傳輸協定選取 * 自訂匯出原則 * ，或是為 iSCSI 和 FC 傳輸協定選取自訂啟動器群組名稱，但不建議這麼做。如果您使用此選項，請確保在 vCenter 中為所有物件執行探索。</block>
-  <block id="f8337e74d8f6e6f2215578fb2c3707d0" category="list-text">您可以在進階選項下選取自訂匯出原則，但不建議這麼做。如果使用，請確保在 vCenter 中為所有物件執行探索。</block>
   <block id="0882ef7c28701c98bdd62f72da8634a7" category="list-text">請確定您擁有 ESXi 主機和 vSphere 7.0U3 最新修補程式或更新版本，以及 ONTAP 9.14.1 或更新版本。</block>
   <block id="2bf603021962a26e3bcb2bea93110c9f" category="list-text">安裝後手動重新啟動 ESXi 主機。</block>
   <block id="ef3669e38cbe7dbc2c1702bdcefb324a" category="list-text">輸入 VASA Provider 的名稱和認證。使用者名稱只能包含字母，數字和底線。密碼長度應介於 8 到 256 個字元之間。</block>
@@ -2274,4 +2266,9 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="7c4cc8f57df0d72a910b2adf9c1dfc8a" category="list-text">前往 VMware Live Site Recovery 組態管理頁面</block>
   <block id="3f6debbe365887c1e9cead81caac7ed5" category="list-text">從省略符號功能表中選取 * 重設組態 * 。</block>
   <block id="89262eb49fd08637032ae5b8afc51a41" category="admonition">只有在使用 VASA Provider 和 VVols 時，才需要從 ONTAP Tools for VMware vSphere 9 進行移轉。在儲存探索程序期間，會探索 NFS 和 VMFS 資料存放區。</block>
+  <block id="395ddb6ca1b9948e32145f8fa1a9201e" category="paragraph">將下列參數設定為預設值：</block>
+  <block id="be34be4d53796d7420ca7e08ae84df3e" category="list-text">在進階選項下：</block>
+  <block id="bb18d56459266886917f70dbe8e01ef4" category="list-text">如果您選取 * 自訂匯出原則 * ，請務必在 vCenter 中為所有物件執行探索。建議您不要使用此選項。</block>
+  <block id="0b3b86369c55c3299fc4f945d3cc9a8c" category="list-text">您可以為 iSCSI 和 FC 傳輸協定選取 * 自訂啟動器群組 * 名稱。</block>
+  <block id="91756c37ce937828e162f58ca53f85a0" category="list-text">如果您在進階選項下選取 * 自訂匯出原則 * ，請在 vCenter 中為所有物件執行探索。建議您不要使用此選項。</block>
 </blocks>

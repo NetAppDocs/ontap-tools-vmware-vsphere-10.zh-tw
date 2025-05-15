@@ -17,7 +17,6 @@ NFS vStorage API for Array Integration （ NFS VAAI ）外掛程式是整合 VMw
 * 下載 https://mysupport.netapp.com/site/products/all/details/nfsplugin-vmware-vaai/downloads-tab["適用於VMware VAAI的NetApp NFS外掛程式"]安裝套件。
 * 請確定您擁有 ESXi 主機和 vSphere 7.0U3 最新修補程式或更新版本，以及 ONTAP 9.14.1 或更新版本。
 * 掛載 NFS 資料存放區。
-* NetApp NFS VAAI 外掛程式 2.0.1 （組建 16 ）支援 vSphere 8.x 。
 
 
 .步驟
