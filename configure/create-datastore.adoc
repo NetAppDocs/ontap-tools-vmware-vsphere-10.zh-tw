@@ -13,6 +13,12 @@ summary: 當您在主機叢集層級建立資料存放區時，會在目的地�
 [role="lead"]
 當您在主機叢集層級建立資料存放區時，會在目的地的所有主機上建立並掛載資料存放區，而且只有在目前使用者具有執行權限時，才會啟用該動作。
 
+*本機資料儲存與 vCenter Server 與 ONTAP 工具管理的資料儲存之間的互通性*
+
+適用於 VMware vSphere 10 的 ONTAP 工具會為資料存儲建立巢狀 igroup，其中父 igroup 特定於資料存儲，子 igroup 則對應到主機。您可以從 ONTAP 系統管理員建立平面 igroup，並使用它們建立 VMFS 資料存儲，而無需使用 ONTAP 工具。如需詳細資訊、請參閱 https://docs.netapp.com/us-en/ontap/san-admin/manage-san-initiators-task.html["管理 SAN 啟動器和 igroup"] 。
+
+當儲存加入 ONTAP 工具並執行資料儲存發現功能時，扁平 igroup 和 VMFS 資料儲存將由 ONTAP 工具管理，並轉換為巢狀 igroup。您無法使用早期的扁平 igroup 建立新的資料儲存空間；您必須使用 ONTAP 工具使用者介面或 REST API 來重複使用巢狀 igroup。
+
 [role="tabbed-block"]
 ====
 .建立 VVols 資料存放區
@@ -102,11 +108,16 @@ NFS 資料存放區會建立並掛載於所有主機上。
 * 如果您使用的是 NVMe / TCP 傳輸協定，請設定 ESXi 主機：
 +
 .. 檢閱 https://www.vmware.com/resources/compatibility/detail.php?deviceCategory=san&productid=49677&releases_filter=589,578,518,508,448&deviceCategory=san&details=1&partner=399&Protocols=1&transportTypes=3&isSVA=0&page=1&display_interval=10&sortColumn=Partner&sortOrder=Asc["VMware相容性指南"]
++
 
+NOTE: VMware vSphere 7.0 U3 及更新版本支援 NVMe / TCP 傳輸協定。不過，建議使用 VMware vSphere 8.0 及更新版本。
 
+.. 驗證網路介面卡（ NIC ）廠商是否支援採用 NVMe / TCP 傳輸協定的 ESXi NIC 。
+.. 根據 NIC 廠商規格、為 NVMe / TCP 設定 ESXi NIC 。
+.. 使用 VMware vSphere 7 版本時、請遵循 VMware 網站上的指示 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-storage-7-0/about-vmware-nvme-storage/configure-adapters-for-nvme-over-tcp-storage/configure-vmkernel-binding-for-the-tcp-adapter.html["為 NVMe over TCP 介面卡設定 VMkernel Binding"]來設定 NVMe / TCP 連接埠繫結。使用 VMware vSphere 8 版本時、請遵循 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-storage-8-0/about-vmware-nvme-storage/configuring-nvme-over-tcp-on-esxi.html["在 ESXi 上設定 NVMe over TCP"]設定 NVMe / TCP 連接埠繫結。
+.. 針對 VMware vSphere 7 版本，請依照第頁的指示 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-storage-7-0/about-vmware-nvme-storage/add-software-nvme-over-rdma-or-nvme-over-tcp-adapters.html["啟用透過 RDMA 或 NVMe over TCP 軟體介面卡的 NVMe"]來設定 NVMe / TCP 軟體介面卡。對於 VMware vSphere 8 版本，請遵循 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-storage-8-0/about-vmware-nvme-storage/configuring-nvme-over-rdma-roce-v2-on-esxi/add-software-nvme-over-rdma-or-nvme-over-tcp-adapters.html["透過 RDMA 或 NVMe over TCP 介面卡新增軟體 NVMe"]設定 NVMe / TCP 軟體介面卡。
+.. link:../configure/discover-storage-systems-and-hosts.html["探索儲存系統與主機"]在 ESXi 主機上執行動作。如需詳細資訊、請 https://community.netapp.com/t5/Tech-ONTAP-Blogs/How-to-Configure-NVMe-TCP-with-vSphere-8-0-Update-1-and-ONTAP-9-13-1-for-VMFS/ba-p/445429["如何使用 vSphere 8.0 Update 1 和 ONTAP 9 。 13.1 設定適用於 VMFS 資料存放區的 NVMe / TCP"]參閱。
 
-
-VMware vSphere 7.0 U3 及更新版本支援 NVMe / TCP 傳輸協定。不過，建議使用 VMware vSphere 8.0 及更新版本。。驗證網路介面卡（ NIC ）廠商是否支援採用 NVMe / TCP 傳輸協定的 ESXi NIC 。。根據 NIC 廠商規格、為 NVMe / TCP 設定 ESXi NIC 。。使用 VMware vSphere 7 版本時、請遵循 VMware 網站上的指示 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-storage-7-0/about-vmware-nvme-storage/configure-adapters-for-nvme-over-tcp-storage/configure-vmkernel-binding-for-the-tcp-adapter.html["為 NVMe over TCP 介面卡設定 VMkernel Binding"]來設定 NVMe / TCP 連接埠繫結。使用 VMware vSphere 8 版本時、請遵循 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-storage-8-0/about-vmware-nvme-storage/configuring-nvme-over-tcp-on-esxi.html["在 ESXi 上設定 NVMe over TCP"]設定 NVMe / TCP 連接埠繫結。。針對 VMware vSphere 7 版本，請依照第頁的指示 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-storage-7-0/about-vmware-nvme-storage/add-software-nvme-over-rdma-or-nvme-over-tcp-adapters.html["啟用透過 RDMA 或 NVMe over TCP 軟體介面卡的 NVMe"]來設定 NVMe / TCP 軟體介面卡。對於 VMware vSphere 8 版本，請遵循 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-storage-8-0/about-vmware-nvme-storage/configuring-nvme-over-rdma-roce-v2-on-esxi/add-software-nvme-over-rdma-or-nvme-over-tcp-adapters.html["透過 RDMA 或 NVMe over TCP 介面卡新增軟體 NVMe"]設定 NVMe / TCP 軟體介面卡。。link:../configure/discover-storage-systems-and-hosts.html["探索儲存系統與主機"]在 ESXi 主機上執行動作。如需詳細資訊、請 https://community.netapp.com/t5/Tech-ONTAP-Blogs/How-to-Configure-NVMe-TCP-with-vSphere-8-0-Update-1-and-ONTAP-9-13-1-for-VMFS/ba-p/445429["如何使用 vSphere 8.0 Update 1 和 ONTAP 9 。 13.1 設定適用於 VMFS 資料存放區的 NVMe / TCP"]參閱。
 
 * 如果您使用的是 NVMe / FC 傳輸協定、請執行下列步驟來設定 ESXi 主機：
 +

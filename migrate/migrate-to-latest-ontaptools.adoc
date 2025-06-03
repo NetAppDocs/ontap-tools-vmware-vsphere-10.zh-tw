@@ -156,7 +156,7 @@ curl https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?inc
 +
 一旦停止舊的 VASA Provider ， vCenter Server 就會容錯移轉至適用於 VMware vSphere 的 ONTAP 工具。所有的資料存放區和 VM 都可以存取、並可從適用於 VMware vSphere 的 ONTAP 工具取得。
 
-. 只有在觸發資料存放區探索工作（可能需要 30 分鐘才能完成）之後，才能在適用於 VMware vSphere 10.4 的 ONTAP 工具中看到從 ONTAP 工具移轉的 NFS 和 VMFS 資料存放區。確認 ONTAP 工具的「 VMware vSphere 外掛程式」使用者介面頁面概觀頁面上是否顯示資料存放區。
+. 只有在觸發資料存放區探索工作（可能需要 30 分鐘才能完成）之後，才能在適用於 VMware vSphere 10.4 的 ONTAP 工具中看到從 ONTAP 工具移轉的 NFS 和 VMFS 資料存放區。驗證資料儲存庫是否在 VMware vSphere 外掛程式使用者介面頁面的 ONTAP 工具概覽頁面上可見。
 . 使用 Swagger 或 Postman 中的下列 API 執行修補程式移轉：
 +
 []

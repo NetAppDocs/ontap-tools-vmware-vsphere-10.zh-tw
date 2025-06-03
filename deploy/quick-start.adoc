@@ -64,9 +64,9 @@ VMware vSphere ONTAP 工具入門包括幾個步驟。本快速入門課程將�
 * link:../configure/associate-storage-backend.html["將儲存後端與 vCenter Server 執行個體建立關聯"]
 
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["六"]如果您使用多個 vCenter Server ，請升級憑證
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["六"]如果您使用多個 vCenter Server 執行個體，請升級憑證
 [role="quick-margin-para"]
-使用多個 vCenter Server 時，請將自我簽署的憑證升級為憑證授權單位（ CA ）簽署的憑證。
+使用多個 vCenter Server 執行個體時，將自簽章憑證升級為憑證授權單位 (CA) 簽署的憑證。
 
 [role="quick-margin-list"]
 * link:../manage/certificate-manage.html["管理憑證"]
@@ -82,7 +82,7 @@ VMware vSphere ONTAP 工具入門包括幾個步驟。本快速入門課程將�
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-8.png["八"]（選用）啟用 SnapMirror 主動式同步保護
 [role="quick-margin-para"]
-為 VMware vSphere 設定 ONTAP 工具，以管理 SnapMirror 主動式同步的主機叢集保護。配對來源叢集和目的地叢集，以及 SVM 以進行 SnapMirror 主動式同步。這僅適用於 VMFS 資料存放區。
+為 VMware vSphere 設定 ONTAP 工具，以管理 SnapMirror 主動式同步的主機叢集保護。在 ONTAP 系統中執行 ONTAP 叢集和 SVM 對等連線以使用 SnapMirror 主動同步。這僅適用於 VMFS 資料存放區。
 
 [role="quick-margin-list"]
 * link:../configure/protect-cluster.html["使用主機叢集保護來保護"]
