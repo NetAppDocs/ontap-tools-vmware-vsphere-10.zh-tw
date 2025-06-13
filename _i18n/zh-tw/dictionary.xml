@@ -2236,7 +2236,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="15f0aef685a07d8a64ee213328fd4abf" category="list-text">從第一個節點虛擬機器確定適用於 VMware vSphere 部署類型的 ONTAP 工具。</block>
   <block id="82cb2fe68a0c35dd310db836d38102d0" category="list-text">在 vCenter Server 中，將災難復原服務​​ (DRS) 自動化等級設定為部分自動化。部署 HA 後，將其恢復為完全自動化。</block>
   <block id="b02bbd059e55c04c7db94e76a92bd311" category="list-text">HA 設定中的節點​​主機名稱應採用小寫。</block>
-  <block id="a4a802cdddc104ad7f0a14d2bdc2c05e" category="list-text">輸入 10-60 分鐘之間的備份頻率值。</block>
   <block id="843e69439f5c77bf5c54644b48190fc1" category="admonition">對於用於 VMware vSphere HA 部署的 ONTAP 工具，您應該變更第一個節點（即 node1）上的維護控制台使用者密碼。</block>
   <block id="56564ecb20e9cb45429b432b22f216f4" category="admonition">MPIO 設定不適用於 NVMe、NVMe/FC 和 NVMe/TCP 協定。</block>
   <block id="07c9ecda15aaf26d8eef3770025ec27c" category="paragraph">您可以使用適用於 VMware vSphere 的 ONTAP 工具，向 vCenter Server 執行個體註冊 VASA Provider 。VASA Provider 設定區段會顯示所選 vCenter Server 的 VASA Provider 登錄狀態。在多重 vCenter 部署中，請確保每個 vCenter Server 執行個體都有自訂 CA 憑證。</block>
@@ -2277,4 +2276,5 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="b9a7adbda4cb4f1f2ba292b154c6353e" category="sidebar">將適用於 VMware vSphere 9.xx 的 ONTAP 工具移轉至 10.4</block>
   <block id="d619f73b597358ef5140938f37254d97" category="sidebar">遷移到適用於 VMware vSphere 的最新 ONTAP 工具</block>
   <block id="6cd5692bfbed66b11eefcd5a575d4cdd" category="sidebar">遷移 VASA 提供者和 SRA</block>
+  <block id="51aabaf24027b697520ff09c79c5f552" category="list-text">輸入 5 至 60 分鐘之間的備份頻率值。</block>
 </blocks>
