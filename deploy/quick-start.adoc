@@ -24,7 +24,7 @@ VMware vSphere ONTAP 工具入門包括幾個步驟。本快速入門課程將�
 
 [role="quick-margin-list"]
 * https://imt.netapp.com/matrix/#welcome["互通性對照表工具"]
-* link:../deploy/prerequisites.html["VMware vSphere 部署的 ONTAP 工具先決條件"]
+* link:../deploy/prerequisites.html["適用於 VMware vSphere 的 ONTAP 工具的要求和設定限制"]
 * link:../deploy/pre-deploy-checks.html["開始之前"]
 
 

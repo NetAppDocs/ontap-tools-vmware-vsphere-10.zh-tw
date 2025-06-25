@@ -54,7 +54,7 @@ summary: 在部署ONTAP VMware vSphere的支援功能之前、您應該先熟悉
 
 === 適用於單一節點部署
 
-請使用下列工作表來收集 VMware vSphere 初始部署之 ONTAP 工具的必要資訊：適用於 VMware vSphere 初始部署的 ONTAP 工具：
+使用下列工作表收集適用於 VMware vSphere 的 ONTAP 工具初始部署所需的資訊：
 
 |===
 | 需求 | 您的價值 
@@ -133,4 +133,14 @@ summary: 在部署ONTAP VMware vSphere的支援功能之前、您應該先熟悉
 
 == 網路防火牆組態
 
-開啟網路防火牆中 IP 位址所需的連接埠。ONTAP 工具必須能夠透過連接埠 443 到達此 LIF 。如需最新更新，請參閱link:../deploy/prerequisites.html["連接埠需求"]。
+開啟網路防火牆中 IP 位址所需的連接埠。ONTAP 工具必須能夠透過連接埠 443 存取此 LIF。如需最新更新，請參閱link:../deploy/prerequisites.html["連接埠需求"]。
+
+
+
+== ONTAP 儲存設定
+
+為了確保 ONTAP 儲存設備與適用於 VMware vSphere 的 ONTAP 工具無縫整合，請考慮下列設定：
+
+* 如果您使用光纖通道（ FC ）進行儲存連線，請在 FC 交換器上設定分區，將 ESXi 主機與 SVM 的 FC 生命期連線。 https://docs.netapp.com/us-en/ontap/peering/create-cluster-relationship-93-later-task.html["瞭解 ONTAP 系統的 FC 和 FCoE 分區"]
+* 若要使用 ONTAP 工具管理的 SnapMirror 複寫， ONTAP 儲存管理員應先建立 https://docs.netapp.com/us-en/ontap/peering/create-cluster-relationship-93-later-task.html["ONTAP 叢集對等關係"]和在 ONTAP 中， https://docs.netapp.com/us-en/ontap/peering/create-intercluster-svm-peer-relationship-93-later-task.html["ONTAP 叢集間 SVM 對等關係"]然後再使用 SnapMirror 。
+

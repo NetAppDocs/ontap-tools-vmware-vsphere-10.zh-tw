@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ONTAP tools,Storage Replication Adapter 
 summary: 在部署ONTAP VMware vSphere的支援功能之前、您應該先熟悉部署套件的空間需求、以及一些基本的主機系統需求。 
 ---
-= VMware vSphere 部署的 ONTAP 工具先決條件
+= 適用於 VMware vSphere 的 ONTAP 工具的要求和設定限制
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -79,74 +79,6 @@ NOTE: 從 VMware vSphere 10.4 的 ONTAP 工具開始，虛擬機器硬體會從�
 互通性對照表工具（ IMT ）包含有關支援版本的 ONTAP 、 vCenter Server 、 ESXi 主機和外掛應用程式的最新資訊。
 
 https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src=IMT["互通性對照表工具"^]
-
-
-
-== 部署 VMware vSphere ONTAP 工具的組態限制
-
-您可以使用下表做為指南、為 VMware vSphere 設定 ONTAP 工具。
-
-|===
-
-
-| *部署* | *類型* | * 虛擬工具數 * | * 主機數 * 
-
-
-| 非 HA | 小（ S ） | 約 12 、 000 | 32. 
-
-
-| 非 HA | 中（ M ） | 約 24 萬 | 64 
-
-
-| 高可用度 | 小（ S ） | 約 24 萬 | 64 
-
-
-| 高可用度 | 中（ M ） | 約 50 萬 | 128 
-
-
-| 高可用度 | 大（ L ） | 約 100k | 256 [ 注意 ] 表格中的主機數量顯示來自多個 vCenter 的主機總數。 
-|===
-
-
-== 適用於 VMware vSphere 的工具 - 儲存複寫介面卡（ ONTAP ）
-
-下表顯示使用適用於 VMware vSphere 的 ONTAP 工具、每個 VMware Live Site Recovery 執行個體所支援的數量。
-
-|===
-| * vCenter 部署規模 * | * 小 * | * 中 * 
-
-
-| 使用陣列型複寫設定來保護的虛擬機器總數 | 2000 | 5000 
-
-
-| 陣列型複寫保護群組總數 | 250 | 250 
-
-
-| 每個恢復計畫的保護群組總數 | 50 | 50 
-
-
-| 複寫的資料存放區數量 | 255 | 255 
-
-
-| 虛擬機器數量 | 4000 | 7000 
-|===
-下表顯示 VMware Live Site Recovery 的數量、以及對應的 VMware vSphere 部署規模 ONTAP 工具。
-
-|===
-
-
-| * VMware Live Site Recovery 執行個體數 * | * ONTAP 工具部署規模 * 
-
-
-| 最多 4 個 | 小 
-
-
-| 4 至 8 | 中 
-
-
-| 超過 8 個 | 大 
-|===
-如需詳細資訊、請 https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/9-0/overview/site-recovery-manager-system-requirements/operational-limits-of-site-recovery-manager.html["VMware Live Site Recovery 的營運限制"]參閱。
 
 
 
@@ -233,10 +165,68 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 |===
 
 
-== ONTAP 儲存設定
+== 部署 VMware vSphere ONTAP 工具的組態限制
 
-為了確保 ONTAP 儲存設備與適用於 VMware vSphere 的 ONTAP 工具無縫整合，請考慮下列設定：
+您可以使用下表做為指南、為 VMware vSphere 設定 ONTAP 工具。
 
-* 如果您使用光纖通道（ FC ）進行儲存連線，請在 FC 交換器上設定分區，將 ESXi 主機與 SVM 的 FC 生命期連線。 https://docs.netapp.com/us-en/ontap/peering/create-cluster-relationship-93-later-task.html["瞭解 ONTAP 系統的 FC 和 FCoE 分區"]
-* 若要使用 ONTAP 工具管理的 SnapMirror 複寫， ONTAP 儲存管理員應先建立 https://docs.netapp.com/us-en/ontap/peering/create-cluster-relationship-93-later-task.html["ONTAP 叢集對等關係"]和在 ONTAP 中， https://docs.netapp.com/us-en/ontap/peering/create-intercluster-svm-peer-relationship-93-later-task.html["ONTAP 叢集間 SVM 對等關係"]然後再使用 SnapMirror 。
+|===
 
+
+| *部署* | *類型* | * 虛擬工具數 * | * 主機數 * 
+
+
+| 非 HA | 小（ S ） | 約 12 、 000 | 32. 
+
+
+| 非 HA | 中（ M ） | 約 24 萬 | 64 
+
+
+| 高可用度 | 小（ S ） | 約 24 萬 | 64 
+
+
+| 高可用度 | 中（ M ） | 約 50 萬 | 128 
+
+
+| 高可用度 | 大（ L ） | 約 100k | 256 [ 注意 ] 表格中的主機數量顯示來自多個 vCenter 的主機總數。 
+|===
+
+
+== 適用於 VMware vSphere 的工具 - 儲存複寫介面卡（ ONTAP ）
+
+下表顯示使用適用於 VMware vSphere 的 ONTAP 工具、每個 VMware Live Site Recovery 執行個體所支援的數量。
+
+|===
+| * vCenter 部署規模 * | * 小 * | * 中 * 
+
+
+| 使用陣列型複寫設定來保護的虛擬機器總數 | 2000 | 5000 
+
+
+| 陣列型複寫保護群組總數 | 250 | 250 
+
+
+| 每個恢復計畫的保護群組總數 | 50 | 50 
+
+
+| 複寫的資料存放區數量 | 255 | 255 
+
+
+| 虛擬機器數量 | 4000 | 7000 
+|===
+下表顯示 VMware Live Site Recovery 的數量、以及對應的 VMware vSphere 部署規模 ONTAP 工具。
+
+|===
+
+
+| * VMware Live Site Recovery 執行個體數 * | * ONTAP 工具部署規模 * 
+
+
+| 最多 4 個 | 小 
+
+
+| 4 至 8 | 中 
+
+
+| 超過 8 個 | 大 
+|===
+如需詳細資訊、請 https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/9-0/overview/site-recovery-manager-system-requirements/operational-limits-of-site-recovery-manager.html["VMware Live Site Recovery 的營運限制"]參閱。
