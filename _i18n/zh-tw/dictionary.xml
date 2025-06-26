@@ -2246,16 +2246,10 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="8b6081846f56ef049557c82e5b444e2d" category="paragraph">如果您的設定中包含 NFS 和 VMFS 資料存儲，而沒有 vVols 資料存儲，則只需卸載 ONTAP 工具 9.xx 並部署 ONTAP 工具 10.x 即可。但是，如果您的設定包含 vVols 資料存儲，則必須執行 VASA 提供者和 SRA 的遷移程序。</block>
   <block id="30725e73463cac6869eb16851a0b7f1f" category="paragraph">下表概述了這兩種不同場景下的遷移過程。</block>
   <block id="481ad82ca4c063eed4e75acc5640a962" category="cell">*如果設定有 vVols 資料儲存*</block>
-  <block id="a52ec04716984e73a95a673f19b4381b" category="cell">*如果設定不包含 vVols 資料儲存*</block>
-  <block id="612ae34fe355690bba22816577fb8ceb" category="inline-link-macro">遷移 VASA 提供程序</block>
-  <block id="b01a9665d854fa0b6f2ee86db8e7e7e5" category="inline-link-macro">遷移 SRA</block>
   <block id="6e4d49fbd70ad4839257ed5ced55d275" category="inline-link">建立虛擬機器儲存策略</block>
-  <block id="a1a2f15a55d77fba2d3e9d1ffb9c2d37" category="cell">步驟：1.<block ref="b948e8148e317c6b3a44b41129efa89c" category="inline-link-macro-rx"></block> 2.<block ref="fd39ed98cbc7c628cdfb8965952c02e6" category="inline-link-macro-rx"></block> 3. <block ref="2f4f76d1186f7e1931e429142840bca6" category="inline-link-rx"></block></block>
   <block id="27116dca14772e71a5f801de216fb934" category="inline-link-macro">為 VMware vSphere 10.4 部署和設定 ONTAP 工具</block>
   <block id="ae2e6f54444edfbcea323e8f64be5184" category="inline-link">如何從您的環境中刪除 OTV 9.xx</block>
-  <block id="2de1e904f7a723f3fccf3b29b5d3a892" category="cell">步驟：1.從您的環境中刪除 ONTAP 工具 9.xx。請參閱<block ref="9bde8c27ff3ba526e74c5e0434eb2686" category="inline-link-rx"></block> NetApp 知識庫文章。2.<block ref="b784a866e80ba41b4fb2f8e0caeb5197" category="inline-link-macro-rx"></block> 3. <block ref="2f4f76d1186f7e1931e429142840bca6" category="inline-link-rx"></block></block>
   <block id="8fba1879056f1b6c411434b65fe61ee9" category="admonition">從適用於 VMware vSphere 9.xx 的 ONTAP 工具移轉至 10.4 之後，使用 NVMe / FC 傳輸協定的 VVols 資料存放區將無法運作，因為 ONTAP 工具 10.4 僅支援 VMFS 資料存放區的 NVMe 傳輸協定。</block>
-  <block id="61ace5a2518ab1c5ed7b0cdaaff98213" category="doc">遷移 VASA 提供者和儲存複製適配器 (SRA)</block>
   <block id="74a0fcc4fbe41d518dabd4de3a069584" category="section-title">遷移 VASA 提供者的步驟</block>
   <block id="db9ce82f740ff3a9f2ad609cd7d296c9" category="list-text">透過 vCenter 伺服器 API 在本地為 ONTAP 工具插件加入儲存後端。</block>
   <block id="c31397b4be5939d5bf72a8bb0faf9443" category="paragraph">您可以通過以下 URL 訪問 Swagger ：“ https://$FQDN_IP_PORT/, 例如：<block ref="31b962e36589b3bd2081bfb7d028723f" category="inline-link-rx"></block>。</block>
@@ -2263,13 +2257,11 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="684e740f5c7b2c5d6085a2342428c783" category="paragraph">{ “otv_ip”：“xx.xx.xx.xx”， “vasa_provider_credentials”：{ “用戶名”：“xxxxx”，“密碼”：“*******” } }</block>
   <block id="fafb1a9cdf3a5eb6029da27aa9e99060" category="list-text">將適用於 VMware vSphere 儲存提供者的 ONTAP 工具新增至 vCenter Server 並<block ref="c283b8bc021fee7e6c856fce39783a46" category="inline-link-macro-rx"></block>使用適用於 VMware vSphere 的 ONTAP 工具。</block>
   <block id="9a75388e84716581ed710b23451155ae" category="list-text">只有在觸發資料儲存發現作業後，從適用於 VMware vSphere 9.xxx 的 ONTAP 工具遷移的 NFS 和 VMFS 資料儲存才會顯示在適用於 VMware vSphere 10.4 的 ONTAP 工具中，這可能需要最多 30 分鐘才能完成。驗證資料儲存庫是否在 VMware vSphere 外掛程式使用者介面頁面的 ONTAP 工具概覽頁面上可見。</block>
-  <block id="219ce9585531b00b3bd54170f3775f53" category="section-title">遷移 SRA 的步驟</block>
   <block id="507fcd9c144d0cee8403de3b0608fc58" category="paragraph">在復原計畫中，受保護站點是指虛擬機器目前運作的位置，而復原站點是指虛擬機器將被復原的位置。 SRM介面顯示復原計畫的狀態，其中包含受保護網站和復原網站的詳細資訊。在復原計畫中，「清理」和「重新保護」按鈕處於停用狀態，而「測試」和「執行」按鈕則保持啟用狀態。這表示該站點已準備好進行資料恢復。在遷移 SRA 之前，請先驗證一個網站處於受保護狀態，另一個網站處於復原狀態。</block>
   <block id="d6b99aad2c3ad58ece5306ce3dbab4d3" category="cell">不斷演進的 ONTAP 工具從 10.x 邁向 9.xx 同位元檢查、同時延伸高可用度、效能和擴充限制</block>
   <block id="ea974b3b2665a0ede55feb5ef712e4dd" category="paragraph"><block ref="ea974b3b2665a0ede55feb5ef712e4dd" category="inline-link-macro-rx"></block></block>
   <block id="b9a7adbda4cb4f1f2ba292b154c6353e" category="sidebar">將適用於 VMware vSphere 9.xx 的 ONTAP 工具移轉至 10.4</block>
   <block id="d619f73b597358ef5140938f37254d97" category="sidebar">遷移到適用於 VMware vSphere 的最新 ONTAP 工具</block>
-  <block id="6cd5692bfbed66b11eefcd5a575d4cdd" category="sidebar">遷移 VASA 提供者和 SRA</block>
   <block id="51aabaf24027b697520ff09c79c5f552" category="list-text">輸入 5 至 60 分鐘之間的備份頻率值。</block>
   <block id="d12f6b7d9e336bb21523e27a7954a424" category="doc">了解適用於 VMware vSphere 的 ONTAP 工具中的 igroup 和匯出策略</block>
   <block id="27fa3073e12d15edf2d9cd750cf92bd4" category="paragraph">啟動器群組 (igroup) 是 FC 協定主機全球連接埠名稱 (WWPN) 或 iSCSI 主機限定節點名稱的資料表。您可以定義igroup並將其對應至LUN、以控制哪些啟動器可以存取LUN。</block>
@@ -2376,4 +2368,11 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="dc0055de9b7e911c1f50f49dc1b3ef79" category="inline-link-macro">適用於 VMware vSphere 的 ONTAP 工具的要求和設定限制</block>
   <block id="25eb466dd476278d60eabf35f3daa859" category="list-text"><block ref="25eb466dd476278d60eabf35f3daa859" category="inline-link-macro-rx"></block></block>
   <block id="8afddaa1858f79be24bc3f9dfe03eb86" category="sidebar">ONTAP 工具需求和設定限制</block>
+  <block id="122962cdef914297e7bd27106c4b08ef" category="cell">*如果設定僅包含 NFS 和 VMFS 資料儲存*</block>
+  <block id="23582373a176f3a1391b91644579b591" category="inline-link-macro">遷移 VASA 提供程序</block>
+  <block id="56e81eec05ba3edf697b5613dfbb8977" category="cell">步驟：1.<block ref="393201960d4eefccacb06cc7ccdc8cfc" category="inline-link-macro-rx"></block> 2. <block ref="2f4f76d1186f7e1931e429142840bca6" category="inline-link-rx"></block></block>
+  <block id="690fca4891ecdd9975fe5dc5bd2a520b" category="inline-link-macro">更新「SRA」</block>
+  <block id="b468841971bd972a362e1fdbf6619e6e" category="cell">步驟：1.從您的環境中刪除 ONTAP 工具 9.xx。請參閱<block ref="9bde8c27ff3ba526e74c5e0434eb2686" category="inline-link-rx"></block> NetApp 知識庫文章。2.<block ref="b784a866e80ba41b4fb2f8e0caeb5197" category="inline-link-macro-rx"></block> 3.<block ref="a29d94f131e388c7ee7c4a56d062be87" category="inline-link-macro-rx"></block> 4. <block ref="2f4f76d1186f7e1931e429142840bca6" category="inline-link-rx"></block></block>
+  <block id="3d73385f16fa6d4daf757e66c8eab31b" category="doc">遷移 VASA 提供者並更新 SRA</block>
+  <block id="3ce8158207209ed6b060c0d6db6b685d" category="section-title">更新儲存複製適配器 (SRA) 的步驟</block>
 </blocks>
