@@ -2083,7 +2083,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="305675e418fa7f87d5c522fec4e29a3d" category="list-text">部署適用於 VMware vSphere 10.4 的 OVA for ONTAP 工具。</block>
   <block id="472d4465d1363ede67b4fdb4c6e0e1ff" category="inline-link-macro">從適用於 VMware vSphere 10.x 的 ONTAP 工具升級至 10.4</block>
   <block id="601dd8c7000a195659d470e737339c2d" category="paragraph"><block ref="601dd8c7000a195659d470e737339c2d" category="inline-link-macro-rx"></block></block>
-  <block id="de07d353dcc67566b2f1a71fe30ec4aa" category="admonition">儲存複寫介面卡（ SRA ）支援在一致性群組上使用自動容錯移轉雙工和非同步關係 SnapMirror 類型的單一同步關係進行開機。但是，不支援在一致性群組上使用兩個非同步 SnapMirror 的開機，或在 Volume 上使用扇出 Snapscorors 。</block>
   <block id="cdeb8a4a9786cfc45563b399c91bcce8" category="summary">在風扇輸出保護中，一致性群組會在第一個目的地 ONTAP 叢集上使用同步關係，並在第二個目的地 ONTAP 叢集上使用非同步關係，獲得雙重保護。</block>
   <block id="e7fc5cd5d3b281daa6edd76ca9076d38" category="doc">風扇輸出保護</block>
   <block id="7e6b27bdfe27b21cf49c575fe39989af" category="paragraph">在風扇輸出保護中，一致性群組會在第一個目的地 ONTAP 叢集上使用同步關係，並在第二個目的地 ONTAP 叢集上使用非同步關係，獲得雙重保護。建立，編輯及刪除 SnapMirror 主動式同步保護工作流程可維持同步保護。SRM 容錯移轉和重新保護工作流程，可維持非同步保護。</block>
@@ -2299,7 +2298,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="2d6cceda29fb927297683321657cc7f7" category="paragraph-title">範例 3：</block>
   <block id="6e0ad0300479c496e85c7f90f364f3da" category="paragraph">從主機卸載資料存儲</block>
   <block id="1042a36d4bd6b198c75db206e253d6a1" category="paragraph">*工作流程*：[卸載] DS1 (lun1): host1 (iqn1)</block>
-  <block id="99fb3d64e6243f94e6f41859fd70993d" category="paragraph">host1Igroup 已從層次結構中移除。子 igroup 不會被明確刪除。以下兩種情況會發生刪除：• 如果沒有對應任何 LUN，ONTAP 系統將刪除子 igroup。• 計劃清理作業會移除沒有 LUN 對映的懸空子 igroup。這些情況僅適用於 ONTAP 工具管理的 igroup，不適用於自訂建立的 igroup。</block>
   <block id="041ec4ff6ad5f804da8976d697659842" category="paragraph-title">範例 4：</block>
   <block id="e5e28486c61b67fca6b2ef177a5f9359" category="paragraph">刪除資料儲存區</block>
   <block id="4a3642a61d33fc5e86d2b97fb3ec5b26" category="paragraph">*工作流程*：[刪除] DS1 (lun1): host2 (iqn2)</block>
@@ -2375,4 +2373,8 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="b468841971bd972a362e1fdbf6619e6e" category="cell">步驟：1.從您的環境中刪除 ONTAP 工具 9.xx。請參閱<block ref="9bde8c27ff3ba526e74c5e0434eb2686" category="inline-link-rx"></block> NetApp 知識庫文章。2.<block ref="b784a866e80ba41b4fb2f8e0caeb5197" category="inline-link-macro-rx"></block> 3.<block ref="a29d94f131e388c7ee7c4a56d062be87" category="inline-link-macro-rx"></block> 4. <block ref="2f4f76d1186f7e1931e429142840bca6" category="inline-link-rx"></block></block>
   <block id="3d73385f16fa6d4daf757e66c8eab31b" category="doc">遷移 VASA 提供者並更新 SRA</block>
   <block id="3ce8158207209ed6b060c0d6db6b685d" category="section-title">更新儲存複製適配器 (SRA) 的步驟</block>
+  <block id="6b384d855656d218511c98e4bb3a3c1a" category="paragraph">host1Igroup 已從層次結構中移除。子 igroup 不會被明確刪除。在以下兩種情況下會發生刪除：</block>
+  <block id="3650a37003fea5e62220604565648a36" category="list-text">如果沒有對應任何 LUN，則 ONTAP 系統將刪除子 igroup。</block>
+  <block id="58f346f8b1d31103f78fd7d4298e390b" category="list-text">計劃的清理作業將刪除沒有 LUN 對應的懸空子 igroup。這些情況僅適用於 ONTAP 工具管理的 igroup，不適用於自訂建立的 igroup。</block>
+  <block id="fcebdc1d37d884dcdadc2c706178b160" category="admonition">儲存複製適配器 (SRA) 支援具有自動故障轉移雙工類型的一個同步關係的扇出以及一致性群組上的非同步關係 SnapMirror。但是，不支援在一致性群組上使用兩個非同步 SnapMirror 的開機，或在 Volume 上使用扇出 Snapscorors 。</block>
 </blocks>
