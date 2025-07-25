@@ -66,6 +66,6 @@ https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/
 .步驟
 . 確認受保護站台的資料存放區包含已向vCenter Server註冊的虛擬機器。
 . 確認受保護站台的ESXi主機已從儲存虛擬機器（SVM）掛載NFS匯出磁碟區。
-. 使用 Array Manager 精靈將陣列新增至 VMware Live Site Recovery 時、請確認在 * NFS 位址 * 欄位中指定了有效的位址、例如 NFS 匯出所在的 IP 位址、主機名稱或 FQDN 。
+. 使用陣列管理器精靈將陣列新增至 VMware Live Site Recovery 時，請驗證「*NFS 位址*」欄位中指定的有效位址（例如，存在 NFS 匯出的 IP 位址或 FQDN）。請勿在「*NFS 位址*」欄位中使用 NFS 主機名稱。
 . 使用 `ping` 在恢復站台上的每個 ESXi 主機上執行命令、以驗證主機是否有 VMkernel 連接埠、可存取用於從 SVM 匯出 NFS 的 IP 位址。
 

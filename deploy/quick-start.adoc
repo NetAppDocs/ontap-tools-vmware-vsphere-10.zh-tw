@@ -2,7 +2,7 @@
 permalink: deploy/quick-start.html 
 sidebar: sidebar 
 keywords: ONTAP tools,Storage Replication Adapter 
-summary: VMware vSphere ONTAP 工具入門包括幾個步驟。 
+summary: 使用此快速入門部分ONTAP tools for VMware vSphere。 
 ---
 = VMware vSphere ONTAP 工具快速入門
 :allow-uri-read: 
@@ -11,13 +11,13 @@ summary: VMware vSphere ONTAP 工具入門包括幾個步驟。
 
 
 [role="lead"]
-VMware vSphere ONTAP 工具入門包括幾個步驟。本快速入門課程將引導您完成 VMware vSphere ONTAP 工具的初始設定。
+使用此快速入門部分ONTAP tools for VMware vSphere。
 
 一開始，您將部署 VMware vSphere 的 ONTAP 工具，做為小型單一節點組態，提供核心服務來支援 NFS 和 VMFS 資料存放區。如果您需要擴充組態以使用 vVols 資料存放區和高可用度（ HA ），您將在完成此工作流程後進行。如需詳細資訊、請link:../deploy/ha-workflow.html["HA 部署工作流程"]參閱。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一"]規劃您的部署
 [role="quick-margin-para"]
-確認您的 vSphere ， ONTAP 和 ESXi 主機版本與 ONTAP 工具版本相容。分配足夠的 CPU ，記憶體和磁碟空間。視您的安全性原則而定，您可能需要設定防火牆或其他安全設備，以允許網路流量。
+驗證您的 vSphere、 ONTAP和 ESXi 主機版本是否與ONTAP工具版本相容。分配足夠的 CPU、記憶體和磁碟空間。根據您的安全規則，您可能需要設定防火牆或其他安全工具以允許網路流量。
 
 [role="quick-margin-para"]
 確保 vCenter Server 已安裝且可存取。
@@ -30,7 +30,7 @@ VMware vSphere ONTAP 工具入門包括幾個步驟。本快速入門課程將�
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["二"]部署適用於 VMware vSphere 的 ONTAP 工具
 [role="quick-margin-para"]
-一開始，您將部署 VMware vSphere 的 ONTAP 工具，做為小型單一節點組態，提供核心服務來支援 NFS 和 VMFS 資料存放區。如果您打算擴充組態以使用 vVols 資料存放區和高可用度（ HA ），您將在完成此工作流程後進行。若要成功擴充至 HA 組態，您必須確定已啟用 CPU 熱新增和記憶體熱插拔選項。
+最初，您將部署ONTAP tools for VMware vSphere作為小型單節點配置，該配置提供核心服務以支援 NFS 和 VMFS 資料儲存。如果您計劃擴展配置以使用vVols資料儲存和高可用性 (HA)，請在完成此工作流程後進行擴充。若要擴充至 HA 設置，請確保已啟用 CPU 熱添加和記憶體熱插拔功能。
 
 [role="quick-margin-list"]
 * link:../deploy/ontap-tools-deployment.html["部署適用於 VMware vSphere 的 ONTAP 工具"]
@@ -38,7 +38,7 @@ VMware vSphere ONTAP 工具入門包括幾個步驟。本快速入門課程將�
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"]新增 vCenter Server 執行個體
 [role="quick-margin-para"]
-將一或多個 vCenter Server 執行個體新增至 ONTAP 工具，以供 VMware vSphere 設定，管理及保護 vCenter Server 環境中的虛擬資料存放區。
+將 vCenter Server 執行個體新增至ONTAP tools for VMware vSphere中，以設定、管理和保護 vCenter Server 環境中的虛擬資料儲存庫。
 
 [role="quick-margin-list"]
 * link:../configure/add-vcenter.html["新增 vCenter Server 執行個體"]
@@ -72,11 +72,12 @@ VMware vSphere ONTAP 工具入門包括幾個步驟。本快速入門課程將�
 * link:../manage/certificate-manage.html["管理憑證"]
 
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-7.png["七"]（選用）啟用 SRA 保護
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-7.png["七"] （可選）配置 SRA 保護
 [role="quick-margin-para"]
 啟用 SRA 功能以設定災難恢復並保護 NFS 或 VMFS 資料存放區。
 
 [role="quick-margin-list"]
+* link:../manage/enable-services.html["為 VMware vSphere 服務啟用 ONTAP 工具"]
 * link:../protect/configure-on-srm-appliance.html["在 VMware Live Site Recovery 應用裝置上設定 SRA"]
 
 
@@ -93,5 +94,5 @@ VMware vSphere ONTAP 工具入門包括幾個步驟。本快速入門課程將�
 為 VMware vSphere 設定排程 ONTAP 工具的備份，以便在發生故障時恢復設定。
 
 [role="quick-margin-list"]
-* link:../manage/enable-backup.html["建立備份並恢復 ONTAP 工具設定"]
+* link:../manage/manage/enable-backup.html["建立備份並恢復 ONTAP 工具設定"]
 

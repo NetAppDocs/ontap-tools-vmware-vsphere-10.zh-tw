@@ -41,7 +41,7 @@ NOTE: 在 VMware vSphere 的 ONTAP 工具中，您只能增加節點大小，而
 ** 主控 ONTAP 工具的虛擬機器不會直接部署在 ESXi 主機上。VM 應部署在叢集或資源集區上。
 +
 
-NOTE: 啟用 HA 組態後，您就無法還原為非 HA 單一節點組態。
+NOTE: 啟用 HA 設定後，您無法還原到非 HA 單節點配置。
 
 
 

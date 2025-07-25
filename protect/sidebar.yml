@@ -6,7 +6,7 @@ entries:
   url: "/configure/protect-cluster.html"
 - title: 使用 SRA 保護來保護
   entries:
-  - title: 啟用SRA來保護資料存放區
+  - title: 配置 SRA 以保護資料存儲
     url: "/protect/enable-storage-replication-adapter.html"
   - title: 為 SAN 和 NAS 環境設定 SRA
     url: "/protect/configure-storage-replication-adapter-for-san-environment.html"

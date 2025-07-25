@@ -30,7 +30,7 @@ summary: 卸載資料存放區動作會從 ESXi 主機卸載 NFS 或 VMFS 資料
 
 
 
-NOTE: 如果已卸載受保護的資料存放區、則退出保護設定可能會導致部分保護。請參閱link:../manage/edit-hostcluster-protection.html["修改受保護的主機叢集"]以啟用完整保護。
+NOTE: 如果受保護的資料儲存區已卸載，則現有的保護設定可能會導致保護效果不完整。請參閱link:../manage/edit-hostcluster-protection.html["修改受保護的主機叢集"]以實現全面保護。
 
 .接下來呢？
 您可以在「最近的工作」面板中追蹤進度。

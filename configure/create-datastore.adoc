@@ -26,7 +26,7 @@ summary: 當您在主機叢集層級建立資料存放區時，會在目的地�
 從適用於 VMware vSphere 10.3 的 ONTAP 工具開始，您可以在 ASA R2 系統上建立 vVols 資料存放區，並將空間效率視為 Thin vVol 。VASA Provider 會在建立 vVol 資料存放區時，建立容器和所需的傳輸協定端點。此容器不會有任何備份磁碟區。
 
 .開始之前
-* 確保根集合體未對應至 SVM 。
+* 確保根聚合未對應到 SVM。
 * 請確定 VASA Provider 已向所選 vCenter 登錄。
 * 在 ASA R2 儲存系統中， SVM 應對應至 SVM 使用者的 Aggregate 。
 
@@ -47,7 +47,7 @@ NOTE: ASA R2 系統支援 VVols 的 iSCSI 和 FC 傳輸協定。
 ** 您可以為 iSCSI 和 FC 傳輸協定選取 * 自訂啟動器群組 * 名稱。
 +
 
-NOTE: 在 ASA R2 儲存系統類型 SVM 中，不會建立儲存單元（ LUN/ 命名空間），因為資料存放區只是邏輯容器。
+NOTE: 在ASA r2 儲存系統類型 SVM 中，不會建立儲存單元（LUN/命名空間），因為資料儲存只是一個邏輯容器。
 
 
 
@@ -148,7 +148,7 @@ NOTE: VMware vSphere 7.0 U3 及更新版本支援 NVMe / TCP 傳輸協定。不�
 .. 從下拉式選項中選取 * Aggregate * 。
 +
 
-NOTE: 對於 ASA R2 儲存系統， * Aggregate * 選項不會顯示，因為 ASA R2 儲存設備是分類式儲存設備。當您選擇 ASA R2 儲存系統類型 SVM 時，儲存屬性頁會顯示啟用 QoS 的選項。
+NOTE: 對於ASA r2 儲存系統，由於ASA r2 儲存是分解式存儲，因此不會顯示「*聚合*」選項。當您選擇ASA r2 儲存系統類型的 SVM 時，儲存屬性頁面會顯示用於啟用 QoS 的選項。
 
 .. 根據所選的傳輸協定，儲存單元（ LUN/ 命名空間）會以精簡型的空間保留空間來建立。
 +

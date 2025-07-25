@@ -84,7 +84,7 @@ curl https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?inc
 請勿刪除 VASA Provider 。
 
 +
-一旦停止舊的 VASA Provider ， vCenter Server 就會容錯移轉至適用於 VMware vSphere 的 ONTAP 工具。所有的資料存放區和 VM 都可以存取、並可從適用於 VMware vSphere 的 ONTAP 工具取得。
+舊 VASA 提供者停止後，vCenter Server 將故障轉移到ONTAP tools for VMware vSphere。所有資料儲存庫和虛擬機器均可訪問，並由適用於ONTAP tools for VMware vSphere提供服務。
 
 . 只有在觸發資料儲存發現作業後，從適用於 VMware vSphere 9.xxx 的 ONTAP 工具遷移的 NFS 和 VMFS 資料儲存才會顯示在適用於 VMware vSphere 10.4 的 ONTAP 工具中，這可能需要最多 30 分鐘才能完成。驗證資料儲存庫是否在 VMware vSphere 外掛程式使用者介面頁面的 ONTAP 工具概覽頁面上可見。
 . 使用 Swagger 或 Postman 中的下列 API 執行修補程式移轉：
@@ -135,7 +135,7 @@ NOTE: UUID 是移轉後 API 所傳回的移轉 UUID 。
 完成移轉並將 ONTAP 工具 10.4 登錄至 vCenter Server 之後，請遵循下列步驟：
 
 * 等待 * 探索 * 完成，所有主機上的憑證都會自動重新整理。
-* 請在開始資料存放區和虛擬機器作業之前，預留足夠的時間。所需的等待時間會因組態中的主機，資料存放區和虛擬機器數量而異。若未能等待，可能會導致間歇性作業故障。
+* 啟動資料儲存區和虛擬機器操作之前，請留出足夠的時間。所需的等待時間會因配置中的主機、資料儲存區和虛擬機器的數量而異。等待失敗可能會導致間歇性操作失敗。
 
 
 升級後，如果虛擬機器的規範狀態已過期，請使用下列步驟重新套用儲存原則：
@@ -161,7 +161,7 @@ NOTE: UUID 是移轉後 API 所傳回的移轉 UUID 。
 == 更新儲存複製適配器 (SRA) 的步驟
 
 .開始之前
-在復原計畫中，受保護站點是指虛擬機器目前運作的位置，而復原站點是指虛擬機器將被復原的位置。 SRM介面顯示復原計畫的狀態，其中包含受保護網站和復原網站的詳細資訊。在復原計畫中，「清理」和「重新保護」按鈕處於停用狀態，而「測試」和「執行」按鈕則保持啟用狀態。這表示該站點已準備好進行資料恢復。在遷移 SRA 之前，請先驗證一個網站處於受保護狀態，另一個網站處於復原狀態。
+在復原計畫中，受保護站點是指虛擬機器目前運作的位置，而復原站點是指虛擬機器將被復原的位置。 SRM介面顯示復原計畫的狀態，其中包含受保護網站和復原網站的詳細資訊。在復原計畫中，「*CleanupP*」和「*Reprotect*」按鈕處於停用狀態，而「TEST」和「RUN」按鈕則保持啟用狀態。這表示該站點已準備好進行資料恢復。在遷移 SRA 之前，請先驗證一個網站處於受保護狀態，另一個網站處於復原狀態。
 
 
 NOTE: 如果容錯移轉已完成，但重新保護仍在擱置中，請勿開始移轉。在繼續移轉之前，請先確認重新保護程序已完成。如果正在進行測試容錯移轉，請清理測試容錯移轉並開始移轉。
@@ -176,6 +176,7 @@ NOTE: 如果容錯移轉已完成，但重新保護仍在擱置中，請勿開�
 
 . 在保護站點和恢復站點上執行這些步驟。
 +
+.. link:../manage/enable-services.adoc["為 VMware vSphere 服務啟用 ONTAP 工具"]
 .. 按照中的步驟安裝適用於 VMware vSphere 10.4 介面卡的 ONTAP 工具link:../protect/configure-on-srm-appliance.html["在 VMware Live Site Recovery 應用裝置上設定 SRA"]。
 .. 在 VMware Live Site Recovery 使用者介面頁面上，執行 * 探索陣列 * 和 * 探索裝置 * 作業，並確認裝置在移轉之前顯示為。
 

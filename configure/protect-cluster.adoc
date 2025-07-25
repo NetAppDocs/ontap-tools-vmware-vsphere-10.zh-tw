@@ -18,7 +18,7 @@ summary: 適用於 VMware vSphere 的 ONTAP 工具可管理主機叢集的保護
 
 * 主機叢集只有一個 SVM 的資料存放區。
 * 安裝在主機叢集上的資料存放區不應掛載於叢集外的任何主機上。
-* 主機叢集上安裝的所有資料存放區都必須是含 iSCSI / FC 傳輸協定的 VMFS 資料存放區。不支援含 NVMe / FC 和 NVMe / TCP 傳輸協定的 VVols ， NFS 或 VMFS 資料存放區。
+* 主機叢集上掛載的所有資料儲存都必須是使用 iSCSI/FC 協定的 VMFS 資料儲存。不支援使用 NVMe/FC 和 NVMe/TCP 協定的vVols、NFS 或 VMFS 資料儲存。
 * 安裝在主機叢集上的 FlexVol / LUN 組成資料存放區、不應屬於任何現有的一致性群組（ CG ）。
 * 主機叢集上掛載的 FlexVol / LUN 組成資料存放區不應是任何現有 SnapMirror 關係的一部分。
 * 主機叢集至少應有一個資料存放區。

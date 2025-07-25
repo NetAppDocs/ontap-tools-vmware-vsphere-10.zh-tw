@@ -2,7 +2,7 @@
 permalink: manage/delete-deployment.html 
 sidebar: sidebar 
 keywords: ONTAP tools,Storage Replication Adapter 
-summary: 刪除 VMware vSphere 部署的 ONTAP 工具之後、您應該清理部署期間建立的 FlexVolumes 。如果您已使用專用的 ONTAP 叢集進行部署、則應該清理 FlexVolumes 、因為部署會建立許多未使用的 FlexVolumes 、導致效能降低。 
+summary: 刪除ONTAP tools for VMware vSphere後，您應該清理部署期間建立的 FlexVolume。如果您已使用專用ONTAP叢集進行部署，則應清理 FlexVolume，因為部署會建立大量未使用的 FlexVolume，導致效能下降。 
 ---
 = 移除 FlexVol Volume
 :allow-uri-read: 
