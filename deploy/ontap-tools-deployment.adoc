@@ -26,7 +26,7 @@ NOTE: 若要稍後啟用 HA 部署，請勿直接在 ESXi 主機上部署裝載 
 
 * 在您計畫中建立內容庫 * ，只要使用小型單一節點部署，就不需要建立內容庫。
 
-. 下載 `.zip`包含適用於 VMware vSphere 的 ONTAP 工具的二進位檔案 (_.ova_) 和簽署憑證的文件 https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp 支援網站"^] 。
+. 從下載包含ONTAP tools for VMware vSphere的二進位檔案 (_.ova_) 和簽署憑證的文件 https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp 支援網站"^] 。
 . 登入 vSphere 用戶端
 . 選取 vSphere 用戶端功能表，然後選取 * 內容庫 * 。
 . 選取頁面右側的 * 建立 * 。

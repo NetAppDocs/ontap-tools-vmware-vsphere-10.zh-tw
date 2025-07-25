@@ -2179,7 +2179,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="843e69439f5c77bf5c54644b48190fc1" category="admonition">對於用於 VMware vSphere HA 部署的 ONTAP 工具，您應該變更第一個節點（即 node1）上的維護控制台使用者密碼。</block>
   <block id="56564ecb20e9cb45429b432b22f216f4" category="admonition">MPIO 設定不適用於 NVMe、NVMe/FC 和 NVMe/TCP 協定。</block>
   <block id="07c9ecda15aaf26d8eef3770025ec27c" category="paragraph">您可以使用適用於 VMware vSphere 的 ONTAP 工具，向 vCenter Server 執行個體註冊 VASA Provider 。VASA Provider 設定區段會顯示所選 vCenter Server 的 VASA Provider 登錄狀態。在多重 vCenter 部署中，請確保每個 vCenter Server 執行個體都有自訂 CA 憑證。</block>
-  <block id="6cc905f50a7d9454e2cd6814a57ffcc4" category="list-text">下載<block ref="daf4de58883c030f033f07e61debf025" prefix=" " category="inline-code"></block>包含適用於 VMware vSphere 的 ONTAP 工具的二進位檔案 (_.ova_) 和簽署憑證的文件<block ref="db8756d7f65d6a8e593e69ba45adbb2e" category="inline-link-rx"></block> 。</block>
   <block id="5da601563ca7e442eafa7d6f32d54969" category="paragraph">VMware vSphere 的 ONTAP 工具最初部署為非 HA 設定。若要擴充至 HA 部署，您需要啟用 CPU 熱插拔和記憶體熱插件。您可以在部署程序中執行此步驟，或在部署後編輯 VM 設定。</block>
   <block id="42bc4627d63b98bd97ba7ee44a76918d" category="summary">在部署ONTAP VMware vSphere的支援功能之前、您應該先熟悉部署套件的空間需求、以及一些基本的主機系統需求。</block>
   <block id="7cbac47005f891099143c8780a7b8c4a" category="cell">7.0U3 和 8.0U3</block>
@@ -2383,4 +2382,5 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="6df3cc05d7d7f12128b849f4ef34c11a" category="cell">ISO 可能與目前版本相同或高於目前版本的兩個版本。</block>
   <block id="93470a6d5ec43c6c46729637f4feda14" category="paragraph">如果您要從適用於ONTAP tools for VMware vSphere升級，則需要先完成下列步驟才能繼續升級任務：* 為每個節點額外新增 100 GB 硬碟，因為服務資料儲存在虛擬機器本機。* 根據部署情況變更已關閉虛擬機器的 CPU 和記憶體。啟用 CPU 和 RAM 的熱插件。</block>
   <block id="c9d47f8c41ca805122d820b5a33c8400" category="list-text">從下載包含ONTAP tools for VMware vSphere的二進位檔案 (_.ova_) 和簽署憑證的文件<block ref="db8756d7f65d6a8e593e69ba45adbb2e" category="inline-link-rx"></block> 。如果您已經將OVA匯入內容庫，則可以跳過此步驟，繼續下一步。</block>
+  <block id="f7df05ae68c6e5833dfd15542c1632c0" category="list-text">從下載包含ONTAP tools for VMware vSphere的二進位檔案 (_.ova_) 和簽署憑證的文件<block ref="db8756d7f65d6a8e593e69ba45adbb2e" category="inline-link-rx"></block> 。</block>
 </blocks>
