@@ -2,7 +2,7 @@
 permalink: manage/attach-detach-disk.html 
 sidebar: sidebar 
 keywords:  
-summary: - 
+summary: 將資料磁碟附加至虛擬機器，以擴充儲存容量。 
 ---
 = 將資料磁碟連接或分離至虛擬機器
 :allow-uri-read: 

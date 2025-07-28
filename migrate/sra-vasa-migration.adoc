@@ -25,10 +25,10 @@ iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 . 透過 vCenter 伺服器 API 在本地為 ONTAP 工具插件加入儲存後端。
 . 從 Swagger 或 Postman 發出下列 API 以進行移轉。
 +
-Curl -X POST https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/{vcguid}/migration-jobs[]
+curl -X POST  `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/{vcguid}/migration-jobs``
 
 +
-您可以通過以下 URL 訪問 Swagger ：“ https://$FQDN_IP_PORT/, 例如： https://10.67.25.33:8443/[]。
+您可以透過此 URL 存取 Swagger：  `\https://$FQDN_IP_PORT/', for example: `\https://10.67.25.33:8443` 。
 
 +
 []
@@ -72,7 +72,7 @@ curl -X POST 'https://<OTV-NG-IP>:8443/virtualization/api/v1/vcenters/<vcguid>/m
 +
 [listing]
 ----
-curl https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?includeSubJobsAndTasks=true
+curl `\https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?includeSubJobsAndTasks=true`
 ----
 +
 完成工作後，請檢閱移轉報告。此報告包含在工作資料中，可從工作回應存取。
@@ -109,7 +109,7 @@ curl https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?inc
 
 * 目前範例 *
 
-Curl -X 修補程式 https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/56d373bd-4163-44f9-a872-9adabb008ca9/migration-jobs/84dr73bd-9173-65r7-w345-8ufdbb887d43[]
+curl -X 補丁 `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/56d373bd-4163-44f9-a872-9adabb008ca9/migration-jobs/84dr73bd-9173-65r7-w345-8ufdbb887d43`
 
 * JSON 輸出範例 *
 
@@ -176,7 +176,7 @@ NOTE: 如果容錯移轉已完成，但重新保護仍在擱置中，請勿開�
 
 . 在保護站點和恢復站點上執行這些步驟。
 +
-.. link:../manage/enable-services.adoc["為 VMware vSphere 服務啟用 ONTAP 工具"]
+.. link:../manage/enable-services.html["為 VMware vSphere 服務啟用 ONTAP 工具"]
 .. 按照中的步驟安裝適用於 VMware vSphere 10.4 介面卡的 ONTAP 工具link:../protect/configure-on-srm-appliance.html["在 VMware Live Site Recovery 應用裝置上設定 SRA"]。
 .. 在 VMware Live Site Recovery 使用者介面頁面上，執行 * 探索陣列 * 和 * 探索裝置 * 作業，並確認裝置在移轉之前顯示為。
 
