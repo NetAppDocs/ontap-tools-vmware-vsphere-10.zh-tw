@@ -53,7 +53,7 @@ NOTE: 啟用備份時，每個 ONTAP 工具叢集在部署 VM 的資料存放區
 | 儲存設備、主機和應用程式 | 版本需求 
 
 
-| ONTAP | 9.14.1 ， 9.15.1 和 9.16.0 。FAS ， ASA A 系列， ASA C 系列， AFF A 系列， AFF C 系列和 ASA R2 。 
+| ONTAP | 9.14.1、9.15.1、9.16.0、9.16.1 和 9.16.1P3 FAS、 ASA A 系列、 ASA C 系列、 AFF A 系列、 AFF C 系列和ASA r2。 
 
 
 | ONTAP 工具支援的 ESXi 主機 | 7.0.3 之後 
