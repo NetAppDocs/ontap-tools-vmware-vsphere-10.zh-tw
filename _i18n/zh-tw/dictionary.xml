@@ -1465,7 +1465,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="fdbd4c13a762f69f21a098a7dd8e55ad" category="list-text">選取 * 重設 * 以實作變更。</block>
   <block id="39a4d1dfe549518e18a4188e13768079" category="list-text">選取 * 重設 * 以實作變更。成功重設密碼時、您可以使用新密碼登入。</block>
   <block id="3ac063bd7a8e9b85e1a6cc3c07a304c3" category="list-text">選擇右窗格中的 * 組態 * 標籤。</block>
-  <block id="41e0fa10828ee2d85cfd4c0ff833ac64" category="inline-link">Storage VMotion</block>
   <block id="6981bfa872a319e4f266c3733ce4e5c3" category="list-text">選取右窗格中的 * 監控 * 標籤。</block>
   <block id="e6cd86d61f4639c8a27006c6c29b3e9f" category="list-text">選擇*下一步*。</block>
   <block id="03c100e80bdd94d3eb4d85dffe4eaecb" category="list-text">在管理索引標籤中選取 * 預留位置資料存放區 * &gt; * 新增 * ，以建立新的預留位置資料存放區。</block>
@@ -1707,7 +1706,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="4c91382e492707f0779f372fcc750396" category="list-text">資訊會在安裝期間驗證。如果存在差異，則會在 Web 主控台上顯示錯誤訊息，並提示您修正錯誤。</block>
   <block id="2760ddae8a52ae77e6711ac97cdeff45" category="list-text">主機名稱必須包含字母（ A-Z ， a-z ），數字（ 0-9 ）和連字號（ - ）。若要設定雙堆疊，請指定對應至 IPv6 位址的主機名稱。</block>
   <block id="a1f2c5d218a3501d9d0831dccea5dbc3" category="admonition">不支援 Pure IPv6 。同時包含 IPv6 和 IPv4 位址的 VLAN 支援混合模式。</block>
-  <block id="1651a6277f4f59f0128c7be036557e5d" category="paragraph">如果 OVF 表單中有差異，則會出現對話方塊提示您採取修正行動。使用 Tab 鍵瀏覽，進行必要的變更，然後選取「確定」。您有三次嘗試來解決任何問題。如果三次嘗試後問題仍持續發生，安裝程序將會停止，建議您在新的虛擬機器上重試安裝。</block>
   <block id="fc670824c9b9087edaedbd8931be914a" category="doc">移除 FlexVol Volume</block>
   <block id="94ba231101263cc02a5bbd35865c2569" category="paragraph">當您使用專屬的 ONTAP 叢集 ONTAP 來部署 VMware 工具時，它會建立許多未使用的 FlexVol 磁碟區。移除 VMware vSphere 的 ONTAP 工具之後，您應該移除 FlexVol 磁碟區，以避免可能的效能影響。</block>
   <block id="3fcb4ec0988a47a419299691b19d04fa" category="paragraph">如果是 iSCSI 部署，您也需要刪除 igroup 。</block>
@@ -1720,7 +1718,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="23829b8d6575f7cd3e20a5e92b475a9e" category="doc">解除安裝適用於 VMware vSphere 的 ONTAP 工具</block>
   <block id="82a00fc1c0ae6d437f6d942c64bee898" category="list-text">從 VMware vSphere 託管資料存放區的 ONTAP 工具移除或移動所有虛擬機器。</block>
   <block id="4ad237c48098cfd8973e73475bded403" category="list-text">若要移除虛擬機器，請參閱<block ref="c16fb322315174fa2c9720c74541cf45" category="inline-link-rx"></block></block>
-  <block id="937380d419246adf3fdb369397226f82" category="list-text">若要將其移至非託管資料存放區，請參閱<block ref="5c1e2b1dd1aaa388da4191e5a966b959" category="inline-link-rx"></block></block>
   <block id="1d920979688b28c7b10ef84d14436f95" category="list-text">如果您已啟用 VASA 提供者，請在 ONTAP 工具中選取 * 設定 * &gt; * VASA 提供者設定 * &gt; * 取消登錄 * ，以從所有 vCenter 伺服器取消登錄 VASA 提供者。</block>
   <block id="cdb9fe2a322209ab095ba01e8388697d" category="list-text">從 VMware Live Site Recovery 移除 SRA 介面卡：</block>
   <block id="1435a5cf1efdb19e83d0f140a2ca4f4f" category="list-text">以管理員身分使用連接埠 5480 登入 VMware Live Site Recovery 應用裝置管理介面。</block>
@@ -2388,4 +2385,7 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="63629b02d982d9e4fe0f19501143ce17" category="inline-image-macro">客製化硬體</block>
   <block id="2a2d465455150512141b1402a600df32" category="list-text">使用 vCenter Server 8.0.3 版本時，在 *自訂硬體* 視窗中，啟用 *CPU 熱添加* 和 *記憶體熱插拔* 選項以允許 HA 功能。<block ref="93c02f5316fc65f2262959de5552f7c0" category="inline-image-macro-rx" type="image"></block></block>
   <block id="936fb178b14835844700bc06aa5ab952" category="list-text">如果您使用光纖通道 (FC) 進行儲存連接，請在 FC 交換器上設定分割區以將 ESXi 主機與 SVM 的 FC LIF 連接起來。<block ref="56d435991bafd2bcca9f59739e2992e7" category="inline-link-rx"></block></block>
+  <block id="396603bc11e32e1c8be473d2a79f1d2a" category="paragraph">如果 OVF 表格有差異，則會出現一個對話方塊提示採取糾正措施。使用標籤按鈕進行導航，進行必要的更改，然後選擇*確定*。您有三次機會來解決任何問題。如果三次嘗試後問題仍然存在，安裝過程將停止，建議在新的虛擬機器上重新嘗試安裝。</block>
+  <block id="59dd8a5d1e9605907341901d2760c087" category="inline-link">如何使用 Storage vMotion 遷移虛擬機</block>
+  <block id="0166be8b4848389c414e9e383efe9111" category="list-text">若要將它們移至非託管資料儲存區，請參閱<block ref="920cfb03e9def61d5164fb56cf050dd9" category="inline-link-rx"></block></block>
 </blocks>

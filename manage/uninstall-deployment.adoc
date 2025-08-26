@@ -17,7 +17,7 @@ summary: 請依照本節中的指示，順利終止適用於 VMware vSphere 部�
 . 從 VMware vSphere 託管資料存放區的 ONTAP 工具移除或移動所有虛擬機器。
 +
 ** 若要移除虛擬機器，請參閱 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-virtual-machine-administration-guide-8-0/managing-virtual-machinesvsphere-vm-admin/adding-and-removing-virtual-machinesvsphere-vm-admin.html#GUID-376174FE-F936-4BE4-B8C2-48EED42F110B-en["移除並重新登錄 VM 和 VM 範本"]
-** 若要將其移至非託管資料存放區，請參閱 https://techdocs.broadcom.com/it/it/vmware-cis/vsphere/vsphere/8-0/vcenter-and-host-management-8-0/migrating-virtual-machines-host-management/migration-with-vmotion-host-management/migration-with-storage-vmotion-host-management.html["Storage VMotion"]
+** 若要將它們移至非託管資料儲存區，請參閱 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/migrate-a-virtual-machine-with-storage-vmotion.html["如何使用 Storage vMotion 遷移虛擬機"]
 
 
 . link:../manage/delete-ds.html["刪除資料存放區"]在適用於 VMware vSphere 的 ONTAP 工具上建立。
