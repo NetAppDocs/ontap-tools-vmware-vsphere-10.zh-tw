@@ -142,6 +142,6 @@ NOTE: 為上述所有 IP 位址建立 DNS 記錄。指派主機名稱之前，�
 
 為了確保 ONTAP 儲存設備與適用於 VMware vSphere 的 ONTAP 工具無縫整合，請考慮下列設定：
 
-* 如果您使用光纖通道（ FC ）進行儲存連線，請在 FC 交換器上設定分區，將 ESXi 主機與 SVM 的 FC 生命期連線。 https://docs.netapp.com/us-en/ontap/peering/create-cluster-relationship-93-later-task.html["瞭解 ONTAP 系統的 FC 和 FCoE 分區"]
+* 如果您使用光纖通道 (FC) 進行儲存連接，請在 FC 交換器上設定分割區以將 ESXi 主機與 SVM 的 FC LIF 連接起來。 https://docs.netapp.com/us-en/ontap/san-config/fibre-channel-fcoe-zoning-concept.html["瞭解 ONTAP 系統的 FC 和 FCoE 分區"]
 * 若要使用 ONTAP 工具管理的 SnapMirror 複寫， ONTAP 儲存管理員應先建立 https://docs.netapp.com/us-en/ontap/peering/create-cluster-relationship-93-later-task.html["ONTAP 叢集對等關係"]和在 ONTAP 中， https://docs.netapp.com/us-en/ontap/peering/create-intercluster-svm-peer-relationship-93-later-task.html["ONTAP 叢集間 SVM 對等關係"]然後再使用 SnapMirror 。
 

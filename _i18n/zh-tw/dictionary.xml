@@ -1351,7 +1351,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="4fa11816241a033e46d7ef0e6bb9c98c" category="list-text">檢閱範本的詳細資料，然後選取 * 下一步 * 。</block>
   <block id="db5ae9b3dd501309f26eea92d5f05e2b" category="list-text">閱讀並接受授權合約、然後選擇 * 下一步 * 。</block>
   <block id="65ab872e40a57d468184122e5d0784c0" category="list-text">選取每個來源網路的目的地網路，然後選取 * 下一步 * 。</block>
-  <block id="25cf3eb120c48489f9ac5e6faaf3e1b8" category="list-text">在 * 自訂範本 * 視窗中，填寫必填欄位，然後選取 * 下一步 * 。</block>
   <block id="59d5c19f1f3c5f065c5ee15d4ace3947" category="list-text">選取畫面右上角的 * 管理員 * 圖示，然後選取 * 變更密碼 * 。</block>
   <block id="ccd07bc5ed1ed05e8e27350cb1a41b7f" category="list-text">在 * 主機叢集保護 * 視窗中，針對叢集選取省略符號功能表，然後選取 * 移除保護 * 。</block>
   <block id="27385d25f49e4eeebab01eda70b36576" category="list-text">在概述區段中選取 * 編輯應用裝置設定 * 。</block>
@@ -1763,8 +1762,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="096078a372ad8b6c0fcc7c22ffe9a147" category="list-text"><block ref="096078a372ad8b6c0fcc7c22ffe9a147" category="inline-link-macro-rx"></block></block>
   <block id="955e2530b35bd36732551d894e503a00" category="list-text">在 * 選擇名稱和資料夾 * 欄位中，輸入虛擬機器名稱並選擇其位置。</block>
   <block id="02793e3182fbe0f0f175da7ab3e93d73" category="list-text">如果您使用的是 vCenter Server 8.0.3 版本，請選取選項 * 自訂此虛擬機器的硬體 * ，此選項將會啟動名為 * 自訂硬體 * 的額外步驟，然後再前往 * 準備完成 * 視窗。</block>
-  <block id="023e2f3d2e9fc24fbfa345f951d3739f" category="list-text">如果您使用的是 vCenter Server 7.0.3 版本，請遵循部署結束時的「後續行動？」一節中的步驟。</block>
-  <block id="6086b7cf0ed3f66a8f067f2609990958" category="list-text">使用 vCenter Server 8.0.3 版本時，請在 * 自訂硬體 * 視窗中，啟用 *CPU Hot add* 和 * 記憶體熱插拔 * 選項，以允許 HA 功能。</block>
   <block id="97b6810eb76df77c1b712c70d530f60a" category="paragraph">如果您的 VMware vSphere 部署有 ONTAP 工具與 vCenter Server 7.0.2 ，請在部署之後遵循這些步驟。</block>
   <block id="d2a87194163daac768f661ff8d1d3300" category="list-text">登入 vCenter 用戶端</block>
   <block id="da93f5e9af6870a18b0865c5a2c7f8c4" category="list-text">瀏覽至 * 清單 * 下的 ONTAP 工具 for VMware vSphere 虛擬機器，然後選取 * 編輯設定 * 選項。</block>
@@ -1981,7 +1978,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="66497dafb11e4eb14a710aba82842f2a" category="section-title">ONTAP 儲存設定</block>
   <block id="b1f65147a07338ddacacf797fa8f8068" category="paragraph">為了確保 ONTAP 儲存設備與適用於 VMware vSphere 的 ONTAP 工具無縫整合，請考慮下列設定：</block>
   <block id="89dcc1d78edaf637785c6ecfca413588" category="inline-link">瞭解 ONTAP 系統的 FC 和 FCoE 分區</block>
-  <block id="70b4e2df1c2bfeb98be224b551dbb572" category="list-text">如果您使用光纖通道（ FC ）進行儲存連線，請在 FC 交換器上設定分區，將 ESXi 主機與 SVM 的 FC 生命期連線。<block ref="b7794521bd71e03bf277ba88ec7edd58" category="inline-link-rx"></block></block>
   <block id="172a02306231a2a4f49511d5b78568bd" category="inline-link">ONTAP 叢集對等關係</block>
   <block id="01409d70514dee021d7a19fe33614d67" category="inline-link">ONTAP 叢集間 SVM 對等關係</block>
   <block id="896541ee85adff34fb9f5a9c75ef9d3d" category="list-text">若要使用 ONTAP 工具管理的 SnapMirror 複寫， ONTAP 儲存管理員應先建立<block ref="c6246851dd06c6faec212d662b844298" category="inline-link-rx"></block>和在 ONTAP 中，<block ref="8c2edb06b2585f1e066ba3419010ff37" category="inline-link-rx"></block>然後再使用 SnapMirror 。</block>
@@ -2385,4 +2381,11 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="ec08a84e1743fa84ea31f88ca3a008ea" category="admonition">有關最新的兼容性信息，請參閱<block ref="0aaf04254af18646f3d246cd4a4b417d" category="inline-link-rx"></block>。</block>
   <block id="f41628526d2ecef49849a9d54aec2d46" category="cell">ONTAP 9.9.1 升級至ONTAP 9.16.1</block>
   <block id="18adf16502c1eb6879520f01503df225" category="cell">ONTAP工具 10.2 的ONTAP 9.12.1 升級到ONTAP 9.15.1。適用於ONTAP工具 10.3 的ONTAP 9.14.1、9.15.1、9.16.0 和 9.16.1。適用於ONTAP工具 10.4 的ONTAP 9.14.1、9.15.1、9.16.0 和 9.16.1。使用ASA r2 系統時， ONTAP工具 10.4 需要ONTAP 9.16.1P3 及更高版本。</block>
+  <block id="2de89f426cb40a40a73e0dc57ba1d0b0" category="inline-image-macro">選擇名稱和資料夾</block>
+  <block id="797b9d658e154cdf3e14cfdbdb0fc337" category="list-text">如果您使用的是 vCenter Server 7.0.3 版本，請依照部署結束時的*下一步是什麼？ *部分中的步驟進行操作。<block ref="10901421e1b49cc7648423e4186ee13b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="47d44ed4727a9bed10ad17773b1b922e" category="inline-image-macro">自訂模板</block>
+  <block id="603b3c719f65dafb1976e068ef1f8d45" category="list-text">在*自訂範本*視窗中，填寫必填欄位並選擇*下一步*。<block ref="bfa0729b2fed6181848e39628c495247" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="63629b02d982d9e4fe0f19501143ce17" category="inline-image-macro">客製化硬體</block>
+  <block id="2a2d465455150512141b1402a600df32" category="list-text">使用 vCenter Server 8.0.3 版本時，在 *自訂硬體* 視窗中，啟用 *CPU 熱添加* 和 *記憶體熱插拔* 選項以允許 HA 功能。<block ref="93c02f5316fc65f2262959de5552f7c0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="936fb178b14835844700bc06aa5ab952" category="list-text">如果您使用光纖通道 (FC) 進行儲存連接，請在 FC 交換器上設定分割區以將 ESXi 主機與 SVM 的 FC LIF 連接起來。<block ref="56d435991bafd2bcca9f59739e2992e7" category="inline-link-rx"></block></block>
 </blocks>
