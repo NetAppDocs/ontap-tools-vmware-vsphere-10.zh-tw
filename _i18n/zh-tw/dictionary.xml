@@ -2039,7 +2039,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="f525773d8656a060a38e96bd01d81fe1" category="list-text">在第二個目的地 SVM 上執行 SVM 對等對等項將為（ svm3 ， svm1 ）和（ svm3 ， svm2 ）。</block>
   <block id="4839d2f25cc35b249d5db15efa1afd75" category="paragraph">*步驟*</block>
   <block id="6f815e1b2741159d76d3d66389878de5" category="inline-link">選取預留位置資料存放區</block>
-  <block id="55092f0f894ce14245043edf4beb8b6e" category="list-text">建立新的佔位器資料存放區。請參閱<block ref="be1fd24d4dcaa49fc51bb9d037dbfbe3" category="inline-link-rx"></block></block>
   <block id="fb9b74f07a06ab47cb2865075f009b08" category="list-text">將資料存放區新增至主機叢集保護<block ref="7f22d9c478ecf91907e72215f8fe7f7b" category="inline-link-macro-rx"></block>。您需要同時新增非同步和同步原則類型。</block>
   <block id="820b87be8b0ea0cbf45b52e4cfcb6b29" category="paragraph">瞭解適用於 VMware vSphere 10.4 的 ONTAP 工具所提供的全新增強功能。</block>
   <block id="75d7a3fca31675c888d80d62c6b5e5b6" category="inline-xref-macro">適用於 VMware vSphere 10.4 的 ONTAP 工具的新功能</block>
@@ -2388,4 +2387,40 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="396603bc11e32e1c8be473d2a79f1d2a" category="paragraph">如果 OVF 表格有差異，則會出現一個對話方塊提示採取糾正措施。使用標籤按鈕進行導航，進行必要的更改，然後選擇*確定*。您有三次機會來解決任何問題。如果三次嘗試後問題仍然存在，安裝過程將停止，建議在新的虛擬機器上重新嘗試安裝。</block>
   <block id="59dd8a5d1e9605907341901d2760c087" category="inline-link">如何使用 Storage vMotion 遷移虛擬機</block>
   <block id="0166be8b4848389c414e9e383efe9111" category="list-text">若要將它們移至非託管資料儲存區，請參閱<block ref="920cfb03e9def61d5164fb56cf050dd9" category="inline-link-rx"></block></block>
+  <block id="fc7036d1f06934713fc1a767e1354518" category="doc">了解ONTAP工具管理的 igroup</block>
+  <block id="604c7f6dd471d674fb7bcba41683420f" category="paragraph">在管理ONTAP工具虛擬機器和ONTAP儲存系統時，了解 igroup 行為至關重要，尤其是在將資料儲存從非ONTAP工具環境遷移到ONTAP工具管理時。本節介紹在此轉換過程中如何更新 igroup。</block>
+  <block id="11ca632cf00126c3ac4750f00aeef019" category="paragraph">ONTAP tools for VMware vSphere透過在 VMware 資料中心環境中自動建立和維護ONTAP和 vCenter 物件來簡化資料儲存區管理。</block>
+  <block id="41bc16205da3bc14b95856b17e784b85" category="paragraph">ONTAP tools for VMware vSphere在兩種不同的上下文中解釋 igroup：</block>
+  <block id="09b08f3348efbf7921da442f813dafc9" category="paragraph-title">非ONTAP工具管理的 igroup</block>
+  <block id="bd5590df3d8bf4ea4ee4375d1502b60e" category="paragraph">作為儲存管理員，您可以在ONTAP系統上將 igroup 建立為平面或巢狀結構。該圖顯示了在ONTAP系統中建立的平面 igroup。</block>
+  <block id="9738529e665f70e20304e0f0ff9c5f51" category="inline-image-macro">非ONTAP工具管理的 igroup</block>
+  <block id="572cd36eaad5edc6b82b660df677a0cd" category="paragraph"><block ref="572cd36eaad5edc6b82b660df677a0cd" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e349a4e96a32db77479984ded59c694d" category="paragraph-title">ONTAP工具管理的 igroup</block>
+  <block id="552898576b6f61f2d83182a9da946625" category="paragraph">建立資料儲存庫時，ONTAP tools for VMware vSphere會自動使用巢狀結構建立 igroup，以便更輕鬆地進行 LUN 對應。</block>
+  <block id="8d143644f80909e38a614f9099bea451" category="paragraph">例如，當在主機 1、2 和 3 上建立並掛載 datastore1，並在主機 3、4 和 5 上建立並掛載新的 datastore（datastore2）時， ONTAP工具會重複使用主機級 igroup 以實現高效管理。</block>
+  <block id="3bc511986def8084108b5b16361c50c4" category="inline-image-macro">ONTAP工具管理的 igroup</block>
+  <block id="034ec76def2bb67df2065a028531ceda" category="paragraph"><block ref="034ec76def2bb67df2065a028531ceda" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b4214e66e80d2bcb41c3a862d82b9be2" category="inline-image-macro">ONTAP工具管理的 igroup 具有重複使用的子 igroup</block>
+  <block id="92693985d1c42619843939f9e549ff4d" category="paragraph"><block ref="92693985d1c42619843939f9e549ff4d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b87bdb91525521ea25fb7906bd91baff" category="paragraph">以下是適用於ONTAP tools for VMware vSphere的一些案例。</block>
+  <block id="55a92eda3ff0514692e00dcb0f2d7cc2" category="paragraph">*當您使用預設 igroup 設定建立資料儲存體時*</block>
+  <block id="1c3da32f7c8b5c4b73670520c6d915ad" category="paragraph">當您建立資料儲存庫並將 igroup 欄位留空（預設）時， ONTAP工具會自動為該資料儲存庫產生嵌套的 igroup 結構。資料儲存層級的父 igroup 使用下列模式命名：otv_&lt;vcguid&gt;_&lt;host_parent_datacenterMoref&gt;_&lt;datastore_name&gt;。每個主機級子 igroup 遵循以下模式：otv_&lt;hostMoref&gt;_&lt;vcguid&gt;。您可以在ONTAP儲存介面的 *Parent Initiator Group* 部分中查看父 (資料儲存層級) igroup 和子 (主機層級) igroup 之間的關聯。</block>
+  <block id="ee3d151b62d26a89578248357e3029cd" category="paragraph">使用嵌套 igroup 方法，LUN 僅對應到子 igroup。然後，vCenter Server 清單將顯示新的資料儲存。</block>
+  <block id="5f91cedf4c98e30169434f231ea6f548" category="paragraph">*當您使用自訂 igroup 名稱建立資料儲存空間時*</block>
+  <block id="455ef6a033f7ad63b64568ec3feaf4de" category="paragraph">在ONTAP工具中建立資料儲存區時，您可以輸入自訂 igroup 名稱，而不是從下拉清單中選擇。然後， ONTAP工具會使用您指定的名稱在資料儲存層級建立一個父 igroup。如果相同主機用於多個資料存儲，則會重複使用現有的主機級（子）igroup。因此，新資料儲存區的 LUN 將對應到此現有子 igroup，該子 igroup 現在可能與多個父 igroup 相關聯（每個資料儲存區一個）。  vCenter Server 使用者介面資料儲存清單確認已成功建立具有自訂 igroup 名稱的新資料儲存體。</block>
+  <block id="7962aa53f71f6f9f84f510a6c3819900" category="paragraph">*在建立資料儲存區期間重複使用 igroup 名稱時*</block>
+  <block id="719398cb6c9b709be107c189acbacc9d" category="paragraph">使用ONTAP工具使用者介面建立資料儲存庫時，您可以從下拉清單中選擇現有的自訂父 igroup。重新使用父 igroup 建立另一個資料儲存庫後， ONTAP系統使用者介面會顯示此關聯。新的資料儲存區也會出現在 vCenter Server 使用者介面中。</block>
+  <block id="7abc9e8ecfbb61a94b76a3fc28b26787" category="paragraph">此操作也可以使用 API 執行。若要在資料儲存體建立期間重複使用現有的 igroup，請在 API 請求有效負載中指定 igroup UUID。</block>
+  <block id="9568557fa9cc46f2d4ebe9507bb3c311" category="paragraph">*當您從ONTAP和 vCenter 本地建立資料儲存區和 igroup 時*</block>
+  <block id="769802e52d4a8981aaa41119a73a4e20" category="paragraph">如果您直接在ONTAP系統和 VMware 環境中建立 igroup 和資料存儲， ONTAP工具首先不會管理這些物件。這將建立一個扁平的 igroup 結構。</block>
+  <block id="765aaa2d59837937f427f2cf53f50d56" category="inline-image-macro">本地建立的資料儲存區和 igroup</block>
+  <block id="d50eb6343e578f63482a86c6c5273fc9" category="paragraph"><block ref="d50eb6343e578f63482a86c6c5273fc9" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6d218e6795743d10ae8f5a4c09dd122f" category="paragraph">若要使用ONTAP工具管理現有資料儲存庫和 igroup，您應該執行資料儲存庫發現。 ONTAP工具識別並註冊資料儲存和 igroup，並將它們轉換為資料庫中的巢狀結構。使用自訂名稱建立新的父 igroup，同時使用「otv_」前綴重命名現有 igroup 並成為子 igroup。啟動器映射保持不變。僅對應到資料儲存區的 igroup 在發現過程中進行轉換。此後，igroup 結構如下圖所示。</block>
+  <block id="926b1260b4878f62d14b84905c0f405f" category="inline-image-macro">由ONTAP工具管理的資料儲存和 igroup</block>
+  <block id="b9741b85de225ae753a2b0d17c93f26c" category="paragraph"><block ref="b9741b85de225ae753a2b0d17c93f26c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5078f00fe3958199b9e5584fc03b114c" category="paragraph">您可以直接在 vCenter Server 中建立資料儲存庫，然後將其納入ONTAP工具管理。首先，在ONTAP系統中建立一個平面 igroup 並將 LUN 對應到它。在ONTAP工具中執行資料儲存發現後，平面 igroup 將轉換為巢狀結構。然後， ONTAP工具會管理 igroup，並使用「otv_」前綴對其進行重新命名。在此過程中，LUN 仍然對應到同一個 igroup。</block>
+  <block id="47a4489bb0a008016124a87ac11ddd78" category="paragraph">ONTAP工具如何重複使用本機所建立的 igroup</block>
+  <block id="db31bea2a0e277066cad024172aa2c36" category="paragraph">您可以使用最初在ONTAP系統中建立的 igroup 在ONTAP工具中設定資料儲存庫，然後由ONTAP工具進行管理。這些 igroup 出現在自訂啟動器群組名稱下拉清單中。然後，資料儲存區的新 LUN 將會對應到對應的規範化子 igroup，例如「otv_NativeIgroup1」。</block>
+  <block id="c01051c683682417a444926ea34fab23" category="paragraph">ONTAP tools for VMware vSphere不會偵測或使用在ONTAP系統中建立的、未由ONTAP工具管理或未連結到資料儲存的 igroup。</block>
+  <block id="1dbad952f5319da14ee71e97c17b015e" category="list-text">建立一個新的佔位符資料儲存。參考<block ref="fcc15a3b03186d90bab12901c38ea769" category="inline-link-rx"></block></block>
 </blocks>
