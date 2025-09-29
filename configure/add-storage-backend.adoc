@@ -4,20 +4,23 @@ sidebar: sidebar
 keywords:  
 summary: 儲存設備後端是 ESXi 主機用於資料儲存的系統。 
 ---
-= 新增儲存後端
+= 將儲存後端新增至ONTAP工具
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-新增儲存後端可讓您建置 ONTAP 叢集。
+當您將儲存後端新增至ONTAP工具時，您可以直接從 vCenter Server 設定和管理資料儲存庫。
 
-*關於此工作*
+若要在本機新增儲存後端，請在ONTAP工具介面中使用叢集或 SVM 憑證。這些儲存後端僅適用於選定的 vCenter Server。 ONTAP工具將 SVM 對應到 vCenter Server 以進行vVols或 VMFS 資料儲存庫管理。對於 VMFS 資料儲存和 SRA 工作流程，您可以使用 SVM 憑證，而無需全域映射的叢集。
 
-如果 vCenter 在多租戶設定中扮演相關 SVM 的租戶，請使用 ONTAP 工具管理員來新增叢集。將儲存後端與 vCenter Server 建立關聯，以將其全域對應至已登入的 vCenter Server 執行個體。vCenter 租戶必須搭載所需的儲存虛擬機器（ Storage Virtual Machines ， SVM ）。這可讓 SVM 使用者配置 VVols 資料存放區。您可以使用 SVM 在 vCenter 中新增儲存設備。
+您可以使用ONTAP工具管理器中的ONTAP叢集憑證新增全域儲存後端。全域儲存後端支援發現工作流程來識別 vVol 管理所需的叢集資源。在多租用戶設定中，您可以在本機新增 SVM 使用者來管理vVols資料儲存。
 
-使用 ONTAP 工具使用者介面，以叢集或 SVM 認證新增本機儲存設備後端。這些儲存後端僅限於單一 vCenter 。在本機使用叢集認證時，相關的 SVM 會自動對應至 vCenter 以管理 vVols 或 VMFS 。對於包括在內的 VMFS 管理， ONTAP 工具支援 SVM 認證，而不需要全域叢集。
+在ONTAP系統中啟用MetroCluster支援時，將來源叢集和目標叢集都以本機或全域儲存後端加入。
+
+.開始之前
+驗證憑證是否包含有效的主題備用名稱 (SAN) 欄位。  ONTAP系統使用 SAN 欄位來識別叢集和 SVM 管理 LIF。
 
 [role="tabbed-block"]
 ====
@@ -35,13 +38,23 @@ NOTE: 在多租戶設定中，您可以全域新增儲存後端叢集，並在�
 
 NOTE: 支援 IPv4 和 IPv6 位址管理階層。
 
+. 自動取得ONTAP叢集證書並授權該證書，或透過瀏覽至其位置手動上傳。
++
+
+NOTE: 如果需要，您可以從維護控制台停用主題備用名稱 (SAN) 驗證。有關說明，請參閱link:../manage/change-valid-flag.html["更改證書驗證標誌"]。
+
+. 如果您新增的儲存後端是MetroCluster配置的一部分， ONTAP工具管理器會顯示一則彈出訊息以新增對等叢集。選擇“*新增*”並提供MetroCluster對等儲存後端的詳細資訊。
++
+
+NOTE: ONTAP系統執行切換和切回後，手動執行ONTAP工具發現。
+
 
 
 --
 .使用 vSphere 用戶端使用者介面
 --
 
-NOTE: 透過 vSphere 用戶端使用者介面設定儲存後端時，請務必注意 vVols 資料存放區不支援直接新增 SVM 使用者。
+NOTE: vVols資料儲存不支援透過 vSphere Client 使用者介面直接新增 SVM 使用者。
 
 . 登入 vSphere 用戶端。
 . 在捷徑頁面中，選取外掛程式區段下方的 * NetApp ONTAP tools* 。
@@ -49,12 +62,22 @@ NOTE: 透過 vSphere 用戶端使用者介面設定儲存後端時，請務必�
 . 新增儲存後端，並提供伺服器 IP 位址，使用者名稱，密碼和連接埠詳細資料。
 +
 
-NOTE: 若要直接新增 SVM 使用者，您可以新增叢集型認證，以及 IPv4 和 IPv6 位址管理階層，或是提供 SVM 管理 LIF 的 SVM 型認證。
+NOTE: 您可以使用基於叢集的憑證以及 IPv4 或 IPv6 管理 LIF 新增儲存後端。若要直接新增 SVM 用戶，請提供基於 SVM 的憑證以及 SVM 管理 LIF。如果叢集已加入，則無法再次從該叢集加入 SVM 使用者。
+
+. 自動取得ONTAP叢集證書並授權該證書，或透過瀏覽至其位置手動上傳。
+. 如果新增的儲存後端是MetroCluster配置的一部分，ONTAP工具將顯示 *新增MetroCluster對等體* 螢幕。選擇*新增對等*以新增對等儲存後端。
++
+
+NOTE: ONTAP系統執行切換和切回後，手動執行ONTAP工具發現。
 
 
 
 .接下來呢？
-清單隨即重新整理、您可以在清單中看到新增的儲存後端。
+ONTAP工具更新清單以顯示新的儲存後端。
 
 --
 ====
+ONTAP工具在 *儲存後端* 頁面上列出了新新增的儲存後端。如果憑證在 30 天或更短時間內過期， ONTAP工具會在憑證過期日期列中顯示警告。到期後， ONTAP工具會將儲存後端標記為未知，因為它無法連接到儲存系統。
+
+.相關資訊
+https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/task_sw_config_configure_clusters.html["將叢集配置為MetroCluster配置"]

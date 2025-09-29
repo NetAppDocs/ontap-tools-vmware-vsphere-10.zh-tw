@@ -13,7 +13,7 @@ summary: 使用此快速入門部分ONTAP tools for VMware vSphere。
 [role="lead"]
 使用此快速入門部分ONTAP tools for VMware vSphere。
 
-一開始，您將部署 VMware vSphere 的 ONTAP 工具，做為小型單一節點組態，提供核心服務來支援 NFS 和 VMFS 資料存放區。如果您需要擴充組態以使用 vVols 資料存放區和高可用度（ HA ），您將在完成此工作流程後進行。如需詳細資訊、請link:../deploy/ha-workflow.html["HA 部署工作流程"]參閱。
+最初，您將部署ONTAP tools for VMware vSphere作為小型單節點配置，該配置提供核心服務來支援 NFS 和 VMFS 資料儲存區。若要擴充配置以為每個服務添加更多容器、增強彈性或使用vVols資料儲存和高可用性 (HA)，請先完成此工作流程，然後繼續執行擴充步驟。欲了解更多信息，請參閱link:../deploy/ha-workflow.html["HA 部署工作流程"] 。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一"]規劃您的部署
 [role="quick-margin-para"]
@@ -91,8 +91,9 @@ summary: 使用此快速入門部分ONTAP tools for VMware vSphere。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-9.png["九"]為您的 ONTAP 工具設定備份與還原，以進行 VMware vSphere 部署
 [role="quick-margin-para"]
-為 VMware vSphere 設定排程 ONTAP 工具的備份，以便在發生故障時恢復設定。
+預設情況下， ONTAP tools for VMware vSphere會啟用備份，每 10 分鐘進行一次。安排ONTAP tools for VMware vSphere進行備份，以便在發生故障時復原設定。
 
 [role="quick-margin-list"]
-* link:../manage/enable-backup.html["建立備份並恢復 ONTAP 工具設定"]
+* link:../manage/backup-settings.html["編輯備份設定"]
+* link:../manage/recover-backup.html["恢復ONTAP工具設定"]
 

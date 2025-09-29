@@ -1,0 +1,30 @@
+---
+permalink: manage/change-valid-flag.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以使用維護控制台變更憑證驗證標誌。 
+---
+= 更改證書驗證標誌
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+預設情況下，憑證驗證標誌是啟用的（設定為 true）。如果您需要繞過 SAN 憑證檢查，可以將ONTAP儲存後端憑證驗證標誌設定為 false。此設定不適用於 vCenter Server 憑證。
+
+.開始之前
+您必須擁有維護使用者登入認證。
+
+.步驟
+. 從 vCenter Server 開啟 ONTAP 工具的主控台。
+. 以維護使用者身分登入。
+. 進入 `1`選擇應用程式配置選單。
+. 進入 `3`更改證書驗證標誌。
++
+維護控制台顯示憑證驗證標誌狀態並提示您進行變更。
+
+. 輸入“y”切換標誌或輸入“n”取消。
+
+
+如果將憑證驗證標誌切換回 true，系統將執行預檢查。如果任何新增的儲存後端都使用沒有 SAN 的證書，則無法啟用證書驗證。在啟用此標誌之前，請確保所有儲存後端都使用基於 SAN 的憑證。如果將憑證驗證標誌設為 false，系統將跳過所有已新增的儲存後端的憑證驗證。

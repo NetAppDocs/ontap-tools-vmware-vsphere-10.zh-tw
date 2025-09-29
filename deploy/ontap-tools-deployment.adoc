@@ -2,7 +2,7 @@
 permalink: deploy/ontap-tools-deployment.html 
 sidebar: sidebar 
 keywords:  
-summary: VMware vSphere 應用程式的 ONTAP 工具會部署為小型單一節點，並提供核心服務以支援 NFS 和 VMFS 資料存放區。 
+summary: ONTAP tools for VMware vSphere部署為小型單節點，具有核心服務以支援 NFS 和 VMFS 資料儲存庫。 
 ---
 = 部署適用於 VMware vSphere 的 ONTAP 工具
 :allow-uri-read: 
@@ -11,27 +11,33 @@ summary: VMware vSphere 應用程式的 ONTAP 工具會部署為小型單一節�
 
 
 [role="lead"]
-ONTAP tools for VMware vSphere部署為小型單節點，並包含核心服務以支援 NFS 和 VMFS 資料儲存庫。 ONTAPONTAP部署過程最多可能需要 45 分鐘。
+ONTAP tools for VMware vSphere部署為小型單節點，具有核心服務以支援 NFS 和 VMFS 資料儲存庫。ONTAP部署過程最多可能需要 45 分鐘。
 
 .開始之前
-VMware 中的內容庫是一個容器對象，用於儲存虛擬機器範本、vApp 範本和其他類型的檔案。使用內容庫進行部署可為您提供無縫體驗，因為它不依賴網路連線。
+如果您正在部署小型單節點，則內容庫是可選的。對於多節點或 HA 部署，需要內容庫。在 VMware 中，內容庫儲存 VM 範本、vApp 範本和其他文件。使用內容庫進行部署可提供無縫體驗，因為它不依賴網路連線。
+
+在創建內容庫之前請考慮以下事項：
+
+* 在共享資料儲存上建立內容庫，以便叢集中的所有主機都可以存取它。
+* 在部署適用ONTAP tools for VMware vSphere之前設定內容庫。
+* 確保在為 HA 配置設備之前建立內容庫。
++
+
+NOTE: 部署後不要刪除內容庫中的OVA模板。
 
 
-NOTE: 您應該將內容庫儲存在共享的資料存放區，以便叢集中的所有主機都能存取。在將應用裝置設定為 HA 組態之前，請先建立內容庫以儲存 OVA 。請勿在部署後刪除內容庫範本。
 
 
-NOTE: 若要稍後啟用 HA 部署，請勿直接在 ESXi 主機上部署裝載 ONTAP 工具的虛擬機器。請改為在叢集或資源集區上部署。
+NOTE: 為了將來啟用 HA 部署，請避免直接在 ESXi 主機上部署ONTAP工具虛擬機器。相反，將其部署在 ESXi 主機叢集或資源池中。
 
-如果您沒有內容庫，請依照下列步驟建立內容庫：
-
-* 在您計畫中建立內容庫 * ，只要使用小型單一節點部署，就不需要建立內容庫。
+請依照以下步驟建立內容庫：
 
 . 從下載包含ONTAP tools for VMware vSphere的二進位檔案 (_.ova_) 和簽署憑證的文件 https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp 支援網站"^] 。
 . 登入 vSphere 用戶端
 . 選取 vSphere 用戶端功能表，然後選取 * 內容庫 * 。
 . 選取頁面右側的 * 建立 * 。
 . 提供文件庫名稱並建立內容庫。
-. 瀏覽至您建立的內容庫。
+. 轉到您創建的內容庫。
 . 選取頁面右側的 * 動作 * 、然後選取 * 匯入項目 * 並匯入 OVA 檔案。
 
 
@@ -39,14 +45,14 @@ NOTE: 若要稍後啟用 HA 部署，請勿直接在 ESXi 主機上部署裝載 
 NOTE: 如需詳細資訊、請參閱 https://blogs.vmware.com/vsphere/2020/01/creating-and-using-content-library.html["建立及使用內容庫"]部落格。
 
 
-NOTE: 在繼續部署之前，請先將資源清冊上的叢集 Distributed Resource Scheduler （ DRS ）設定為「 conventory 」（保守）。如此可確保 VM 在安裝期間不會移轉。
+NOTE: 在繼續部署之前，請將清單上的叢集分散式資源調度程式 (DRS) 設定為「保守」。這可確保虛擬機器在安裝期間不會被遷移。
 
-VMware vSphere 的 ONTAP 工具最初部署為非 HA 設定。若要擴充至 HA 部署，您需要啟用 CPU 熱插拔和記憶體熱插件。您可以在部署程序中執行此步驟，或在部署後編輯 VM 設定。
+ONTAP tools for VMware vSphere最初部署為非 HA 設定。若要擴充至高可用性部署，您需要啟用 CPU 熱插拔和記憶體熱插拔。您可以在部署過程中執行此步驟，也可以在部署後編輯虛擬機器設定。
 
 .步驟
 . 從下載包含ONTAP tools for VMware vSphere的二進位檔案 (_.ova_) 和簽署憑證的文件 https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp 支援網站"^] 。如果您已經將OVA匯入內容庫，則可以跳過此步驟，繼續下一步。
 . 登入 vSphere 伺服器。
-. 瀏覽至您要部署 OVA 的資源集區，叢集或主機。
+. 前往您打算部署 OVA 的資源池、叢集或主機。
 +
 
 NOTE: 切勿將適用於 VMware vSphere 虛擬機器的 ONTAP 工具儲存在其管理的 VVols 資料存放區上。
@@ -72,9 +78,9 @@ NOTE: 切勿將適用於 VMware vSphere 虛擬機器的 ONTAP 工具儲存在其
 . 閱讀並接受授權合約、然後選擇 * 下一步 * 。
 . 選取組態和磁碟格式的儲存設備，然後選取 * 下一步 * 。
 . 選取每個來源網路的目的地網路，然後選取 * 下一步 * 。
-. 在*自訂範本*視窗中，填寫必填欄位並選擇*下一步*。image:../media/customize-temp.png["自訂模板"]
+. 在*自訂範本*視窗中，填寫必填欄位並選擇*下一步*。image:../media/sys-conf.png["自訂模板"]
 +
-** 資訊會在安裝期間驗證。如果存在差異，則會在 Web 主控台上顯示錯誤訊息，並提示您修正錯誤。
+** 該資訊在安裝期間進行驗證。如果存在差異，Web 控制台上會出現錯誤訊息，並提示您進行修正。
 ** 主機名稱必須包含字母（ A-Z ， a-z ），數字（ 0-9 ）和連字號（ - ）。若要設定雙堆疊，請指定對應至 IPv6 位址的主機名稱。
 +
 
@@ -84,7 +90,7 @@ NOTE: 不支援 Pure IPv6 。同時包含 IPv6 和 IPv4 位址的 VLAN 支援混
 ** IPv4 是節點組態的 IP 位址元件，可用於在節點上啟用診斷 Shell 和 SSH 存取，以進行除錯和維護。
 
 
-. 使用 vCenter Server 8.0.3 版本時，在 *自訂硬體* 視窗中，啟用 *CPU 熱添加* 和 *記憶體熱插拔* 選項以允許 HA 功能。image:../media/customize-hw.png["客製化硬體"]
+. 使用 vCenter Server 8.0.3 版本時，在 *自訂硬體* 視窗中，啟用 *CPU 熱添加* 和 *記憶體熱插拔* 選項以允許 HA 功能。image:../media/customize-hw105.png["客製化硬體"] image:../media/customize-hw.png["客製化硬體"]
 . 查看 * 準備完成 * 視窗中的詳細資料、選取 * 完成 * 。
 +
 在建立部署工作時、進度會顯示在 vSphere 工作列中。
@@ -101,7 +107,7 @@ NOTE: 不支援 Pure IPv6 。同時包含 IPv6 和 IPv4 位址的 VLAN 支援混
 
 . 登入 vCenter 用戶端
 . 關閉 ONTAP 工具節點。
-. 瀏覽至 * 清單 * 下的 ONTAP 工具 for VMware vSphere 虛擬機器，然後選取 * 編輯設定 * 選項。
+. 前往*庫存*下的ONTAP tools for VMware vSphere並選擇*編輯設定*選項。
 . 在 *CPU* 選項下，選中 *Enable CPU Hot add* （啓用 CPU 熱添加 * ）複選框
 . 在 * 記憶體 * 選項下，勾選 * 記憶體熱插拔 * 的 * 啟用 * 核取方塊。
 

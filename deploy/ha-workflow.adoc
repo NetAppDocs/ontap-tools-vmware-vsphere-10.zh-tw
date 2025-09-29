@@ -11,7 +11,7 @@ summary: VMware vSphere ONTAP 工具入門包括幾個步驟。
 
 
 [role="lead"]
-如果您使用 vVols 資料存放區，則需要將 ONTAP 工具的初始部署擴充至高可用度（ HA ）組態，並啟用 VASA Provider 服務。
+為了提高彈性並支援每個服務更多的容器，請將初始ONTAP工具部署擴展為高可用性 (HA) 配置。在 HA 設定中， vVols資料儲存需要啟用 VASA 提供程式服務。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一"]擴充部署
 [role="quick-margin-para"]
@@ -23,7 +23,7 @@ summary: VMware vSphere ONTAP 工具入門包括幾個步驟。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["二"]啟用服務
 [role="quick-margin-para"]
-若要設定 VVols 資料存放區，您必須啟用 VASA Provider 服務。向 vCenter 註冊 VASA 供應商，確保您的儲存原則符合 HA 需求，包括適當的網路和儲存組態。
+若要設定vVols資料存儲，您必須啟用 VASA 提供者服務。向 vCenter 註冊 VASA 提供者並確保您的儲存策略符合 HA 要求，包括正確的網路和儲存配置。
 
 [role="quick-margin-para"]
 啟用服務，以使用適用於 VMware Site Recovery Manager （ SRM ）或 VMware Live Site Recovery （ VLSR ）的 ONTAP 工具儲存複寫介面卡（ SRA ）。

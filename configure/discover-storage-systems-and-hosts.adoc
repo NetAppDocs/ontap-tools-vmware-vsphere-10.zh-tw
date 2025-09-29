@@ -26,7 +26,7 @@ summary: 當您第一次在 vSphere Client 中執行適用於 VMware vSphere 的
 
 .步驟
 . 從 vSphere Client 首頁、選取 * 主機與叢集 * 。
-. 右鍵單擊所需的數據中心，然後選擇 NetApp ONTAP tools*>* Update Host Data* 。
+. 右鍵點選所需的資料中心，然後選擇 * NetApp ONTAP工具* > *更新主機資料*。
 +
 在 * 確認 * 對話方塊中，確認您的選擇。
 

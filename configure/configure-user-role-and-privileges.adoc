@@ -2,7 +2,7 @@
 permalink: configure/configure-user-role-and-privileges.html 
 sidebar: sidebar 
 keywords: user roles 
-summary: 您可以使用適用於 VMware vSphere 和 ONTAP System Manager 的 ONTAP 工具隨附的 JSON 檔案、設定新的使用者角色來管理儲存後端。 
+summary: 使用ONTAP tools for VMware vSphere和ONTAP System Manager 的 ONTAP 工具中的 JSON 檔案為儲存後端設定使用者角色和權限。 
 ---
 = 設定 ONTAP 使用者角色和權限
 :allow-uri-read: 
@@ -11,48 +11,47 @@ summary: 您可以使用適用於 VMware vSphere 和 ONTAP System Manager 的 ON
 
 
 [role="lead"]
-您可以使用適用於 VMware vSphere 和 ONTAP System Manager 的 ONTAP 工具隨附的 JSON 檔案、設定新的使用者角色和權限來管理儲存後端。
+使用ONTAP tools for VMware vSphere和ONTAP System Manager 的 ONTAP 工具中的 JSON 檔案為儲存後端設定使用者角色和權限。
 
 .開始之前
-* 您應該已使用下列方法從適用於 VMware vSphere 的 ONTAP 工具下載 ONTAP Privileges 檔案： https ： <ONTAPtoolsIP> ： 8443/virtualization / 使用者權限 /users_roles.zip 。
-* 您應該已使用從 ONTAP 工具下載 ONTAP Privileges 檔案 `\https://<ONTAPtoolsIP>:8443/virtualization/user-privileges/users_roles.zip`。
+* 使用 _\https://<ONTAPtoolsIP>:8443/virtualization/user-privileges/users_roles.zip_ 從ONTAP tools for VMware vSphere下載ONTAPPrivileges檔。下載 zip 檔案後，您會發現兩個 JSON 檔案。設定ASA r2 系統時使用ASA r2 特定的 JSON 檔案。
 +
 
-NOTE: 您可以在叢集或直接在儲存虛擬機器（ SVM ）層級建立使用者。您也可以在不使用 user_roles.json 檔案的情況下建立使用者、如果是這樣做、您必須在 SVM 層級擁有一組最低權限。
+NOTE: 您可以在叢集層級或直接在儲存虛擬機器 (SVM) 層級建立使用者。如果您不使用 user_roles.json 文件，請確保使用者俱有所需的最低 SVM 權限。
 
-* 您應該已以儲存後端的系統管理員權限登入。
+* 以儲存後端的管理員權限登入。
 
 
 .步驟
-. 擷取下載的 _\https ： <ONTAPtoolsIP> ： 8443/virtualization / 使用者權限 /users_roles.zip_ 檔案。
+. 提取您下載的 _\https://<ONTAPtoolsIP>:8443/virtualization/user-privileges/users_roles.zip_ 檔案。
 . 使用叢集的叢集管理 IP 位址存取 ONTAP 系統管理員。
-. 使用 admin Privileges 登入叢集。若要設定使用者，請執行下列步驟：
+. 以管理員權限登入集群。要設定使用者：
 +
-.. 若要設定叢集 ONTAP 工具使用者，請選取 * 叢集 * > * 設定 * > * 使用者與角色 * 窗格。
-.. 若要設定 SVM ONTAP 工具使用者，請選取 * 儲存 SVM* > * 設定 * > * 使用者與角色 * 窗格。
+.. 若要設定叢集ONTAP工具用戶，請選擇 *叢集* > *設定* > *使用者和角色*窗格。
+.. 若要設定 SVM ONTAP工具用戶，請選擇「儲存 SVM」>「設定」>「使用者和角色」窗格。
 .. 在「使用者」下選取 * 「新增 * 」。
 .. 在「*新增使用者*」對話方塊中、選取*虛擬化產品*。
-.. * 瀏覽 * 以選取並上傳 ONTAP Privileges JSON 檔案。
+.. *瀏覽*選擇並上傳ONTAPPrivilegesJSON 檔案。對於非ASA r2 系統，選擇 users_roles.json 檔案；對於ASA r2 系統，選擇 users_roles_ASAr2.json 檔案。
 +
-產品欄位會自動填入。
+ONTAP工具會自動填入產品欄位。
 
 .. 從下拉式選單中選擇產品功能為*VSC、VASA Provider 和 SRA*。
 +
-根據所選的產品功能、 * 角色 * 欄位會自動填入。
+ONTAP工具會根據您選擇的產品功能自動填入 *角色* 欄位。
 
 .. 輸入所需的使用者名稱和密碼。
-.. 選取使用者所需的 Privileges （探索，建立儲存設備，修改儲存設備，銷毀儲存設備， NAS/SAN 角色），然後選取 * 新增 * 。
+.. 選擇使用者需要的權限（發現、建立儲存、修改儲存、銷毀儲存、NAS/SAN 角色），然後選擇*新增*。
 
 
 
 
-新角色和使用者即會新增、您可以在已設定的角色下看到詳細權限。
+ONTAP工具新增了新的角色和使用者。您可以查看您配置的角色下的權限。
 
 
 
 == SVM Aggregate 對應需求
 
-若要使用 SVM 使用者認證來配置資料存放區、 VMware vSphere 的內部 ONTAP 工具會在 API 後的資料存放區中指定的集合上建立磁碟區。ONTAP 不允許使用 SVM 使用者認證、在 SVM 上的未對應集合體上建立磁碟區。若要解決此問題、您需要使用 ONTAP REST API 或 CLI 將 SVM 對應至集合體、如此處所述。
+使用 SVM 使用者憑證設定資料儲存庫時，ONTAP tools for VMware vSphere在資料儲存庫 POST API 中指定的聚合上建立磁碟區。 ONTAP阻止 SVM 使用者在未對應到 SVM 的聚合上建立磁碟區。在建立磁碟區之前，使用ONTAP REST API 或 CLI 將 SVM 對應到所需的聚合。
 
 REST API ：
 
@@ -70,21 +69,21 @@ sti115_vsim_ucs630f_aggr1 vserver show-aggregates                               
 
 == 手動建立 ONTAP 使用者和角色
 
-請依照本節的指示手動建立使用者和角色、而不使用 JSON 檔案。
+無需 JSON 檔案即可手動建立使用者和角色。
 
 . 使用叢集的叢集管理 IP 位址存取 ONTAP 系統管理員。
 . 使用 admin Privileges 登入叢集。
 +
-.. 若要設定叢集 ONTAP 工具角色，請選取 * 叢集 * > * 設定 * > * 使用者與角色 * 窗格。
-.. 若要設定叢集 SVM ONTAP 工具角色，請選取 * 儲存 SVM* > * 設定 * > * 使用者與角色 * 窗格
+.. 若要設定叢集ONTAP工具角色，請選擇 *叢集* > *設定* > *使用者和角色*。
+.. 若要設定叢集 SVM ONTAP工具角色，請選擇 *儲存 SVM* > *設定* > *使用者和角色*。
 
 
-. 建立角色：
+. 創建角色：
 +
 .. 在 * 角色 * 表下選擇 * 新增 * 。
 .. 輸入 * 角色名稱 * 和 * 角色屬性 * 詳細資料。
 +
-從下拉式清單中新增 *REST API Path* 及其各自的存取權限。
+新增*REST API 路徑*並從下拉清單中選擇存取權限。
 
 .. 新增所有必要的 API 並儲存變更。
 
@@ -105,9 +104,9 @@ sti115_vsim_ucs630f_aggr1 vserver show-aggregates                               
 
 === 非管理員全域範圍叢集使用者所需的最低權限清單
 
-本節列出了未使用使用者 JSON 檔案建立的非管理員全域範圍叢集使用者所需的最低權限。如果在本機範圍內新增了集群，建議使用 JSON 檔案建立用戶，因為適用ONTAP tools for VMware vSphere需要的不僅僅是在ONTAP上進行配置的讀取權限。
+本節列出了沒有 JSON 檔案的非管理員全域範圍叢集使用者所需的最低權限。如果叢集處於本機範圍內，請使用 JSON 檔案建立用戶，因為適用ONTAP tools for VMware vSphere需要的不僅僅是在ONTAP上進行設定的讀取權限。
 
-使用 API ：
+您可以使用 API 存取功能：
 
 |===
 
@@ -115,49 +114,52 @@ sti115_vsim_ucs630f_aggr1 vserver show-aggregates                               
 | API | 存取層級 | 用於 
 
 
-| /API/cluster | 唯讀 | 叢集組態探索 
+| /API/cluster | 唯讀 | 叢集配置發現 
 
 
-| /api/cluster / 授權 / 授權 | 唯讀 | 授權檢查特定傳輸協定的授權 
+| /api/cluster / 授權 / 授權 | 唯讀 | 許可證檢查協議特定的許可證 
 
 
 | /api/cluster / 節點 | 唯讀 | 平台類型探索 
 
 
-| /API/SECSecurity /帳戶 | 唯讀 | 權限探索 
+| /API/SECSecurity /帳戶 | 唯讀 | 特權發現 
 
 
-| /API/SECSecurity /角色 | 唯讀 | 權限探索 
+| /API/SECSecurity /角色 | 唯讀 | 特權發現 
 
 
-| /api/storage / Aggregate | 唯讀 | 資料存放區 / Volume 資源配置期間的集合空間檢查 
+| /api/storage / Aggregate | 唯讀 | 資料儲存/磁碟區配置期間的聚合空間檢查 
 
 
-| /api/storage / 叢集 | 唯讀 | 取得叢集層級空間與效率資料 
+| /api/storage / 叢集 | 唯讀 | 取得集群層級空間和效率數據 
 
 
-| /api/storage / 磁碟 | 唯讀 | 取得集合體中的相關磁碟 
+| /api/storage / 磁碟 | 唯讀 | 取得聚合中關聯的磁碟 
 
 
-| /API/儲存 設備 /QoS/ 原則 | 讀取 / 建立 / 修改 | QoS 和 VM 原則管理 
+| /API/儲存 設備 /QoS/ 原則 | 讀取 / 建立 / 修改 | QoS 和 VM 策略管理 
 
 
-| /API/SVM/svms | 唯讀 | 在本機新增叢集的情況下取得 SVM 組態。 
+| /API/SVM/svms | 唯讀 | 在本機新增叢集時取得 SVM 配置。 
 
 
-| /api/network/IP/ 介面 | 唯讀 | Add Storage Backend （新增儲存後端）：識別管理 LIF 範圍為叢集 / SVM 
+| /api/network/IP/ 介面 | 唯讀 | 新增儲存後端 - 確定管理 LIF 範圍是叢集/SVM 
 
 
-| /API/儲存 設備 / 可用性區域 | 唯讀 | Saz 探索。適用於 ONTAP 9.16.1 版及 ASA R2 系統。 
+| /API/儲存 設備 / 可用性區域 | 唯讀 | SAZ 發現。適用於ONTAP 9.16.1 及更高版本和ASA r2 系統。 
+
+
+| /api/cluster/metrocluster | 唯讀 | 取得MetroCluster狀態和配置詳細資訊。 
 |===
 
 
 === 為 VMware vSphere ONTAP API 型叢集範圍使用者建立 ONTAP 工具
 
 
-NOTE: 您需要探索，建立，修改及銷毀 Privileges ，才能在資料存放區發生故障時執行修補作業及自動復原。如果這些 Privileges 全都缺乏，就會導致工作流程中斷和清理問題。
+NOTE: PATCH 作業和資料儲存體上的自動回滾需要發現、建立、修改和銷毀權限。缺少權限可能會導致工作流程和清理問題。
 
-建立 ONTAP 工具，讓以 VMware vSphere ONTAP API 為基礎的使用者能夠探索，建立儲存設備，修改儲存設備，銷毀儲存 Privileges ，以啟動探索並管理 ONTAP 工具工作流程。
+具有發現、建立、修改和銷毀權限的基於ONTAP API 的使用者可以管理ONTAP工具工作流程。
 
 若要建立具有上述所有 Privileges 的叢集範圍使用者，請執行下列命令：
 
@@ -254,6 +256,8 @@ security login rest-role create -role <role-name> -api /api/svm/peers -access re
 
 security login rest-role create -role <role-name> -api /api/svm/svms -access readonly
 
+security login rest-role create -role <role-name> -api /api/cluster/metrocluster -access readonly
+
 ----
 此外，對於 ONTAP 9.16.0 版及更新版本，請執行下列命令：
 
@@ -271,7 +275,7 @@ security login rest-role create -role <role-name> -api /api/storage/availability
 
 === 為以 VMware vSphere ONTAP API 為基礎的 SVM 範圍使用者建立 ONTAP 工具
 
-若要使用所有 Privileges 建立 SVM 範圍的使用者，請執行下列命令：
+執行以下命令以建立具有所有權限的 SVM 範圍使用者：
 
 [listing]
 ----
@@ -369,7 +373,7 @@ security login create -user-or-group-name <user-name> -application http -authent
 ----
 security login create -user-or-group-name testvpsraall -application http -authentication-method password -role OTV_10_VP_SRA_Discovery_Create_Modify_Destroy -vserver C1_sti160-cluster_
 ----
-若要解除鎖定帳戶，若要啟用對管理介面的存取，請執行下列命令：
+執行以下命令解鎖帳戶並啟用管理介面存取：
 
 [listing]
 ----
@@ -445,7 +449,7 @@ _security 登入角色 create -role <existing-role-name> -cmddirname "vserver NV
 
 _security 登入角色 create -role <existing-role-name> -cmddirname "vserver NVMe subsystem map remove" -access all -vserver <vserver-name> _
 
-將命令 _vserver NVMe 命名空間 show_ 和 _vserver NVMe 子系統 show_ 新增至現有角色、會新增下列命令。
+若要啟用下列指令，請將指令 _vserver nvme namespace show_ 和 _vserver nvme subset show_ 新增至現有角色。
 
 [listing]
 ----
@@ -462,7 +466,7 @@ vserver nvme subsystem modify
 
 == 將適用於 VMware vSphere 10.3 使用者的 ONTAP 工具升級為 10.4 使用者
 
-從 ONTAP 9.16.1 開始，將適用於 VMware vSphere 10.3 使用者的 ONTAP 工具升級至 10.4 使用者。
+從ONTAP 9.16.1 開始，將ONTAP tools for VMware vSphere升級至 10.4 使用者。
 
 對於使用 JSON 檔案和 ONTAP 9.16.1 版或更新版本建立叢集範圍使用者的 VMware vSphere 10.3 使用者適用的 ONTAP 工具，請使用 ONTAP CLI 命令搭配管理使用者 Privileges 升級至 10.4 版。
 

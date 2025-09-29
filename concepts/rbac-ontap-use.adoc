@@ -17,7 +17,7 @@ summary: 使用 ONTAP 實作 VMware vSphere 10 RBAC 的 ONTAP 工具有幾個層
 
 == 組態程序總覽
 
-適用於 VMware vSphere 10 的 ONTAP 工具支援建立具有自訂角色的 ONTAP 使用者。這些定義會封裝在 JSON 檔案中，您可以將其上傳至 ONTAP 叢集。您可以建立使用者，並根據您的環境和安全需求量身打造角色。
+ONTAP tools for VMware vSphere支援建立具有自訂角色的ONTAP使用者。這些定義打包在一個 JSON 檔案中，您可以將其上傳到ONTAP叢集。您可以根據您的環境和安全需求建立使用者並自訂角色。
 
 主要組態步驟如下所述。如link:../configure/configure-user-role-and-privileges.html["設定 ONTAP 使用者角色和權限"]需詳細資訊、請參閱。
 

@@ -11,12 +11,32 @@ summary: 適用於 VMware vSphere 的 ONTAP 工具是虛擬機器生命週期管
 
 
 [role="lead"]
-適用於 VMware vSphere 的 ONTAP 工具是一組用於虛擬機器生命週期管理的工具。它與 VMware 生態系統整合，可協助資料存放區資源配置，並為虛擬機器提供基本保護。適用於 VMware vSphere 的 ONTAP 工具是一組可水平擴充，事件導向的微服務，部署為開放式虛擬應用裝置（ OVA ）。此版本將 REST API 與 ONTAP 整合。
+ONTAP tools for VMware vSphere是一套用於虛擬機器生命週期管理的工具。它與 VMware 生態系統集成，以簡化資料儲存配置並為虛擬機器提供基本保護。它是作為開放虛擬設備 (OVA) 部署的水平可擴展、事件驅動的微服務的集合。
 
-適用於 VMware vSphere 的 ONTAP 工具包含下列項目：
+ONTAP tools for VMware vSphere支援：
 
-* 虛擬機器功能、例如基本保護和災難恢復
-* 用於 VM 精細管理的 Vasa Provider
+* 核心虛擬機器 (VM) 功能，例如保護和災難復原
+* 用於基於儲存策略的管理的 VASA 提供程序
 * 儲存原則型管理
 * 儲存複寫介面卡（SRA）
 
+
+.適用於 VMware 的ONTAP工具的高可用性
+ONTAP tools for VMware vSphere提供高可用性 (HA) 支持，有助於在發生故障時維持不間斷運作。
+
+HA 解決方案可協助您從以下類型的中斷中快速恢復：
+
+* 主機故障 - 僅支援單節點故障。
+* 網路故障
+* 虛擬機器（客戶作業系統）故障
+* 應用程式（ONTAP工具）故障
+
+
+您無需執行任何其他配置即可ONTAP tools for VMware vSphere。
+
+[NOTE]
+====
+ONTAP tools for VMware vSphere不支援 vCenter HA。
+
+====
+若要使用 HA 功能，請確保在部署期間或稍後在 VM 設定中啟用 CPU 熱添加和記憶體熱插拔。

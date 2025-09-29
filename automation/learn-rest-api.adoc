@@ -50,7 +50,7 @@ Representational State Transfer （ REST ）是一種用於建立分散式 Web �
 您應該考慮 ONTAP 工具管理員環境的幾個層面。
 
 .虛擬機器
-適用於 VMware vSphere 10 的 ONTAP 工具是使用 vSphere 遠端外掛程式架構來部署。軟體（包括 REST API 的支援）會在獨立的虛擬機器中執行。
+ONTAP tools for VMware vSphere是使用 vSphere 遠端插件架構部署的。該軟體（包括對 REST API 的支援）在單獨的虛擬機器中運行。
 
 .ONTAP 工具 IP 位址
 適用於 VMware vSphere 10 的 ONTAP 工具會公開單一 IP 位址，提供通往虛擬機器功能的閘道。您需要在初始設定期間提供位址，並將其指派給內部負載平衡器元件。此位址可供 ONTAP tools> 管理員使用者介面使用，並可直接存取 Swagger 文件頁面和 REST API 。

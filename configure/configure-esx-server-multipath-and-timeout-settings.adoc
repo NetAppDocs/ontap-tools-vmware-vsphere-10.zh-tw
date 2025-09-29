@@ -11,7 +11,7 @@ summary: 適用於 VMware vSphere 的 ONTAP 工具會檢查及設定 ESXi 主機
 
 
 [role="lead"]
-設定 ESXi 伺服器多重路徑和逾時設定，可在主要路徑故障時，無縫切換至備份儲存路徑，確保高可用度和資料完整性。
+配置 ESXi 伺服器多路徑和逾時設定有助於維護資料可用性和完整性。如果主路徑不可用，它可以自動故障轉移到備份儲存路徑。
 
 
 
@@ -19,17 +19,15 @@ summary: 適用於 VMware vSphere 的 ONTAP 工具會檢查及設定 ESXi 主機
 
 VMware vSphere的支援VMware vSphere工具可檢查及設定ESXi主機多重路徑設定、以及最適合搭配NetApp儲存系統使用的HBA逾時設定。ONTAP
 
-*關於此工作*
-
-視您的組態和系統負載而定，此程序可能需要很長時間。工作進度會顯示在「近期工作」面板中。
+.關於這項工作
+此過程可能需要一些時間，具體取決於您的設定和系統負載。您可以在「近期任務」面板中查看進度。
 
 .步驟
 . 從 VMware vSphere Web 用戶端首頁，選取 * 主機與叢集 * 。
-. 在主機上按一下滑鼠右鍵、然後選取 * NetApp ONTAP tools* > * 更新主機資料 * 。
 . 在 VMware vSphere Web Client 的捷徑頁面上，選取外掛程式區段下方的 * NetApp ONTAP tools* 。
 . 前往 VMware vSphere 外掛程式 ONTAP 工具概觀（儀表板）中的 * ESXi 主機相容性 * 卡。
 . 選取 * 套用建議的設定 * 連結。
-. 在 * 套用建議的主機設定 * 視窗中，選取您要更新的主機以符合 NetApp 建議的設定，然後選取 * 下一步 * 。
+. 在「套用建議的主機設定」視窗中，選擇要更新以使用NetApp推薦設定的主機，然後選擇「下一步」。
 +
 
 NOTE: 您可以展開 ESXi 主機以查看目前的值。
@@ -42,7 +40,7 @@ NOTE: 您可以展開 ESXi 主機以查看目前的值。
 
 == 設定 ESXi 主機值
 
-使用適用於 VMware vSphere 的 ONTAP 工具，您可以在 ESXi 主機上設定逾時和其他值，以確保最佳效能和成功容錯移轉。適用於 VMware vSphere 的 ONTAP 工具集的價值是以內部 NetApp 測試為基礎。
+使用ONTAP tools for VMware vSphere在 ESXi 主機上設定逾時和其他值，以實現最佳效能和故障轉移。它根據NetApp測試設定這些值。
 
 您可以在ESXi主機上設定下列值：
 
@@ -62,9 +60,9 @@ NOTE: 您可以展開 ESXi 主機以查看目前的值。
 
 === MPIO 設定
 
-MPIO 設定可定義 NetApp 儲存系統的偏好路徑。它們會判斷哪些可用路徑已最佳化（而非透過互連纜線的非最佳化路徑），並將偏好的路徑設為其中一條路徑。
+MPIO 設定為NetApp儲存系統選擇最佳路徑。  MPIO 設定選擇最佳路徑並使用它。
 
-在高效能環境中、或是當您使用單一 LUN 資料存放區測試效能時、請考慮將循環（ VMW_PSP_RR ）路徑選擇原則（ PSP ）的負載平衡設定、從預設的 IOPS 設定 1000 變更為 1 。
+對於高效能環境或使用單一 LUN 資料儲存進行測試時，請調整循環 (VMW_PSP_RR) 路徑選擇策略 (PSP) 的負載平衡設定以提高效能。將預設 IOPS 值從 1000 設定為 1。
 
 
 NOTE: MPIO 設定不適用於 NVMe、NVMe/FC 和 NVMe/TCP 協定。

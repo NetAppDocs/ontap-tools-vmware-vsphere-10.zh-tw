@@ -11,16 +11,14 @@ summary: 當您在 vCenter 用戶端的捷徑區段中選取適用於 VMware vSp
 
 
 [role="lead"]
-當您在 vCenter 用戶端的捷徑區段中選取適用於 VMware vSphere 外掛程式的 ONTAP 工具圖示時，使用者介面會導覽至概要頁面。此頁面類似儀表板、提供 VMware vSphere 外掛程式的 ONTAP 工具摘要。
+從 vCenter 用戶端的捷徑部分選擇適用ONTAP tools for VMware vSphere外掛程式圖示即可開啟概覽頁面。此儀表板提供了適用ONTAP tools for VMware vSphere的摘要。
 
-在增強連結模式設定（ Elm ）的情況下、 vCenter Server Select 下拉式清單會出現、您可以選取所需的 vCenter Server 來查看與其相關的資料。此下拉式清單適用於外掛程式的所有其他清單檢視。
-在一個頁面中所做的 vCenter Server 選擇會持續出現在外掛程式的索引標籤上。
-image:../media/remote-plugin-dashboard.png["儀表板總覽"]
+對於增強型連結模式 (ELM) 設置，將出現 vCenter Server 選擇下拉式選單，您可以選擇所需的 vCenter Server 來查看與其相關的資料。此下拉式選單適用於該外掛程式的所有其他清單視圖。在一個頁面中所做的 vCenter Server 選擇將保留在該外掛程式的各個標籤中。image:../media/remote-plugin-dashboard.png["儀表板總覽"]
 
 在概述頁面中，您可以執行 *Discovery* 動作。探索行動會在 vCenter 層級執行探索，以偵測任何新增或更新的儲存設備後端，主機，資料存放區和保護狀態 / 關係。您可以執行實體的隨選探索，而無需等待排程的探索。
 
 
-NOTE: 只有當您有權執行探索動作時，才會啟用「動作」按鈕。
+NOTE: 只有當您具有執行發現操作所需的權限時，才會啟用「*發現*」操作按鈕。
 
 提交發現請求後，您可以在最近任務面板中追蹤操作的進度。
 

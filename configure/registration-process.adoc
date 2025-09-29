@@ -2,32 +2,34 @@
 permalink: configure/registration-process.html 
 sidebar: sidebar 
 keywords:  
-summary: 您可以使用適用於 VMware vSphere 遠端外掛程式介面的 ONTAP 工具，向 vCenter Server 執行個體註冊 VASA Provider 。 
+summary: 您可以使用適用於ONTAP tools for VMware vSphere將 VASA 提供者註冊至 vCenter Server 執行個體。 
 ---
-= 向 vCenter Server 執行個體登錄 VASA Provider
+= 使用ONTAP工具向 vCenter Server 執行個體註冊 VASA 提供者
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-您可以使用適用於 VMware vSphere 的 ONTAP 工具，向 vCenter Server 執行個體註冊 VASA Provider 。VASA Provider 設定區段會顯示所選 vCenter Server 的 VASA Provider 登錄狀態。在多重 vCenter 部署中，請確保每個 vCenter Server 執行個體都有自訂 CA 憑證。
+使用ONTAP tools for VMware vSphere將 VASA 提供者註冊至 vCenter Server 執行個體。這使得基於儲存策略的管理、 vVols支援以及與ONTAP系統上的 VMware Live Site Recovery 設備的整合成為可能。
+
+VASA 提供者設定顯示所選 vCenter Server 的註冊狀態。
 
 .步驟
 . 登入 vSphere 用戶端。
 . 在外掛程式區段下，選取 * 快速鍵 * > * NetApp ONTAP tools* 。
-. 選擇 * 設定 * > * VASA 提供者設定 * 。VASA Provider 登錄狀態會顯示為「未登錄」。
+. 選擇“設定”>“VASA 提供者設定”。  ONTAP工具顯示 VASA 提供者註冊狀態為未註冊。
 . 選擇 * 註冊 * 按鈕以註冊 VASA 提供者。
-. 輸入 VASA Provider 的名稱和認證。使用者名稱只能包含字母，數字和底線。密碼長度應介於 8 到 256 個字元之間。
+. 輸入 VASA 提供者的名稱和憑證。使用者名稱只能包含字母、數字和底線。將密碼長度設定為 8 到 256 個字元之間。
 . 選擇*註冊*。
-. 成功登錄和重新整理頁面後，會顯示已登錄的 VASA Provider 的狀態，名稱和版本。註冊後，將會啟動取消註冊動作。
+. 成功註冊並重新整理頁面後， ONTAP工具將顯示已註冊的 VASA 提供者的狀態、名稱和版本。
 
 
 .下一步
 確認已登入的 VASA Provider 已列於 vCenter 用戶端的 VASA Provider 之下：
 
 .步驟
-. 瀏覽至 vCenter Server 執行個體。
+. 前往 vCenter Server 執行個體。
 . 使用系統管理員認證登入。
 . 選擇 * 儲存供應商 * > * 組態 * 。確認已登入的 VASA Provider 已正確列出。
 

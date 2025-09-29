@@ -1,0 +1,47 @@
+---
+permalink: manage/edit-autosupport.html 
+sidebar: sidebar 
+keywords:  
+summary: 首次ONTAP tools for VMware vSphere時， AutoSupport預設為啟用狀態。啟用後 24 小時內向技術支援發送訊息。 
+---
+= 編輯AutoSupport設置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+首次ONTAP tools for VMware vSphere時， AutoSupport預設為啟用狀態。啟用後 24 小時內向技術支援發送訊息。
+
+
+
+== 停用 AutoSupport
+
+當您停用AutoSupport時，您將不再獲得主動支援和監控。
+
+
+NOTE: 建議保持AutoSupport啟用，因為它有助於加速問題偵測和解決。即使停用AutoSupport ，系統仍會繼續在本地收集和儲存訊息，但不會透過網路發送報告。
+
+.步驟
+. 從網路瀏覽器啟動 ONTAP 工具管理員： `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+. 使用您在部署期間提供的 VMware vSphere 管理員認證 ONTAP 工具登入。
+. 選擇 * 設定 * > * 遙測 * > * 編輯 * 選項。
+. 取消選取 AutoSupport 選項並儲存變更。
+
+
+
+
+== 更新 AutoSupport Proxy URL
+
+更新AutoSupport代理 URL，以便AutoSupport功能透過代理伺服器路由數據，實現安全傳輸。
+
+.步驟
+. 從網路瀏覽器啟動 ONTAP 工具管理員： `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+. 使用您在部署期間提供的 VMware vSphere 管理員認證 ONTAP 工具登入。
+. 從側邊列選取 * 設定 * 。
+. 選擇 * 設定 * > * 遙測 * > * 編輯 * 選項。
+. 輸入有效的 * Proxy URL* 並儲存變更。
++
+如果停用 AutoSupport ，則 Proxy URL 也會停用。
+
+

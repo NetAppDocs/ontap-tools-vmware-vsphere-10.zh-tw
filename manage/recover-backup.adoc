@@ -1,0 +1,55 @@
+---
+permalink: manage/recover-backup.html 
+sidebar: sidebar 
+keywords:  
+summary: 從 VMware vSphere 10.3 的 ONTAP 工具開始，此應用裝置使用動態儲存資源配置程式，您無法達成零 RPO 。不過，您可以達成接近零 RPO 的目標。 
+---
+= 恢復ONTAP工具設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+從適用於ONTAP tools for VMware vSphere開始，備份功能預設為啟用。
+
+ONTAP tools for VMware vSphere的資料儲存庫用於儲存備份檔案。以ONTAP工具 IP 位址命名的資料夾（以底線取代點並以 _OTV_backup_ 為後綴）保存兩個最新的備份檔案（_OTV_backup_1.tar.enc_ 和 _OTV_backup_2.tar.enc_）和一個包含最新備份名稱的資訊檔案（_OTV_back_info.
+
+確保新虛擬機器使用相同的ONTAP工具 IP 位址並與初始系統配置相匹配，包括啟用的服務、節點大小和 HA 模式。
+
+.步驟
+. 將備份檔案從原始虛擬機器的資料儲存下載到本機系統。
++
+.. 前往儲存部分並選擇包含虛擬機器備份檔案的資料儲存。
+.. 選取 * 檔案 * 區段。
+.. 下載所需的備份目錄。
+
+
+. 關閉現有虛擬機器。然後，使用與原始部署相同的 OVA 檔案部署新的虛擬機器。
+. 從 vCenter Server 開啟維護主控台。
+. 以維護使用者身分登入。
+. 輸入 `4`以選擇 * 支援與診斷 * 。
+. 輸入 `2`以選擇 * 啟用遠端診斷存取 * 選項，並建立新的診斷存取密碼。
+. 從下載的目錄中選擇一個備份檔。請參閱_OTV_backup_info.txt_檔案來識別最新的備份。
+. 使用以下命令將備份檔案傳輸到新的虛擬機器。出現提示時，輸入診斷密碼。
++
+[listing]
+----
+scp <OTV_backup_X.tar.enc> diag@<node_ip>:/home/diag/system_recovery.tar.enc
+----
++
+
+NOTE: 不要改變指令中提到的目標路徑和檔案名稱（/home/diag/system_recovery.tar.enc）。
+
+. 備份檔案傳輸完成後，登入診斷shell並執行以下命令：
++
+[listing]
+----
+sudo perl /home/maint/scripts/post-deploy-upgrade.pl -recovery
+----
++
+記錄會記錄在 /var/log/post-deploy-upgrade 記錄檔中。
+
+
+
+完成恢復後， ONTAP工具將恢復服務和 vCenter 物件。

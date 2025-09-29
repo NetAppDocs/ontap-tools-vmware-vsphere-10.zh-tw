@@ -27,8 +27,8 @@ summary: '部署 VMware Live Site Recovery 設備後，設定儲存複製適配�
 . 將 .tar.gz_ 檔案上傳至 VMware Live Site Recovery 。
 . 透過 SSH 用戶端（例如 PuTTY），使用管理員帳戶登入 VMware Live Site Recovery 設備。
 . 使用命令切換至 root 使用者： `su root`
-. 執行命令 `cd /var/log/vmware/srm` 以瀏覽至記錄目錄。
-. 在記錄位置輸入命令、以取得 SRA 使用的泊塢視窗 ID ： `docker ps -l`
+. 運行命令 `cd /var/log/vmware/srm`轉到日誌目錄。
+. 在日誌位置輸入指令取得SRA使用的Docker ID： `docker ps -l`
 . 若要登入容器 ID 、請輸入命令： `docker exec -it -u srm <container id> sh`
 . 使用以下命令透過ONTAP tools for VMware vSphere IP 位址和密碼設定 VMware Live Site Recovery：  `perl command.pl -I --otv-ip <OTV_IP>:8443 --otv-username <Application username> --otv-password <Application password> --vcenter-guid <VCENTER_GUID>`
 +
@@ -40,5 +40,4 @@ summary: '部署 VMware Live Site Recovery 設備後，設定儲存複製適配�
 . 重新掃描適配器以確認更新的詳細資訊出現在 VMware Live Site Recovery 儲存複製適配器頁面上。
 
 
-.結果
-此時將顯示確認訊息，指示儲存憑證已儲存。 SRA現在可以使用指定的 IP 位址、連接埠和憑證與 SRA 伺服器通訊。
+*結果* 出現確認訊息，表示儲存憑證已儲存。現在，您可以使用 SRA 透過指定的 IP 位址、連接埠和憑證與 SRA 伺服器進行通訊。

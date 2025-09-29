@@ -2,18 +2,21 @@
 permalink: protect/fan-out-protection.html 
 sidebar: sidebar 
 keywords:  
-summary: 在風扇輸出保護中，一致性群組會在第一個目的地 ONTAP 叢集上使用同步關係，並在第二個目的地 ONTAP 叢集上使用非同步關係，獲得雙重保護。 
+summary: 在扇出保護場景中，一致性群組受到雙重保護，在第一個目標ONTAP叢集上具有同步關係，在第二個目標ONTAP叢集上具有非同步關係。 
 ---
-= 風扇輸出保護
+= 扇出保護
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-在風扇輸出保護中，一致性群組會在第一個目的地 ONTAP 叢集上使用同步關係，並在第二個目的地 ONTAP 叢集上使用非同步關係，獲得雙重保護。建立，編輯及刪除 SnapMirror 主動式同步保護工作流程可維持同步保護。SRM 容錯移轉和重新保護工作流程，可維持非同步保護。
+在扇出保護場景中，一致性群組受到雙重保護，在第一個目標ONTAP叢集上具有同步關係，在第二個目標ONTAP叢集上具有非同步關係。建立、編輯和刪除SnapMirror主動同步保護工作流程維護同步保護。  VMware Live Site Recovery 設備故障轉移和重新保護工作流程維持非同步保護。
 
-為了建立扇出保護，您需要對等三個站台叢集和 SVM 。
+
+NOTE: SVM 使用者不支援扇出。
+
+若要設定扇出保護，請將三個站點叢集和 SVM 對等連接。
 
 範例：
 
@@ -38,10 +41,17 @@ summary: 在風扇輸出保護中，一致性群組會在第一個目的地 ONTA
 
 
 |===
-下圖顯示了風扇輸出保護組態： image:../media/fan-out-protection.png["風扇輸出保護組態"] image:../media/fan-out-protection-relationship.png["扇出保護關係"]
+下圖顯示了扇出保護配置：image:../media/fan-out-protection.png["扇出保護配置"] image:../media/fan-out-protection-relationship.png["扇出保護關係"]
 
-*步驟*
+.步驟
+. 選擇一個新的佔位資料儲存。分階段保護的佔位資料儲存選擇標準是：
++
+** 請勿將佔位資料儲存放置在您正在保護的主機叢集中。
+** 如果您需要在主機叢集中包含佔位資料存儲，請在設定SnapMirror主動同步保護之前將其新增至 VMware Live Site Recovery 裝置。透過此設置，您可以將佔位資料儲存置於保護之外。
++
+有關詳細信息，請參閱 https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/site-recovery-manager/8-8/site-recovery-manager-administration-8-8/about-placeholder-virtual-machines/configure-a-placeholder-datastore.html["選取預留位置資料存放區"]
 
-. 建立一個新的佔位符資料儲存。參考 https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/site-recovery-manager/8-8/site-recovery-manager-administration-8-8/about-placeholder-virtual-machines/configure-a-placeholder-datastore.html["選取預留位置資料存放區"]
-. 將資料存放區新增至主機叢集保護link:../manage/edit-hostcluster-protection.html["修改受保護的主機叢集"]。您需要同時新增非同步和同步原則類型。
+
+
+. 透過以下步驟將資料儲存新增至主機叢集保護中link:../manage/edit-hostcluster-protection.html["修改受保護的主機叢集"]。新增非同步和同步策略類型。
 

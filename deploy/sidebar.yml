@@ -12,5 +12,5 @@ entries:
   url: "/deploy/pre-deploy-checks.html"
 - title: 部署適用於 VMware vSphere 的 ONTAP 工具
   url: "/deploy/ontap-tools-deployment.html"
-- title: 部署錯誤代碼
+- title: 排查部署錯誤
   url: "/deploy/deployment-error-codes.html"

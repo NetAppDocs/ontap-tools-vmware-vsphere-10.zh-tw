@@ -4,17 +4,57 @@ sidebar: sidebar
 keywords: upgrade 
 summary: 本頁概述適用於 VMware vSphere 系統之 ONTAP 工具的部署、重新開機及還原作業錯誤代碼。 
 ---
-= 部署錯誤代碼
+= 排查部署錯誤
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+如果您遇到部署問題，請查看日誌和錯誤代碼以診斷和解決問題。從適用於ONTAP tools for VMware vSphere開始，從 pod 收集的日誌包包括來自 MongoDB、RabbitMQ 和 Vault 的日誌，以及所有 pod 的狀態和描述。這些是在現有ONTAP工具服務日誌的基礎上提供的，增強了可支援性和故障排除能力。
+
+
+
+== 收集記錄檔
+
+您可以從 ONTAP Tools Manager 使用者介面中提供的選項、收集 ONTAP 工具 for VMware vSphere 的記錄檔。技術支援可能會要求您收集記錄檔、以協助疑難排解問題。
+
+
+NOTE: 從 ONTAP 工具管理員產生記錄時、會包含所有 vCenter Server 執行個體的所有記錄。從 vCenter 用戶端使用者介面產生記錄的範圍為所選的 vCenter Server 。
+
+.步驟
+. 從網路瀏覽器啟動 ONTAP 工具管理員： `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+. 使用您在部署期間提供的 VMware vSphere 管理員認證 ONTAP 工具登入。
+. 從側欄中選擇 * 日誌套件 * 。
++
+此作業可能需要數分鐘的時間。
+
+. 選取 * 產生 * 以產生記錄檔。
+. 輸入日誌套件組合的標籤、然後選取 * 產生 * 。
++
+下載 tar.gz 檔案並傳送給技術支援人員。
+
+
+
+請遵循下列步驟，使用 vCenter 用戶端使用者介面產生記錄套件：
+
+.步驟
+. 登入 vSphere 用戶端。
+. 從 vSphere Client 首頁、前往 * 支援 * > * 記錄套件 * > * 產生 * 。
+. 提供日誌包標籤並產生日誌包。文件生成後，您可以看到下載選項。下載可能需要一些時間。
+
+
+
+NOTE: 產生的記錄套件會取代過去 3 天或 72 小時內產生的記錄套件。
+
+
+
+== 部署錯誤代碼
+
 您可能會在部署 VMware vSphere 、重新開機和還原作業的 ONTAP 工具期間遇到錯誤代碼。
 錯誤代碼長度為五位數、前兩位數代表發生問題的指令碼、後三位數代表該指令碼內的特定工作流程。
 
-所有錯誤記錄都會記錄在 ansible-perl-errors.log 檔案中、以便輕鬆追蹤及解決問題。此記錄檔包含錯誤代碼和失敗的 Ansible 工作。
+所有錯誤日誌都記錄在 /var/log 目錄下的 ansible-perl-errors.log 檔案中，以便於輕鬆追蹤和解決問題。此日誌檔案包含錯誤代碼和失敗的 Ansible 任務。
 
 
 NOTE: 本頁提供的錯誤代碼僅供參考。如果錯誤持續發生、或沒有提及解決方案、請聯絡支援團隊。

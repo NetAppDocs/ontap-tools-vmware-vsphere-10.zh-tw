@@ -4,12 +4,22 @@ title: 管理適用於 VMware vSphere 的 ONTAP 工具
 entries:
 - title: 適用於 VMware vSphere 儀表板的 ONTAP 工具概觀
   url: "/configure/dashboard-overview.html"
-- title: ONTAP toolTools Manager 使用者介面
-  url: "/configure/manager-user-interface.html"
 - title: 了解 igroup 和匯出政策
   url: "/manage/igroup-workflow.html"
 - title: 了解ONTAP工具管理的 igroup
   url: "/manage/nested-igroups.html"
+- title: ONTAP toolTools Manager 使用者介面
+  url: "/manage/manager-user-interface.html"
+- title: 管理ONTAP工具管理器設定
+  entries:
+  - title: 編輯AutoSupport設置
+    url: "/manage/edit-autosupport.html"
+  - title: 新增 NTP 伺服器
+    url: "/manage/add-ntpserver.html"
+  - title: 重置 VASA 提供者和 SRA 憑證
+    url: "/manage/reset-vasa-sra-credentials.html"
+  - title: 編輯備份設定
+    url: "/manage/backup-settings.html"
 - title: 為 VMware vSphere 服務啟用 ONTAP 工具
   url: "/manage/enable-services.html"
 - title: 變更適用於 VMware vSphere 組態的 ONTAP 工具
@@ -38,7 +48,7 @@ entries:
   url: "/manage/manage-storage-threshold.html"
 - title: 管理儲存後端
   url: "/manage/storage-backend.html"
-- title: 管理 vCenter Server 執行個體
+- title: 在ONTAP工具中管理 vCenter Server 實例
   url: "/manage/manage-vcenter.html"
 - title: 管理憑證
   url: "/manage/certificate-manage.html"
@@ -52,10 +62,10 @@ entries:
     url: "/manage/start-the-ssh-on-other-nodes.html"
   - title: 更新 vCenter 伺服器和 ONTAP 認證
     url: "/manage/update-vcenter-credentials.html"
+  - title: 更改證書驗證標誌
+    url: "/manage/change-valid-flag.html"
 - title: ONTAP 工具報告
   url: "/manage/reports.html"
-- title: 收集記錄檔
-  url: "/manage/collect-the-log-files.html"
 - title: 管理虛擬機器
   entries:
   - title: 移轉或複製虛擬機器的考量事項
@@ -86,14 +96,8 @@ entries:
     url: "/manage/edit-hostcluster-protection.html"
   - title: 移除主機叢集保護
     url: "/manage/delete-hostcluster-protection.html"
-- title: 停用 AutoSupport
-  url: "/manage/disable-autosupport.html"
-- title: 更新 AutoSupport Proxy URL
-  url: "/manage/update-proxyurl.html"
-- title: 新增 NTP 伺服器
-  url: "/manage/add-ntpserver.html"
-- title: 建立備份並恢復 ONTAP 工具設定
-  url: "/manage/enable-backup.html"
+- title: 恢復ONTAP工具設定
+  url: "/manage/recover-backup.html"
 - title: 解除安裝適用於 VMware vSphere 的 ONTAP 工具
   url: "/manage/uninstall-deployment.html"
 - title: 移除 FlexVol Volume

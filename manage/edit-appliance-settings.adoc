@@ -11,10 +11,7 @@ summary: 您可以使用 ONTAP 工具管理員變更管理員密碼。
 
 
 [role="lead"]
-使用 ONTAP tooles Manager 可擴充 VMware vSphere 組態的 ONTAP 工具，以增加部署中的節點數量，或將組態變更為高可用度（ HA ）設定。VMware vSphere 應用程式的 ONTAP 工具最初部署在單一節點非 HA 組態中。
-
-
-NOTE: 若要在啟用非 HA 備份時移轉至 HA ，請先停用備份，然後在移轉後重新啟用。
+使用ONTAP工具管理器來擴充ONTAP tools for VMware vSphere，方法是增加節點數量或啟用高可用性 (HA)。預設情況下，ONTAP tools for VMware vSphere部署為單節點、非 HA 配置。
 
 .開始之前
 * 請確定您的 OVA 範本與節點 1 的 OVA 版本相同。節點 1 是最初部署 VMware vSphere OVA 之 ONTAP 工具的預設節點。
@@ -33,7 +30,7 @@ NOTE: 若要在啟用非 HA 備份時移轉至 HA ，請先停用備份，然後
 
 +
 
-NOTE: 在 VMware vSphere 的 ONTAP 工具中，您只能增加節點大小，而無法減少節點大小。在非 HA 設定中，僅支援中型組態。在 HA 設定中，支援中大型組態。
+NOTE: 在ONTAP tools for VMware vSphere中，您只允許增加節點大小；而不能減少節點大小。在非 HA 設定中，僅支援中等規模的配置。在 HA 設定中，支援中型和大型配置。
 
 . 使用 HA 切換按鈕來啟用 HA 組態。在 * HA settings* 頁面上，確定：
 +
@@ -48,7 +45,7 @@ NOTE: 啟用 HA 設定後，您無法還原到非 HA 單節點配置。
 . 在 * 編輯設備設定 * 視窗的 * HA 設定 * 區段中，您可以輸入節點 2 和 3 的詳細資料。適用於 VMware vSphere 的 ONTAP 工具可在 HA 設定中支援三個節點。
 +
 
-NOTE: 大部分的輸入選項都預先填入節點 1 網路詳細資料，以方便工作流程。不過，您可以先編輯輸入資料，再瀏覽精靈的最終頁面。只有在第一個節點上啟用 IPv6 位址時，才能輸入其他兩個節點的 IPv6 位址詳細資料。
+NOTE: 為了簡化工作流程，大多數輸入選項都預先填入了節點 1 網路詳細資訊。但是，您可以在導航到精靈的最後一頁之前編輯輸入資料。只有在ONTAP工具管理節點上啟用 IPv6 位址時，您才可以輸入其他兩個節點的 IPv6 位址詳細資訊。
 
 +
 確保 ESXi 主機只包含一個 ONTAP 工具 VM 。每次移至下一個視窗時，都會驗證輸入。

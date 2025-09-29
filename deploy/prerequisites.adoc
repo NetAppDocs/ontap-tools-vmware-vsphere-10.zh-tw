@@ -25,7 +25,7 @@ summary: 在部署ONTAP VMware vSphere的支援功能之前、您應該先熟悉
 ** 348 GB 、適用於完整佈建的安裝
 
 
-* * 主機系統規模調整需求 * 根據部署規模建議的記憶體，如下表所示。若要部署高可用度（ HA ），您需要使用表格中指定的應用裝置大小的三倍。
+* *主機系統大小需求* 下表顯示了每種部署規模的建議記憶體。對於高可用性 (HA) 部署，您需要列出的裝置大小的三倍。
 
 
 |===
@@ -53,7 +53,7 @@ NOTE: 啟用備份時，每個 ONTAP 工具叢集在部署 VM 的資料存放區
 | 儲存設備、主機和應用程式 | 版本需求 
 
 
-| ONTAP | 9.14.1、9.15.1、9.16.0、9.16.1 和 9.16.1P3 FAS、 ASA A 系列、 ASA C 系列、 AFF A 系列、 AFF C 系列和ASA r2。 
+| ONTAP | 9.15.1、9.16.0、9.16.1、9.17.0 及 9.17.1 
 
 
 | ONTAP 工具支援的 ESXi 主機 | 7.0.3 之後 
@@ -65,7 +65,7 @@ NOTE: 啟用備份時，每個 ONTAP 工具叢集在部署 VM 的資料存放區
 | VASA供應商 | 3.0 
 
 
-| ova 應用程式 | 10.4 
+| ova 應用程式 | 10.5 
 
 
 | 用於部署 ONTAP 工具虛擬機器的 ESXi 主機 | 7.0U3 和 8.0U3 
@@ -85,6 +85,9 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 == 連接埠需求
 
 下表概述了NetApp所使用的網路連接埠及其用途。請確保這些連接埠處於開放狀態且可訪問，以確保系統正常運作和通訊。請確保已完成必要的網路配置，以允許這些連接埠上的流量，從而使相關服務正常運作。根據您的安全策略，您可能需要設定防火牆或其他安全設備，以允許此類流量在您的網路中傳輸。
+
+
+NOTE: 確保所有ONTAP工具節點位於同一子網，以保持彼此之間不間斷的通訊。
 
 |===
 
@@ -116,16 +119,10 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 | 2380 | TCP | 這是 etcd 叢集的伺服器對伺服器通訊預設連接埠，用於 etcd 用於資料複寫和一致性所依賴的 raft Consensus 演算法。 
 
 
-| 7472 | TCP/UDP | 這是 Prometheus 計量服務連接埠。 
-
-
-| 7946 | TCP/UDP | 此連接埠用於 Docker 的容器網路探索。 
+| 7946 | TCP/UDP | 此連接埠用於Docker的容器網路發現。 
 
 
 | 9083 | TCP | 此連接埠是 VASA Provider 服務的內部使用服務連接埠。 
-
-
-| 1162 | UDP | 這是 SNMP 設陷封包連接埠。 
 
 
 | 6443 | TCP | 來源： RKE2 代理節點。目的地： REK2 伺服器節點。說明： Kubernetes API 
@@ -146,19 +143,7 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 | 123 | TCP | ntpd 使用此連接埠來執行 NTP 伺服器的驗證。 
 
 
-| 137-139 | TCP/UDP | SMB/Windows 共用封包。 
-
-
-| 6789 | TCP | Ceph 監控（週一） 
-
-
-| 3300 | TCP | Ceph 監控（週一） 
-
-
-| 6800-7300 | TCP | Ceph Manager ， OSD 和檔案系統（ MDS ）。 
-
-
-| 80 | TCP | Ceph RADOS 閘道（ RGW ） 
+| 3300 和 6789-7300 | TCP | 節點間資料平面 
 
 
 | 9080 | TCP | VP HTTP/HTTPS 連線（僅適用於 IPv4 的 127.0.0.0/8 或 IPv6 的： 1/128 ）。 
@@ -187,7 +172,7 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 | 高可用度 | 中（ M ） | 約 50 萬 | 128 
 
 
-| 高可用度 | 大（ L ） | 約 100k | 256 [ 注意 ] 表格中的主機數量顯示來自多個 vCenter 的主機總數。 
+| 高可用度 | 大（ L ） | 約 100k | 256 [注意] 表中的主機數量代表所有連接的 vCenter 的總數。 
 |===
 
 
