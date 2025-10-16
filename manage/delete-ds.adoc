@@ -44,3 +44,5 @@ NOTE: 您無法刪除虛擬機器使用的資料儲存區。刪除之前，將�
 NOTE: 對於統一ONTAP儲存上屬於受保護主機叢集的 VMFS 資料儲存庫，您無法從ONTAP叢集中刪除該磁碟區。
 
 
+
+當您刪除 NFS、VMFS 或vVols資料儲存庫時，父 igroup 仍保留在ONTAP系統上。未對應到任何 LUN 的子 igroup 將會自動刪除。 ONTAP工具每天執行清理以刪除未對應的預設父 igroup。必須在ONTAP中手動刪除自訂父 igroup。任何剩餘的父 igroup 都會變得陳舊，並且無法被ONTAP工具重複使用。

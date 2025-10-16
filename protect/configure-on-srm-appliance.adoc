@@ -22,6 +22,9 @@ summary: '部署 VMware Live Site Recovery 設備後，設定儲存複製適配�
 * 將儲存後端新增至ONTAP tools for VMware vSphere。有關更多信息，請參閱link:../configure/add-storage-backend.html["新增儲存後端"]部分。
 
 
+
+NOTE: 如果您已從ONTAP工具套用 vCenter 憑證補丁，請使用 (:5480) 連接埠更新 VMware Live Site Recovery 裝置中的 vCenter 設定。有關說明，請參閱 https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/site-recovery-manager/8-8/site-recovery-manager-installation-and-configuration-8-8/reconfiguring-the-site-recovery-manager-virtual-appliance/reconfigure-the-site-recovery-manager-appliance.html["重新配置 Site Recovery Manager 設備"]。
+
 .步驟
 . 在 VMware Live Site Recovery 應用裝置畫面上，選取 * 儲存複寫介面卡 * > * 新介面卡 * 。
 . 將 .tar.gz_ 檔案上傳至 VMware Live Site Recovery 。

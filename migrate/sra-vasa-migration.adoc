@@ -25,8 +25,10 @@ iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 . 透過 vCenter 伺服器 API 在本地為 ONTAP 工具插件加入儲存後端。
 . 從 Swagger 或 Postman 發出下列 API 以進行移轉。
 +
-curl -X POST  `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/{vcguid}/migration-jobs`
-
+[listing]
+----
+curl -X POST `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/{vcguid}/migration-jobs`
+----
 +
 您可以透過此 URL 存取 Swagger： `\https://$FQDN_IP_PORT/` ， 例如： `\https://10.67.25.33:8443/` 。
 
@@ -51,22 +53,44 @@ curl -X POST  `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/{vcguid}
 
 * 目前範例 *
 
-curl -X POST 'https://<OTV-NG-IP>:8443/virtualization/api/v1/vcenters/<vcguid>/migration-jobs'[] \ --header 'x-auth：<auth_token>' \ --header 'Content-Type：application/json' \ --data '{“otv_ip”：“xx.xx.xx.xx”，“vasa_provider_credentials”：{“用戶名”：“xxxxx”，“密碼”：“x*”，“用戶名”
-
+[listing]
+----
+curl -X POST 'https://<OTV-NG-IP>:8443/virtualization/api/v1/vcenters/<vcguid>/migration-jobs' \
+--header 'x-auth: <auth_token>' \
+--header 'Content-Type: application/json' \
+--data '{
+  "otv_ip": "xx.xx.xx.xx",
+  "vasa_provider_credentials": {
+    "username": "xxxxx",
+    "password": "******"
+  },
+  "database_password": "******"
+}'
+----
 其他版本移轉的要求本文：
 
-{ “otv_ip”：“xx.xx.xx.xx”， “vasa_provider_credentials”：{ “用戶名”：“xxxxx”，“密碼”：“*******” } }
-
+[listing]
+----
+{
+  "otv_ip": "xx.xx.xx.xx",
+  "vasa_provider_credentials": {
+    "username": "xxxxx",
+    "password": "*******"
+  }
+}
+----
 * JSON 輸出範例 *
 
-工作物件即會傳回。您應該儲存工作識別碼、以便在下一步中使用。
+系統傳回一個作業對象。儲存作業標識符以便在下一個步驟中使用。
 
-｛
-  「 ID 」： 123 、
-  " 移轉識別碼 " ： "d50073ce-35b4-4c51-9d2e-4ce66f802c35" 、
-  " 狀態 " ： " 執行中 "
+[listing]
+----
+{
+  "id": 123,
+  "migration_id": "d50073ce-35b4-4c51-9d2e-4ce66f802c35",
+  "status": "running"
 }
-
+----
 ====
 . 使用 Swagger 中的下列 URI 檢查狀態：
 +
@@ -75,7 +99,7 @@ curl -X POST 'https://<OTV-NG-IP>:8443/virtualization/api/v1/vcenters/<vcguid>/m
 curl `\https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?includeSubJobsAndTasks=true`
 ----
 +
-完成工作後，請檢閱移轉報告。此報告包含在工作資料中，可從工作回應存取。
+作業完成後，請查看作業回應中的遷移報告。
 
 . 將適用於 VMware vSphere 儲存提供者的 ONTAP 工具新增至 vCenter Server 並link:../configure/registration-process.html["註冊 VASA Provider"]使用適用於 VMware vSphere 的 ONTAP 工具。
 . link:../manage/enable-services.html["啟用 VASA Provider"]ONTAP tools for VMware vSphere上的服務。
@@ -86,7 +110,7 @@ curl `\https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?i
 +
 舊 VASA 提供者停止後，vCenter Server 將故障轉移到ONTAP tools for VMware vSphere。所有資料儲存庫和虛擬機器均可訪問，並由適用於ONTAP tools for VMware vSphere提供服務。
 
-. 只有在觸發資料儲存發現作業後，從ONTAP tools for VMware vSphere遷移的 NFS 和 VMFS 資料儲存才會在ONTAP tools for VMware vSphere中可見，這可能需要長達 30 分鐘才能完成。驗證資料儲存庫是否在 VMware vSphere 外掛程式使用者介面頁面的ONTAP工具概覽頁面上可見。
+. 完成資料儲存發現作業後，遷移的 NFS 和 VMFS 資料儲存將出現在ONTAP tools for VMware vSphere中，可能需要長達 30 分鐘的時間。在概覽頁面上檢查它們的可見性。
 . 使用 Swagger 或 Postman 中的下列 API 執行修補程式移轉：
 +
 []
@@ -109,18 +133,22 @@ curl `\https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?i
 
 * 目前範例 *
 
-curl -X 補丁 `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/56d373bd-4163-44f9-a872-9adabb008ca9/migration-jobs/84dr73bd-9173-65r7-w345-8ufdbb887d43`
-
+[listing]
+----
+curl  -X PATCH  `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/56d373bd-4163-44f9-a872-9adabb008ca9/migration-jobs/84dr73bd-9173-65r7-w345-8ufdbb887d43`
+----
 * JSON 輸出範例 *
 
 工作物件即會傳回。您應該儲存工作識別碼、以便在下一步中使用。
 
-｛
-  「 ID 」： 123 、
-  " 移轉識別碼 " ： "d50073ce-35b4-4c51-9d2e-4ce66f802c35" 、
-  " 狀態 " ： " 執行中 "
+[listing]
+----
+{
+  "id": 123,
+  "migration_id": "d50073ce-35b4-4c51-9d2e-4ce66f802c35",
+  "status": "running"
 }
-
+----
 要求主體是空的，用於修補作業。
 
 
@@ -134,20 +162,20 @@ NOTE: UUID 是移轉後 API 所傳回的移轉 UUID 。
 .下一步
 完成遷移並將ONTAP Tools 10.5 註冊到 vCenter Server 後，請依照下列步驟操作：
 
-* 等待 * 探索 * 完成，所有主機上的憑證都會自動重新整理。
-* 啟動資料儲存區和虛擬機器操作之前，請留出足夠的時間。所需的等待時間會因配置中的主機、資料儲存區和虛擬機器的數量而異。等待失敗可能會導致間歇性操作失敗。
+* 等待*發現*完成，系統會自動在所有主機上刷新憑證。
+* 等待資料儲存區和虛擬機器操作開始。等待時間取決於主機、資料儲存和虛擬機器的數量。如果您不等待，您可能會偶爾看到失敗。
 
 
 升級後，如果虛擬機器的規範狀態已過期，請使用下列步驟重新套用儲存原則：
 
 . 前往資料儲存並選擇*摘要*>*虛擬機器儲存策略*。
 +
-在 * VM 儲存原則相容性 * 下的法規遵循狀態顯示為 * 過時 * 。
+系統顯示*虛擬機器儲存策略合規性*下的合規性狀態為*過時*。
 
-. 選取儲存 VM 原則和對應的 VM
-. 選取 * 套用 *
+. 選擇儲存虛擬機器策略和對應的虛擬機器。
+. 選擇*應用*。
 +
-在 * VM 儲存原則相容性 * 下的法規遵循狀態現在顯示為相容。
+*虛擬機器儲存策略合規性*下的合規性狀態顯示為合規性。
 
 
 
@@ -178,7 +206,7 @@ NOTE: 如果故障轉移已完成但重新保護仍處於待定狀態，則不�
 +
 .. link:../manage/enable-services.html["為 VMware vSphere 服務啟用 ONTAP 工具"]
 .. 使用下列步驟ONTAP tools for VMware vSpherelink:../protect/configure-on-srm-appliance.html["在 VMware Live Site Recovery 應用裝置上設定 SRA"]。
-.. 在 VMware Live Site Recovery 使用者介面頁面上，執行 * 探索陣列 * 和 * 探索裝置 * 作業，並確認裝置在移轉之前顯示為。
+.. 在 VMware Live Site Recovery 介面上，運行 *Discover Arrays* 和 *Discover Devices*。確認設備顯示與遷移前相同。
 
 
 

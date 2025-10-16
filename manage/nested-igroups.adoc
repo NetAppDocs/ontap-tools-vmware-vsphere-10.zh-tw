@@ -11,9 +11,9 @@ summary:
 
 
 [role="lead"]
-在管理ONTAP工具虛擬機器和ONTAP儲存系統時，了解 igroup 行為至關重要，尤其是在將資料儲存從非ONTAP工具環境遷移到ONTAP工具管理時。本節介紹在此轉換過程中如何更新 igroup。
+如果您同時管理ONTAP工具虛擬機器和ONTAP儲存系統，那麼了解 igroup 的行為方式非常重要，尤其是在將資料儲存區從不受 ONTAP 工具管理的環境移至受ONTAP工具管理的環境時。本節介紹在此過程中如何更新 igroup。
 
-從適用於ONTAP tools for VMware vSphere開始，透過在 VMware 資料中心環境中自動建立和維護ONTAP和 vCenter 對象，資料儲存管理得到了簡化。
+ONTAP tools for VMware vSphere會自動建立和維護ONTAP和 vCenter 對象，以簡化 VMware 資料中心環境中的資料儲存管理。
 
 ONTAP tools for VMware vSphere在兩種不同的上下文中解釋 igroup：
 
@@ -41,7 +41,7 @@ image:../media/otv-managed2.png["ONTAP工具管理的 igroup 具有重複使用�
 
 *當您使用自訂 igroup 名稱建立資料儲存空間時*
 
-在ONTAP工具中建立資料儲存區時，您可以輸入自訂 igroup 名稱，而不是從下拉清單中選擇。然後， ONTAP工具會使用您指定的名稱在資料儲存層級建立一個父 igroup。如果相同主機用於多個資料存儲，則會重複使用現有的主機級（子）igroup。因此，新資料儲存區的 LUN 將對應到此現有子 igroup，該子 igroup 現在可能與多個父 igroup 相關聯（每個資料儲存區一個）。  vCenter Server 使用者介面資料儲存清單確認已成功建立具有自訂 igroup 名稱的新資料儲存體。
+在ONTAP工具中建立資料儲存區時，您可以輸入自訂 igroup 名稱，而不是從下拉清單中選擇。然後， ONTAP工具會使用您指定的名稱在資料儲存層級建立一個父 igroup。如果相同主機用於多個資料存儲，則會重複使用現有的主機級（子）igroup。因此，新資料儲存區的 LUN 將對應到此現有子 igroup，該子 igroup 現在可能與多個父 igroup 相關聯（每個資料儲存區一個）。您可以在 vCenter Server 介面中看到具有自訂 igroup 名稱的新資料儲存。
 
 *在建立資料儲存區期間重複使用 igroup 名稱時*
 
@@ -59,10 +59,10 @@ image:../media/vmfsds-native.png["本地建立的資料儲存區和 igroup"]
 
 image:../media/otv-ds.png["由ONTAP工具管理的資料儲存和 igroup"]
 
-您可以直接在 vCenter Server 中建立資料儲存庫，然後將其納入ONTAP工具管理。首先，在ONTAP系統中建立一個平面 igroup 並將 LUN 對應到它。在ONTAP工具中執行資料儲存發現後，平面 igroup 將轉換為巢狀結構。然後， ONTAP工具會管理 igroup，並使用「otv_」前綴對其進行重新命名。在此過程中，LUN 仍然對應到同一個 igroup。
+在ONTAP工具中執行資料儲存發現後， ONTAP工具會將平面 igroup 轉換為巢狀結構。然後， ONTAP工具會管理 igroup，並使用「otv_」前綴對其進行重新命名。在此過程中，LUN 仍然對應到同一個 igroup。
 
 ONTAP工具如何重複使用本機所建立的 igroup
 
-您可以使用最初在ONTAP系統中建立的 igroup 在ONTAP工具中設定資料儲存庫，然後由ONTAP工具進行管理。這些 igroup 出現在自訂啟動器群組名稱下拉清單中。然後，資料儲存區的新 LUN 將會對應到對應的規範化子 igroup，例如「otv_NativeIgroup1」。
+您可以使用在ONTAP系統中首次建立的 igroup 在ONTAP工具中建立資料儲存庫，然後由ONTAP工具對其進行管理。這些 igroup 出現在自訂啟動器群組名稱下拉清單中。然後，資料儲存區的新 LUN 將會對應到對應的規範化子 igroup，例如「otv_NativeIgroup1」。
 
 ONTAP tools for VMware vSphere不會偵測或使用在ONTAP系統中建立的、未由ONTAP工具管理或未連結到資料儲存的 igroup。

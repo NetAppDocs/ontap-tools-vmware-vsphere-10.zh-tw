@@ -13,15 +13,16 @@ summary: HA 和非 HA 部署均支援升級。
 [role="lead"]
 您可以從ONTAP tools for VMware vSphere升級到 10.5。但是，要從ONTAP工具 10.0、10.1 或 10.2 升級到 10.5，必須先升級到 10.3 或 10.4，然後再升級到 10.5。
 
-附註：
-
+[NOTE]
+====
 * 對於ASA r2 系統，在設定更多儲存可用區 (SAZ) 之前，請確保將ONTAP tools for VMware vSphere升級至 10.5，將ONTAP至 9.16.1。
 * 如果從ONTAP tools for VMware vSphere升級到 10.5 失敗，則無法回滾。使用低 RPO 或快照恢復來恢復設定。對於ONTAP tools for VMware vSphere，使用零 RPO 來還原設定。
 
 
+====
 .開始之前
-* 確保ONTAP系統憑證和已加入的 vCenter 憑證有效期限至少為 5 天。如果提前過期，升級將失敗。
-* 為確保安全性升級，請驗證您的憑證是否包含主題備用名稱 (SAN) 項目。如果您的憑證缺少 SAN 項目並且您需要繼續升級，您可以將憑證驗證標誌設為 false 以在升級期間繞過 SAN 檢查。
+* 確保ONTAP系統憑證和已加入的 vCenter 憑證有效期限至少為 5 天。如果憑證提前過期，升級將失敗。
+* 為確保安全性升級，請驗證您的憑證是否包含主題備用名稱 (SAN) 項目。如果憑證缺少 SAN 項目，請將憑證驗證標誌設為 false 以在升級期間繞過 SAN 檢查。
 * 確保所有節點上都有第五個磁碟，容量為 100 GB。
 * 驗證節點配置是否符合下表中的規格。
 
