@@ -13,6 +13,9 @@ summary: 您可以使用「Mount vVols Datastore」（掛載vVols Datastore）�
 [role="lead"]
 您可以將 VMware 虛擬磁碟區（ vVols ）資料存放區掛載到一或多個額外主機、以提供對其他主機的儲存存取。您只能透過 API 卸載 vVols 資料存放區。
 
+
+NOTE: 當您使用以下方式新增新的 ESXi 主機時： https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/use-quickstart-to-add---host-to-a-cluster.html["將 ESX 主機新增至 vSphere 叢集工作流程"]等待計劃的主機發現完成，然後它才會出現在ONTAP工具中。或者，您可以從NetApp ONTAP工具概覽畫面手動執行發現。
+
 .步驟
 . 從 vSphere Client 首頁、選取 * 主機與叢集 * 。
 . 在導覽窗格中，選取包含資料存放區的資料中心。
@@ -20,4 +23,7 @@ summary: 您可以使用「Mount vVols Datastore」（掛載vVols Datastore）�
 . 在 * 掛載主機上的資料存放區 * 對話方塊中，選取要掛載資料存放區的主機，然後選取 * 掛載 * 。
 
 
-您可以在最近的工作面板中追蹤進度。
+最近任務面板會顯示進度。
+
+.相關主題
+link:../manage/add-vsphere-host.html["新增新的 VMware vSphere 主機"]

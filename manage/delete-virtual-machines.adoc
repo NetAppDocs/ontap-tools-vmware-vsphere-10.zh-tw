@@ -11,7 +11,7 @@ summary: 使用本節中的步驟執行 VASA 清理。
 
 
 [role="lead"]
-使用本節中的步驟執行 VASA 清理。
+請按照以下說明完成 VASA 清理程序。
 
 
 NOTE: 建議您在執行 VASA 清理之前、先移除任何 VVols 資料存放區。

@@ -24,6 +24,8 @@ entries:
   url: "/manage/enable-services.html"
 - title: 變更適用於 VMware vSphere 組態的 ONTAP 工具
   url: "/manage/edit-appliance-settings.html"
+- title: 新增新的 VMware vSphere 主機
+  url: "/manage/add-vsphere-host.html"
 - title: 管理資料存放區
   entries:
   - title: 掛載 NFS 和 VMFS 資料存放區

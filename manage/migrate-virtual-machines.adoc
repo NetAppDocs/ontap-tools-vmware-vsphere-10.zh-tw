@@ -24,7 +24,7 @@ summary: 在資料中心中移轉現有虛擬機器時，您應該注意一些�
 * 不同ESXi主機中的不同相容vVols資料存放區
 
 
-如果虛擬機器移轉至不同的 FlexVol Volume 、則個別的中繼資料檔案也會隨虛擬機器資訊一起更新。如果虛擬機器移轉至不同的 ESXi 主機、但儲存設備相同、則基礎 FlexVol Volume 中繼資料檔案將不會修改。
+如果將虛擬機器遷移到不同的FlexVol volume，系統會使用虛擬機器資訊更新該磁碟區的元資料檔案。如果虛擬機器遷移到不同的 ESXi 主機但相同的存儲，則底層FlexVol volume元資料檔案將不會被修改。
 
 
 
@@ -60,4 +60,4 @@ VMware 目前不支援將虛擬機器複製到 VM 範本。
 
 您也無法保護具有記憶體快照的未受保護的虛擬機器。對於此版本，您需要在啟用虛擬機器保護之前刪除記憶體快照。
 
-對於具有 ASA R2 儲存類型的 Windows VM ，當您拍攝虛擬機器快照時，它將是唯讀快照。當 VM 有開機呼叫時， VASA Provider 會使用唯讀快照建立 LUN ，然後啟用其 IOPS 。在關機要求期間， VASA Provider 會刪除建立的 LUN ，然後停用 IOPS 。
+對於採用ASA r2 儲存類型的 Windows VM，虛擬機器的快照是唯讀的。當您啟動虛擬機器時，VASA Provider 會從唯讀快照建立 LUN 並啟用 IOPS。關閉虛擬機器電源時，VASA Provider 會刪除 LUN 並停用 IOPS。

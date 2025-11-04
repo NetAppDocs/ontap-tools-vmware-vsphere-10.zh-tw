@@ -11,13 +11,13 @@ summary: 卸載資料存放區動作會從 ESXi 主機卸載 NFS 或 VMFS 資料
 
 
 [role="lead"]
-卸載資料存放區動作會從 ESXi 主機卸載 NFS 或 VMFS 資料存放區。卸載資料存放區動作會針對 ONTAP 工具為 VMware vSphere 探索或管理的 NFS 和 VMFS 資料存放區啟用。
+卸載資料儲存操作會從 ESXi 主機中刪除 NFS 或 VMFS 資料儲存。它適用於由ONTAP tools for VMware vSphere發現或管理的資料儲存。
 
 .步驟
 . 登入 vSphere 用戶端。
 . 右鍵點選 NFS 或 VMFS 資料儲存物件並選擇*卸載資料儲存*。
 +
-此時會開啟一個對話方塊、並列出已掛載資料存放區的 ESXi 主機。在受保護的資料存放區上執行作業時、畫面上會顯示警告訊息。
+vSphere 用戶端開啟一個對話框，列出掛載資料儲存的 ESXi 主機。當對受保護的資料儲存體執行操作時，螢幕上會顯示警告訊息。
 
 . 選取一或多個 ESXi 主機以卸載資料存放區。
 +

@@ -13,6 +13,9 @@ summary: 安裝資料存放區可讓儲存設備存取其他主機。將主機�
 [role="lead"]
 安裝資料存放區可讓儲存設備存取其他主機。將主機新增至VMware環境之後、即可將資料存放區掛載到其他主機上。
 
+
+NOTE: 當您使用以下方式新增新的 ESXi 主機時： https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/use-quickstart-to-add---host-to-a-cluster.html["將 ESX 主機新增至 vSphere 叢集工作流程"]等待計劃的主機發現完成，然後它才會出現在ONTAP工具中。或者，您可以從NetApp ONTAP工具概覽畫面手動執行發現。
+
 .關於這項工作
 * 視 vSphere 用戶端版本和選取的資料存放區類型而定，某些按滑鼠右鍵動作會停用或無法使用。
 +
@@ -20,15 +23,18 @@ summary: 安裝資料存放區可讓儲存設備存取其他主機。將主機�
 ** 從 vSphere 7.0U3 到 vSphere 8.0 版本，即使出現選項，動作仍會停用。
 
 
-* 當主機叢集受到統一組態的保護時，裝載資料存放區選項會停用。
+* 當主機叢集受到統一配置保護時，vSphere 會停用掛載資料儲存選項。
 
 
 .步驟
 . 從 vSphere Client 首頁、選取 * 主機與叢集 * 。
 . 在左側導覽窗格中，選取包含主機的資料中心。
-. 若要在主機或主機叢集上掛載 NFS/VMFS 資料存放區，請按一下滑鼠右鍵，然後選取 * NetApp ONTAP tools* > * Mount Datastores* 。
+. 若要在主機或主機叢集上掛載 NFS/VMFS 資料存儲，請右鍵單擊並選擇 * NetApp ONTAP工具 * > *掛載資料儲存 *。
 . 選取您要掛載的資料存放區，然後選取 * 掛載 * 。
 
 
 .接下來呢？
 您可以在最近的工作面板中追蹤進度。
+
+.相關主題
+link:../manage/add-vsphere-host.html["新增新的 VMware vSphere 主機"]

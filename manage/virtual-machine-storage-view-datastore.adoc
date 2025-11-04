@@ -11,10 +11,10 @@ summary: 儲存檢視會顯示虛擬機器所建立的 vVols 清單。
 
 
 [role="lead"]
-儲存檢視會顯示虛擬機器所建立的 vVols 清單。
+儲存視圖顯示虛擬機器建立的vVols清單。
 
 
-NOTE: 此檢視適用於虛擬機器、虛擬機器上至少安裝了一種 ONTAP 工具、可用於 VMware vSphere 託管的 VVols 資料存放區相關磁碟。
+NOTE: 此視圖適用於至少有一個來自ONTAP tools for VMware vSphere管理的vVols資料儲存的磁碟的虛擬機器。
 
 .步驟
 . 從 vSphere Client 轉到虛擬機器。

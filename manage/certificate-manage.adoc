@@ -11,12 +11,14 @@ summary: VMware vSphere 的單一 ONTAP 工具執行個體可管理多個 vCente
 
 
 [role="lead"]
-根據預設，在部署期間會為 ONTAP 工具和 VASA Provider 產生自我簽署的憑證。使用 ONTAP 工具管理員介面，您可以更新憑證或將其升級至自訂 CA 。在多個 vCenter 部署中，自訂 CA 憑證是必要的。
+部署期間預設為ONTAP工具和 VASA Provider 產生自簽章憑證。使用ONTAP工具管理器介面，您可以更新憑證或將其升級為自訂 CA。在多重 vCenter 部署中，必須使用自訂 CA 憑證。
 
 .開始之前
-* 憑證所核發的網域名稱應對應至虛擬 IP 位址。
-* 對網域名稱執行 nsLOOKUP 檢查，檢查網域是否已解析為預期的 IP 位址。
-* 應使用網域名稱和 ONTAP 工具 IP 位址來建立憑證。
+在開始之前，您應該準備好以下物品：
+
+* 網域名稱已對應到虛擬 IP 位址。
+* 成功執行網域名稱 nslookup 查詢，確認其解析到正確的 IP 位址。
+* 使用網域名稱和ONTAP工具 IP 位址建立的憑證。
 
 
 

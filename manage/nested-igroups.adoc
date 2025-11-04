@@ -11,7 +11,7 @@ summary:
 
 
 [role="lead"]
-如果您同時管理ONTAP工具虛擬機器和ONTAP儲存系統，那麼了解 igroup 的行為方式非常重要，尤其是在將資料儲存區從不受 ONTAP 工具管理的環境移至受ONTAP工具管理的環境時。本節介紹在此過程中如何更新 igroup。
+如果您同時管理ONTAP工具虛擬機器和ONTAP儲存系統，那麼了解 igroup 的行為方式非常重要，尤其是在將資料儲存區從不受 ONTAP 工具管理的環境移至受ONTAP工具管理的環境時。本頁解釋了在此過程中 igroup 是如何更新的。
 
 ONTAP tools for VMware vSphere會自動建立和維護ONTAP和 vCenter 對象，以簡化 VMware 資料中心環境中的資料儲存管理。
 

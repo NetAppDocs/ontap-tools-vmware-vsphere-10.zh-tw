@@ -16,7 +16,7 @@ summary: 適用於 VMware vSphere 的 ONTAP 工具的「組態」索引標籤下
 .步驟
 . 從 vSphere 用戶端轉到資料儲存。
 . 選擇右窗格中的 * 組態 * 標籤。
-. 選擇 * NetApp ONTAP tools* > * ONTAP Storage* 。視資料存放區類型而定，檢視會變更。如需詳細資訊，請參閱下表：
+. 選擇 * NetApp ONTAP工具* > * ONTAP儲存*。視圖會根據資料儲存類型而變更。請參考下表：
 
 
 |===
@@ -31,5 +31,5 @@ summary: 適用於 VMware vSphere 的 ONTAP 工具的「組態」索引標籤下
 | VMFS 資料存放區 | 「 * 儲存詳細資料 * 」頁面包含儲存後端，集合體，磁碟區和儲存可用性區域（ SAZ ）詳細資料。「 * 儲存單元詳細資料 * 」頁面包含儲存單元的詳細資料。 
 
 
-| VVols 資料存放區 | 列出所有磁碟區。您可以從 ONTAP 儲存窗格中展開或移除儲存設備。ASA R2 系統型 VVols 資料存放區不支援此檢視。 
+| VVols 資料存放區 | 列出所有捲。您可以從ONTAP儲存窗格擴充或刪除儲存。ONTAP工具不支援基於ASA r2 系統的vVols資料儲存的此視圖。 
 |===

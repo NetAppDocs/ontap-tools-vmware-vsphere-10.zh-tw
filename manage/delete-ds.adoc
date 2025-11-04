@@ -11,7 +11,7 @@ summary: 刪除資料存放區動作會刪除資料存放區。在 NFS 或 VMFS 
 
 
 [role="lead"]
-本節介紹如何使用 vCenter Server 中的ONTAP工具刪除 NFS、VMFS 或vVols資料儲存庫。
+本頁介紹如何使用 vCenter Server 中的ONTAP工具刪除 NFS、VMFS 或vVols資料儲存。
 
 刪除資料儲存區時，將根據資料儲存區類型執行以下操作：
 
@@ -33,7 +33,7 @@ NOTE: 您無法刪除虛擬機器使用的資料儲存區。刪除之前，將�
 +
 .. 對於 NFS 或 VMFS 資料存儲，將出現一個對話框，其中列出使用該資料儲存的虛擬機器清單。
 .. 如果沒有虛擬機器與 VMFS 資料儲存關聯，您將看到確認對話方塊。如果啟用了主機叢集保護並且存在 AFD 關係，則可以清理輔助儲存元素。
-.. 對於ASA r2 系統上受保護的 VMFS 資料儲存區，請確保在刪除之前取消保護。從ONTAP 9.17.1 和ONTAP tools for VMware vSphere開始，您可以移除受保護的資料儲存庫。如果它是保護群組中唯一的資料存儲，則會自動刪除主機叢集保護。
+.. 對於ASA r2 系統上的受保護 VMFS 資料存儲，請在刪除之前移除保護。從ONTAP 9.17.1 和ONTAP tools for VMware vSphere開始，您可以移除受保護的資料儲存庫。如果它是保護群組中唯一的資料存儲，則主機叢集保護會自動移除。
 .. 對於vVols資料存儲，僅當不存在vVols時才可以刪除資料儲存。  *刪除資料儲存*對話方塊包含從ONTAP叢集中刪除磁碟區的選項。
 .. 對於ASA r2 系統上的vVols資料存儲，您無法使用 *刪除資料存儲* 選項從ONTAP中刪除後備卷。
 
@@ -45,4 +45,4 @@ NOTE: 對於統一ONTAP儲存上屬於受保護主機叢集的 VMFS 資料儲存
 
 
 
-當您刪除 NFS、VMFS 或vVols資料儲存庫時，父 igroup 仍保留在ONTAP系統上。未對應到任何 LUN 的子 igroup 將會自動刪除。 ONTAP工具每天執行清理以刪除未對應的預設父 igroup。必須在ONTAP中手動刪除自訂父 igroup。任何剩餘的父 igroup 都會變得陳舊，並且無法被ONTAP工具重複使用。
+當您刪除 NFS、VMFS 或vVols資料儲存庫時，父 igroup 仍保留在ONTAP系統上。未對應到任何 LUN 的子 igroup 將會自動刪除。ONTAP工具每天執行清理以刪除未對應的預設父 igroup。在ONTAP中手動刪除自訂父級 igroup。  ONTAP工具無法重複使用過時的父 igroup。

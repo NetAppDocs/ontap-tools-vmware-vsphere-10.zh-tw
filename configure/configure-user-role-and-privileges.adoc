@@ -104,7 +104,7 @@ sti115_vsim_ucs630f_aggr1 vserver show-aggregates                               
 
 === 非管理員全域範圍叢集使用者所需的最低權限清單
 
-本節列出了沒有 JSON 檔案的非管理員全域範圍叢集使用者所需的最低權限。如果叢集處於本機範圍內，請使用 JSON 檔案建立用戶，因為適用ONTAP tools for VMware vSphere需要的不僅僅是在ONTAP上進行設定的讀取權限。
+本頁列出了沒有 JSON 檔案的非管理員全域作用域叢集使用者所需的最低權限。如果叢集處於本機範圍內，請使用 JSON 檔案建立用戶，因為適用ONTAP tools for VMware vSphere需要的不僅僅是在ONTAP上進行設定的讀取權限。
 
 您可以使用 API 存取功能：
 
