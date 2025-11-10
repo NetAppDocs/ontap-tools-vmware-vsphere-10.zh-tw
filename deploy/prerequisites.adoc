@@ -94,7 +94,10 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 
 NOTE: 確保所有ONTAP工具節點位於同一子網，以保持彼此之間不間斷的通訊。
 
+點選展開或折疊連接埠要求表。
 
+[%collapsible]
+====
 |===
 | *服務/元件名稱* | *連接埠* | *傳輸協定* | *連接埠類型* | *說明* 
 
@@ -152,6 +155,7 @@ NOTE: 確保所有ONTAP工具節點位於同一子網，以保持彼此之間不
 
 NOTE: 對於高可用性部署，請確保所有節點之間都已開啟 UDP 連接埠 8472。此連接埠支援跨節點的 pod 間通訊；阻塞此連接埠將中斷節點間網路連線。
 
+====
 
 
 == 部署 VMware vSphere ONTAP 工具的組態限制

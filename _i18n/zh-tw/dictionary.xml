@@ -204,9 +204,6 @@
   <block id="ad9681c4b067c102640e512ffe944ae5" category="paragraph">確保 VASA Provider 未在您計畫移轉的任何虛擬機器上執行。如果您將執行VASA Provider的虛擬機器移轉至vVols資料存放區、則無法執行任何管理作業、包括啟動vVols資料存放區上的虛擬機器。</block>
   <block id="87dd176d02dc14ceef36faeb3b3e32ae" category="paragraph">當您從 NFS 和 VMFS 資料存放區移轉至 vVols 資料存放區時、 vCenter Server 會使用 vStorage API 進行陣列整合（ VAAI ）、從 VMFS 資料存放區移除資料、而非從 NFS VMDK 檔案移除資料。VAAI通常會卸載、減少主機上的負載。</block>
   <block id="951d3fc54a28f9f46798897467d96a5b" category="doc">管理憑證</block>
-  <block id="a6f65a806180d1ff3c8d5e553e634e9d" category="summary">您可以使用維護主控台更新 vCenter Server 和 ONTAP 認證。</block>
-  <block id="f72e000ebb4c7bedf651a46e595f1371" category="doc">更新 vCenter Server 和 ONTAP 認證</block>
-  <block id="7ac19aa441feceb73519a5108d4cc366" category="paragraph">您可以使用維護主控台更新 vCenter Server 執行個體和 ONTAP 認證。</block>
   <block id="21a56b485fb6cd9f7c9cc8f514440950" category="paragraph">您必須擁有維護使用者登入認證。</block>
   <block id="2e7ce9d8495225c584175fd7caa148ce" category="summary">適用於 VMware vSphere 外掛程式的 ONTAP 工具可提供虛擬機器和資料存放區的報告。</block>
   <block id="bd294460cf119253eaf3ca5c5ff6bb68" category="summary">在重新啟動來賓作業系統作業期間、 grub 功能表會顯示重設維護主控台使用者密碼的選項。 </block>
@@ -475,7 +472,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="ec874bf582309d24e5c0f1f38429fb73" category="inline-link-macro">將 VASA Provider 登錄至 vCenter Server</block>
   <block id="63bc9a3997d66d835d9f3ec29451407d" category="cell">修補程式</block>
   <block id="b06f0e274f6c746f0d30521b5c7f392e" category="list-text">將適用於 VMware vSphere 的 ONTAP 工具升級 ISO 上傳至內容庫。</block>
-  <block id="dd5382558ec4a47dfbc203fb25698772" category="list-text">在主 VM 頁面中，選擇 * Actions * &gt; * Edit Settings*</block>
   <block id="6aa61138e01e77bb590500715db216a4" category="list-text">升級時、系統會自動執行下列動作：</block>
   <block id="ea228e7ce90fb22b7336716e47dc7d35" category="summary">本頁概述適用於 VMware vSphere 系統的 ONTAP 工具升級作業的錯誤代碼。</block>
   <block id="f804f395829e966ca161a8be7756fec4" category="doc">升級錯誤代碼</block>
@@ -576,8 +572,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="71a16bd19bda0e91c90a56e37682dc0d" category="list-text">執行 Perl 命令、以新認證設定 SRA ：</block>
   <block id="a40a3427484ba9037317f84856abff69" category="list-text">選取所需的陣列配對、並驗證對應的詳細資料。</block>
   <block id="cea5a13834803a12adaeb249165351df" category="list-text">輸入<block ref="c81e728d9d4c2f636f067f89cc14862c" prefix=" " category="inline-code"></block> 以選取系統組態功能表。</block>
-  <block id="86ce6e9c3af571980099ca308cd245e3" category="list-text">輸入<block ref="45c48cce2e2d7fbdea1afc51c7c6ad26" prefix=" " category="inline-code"></block> 以變更 ONTAP 認證。</block>
-  <block id="207c00a73dde0270cc0fbc7ce9c5f2fd" category="list-text">輸入<block ref="d3d9446802a44259755d38e6d163e820" prefix=" " category="inline-code"></block> 以變更 vCenter 認證。</block>
   <block id="ab475951501b4995dc2913e61372d546" category="section-title">雙堆疊</block>
   <block id="5541521d8d465590f0919510f29154b2" category="summary">部署 VMware vSphere ONTAP 工具的組態限制</block>
   <block id="96c7de8d06430bb8621d9ca29f8bf76b" category="paragraph">您可以使用下表做為指南、為 VMware vSphere 設定 ONTAP 工具。</block>
@@ -677,7 +671,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="174e0bb9fd863076b8b78d2ca9e0dd08" category="sidebar">掛載 NFS 和 VMFS 資料存放區</block>
   <block id="41d4fa725cfb558559b7183adeea1e30" category="sidebar">卸載 NFS 和 VMFS 資料存放區</block>
   <block id="e6e4c7644f1b4ac0c9a1fa2e3a633259" category="sidebar">展開 vVol 資料存放區</block>
-  <block id="0b05bd7cf8d32e0eca345c170c1c2bdd" category="sidebar">更新 vCenter 伺服器和 ONTAP 認證</block>
   <block id="b380edc36b1ed383fd72d0b93d5857c5" category="sidebar">管理主機叢集保護</block>
   <block id="430cbe0d7261af556b6d05cea5b38e0e" category="sidebar">修改主機叢集保護</block>
   <block id="4fb2d974d1e232174a0545c1d40f5345" category="section-title">VMware Live Site Recovery</block>
@@ -2440,8 +2433,18 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="0e527af09bb57a137d15be7b82466174" category="cell">列出所有捲。您可以從ONTAP儲存窗格擴充或刪除儲存。ONTAP工具不支援基於ASA r2 系統的vVols資料儲存的此視圖。</block>
   <block id="c39c392ff0013e0b93fcc63dc310cc30" category="paragraph">卸載資料儲存操作會從 ESXi 主機中刪除 NFS 或 VMFS 資料儲存。它適用於由ONTAP tools for VMware vSphere發現或管理的資料儲存。</block>
   <block id="0901929c9c2cc418f53328e6412b7d46" category="paragraph">vSphere 用戶端開啟一個對話框，列出掛載資料儲存的 ESXi 主機。當對受保護的資料儲存體執行操作時，螢幕上會顯示警告訊息。</block>
-  <block id="e65e1eb2c16cb3c35af4e401b566b7c4" category="paragraph">如果部署後變更了 vCenter Server、 ONTAP或 Data LIF 憑證，請使用此程序更新它們。</block>
   <block id="69e03ac4326032eeb38fb3fcf35c7ff6" category="paragraph">儲存視圖顯示虛擬機器建立的vVols清單。</block>
   <block id="6dc534da8e148f3344a75f75993a7078" category="admonition">此視圖適用於至少有一個來自ONTAP tools for VMware vSphere管理的vVols資料儲存的磁碟的虛擬機器。</block>
   <block id="c94984b666995a59419ca0857f214e23" category="list-text">輸入*2*選擇*系統配置*選單。</block>
+  <block id="bac860f1d4bb4c20d8de991eeeedd998" category="paragraph">點選展開或折疊連接埠要求表。</block>
+  <block id="f59d6f6c2fbe5659bab55bb335b17871" category="summary">您可以使用維護控制台更新 vCenter Server 憑證。</block>
+  <block id="d546c3915b2e0bc231d2bd0456f2d736" category="doc">更新 vCenter Server 憑證</block>
+  <block id="6e73e8087488ddc10c72aeec0f27cc93" category="paragraph">您可以使用維護控制台更新 vCenter Server 執行個體憑證。</block>
+  <block id="f13c11fc9998fa4e2d133fe7f943fb4f" category="paragraph">如果部署後變更了 vCenter Server 憑證，請使用此程序更新它們。</block>
+  <block id="a38dbe6982c223d82e53b7d0feab69ce" category="list-text">進入<block ref="c9f0f895fb98ab9159f51fd0297e236d" prefix=" " category="inline-code"></block> 變更 vCenter 憑證。</block>
+  <block id="b09a768d508454c0e540ea7b37cb5509" category="paragraph">請參閱 <block ref="afe6cee65a7db7868c8d2eef90c140e6" category="inline-link-macro-rx"></block> 和 <block ref="da3a0196b755588b543a28093241fcfa" category="inline-link-macro-rx"></block> 有關備份和復原的更多資訊。</block>
+  <block id="a928a1b805644ea87a643f7f8d60a477" category="list-text">在主 VM 頁面中，選擇「操作」&gt;「編輯設定」。若要確定主虛擬機器名稱：</block>
+  <block id="75a86edd37c9b2122be450b28fa09149" category="list-text">在任意節點上啟用診斷 shell</block>
+  <block id="e016d50ae26af4214e6a864c1c2c8db5" category="list-text">運行以下命令：<block ref="1ebe86b64a17c55ae52f4488cffae75f" prefix=" " category="inline-code"></block></block>
+  <block id="e40ec845cea3d17ed090f7fc08824c3f" category="sidebar">更新 vCenter 伺服器憑證</block>
 </blocks>

@@ -48,11 +48,20 @@ summary: HA 和非 HA 部署均支援升級。
 * 確保已啟用 CPU 和 RAM 的熱插拔。
 * 對於ONTAP tools for VMware vSphere，請在升級之前在ONTAP工具虛擬機器上拍攝靜默快照。
 * 啟用低 RPO 備份並確保在 vCenter Client 介面中可見一個備份。
++
+請參閱 link:../manage/backup-settings.html["編輯備份設定"] 和 link:../manage/recover-backup.html["恢復ONTAP工具設定"] 有關備份和復原的更多資訊。
+
 
 
 .步驟
 . 將適用於 VMware vSphere 的 ONTAP 工具升級 ISO 上傳至內容庫。
-. 在主 VM 頁面中，選擇 * Actions * > * Edit Settings*
+. 在主 VM 頁面中，選擇「操作」>「編輯設定」。若要確定主虛擬機器名稱：
++
+.. 在任意節點上啟用診斷 shell
+.. 運行以下命令：
+`grep sourceHost /opt/netapp/meta/ansible_vars.yaml`
+
+
 . 在編輯設定視窗中的*CD/DVD 磁碟機*欄位下選擇*內容庫 ISO 檔案*。
 . 選擇 ISO 文件，選取 *CD/DVD 磁碟機* 欄位的 *已連接* 框，然後按一下 *確定*。
 . 從 vCenter Server 開啟 ONTAP 工具的主控台。
