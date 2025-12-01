@@ -11,7 +11,7 @@ summary: 使用ONTAP tools for VMware vSphere和ONTAP System Manager 的 ONTAP �
 
 
 [role="lead"]
-使用ONTAP tools for VMware vSphere和ONTAP System Manager 的 ONTAP 工具中的 JSON 檔案為儲存後端設定使用者角色和權限。
+使用此部分配置適用ONTAP tools for VMware vSphere和ONTAP System Manager 的 ONTAP 工具，以設定儲存後端的ONTAP使用者角色和權限。您可以使用提供的 JSON 檔案指派角色，手動建立使用者和角色，並為非管理員帳戶套用所需的最低權限。
 
 .開始之前
 * 使用 _\https://<ONTAPtoolsIP>:8443/virtualization/user-privileges/users_roles.zip_ 從ONTAP tools for VMware vSphere下載ONTAPPrivileges檔。下載 zip 檔案後，您會發現兩個 JSON 檔案。設定ASA r2 系統時使用ASA r2 特定的 JSON 檔案。

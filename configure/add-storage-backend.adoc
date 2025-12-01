@@ -11,13 +11,13 @@ summary: 儲存設備後端是 ESXi 主機用於資料儲存的系統。
 
 
 [role="lead"]
-當您將儲存後端新增至ONTAP工具時，您可以直接從 vCenter Server 設定和管理資料儲存庫。
+使用ONTAP tools for VMware vSphere為 ESXi 主機新增和管理儲存後端。您可以部署叢集或 SVM，啟用MetroCluster支持，並驗證憑證以確保安全連線。您可以使用ONTAP工具管理器或 vSphere 用戶端設定儲存後端，監控憑證狀態，並在叢集變更後手動重新發現資源。
 
-若要在本機新增儲存後端，請在ONTAP工具介面中使用叢集或 SVM 憑證。這些儲存後端僅適用於選定的 vCenter Server。 ONTAP工具將 SVM 對應到 vCenter Server 以進行vVols或 VMFS 資料儲存庫管理。對於 VMFS 資料儲存和 SRA 工作流程，您可以使用 SVM 憑證，而無需全域映射的叢集。
+若要在本機新增儲存後端，請在ONTAP工具介面中使用叢集或 SVM 憑證。本機儲存後端僅對選定的 vCenter Server 可用。ONTAP工具將 SVM 對應到 vCenter Server 以進行vVols或 VMFS 資料儲存庫管理。對於 VMFS 資料儲存和 SRA 工作流程，您可以使用 SVM 憑證而無需全域映射叢集。
 
-您可以使用ONTAP工具管理器中的ONTAP叢集憑證新增全域儲存後端。全域儲存後端支援發現工作流程來識別 vVol 管理所需的叢集資源。在多租用戶設定中，您可以在本機新增 SVM 使用者來管理vVols資料儲存。
+若要新增全域儲存後端，請在ONTAP工具管理器中使用ONTAP叢集憑證。全域儲存後端支援發現工作流程，以識別 vVol 管理所需的叢集資源。在多租用戶環境中，您可以本機新增 SVM 使用者來管理vVols資料儲存。
 
-在ONTAP系統中啟用MetroCluster支援時，將來源叢集和目標叢集都以本機或全域儲存後端加入。
+如果ONTAP中啟用了MetroCluster支持，則將來源叢集和目標叢集都作為本地或全域儲存後端加入。
 
 .開始之前
 驗證憑證是否包含有效的主題備用名稱 (SAN) 欄位。  ONTAP系統使用 SAN 欄位來識別叢集和 SVM 管理 LIF。

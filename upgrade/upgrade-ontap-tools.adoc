@@ -21,8 +21,8 @@ summary: HA 和非 HA 部署均支援升級。
 
 ====
 .開始之前
+* 確保所有節點均處於活動狀態。
 * 確保ONTAP系統憑證和已加入的 vCenter 憑證有效期限至少為 5 天。如果憑證提前過期，升級將失敗。
-* 為確保安全性升級，請驗證您的憑證是否包含主題備用名稱 (SAN) 項目。如果憑證缺少 SAN 項目，請將憑證驗證標誌設為 false 以在升級期間繞過 SAN 檢查。
 * 確保所有節點上都有第五個磁碟，容量為 100 GB。
 * 驗證節點配置是否符合下表中的規格。
 
@@ -46,8 +46,8 @@ summary: HA 和非 HA 部署均支援升級。
 | HA 大型 | 17 | 34 | 350 | 51 | 102. | 1050 
 |===
 * 確保已啟用 CPU 和 RAM 的熱插拔。
-* 對於ONTAP tools for VMware vSphere，請在升級之前在ONTAP工具虛擬機器上拍攝靜默快照。
-* 啟用低 RPO 備份並確保在 vCenter Client 介面中可見一個備份。
+* 啟用低 RPO 備份，並確保 vCenter Client 介面中可見一個備份。升級前請下載備份資料夾。
+* 建議採用低 RPO 備份。但是，在非高可用性部署中，您可以在升級之前對ONTAP工具虛擬機器進行靜默快照。
 +
 請參閱 link:../manage/backup-settings.html["編輯備份設定"] 和 link:../manage/recover-backup.html["恢復ONTAP工具設定"] 有關備份和復原的更多資訊。
 
@@ -85,7 +85,8 @@ summary: HA 和非 HA 部署均支援升級。
 升級到適用ONTAP tools for VMware vSphere後：
 
 * 監控系統警報並計劃在一年內網關證書到期之前更新它。
-* 刪除ONTAP工具 10.4 或 10.3 SRA 適配器並上傳 10.5 SRA 適配器 tar 檔案。然後，重新掃描 SRA 適配器以更新 VMware Site Recovery 儲存複製適配器頁面。
+* 刪除ONTAP工具 10.4 或 10.3 SRA 適配器並上傳 10.5 SRA 適配器 tar 檔案。
+* 上傳 SRA 適配器 tar 檔案後，執行安裝指令。然後，重新掃描 SRA 適配器以更新 VMware Site Recovery Storage Replication Adapters 頁面。
 
 
 升級後您可以：

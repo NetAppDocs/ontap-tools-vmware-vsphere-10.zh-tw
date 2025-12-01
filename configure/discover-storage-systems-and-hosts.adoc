@@ -11,16 +11,15 @@ summary: 當您第一次在 vSphere Client 中執行適用於 VMware vSphere 的
 
 
 [role="lead"]
-當您第一次在 vSphere Client 中執行適用於 VMware vSphere 的 ONTAP 工具時、 ONTAP 工具會探索 ESXi 主機、其 LUN 和 NFS 匯出、以及擁有這些 LUN 和匯出的 NetApp 儲存系統。
+當首次在 vSphere Client 中啟動ONTAP tools for VMware vSphere時，它會自動發現 ESXi 主機、其關聯的 LUN 和 NFS 匯出，以及擁有這些資源的NetApp儲存系統。
 
 .開始之前
-* 所有 ESXi 主機均應開啟電源並進行連線。
-* 所有要探索的儲存虛擬機器（ SVM ）都應該在執行中、而且每個叢集節點至少應針對使用中的儲存傳輸協定（ NFS 或 iSCSI ）設定一個資料 LIF 。
+* 確保所有 ESXi 主機都已開啟並連線。
+* 確保所有要發現的儲存虛擬機器 (SVM) 都在運行，並且每個叢集節點至少配置了一個用於正在使用的儲存協定 (NFS 或 iSCSI) 的資料 LIF。
 
 
-*關於此工作*
-
-您可以隨時探索新的儲存系統或更新現有儲存系統的相關資訊、以取得最新的容量和組態資訊。您也可以修改 ONTAP 工具 for VMware vSphere 用於登入儲存系統的認證。
+.關於這項工作
+您可以了解新的儲存系統或更新現有系統，以取得最新的容量和設定詳情。您也可以變更ONTAP tools for VMware vSphere。
 
 在探索儲存系統的同時、適用於 VMware vSphere 的 ONTAP 工具會從 vCenter Server 執行個體所管理的 ESXi 主機收集資訊。
 
