@@ -10,6 +10,9 @@ summary: 移轉儲存資料時、會使用 REST API 手動建立儲存後端。�
 :imagesdir: ../media/
 
 
+[role="lead"]
+依照本節中的步驟，將 VASA 提供者從ONTAP tools for VMware vSphere移轉到ONTAP tools for VMware vSphere，並更新 VMware Live Site Recovery 裝置上的儲存複製適配器 (SRA)。
+
 
 
 == 遷移 VASA 提供者的步驟

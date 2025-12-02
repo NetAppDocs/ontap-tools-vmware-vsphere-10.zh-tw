@@ -1987,7 +1987,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="bf2ddf3529c43aaac032b60fd698afdf" category="admonition">在繼續部署之前，請將清單上的叢集分散式資源調度程式 (DRS) 設定為「保守」。這可確保虛擬機器在安裝期間不會被遷移。</block>
   <block id="e665d4f634eb279e3d3649d89dce4f3e" category="paragraph">ONTAP tools for VMware vSphere最初部署為非 HA 設定。若要擴充至高可用性部署，您需要啟用 CPU 熱插拔和記憶體熱插拔。您可以在部署過程中執行此步驟，也可以在部署後編輯虛擬機器設定。</block>
   <block id="76ecd43e2d7d963469ed779109b6621d" category="list-text">前往您打算部署 OVA 的資源池、叢集或主機。</block>
-  <block id="fb90c88e0a037c598666652371595d40" category="list-text">該資訊在安裝期間進行驗證。如果存在差異，Web 控制台上會出現錯誤訊息，並提示您進行修正。</block>
   <block id="a85cd355d0191e9ca39647db304e9886" category="list-text">前往*庫存*下的ONTAP tools for VMware vSphere並選擇*編輯設定*選項。</block>
   <block id="7bc1f449f84cbd0274b17756a6c88276" category="cell">ONTAP工具應用程式的 IP 位址。這是用於存取ONTAP工具 Web 介面（負載平衡器）的 IP 位址</block>
   <block id="0a975d248a4d2c7d423087028109208e" category="cell">ONTAP工具用於內部通訊的虛擬 IP 位址。此 IP 位址用於具有多個ONTAP工具實例的設定中的內部通訊。此 IP 位址不應與ONTAP工具應用程式的 IP 位址相同。 （Kubernetes 控制平面）</block>
@@ -2505,4 +2504,5 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="765335765cc8607272cb60cd0929a9e9" category="list-text">建議採用低 RPO 備份。但是，在非高可用性部署中，您可以在升級之前對ONTAP工具虛擬機器進行靜默快照。</block>
   <block id="750686b04dbf67a95b96fd8a0f1efb0f" category="list-text">刪除ONTAP工具 10.4 或 10.3 SRA 適配器並上傳 10.5 SRA 適配器 tar 檔案。</block>
   <block id="829b3830a5408ec70946282b75f9c6b7" category="list-text">上傳 SRA 適配器 tar 檔案後，執行安裝指令。然後，重新掃描 SRA 適配器以更新 VMware Site Recovery Storage Replication Adapters 頁面。</block>
+  <block id="070f340136b38d4a8c74afe9526b62dc" category="paragraph">依照本節中的步驟，將 VASA 提供者從ONTAP tools for VMware vSphere移轉到ONTAP tools for VMware vSphere，並更新 VMware Live Site Recovery 裝置上的儲存複製適配器 (SRA)。</block>
 </blocks>
