@@ -2477,13 +2477,11 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="073983521d52887782f4ac8fcd628e60" category="cell">ONTAP工具 10.2 及更高版本</block>
   <block id="ab83860ed087a089d00a21810f2a0bf7" category="cell">關鍵價值主張</block>
   <block id="4273cb76acdc3e1de02819d037c77ad4" category="cell">透過增強的安全性、合規性和自動化功能，簡化從第 0 天到第 2 天的運營</block>
-  <block id="9596f14660005b587cb5dfdcc52a84c9" category="cell">擴充支援包括 VMFS 的 FC 和 NVMe-oF/FC，以及僅適用於 VMFS 的 NVMe-oF/TCP。NetApp SnapMirror易於使用，vSphere Metro 儲存叢集設定簡單，並支援三站點 VMware Live Site Recovery</block>
   <block id="92d3c85edd0fa69062ef2c7cca594814" category="cell">ONTAP發布資格</block>
   <block id="f41628526d2ecef49849a9d54aec2d46" category="cell">ONTAP 9.9.1 升級至ONTAP 9.16.1</block>
   <block id="53f67abe3ae260cacfac7adeeda90377" category="cell">ONTAP 9.12.1 至 9.15.1 適用於ONTAP工具 10.2。適用於ONTAP工具 10.3 的ONTAP 9.14.1、9.15.1、9.16.0 和 9.16.1。適用於ONTAP工具 10.4 的ONTAP 9.14.1、9.15.1、9.16.0 和 9.16.1。使用ASA r2 系統時， ONTAP工具 10.4 需要ONTAP 9.16.1P3 及更高版本。適用於ONTAP工具 10.5 的ONTAP 9.15.1、9.16.0、9.16.1、9.17.0 和 9.17.1</block>
   <block id="d67ece44624c7aa69b0f38715d1ac2fb" category="cell">VMware 版本支持</block>
   <block id="af0223f5c63fe0b5a6e75d3087868abd" category="cell">vSphere 7.x-8.x VMware Site Recovery Manager (SRM) 8.5 至 VMware Live Site Recovery 9.0</block>
-  <block id="d72bb3e1e67692ec327a89e11558943e" category="cell">vSphere 7.x-8.x VMware Site Recovery Manager (SRM) 8.7 至 VMware Live Site Recovery 9.0 *注意：* 在ONTAP工具 10.x 中，SRM 支援共享站點，從而增強了可擴展性並提高了效能。</block>
   <block id="30388d1a3ab1a01f6930553a577eb80b" category="cell">協議支持</block>
   <block id="69e493705b5762fd000de8321c6e2f1b" category="cell">NFS 和 VMFS 資料儲存：NFS（v3 和 v4.1）、VMFS（iSCSI 和 FCP）</block>
   <block id="308203c1fb88371d593fd65f1a44edf5" category="cell">NFS 和 VMFS 資料儲存：NFS（v3 和 v4.1）、VMFS（iSCSI/FCP/NVMe-oF）</block>
@@ -2494,8 +2492,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="0ae86707597758caa42797b966846966" category="cell">效能、容量和主機合規性儀表板動態虛擬機器和資料儲存區報告</block>
   <block id="e48d3655de549622076e6823dc5953da" category="cell">更新了效能、容量和主機合規性儀表板動態虛擬機器和資料儲存區報告</block>
   <block id="7e7397a7b79323762c61941fc0e6b5f9" category="cell">資料保護</block>
-  <block id="3e28850991da16d19121f4144528251d" category="cell">用於 VMFS 和 NFS SCV 整合和互通備份的 SRA 複製</block>
-  <block id="f04d5a39f552e53928ef021fc890d6c5" category="cell">針對 iSCSI VMFS 和 NFS v3 資料儲存的 SRA 複製結合了 SMAS 和 VMware Live Site Recovery 的三站點保護。</block>
   <block id="f995a81db9639d1f6676a86caa7c78e5" category="cell">VASA 提供程序支援</block>
   <block id="8fc79c740ab04e88f200d7eddd9e1931" category="cell">VASA 4.0</block>
   <block id="5638860cdd6d2160f1889c6659867484" category="cell">VASA 3.0</block>
@@ -2505,4 +2501,10 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="750686b04dbf67a95b96fd8a0f1efb0f" category="list-text">刪除ONTAP工具 10.4 或 10.3 SRA 適配器並上傳 10.5 SRA 適配器 tar 檔案。</block>
   <block id="829b3830a5408ec70946282b75f9c6b7" category="list-text">上傳 SRA 適配器 tar 檔案後，執行安裝指令。然後，重新掃描 SRA 適配器以更新 VMware Site Recovery Storage Replication Adapters 頁面。</block>
   <block id="070f340136b38d4a8c74afe9526b62dc" category="paragraph">依照本節中的步驟，將 VASA 提供者從ONTAP tools for VMware vSphere移轉到ONTAP tools for VMware vSphere，並更新 VMware Live Site Recovery 裝置上的儲存複製適配器 (SRA)。</block>
+  <block id="503418f2f3e87464c59131a65b8d6509" category="cell">擴充支持，包括 FC for VMFS 和 NVMe-oF for VMFS。NetApp SnapMirror易於使用，vSphere Metro 儲存叢集設定簡單，並支援三站點 VMware Live Site Recovery</block>
+  <block id="cdac32b049102650f7299ebf43f574d4" category="cell">vSphere 7.x-8.x vSphere 9.0（從ONTAP tools 10.5 開始） VMware Site Recovery Manager (SRM) 8.7 至 VMware Live Site Recovery 9.0 *注意：* 在ONTAP tools 10.x 中，SRM 支援了可增強網站共享性。</block>
+  <block id="3815b1a102d580dcf982cbd303e8f23c" category="cell">SRA 複製適用於 VMFS 和 NFS。  SCV整合和互通性，可用於備份。</block>
+  <block id="8aed0b79b91ac394e16a8ff5c674b844" category="cell">針對 iSCSI VMFS 和 NFS v3 資料儲存的 SRA 複製結合了 SMAS 和 VMware Live Site Recovery 的三站點保護。SRA 支援 FCP 與 VMFS。</block>
+  <block id="d54f7e547c9116d6f3fa5c3da63b3f4c" category="list-text">出現提示時，請提供 vCenter 憑證。這是託管ONTAP工具的 vCenter 執行個體。</block>
+  <block id="25c2ee20081a3dbb1ba37676816c4acf" category="paragraph">如果您在雙 vCenter Server 拓樸中使用ONTAP工具（其中裝置託管在一個 vCenter 執行個體中並管理另一個執行個體），則可以為託管ONTAP工具的 vCenter 執行個體指派受限角色。您可以建立一個專用的 vCenter 使用者和角色，並僅授予其以下列出的資料儲存權限：</block>
 </blocks>
