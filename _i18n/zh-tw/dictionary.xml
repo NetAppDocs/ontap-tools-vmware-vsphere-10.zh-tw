@@ -1117,7 +1117,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="700e580d2a33afbe04073228203485fe" category="paragraph">如果憑證已過期或即將到期，您可以續約憑證。當憑證類型為 CA 簽署時，就可以使用續約選項。在快顯視窗中，提供伺服器憑證，私密金鑰，根 CA 和中繼憑證詳細資料。</block>
   <block id="04b97a75d793e5e8d9c91f69fb8803f5" category="admonition">系統將會離線，直到憑證續約為止，您將登出 ONTAP 工具管理員介面。</block>
   <block id="2da89430805560f209041c63cfb2f20f" category="list-text">在快顯視窗中，上傳伺服器憑證，伺服器憑證私密金鑰，根 CA 憑證和中繼憑證檔案。</block>
-  <block id="ca148a970e5b5a81a77ce6e27a1e6a55" category="list-text">輸入您產生此憑證的網域名稱，然後升級憑證。</block>
   <block id="96e25bc2ea7c946d5cb80df5623b04f4" category="admonition">系統將會離線，直到升級完成為止，您將會登出 ONTAP 工具管理員介面。</block>
   <block id="4d8920fb51dbe2e0eeb3d23c3b11224b" category="paragraph">VMware vSphere 的 ONTAP 工具是以 VASA Provider 的自我簽署憑證來部署。有了這項功能、 VVols 資料存放區只能管理一個 vCenter Server 執行個體。當您管理多個 vCenter Server 執行個體並想要在其中啟用 vVols 功能時，您需要將自我簽署的憑證變更為自訂 CA 憑證。</block>
   <block id="81914abf558d30aee207170f7eb62743" category="list-text">選取 * 憑證 * &gt; * VASA Provider* 或 * ONTAP 工具 * &gt; * 更新 * 以更新憑證。</block>
@@ -1291,7 +1290,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="cf3ebf71afc09e18d1f314148fa3811e" category="section-title">適用於 VMware vSphere 10 的 ONTAP 工具隨附的角色</block>
   <block id="9956bf2190822dfa9e747d5beea541f5" category="paragraph">為了簡化使用 vCenter Server RBAC 的過程，適用於 VMware vSphere 的 ONTAP 工具可針對各種管理工作提供預先定義的角色。</block>
   <block id="164df67d012e8e0ac61963c54eda6893" category="admonition">您可以視需要建立新的自訂角色。在這種情況下，您應該複製其中一個現有的 ONTAP 工具角色，並視需要進行編輯。變更組態後，受影響的 vSphere 用戶端使用者必須登出並重新登入，才能啟動變更。</block>
-  <block id="63c3900e2803574b915938ebce0260d4" category="paragraph">若要檢視適用於 VMware vSphere 角色的 ONTAP 工具，請選取 vSphere Client 頂端的 * 功能表 * ，然後按一下 * 管理 * ，然後按一下左側的 * 角色 * 。有三種預先定義的角色，如下所述。</block>
   <block id="37dfa1e83e1bae8babc789706610e685" category="paragraph">提供執行核心 ONTAP 工具以執行 VMware vSphere 管理員工作所需的所有原生 vCenter Server Privileges 和 ONTAP 工具專屬 Privileges 。</block>
   <block id="cd027b3cb7fb1e8712103dffdf01a491" category="paragraph-title">VMware vSphere 佈建的 NetApp ONTAP 工具</block>
   <block id="7e5cada6cb223f80ed0a2b6fee9ab3dc" category="section-title">vSphere 物件和 ONTAP 儲存設備後端</block>
@@ -2336,7 +2334,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="c81c266dd6001708c9f3076ddf21214c" category="paragraph">現在， ONTAP tools for VMware vSphere可以發現並管理新的主機。您可以繼續在新主機上管理資料儲存。</block>
   <block id="11d81e4c78f6be23d5539c87f4f3a7a7" category="list-text"><block ref="c5978119f323c1ceb37571472aaae169" category="inline-link-macro-rx"></block>在新主機上。</block>
   <block id="063680c82bcd7ffea25b1d4d5c3c6470" category="list-text"><block ref="b5251e50ffdcc6a83e84a63c2a1cd1e4" category="inline-link-macro-rx"></block>在新主機上。</block>
-  <block id="0eb234ccef0fdd3bb9f5b615c5ec8eef" category="paragraph">部署期間預設為ONTAP工具和 VASA Provider 產生自簽章憑證。使用ONTAP工具管理器介面，您可以更新憑證或將其升級為自訂 CA。在多重 vCenter 部署中，必須使用自訂 CA 憑證。</block>
   <block id="badf77f43d93c8a563816ac386123a63" category="paragraph">在開始之前，您應該準備好以下物品：</block>
   <block id="37b0536bf9555d4fd2d03f77ee0b0bab" category="list-text">網域名稱已對應到虛擬 IP 位址。</block>
   <block id="d417b5848864e0c056fdd924f5f377f5" category="list-text">成功執行網域名稱 nslookup 查詢，確認其解析到正確的 IP 位址。</block>
@@ -2410,7 +2407,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="3a7af0096c6ddabf7582b1bae1272dd6" category="paragraph">如果您在雙 vCenter Server 拓樸中部署ONTAP工具（其中裝置託管在一個 vCenter 執行個體中並管理另一個執行個體），則可以為託管ONTAP工具的 vCenter 執行個體指派受限角色。您可以建立一個專用的 vCenter 使用者和角色，該使用者和角色只需以下列出的資料儲存權限即可部署 OVF 範本：</block>
   <block id="c6519d60f243eebfcc92d096e23bdb8b" category="list-text">分配空間</block>
   <block id="653ea8411fd85f46f22e62ee3cabb643" category="list-text">瀏覽資料存儲</block>
-  <block id="c1e99705ec496cfaec18f7abaf8deb4f" category="list-text">底層文件操作</block>
   <block id="b21f085d08623fc7a5a9da204cc66c8c" category="list-text">刪除文件</block>
   <block id="e9cfb64d47efe034339436bf09172593" category="list-text">更新虛擬機器文件</block>
   <block id="08437994b9601a135d92f032a83daf1c" category="list-text">更新虛擬機器元數據</block>
@@ -2507,4 +2503,109 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="8aed0b79b91ac394e16a8ff5c674b844" category="cell">針對 iSCSI VMFS 和 NFS v3 資料儲存的 SRA 複製結合了 SMAS 和 VMware Live Site Recovery 的三站點保護。SRA 支援 FCP 與 VMFS。</block>
   <block id="d54f7e547c9116d6f3fa5c3da63b3f4c" category="list-text">出現提示時，請提供 vCenter 憑證。這是託管ONTAP工具的 vCenter 執行個體。</block>
   <block id="25c2ee20081a3dbb1ba37676816c4acf" category="paragraph">如果您在雙 vCenter Server 拓樸中使用ONTAP工具（其中裝置託管在一個 vCenter 執行個體中並管理另一個執行個體），則可以為託管ONTAP工具的 vCenter 執行個體指派受限角色。您可以建立一個專用的 vCenter 使用者和角色，並僅授予其以下列出的資料儲存權限：</block>
+  <block id="02086c74e7c7de9c13df55ddb85cb6a9" category="paragraph">若要查看ONTAP tools for VMware vSphere，請在 vSphere Client 頂部選擇“選單”，然後按一下左側的“管理”，再按一下“角色”。指派給負責部署或啟用 vCenter 的 vCenter 使用者的角色必須包含下列權限。請確保將這些權限配置為部署或入職流程的先決條件。</block>
+  <block id="301d574ef42563b03638c8eae19225cb" category="list-text">警報</block>
+  <block id="6c352acb91887b241b030d91d72bdf66" category="list-text">確認警報</block>
+  <block id="55764a40428feb54ed131a5442e5e9d6" category="list-text">內容庫</block>
+  <block id="7fda80facd4b5302f2a2c887c2ecb595" category="list-text">新增庫項目</block>
+  <block id="1e1c0c7bc66940beac7add74f122a6f5" category="list-text">請在模板中簽到</block>
+  <block id="68bc9937a90b947daae3bb691abad236" category="list-text">查看模板</block>
+  <block id="3fcf474605790b0472ff59a3b813e230" category="list-text">下載文件</block>
+  <block id="2ccfd03d6c52fc23815076ccc63f020a" category="list-text">進口儲存</block>
+  <block id="bf0d559fc72e2b15ec4b32db14be07ad" category="list-text">讀取儲存</block>
+  <block id="df4952ff5cee5ec41685b522c3c98e1f" category="list-text">同步庫項目</block>
+  <block id="bb08c14df0dc403c06e4d04c8d09aa47" category="list-text">同步已訂閱的庫</block>
+  <block id="4f2a0b4125eaf9d8804c99dcd015f5c0" category="list-text">查看配置設定</block>
+  <block id="0c675ffdeb5e9d32e027b53289046420" category="list-text">低階文件操作</block>
+  <block id="8c79c9b6e95183161d6876a3c3e5e7de" category="list-text">ESX 代理程式管理器</block>
+  <block id="4351cfebe4b61d8aa5efa1d020710005" category="list-text">看法</block>
+  <block id="b0f2b97dc5d2b76b26e040408bb1d8af" category="list-text">資料夾</block>
+  <block id="5dc1e97c14fbe72d8b566ce29c39f010" category="list-text">建立資料夾</block>
+  <block id="c2ca16d048ec66e04bca283eab048ec2" category="list-text">主持人</block>
+  <block id="254f642527b45bc260048e30704edb39" category="list-text">配置</block>
+  <block id="fe4c6a5e7bd6793b37370e4e46daf998" category="list-text">進階設定</block>
+  <block id="1221ff7164cdee8b469096ebf5e997f6" category="list-text">更改設定</block>
+  <block id="5dd57c2a315d3af44c2eb40eefc47111" category="list-text">網路設定</block>
+  <block id="4f925d4097e72dc18c34b7ebba99bc4f" category="list-text">系統資源</block>
+  <block id="d154fb143613245dc009aa97a790ae3b" category="list-text">虛擬機器自動啟動配置</block>
+  <block id="97fc2547b66cc43d6329a79c740cc008" category="list-text">本地操作</block>
+  <block id="5daad9a463f9102e036b5aaa1cf2b87e" category="list-text">建立虛擬機</block>
+  <block id="dd230a946aa4a56d733b1f9296f90610" category="list-text">刪除虛擬機</block>
+  <block id="d4d82afbdd25c6582604ef24a51dd4eb" category="list-text">重新配置虛擬機</block>
+  <block id="eec89088ee408b80387155272b113256" category="list-text">網路</block>
+  <block id="0f2a9e2e169a500cc92684521eaa4a9a" category="list-text">分配網路</block>
+  <block id="f1206f9fadc5ce41694f69129aecac26" category="list-text">配置</block>
+  <block id="1b4221480b16d411125810dde8dde8f9" category="list-text">OvfManager</block>
+  <block id="fe84a57f372ccd35cea7a9f532b0758e" category="list-text">Ovf消費者訪問</block>
+  <block id="1e96581e09b24e0b3ef2fa9e9837a567" category="list-text">主機設定檔</block>
+  <block id="be8545ae7ab0276e15898aae7acfbd7a" category="list-text">資源</block>
+  <block id="be4e8bed170ca25e86a8395892b08952" category="list-text">將虛擬機器指派給資源池</block>
+  <block id="fdae47a7dc2be0ca39d6eaef415f393e" category="list-text">計劃任務</block>
+  <block id="dbce9628ef585e7df3a0399258ab906a" category="list-text">創建任務</block>
+  <block id="dc5458cbf6935d24490c83f49e40b5db" category="list-text">修改任務</block>
+  <block id="7020e3d2f102ae19d25897edced29ba9" category="list-text">運行任務</block>
+  <block id="ef615563c8e8ea902c7fcac3cd2c4246" category="list-text">任務</block>
+  <block id="9c0f21d13609c634ed11fdef5006227b" category="list-text">創建任務</block>
+  <block id="fb6df535efad5feef144fec0d962d6fd" category="list-text">更新任務</block>
+  <block id="776c22edd71a94b798c726e47a0fce00" category="list-text">虛擬應用</block>
+  <block id="9a8c4687d06865a95cc7648eeddb3a61" category="list-text">新增虛擬機</block>
+  <block id="d3489e687ecac056ebf2c2638db98a8f" category="list-text">分配資源池</block>
+  <block id="4fc186574fa1d6007738c545dfd83193" category="list-text">分配虛擬應用程式</block>
+  <block id="72d6d7a1885885bb55a565fd1070581a" category="list-text">進口</block>
+  <block id="6bc362dbf494c61ea117fe3c71ca48a5" category="list-text">移動</block>
+  <block id="1bb202d66fd437a5e7ad355057d3dcb3" category="list-text">關閉電源</block>
+  <block id="eb503c4e76174415d5b8c63a4393ee0b" category="list-text">開機</block>
+  <block id="a140a7a64a801da8270ca529a9f13fb4" category="list-text">從 URL 拉取</block>
+  <block id="6539d32084cd2a9331de2229c0f1b1ea" category="list-text">查看 OVF 環境</block>
+  <block id="56a1d9dbd940bf6b46e973e279c60c10" category="list-text">更改配置</block>
+  <block id="c629a65bf0cad09db50b338d3b22ceaa" category="list-text">新增現有磁碟</block>
+  <block id="290f3ac3e6b4bd78ff9a9070bb2c965a" category="list-text">新增磁碟</block>
+  <block id="ef1affd058b739f5a69433d49a5ddfe8" category="list-text">新增或移除設備</block>
+  <block id="119dd5a342e981b13bf0024d5c6a6933" category="list-text">進階配置</block>
+  <block id="61705f157c64f8c4f27e58eff60b09e2" category="list-text">更改 CPU 計數</block>
+  <block id="e99fa5e2795936890719554d3dc1dbcf" category="list-text">記憶</block>
+  <block id="2ad5d114916a79d614211b7622b98251" category="list-text">更改設定</block>
+  <block id="b81398b82bb104abd241c7bce6d3450b" category="list-text">更改資源</block>
+  <block id="86381d484481a4d844f53e28c769eaad" category="list-text">擴充虛擬磁碟</block>
+  <block id="7a4d0d96ff85f2e26f1ac8d0a5c42b74" category="list-text">修改設備設定</block>
+  <block id="175d3bc37a203b0e58c2d1bb572971de" category="list-text">移除磁碟</block>
+  <block id="6c2cadc5f0b182e333bf2dad08ca8ff1" category="list-text">重置賓客資訊</block>
+  <block id="5ec85f637822f3afefe71224e4f551b5" category="list-text">升級虛擬機器相容性</block>
+  <block id="4d37e6414fba199227861f08a4aefb2f" category="list-text">編輯庫存</block>
+  <block id="eb420426750166280dc02d6c621c14d0" category="list-text">從現有創建</block>
+  <block id="f7f78b9dfe29752b9e04490253838264" category="list-text">創建新的</block>
+  <block id="0ba7583639a274c434bbe6ef797115a4" category="list-text">註冊使用</block>
+  <block id="1063e38cb53d94d386f21227fcd84717" category="list-text">消除</block>
+  <block id="9d4a8f2dfe3c62f3ce3011035d28fb66" category="list-text">取消註冊</block>
+  <block id="61ee5a22cd5f14ed4e48eb5611031e74" category="list-text">交互作用</block>
+  <block id="2db1c743d337c4f4d863422ad30d97cd" category="list-text">虛擬機器上的備份操作</block>
+  <block id="0dc00ee511e76ee47dd673fefe3dbe99" category="list-text">配置 CD 媒體</block>
+  <block id="9a0f1db822b6f7870f968161a6f8d334" category="list-text">配置軟碟介質</block>
+  <block id="90d357ff2349f9ba8e8edcd12eb41b7d" category="list-text">連接裝置</block>
+  <block id="477528aa800f91aa21332ac6b7ef36fc" category="list-text">控制台交互</block>
+  <block id="9068dd22ad3328ced9301270e409df6a" category="list-text">透過 VIX API 進行客戶作業系統管理</block>
+  <block id="526d688f37a86d3c3f27d0c5016eb71d" category="list-text">重置</block>
+  <block id="b3834d6f7a63e5e750e0ca5ecf31e3b9" category="list-text">暫停</block>
+  <block id="89c3bcf0ecc1114f8d19734d9156cb40" category="list-text">供應</block>
+  <block id="5680f22aa1fdfe0f98deeffd2ff47d08" category="list-text">允許磁碟存取</block>
+  <block id="e175434c80ef613608d78e91fd789903" category="list-text">克隆模板</block>
+  <block id="598fbc9a28d6f19e92b27e1a5af7ad0e" category="list-text">客製化賓客</block>
+  <block id="c7578f41f073fde5296d8ddc592abd31" category="list-text">部署模板</block>
+  <block id="3c42b71d77b9e5f83e0ee3f8ed97d8da" category="list-text">修改定制規範</block>
+  <block id="c2578bfe84d0cf1e9df740a50d2613b1" category="list-text">閱讀客製化規格</block>
+  <block id="70f03bba53aef7388a7ba23be66f7ca0" category="list-text">快照管理</block>
+  <block id="bfb2cee5de3a54c30810194a0077e673" category="list-text">建立快照</block>
+  <block id="ada1b8fca015644eb0e5c19ee82795da" category="list-text">移除快照</block>
+  <block id="c3b272eb798aaa11b258a91dbf4ef016" category="list-text">重新命名快照</block>
+  <block id="e2a5f777b44916836fdc3739a3964e98" category="list-text">恢復到快照</block>
+  <block id="9d907c3f5539ff6f152a649a7d58d691" category="paragraph">有三個預先定義的角色，如下所述。</block>
+  <block id="ed6bb5734812ec0d7dd5450746f207a0" category="paragraph">在部署過程中，預設會為ONTAP工具和 VASA 提供者產生自簽章憑證。您可以使用ONTAP工具管理器介面來續訂此憑證或將其替換為自訂 CA 憑證。在多重 vCenter 部署中，必須使用自訂 CA 憑證。</block>
+  <block id="324fa302eeeb16cb22483400ce096be0" category="list-text">輸入您為其產生此憑證的負載平衡器 IP 的 FQDN，並升級憑證。</block>
+  <block id="1289a0b5a75e6b47ee61b41fe287786a" category="section-title">更新 vCenter Server 憑證</block>
+  <block id="45666909a9079a8d4af9a72d51a83220" category="paragraph">ONTAP工具會在 vCenter 憑證即將到期或已過期時通知您。更新 vCenter 憑證後，請依照下列步驟將新憑證上傳至ONTAP工具：</block>
+  <block id="282eed63cac957955b046d29d83d09d8" category="list-text">登入ONTAP工具遠端診斷 shell。</block>
+  <block id="e6452e8e9c18000281aae81760220823" category="list-text">從診斷 shell 取得更新後的 vCenter 憑證：</block>
+  <block id="8012fc6ae8c7c5cd0d9d44e8d3169bbb" category="list-text">請確保憑證採用 Base64 ASCII 格式，並包含起始行和結束行，例如：</block>
+  <block id="aee38a297a583f14c6525dc700a8a384" category="list-text">複製輸出結果並將其另存為文字檔案。<block ref="bdf46f9562b038d0163af0feba0b1dfa" prefix=" " category="inline-code"></block> 桌面擴充程式。</block>
+  <block id="60576f3967d7db42ad4e62e1f5d6edc4" category="paragraph"><block ref="60576f3967d7db42ad4e62e1f5d6edc4" category="inline-link-macro-rx"></block></block>
 </blocks>
