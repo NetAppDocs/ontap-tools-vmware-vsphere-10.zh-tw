@@ -70,22 +70,13 @@ summary: HA 和非 HA 部署均支援升級。
 . 輸入*7*選擇*升級*選項。
 . 出現提示時，請提供 vCenter 憑證。這是託管ONTAP工具的 vCenter 執行個體。
 +
-如果您在雙 vCenter Server 拓樸中使用ONTAP工具（其中裝置託管在一個 vCenter 執行個體中並管理另一個執行個體），則可以為託管ONTAP工具的 vCenter 執行個體指派受限角色。您可以建立一個專用的 vCenter 使用者和角色，並僅授予其以下列出的資料儲存權限：
+如果您在雙 vCenter Server 拓樸中使用ONTAP工具（其中裝置託管在一個 vCenter 執行個體中並管理另一個執行個體），則可以為託管ONTAP工具的 vCenter 執行個體指派受限角色。您可以建立一個專用的 vCenter 使用者和角色，僅授予其部署 OVF 範本所需的權限。詳情請參閱職位列表中所列的角色。 https://review.docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10_otv105-releasebranch/concepts/rbac-vcenter-use.html#vsphere-object-hierarchy["適用於 VMware vSphere 10 的 ONTAP 工具隨附的角色"]。
 
-+
-** 分配空間
-** 瀏覽資料存儲
-** 低階文件操作
-** 刪除文件
-** 更新虛擬機器文件
-** 更新虛擬機器元數據
 +
 對於將由ONTAP工具管理的 vCenter 實例，請確保 vCenter 使用者帳戶具有管理員權限。
 
 +
 在升級過程中，如果任何內建儲存後端憑證缺少主題備用名稱 (SAN) 項目，您將收到提示，指出缺少 SAN。如果您選擇在未驗證 SAN 的情況下繼續，升級將繼續，但由於潛在的安全風險，因此不建議這樣做。
-
-
 
 . 升級時、系統會自動執行下列動作：
 +

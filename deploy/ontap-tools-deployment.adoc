@@ -84,18 +84,12 @@ NOTE: 切勿將適用於 VMware vSphere 虛擬機器的 ONTAP 工具儲存在其
 NOTE: vCenter 主機名稱是部署ONTAP工具設備的 vCenter Server 執行個體的名稱。
 
 +
-如果您在雙 vCenter Server 拓樸中部署ONTAP工具（其中裝置託管在一個 vCenter 執行個體中並管理另一個執行個體），則可以為託管ONTAP工具的 vCenter 執行個體指派受限角色。您可以建立一個專用的 vCenter 使用者和角色，該使用者和角色只需以下列出的資料儲存權限即可部署 OVF 範本：
+如果您在雙 vCenter Server 拓樸中部署ONTAP工具（其中裝置託管在一個 vCenter 執行個體中並管理另一個執行個體），則可以為託管ONTAP工具的 vCenter 執行個體指派受限角色。您可以建立一個專用的 vCenter 使用者和角色，僅授予其部署 OVF 範本所需的權限。詳情請參閱職位列表中所列的角色。 https://review.docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10_otv105-releasebranch/concepts/rbac-vcenter-use.html#vsphere-object-hierarchy["適用於 VMware vSphere 10 的 ONTAP 工具隨附的角色"]。
 
-+
-** 分配空間
-** 瀏覽資料存儲
-** 低階文件操作
-** 刪除文件
-** 更新虛擬機器文件
-** 更新虛擬機器元數據
 +
 對於將由ONTAP工具管理的 vCenter 實例，請確保 vCenter 使用者帳戶具有管理員權限。
 
++
 ** 主機名稱必須包含字母（ A-Z ， a-z ），數字（ 0-9 ）和連字號（ - ）。若要設定雙堆疊，請指定對應至 IPv6 位址的主機名稱。
 +
 

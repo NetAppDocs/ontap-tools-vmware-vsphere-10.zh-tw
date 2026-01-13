@@ -1199,7 +1199,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="d06c4b7230b78df6a13a1ffe93c68ea7" category="paragraph">_Users_ 會在驗證後指派或與套用的角色相關聯。某些 RBAC 實作只允許將一個角色指派給使用者，而其他角色則允許每個使用者擁有多個角色，可能一次只有一個角色處於作用中狀態。將角色指派給 _Groups_ 可進一步簡化安全性管理。</block>
   <block id="74b037a49a7d27ecca7fc6857aedcd2a" category="paragraph">_permission_ 是將使用者或群組與角色繫結至物件的定義。權限可用於階層式物件模型，階層中的子系可選擇性地繼承這些物件模型。</block>
   <block id="ecc206dfcc570366eb56c27d01c64234" category="section-title">兩種 RBAC 環境</block>
-  <block id="857ac2a8af334039722446a532094bd6" category="paragraph">在使用適用於 VMware vSphere 10 的 ONTAP 工具時，您需要考量兩種不同的 RBAC 環境。</block>
   <block id="7b992155512beae7a0c0bcd838bf53bc" category="paragraph-title">VMware vCenter Server</block>
   <block id="a44122ce0420d82ffec8245eb58d1686" category="inline-link-macro">vCenter Server RBAC 環境</block>
   <block id="abfe427299b92162e94931d6113396c6" category="paragraph">VMware vCenter Server 中的 RBAC 實作可用於限制存取透過 vSphere Client 使用者介面公開的物件。在安裝適用於 VMware vSphere 10 的 ONTAP 工具時， RBAC 環境會延伸至包含代表 ONTAP 工具功能的其他物件。這些物件的存取是透過遠端外掛程式提供。如需詳細資訊，請參閱<block ref="0dce39201791f8056b9c7e84d5c66f06" category="inline-link-macro-rx"></block>。</block>
@@ -2404,7 +2403,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="ab6b75688f7cffb753cc8176e2986ff4" category="admonition">部署後不要刪除內容庫中的 OVA 範本。</block>
   <block id="a00726d752fdb02dab8165021fc4e90c" category="list-text">在「自訂範本」視窗中，填寫必填欄位。<block ref="84a003836f9d8bb0e3b8332e561bfec2" category="inline-image-macro-rx" type="image"></block></block>
   <block id="d9d9f212eda5eb8e0566b4f30f82fb10" category="admonition">vCenter 主機名稱是部署ONTAP工具設備的 vCenter Server 執行個體的名稱。</block>
-  <block id="3a7af0096c6ddabf7582b1bae1272dd6" category="paragraph">如果您在雙 vCenter Server 拓樸中部署ONTAP工具（其中裝置託管在一個 vCenter 執行個體中並管理另一個執行個體），則可以為託管ONTAP工具的 vCenter 執行個體指派受限角色。您可以建立一個專用的 vCenter 使用者和角色，該使用者和角色只需以下列出的資料儲存權限即可部署 OVF 範本：</block>
   <block id="c6519d60f243eebfcc92d096e23bdb8b" category="list-text">分配空間</block>
   <block id="653ea8411fd85f46f22e62ee3cabb643" category="list-text">瀏覽資料存儲</block>
   <block id="b21f085d08623fc7a5a9da204cc66c8c" category="list-text">刪除文件</block>
@@ -2502,7 +2500,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="3815b1a102d580dcf982cbd303e8f23c" category="cell">SRA 複製適用於 VMFS 和 NFS。  SCV整合和互通性，可用於備份。</block>
   <block id="8aed0b79b91ac394e16a8ff5c674b844" category="cell">針對 iSCSI VMFS 和 NFS v3 資料儲存的 SRA 複製結合了 SMAS 和 VMware Live Site Recovery 的三站點保護。SRA 支援 FCP 與 VMFS。</block>
   <block id="d54f7e547c9116d6f3fa5c3da63b3f4c" category="list-text">出現提示時，請提供 vCenter 憑證。這是託管ONTAP工具的 vCenter 執行個體。</block>
-  <block id="25c2ee20081a3dbb1ba37676816c4acf" category="paragraph">如果您在雙 vCenter Server 拓樸中使用ONTAP工具（其中裝置託管在一個 vCenter 執行個體中並管理另一個執行個體），則可以為託管ONTAP工具的 vCenter 執行個體指派受限角色。您可以建立一個專用的 vCenter 使用者和角色，並僅授予其以下列出的資料儲存權限：</block>
   <block id="02086c74e7c7de9c13df55ddb85cb6a9" category="paragraph">若要查看ONTAP tools for VMware vSphere，請在 vSphere Client 頂部選擇“選單”，然後按一下左側的“管理”，再按一下“角色”。指派給負責部署或啟用 vCenter 的 vCenter 使用者的角色必須包含下列權限。請確保將這些權限配置為部署或入職流程的先決條件。</block>
   <block id="301d574ef42563b03638c8eae19225cb" category="list-text">警報</block>
   <block id="6c352acb91887b241b030d91d72bdf66" category="list-text">確認警報</block>
@@ -2608,4 +2605,7 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="8012fc6ae8c7c5cd0d9d44e8d3169bbb" category="list-text">請確保憑證採用 Base64 ASCII 格式，並包含起始行和結束行，例如：</block>
   <block id="aee38a297a583f14c6525dc700a8a384" category="list-text">複製輸出結果並將其另存為文字檔案。<block ref="bdf46f9562b038d0163af0feba0b1dfa" prefix=" " category="inline-code"></block> 桌面擴充程式。</block>
   <block id="60576f3967d7db42ad4e62e1f5d6edc4" category="paragraph"><block ref="60576f3967d7db42ad4e62e1f5d6edc4" category="inline-link-macro-rx"></block></block>
+  <block id="15a0f68745546e63813c4df1c8d72ba3" category="paragraph">在使用ONTAP tools for VMware vSphere 10 時，需要考慮兩種不同的 RBAC 環境。ONTAP tools for VMware vSphere需要在 vCenter 和ONTAP中都擁有特定的權限才能執行操作。雖然ONTAP工具可以自動執行儲存管理任務，但它不會在 vCenter 或ONTAP中建立使用者帳戶。服務帳戶必須由 vSphere 管理員根據需要建立。本文檔為管理員提供指導，以便分配必要的角色和權限，從而有效地管理ONTAP工具。</block>
+  <block id="4ae8aea132dd80b8c5923dad28c5b661" category="paragraph">如果您在雙 vCenter Server 拓樸中部署ONTAP工具（其中裝置託管在一個 vCenter 執行個體中並管理另一個執行個體），則可以為託管ONTAP工具的 vCenter 執行個體指派受限角色。您可以建立一個專用的 vCenter 使用者和角色，僅授予其部署 OVF 範本所需的權限。詳情請參閱職位列表中所列的角色。<block ref="4be7808a32deee04c9288e5441868f02" category="inline-link-rx"></block>。</block>
+  <block id="281aaa5cbe3748f40438f77dcaf6f2ab" category="paragraph">如果您在雙 vCenter Server 拓樸中使用ONTAP工具（其中裝置託管在一個 vCenter 執行個體中並管理另一個執行個體），則可以為託管ONTAP工具的 vCenter 執行個體指派受限角色。您可以建立一個專用的 vCenter 使用者和角色，僅授予其部署 OVF 範本所需的權限。詳情請參閱職位列表中所列的角色。<block ref="4be7808a32deee04c9288e5441868f02" category="inline-link-rx"></block>。</block>
 </blocks>
