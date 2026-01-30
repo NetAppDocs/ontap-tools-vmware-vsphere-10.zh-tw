@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: vVols datastore,delete vVol 
 summary: 適用於 VMware vSphere 的 ONTAP 工具可管理主機叢集的保護。 
 ---
-= 使用主機叢集保護來保護
+= 在 ONTAP 工具中保護主機叢集
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

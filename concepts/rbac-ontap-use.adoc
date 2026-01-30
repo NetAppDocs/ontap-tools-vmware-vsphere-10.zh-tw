@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap rbac, use ontap rbac 
 summary: 使用 ONTAP 實作 VMware vSphere 10 RBAC 的 ONTAP 工具有幾個層面，在正式作業環境中使用之前，您應該先考慮這些工具。 
 ---
-= 使用 ONTAP RBAC 搭配適用於 VMware vSphere 10 的 ONTAP 工具
+= ONTAP tools 的 ONTAP RBAC 注意事項
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

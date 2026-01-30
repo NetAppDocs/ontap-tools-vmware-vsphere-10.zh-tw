@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: vVols datastore,delete vVol 
 summary: 當您移除主機叢集保護時、資料存放區會變成未受保護。 
 ---
-= 移除主機叢集保護
+= 在 ONTAP tools 中移除主機叢集保護
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

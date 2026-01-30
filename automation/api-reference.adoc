@@ -4,7 +4,7 @@ permalink: automation/api-reference.html
 keywords: ontap tools for vmware vsphere rest api reference, api reference 
 summary: VMware vSphere 10 REST API 參考的 ONTAP 工具包含所有 API 呼叫的詳細資料。此參考資料在開發自動化應用程式時非常實用。 
 ---
-= 適用於 VMware vSphere 10 REST API 之 ONTAP 工具的 API 參考
+= ONTAP tools REST API 參考
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

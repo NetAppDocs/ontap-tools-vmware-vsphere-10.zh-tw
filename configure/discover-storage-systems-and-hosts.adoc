@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 當您第一次在 vSphere Client 中執行適用於 VMware vSphere 的 ONTAP 工具時、適用於 VMware vSphere 的 ONTAP 工具會探索 ESXi 主機、其 LUN 和 NFS 匯出、以及擁有這些 LUN 和匯出的 NetApp 儲存系統。 
 ---
-= 探索儲存系統與主機
+= 在 ONTAP tools 中探索儲存系統和主機
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

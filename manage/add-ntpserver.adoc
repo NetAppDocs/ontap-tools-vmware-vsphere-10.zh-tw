@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 輸入 NTP 伺服器詳細資料，以同步 ONTAP 工具應用裝置的時間時鐘。 
 ---
-= 新增 NTP 伺服器
+= 將 NTP 伺服器新增至 ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

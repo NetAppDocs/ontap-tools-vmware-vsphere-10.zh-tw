@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: upgrade 
 summary: 本頁概述適用於 VMware vSphere 系統之 ONTAP 工具的部署、重新開機及還原作業錯誤代碼。 
 ---
-= 排查部署錯誤
+= 疑難排解 ONTAP 工具部署錯誤
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

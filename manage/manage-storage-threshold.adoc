@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 您可以將臨界值設定為當磁碟區和集合容量達到特定層級時、在 vCenter Server 中接收通知。  
 ---
-= 管理儲存臨界值
+= 在 ONTAP tools 中管理儲存閾值
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

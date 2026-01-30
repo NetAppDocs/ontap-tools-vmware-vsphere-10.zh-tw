@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 儲存設備後端是 ESXi 主機用於資料儲存的系統。 
 ---
-= 管理儲存後端
+= 在 ONTAP tools 中管理儲存後端
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

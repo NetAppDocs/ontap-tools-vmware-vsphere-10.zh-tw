@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Remove vVol datastore 
 summary: 適用於 VMware vSphere 的 ONTAP 工具的「組態」索引標籤下的 ONTAP 儲存檢視、可提供與資料存放區及其磁碟區相關的資料。 
 ---
-= 資料存放區的 ONTAP 儲存檢視
+= ONTAP tools 中資料存放區的 ONTAP 儲存檢視
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

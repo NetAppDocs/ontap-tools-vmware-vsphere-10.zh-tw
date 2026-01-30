@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: ONTAP tools for VMware vSphere部署為小型單節點，具有核心服務以支援 NFS 和 VMFS 資料儲存庫。 
 ---
-= 部署適用於 VMware vSphere 的 ONTAP 工具
+= 部署 ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

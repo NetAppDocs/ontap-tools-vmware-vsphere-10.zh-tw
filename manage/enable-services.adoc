@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 您可以使用 ONTAP 工具管理員變更管理員密碼，以啟用 VASA Provider 等服務，匯入 vVols 組態，以及使用 ONTAP 工具管理員進行災難恢復（ SRA ）。 
 ---
-= 為 VMware vSphere 服務啟用 ONTAP 工具
+= 啟用 ONTAP tools 服務
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

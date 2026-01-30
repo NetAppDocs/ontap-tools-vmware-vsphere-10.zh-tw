@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap tools manager, managerui 
 summary: ONTAP 工具管理員可為 VMware vSphere 管理員提供更多的 ONTAP 工具控制權和功能、協助整體管理應用裝置、租戶和儲存設備後端。 
 ---
-= ONTAP toolTools Manager 使用者介面
+= 了解 ONTAP tools Manager 使用者介面
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 適用於 VMware vSphere 的 ONTAP 工具會檢查及設定 ESXi 主機多重路徑設定和 HBA 逾時設定、這些設定最適合搭配 NetApp 儲存系統使用。 
 ---
-= 設定 ESXi 主機設定
+= 在 ONTAP 工具中設定 ESXi 主機設定
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

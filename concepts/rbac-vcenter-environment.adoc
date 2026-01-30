@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: vcenter, vcenter server, vcenter server rbac, rbac environment 
 summary: VMware vCenter Server 提供 RBAC 功能，可讓您控制對 vSphere 物件的存取。這是 vCenter 集中式驗證和授權安全服務的重要部分。 
 ---
-= vCenter Server RBAC 環境搭配適用於 VMware vSphere 10 的 ONTAP 工具
+= vCenter Server RBAC 如何與 ONTAP tools 協同工作
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

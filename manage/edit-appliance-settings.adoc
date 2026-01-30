@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 您可以使用 ONTAP 工具管理員變更管理員密碼。 
 ---
-= 變更適用於 VMware vSphere 組態的 ONTAP 工具
+= 變更 ONTAP tools 應用裝置設定
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

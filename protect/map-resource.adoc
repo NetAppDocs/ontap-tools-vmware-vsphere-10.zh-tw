@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 您應該對應受保護站台和還原站台上的資源、以便將虛擬機器設定為容錯移轉至一組主機或另一組主機。 
 ---
-= 設定資源對應
+= 在 ONTAP tools 中設定資源映射
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

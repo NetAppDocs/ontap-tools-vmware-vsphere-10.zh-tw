@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: '設定佔位資料儲存以在復原站點的 vCenter 清單中為受保護的虛擬機器 (VM) 保留空間。佔位資料儲存需要最小容量，因為佔位虛擬機器很小，通常只使用幾百千位元組。' 
 ---
-= 設定預留位置資料存放區
+= 在 ONTAP 工具中設定佔位符資料存放區
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

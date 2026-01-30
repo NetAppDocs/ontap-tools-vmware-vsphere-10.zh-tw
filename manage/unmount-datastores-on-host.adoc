@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 卸載資料存放區動作會從 ESXi 主機卸載 NFS 或 VMFS 資料存放區。卸載資料存放區動作會針對 ONTAP 工具為 VMware vSphere 探索或管理的 NFS 和 VMFS 資料存放區啟用。 
 ---
-= 卸載 NFS 和 VMFS 資料存放區
+= 在 ONTAP tools 中卸載 NFS 和 VMFS 資料存放區
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

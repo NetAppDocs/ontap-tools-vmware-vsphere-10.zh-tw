@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: user roles 
 summary: 使用ONTAP tools for VMware vSphere和ONTAP System Manager 的 ONTAP 工具中的 JSON 檔案為儲存後端設定使用者角色和權限。 
 ---
-= 設定 ONTAP 使用者角色和權限
+= 為 ONTAP tools 配置 ONTAP 使用者角色和權限
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

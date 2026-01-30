@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 適用於 VMware vSphere 的 ONTAP 工具是虛擬機器生命週期管理工具的集合。它與 VMware 生態系統整合、有助於虛擬機器的資源配置、基本保護和災難恢復。 
 ---
-= VMware vSphere 的 ONTAP 工具總覽
+= 了解 ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

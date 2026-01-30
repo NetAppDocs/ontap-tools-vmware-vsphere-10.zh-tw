@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= 了解ONTAP工具管理的 igroup
+= ONTAP tools 如何管理 igroups
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

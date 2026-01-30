@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap rbac, ontap rbac environment 
 summary: ONTAP 提供健全且可擴充的 RBAC 環境。您可以使用 RBAC 功能來控制透過 REST API 和 CLI 公開的儲存和系統作業存取。在使用 ONTAP 工具進行 VMware vSphere 10 部署之前，熟悉環境是很有幫助的。 
 ---
-= ONTAP RBAC 環境搭配適用於 VMware vSphere 10 的 ONTAP 工具
+= ONTAP RBAC 如何與 ONTAP tools 協同工作
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

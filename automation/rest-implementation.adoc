@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap tools vmware vsphere rest api reference 
 summary: REST 會建立一組通用的技術和最佳實務做法，但每個 API 的確切實作可能會因設計選擇而異。使用 ONTAP 工具之前，您應該先熟悉 VMware vSphere 10 REST API 的設計方式。 
 ---
-= 適用於 VMware vSphere 10 REST API 的 ONTAP 工具實作詳細資料
+= ONTAP tools REST API 實作詳情
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

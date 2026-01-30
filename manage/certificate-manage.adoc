@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: VMware vSphere 的單一 ONTAP 工具執行個體可管理多個 vCenter Server 執行個體。VMware vSphere 的 ONTAP 工具是以 VASA Provider 的自我簽署憑證來部署。有了這項功能、 VVols 資料存放區只能管理一個 vCenter Server 執行個體。 
 ---
-= 管理憑證
+= 管理 ONTAP tools 憑證
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

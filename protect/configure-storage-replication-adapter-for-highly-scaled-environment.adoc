@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 您應該根據儲存複寫介面卡（ SRA ）的建議設定來設定儲存逾時時間間隔、以便在高度擴充的環境中發揮最佳效能。 
 ---
-= 為高度擴充的環境設定 SRA
+= 在 ONTAP tools 中為高擴展性環境配置 SRA
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

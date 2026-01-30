@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: vcenter, vcenter server, vcenter server rbac, use rbac 
 summary: 在正式作業環境中使用 VMware vSphere 10 RBAC 實作的 ONTAP 工具有幾個層面，您應該先考慮這些層面。 
 ---
-= 使用 vCenter Server RBAC 搭配適用於 VMware vSphere 10 的 ONTAP 工具
+= vCenter Server 對 ONTAP 工具的 RBAC 注意事項
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

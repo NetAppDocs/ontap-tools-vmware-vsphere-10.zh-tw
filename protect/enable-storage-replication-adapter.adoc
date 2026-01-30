@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 適用於 VMware vSphere 的 ONTAP 工具可讓您選擇啟用 SRA 功能來設定災難恢復。 
 ---
-= 配置 SRA 以保護資料存儲
+= 在 ONTAP 工具中設定 SRA 以保護資料儲存區
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

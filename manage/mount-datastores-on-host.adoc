@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 安裝資料存放區可讓儲存設備存取其他主機。將主機新增至VMware環境之後、即可將資料存放區掛載到其他主機上。 
 ---
-= 掛載 NFS 和 VMFS 資料存放區
+= 在 ONTAP tools 中掛載 NFS 和 VMFS 資料存放區
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 設定儲存複寫介面卡（ SRA ）之後、您應該確認受保護的站台和還原站台已成功配對。受保護站台和還原站台都應該可以探索複寫的儲存系統。 
 ---
-= 驗證複寫的儲存系統
+= 在 ONTAP tools 中驗證複製的儲存系統
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

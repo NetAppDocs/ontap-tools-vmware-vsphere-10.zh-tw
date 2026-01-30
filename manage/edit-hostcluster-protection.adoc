@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: vVols datastore,delete vVol 
 summary: 您可以編輯受保護主機叢集的 SnapMirror 關係。您可以新增、修改及刪除關聯。不過、您無法編輯一致性群組名稱。 
 ---
-= 修改受保護的主機叢集
+= 在 ONTAP 工具中修改受保護的主機叢集
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

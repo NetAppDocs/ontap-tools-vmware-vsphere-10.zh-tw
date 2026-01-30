@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ONTAP tools,Storage Replication Adapter 
 summary: 當您使用專屬的 ONTAP 叢集 ONTAP 來部署 VMware 工具時，它會建立許多未使用的 FlexVol 磁碟區。移除 VMware vSphere 的 ONTAP 工具之後，您應該移除 FlexVol 磁碟區，以避免可能的效能影響。 
 ---
-= 移除 FlexVol Volume
+= 卸載 ONTAP 工具後移除 FlexVol 磁碟區
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

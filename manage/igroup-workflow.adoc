@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= 了解適用於 VMware vSphere 的 ONTAP 工具中的 igroup 和匯出策略
+= ONTAP tools 如何管理 igroup 和匯出原則
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: user roles 
 summary: 當您在 vCenter 用戶端的捷徑區段中選取適用於 VMware vSphere 外掛程式的 ONTAP 工具圖示時，使用者介面會導覽至概要頁面。此頁面類似儀表板、提供 VMware vSphere 外掛程式的 ONTAP 工具摘要。 
 ---
-= 適用於 VMware vSphere 儀表板的 ONTAP 工具概觀
+= 了解 ONTAP tools 儀表板
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

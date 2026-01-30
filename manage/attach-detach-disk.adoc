@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 將資料磁碟附加至虛擬機器，以擴充儲存容量。 
 ---
-= 將資料磁碟連接或分離至虛擬機器
+= 在 ONTAP 工具中將資料磁碟附加至 VM 或從 VM 分離資料磁碟
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

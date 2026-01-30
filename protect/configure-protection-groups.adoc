@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 您應該建立保護群組、以保護受保護站台上的一組虛擬機器。 
 ---
-= 設定受保護和恢復站台
+= 在 ONTAP tools 中設定受保護站台和復原站台
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 將儲存後端與 vCenter Server 建立關聯，以在儲存後端與已登入的 vCenter Server 執行個體之間建立全域對應。 
 ---
-= 將儲存後端與 vCenter Server 執行個體建立關聯
+= 在 ONTAP 工具中將儲存後端與 vCenter Server 執行個體建立關聯
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

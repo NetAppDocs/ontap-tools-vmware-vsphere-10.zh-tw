@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Remove vVol datastore 
 summary: 刪除資料存放區動作會在所選資料存放區上沒有 vVols 時刪除資料存放區。 
 ---
-= 壓縮 vVols 資料存放區
+= 在 ONTAP 工具中縮小 vVols 資料存放區
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

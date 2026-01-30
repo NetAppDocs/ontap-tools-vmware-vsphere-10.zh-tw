@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 在扇出保護場景中，一致性群組受到雙重保護，在第一個目標ONTAP叢集上具有同步關係，在第二個目標ONTAP叢集上具有非同步關係。 
 ---
-= 扇出保護
+= ONTAP 工具中的扇出保護
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

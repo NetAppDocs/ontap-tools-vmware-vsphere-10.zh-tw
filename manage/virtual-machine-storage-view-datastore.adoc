@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Remove vVol datastore 
 summary: 儲存檢視會顯示虛擬機器所建立的 vVols 清單。 
 ---
-= 虛擬機器儲存檢視
+= ONTAP 工具中的虛擬機器儲存視圖
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

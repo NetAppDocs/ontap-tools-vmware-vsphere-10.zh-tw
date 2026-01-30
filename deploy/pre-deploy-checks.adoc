@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ONTAP tools,Storage Replication Adapter 
 summary: 在部署ONTAP VMware vSphere的支援功能之前、您應該先熟悉部署套件的空間需求、以及一些基本的主機系統需求。 
 ---
-= 開始之前…
+= ONTAP tools 的部署前要求
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 當您在主機叢集層級建立資料儲存庫時， ONTAP工具會將其掛載到所有目標主機上，並且僅當您擁有所需的權限時才啟用此操作。 
 ---
-= 建立資料存放區
+= 在 ONTAP 工具中建立資料存放區
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

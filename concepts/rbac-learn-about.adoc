@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: role based access control, rbac, rbac components, learn about rbac 
 summary: 角色型存取控制（ RBAC ）是控制組織內資源存取的安全架構。RBAC 可定義具有特定權限層級的角色來執行動作，而非將授權指派給個別使用者，藉此簡化管理。已定義的角色會指派給使用者，有助於降低錯誤風險，並簡化整個組織的存取控制管理。 
 ---
-= 瞭解適用於 VMware vSphere 10 RBAC 的 ONTAP 工具
+= 了解 ONTAP tools RBAC
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 調整資料存放區大小可讓您增加虛擬機器檔案的儲存空間。您可以隨著基礎架構需求變更而變更資料存放區的大小。 
 ---
-= 調整 NFS 和 VMFS 資料存放區的大小
+= 在 ONTAP 工具中調整 NFS 和 VMFS 資料存放區的大小
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

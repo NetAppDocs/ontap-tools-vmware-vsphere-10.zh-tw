@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: release notes, ontap tools for VMware vSphere 
 summary: 提供ONTAP 本次VMware vSphere之VMware vSphere版本的重要資訊、包括新功能與增強功能、修正問題、已知問題、注意事項及限制。 
 ---
-= 版本資訊
+= ONTAP 工具發布說明
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

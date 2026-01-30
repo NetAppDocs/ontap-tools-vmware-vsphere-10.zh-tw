@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 輸入 NTP 伺服器詳細資料，以同步 ONTAP 工具應用裝置的時間時鐘。 
 ---
-= 編輯備份設定
+= 編輯 ONTAP tools 備份設定
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

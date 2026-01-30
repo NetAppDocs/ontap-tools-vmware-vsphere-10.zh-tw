@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Mount vVol 
 summary: 您可以使用「Mount vVols Datastore」（掛載vVols Datastore）對話方塊、將VMware Virtual Volumes（vVols）資料存放區掛載到一或多個其他主機。裝載資料存放區可讓儲存設備存取其他主機。您只能透過 API 卸載 vVols 資料存放區。 
 ---
-= 掛載vVols資料存放區
+= 在 ONTAP 工具中掛載 vVols 資料存放區
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

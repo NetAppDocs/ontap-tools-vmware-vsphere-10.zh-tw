@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 您應該對應受保護網站和還原網站上的網路、以便在它們之間進行通訊。 
 ---
-= 設定網路對應
+= 在 ONTAP tools 中設定網路映射
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

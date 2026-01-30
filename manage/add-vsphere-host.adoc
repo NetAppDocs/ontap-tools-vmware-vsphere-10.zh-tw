@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 將新的 VMware vSphere 主機新增至ONTAP tools for VMware vSphere。 
 ---
-= 新增新的 VMware vSphere 主機
+= 將 VMware vSphere 主機新增至 ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

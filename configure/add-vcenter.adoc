@@ -13,6 +13,16 @@ summary: 將 vCenter Server 執行個體新增至 VMware vSphere 的 ONTAP 工�
 [role="lead"]
 將 vCenter Server 執行個體新增至 VMware vSphere 的 ONTAP 工具，以設定，管理及保護 vCenter Server 環境中的虛擬資料存放區。新增多個 vCenter Server 執行個體時，需要自訂 CA 憑證才能在 ONTAP 工具和每個 vCenter Server 之間進行安全通訊。
 
+在向 ONTAP 工具管理器註冊 vCenter Server 執行個體時，請確保 vCenter Server 憑證包含有效的主體別名（SAN）擴充功能。SAN 擴充功能必須同時包含 DNS 和 IP 位址項目。例如：
+
+[listing]
+----
+X509v3 extensions:
+    X509v3 Subject Alternative Name:
+        DNS: vcenter.example.com, DNS: vcenter, IP Address: 192.168.0.50
+----
+如果 vCenter Server 憑證不包含 SAN 擴充，或者 SAN 擴充不包含正確的 DNS 或 IP 位址值，ONTAP tools 操作可能會因憑證驗證錯誤而失敗。
+
 .關於這項工作
 ONTAP工具與 vCenter Server 集成，可直接從 vSphere 用戶端執行設定、快照和資料保護等儲存任務。
 

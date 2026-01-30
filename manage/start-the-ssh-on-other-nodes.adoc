@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 升級之前、您需要在其他節點上啟動 SSH 。 
 ---
-= 在其他節點上啟動 SSH
+= 在其他 ONTAP 工具節點上啟動 SSH
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

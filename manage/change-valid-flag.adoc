@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 您可以使用維護控制台變更憑證驗證標誌。 
 ---
-= 更改證書驗證標誌
+= 在 ONTAP tools 中變更憑證驗證標誌
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

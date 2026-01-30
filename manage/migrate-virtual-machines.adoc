@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 在資料中心中移轉現有虛擬機器時，您應該注意一些考量事項。 
 ---
-= 移轉或複製虛擬機器的考量事項
+= ONTAP 工具的虛擬機器遷移和複製注意事項
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ONTAP tools,Storage Replication Adapter 
 summary: 請依照本節中的指示，順利終止適用於 VMware vSphere 部署的 ONTAP 工具。 
 ---
-= 解除安裝適用於 VMware vSphere 的 ONTAP 工具
+= 卸載 ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

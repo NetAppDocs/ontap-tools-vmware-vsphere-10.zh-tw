@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: migrate 
 summary: 移轉儲存資料時、會使用 REST API 手動建立儲存後端。移轉 VASA Provider 資料時，資料會從現有的 Derby 資料庫匯出，並匯入至 MongoDB 資料庫。 
 ---
-= 遷移 VASA 提供者並更新 SRA
+= 遷移 VASA Provider 並在 ONTAP tools 中更新 SRA
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
