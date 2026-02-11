@@ -13,19 +13,37 @@ summary: 將 vCenter Server 執行個體新增至 VMware vSphere 的 ONTAP 工�
 [role="lead"]
 將 vCenter Server 執行個體新增至 VMware vSphere 的 ONTAP 工具，以設定，管理及保護 vCenter Server 環境中的虛擬資料存放區。新增多個 vCenter Server 執行個體時，需要自訂 CA 憑證才能在 ONTAP 工具和每個 vCenter Server 之間進行安全通訊。
 
-在向 ONTAP 工具管理器註冊 vCenter Server 執行個體時，請確保 vCenter Server 憑證包含有效的主體別名（SAN）擴充功能。SAN 擴充功能必須同時包含 DNS 和 IP 位址項目。例如：
+.關於這項工作
+ONTAP工具與 vCenter Server 集成，可直接從 vSphere 用戶端執行設定、快照和資料保護等儲存任務。
 
+.開始之前
+* 請確保 vCenter Server 憑證包含有效的「使用者備用名稱（SAN）」擴展，其中包含 DNS 和 IP 位址項目。例如：
++
 [listing]
 ----
 X509v3 extensions:
     X509v3 Subject Alternative Name:
         DNS: vcenter.example.com, DNS: vcenter, IP Address: 192.168.0.50
 ----
-如果 vCenter Server 憑證不包含 SAN 擴充，或者 SAN 擴充不包含正確的 DNS 或 IP 位址值，ONTAP tools 操作可能會因憑證驗證錯誤而失敗。
++
+如果憑證不包含 SAN 擴充，或者 SAN 擴充不包含正確的 DNS 或 IP 位址值，ONTAP tools 操作可能會因憑證驗證錯誤而失敗。
 
-.關於這項工作
-ONTAP工具與 vCenter Server 集成，可直接從 vSphere 用戶端執行設定、快照和資料保護等儲存任務。
+* vCenter Server 的主網路識別碼（PNID）必須包含在 SAN 詳細資訊中。PNID 和 DNS 名稱應相同，並且可在 DNS 中解析。
+* 建議使用完全限定網域名稱（FQDN）部署 vCenter Server，並確保憑證中的 SAN 包含 DNS Name=machine_FQDN，以獲得最佳相容性和支援。
+* 如需更多資訊，請參閱 VMware 文件：
++
+** https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-authentication/vsphere-security-certificates-authentication/certificate-requirements-for-different-solution-paths-authentication.html["不同解決方案路徑的 vSphere 憑證需求"]
+** https://knowledge.broadcom.com/external/article/316601/replace-vcenter-machine-ssl-certificate.html["替換 vCenter Machine SSL 憑證自訂憑證授權單位簽署憑證"]
+** https://knowledge.broadcom.com/external/article/406282/error-subject-alternate-name-san-field-d.html["錯誤：主題備用名稱（SAN）欄位不包含 PNID。請提供有效的證書"]
 
+
+
+
+[NOTE]
+====
+如果 FQDN 不可用，您可以將 PNID 設定為 IP 位址，並將該 IP 位址包含在 SAN 中。但是，VMware 不建議這樣做。
+
+====
 .步驟
 . 開啟 Web 瀏覽器並前往以下 URL： `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . 使用您在部署期間提供的 VMware vSphere 管理員認證 ONTAP 工具登入。

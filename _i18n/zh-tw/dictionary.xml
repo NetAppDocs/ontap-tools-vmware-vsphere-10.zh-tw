@@ -1971,7 +1971,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="a6db38ab6788244dd400202a4ac077c9" category="cell">ONTAP工具管理節點的 IPv4 位址。它是管理網路上節點管理介面的唯一 IPv4 位址。</block>
   <block id="57a162b82ea942d344ca18a6563ae0ad" category="paragraph">確保所有相關 IP 位址的必要防火牆連接埠均已開啟。 ONTAP工具需要透過連接埠 443 存取 LIF。有關所需連接埠的完整列表，請參閱連接埠要求部分<block ref="1a93487a9f020b7c05d37b4998f77757" category="inline-link-macro-rx"></block>。</block>
   <block id="842fbe95dfc795462ae01e0da46b578d" category="list-text">如果您使用光纖通道 (FC) 進行儲存連接，請在 FC 交換器上設定分割區以將 ESXi 主機與 SVM 的 FC LIF 連接起來。<block ref="56d435991bafd2bcca9f59739e2992e7" category="inline-link-rx"></block></block>
-  <block id="3238b34a31c90c89668904ec5be46d4c" category="cell">9.15.1、9.16.0、9.16.1、9.17.0 及 9.17.1</block>
   <block id="10b3adf4529649ecb009c579e7713c8e" category="cell">10.5</block>
   <block id="40be5cc49cd5c75f73a6fb947ad09668" category="admonition">確保所有ONTAP工具節點位於同一子網，以保持彼此之間不間斷的通訊。</block>
   <block id="43735eab3ba96d50a6b739b518e1e76c" category="paragraph">最初，您將部署ONTAP tools for VMware vSphere作為小型單節點配置，該配置提供核心服務來支援 NFS 和 VMFS 資料儲存區。若要擴充配置以為每個服務添加更多容器、增強彈性或使用vVols資料儲存和高可用性 (HA)，請先完成此工作流程，然後繼續執行擴充步驟。欲了解更多信息，請參閱<block ref="9ef467ebb813ac9bfc1579e0ba7d9e65" category="inline-link-macro-rx"></block> 。</block>
@@ -2451,7 +2450,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="4273cb76acdc3e1de02819d037c77ad4" category="cell">透過增強的安全性、合規性和自動化功能，簡化從第 0 天到第 2 天的運營</block>
   <block id="92d3c85edd0fa69062ef2c7cca594814" category="cell">ONTAP發布資格</block>
   <block id="f41628526d2ecef49849a9d54aec2d46" category="cell">ONTAP 9.9.1 升級至ONTAP 9.16.1</block>
-  <block id="53f67abe3ae260cacfac7adeeda90377" category="cell">ONTAP 9.12.1 至 9.15.1 適用於ONTAP工具 10.2。適用於ONTAP工具 10.3 的ONTAP 9.14.1、9.15.1、9.16.0 和 9.16.1。適用於ONTAP工具 10.4 的ONTAP 9.14.1、9.15.1、9.16.0 和 9.16.1。使用ASA r2 系統時， ONTAP工具 10.4 需要ONTAP 9.16.1P3 及更高版本。適用於ONTAP工具 10.5 的ONTAP 9.15.1、9.16.0、9.16.1、9.17.0 和 9.17.1</block>
   <block id="d67ece44624c7aa69b0f38715d1ac2fb" category="cell">VMware 版本支持</block>
   <block id="af0223f5c63fe0b5a6e75d3087868abd" category="cell">vSphere 7.x-8.x VMware Site Recovery Manager (SRM) 8.5 至 VMware Live Site Recovery 9.0</block>
   <block id="30388d1a3ab1a01f6930553a577eb80b" category="cell">協議支持</block>
@@ -2598,8 +2596,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="587025fcd9783b8dad6642bf4ea9050a" category="doc">vCenter Server RBAC 如何與 ONTAP tools 協同工作</block>
   <block id="b690b3fbfbdc8910bd0b4b68feb15af2" category="doc">vCenter Server 對 ONTAP 工具的 RBAC 注意事項</block>
   <block id="eaeddcc9311544bd9a0756a835a12cea" category="doc">為 ONTAP tools 新增儲存後端</block>
-  <block id="ff0b8d98acac2c2dec8cc8937cbbe057" category="paragraph">在向 ONTAP 工具管理器註冊 vCenter Server 執行個體時，請確保 vCenter Server 憑證包含有效的主體別名（SAN）擴充功能。SAN 擴充功能必須同時包含 DNS 和 IP 位址項目。例如：</block>
-  <block id="b6a9b93d1e2b7bdb6d36311aa19ed1cf" category="paragraph">如果 vCenter Server 憑證不包含 SAN 擴充，或者 SAN 擴充不包含正確的 DNS 或 IP 位址值，ONTAP tools 操作可能會因憑證驗證錯誤而失敗。</block>
   <block id="152eb457072cc3f0d1daeb3318bbc7f4" category="doc">在 ONTAP 工具中將儲存後端與 vCenter Server 執行個體建立關聯</block>
   <block id="eb92fe0cb6bfddb65b18107ce1bfc6df" category="doc">在 ONTAP 工具中設定 ESXi 主機設定</block>
   <block id="362f310edd36afeeeec5d3c7f14cefac" category="doc">在 ONTAP tools 中設定網路存取</block>
@@ -2687,4 +2683,22 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="c928bb04121a183be07f4eafbb06b783" category="doc">在 ONTAP tools 中驗證複製的儲存系統</block>
   <block id="9d2c893e6932222a6e9063b1f628bae1" category="doc">ONTAP 工具發布說明</block>
   <block id="c219ac41703e11b6d5430626757ee4d1" category="doc">ONTAP tools 升級錯誤代碼</block>
+  <block id="7387e2cfe8bac61aeada7d8df94fe9f7" category="list-text">請確保 vCenter Server 憑證包含有效的「使用者備用名稱（SAN）」擴展，其中包含 DNS 和 IP 位址項目。例如：</block>
+  <block id="077c9bea99c626318ae6e1c521fb7c41" category="paragraph">如果憑證不包含 SAN 擴充，或者 SAN 擴充不包含正確的 DNS 或 IP 位址值，ONTAP tools 操作可能會因憑證驗證錯誤而失敗。</block>
+  <block id="6f8b3b7e42dadd9b7806e6e98d7d0a77" category="list-text">vCenter Server 的主網路識別碼（PNID）必須包含在 SAN 詳細資訊中。PNID 和 DNS 名稱應相同，並且可在 DNS 中解析。</block>
+  <block id="39e421f0221e3f55b7e77a0110fce9e0" category="list-text">建議使用完全限定網域名稱（FQDN）部署 vCenter Server，並確保憑證中的 SAN 包含 DNS Name=machine_FQDN，以獲得最佳相容性和支援。</block>
+  <block id="dbabfcb48125f6c3a069313029fdada8" category="list-text">如需更多資訊，請參閱 VMware 文件：</block>
+  <block id="381b5a0822c9882ced35624a3338ea81" category="inline-link">不同解決方案路徑的 vSphere 憑證需求</block>
+  <block id="38e7ce10f91b93ef8eecb43d98853cb3" category="list-text"><block ref="38e7ce10f91b93ef8eecb43d98853cb3" category="inline-link-rx"></block></block>
+  <block id="bab39c0d7f700e0dbd68e4761a2c9ac4" category="inline-link">替換 vCenter Machine SSL 憑證自訂憑證授權單位簽署憑證</block>
+  <block id="81c3c30e39dc6db9cf179ead4dc53c00" category="list-text"><block ref="81c3c30e39dc6db9cf179ead4dc53c00" category="inline-link-rx"></block></block>
+  <block id="4ce004ede8d7c5a94bcc602e81d0dd46" category="inline-link">錯誤：主題備用名稱（SAN）欄位不包含 PNID。請提供有效的證書</block>
+  <block id="e124d9a97cf59877517198f1cf0f104c" category="list-text"><block ref="e124d9a97cf59877517198f1cf0f104c" category="inline-link-rx"></block></block>
+  <block id="b4a7fb91e417866bbf89b862eaf99003" category="paragraph">如果 FQDN 不可用，您可以將 PNID 設定為 IP 位址，並將該 IP 位址包含在 SAN 中。但是，VMware 不建議這樣做。</block>
+  <block id="71593980c484b19aefec169af936ae1e" category="cell">9.15.1、9.16.1 和 9.17.0</block>
+  <block id="16ad6f9ee375f3dcd68aa34d3ccd374c" category="cell">ONTAP 工具 10.2 需要 ONTAP 9.12.1 至 9.15.1 版本。ONTAP 工具 10.3 需要 ONTAP 9.14.1、9.15.1、9.16.0 和 9.16.1 版本。ONTAP 工具 10.4 需要 ONTAP 9.14.1、9.15.1、9.16.0 和 9.16.1 版本。使用 ASA r2 系統時，ONTAP 工具 10.4 需要 ONTAP 9.16.1P3 及更高版本。ONTAP 工具 10.5 需要 ONTAP 9.15.1、9.16.1 和 9.17.0 版本。</block>
+  <block id="c9ea6c5f05454d915a89126e34375938" category="paragraph">ONTAP tools for VMware vSphere 10.5 P1 支援 vCenter 高可用性（HA）配置，適用於 SRA 和 SnapMirror active sync 元件。此配置不支援 vVols。在 HA 故障轉移期間，vCenter 可能會有幾分鐘的時間無法使用。在大型環境中或發生錯誤時，故障轉移時間可能超過 15 分鐘。</block>
+  <block id="a51a2d315454dc257743fd165c6ec1e1" category="inline-link">vCenter High Availability 文件</block>
+  <block id="b2275014ec45c2e387f49db63d8ae0de" category="inline-link">Broadcom 支援</block>
+  <block id="7617b6be9a4dd36133ef22cea59d80e2" category="paragraph">如需更多資訊，請參閱<block ref="debb52d5bcbe0ce63e3d926c803fdf23" category="inline-link-rx"></block>。如有關於 vCenter HA 的問題，請聯絡<block ref="2ce3402d69457b08a3211a429ae43e9d" category="inline-link-rx"></block>。</block>
 </blocks>
