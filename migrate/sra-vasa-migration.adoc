@@ -25,16 +25,17 @@ iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 ----
 . ONTAP tools for VMware vSphere的 OVA。
 . 新增要移轉到ONTAP tools for VMware vSphere的 vCenter Server 執行個體。請參閱link:../configure/add-vcenter.html["新增 vCenter Server 執行個體"]了解更多。
+. link:../manage/enable-services.html["啟用 VASA Provider"]ONTAP tools for VMware vSphere上的服務。
 . 透過 vCenter Server API 將儲存後端本機整合到ONTAP工具插件中。請參閱link:../configure/add-storage-backend.html["使用 vSphere 用戶端介面新增儲存後端"]了解更多。
 . 取得存取權杖以驗證 REST API 請求。請使用以下範例，並將變數替換為特定於您環境的值。
 +
 [source, curl]
 ----
 curl --request POST \
---location "https://$FQDN_IP_PORT/virtualization/api/v1/auth/login” \
---header "Content-Type: application/json" \
---header "Accept: */*" \
--d "{"username": "$MYUSER", "password": "$MYPASSWORD"}"
+  --location "https://$FQDN_IP_PORT/virtualization/api/v1/auth/vcenter-login" \
+  --header "Content-Type: application/json" \
+  --header "Accept: */*" \
+  -d '{"username": "$MYUSER", "password": "$MYPASSWORD"}'
 ----
 +
 複製並保存回應中傳回的存取令牌。
@@ -72,16 +73,16 @@ curl -X POST `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/{vcguid}/
 [listing]
 ----
 curl -X POST 'https://<OTV-NG-IP>:8443/virtualization/api/v1/vcenters/<vcguid>/migration-jobs' \
---header 'x-auth: <auth_token>' \
---header 'Content-Type: application/json' \
---data '{
-  "otv_ip": "xx.xx.xx.xx",
-  "vasa_provider_credentials": {
-    "username": "xxxxx",
-    "password": "******"
-  },
-  "database_password": "******"
-}'
+  --header 'x-auth: <auth_token>' \
+  --header 'Content-Type: application/json' \
+  --data '{
+    "otv_ip": "xx.xx.xx.xx",
+    "vasa_provider_credentials": {
+      "username": "xxxxx",
+      "password": "******"
+    },
+    "database_password": "******"
+  }'
 ----
 其他版本移轉的要求本文：
 
@@ -112,23 +113,28 @@ curl -X POST 'https://<OTV-NG-IP>:8443/virtualization/api/v1/vcenters/<vcguid>/m
 +
 [listing]
 ----
-curl `\https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<migration_id>?includeSubJobsAndTasks=true`
+curl `\https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobId>?includeSubJobsAndTasks=true`
 ----
 +
-作業完成後，請查看作業回應中的遷移報告。
+使用上一步遷移作業傳回的「id」值。作業完成後，請檢閱作業回應中的遷移報告。
 
 . 將ONTAP tools for VMware vSphere新增至 vCenter Server。
 . 使用ONTAP tools for VMware vSphere 的VASA 提供者。有關說明，請參閱link:../configure/registration-process.html["註冊 VASA Provider"]。
-. 註冊後，請在 vSphere Client 的「儲存提供者」下驗證 VASA 提供者的名稱及其狀態。  VASA 提供者應在線上顯示，確認註冊成功。
-. link:../manage/enable-services.html["啟用 VASA Provider"]ONTAP tools for VMware vSphere上的服務。
+. 驗證 VASA Provider 註冊：
++
+.. 在 vSphere Client 中，導覽至 vCenter Server 。
+.. 選擇 *Configure* > *Storage Providers* 。
+.. 確認上一步驟中註冊的 VASA Provider 顯示為線上。
+
+
 . 請依照下列步驟停止ONTAP tools for VMware vSphere：
 +
 .. 在ONTAP工具 9.x 中，開啟 Web 控制台。
 .. 存取維護控制台。
 .. 進入 `1`選擇“應用程式配置”選單。
 .. 進入 `5`停止 VASA Provider 和 SRA 服務。
-.. 在 vSphere Client 中，導覽至「清單」>「儲存提供者」。
-.. 從儲存後端選擇ONTAP工具 9.x VASA 提供程序，然後按一下「刪除」。
+.. 在 vSphere Client 中，導航至 vCenter Server 並選擇 *Configure* > *Storage Providers*。
+.. 選擇 ONTAP 工具 9.x 的離線 VASA Provider，然後選擇 *Remove*。
 +
 舊 VASA 提供者停止後，vCenter Server 將故障轉移到ONTAP tools for VMware vSphere。所有資料儲存庫和虛擬機器均可訪問，並由適用於ONTAP tools for VMware vSphere提供服務。
 
@@ -161,6 +167,28 @@ curl `\https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<migratio
 ----
 curl  -X PATCH  `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/<vcenter_id>/migration-jobs/<migration_id>`
 ----
+* HTTP 方法和端點 *
+
+此 REST API 呼叫使用下列方法和端點。
+
+|===
+
+
+| * HTTP方法* | *路徑* 
+
+
+| 修補程式 | /API/v1 
+|===
+* 處理類型 *
+
+非同步
+
+請在 Swagger 中使用以下 URI：
+
+[listing]
+----
+curl  -X PATCH  `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/<vcenter_id>/migration-jobs/<migration_id>`
+----
 * 目前範例 *
 
 [listing]
@@ -168,8 +196,6 @@ curl  -X PATCH  `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/<vcent
 curl  -X PATCH  `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/56d373bd-4163-44f9-a872-9adabb008ca9/migration-jobs/d50073ce-35b4-4c51-9d2e-4ce66f802c35`
 ----
 * JSON 輸出範例 *
-
-工作物件即會傳回。您應該儲存工作識別碼、以便在下一步中使用。
 
 [listing]
 ----
@@ -181,12 +207,14 @@ curl  -X PATCH  `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/56d373
 ----
 ====
 +
-要求主體是空的，用於修補作業。
 
+NOTE: 在 PATCH API 呼叫中使用步驟 7 中傳回的「migration_id」值作為 <migration_id>。PATCH 操作的請求體為空。
 
-
++
 
 NOTE: UUID 是移轉後 API 所傳回的移轉 UUID 。
+
+
 
 執行修補程式移轉 API 之後，所有 VM 都會遵守儲存原則。
 
@@ -200,14 +228,10 @@ NOTE: UUID 是移轉後 API 所傳回的移轉 UUID 。
 升級後，如果虛擬機器的規範狀態已過期，請使用下列步驟重新套用儲存原則：
 
 . 前往資料儲存並選擇*摘要*>*虛擬機器儲存策略*。
-+
-系統顯示*虛擬機器儲存策略合規性*下的合規性狀態為*過時*。
-
+. 系統顯示*虛擬機器儲存策略合規性*下的合規性狀態為*過時*。
 . 選擇儲存虛擬機器策略和對應的虛擬機器。
 . 選擇*應用*。
-+
-*虛擬機器儲存策略合規性*下的合規性狀態顯示為合規性。
-
+. *虛擬機器儲存策略合規性*下的合規性狀態顯示為合規性。
 
 
 .相關資訊

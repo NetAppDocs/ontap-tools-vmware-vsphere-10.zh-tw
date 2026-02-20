@@ -60,7 +60,7 @@ summary: 在部署ONTAP VMware vSphere的支援功能之前、您應該先熟悉
 | 需求 | 您的價值 
 
 
-| ONTAP工具應用程式的 IP 位址。這是用於存取ONTAP工具 Web 介面（負載平衡器）的 IP 位址 |  
+| ONTAP 工具應用程式的 IP 位址。這是用於存取 ONTAP 工具管理器 Web 介面（負載平衡器）的 IP 位址，位於 `\https://<ip>:8443/virtualization/ui/` |  
 
 
 | ONTAP工具用於內部通訊的虛擬 IP 位址。此 IP 位址用於具有多個ONTAP工具實例的設定中的內部通訊。此 IP 位址不應與ONTAP工具應用程式的 IP 位址相同。 （Kubernetes 控制平面） |  
@@ -78,7 +78,7 @@ summary: 在部署ONTAP VMware vSphere的支援功能之前、您應該先熟悉
 | DNS 搜尋網域 |  
 
 
-| ONTAP工具管理節點的 IPv4 位址。它是管理網路上節點管理介面的唯一 IPv4 位址。 |  
+| ONTAP 工具管理節點的 IPv4 位址。它是管理網路上節點管理介面的唯一 IPv4 位址。此位址用於透過 SSH 連接到 ONTAP 工具應用裝置，以進行遠端診斷存取。 |  
 
 
 | IPv4 位址的子網路遮罩 |  

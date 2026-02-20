@@ -454,7 +454,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="a62fbfbe1fa2fbcd3ff1ab71d9f0cf7a" category="paragraph">* 目前範例 *</block>
   <block id="654a9186fe9a47c1397903b9228f2c36" category="paragraph">其他版本移轉的要求本文：</block>
   <block id="18009c9216d59118fb460184e2ec0a3d" category="paragraph">* JSON 輸出範例 *</block>
-  <block id="492fdcd87814cf3c979a27709fc29350" category="paragraph">工作物件即會傳回。您應該儲存工作識別碼、以便在下一步中使用。</block>
   <block id="ec874bf582309d24e5c0f1f38429fb73" category="inline-link-macro">將 VASA Provider 登錄至 vCenter Server</block>
   <block id="63bc9a3997d66d835d9f3ec29451407d" category="cell">修補程式</block>
   <block id="b06f0e274f6c746f0d30521b5c7f392e" category="list-text">將適用於 VMware vSphere 的 ONTAP 工具升級 ISO 上傳至內容庫。</block>
@@ -981,7 +980,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="90182eba2ac7240af5b5cb5ba83a8c1b" category="sidebar">瞭解 REST API</block>
   <block id="d58b759501469292f5d0464d265c376c" category="sidebar">REST實作</block>
   <block id="eaff07db9f9bd4c788b59cf5ac2e6f5e" category="paragraph"><block ref="eaff07db9f9bd4c788b59cf5ac2e6f5e" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="f663ec26fcc5dbf0e82a2df73c30a3e3" category="paragraph">要求主體是空的，用於修補作業。</block>
   <block id="c1da67abb88e41cb6c66ffcb6aa791c1" category="list-text">從 vCenter Server 開啟 ONTAP 工具的主控台。</block>
   <block id="c8c29d2a26286541354fc8e377f3b6ce" category="list-text">從非 HA 設定移至 HA 設定</block>
   <block id="9c1b85c4b3c7f912b4954489e7d9f1ad" category="list-text">以個別 API 呼叫為例，向下捲動至「 *vCenters 」類別，然後選取端點旁的「 Get * 」<block ref="22d8515b1a0806aac1067186e4429b4c" prefix=" " category="inline-code"></block></block>
@@ -1965,10 +1963,8 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="e665d4f634eb279e3d3649d89dce4f3e" category="paragraph">ONTAP tools for VMware vSphere最初部署為非 HA 設定。若要擴充至高可用性部署，您需要啟用 CPU 熱插拔和記憶體熱插拔。您可以在部署過程中執行此步驟，也可以在部署後編輯虛擬機器設定。</block>
   <block id="76ecd43e2d7d963469ed779109b6621d" category="list-text">前往您打算部署 OVA 的資源池、叢集或主機。</block>
   <block id="a85cd355d0191e9ca39647db304e9886" category="list-text">前往*庫存*下的ONTAP tools for VMware vSphere並選擇*編輯設定*選項。</block>
-  <block id="7bc1f449f84cbd0274b17756a6c88276" category="cell">ONTAP工具應用程式的 IP 位址。這是用於存取ONTAP工具 Web 介面（負載平衡器）的 IP 位址</block>
   <block id="0a975d248a4d2c7d423087028109208e" category="cell">ONTAP工具用於內部通訊的虛擬 IP 位址。此 IP 位址用於具有多個ONTAP工具實例的設定中的內部通訊。此 IP 位址不應與ONTAP工具應用程式的 IP 位址相同。 （Kubernetes 控制平面）</block>
   <block id="1cd1ce31df98698494f685f0c097277b" category="cell">ONTAP工具管理節點的 DNS 主機名</block>
-  <block id="a6db38ab6788244dd400202a4ac077c9" category="cell">ONTAP工具管理節點的 IPv4 位址。它是管理網路上節點管理介面的唯一 IPv4 位址。</block>
   <block id="57a162b82ea942d344ca18a6563ae0ad" category="paragraph">確保所有相關 IP 位址的必要防火牆連接埠均已開啟。 ONTAP工具需要透過連接埠 443 存取 LIF。有關所需連接埠的完整列表，請參閱連接埠要求部分<block ref="1a93487a9f020b7c05d37b4998f77757" category="inline-link-macro-rx"></block>。</block>
   <block id="842fbe95dfc795462ae01e0da46b578d" category="list-text">如果您使用光纖通道 (FC) 進行儲存連接，請在 FC 交換器上設定分割區以將 ESXi 主機與 SVM 的 FC LIF 連接起來。<block ref="56d435991bafd2bcca9f59739e2992e7" category="inline-link-rx"></block></block>
   <block id="10b3adf4529649ecb009c579e7713c8e" category="cell">10.5</block>
@@ -2234,7 +2230,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="fa885aacf6740d8be756318202aaeea3" category="paragraph">在ONTAP工具中執行資料儲存發現後， ONTAP工具會將平面 igroup 轉換為巢狀結構。然後， ONTAP工具會管理 igroup，並使用「otv_」前綴對其進行重新命名。在此過程中，LUN 仍然對應到同一個 igroup。</block>
   <block id="6e63f9b05e0f51c3646052747b709edf" category="paragraph">您可以使用在ONTAP系統中首次建立的 igroup 在ONTAP工具中建立資料儲存庫，然後由ONTAP工具對其進行管理。這些 igroup 出現在自訂啟動器群組名稱下拉清單中。然後，資料儲存區的新 LUN 將會對應到對應的規範化子 igroup，例如「otv_NativeIgroup1」。</block>
   <block id="cf78d06b764932bff9c08da08c607da8" category="paragraph">系統傳回一個作業對象。儲存作業標識符以便在下一個步驟中使用。</block>
-  <block id="e79f49713689b554500076c29f3b0f0d" category="paragraph">作業完成後，請查看作業回應中的遷移報告。</block>
   <block id="8c72adfd7c929e7f36ec5083f128105b" category="list-text">完成資料儲存發現作業後，遷移的 NFS 和 VMFS 資料儲存將出現在ONTAP tools for VMware vSphere中，可能需要長達 30 分鐘的時間。在概覽頁面上檢查它們的可見性。</block>
   <block id="03785cc80d260849e9ee53ea9ad304bf" category="list-text">等待*發現*完成，系統會自動在所有主機上刷新憑證。</block>
   <block id="32684456982f6de7f06ceb0a0a814307" category="list-text">等待資料儲存區和虛擬機器操作開始。等待時間取決於主機、資料儲存和虛擬機器的數量。如果您不等待，您可能會偶爾看到失敗。</block>
@@ -2431,14 +2426,11 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="8d5176b0f7c64423a1410ec460a2fbcd" category="paragraph">複製並保存回應中傳回的存取令牌。</block>
   <block id="7b7cd5f7fba7393568ce0f3e6a816e91" category="list-text">將ONTAP tools for VMware vSphere新增至 vCenter Server。</block>
   <block id="2b0f4f36b8001dce4b825bc0fecf2e17" category="list-text">使用ONTAP tools for VMware vSphere 的VASA 提供者。有關說明，請參閱<block ref="c283b8bc021fee7e6c856fce39783a46" category="inline-link-macro-rx"></block>。</block>
-  <block id="1a464e16899d07e725803f6174f5e1fb" category="list-text">註冊後，請在 vSphere Client 的「儲存提供者」下驗證 VASA 提供者的名稱及其狀態。  VASA 提供者應在線上顯示，確認註冊成功。</block>
   <block id="7449849ed5e181a25bd151a90c66a6d6" category="list-text">請依照下列步驟停止ONTAP tools for VMware vSphere：</block>
   <block id="3076f368d1fb701b7d40be8f8c0f7d05" category="list-text">在ONTAP工具 9.x 中，開啟 Web 控制台。</block>
   <block id="6979cadafb4e3b67b5a0bda70225f50f" category="list-text">存取維護控制台。</block>
   <block id="b94aaa9c1bb758125ee360d9695799cf" category="list-text">進入<block ref="c4ca4238a0b923820dcc509a6f75849b" prefix=" " category="inline-code"></block>選擇“應用程式配置”選單。</block>
   <block id="64b8cf9b632898bad5081763af1fbebd" category="list-text">進入<block ref="e4da3b7fbbce2345d7772b0674a318d5" prefix=" " category="inline-code"></block>停止 VASA Provider 和 SRA 服務。</block>
-  <block id="ccba785a416529522c083f4606900605" category="list-text">在 vSphere Client 中，導覽至「清單」&gt;「儲存提供者」。</block>
-  <block id="836dd342f378a7b29dcbef5f07ab1b95" category="list-text">從儲存後端選擇ONTAP工具 9.x VASA 提供程序，然後按一下「刪除」。</block>
   <block id="f191ddd9150b5ab75986a7a94e92817b" category="paragraph">請在 Swagger 中使用以下 URI：</block>
   <block id="7cf21d459cdbb9c2a1e4864da9f56b5a" category="summary">了解適用於ONTAP tools for VMware vSphere和ONTAP tools for VMware vSphere的功能比較</block>
   <block id="49d4ace549bb255068ca23c9172eab10" category="doc">ONTAP tools for VMware vSphere 9 與 10 功能比較</block>
@@ -2701,4 +2693,14 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="a51a2d315454dc257743fd165c6ec1e1" category="inline-link">vCenter High Availability 文件</block>
   <block id="b2275014ec45c2e387f49db63d8ae0de" category="inline-link">Broadcom 支援</block>
   <block id="7617b6be9a4dd36133ef22cea59d80e2" category="paragraph">如需更多資訊，請參閱<block ref="debb52d5bcbe0ce63e3d926c803fdf23" category="inline-link-rx"></block>。如有關於 vCenter HA 的問題，請聯絡<block ref="2ce3402d69457b08a3211a429ae43e9d" category="inline-link-rx"></block>。</block>
+  <block id="015201c8d96a0d1f03859660b14c2930" category="cell">ONTAP 工具應用程式的 IP 位址。這是用於存取 ONTAP 工具管理器 Web 介面（負載平衡器）的 IP 位址，位於<block ref="a06d973ff78e33873c1cb100862ab7a3" prefix=" " category="inline-code"></block></block>
+  <block id="818a93ed2e98a0dc1f094445fc5de89a" category="cell">ONTAP 工具管理節點的 IPv4 位址。它是管理網路上節點管理介面的唯一 IPv4 位址。此位址用於透過 SSH 連接到 ONTAP 工具應用裝置，以進行遠端診斷存取。</block>
+  <block id="608710d42ef8659d2d9da02848081770" category="paragraph">使用上一步遷移作業傳回的「id」值。作業完成後，請檢閱作業回應中的遷移報告。</block>
+  <block id="29a7e4682b4c588fb3d5a8c40bdd6124" category="list-text">驗證 VASA Provider 註冊：</block>
+  <block id="f663c84551a178949a68d10f2492f5c6" category="list-text">在 vSphere Client 中，導覽至 vCenter Server 。</block>
+  <block id="e4157e6ef58fbdd1f4edfff7edfb100a" category="list-text">選擇 *Configure* &gt; *Storage Providers* 。</block>
+  <block id="36455669f9fbf01f7cd2ef94a12ea762" category="list-text">確認上一步驟中註冊的 VASA Provider 顯示為線上。</block>
+  <block id="9c3fd4feed3b70ad58582159360ae925" category="list-text">在 vSphere Client 中，導航至 vCenter Server 並選擇 *Configure* &gt; *Storage Providers*。</block>
+  <block id="6df01bde6e0e3398aefe5b78073a6a20" category="list-text">選擇 ONTAP 工具 9.x 的離線 VASA Provider，然後選擇 *Remove*。</block>
+  <block id="5f3d684c32f3b3125b0b7b6f2b37b3f0" category="admonition">在 PATCH API 呼叫中使用步驟 7 中傳回的「migration_id」值作為 &lt;migration_id&gt;。PATCH 操作的請求體為空。</block>
 </blocks>
