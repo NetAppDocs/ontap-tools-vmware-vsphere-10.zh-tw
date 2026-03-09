@@ -2703,4 +2703,10 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="9c3fd4feed3b70ad58582159360ae925" category="list-text">在 vSphere Client 中，導航至 vCenter Server 並選擇 *Configure* &gt; *Storage Providers*。</block>
   <block id="6df01bde6e0e3398aefe5b78073a6a20" category="list-text">選擇 ONTAP 工具 9.x 的離線 VASA Provider，然後選擇 *Remove*。</block>
   <block id="5f3d684c32f3b3125b0b7b6f2b37b3f0" category="admonition">在 PATCH API 呼叫中使用步驟 7 中傳回的「migration_id」值作為 &lt;migration_id&gt;。PATCH 操作的請求體為空。</block>
+  <block id="c5ee1392d2a4919b586e3706e8fd7ca2" category="section-title">驗證儲存後端的 SAN 型憑證</block>
+  <block id="7fddec929757e28798cf7b2e040cc5c0" category="paragraph">為確保通訊安全和正確驗證，請確認所有儲存後端均使用基於 SAN 的憑證：</block>
+  <block id="5f2131ae70df4a174b962b01cada7033" category="list-text">檢查 ONTAP 管理憑證是否包含主體別名 (SAN) 項目。</block>
+  <block id="8d80b04306b64b2c7241ee8c3b8cac3a" category="list-text">確認 SAN 條目與 ONTAP 管理 IP 位址或 DNS 名稱（或兩者）相符。</block>
+  <block id="0c205dec8702acf753959708a299c51f" category="list-text">確保用於上線 ONTAP 的詳細資料與憑證的 SAN 項目中的 IP 位址或 DNS 名稱相符。</block>
+  <block id="f38a6ced93585f5991828bd2b6c8fa42" category="paragraph">遵循這些步驟有助於防止憑證驗證問題，並確保 ONTAP 系統安全整合。</block>
 </blocks>
