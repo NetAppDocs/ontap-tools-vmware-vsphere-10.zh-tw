@@ -35,7 +35,7 @@ curl --request POST \
   --location "https://$FQDN_IP_PORT/virtualization/api/v1/auth/vcenter-login" \
   --header "Content-Type: application/json" \
   --header "Accept: */*" \
-  -d '{"username": "$MYUSER", "password": "$MYPASSWORD"}'
+  -d '{"username": "$MYUSER", "password": "$MYPASSWORD", "vcenter hostname": "$MYVCENTER"}'
 ----
 +
 複製並保存回應中傳回的存取令牌。
@@ -118,7 +118,6 @@ curl `\https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobId>?i
 +
 使用上一步遷移作業傳回的「id」值。作業完成後，請檢閱作業回應中的遷移報告。
 
-. 將ONTAP tools for VMware vSphere新增至 vCenter Server。
 . 使用ONTAP tools for VMware vSphere 的VASA 提供者。有關說明，請參閱link:../configure/registration-process.html["註冊 VASA Provider"]。
 . 驗證 VASA Provider 註冊：
 +

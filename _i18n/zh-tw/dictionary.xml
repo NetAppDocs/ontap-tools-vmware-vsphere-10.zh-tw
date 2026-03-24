@@ -246,7 +246,6 @@
   <block id="3b326cad8d176fc4ce802f76863c3ac6" category="paragraph">將複製的虛擬機器放置在這個實體磁碟區、中繼資料檔案會更新虛擬機器詳細資料。FlexVol</block>
   <block id="504756afdd8e0a45f90bb3a07484512e" category="paragraph">支援受保護虛擬機器的複製複本。</block>
   <block id="74aa15274c9a75ae1e9b01b9a4867fea" category="section-title">虛擬機器快照</block>
-  <block id="49e93fd9a17de8559bffcb0218844f3a" category="paragraph">目前僅支援不含記憶體的虛擬機器快照。如果虛擬機器具有快照與記憶體、則不會將虛擬機器視為保護。</block>
   <block id="317f8a592684314bc3829f0ff356fe47" category="summary">刪除資料存放區動作會刪除資料存放區。在 NFS 或 VMFS 資料存放區的情況下、會出現一個對話方塊、其中包含使用資料存放區的 VM 清單。</block>
   <block id="3cd4a1ddd805e8692af529725906108e" category="doc">刪除資料存放區</block>
   <block id="a8211be0a6fb73b95cdffd1ac6d2b9d5" category="list-text">若要刪除 ONTAP 儲存設備上的備份磁碟區、請選取 * 刪除 ONTAP 叢集上的磁碟區 * 。</block>
@@ -2072,7 +2071,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="7cc3bb1c6bb475d226bfbe5da1ebd38c" category="cell">ONTAP工具節點卡顯示設備中的所有節點，包括節點名稱、虛擬機器名稱、狀態和網路資訊。選擇“查看詳細資訊”以查看特定節點的更多詳細資訊。 [注意] 在非 HA 配置中，僅出現一個節點。在 HA 配置中，顯示三個節點。</block>
   <block id="5ab1668c9ec40eca8f10aa49dea404c7" category="list-text">選擇虛擬磁碟格式、虛擬機器儲存策略以及與要遷移的資料儲存區的功能相符的 vVol 資料儲存區。</block>
   <block id="74d3a58195c8c6b12b2399fe05a69332" category="paragraph">VMware 目前不支援將虛擬機器複製到 VM 範本。</block>
-  <block id="685ad41930091bf99f93dc256b62607d" category="paragraph">您也無法保護具有記憶體快照的未受保護的虛擬機器。對於此版本，您需要在啟用虛擬機器保護之前刪除記憶體快照。</block>
   <block id="8406161320cdde68124591ab85e4092a" category="paragraph">ONTAP tools for VMware vSphere在兩種不同的上下文中解釋 igroup：</block>
   <block id="eef2558425e977ca0012ab130a151a4c" category="paragraph">建立資料儲存庫時，ONTAP tools for VMware vSphere會自動使用巢狀結構建立 igroup，以便更輕鬆地進行 LUN 對應。</block>
   <block id="dc48ac4a32526d5d7522c456f1f1cc94" category="paragraph">從適用於ONTAP tools for VMware vSphere開始，備份功能預設為啟用。</block>
@@ -2328,7 +2326,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="0e3dbc4805c820c2543dcfc7fb0ff1ae" category="paragraph">部署適用ONTAP tools for VMware vSphere後，如果無法存取維護控制台，請從 vCenter Server 安裝 VMware 工具。使用以下方式登入<block ref="67f50785d40416a7a7689c5c353f1128" prefix=" " category="inline-code"></block>部署期間設定的使用者名稱和密碼。使用 *nano* 在維護控制台或 root 登入控制台中編輯檔案。</block>
   <block id="3dc9723f860cc7fa81343acb2b1bc55f" category="list-text">在「*編輯閾值*」視窗中，在「*接近滿*」和「*滿*」欄位中提供所需的值，然後選擇「*儲存*」。您可以將閾值恢復為建議的預設值：接近滿格為 80，滿格為 90。</block>
   <block id="0fb6f15f7c944e350ea4ee5dbe349ad8" category="paragraph">如果將虛擬機器遷移到不同的FlexVol volume，系統會使用虛擬機器資訊更新該磁碟區的元資料檔案。如果虛擬機器遷移到不同的 ESXi 主機但相同的存儲，則底層FlexVol volume元資料檔案將不會被修改。</block>
-  <block id="ffae2d616a4df47529c992a2371e2ccb" category="paragraph">對於採用ASA r2 儲存類型的 Windows VM，虛擬機器的快照是唯讀的。當您啟動虛擬機器時，VASA Provider 會從唯讀快照建立 LUN 並啟用 IOPS。關閉虛擬機器電源時，VASA Provider 會刪除 LUN 並停用 IOPS。</block>
   <block id="77320a87e6ca763456023daeede0729f" category="inline-link">將 ESX 主機新增至 vSphere 叢集工作流程</block>
   <block id="91d42183cd7455cc3f88c0c77b61174e" category="admonition">當您使用以下方式新增新的 ESXi 主機時：<block ref="4954232b8967f3dbfaee01742ae35b89" category="inline-link-rx"></block>等待計劃的主機發現完成，然後它才會出現在ONTAP工具中。或者，您可以從NetApp ONTAP工具概覽畫面手動執行發現。</block>
   <block id="ba8e3bf168d21be1baf9d641e008977f" category="paragraph">最近任務面板會顯示進度。</block>
@@ -2424,7 +2421,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="919f060162028da82b75ccf8400335b5" category="list-text">透過 vCenter Server API 將儲存後端本機整合到ONTAP工具插件中。請參閱<block ref="d60b7308493aa415dfe7fcd24539d7e4" category="inline-link-macro-rx"></block>了解更多。</block>
   <block id="25c9412d6c1bba60178b87bc1c36e2bc" category="list-text">取得存取權杖以驗證 REST API 請求。請使用以下範例，並將變數替換為特定於您環境的值。</block>
   <block id="8d5176b0f7c64423a1410ec460a2fbcd" category="paragraph">複製並保存回應中傳回的存取令牌。</block>
-  <block id="7b7cd5f7fba7393568ce0f3e6a816e91" category="list-text">將ONTAP tools for VMware vSphere新增至 vCenter Server。</block>
   <block id="2b0f4f36b8001dce4b825bc0fecf2e17" category="list-text">使用ONTAP tools for VMware vSphere 的VASA 提供者。有關說明，請參閱<block ref="c283b8bc021fee7e6c856fce39783a46" category="inline-link-macro-rx"></block>。</block>
   <block id="7449849ed5e181a25bd151a90c66a6d6" category="list-text">請依照下列步驟停止ONTAP tools for VMware vSphere：</block>
   <block id="3076f368d1fb701b7d40be8f8c0f7d05" category="list-text">在ONTAP工具 9.x 中，開啟 Web 控制台。</block>
@@ -2709,4 +2705,7 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="8d80b04306b64b2c7241ee8c3b8cac3a" category="list-text">確認 SAN 條目與 ONTAP 管理 IP 位址或 DNS 名稱（或兩者）相符。</block>
   <block id="0c205dec8702acf753959708a299c51f" category="list-text">確保用於上線 ONTAP 的詳細資料與憑證的 SAN 項目中的 IP 位址或 DNS 名稱相符。</block>
   <block id="f38a6ced93585f5991828bd2b6c8fa42" category="paragraph">遵循這些步驟有助於防止憑證驗證問題，並確保 ONTAP 系統安全整合。</block>
+  <block id="dbc36b4329f96473c291b930fc0022cc" category="paragraph">支援不包含記憶體的虛擬機器快照。如果虛擬機器的快照包含記憶體，則無法保護該虛擬機器。</block>
+  <block id="d160829889a8982ffa6a76e6a77e9c03" category="paragraph">您無法保護包含記憶體快照的未受保護虛擬機器。請先刪除記憶體快照，然後再為虛擬機器啟用保護。</block>
+  <block id="b4458ee64903f6d51a1cecdf4bbd4ab4" category="paragraph">對於使用 ASA r2 儲存類型的 Windows 虛擬機，虛擬機快照為唯讀。啟動虛擬機器時，VASA Provider 會根據唯讀快照建立 LUN 並啟用 IOPS。關閉虛擬機器時，VASA Provider 會刪除 LUN 並停用 IOPS。</block>
 </blocks>
