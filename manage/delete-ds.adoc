@@ -2,7 +2,7 @@
 permalink: manage/delete-ds.html 
 sidebar: sidebar 
 keywords: vVols datastore,delete vVol 
-summary: 刪除資料存放區動作會刪除資料存放區。在 NFS 或 VMFS 資料存放區的情況下、會出現一個對話方塊、其中包含使用資料存放區的 VM 清單。 
+summary: 刪除資料存放區動作會刪除資料存放區。如果是 NFS 或 VMFS 資料存放區，則會顯示一個對話方塊，其中列出了正在使用該資料存放區的 VM。 
 ---
 = 在 ONTAP 工具中刪除資料存放區
 :allow-uri-read: 
@@ -16,7 +16,7 @@ summary: 刪除資料存放區動作會刪除資料存放區。在 NFS 或 VMFS 
 刪除資料儲存區時，將根據資料儲存區類型執行以下操作：
 
 * vVol 容器已卸載。
-* 如果 igroup 未使用，則 iqn 將從 igroup 中刪除。
+* 如果 igroup 未使用，則會從 igroup 中移除其啟動器。
 * vVol 容器已被刪除。
 * 彈性卷留在儲存陣列上。
 

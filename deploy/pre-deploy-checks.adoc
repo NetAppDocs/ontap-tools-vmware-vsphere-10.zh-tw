@@ -17,7 +17,7 @@ summary: 在部署ONTAP VMware vSphere的支援功能之前、您應該先熟悉
 | 需求 | 您的狀態 
 
 
-| vSphere 版本， ONTAP 版本和 ESXi 主機版本與 ONTP 工具版本相容。 | （是）無 
+| vSphere 版本、ONTAP 版本和 ESXi 主機版本與 ONTAP tools 版本相容。 | （是）無 
 
 
 | vCenter Server 環境已設定及設定 | （是）無 
@@ -63,7 +63,7 @@ summary: 在部署ONTAP VMware vSphere的支援功能之前、您應該先熟悉
 | ONTAP 工具應用程式的 IP 位址。這是用於存取 ONTAP 工具管理器 Web 介面（負載平衡器）的 IP 位址，位於 `\https://<ip>:8443/virtualization/ui/` |  
 
 
-| ONTAP工具用於內部通訊的虛擬 IP 位址。此 IP 位址用於具有多個ONTAP工具實例的設定中的內部通訊。此 IP 位址不應與ONTAP工具應用程式的 IP 位址相同。 （Kubernetes 控制平面） |  
+| ONTAP tools 用於內部通訊的虛擬 IP 位址。此 IP 位址用於包含多個 ONTAP tools 執行個體的環境中的內部通訊。此 IP 位址不應與 ONTAP tools 應用程式的 IP 位址相同。（Kubernetes Control Plane） |  
 
 
 | ONTAP工具管理節點的 DNS 主機名 |  
@@ -96,7 +96,7 @@ summary: 在部署ONTAP VMware vSphere的支援功能之前、您應該先熟悉
 | IPv6 位址閘道（選用） |  
 |===
 
-NOTE: 為上述所有 IP 位址建立 DNS 記錄。指派主機名稱之前，請先將其對應至 DNS 上的可用 IP 位址。所有 IP 位址都應位於選取用於部署的同一個 VLAN 上。
+NOTE: 為上述所有 IP 位址建立 DNS 記錄。在指派主機名稱之前、請先將它們對應到 DNS 中可用的 IP 位址。所有 IP 位址都應位於部署時選擇的相同 VLAN 中。
 
 
 

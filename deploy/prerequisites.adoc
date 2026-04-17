@@ -13,7 +13,7 @@ summary: 在部署ONTAP VMware vSphere的支援功能之前、您應該先熟悉
 [role="lead"]
 在部署ONTAP VMware vSphere的支援功能之前、您應該先熟悉部署套件的空間需求、以及一些基本的主機系統需求。
 
-您可以搭配 VMware vCenter Server 虛擬應用裝置（ vCSA ）使用適用於 VMware vSphere 的 ONTAP 工具。您應該在支援的 vSphere 用戶端（包括 ESXi 系統）上部署適用於 VMware vSphere 的 ONTAP 工具。
+您可以將 ONTAP tools for VMware vSphere 與 VMware vCenter Server Virtual Appliance（vCSA）搭配使用。您應該將 ONTAP tools for VMware vSphere 部署在包含 ESXi 主機的受支援 vSphere 環境中。
 
 
 
@@ -240,7 +240,7 @@ NOTE: 表中的主機數量代表所有已連接 vCenters 的總和。
 
 | 虛擬機器數量 | 4000 | 7000 
 |===
-下表顯示 VMware Live Site Recovery 的數量、以及對應的 VMware vSphere 部署規模 ONTAP 工具。
+下表顯示 VMware Live Site Recovery 執行個體數量以及對應的 ONTAP tools for VMware vSphere 部署規模。
 
 |===
 

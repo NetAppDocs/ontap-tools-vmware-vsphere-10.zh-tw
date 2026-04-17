@@ -1,7 +1,7 @@
 ---
 permalink: protect/verify-the-replicated-storage-environment.html 
 sidebar: sidebar 
-keywords:  
+keywords: SRA, storage replication adapter, storage discovery, SnapMirror, custom policy, array pairing, VMware Live Site Recovery 
 summary: 設定儲存複寫介面卡（ SRA ）之後、您應該確認受保護的站台和還原站台已成功配對。受保護站台和還原站台都應該可以探索複寫的儲存系統。 
 ---
 = 在 ONTAP tools 中驗證複製的儲存系統
@@ -18,6 +18,13 @@ summary: 設定儲存複寫介面卡（ SRA ）之後、您應該確認受保護
 * 您應該已使用 VMware Live Site Recovery 陣列管理員配對受保護的站台和還原站台。
 * 您應該先啟用 FlexClone 授權和 SnapMirror 授權、然後再執行測試、容錯移轉作業和 SRA 容錯移轉作業。
 * 您應該在來源站台和目的地站台上擁有相同的 SnapMirror 原則和排程。
+* 如果您使用自訂 SnapMirror 原則與自訂排程、則必須在受保護站台和還原站台上設定相同的排程和原則。
+* 如果您使用自訂 SnapMirror 策略（無論採用預設排程還是自訂排程），則必須透過 ONTAP tools 執行儲存探索，以便識別新策略。否則，包括測試容錯移轉和容錯移轉在內的 SRA 工作流程將會失敗。請在以下位置執行儲存探索：
++
+** 在復原站台上建立自訂原則之後。
+** 執行重新保護作業後，會在受保護的站台上重新建立原則。
+
+
 
 
 .步驟

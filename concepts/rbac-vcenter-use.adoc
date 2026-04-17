@@ -36,12 +36,12 @@ vSphere 物件詳細目錄是以階層架構來組織。例如，您可以依照
 
 == 適用於 VMware vSphere 10 的 ONTAP 工具隨附的角色
 
-為了簡化使用 vCenter Server RBAC 的過程，適用於 VMware vSphere 的 ONTAP 工具可針對各種管理工作提供預先定義的角色。
+為了簡化 vCenter Server RBAC 的使用，ONTAP tools for VMware vSphere 提供了針對各種管理任務量身定制的預先定義角色。
 
 
-NOTE: 您可以視需要建立新的自訂角色。在這種情況下，您應該複製其中一個現有的 ONTAP 工具角色，並視需要進行編輯。變更組態後，受影響的 vSphere 用戶端使用者必須登出並重新登入，才能啟動變更。
+NOTE: 如有需要，您可以建立新的自訂角色。為此，請複製現有的 ONTAP tools 角色之一，並根據需要進行編輯。進行組態變更後，受影響的 vSphere 用戶端使用者需要登出並重新登入以啟動變更。
 
-若要查看ONTAP tools for VMware vSphere，請在 vSphere Client 頂部選擇“選單”，然後按一下左側的“管理”，再按一下“角色”。指派給負責部署或啟用 vCenter 的 vCenter 使用者的角色必須包含下列權限。請確保將這些權限配置為部署或入職流程的先決條件。
+若要檢視 ONTAP tools for VMware vSphere 角色、請在 vSphere Client 頂端選取 *Menu* 、然後按一下 *Administration* 、再按一下左側的 *Roles* 。指派給負責部署或上線 vCenter Server 之 vCenter 使用者的角色、必須包含下列權限。請確保將這些權限設定為部署或上線程序的先決條件。
 
 * 警報
 +

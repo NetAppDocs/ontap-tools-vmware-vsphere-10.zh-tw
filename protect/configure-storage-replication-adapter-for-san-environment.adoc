@@ -17,6 +17,9 @@ summary: 您應該先設定儲存系統、再執行 Storage Replication Adapter 
 
 == 為 SAN 環境設定 SRA
 
+
+NOTE: SRA 工作流程中的一致性群組僅在統一儲存系統和 ASA r2 儲存系統上支援 SAN 協定（iSCSI 和光纖通道）。
+
 .開始之前
 您應該在受保護的站台和還原站台上安裝下列程式：
 
@@ -27,9 +30,15 @@ https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/
 * SRA：在 VMware Live Site Recovery 上安裝適配器。
 
 
+對於 iSCSI 傳輸協定組態、請在執行 SRA 工作流程之前注意下列事項：
+
+* *受保護網站*：在配置資料存放區時，iSCSI 儲存適配器和資料 LIF 詳細資料會自動設定。無需手動配置。
+* *復原站台*：必須在災難復原資源對應中包含的每個 ESXi 主機上手動設定 iSCSI 儲存適配器。為避免在每台主機上單獨設定適配器，請在復原站台上使用已設定 SRA 工作流程的 SVM 建立 iSCSI 類型的預留位置資料存放區。這會自動將 iSCSI 適配器和所需的資料 LIF IP 位址新增至所有已對應的 ESXi 主機。如需更多詳細資料，請參閱 link:../protect/configure-placeholder-datastores.html["在 ONTAP 工具中設定佔位符資料存放區"]。
+
+
 .步驟
 . 確認主ESXi主機已連線至受保護站台上主要儲存系統的LUN。
-. 確認 LUN 位於具有的 igroup 中 `ostype` 選項在主儲存系統上設為 _VMware_ 。
+. 確認 LUN 位於主儲存系統上將 `ostype`選項設定為 _VMware_ 的 igroup 中。
 . 驗證復原站點上的 ESXi 主機是否與儲存虛擬機器 (SVM) 具有適當的 iSCSI 和光纖通道連線。輔助站點 ESXi 主機應該能夠存取輔助站點存儲，主站點 ESXi 主機應該能夠存取主站點存儲。
 +
 您可以透過驗證 ESXi 主機是否已在 SVM 或上連接本機 LUN 來執行此動作 `iscsi show initiators` SVM 上的命令。
@@ -41,6 +50,9 @@ https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/
 
 == 為 NAS 環境設定 SRA
 
+
+NOTE: SRA 工作流程不支援 NFS 的一致性群組。如果將 NFS 資料儲存磁碟區置於一致性群組下並加以保護，則「發現裝置」操作將會失敗。使用 SRA 保護 NFS 資料儲存時，請勿使用一致性群組。
+
 .開始之前
 您應該在受保護的站台和還原站台上安裝下列程式：
 
@@ -50,7 +62,7 @@ https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/
 
 .步驟
 . 確認受保護站台的資料存放區包含已向vCenter Server註冊的虛擬機器。
-. 確認受保護站台的ESXi主機已從儲存虛擬機器（SVM）掛載NFS匯出磁碟區。
-. 使用陣列管理器精靈將陣列新增至 VMware Live Site Recovery 時，請驗證「*NFS 位址*」欄位中指定的有效位址（例如，存在 NFS 匯出的 IP 位址或 FQDN）。請勿在「*NFS 位址*」欄位中使用 NFS 主機名稱。
+. 確認受保護站台的 ESXi 主機已掛載來自儲存虛擬機器（SVM）的 NFS 匯出磁碟區。
+. 使用 Array Manager 精靈將陣列新增至 VMware Live Site Recovery 時，請確保在 *NFS Addresses* 欄位中指定了 NFS 匯出所在的有效 IP 位址。請勿在 *NFS Addresses* 欄位中使用 NFS 主機名稱或 FQDN。
 . 使用 `ping` 在恢復站台上的每個 ESXi 主機上執行命令、以驗證主機是否有 VMkernel 連接埠、可存取用於從 SVM 匯出 NFS 的 IP 位址。
 

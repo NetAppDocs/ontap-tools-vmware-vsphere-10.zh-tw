@@ -14,7 +14,7 @@ summary: 了解適用於ONTAP tools for VMware vSphere和ONTAP tools for VMware 
 了解從ONTAP tools for VMware vSphere遷移到ONTAP tools for VMware vSphere是否適合您。
 
 
-NOTE: 有關最新的兼容性信息，請參閱 https://mysupport.netapp.com/matrix["NetApp 互通性對照表工具"^]。
+NOTE: 如需最新的相容性資訊，請參閱 https://mysupport.netapp.com/matrix["NetApp 互通性對照表工具"^]。
 
 [cols="20%,25%,30%"]
 |===

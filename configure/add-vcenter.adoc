@@ -29,7 +29,7 @@ X509v3 extensions:
 如果憑證不包含 SAN 擴充，或者 SAN 擴充不包含正確的 DNS 或 IP 位址值，ONTAP tools 操作可能會因憑證驗證錯誤而失敗。
 
 * vCenter Server 的主網路識別碼（PNID）必須包含在 SAN 詳細資訊中。PNID 和 DNS 名稱應相同，並且可在 DNS 中解析。
-* 建議使用完全限定網域名稱（FQDN）部署 vCenter Server，並確保憑證中的 SAN 包含 DNS Name=machine_FQDN，以獲得最佳相容性和支援。
+* 建議使用完全限定網域名稱（FQDN）部署 vCenter Server，確保憑證中的 SAN 包含 DNS Name=machine_FQDN，以獲得最佳相容性和支援。
 * 如需更多資訊，請參閱 VMware 文件：
 +
 ** https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-authentication/vsphere-security-certificates-authentication/certificate-requirements-for-different-solution-paths-authentication.html["不同解決方案路徑的 vSphere 憑證需求"]

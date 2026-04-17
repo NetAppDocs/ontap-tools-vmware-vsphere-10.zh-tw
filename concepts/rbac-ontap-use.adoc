@@ -55,7 +55,7 @@ RBAC 定義會封裝為多種產品功能，包括 VSC ， VASA Provider 和 SRA
 
 === 權限
 
-角色 Privileges 會根據 ONTAP 儲存設備所需的存取層級，以四組形式排列。角色所依據的 Privileges 包括：
+根據 ONTAP 儲存所需的存取層級，角色 Privileges 分為四組。角色所依據的 Privileges 包括：
 
 * 探索
 +
@@ -89,4 +89,4 @@ RBAC 定義會封裝為多種產品功能，包括 VSC ， VASA Provider 和 SRA
 .範例
 `OTV_10_VSC_Discovery_Create`
 
-新使用者將新增至「使用者和角色」頁面上的清單。請注意， HTTP 和 ONTAPI 使用者登入方法都受到支援。
+新使用者將新增至「使用者與角色」頁面上的清單。請注意，HTTP 和 ONTAPI 使用者登入方法均受支援。

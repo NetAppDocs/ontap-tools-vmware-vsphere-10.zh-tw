@@ -15,7 +15,7 @@ NFS vStorage API for Array Integration (NFS VAAI) 外掛程式將 VMware vSphere
 
 .開始之前
 * 下載 https://mysupport.netapp.com/site/products/all/details/nfsplugin-vmware-vaai/downloads-tab["適用於VMware VAAI的NetApp NFS外掛程式"]安裝套件。
-* 請確定您擁有 ESXi 主機和 vSphere 7.0U3 最新修補程式或更新版本，以及 ONTAP 9.14.1 或更新版本。
+* 請確保您的 ESXi 主機版本為 vSphere 7.0 U3（最新修補程式或更高版本），ONTAP 為 9.14.1 或更高版本。
 * 掛載 NFS 資料存放區。
 
 
@@ -25,13 +25,13 @@ NFS vStorage API for Array Integration (NFS VAAI) 外掛程式將 VMware vSphere
 . 選取 * 設定 * > * NFS VAAI 工具 * 。
 . 如果您已經將 VAAI 外掛程式上傳到 vCenter Server，請在 *現有版本* 中選擇 *變更*。如果還沒有，請選擇*上傳*。
 . 瀏覽並選取 `.vib`檔案，然後選取 * 上傳 * 將檔案上傳至 ONTAP 工具。
-. 選取 * 安裝在 ESXi 主機 * ，選取要安裝 NFS VAAI 外掛程式的 ESXi 主機，然後選取 * 安裝 * 。
+. 選擇 *Install on ESXi host*、選擇要安裝 NFS VAAI 插件的 ESXi 主機，然後選擇 *Install*。
 +
 vSphere Web Client 僅顯示可安裝該插件的 ESXi 主機。您可以在「近期任務」部分監控安裝進度。
 
 . 安裝後手動重新啟動 ESXi 主機。
 +
-重新啟動 ESXi 主機後，ONTAP tools for VMware vSphere會自動偵測並啟用 NFS VAAI 外掛程式。
+重新啟動 ESXi 主機後、ONTAP tools for VMware vSphere vSphere 會自動偵測並啟用 NFS VAAI 外掛程式。
 
 
 

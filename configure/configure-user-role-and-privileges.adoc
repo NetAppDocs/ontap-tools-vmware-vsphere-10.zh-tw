@@ -90,11 +90,11 @@ sti115_vsim_ucs630f_aggr1 vserver show-aggregates                               
 
 . 建立使用者：
 +
-.. 在 * 使用者 * 表格下選取 * 新增 * 。
+.. 在 *Users* 表格下選取 *Add* 。
 .. 在 * 新增使用者 * 對話方塊中、選取 * 系統管理員 * 。
 .. 輸入 * 使用者名稱 * 。
 .. 從上述 * 建立角色 * 步驟中建立的選項中選取 * 角色 * 。
-.. 輸入要授予存取權的應用程式、以及驗證方法。ONTAPI 和 HTTP 是必要的應用程式、驗證類型為 * 密碼 * 。
+.. 輸入您要授予存取權限的應用程式以及驗證方法。ONTAPI 和 HTTP 是必要的應用程式、驗證類型為 *Password* 。
 .. 設定「使用者 * 」的 * 密碼和「 * 儲存 * 」使用者。
 
 
@@ -259,13 +259,13 @@ security login rest-role create -role <role-name> -api /api/svm/svms -access rea
 security login rest-role create -role <role-name> -api /api/cluster/metrocluster -access readonly
 
 ----
-此外，對於 ONTAP 9.16.0 版及更新版本，請執行下列命令：
+此外、對於 ONTAP 9.16.0 及更高版本、請執行以下命令：
 
 [listing]
 ----
 security login rest-role create -role <role-name> -api /api/storage/storage-units -access all
 ----
-對於 ONTAP 9.16.1 版及更新版本上的 ASA R2 系統，請執行下列命令：
+對於執行 ONTAP 9.16.1 及更高版本的 ASA r2 系統，請執行以下命令：
 
 [listing]
 ----
@@ -355,13 +355,13 @@ security login rest-role create -role <role-name> -api /api/svm/peers -access re
 
 security login rest-role create -role <role-name> -api /api/svm/svms -access readonly -vserver <vserver-name>
 ----
-此外，對於 ONTAP 9.16.0 版及更新版本，請執行下列命令：
+此外、對於 ONTAP 9.16.0 及更高版本、請執行以下命令：
 
 [listing]
 ----
 security login rest-role create -role <role-name> -api /api/storage/storage-units -access all -vserver <vserver-name>
 ----
-若要使用上述建立的 API 型角色建立新的 API 型使用者，請執行下列命令：
+若要使用先前建立的 API 型角色建立新的 API 型使用者，請執行下列命令：
 
 [listing]
 ----
