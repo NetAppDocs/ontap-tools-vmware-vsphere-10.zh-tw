@@ -163,7 +163,7 @@ Sudo rke2-uninstall.sh （所有 VM ）。
 
 * 啟用診斷 Shell。
 * 執行下列命令： `sudo perl /home/maint/scripts/post-deploy-upgrade.pl --internal_cert_update_collection`
-* 請在  `/var/log/otvng/post-deploy-upgrade.log` 檢閱記錄。
+* 查看位於  `/var/log/otvng/post-deploy-upgrade.log` 的日誌
 
 
 |===

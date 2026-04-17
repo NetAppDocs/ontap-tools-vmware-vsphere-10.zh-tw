@@ -361,7 +361,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="8beb897fce777c3277508139c7915a20" category="list-text">您應該已設定儲存系統。</block>
   <block id="7ceb2eab648208033ac8e2800ced40ef" category="list-text">您應該先啟用 FlexClone 授權和 SnapMirror 授權、然後再執行測試、容錯移轉作業和 SRA 容錯移轉作業。</block>
   <block id="71efe8ad619e3e3d48e0a978e35c5446" category="list-text">登入vCenter Server。</block>
-  <block id="8bb83fccb484f1f0daa29d9b57c5cf9a" category="paragraph">儲存系統應在受保護的站台和恢復站台中探索、狀態應為「已啟用」。</block>
   <block id="dfb1f7e164fa9a18cdccdd70cc836871" category="doc">更新SRA認證資料</block>
   <block id="bc5ad92fecd3f6eeb4473c9df6479d46" category="list-text"><block ref="4609acba202877f99742342f4195d95e" prefix="" category="inline-code"></block></block>
   <block id="a505f8df337aa6363aedcbf7da761b22" category="summary">您應該對應受保護網站和還原網站上的資料夾、以便在資料夾之間進行通訊。</block>
@@ -2093,7 +2092,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="265d1364e0c9a1c88e39aa2446ded154" category="paragraph">除非另一個資料儲存重新使用父 igroup，否則父 igroup 和子 igroup 都會被刪除。子 igroup 未被明確刪除</block>
   <block id="cd703691d1da791a7eedb75ca98439de" category="paragraph">匯出策略控制ONTAP tools for VMware vSphere中的 NFS 資料儲存存取和用戶端權限。匯出策略在ONTAP系統中建立和管理，並可與 NFS 資料儲存庫一起使用來強制執行存取控制。每個匯出策略均由指定允許存取的用戶端（IP 位址或子網路）和授予的權限（唯讀或讀寫）的規則組成。</block>
   <block id="4a03eb267c1ef745af6c9e425460c0ea" category="paragraph">當您從 ESXi 主機移除或解除安裝 NFS 資料儲存庫時，ONTAP tools for VMware vSphere會從匯出原則中移除該主機的 IP 位址。如果沒有其他主機使用該匯出策略，它將被刪除。刪除 NFS 資料儲存庫時，如果該資料儲存庫未被任何其他資料儲存庫重複使用，則ONTAP tools for VMware vSphere會移除與該資料儲存庫關聯的匯出策略。如果重複使用匯出策略，它會保留主機IP位址並且不會改變。當您刪除資料儲存庫時，匯出策略會取消指派主機 IP 位址並指派預設匯出策略，以便ONTAP系統可以在需要時存取它們。</block>
-  <block id="1bfb5765f8a7477bcd0a19363204252d" category="paragraph">ONTAP tools for VMware vSphere會自動建立和維護ONTAP和 vCenter 對象，以簡化 VMware 資料中心環境中的資料儲存管理。</block>
   <block id="6465cb40b753be2d9e804f4f78805149" category="paragraph">在ONTAP工具中建立資料儲存區時，您可以輸入自訂 igroup 名稱，而不是從下拉清單中選擇。然後， ONTAP工具會使用您指定的名稱在資料儲存層級建立一個父 igroup。如果相同主機用於多個資料存儲，則會重複使用現有的主機級（子）igroup。因此，新資料儲存區的 LUN 將對應到此現有子 igroup，該子 igroup 現在可能與多個父 igroup 相關聯（每個資料儲存區一個）。您可以在 vCenter Server 介面中看到具有自訂 igroup 名稱的新資料儲存。</block>
   <block id="fa885aacf6740d8be756318202aaeea3" category="paragraph">在ONTAP工具中執行資料儲存發現後， ONTAP工具會將平面 igroup 轉換為巢狀結構。然後， ONTAP工具會管理 igroup，並使用「otv_」前綴對其進行重新命名。在此過程中，LUN 仍然對應到同一個 igroup。</block>
   <block id="6e63f9b05e0f51c3646052747b709edf" category="paragraph">您可以使用在ONTAP系統中首次建立的 igroup 在ONTAP工具中建立資料儲存庫，然後由ONTAP工具對其進行管理。這些 igroup 出現在自訂啟動器群組名稱下拉清單中。然後，資料儲存區的新 LUN 將會對應到對應的規範化子 igroup，例如「otv_NativeIgroup1」。</block>
@@ -2628,7 +2626,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="4f8fbebc962f05c4dfc0237789208547" category="paragraph">如果部署失敗並出現錯誤代碼 114、請完成下列步驟：</block>
   <block id="4780dfcfb0a5ecdfae0e318e6542d23a" category="list-text">啟用診斷 Shell。</block>
   <block id="611a014c34b69fef8cff8cd0a561aee9" category="list-text">執行下列命令：<block ref="44eaadaddba398d530de456241b9f3da" prefix=" " category="inline-code"></block></block>
-  <block id="0a757ce751065b64e3352b32c640a98a" category="list-text">請在 <block ref="7554706fe49df304ac54d9ab0e3a3ca3" prefix=" " category="inline-code"></block> 檢閱記錄。</block>
   <block id="a312ce26b8ed1d9b491805fe774f55aa" category="paragraph">若要設定 vVols 資料存放區、您必須啟用 VASA Provider 服務。向 vCenter 註冊 VASA Provider 、並確保您的儲存原則符合 HA 要求、包括適當的網路和儲存組態。</block>
   <block id="3f07b7680deaadf68a28477426629d63" category="admonition">為了未來能夠實現高可用性部署，請避免將 ONTAP tools 虛擬機器直接部署在 ESXi 主機上。而應部署在 ESXi 主機叢集或資源池中。</block>
   <block id="b1ddccad5b5afdfe2272b6e7c0be4bc6" category="list-text">在頁面右側選擇 *Actions* 、選擇 *Import item* 、然後匯入 OVA 檔案。</block>
@@ -2703,7 +2700,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="09a7c391005da807f6dee49c0fb6789e" category="list-text">在 ONTAP tools Manager 中啟用 SRA 服務。如需詳細資訊，請參閱<block ref="39b62016395601556cd6c6d261d293be" category="inline-link-macro-rx"></block>一節。</block>
   <block id="8e14dbb27ed333e155285b318187bdc6" category="list-text">將 vCenter 伺服器新增至 ONTAP tools for VMware vSphere 應用裝置。如需詳細資訊、請參閱 <block ref="3dbde986d1342171f2ded3fc331c93f7" category="inline-link-macro-rx"></block> 一節。</block>
   <block id="98d22aed7deed599da3d87eaa4409a67" category="list-text">將儲存後端新增至 ONTAP tools for VMware vSphere。如需詳細資訊，請參閱 <block ref="a4b852b9645b4ce1db7f6b1fa35e7953" category="inline-link-macro-rx"></block> 章節。</block>
-  <block id="0633e5dc36205f30a5af18c5068635f1" category="admonition">Storage Replication Adapter（SRA）支援在一致性群組上具有一個自動容錯雙工類型同步關係和非同步關係 SnapMirror 的扇出。然而，不支援在一致性群組上具有兩個非同步 SnapMirror 關係的扇出，或在 volume 上的扇出 SnapMirror 關係。Vault 類型 SnapMirror 關係不包含在這些扇出限制內。SRA 中對一致性群組的支援僅限於 Unified 和 ASA r2 儲存系統上的 SAN 協定（iSCSI 和 Fibre Channel）。一致性群組不支援 NFS；如果將 NFS 資料存放區 volume 放入一致性群組，Discover Devices 作業將會失敗。</block>
   <block id="a4c40bc478ce5f55e59a4aab72716a37" category="list-text">在 *Type* 欄位中，選擇 *Type field option...* 作為 NFS 和 VMFS 資料存放區的資料存放區群組（陣列型複寫）。故障網域包含已啟用複寫的 SVM。僅實作對等關係且沒有問題的 SVM 會顯示。</block>
   <block id="00a510939945fb6eb144a70baf6f9fd4" category="admonition">指定的逾時時間間隔是最大值。您無需等待達到最大逾時時間。大多數命令都會在設定的最大逾時時間間隔內完成。</block>
   <block id="0c00b4af56bd9b91aa675fff4e45e3b1" category="admonition">SRA 工作流程中的一致性群組僅在統一儲存系統和 ASA r2 儲存系統上支援 SAN 協定（iSCSI 和光纖通道）。</block>
@@ -2763,4 +2759,8 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="643cb37fb2acf3124bc8318042c61ff5" category="list-text">重新啟動主節點：</block>
   <block id="e9ea3eb60fedc2c670f5dcd02007c32b" category="list-text">對於 ASA r2 系統，在設定更多儲存可用區（SAZ）之前，請確保將 ONTAP tools for VMware vSphere 升級至 10.5，並將 ONTAP 升級至 9.16.1。</block>
   <block id="c7350f69257f107789d11e22929c1c1d" category="list-text">當系統提示時，請提供 vCenter 認證。這是託管 ONTAP tools 的 vCenter 實例。</block>
+  <block id="1fd4970a87fe9d5dd4ecbaf6fc97bc98" category="list-text">查看位於 <block ref="7554706fe49df304ac54d9ab0e3a3ca3" prefix=" " category="inline-code"></block> 的日誌</block>
+  <block id="13851b8712fd713a2b4c64e5c006d207" category="paragraph">從 ONTAP tools for VMware vSphere 10.4 開始，ONTAP tools 會自動建立和維護 ONTAP 和 vCenter 物件，簡化 VMware 資料中心環境中的資料存放區管理。</block>
+  <block id="8a905a5ae0b4e8a047369390f0e12e9a" category="admonition">Storage Replication Adapter（SRA）支援扇出，其中一種同步關係類型為 Automated Failover Duplex，另一種為一致性群組上的非同步 SnapMirror 關係。但是，不支援在一致性群組上建立兩種非同步 SnapMirror 關係的扇出，也不支援在磁碟區上建立扇出 SnapMirror 關係。Vault 類型的 SnapMirror 關係不包含在這些扇出限制中。SRA 對一致性群組的支援僅限於 Unified 和 ASA r2 儲存系統上的 SAN 協定（iSCSI 和光纖通道）。一致性群組不支援 NFS。如果將 NFS 資料儲存磁碟區置於一致性群組下，則探索裝置操作將會失敗。</block>
+  <block id="130feced60ff3be4c19a41924346eaef" category="paragraph">應在受保護站點和復原站點發現儲存系統，且狀態為 *已啟用*。</block>
 </blocks>
