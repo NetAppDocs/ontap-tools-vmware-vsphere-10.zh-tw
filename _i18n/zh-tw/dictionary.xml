@@ -2430,8 +2430,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="aee38a297a583f14c6525dc700a8a384" category="list-text">複製輸出結果並將其另存為文字檔案。<block ref="bdf46f9562b038d0163af0feba0b1dfa" prefix=" " category="inline-code"></block> 桌面擴充程式。</block>
   <block id="60576f3967d7db42ad4e62e1f5d6edc4" category="paragraph"><block ref="60576f3967d7db42ad4e62e1f5d6edc4" category="inline-link-macro-rx"></block></block>
   <block id="15a0f68745546e63813c4df1c8d72ba3" category="paragraph">在使用ONTAP tools for VMware vSphere 10 時，需要考慮兩種不同的 RBAC 環境。ONTAP tools for VMware vSphere需要在 vCenter 和ONTAP中都擁有特定的權限才能執行操作。雖然ONTAP工具可以自動執行儲存管理任務，但它不會在 vCenter 或ONTAP中建立使用者帳戶。服務帳戶必須由 vSphere 管理員根據需要建立。本文檔為管理員提供指導，以便分配必要的角色和權限，從而有效地管理ONTAP工具。</block>
-  <block id="4ae8aea132dd80b8c5923dad28c5b661" category="paragraph">如果您在雙 vCenter Server 拓樸中部署ONTAP工具（其中裝置託管在一個 vCenter 執行個體中並管理另一個執行個體），則可以為託管ONTAP工具的 vCenter 執行個體指派受限角色。您可以建立一個專用的 vCenter 使用者和角色，僅授予其部署 OVF 範本所需的權限。詳情請參閱職位列表中所列的角色。<block ref="4be7808a32deee04c9288e5441868f02" category="inline-link-rx"></block>。</block>
-  <block id="281aaa5cbe3748f40438f77dcaf6f2ab" category="paragraph">如果您在雙 vCenter Server 拓樸中使用ONTAP工具（其中裝置託管在一個 vCenter 執行個體中並管理另一個執行個體），則可以為託管ONTAP工具的 vCenter 執行個體指派受限角色。您可以建立一個專用的 vCenter 使用者和角色，僅授予其部署 OVF 範本所需的權限。詳情請參閱職位列表中所列的角色。<block ref="4be7808a32deee04c9288e5441868f02" category="inline-link-rx"></block>。</block>
   <block id="85f52c3a4cf68ed98d733bd16d720806" category="doc">ONTAP tools REST API 參考</block>
   <block id="3e6657795439746877b7825a3d38e9ee" category="doc">進行第一次 ONTAP tools REST API 呼叫</block>
   <block id="d3aa1a65fd672d6117cbd17f19ef3713" category="doc">了解 ONTAP tools REST API</block>
@@ -2763,4 +2761,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="13851b8712fd713a2b4c64e5c006d207" category="paragraph">從 ONTAP tools for VMware vSphere 10.4 開始，ONTAP tools 會自動建立和維護 ONTAP 和 vCenter 物件，簡化 VMware 資料中心環境中的資料存放區管理。</block>
   <block id="8a905a5ae0b4e8a047369390f0e12e9a" category="admonition">Storage Replication Adapter（SRA）支援扇出，其中一種同步關係類型為 Automated Failover Duplex，另一種為一致性群組上的非同步 SnapMirror 關係。但是，不支援在一致性群組上建立兩種非同步 SnapMirror 關係的扇出，也不支援在磁碟區上建立扇出 SnapMirror 關係。Vault 類型的 SnapMirror 關係不包含在這些扇出限制中。SRA 對一致性群組的支援僅限於 Unified 和 ASA r2 儲存系統上的 SAN 協定（iSCSI 和光纖通道）。一致性群組不支援 NFS。如果將 NFS 資料儲存磁碟區置於一致性群組下，則探索裝置操作將會失敗。</block>
   <block id="130feced60ff3be4c19a41924346eaef" category="paragraph">應在受保護站點和復原站點發現儲存系統，且狀態為 *已啟用*。</block>
+  <block id="f6db8158f30cb5444097d38ac58ea534" category="paragraph">如果您在雙 vCenter Server 拓撲中部署 ONTAP 工具（其中應用裝置託管在一個 vCenter 執行個體中並管理另一個執行個體），則可以為託管 ONTAP 工具的 vCenter 執行個體指派受限角色。您可以建立專用的 vCenter 使用者和角色，僅授予部署 OVF 範本所需的權限。如需詳細資訊，請參閱 <block ref="195bdbec94ccbccdb53d22ac92079db9" category="inline-link-macro-rx"></block> 中列出的角色。</block>
+  <block id="f8eb6f34101d2549cf54a3790c57397e" category="paragraph">如果您在雙 vCenter Server 拓撲中使用 ONTAP 工具（其中應用裝置託管在一個 vCenter 執行個體中並管理另一個執行個體），則可以為託管 ONTAP 工具的 vCenter 執行個體指派受限角色。您可以建立專用的 vCenter 使用者和角色，僅授予部署 OVF 範本所需的權限。如需詳細資訊，請參閱 <block ref="195bdbec94ccbccdb53d22ac92079db9" category="inline-link-macro-rx"></block> 中列出的角色。</block>
 </blocks>
