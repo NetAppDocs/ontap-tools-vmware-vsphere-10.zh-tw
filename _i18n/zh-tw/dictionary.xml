@@ -2791,4 +2791,8 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="45f0d050845f640650733b37410eca9f" category="paragraph">ONTAP tools 管理已發現的原生 igroup 後，該 igroup 將在資料儲存區建立的自訂啟動器群組名稱下拉式清單中可用。</block>
   <block id="8d90581e01616bc6e833be117c8bf966" category="paragraph">新的資料儲存區 LUN 對應到規範化的子 igroup ，例如 <block ref="e2e2c5bf7535645ea2278f194b28ad1e" prefix=" " category="inline-code"></block> 。</block>
   <block id="270b8c3a2baff1c0296c4a92204b5a54" category="paragraph">ONTAP tools for VMware vSphere 無法偵測或使用在 ONTAP 系統中建立的、未由 ONTAP tools 管理或未連結到資料儲存區的 igroup。</block>
+  <block id="3830b8eac1743f2f8fe4765b99fa2547" category="summary">在 ONTAP 工具中，為 vCenter 執行個體本機新增和管理儲存後端，或為叢集範圍的探索進行全域新增和管理。</block>
+  <block id="986013590d14c5a1a3fba70da34aec61" category="inline-link">OTV 10：什麼是儲存後端全域和本機範圍</block>
+  <block id="7a2217d00eec7417d83566729e06f7aa" category="paragraph">請參閱知識庫文章：<block ref="8136f7308c7184af5e69534cb5835c82" category="inline-link-rx"></block> 以了解有關全域和本機儲存後端的更多資訊。</block>
+  <block id="0c1cd48173490f27f69352986a77e96e" category="paragraph"><block ref="0c1cd48173490f27f69352986a77e96e" category="inline-link-rx"></block></block>
 </blocks>

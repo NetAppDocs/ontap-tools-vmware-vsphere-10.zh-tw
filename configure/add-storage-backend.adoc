@@ -2,7 +2,7 @@
 permalink: configure/add-storage-backend.html 
 sidebar: sidebar 
 keywords:  
-summary: 儲存設備後端是 ESXi 主機用於資料儲存的系統。 
+summary: 在 ONTAP 工具中，為 vCenter 執行個體本機新增和管理儲存後端，或為叢集範圍的探索進行全域新增和管理。 
 ---
 = 為 ONTAP tools 新增儲存後端
 :allow-uri-read: 
@@ -16,6 +16,8 @@ summary: 儲存設備後端是 ESXi 主機用於資料儲存的系統。
 若要在本機新增儲存後端，請在ONTAP工具介面中使用叢集或 SVM 憑證。本機儲存後端僅對選定的 vCenter Server 可用。ONTAP工具將 SVM 對應到 vCenter Server 以進行vVols或 VMFS 資料儲存庫管理。對於 VMFS 資料儲存和 SRA 工作流程，您可以使用 SVM 憑證而無需全域映射叢集。
 
 若要新增全域儲存後端，請在ONTAP工具管理器中使用ONTAP叢集憑證。全域儲存後端支援發現工作流程，以識別 vVol 管理所需的叢集資源。在多租用戶環境中，您可以本機新增 SVM 使用者來管理vVols資料儲存。
+
+請參閱知識庫文章： https://kb.netapp.com/data-mgmt/OTV/VSC_Kbs/OTV_10_What_is_storage_backend_global_and_local_scope["OTV 10：什麼是儲存後端全域和本機範圍"^] 以了解有關全域和本機儲存後端的更多資訊。
 
 如果ONTAP中啟用了MetroCluster支持，則將來源叢集和目標叢集都作為本地或全域儲存後端加入。
 
@@ -77,4 +79,6 @@ NOTE: ONTAP系統執行切換和切回後，手動執行ONTAP工具發現。
 ONTAP工具在 *儲存後端* 頁面上列出了新新增的儲存後端。如果憑證在 30 天或更短時間內過期， ONTAP工具會在憑證過期日期列中顯示警告。到期後， ONTAP工具會將儲存後端標記為未知，因為它無法連接到儲存系統。
 
 .相關資訊
+https://kb.netapp.com/data-mgmt/OTV/VSC_Kbs/OTV_10_What_is_storage_backend_global_and_local_scope["OTV 10：什麼是儲存後端全域和本機範圍"^]
+
 https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/task_sw_config_configure_clusters.html["將叢集配置為MetroCluster配置"]
