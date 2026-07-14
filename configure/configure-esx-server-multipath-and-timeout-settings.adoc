@@ -15,6 +15,7 @@ summary: 適用於 VMware vSphere 的 ONTAP 工具會檢查及設定 ESXi 主機
 
 
 
+[[configure-esxi-server-multipath-and-timeout-settings]]
 == 設定 ESXi 伺服器多重路徑和逾時設定
 
 VMware vSphere的支援VMware vSphere工具可檢查及設定ESXi主機多重路徑設定、以及最適合搭配NetApp儲存系統使用的HBA逾時設定。ONTAP
@@ -38,6 +39,7 @@ NOTE: 您可以展開 ESXi 主機以查看目前的值。
 
 
 
+[[set-esxi-host-values]]
 == 設定 ESXi 主機值
 
 使用ONTAP tools for VMware vSphere在 ESXi 主機上設定逾時和其他值，以實現最佳效能和故障轉移。它根據NetApp測試設定這些值。
@@ -46,6 +48,7 @@ NOTE: 您可以展開 ESXi 主機以查看目前的值。
 
 
 
+[[hbacna-adapter-settings]]
 === HA/CNA 介面卡設定
 
 將下列參數設定為預設值：
@@ -58,6 +61,7 @@ NOTE: 您可以展開 ESXi 主機以查看目前的值。
 
 
 
+[[mpio-settings]]
 === MPIO 設定
 
 MPIO 設定為NetApp儲存系統選擇最佳路徑。  MPIO 設定選擇最佳路徑並使用它。
@@ -69,6 +73,7 @@ NOTE: MPIO 設定不適用於 NVMe、NVMe/FC 和 NVMe/TCP 協定。
 
 
 
+[[nfs-settings]]
 === NFS設定
 
 |===

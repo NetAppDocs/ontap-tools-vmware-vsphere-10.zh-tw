@@ -24,6 +24,7 @@ NOTE: 在建立、編輯或刪除主機群集的保護後，您需要執行儲�
 
 
 
+[[monitor-host-cluster-protection]]
 == 監控主機叢集保護
 
 監控每個受保護主機叢集的保護狀態、 SnapMirror關係、資料儲存庫和SnapMirror狀態。
@@ -39,6 +40,7 @@ NOTE: 在建立、編輯或刪除主機群集的保護後，您需要執行儲�
 
 
 
+[[add-new-datastores-or-hosts]]
 == 新增資料存放區或主機
 
 使用 vCenter 使用者介面在受保護的叢集上新增主機或建立資料儲存區。
@@ -69,6 +71,7 @@ ONTAP工具會建立一個 vCenter 任務，您可以在 *最近任務* 面板�
 
 
 
+[[add-a-new-snapmirror-relationship]]
 == 新增 SnapMirror 關係
 
 .步驟
@@ -91,6 +94,7 @@ ONTAP工具會建立一個 vCenter 任務，您可以在 *最近任務* 面板�
 
 
 
+[[delete-an-existing-snapmirror-relationship]]
 == 刪除現有的 SnapMirror 關係
 
 若要刪除SnapMirror非同步關係，請確保將輔助站點 SVM 或叢集新增為適用ONTAP tools for VMware vSphere中的儲存後端。您不能一次刪除所有SnapMirror關係。刪除關係也會從ONTAP叢集中刪除對應的關係。當您刪除自動故障轉移雙工SnapMirror關係時​​，系統將取消目標資料儲存的對應並從目標ONTAP叢集中刪除一致性群組、LUN、磁碟區和 igroup。
@@ -118,6 +122,7 @@ ONTAP工具會建立一個 vCenter 任務，您可以在 *最近任務* 面板�
 
 
 
+[[modify-an-existing-snapmirror-relationship]]
 == 修改現有的 SnapMirror 關係
 
 若要修改SnapMirror非同步關係，請確保將輔助站點 SVM 或叢集新增為適用ONTAP tools for VMware vSphere中的儲存後端。對於自動故障轉移雙工SnapMirror關係，您可以更新主機鄰近度以實現統一配置，或更新主機存取以實現非統一配置。不支援在非同步和自動故障轉移雙工策略類型之間進行變更。您可以為叢集中新發現的主機配置鄰近度或存取設定。

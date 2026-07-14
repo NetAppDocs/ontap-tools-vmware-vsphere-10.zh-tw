@@ -15,6 +15,7 @@ ONTAP tools for VMware vSphere 支援所有主要類型的虛擬機器移轉，�
 
 
 
+[[migrate-protected-virtual-machines]]
 == 移轉受保護的虛擬機器
 
 您可以將受保護的虛擬機器移轉至：
@@ -30,6 +31,7 @@ ONTAP tools for VMware vSphere 支援所有主要類型的虛擬機器移轉，�
 
 
 
+[[clone-protected-virtual-machines]]
 == 複製受保護的虛擬機器
 
 您可以將受保護的虛擬機器複製到下列項目：
@@ -56,6 +58,7 @@ VMware 目前不支援將虛擬機器複製到 VM 範本。
 
 
 
+[[virtual-machine-snapshots]]
 == 虛擬機器快照
 
 ONTAP tools 透過標準的 VMware 工作流程支援虛擬機器快照。快照是短期回滾點，適用於測試和修補程式準備等用例。它們不能取代基於備份或複寫的資料保護。長時間在快照上執行虛擬機器可能會導致系統不穩定和資料遺失。

@@ -15,6 +15,7 @@ summary: 您應該根據儲存複寫介面卡（ SRA ）的建議設定來設定
 
 
 
+[[storage-provider-settings]]
 == 儲存供應商設定
 
 您應該在 VMware Live Site Recovery 上針對擴充環境設定下列逾時值：
@@ -58,6 +59,7 @@ summary: 您應該根據儲存複寫介面卡（ SRA ）的建議設定來設定
 
 
 
+[[storage-settings]]
 == 儲存設定
 
 當您達到逾時時時、請增加的值 `storage.commandTimeout` 和 `storage.maxConcurrentCommandCnt` 更高的價值。

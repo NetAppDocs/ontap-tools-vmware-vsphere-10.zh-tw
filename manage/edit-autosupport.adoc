@@ -15,6 +15,7 @@ summary: 首次ONTAP tools for VMware vSphere時， AutoSupport預設為啟用�
 
 
 
+[[disable-autosupport]]
 == 停用 AutoSupport
 
 當您停用AutoSupport時，您將不再獲得主動支援和監控。
@@ -31,6 +32,7 @@ NOTE: 建議保持AutoSupport啟用，因為它有助於加速問題偵測和解
 
 
 
+[[update-autosupport-proxy-url]]
 == 更新 AutoSupport Proxy URL
 
 更新AutoSupport代理 URL，以便AutoSupport功能透過代理伺服器路由數據，實現安全傳輸。

@@ -15,6 +15,7 @@ summary: 將資料磁碟附加至虛擬機器，以擴充儲存容量。
 
 
 
+[[attach-a-data-disk-to-a-virtual-machine]]
 == 將資料磁碟附加至虛擬機器
 
 將資料磁碟附加到虛擬機器以增加儲存空間。
@@ -32,6 +33,7 @@ summary: 將資料磁碟附加至虛擬機器，以擴充儲存容量。
 
 
 
+[[detach-a-data-disk-from-the-virtual-machine]]
 == 從虛擬機器分離資料磁碟
 
 當您不再需要資料磁碟時，請將其從虛擬機器中分離。磁碟不會被刪除；它仍然保留在ONTAP儲存系統中。

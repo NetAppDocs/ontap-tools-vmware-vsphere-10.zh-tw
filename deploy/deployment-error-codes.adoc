@@ -15,6 +15,7 @@ summary: 本頁概述適用於 VMware vSphere 系統之 ONTAP 工具的部署、
 
 
 
+[[collect-the-log-files]]
 == 收集記錄檔
 
 您可以透過 ONTAP tools Manager 使用者介面中的選項收集 ONTAP tools for VMware vSphere 的日誌檔案。技術支援人員可能會要求您收集這些日誌檔案，以協助疑難排解問題。
@@ -49,6 +50,7 @@ NOTE: 產生的記錄套件會取代過去 3 天或 72 小時內產生的記錄�
 
 
 
+[[deployment-error-codes]]
 == 部署錯誤代碼
 
 您可能會在部署 VMware vSphere 、重新開機和還原作業的 ONTAP 工具期間遇到錯誤代碼。

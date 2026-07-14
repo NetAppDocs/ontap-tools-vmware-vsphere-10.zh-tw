@@ -17,6 +17,7 @@ summary: 在部署ONTAP VMware vSphere的支援功能之前、您應該先熟悉
 
 
 
+[[system-requirements]]
 == 系統需求
 
 * * 每個節點的安裝套件空間需求 *
@@ -47,6 +48,7 @@ NOTE: 啟用備份時，每個 ONTAP 工具叢集在部署 VM 的資料存放區
 
 
 
+[[minimum-storage-and-application-requirements]]
 == 最低儲存與應用程式需求
 
 |===
@@ -82,6 +84,7 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 
 
 
+[[port-requirements]]
 == 連接埠需求
 
 下表概述了NetApp所使用的網路連接埠及其用途。連接埠分為三種類型：
@@ -158,6 +161,7 @@ NOTE: 對於高可用性部署，請確保所有節點之間都已開啟 UDP 連
 ====
 
 
+[[configuration-limits-to-deploy-ontap-tools-for-vmware-vsphere-for-vvols-datastores]]
 == 部署 ONTAP tools for VMware vSphere 於 vVols 資料儲存的設定限制
 
 您可以參考下表來設定 ONTAP tools for VMware vSphere。
@@ -187,6 +191,7 @@ NOTE: 表中的主機數量代表所有已連接 vCenters 的總和。
 
 
 
+[[configuration-limits-to-deploy-ontap-tools-for-vmware-vsphere-for-vmfs-and-nfs-datastores]]
 == 針對 VMFS 和 NFS 資料存放區部署 ONTAP tools for VMware vSphere 的組態限制
 
 本節列出的配置限制已通過驗證並獲得 NetApp 支援。實際限制可能會因您的環境和工作負載而異。超出這些限制可能會影響效能或可支援性，因此不建議這樣做。查看表格時，請考慮以下事項：
@@ -218,6 +223,7 @@ NOTE: 表中的主機數量代表所有已連接 vCenters 的總和。
 |===
 
 
+[[ontap-tools-for-vmware-vsphere-storage-replication-adapter-sra]]
 == 適用於 VMware vSphere 的工具 - 儲存複寫介面卡（ ONTAP ）
 
 下表顯示使用適用於 VMware vSphere 的 ONTAP 工具、每個 VMware Live Site Recovery 執行個體所支援的數量。

@@ -17,6 +17,7 @@ summary: 了解 ONTAP tools for VMware vSphere 如何表示和管理 igroup，�
 
 
 
+[[quick-behavior-summary]]
 == 快速行為摘要
 
 * ONTAP tools 管理的 VMFS 資料儲存區使用巢狀 igroup：每個資料儲存區內容一個父 igroup，每個主機一個子 igroup。
@@ -27,6 +28,7 @@ summary: 了解 ONTAP tools for VMware vSphere 如何表示和管理 igroup，�
 
 
 
+[[igroup-contexts]]
 == Igroup 上下文
 
 ONTAP tools for VMware vSphere 在兩種情況下處理 igroup。
@@ -47,6 +49,7 @@ image:../media/otv-managed2.png["ONTAP工具管理的 igroup 具有重複使用�
 
 
 
+[[naming-behavior]]
 == 命名行為
 
 建立資料存放區時，如果將 igroup 欄位留空，ONTAP tools 會建立預設的巢狀 igroup 結構。
@@ -59,6 +62,7 @@ ONTAP 系統介面在「父級發起者群組」欄位中顯示父級和子級 i
 
 
 
+[[behavior-by-scenario]]
 == 依情境的行為
 
 [cols="25,25,25,25"]
@@ -79,6 +83,7 @@ ONTAP 系統介面在「父級發起者群組」欄位中顯示父級和子級 i
 |===
 
 
+[[custom-igroup-reuse-and-api-behavior]]
 == 自訂 igroup 重複使用和 API 行為
 
 在 ONTAP tools 使用者介面中，建立資料存放區時，您可以從下拉式清單中重複使用現有的自訂父級 igroup。
@@ -90,6 +95,7 @@ NOTE: 只有自訂的 igroup 才能重複使用。從 ONTAP tools 9.x 移轉過�
 
 
 
+[[native-to-managed-conversion-view]]
 == 原生到託管的轉換檢視
 
 如果在 ONTAP 系統和 VMware 環境中直接建立 igroup 和資料存儲，ONTAP tools 最初不會管理這些物件。這將導致 igroup 結構扁平化。
@@ -104,6 +110,7 @@ ONTAP tools for VMware vSphere 無法偵測或管理在 ONTAP 系統中建立但
 
 
 
+[[reuse-of-discovered-native-igroups]]
 == 重複使用已發現的原生 igroup
 
 ONTAP tools 管理已發現的原生 igroup 後，該 igroup 將在資料儲存區建立的自訂啟動器群組名稱下拉式清單中可用。

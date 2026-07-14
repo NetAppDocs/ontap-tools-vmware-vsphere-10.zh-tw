@@ -80,6 +80,21 @@ NOTE: 切勿將 ONTAP tools for VMware vSphere 虛擬機器儲存在其管理的
 . 選取每個來源網路的目的地網路，然後選取 * 下一步 * 。
 . 在「自訂範本」視窗中、填寫必填欄位。image:../media/custom-temp-p2.png["自訂模板"]
 +
+[IMPORTANT]
+====
+「自訂範本」頁面上的值是成功部署所必需的。
+
+請特別注意以下欄位：
+
+** *主機名稱*：輸入 ONTAP tools VM 主機名稱。請使用有效的主機名稱格式。
+** *ONTAP tools IP address*：這是用於存取 ONTAP tools 的主要管理介面。
+** *IPv4 位址*：這是用於診斷 shell 和 SSH 存取以進行故障排除和維護的節點 IP 位址。
+
+
+如果您使用 DNS 名稱作為主機或 vCenter 的名稱，請確保這些名稱在 DNS 中能夠正確解析。
+
+====
++
 
 NOTE: vCenter 主機名稱是部署ONTAP工具設備的 vCenter Server 執行個體的名稱。
 

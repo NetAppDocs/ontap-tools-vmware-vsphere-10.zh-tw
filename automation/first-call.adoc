@@ -18,6 +18,7 @@ summary: 您可以使用 Curl 發出 API 呼叫，開始使用適用於 VMware v
 
 
 
+[[before-you-begin]]
 == 開始之前
 
 您應該檢閱 Curl 範例所需的資訊和參數。
@@ -58,6 +59,7 @@ echo $FQDN_IP
 ----
 
 
+[[step-1-acquire-an-access-token]]
 == 步驟 1 ：取得存取權杖
 
 您需要取得存取權杖才能使用 REST API 。以下是如何申請存取權杖的範例。您應該以適當的環境值來取代。
@@ -74,6 +76,7 @@ curl --request POST \
 
 
 
+[[step-2-issue-the-rest-api-call]]
 == 步驟 2 ：發出 REST API 呼叫
 
 擁有存取權杖之後，您可以使用 Curl 來發出 REST API 呼叫。包括在第一步中取得的存取權杖。

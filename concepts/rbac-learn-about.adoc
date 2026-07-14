@@ -20,6 +20,7 @@ RBAC 標準模式包含數種實作技術或複雜度增加的階段。結果是
 
 
 
+[[rbac-components]]
 == RBAC元件
 
 從總體上看，每個 RBAC 實作通常包含幾個元件。這些元件以不同的方式結合在一起，共同定義授權流程。
@@ -41,6 +42,7 @@ _permission_ 是將使用者或群組與角色繫結至物件的定義。權限�
 
 
 
+[[two-rbac-environments]]
 == 兩種 RBAC 環境
 
 在使用ONTAP tools for VMware vSphere 10 時，需要考慮兩種不同的 RBAC 環境。ONTAP tools for VMware vSphere需要在 vCenter 和ONTAP中都擁有特定的權限才能執行操作。雖然ONTAP工具可以自動執行儲存管理任務，但它不會在 vCenter 或ONTAP中建立使用者帳戶。服務帳戶必須由 vSphere 管理員根據需要建立。本文檔為管理員提供指導，以便分配必要的角色和權限，從而有效地管理ONTAP工具。

@@ -15,6 +15,7 @@ summary: 移轉儲存資料時、會使用 REST API 手動建立儲存後端。�
 
 
 
+[[steps-to-migrate-the-vasa-provider]]
 == 遷移 VASA 提供者的步驟
 
 . 若要在現有的 ONTAP 工具上啟用 VMware vSphere 的 Derby 連接埠 1527 ，請啟用 root 使用者，並透過 SSH 登入 CLI 。然後執行下列命令：
@@ -240,6 +241,7 @@ NOTE: UUID 是移轉後 API 所傳回的移轉 UUID 。
 
 
 
+[[steps-to-update-the-storage-replication-adapter-sra]]
 == 更新儲存複寫介面卡 (SRA) 的步驟
 
 .開始之前

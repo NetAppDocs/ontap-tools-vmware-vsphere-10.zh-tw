@@ -15,66 +15,77 @@ summary: 下節說明文件中所使用的主要概念和詞彙。
 
 
 
+[[certificate-authority-ca]]
 === 憑證授權單位（ CA ）
 
 CA 是核發安全通訊端層（SSL）憑證的可信任實體。
 
 
 
+[[consistency-group]]
 === 一致性組
 
 一致性群組是將多個磁碟區作為一個整體進行管理的集合。一致性群組會進行同步，以確保跨儲存單元和磁碟區的資料一致性。在 ONTAP 中，一致性群組為跨多個磁碟區的應用程式工作負載提供便利的管理和保護保障。深入瞭解 https://docs.netapp.com/us-en/ontap/consistency-groups/index.html["一致性群組"]。
 
 
 
+[[dual-stack]]
 === 雙堆疊
 
 雙堆疊網路是支援同時使用 IPv4 和 IPv6 位址的網路環境。
 
 
 
+[[high-availability-ha]]
 === 高可用度（HA）
 
 叢集節點是以 HA 配對方式設定、以進行不中斷營運。
 
 
 
+[[logical-unit-number-lun]]
 === 邏輯單元編號（LUN）
 
 LUN 是用於識別儲存區域網路（ SAN ）內邏輯單元的編號。這些可定址的裝置通常是透過小型電腦系統介面（ SCSI ）傳輸協定或其封裝衍生工具之一存取的邏輯磁碟。
 
 
 
+[[nvme-namespace-and-subsystem]]
 === NVMe 命名空間和子系統
 
 NVMe命名空間是一組可格式化為邏輯區塊的非揮發性記憶體。命名空間相當於FC和iSCSI傳輸協定的LUN、而NVMe子系統類似於igroup。NVMe 子系統可以與啟動器建立關聯，以便相關的啟動器可以存取子系統內的命名空間。
 
 
 
+[[ontap-tools-manager]]
 === ONTAP 工具管理器
 
 ONTAP tools Manager 可為 ONTAP tools for VMware vSphere 管理員提供更強大的控制能力、以管理受管理的 vCenter Server 執行個體和已上線的儲存後端。它有助於管理 vCenter Server 執行個體、儲存後端、憑證、密碼和記錄套裝組合。
 
 
 
+[[open-virtual-appliance-ova]]
 === 開放式虛擬應用裝置（ OVA ）
 
 ova 是一套開放式標準、用於封裝及散佈必須在虛擬機器上執行的虛擬應用裝置或軟體。
 
 
 
+[[recovery-point-objective-rpo]]
 === 恢復點目標（ RPO ）
 
 RPO 衡量備份或複製資料的頻率。它指定了發生中斷後恢復資料以恢復業務運作所需的確切時間點。例如，如果組織有 4 小時的 RPO ，則在發生災難時，它可以容忍最多 4 小時的資料遺失。
 
 
 
+[[snapmirror-active-sync]]
 === SnapMirror 主動同步
 
 SnapMirror 主動式同步功能可讓企業服務持續運作，即使發生完整的站台故障，也能支援應用程式使用次要複本進行透明容錯移轉。不需要手動介入或自訂指令碼，即可觸發 SnapMirror 主動式同步的容錯移轉。深入瞭解 https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/index.html["SnapMirror 主動同步"]。
 
 
 
+[[storage-backends]]
 === 儲存設備後端
 
 儲存設備後端是 ESXi 主機用來儲存虛擬機器檔案，資料和其他資源的基礎儲存基礎架構。它們可讓 ESXi 主機存取及管理持續性資料，為虛擬化環境提供所需的儲存功能與效能。
@@ -87,18 +98,21 @@ SnapMirror 主動式同步功能可讓企業服務持續運作，即使發生完
 
 
 
+[[storage-replication-adapter-sra]]
 === 儲存複寫介面卡（SRA）
 
 SRA 是安裝在 VMware Live Site Recovery 應用裝置內的儲存廠商專用軟體。此介面卡可在 Site Recovery Manager 與儲存虛擬機器（ SVM ）層級的儲存控制器之間，以及叢集層級組態之間進行通訊。
 
 
 
+[[storage-virtual-machine-svm]]
 === 儲存虛擬機器（ SVM ）
 
 SVM 是 ONTAP 中的多租戶共享單元。與在 Hypervisor 上執行的虛擬機器類似、SVM 是一種邏輯實體、可將實體資源抽象化。SVM 包含資料磁碟區和一或多個 LIF、透過這些 LIF 為用戶端提供資料。
 
 
 
+[[uniform-and-non-uniform-configuration]]
 === 統一且不一致的組態
 
 * * 統一主機存取 * 表示兩個站台的主機都會連線到兩個站台上儲存叢集的所有路徑。跨站台路徑會跨越距離延伸。
@@ -111,54 +125,63 @@ NOTE: 任何 SnapMirror 主動式同步部署都支援統一的主機存取；�
 
 
 
+[[virtual-machine-file-system-vmfs]]
 === 虛擬機器檔案系統（ VMFS ）
 
 VMFS 是叢集式檔案系統，專為在 VMware vSphere 環境中儲存虛擬機器檔案而設計。
 
 
 
+[[virtual-volumes-vvols]]
 === 虛擬磁碟區（vVols）
 
 vVols 為虛擬機器所使用的儲存空間提供磁碟區層級的抽象化。它具有多項優勢，並可取代傳統的 LUN。vVol 資料儲存區通常與單一 LUN 相關聯，該 LUN 充當 vVols 的容器。
 
 
 
+[[vm-storage-policy]]
 === VM 儲存原則
 
 VM 儲存原則是在 vCenter Server 的原則和設定檔下建立。對於 vVols 、請使用 NetApp vVols 儲存類型提供者的規則來建立規則集。
 
 
 
+[[vmware-live-site-recovery]]
 === VMware Live Site Recovery
 
 VMware Live Site Recovery 原名為 Site Recovery Manager （ SRM ），可為 VMware 虛擬環境提供營運不中斷，災難恢復，站台移轉及不中斷營運的測試功能。
 
 
 
+[[vmware-vsphere-apis-for-storage-awareness-vasa]]
 === VMware vSphere API for Storage A感知 （ VASA ）
 
 Vasa 是一組 API 、可將儲存陣列與 vCenter Server 整合以進行管理。此架構以多個元件為基礎，包括處理 VMware vSphere 與儲存系統之間通訊的 VASA Provider 。
 
 
 
+[[vmware-vsphere-storage-apis-array-integration-vaai]]
 === VMware vSphere 儲存 API - 陣列整合（ VAAI ）
 
 VAAI 是一組 API 、可在 VMware vSphere ESXi 主機和儲存裝置之間進行通訊。這些 API 包括一組主機用來將儲存作業卸載到陣列的原始作業。VAAI 可大幅改善儲存密集工作的效能。
 
 
 
+[[vsphere-metro-storage-cluster]]
 === vSphere Metro Storage 叢集
 
 vSphere Metro Storage Cluster（vMSC）是一種支援 vSphere 跨域叢集部署的架構。vMSC 解決方案支援 NetApp MetroCluster 和 SnapMirror active sync（以前稱為 SMBC）。這些解決方案可在網域發生故障時增強業務連續性。彈性模型取決於您的特定組態選擇。深入瞭解 https://core.vmware.com/resource/vmware-vsphere-metro-storage-cluster-vmsc["VMware vSphere Metro Storage 叢集"]。
 
 
 
+[[vvols-datastore]]
 === vVols資料存放區
 
 vVols 資料儲存區是由 VASA Provider 建立及維護之 vVols 容器的邏輯呈現。
 
 
 
+[[zero-rpo]]
 === 零RPO
 
 RPO 是指恢復點目標，即在指定時間內可接受的資料遺失量。零 RPO 表示無法接受資料遺失。

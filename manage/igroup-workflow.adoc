@@ -234,6 +234,7 @@ https://docs.netapp.com/us-en/ontap/san-admin/igroups-concept.html["關於igroup
 
 
 
+[[export-policies]]
 == 匯出原則
 
 匯出策略控制ONTAP tools for VMware vSphere中的 NFS 資料儲存存取和用戶端權限。匯出策略在ONTAP系統中建立和管理，並可與 NFS 資料儲存庫一起使用來強制執行存取控制。每個匯出策略均由指定允許存取的用戶端（IP 位址或子網路）和授予的權限（唯讀或讀寫）的規則組成。

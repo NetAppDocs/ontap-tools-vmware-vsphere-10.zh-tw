@@ -20,6 +20,7 @@ REST API 包括數種資源類別，例如 vCenter 和 Aggregate 。如需詳細
 
 
 
+[[how-to-access-the-rest-api]]
 == 如何存取REST API
 
 您可以透過 ONTAP 工具 IP 位址和連接埠來存取 VMware vSphere 10 REST API 的 ONTAP 工具。完整 URL 有幾個部分，包括：
@@ -47,12 +48,14 @@ CAUTION: 以下範例中的 IP 位址和連接埠值僅供說明之用。您必�
 
 
 
+[[http-details]]
 == HTTP詳細資料
 
 適用於 VMware vSphere 10 REST API 的 ONTAP 工具使用 HTTP 及相關參數來處理資源執行個體和集合。HTTP實作的詳細資料如下。
 
 
 
+[[http-methods]]
 === HTTP方法
 
 REST API 支援的 HTTP 方法或動詞如下表所示。
@@ -78,6 +81,7 @@ REST API 支援的 HTTP 方法或動詞如下表所示。
 |===
 
 
+[[request-and-response-headers]]
 === 要求和回應標頭
 
 下表摘要列出 REST API 使用的最重要 HTTP 標頭。
@@ -97,6 +101,7 @@ REST API 支援的 HTTP 方法或動詞如下表所示。
 |===
 
 
+[[http-status-codes]]
 === HTTP 狀態代碼
 
 REST API 使用的 HTTP 狀態代碼如下所述。
@@ -137,6 +142,7 @@ REST API 使用的 HTTP 狀態代碼如下所述。
 |===
 
 
+[[authentication]]
 == 驗證
 
 使用存取權杖執行用戶端對 REST API 的驗證。權杖和驗證程序的相關特性包括：
@@ -151,6 +157,7 @@ REST API 使用的 HTTP 狀態代碼如下所述。
 
 
 
+[[synchronous-and-asynchronous-requests]]
 == 同步和非同步要求
 
 大部分 REST API 呼叫都會快速完成，因此會同步執行。也就是說，他們會在申請完成後傳回狀態代碼（例如 200 ）。使用背景工作以非同步方式完成執行所需時間較長的要求。

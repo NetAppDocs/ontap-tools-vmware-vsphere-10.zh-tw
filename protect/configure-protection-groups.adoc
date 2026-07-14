@@ -17,6 +17,7 @@ summary: 您應該建立保護群組、以保護受保護站台上的一組虛�
 
 
 
+[[pair-protected-and-recovery-sites]]
 == 配對受保護和恢復站台
 
 您應該配對使用 vSphere Client 建立的受保護網站和還原網站、以啟用 Storage Replication Adapter （ SRA ）來探索儲存系統。
@@ -47,6 +48,7 @@ NOTE: Storage Replication Adapter（SRA）支援扇出，其中一種同步關�
 
 
 
+[[configure-protection-groups]]
 == 設定保護群組
 
 .開始之前
