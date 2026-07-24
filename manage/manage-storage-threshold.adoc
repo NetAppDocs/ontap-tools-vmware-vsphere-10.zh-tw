@@ -1,8 +1,8 @@
 ---
 permalink: manage/manage-storage-threshold.html 
 sidebar: sidebar 
-keywords:  
-summary: 您可以將臨界值設定為當磁碟區和集合容量達到特定層級時、在 vCenter Server 中接收通知。  
+keywords: storage threshold alerts, ONTAP tools capacity thresholds, vCenter storage notifications, aggregate volume capacity warnings 
+summary: 在 vCenter Server 中設定 Volume 和彙總容量等級的臨界值通知。 
 ---
 = 在 ONTAP tools 中管理儲存閾值
 :allow-uri-read: 

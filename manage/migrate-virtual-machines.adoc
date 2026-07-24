@@ -1,8 +1,8 @@
 ---
 permalink: manage/migrate-virtual-machines.html 
 sidebar: sidebar 
-keywords:  
-summary: 在遷移資料中心內現有虛擬機器時、您應該注意一些考量事項。 
+keywords: virtual machine migration considerations, ONTAP tools VM cloning guidance, VMware storage vMotion considerations, VM migration best practices 
+summary: 在遷移資料中心中現有的虛擬機器之前，請先審查關鍵注意事項。 
 ---
 = ONTAP 工具的虛擬機器遷移和複製注意事項
 :allow-uri-read: 
@@ -27,7 +27,7 @@ ONTAP tools for VMware vSphere 支援所有主要類型的虛擬機器移轉，�
 
 如果將虛擬機器遷移到不同的 FlexVol Volume，系統會使用虛擬機器資訊更新該磁碟區的中繼資料檔案。如果將虛擬機器遷移到不同的 ESXi 主機但使用相同的儲存設備，則底層 FlexVol Volume 中繼資料檔案不會被修改。
 
-如需移轉虛擬機器的相關資訊、請參閱 Broadcom 文件： https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/vcenter-and-host-management/migrating-virtual-machines-host-management.html["vSphere 虛擬機器遷移"]
+有關遷移虛擬機器的資訊，請參閱 https://techdocs.broadcom.com/["Broadcom 技術文件"]
 
 
 
@@ -63,11 +63,11 @@ VMware 目前不支援將虛擬機器複製到 VM 範本。
 
 ONTAP tools 透過標準的 VMware 工作流程支援虛擬機器快照。快照是短期回滾點，適用於測試和修補程式準備等用例。它們不能取代基於備份或複寫的資料保護。長時間在快照上執行虛擬機器可能會導致系統不穩定和資料遺失。
 
-您可以對所有受支援的資料儲存類型建立崩潰一致性快照（不包含記憶體狀態的快照，可用於將虛擬機器重新啟動至一致狀態）。此外，還支援靜默快照，這種快照使用 VMware Tools 在捕獲之前將記憶體中的資料刷新到磁碟。有關快照類型和行為的概述，請參閱 https://knowledge.broadcom.com/external/article/342618/overview-of-virtual-machine-snapshots-in.html["vSphere 中的虛擬機器快照概述"]。
+您可以對所有受支援的資料儲存類型建立崩潰一致性快照（不包含記憶體狀態的快照，可用於將虛擬機器重新啟動至一致狀態）。此外，還支援靜默快照，這種快照使用 VMware Tools 在捕獲之前將記憶體中的資料刷新到磁碟。有關快照類型和行為的概述，請參閱 https://techdocs.broadcom.com/["Broadcom 技術文件"]。
 
 
 NOTE: 記憶體快照會擷取執行中的記憶體狀態，並暫時停用虛擬機器。ONTAP tools 工作流程不支援記憶體快照。如果虛擬機器存在記憶體快照，則必須先將其刪除，然後才能將該虛擬機器納入由 ONTAP tools 管理的一致性群組或主機叢集關係中。
 
 在 ASA r2 儲存系統中，虛擬機器快照的行為與其他儲存類型不同。快照是唯讀的。啟動虛擬機器時，VASA Provider 會根據唯讀快照建立 LUN 並啟用 IOPS。關閉虛擬機器時，VASA Provider 會刪除 LUN 並停用 IOPS。
 
-有關管理虛擬機器快照的資訊，請參閱 Broadcom 文件 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/vsphere-virtual-machine-administration/managing-virtual-machinesvsphere-vm-admin/using-snapshots-to-manage-virtual-machinesvsphere-vm-admin.html["使用 Snapshot 管理虛擬機器"]。
+有關管理虛擬機器快照的資訊，請參閱 https://techdocs.broadcom.com/["Broadcom 技術文件"]。

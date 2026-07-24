@@ -1,8 +1,8 @@
 ---
 permalink: manage/mount-a-vvols-datastore.html 
 sidebar: sidebar 
-keywords: Mount vVol 
-summary: 您可以使用「Mount vVols Datastore」（掛載vVols Datastore）對話方塊、將VMware Virtual Volumes（vVols）資料存放區掛載到一或多個其他主機。裝載資料存放區可讓儲存設備存取其他主機。您只能透過 API 卸載 vVols 資料存放區。 
+keywords: mount vVols datastore, add vVol datastore to hosts, ONTAP tools vVol host access, VMware virtual volumes mount 
+summary: 將 vVols 資料儲存裝載到其他主機，以便在虛擬化環境中提供儲存設備存取。 
 ---
 = 在 ONTAP 工具中掛載 vVols 資料存放區
 :allow-uri-read: 
@@ -11,10 +11,10 @@ summary: 您可以使用「Mount vVols Datastore」（掛載vVols Datastore）�
 
 
 [role="lead"]
-您可以將 VMware 虛擬磁碟區（ vVols ）資料存放區掛載到一或多個額外主機、以提供對其他主機的儲存存取。您只能透過 API 卸載 vVols 資料存放區。
+您可以將 VMware Virtual Volumes （vVols） 資料儲存裝載到一個或多個其他主機，以便為其他主機提供儲存設備存取。您只能透過主機層級 API 取下 vVols 資料儲存。不支援叢集層級資料儲存取下。
 
 
-NOTE: 當您使用以下方式新增新的 ESXi 主機時： https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/use-quickstart-to-add---host-to-a-cluster.html["將 ESX 主機新增至 vSphere 叢集工作流程"]等待計劃的主機發現完成，然後它才會出現在ONTAP工具中。或者，您可以從NetApp ONTAP工具概覽畫面手動執行發現。
+NOTE: 新增主機後，請等待已排程的主機探索完成，該主機才會顯示在 ONTAP tools 中。或者，您也可以從 NetApp ONTAP tools 總覽畫面手動執行探索。如需如何將 ESXi 主機新增至 vSphere 叢集的相關資訊，請參閱 https://techdocs.broadcom.com/["Broadcom 技術文件"]。
 
 .步驟
 . 從 vSphere Client 首頁、選取 * 主機與叢集 * 。

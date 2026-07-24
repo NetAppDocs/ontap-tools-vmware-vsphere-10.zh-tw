@@ -1,21 +1,21 @@
 ---
 permalink: migrate/migrate-to-latest-ontaptools.html 
 sidebar: sidebar 
-keywords: migrate 
-summary: 移轉儲存資料時、會使用 REST API 手動建立儲存後端。移轉 VASA Provider 資料時，資料會從現有的 Derby 資料庫匯出，並匯入至 MongoDB 資料庫。 
+keywords: ONTAP tools migration, vVols migration, VMware vSphere, NFS datastores, VMFS datastores 
+summary: 根據您是否使用 vVols 資料儲存區來選擇路徑，將 ONTAP tools for VMware vSphere 9.xx 移轉至 10.6。 
 ---
-= 從ONTAP tools for VMware vSphere遷移到 10.5
+= 將 ONTAP tools for VMware vSphere 9.xx 移轉至 10.6
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-將 NetApp ONTAP tools for VMware vSphere 設定從 9.xx 版本遷移到 10.5 版本需要進行遷移過程，因為不同版本之間有重大的產品更新和增強功能。
+從 ONTAP tools for VMware vSphere 9.xx 移轉至 10.6 需要根據您的資料存放區類型採取不同的步驟。
 
-您可以從ONTAP tools for VMware vSphere遷移到ONTAP tools for VMware vSphere。
+您可以將 ONTAP tools for VMware vSphere 9.12D1、9.13D2 和 9.13P2 版本移轉至 ONTAP tools for VMware vSphere 10.6。
 
-如果您的環境中有 NFS 和 VMFS 資料存放區，且沒有 vVols 資料存放區，只需解除安裝 ONTAP tools 9.xx 並部署 ONTAP tools 10.5。然而，如果您的環境包含 vVols 資料存放區，則必須執行 VASA Provider 和 SRA 的移轉流程。
+如果您的設定包含 NFS 和 VMFS 資料存放區，但沒有 vVols 資料存放區，請卸載 ONTAP tools 9.xx 並部署 ONTAP tools 10.6。如果您的設定包含 vVols 資料存放區，請移轉 VASA Provider 和 SRA。
 
 下表概述了這兩種不同場景下的遷移過程。
 
@@ -23,7 +23,19 @@ summary: 移轉儲存資料時、會使用 REST API 手動建立儲存後端。�
 | *如果設定有 vVols 資料儲存* | *如果設定僅包含 NFS 和 VMFS 資料儲存* 
 
 
-| 步驟：1.link:../migrate/sra-vasa-migration.html["遷移 VASA 提供程序"] 2.  https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-storage-8-0/storage-policy-based-management-in-vsphere/creating-and-managing-vsphere-storage-policies.html["建立虛擬機器儲存策略"] | 步驟：1.從您的環境中刪除ONTAP工具 9.xx。參考 https://kb.netapp.com/data-mgmt/OTV/VSC_Kbs/OTV_How_to_remove_OTV_9_12_from_your_environment["如何從您的環境中刪除 OTV 9.xx"]NetApp知識庫文章。2.link:../deploy/quick-start.html["ONTAP tools for VMware vSphere"] 3.link:../migrate/sra-vasa-migration.html["更新「SRA」"] 4. https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-storage-8-0/storage-policy-based-management-in-vsphere/creating-and-managing-vsphere-storage-policies.html["建立虛擬機器儲存策略"] 
+| 步驟：1.link:../migrate/sra-vasa-migration.html["遷移 VASA 提供程序"] 2.  https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-storage-8-0/storage-policy-based-management-in-vsphere/creating-and-managing-vsphere-storage-policies.html["建立虛擬機器儲存策略"] | 步驟：1.從您的環境中移除 ONTAP tools 9.xx。請參閱 NetApp 知識庫中的 https://kb.netapp.com/data-mgmt/OTV/VSC_Kbs/OTV_How_to_remove_OTV_9_12_from_your_environment["如何從您的環境中刪除 OTV 9.xx"]。2.link:../deploy/quick-start.html["部署與設定 ONTAP tools for VMware vSphere 10.6"] 3.link:../migrate/sra-vasa-migration.html["更新「SRA」"] 4. https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-storage-8-0/storage-policy-based-management-in-vsphere/creating-and-managing-vsphere-storage-policies.html["建立虛擬機器儲存策略"] 
 |===
 
-NOTE: 從適用於ONTAP tools for VMware vSphere遷移到 10.5 後，使用 NVMe/FC 協定的vVols資料儲存庫將無法運行，因為ONTAP工具 10.5 僅支援具有 VMFS 資料儲存庫的 NVMe-oF 協定。
+NOTE: 從 ONTAP tools for VMware vSphere 9.xx 移轉至 10.6 後，使用 NVMe/FC 協定的 vVols 資料存放區將無法運作，因為 ONTAP tools 10.6 僅支援 VMFS 資料存放區的 NVMe-oF 協定。
+
+
+
+[[after-migration]]
+== 移轉後
+
+請核實以下內容：
+
+* 資料儲存可從 vCenter Server 存取。
+* VM 儲存設備原則已按預期對應。
+* 已設定資料存放區的保護和複寫狀態顯示正常。
+

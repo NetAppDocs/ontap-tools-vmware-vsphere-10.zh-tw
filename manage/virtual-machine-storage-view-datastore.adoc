@@ -1,8 +1,8 @@
 ---
 permalink: manage/virtual-machine-storage-view-datastore.html 
 sidebar: sidebar 
-keywords: Remove vVol datastore 
-summary: 儲存檢視會顯示虛擬機器所建立的 vVols 清單。 
+keywords: virtual machine storage view, vVols list per VM, ONTAP tools VM storage details, datastore usage by virtual machine 
+summary: 從儲存設備檢視查看虛擬機器建立的 vVols 清單。 
 ---
 = ONTAP 工具中的虛擬機器儲存視圖
 :allow-uri-read: 

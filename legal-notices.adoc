@@ -52,4 +52,4 @@ link:https://www.netapp.com/company/legal/privacy-policy/["https://www.netapp.co
 
 通知檔案提供有關 NetApp 軟體所使用之協力廠商版權與授權的資訊。
 
-https://library.netapp.com/ecm/ecm_download_file/ECMLP3358877["有關適用ONTAP tools for VMware vSphere的通知"^]
+https://library.netapp.com/ecm/ecm_download_file/ECMLP3383265["關於 ONTAP tools for VMware vSphere 10.6 的通知"^]

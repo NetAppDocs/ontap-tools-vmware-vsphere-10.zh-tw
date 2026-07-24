@@ -1,8 +1,8 @@
 ---
 permalink: configure/configure-user-role-and-privileges.html 
 sidebar: sidebar 
-keywords: user roles 
-summary: 使用ONTAP tools for VMware vSphere和ONTAP System Manager 的 ONTAP 工具中的 JSON 檔案為儲存後端設定使用者角色和權限。 
+keywords: ONTAP user roles and privileges, ONTAP tools JSON role file, storage backend least privilege, ONTAP System Manager roles 
+summary: 使用 ONTAP tools 和 ONTAP System Manager 中的 JSON 檔案來設定儲存設備後端的使用者角色和權限。 
 ---
 = 為 ONTAP tools 配置 ONTAP 使用者角色和權限
 :allow-uri-read: 

@@ -1,8 +1,8 @@
 ---
 permalink: manage/start-the-ssh-on-other-nodes.html 
 sidebar: sidebar 
-keywords:  
-summary: 升級之前、您需要在其他節點上啟動 SSH 。 
+keywords: start SSH on nodes, ONTAP tools node SSH access, pre-upgrade SSH enablement, appliance cluster troubleshooting 
+summary: 在執行升級之前，請先在其他節點上啟動 SSH。 
 ---
 = 在其他 ONTAP 工具節點上啟動 SSH
 :allow-uri-read: 
@@ -20,8 +20,9 @@ summary: 升級之前、您需要在其他節點上啟動 SSH 。
 升級前，請對每個節點重複此步驟。
 
 .步驟
-. 從vCenter Server開啟主控台至VASA Provider。
-. 以維護使用者身分登入。
+. 登入 vCenter 伺服器。
+. 找到 ONTAP tools 節點 VM 並啟動 Web 主控台。
+. 請使用 `maint`憑證登入。
 . 輸入 `4` 選擇 Support and Diagnostics 。
 . 輸入 `1` 以選取 Access 診斷 Shell 。
 . 輸入 `y` 以繼續。

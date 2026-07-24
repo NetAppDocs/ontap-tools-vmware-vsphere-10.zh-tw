@@ -1,7 +1,7 @@
 ---
 permalink: configure/add-storage-backend.html 
 sidebar: sidebar 
-keywords:  
+keywords: add storage backend, ONTAP tools storage backend, local and global storage backend, MetroCluster storage backend 
 summary: 在 ONTAP 工具中，為 vCenter 執行個體本機新增和管理儲存後端，或為叢集範圍的探索進行全域新增和管理。 
 ---
 = 為 ONTAP tools 新增儲存後端
@@ -19,7 +19,7 @@ summary: 在 ONTAP 工具中，為 vCenter 執行個體本機新增和管理儲�
 
 請參閱知識庫文章： https://kb.netapp.com/data-mgmt/OTV/VSC_Kbs/OTV_10_What_is_storage_backend_global_and_local_scope["OTV 10：什麼是儲存後端全域和本機範圍"^] 以了解有關全域和本機儲存後端的更多資訊。
 
-如果ONTAP中啟用了MetroCluster支持，則將來源叢集和目標叢集都作為本地或全域儲存後端加入。
+如果在 ONTAP 中啟用了 NetApp MetroCluster 支援，請將來源叢集和目的地叢集都以本機或全域儲存設備後端的形式就職。
 
 .開始之前
 驗證憑證是否包含有效的主題備用名稱 (SAN) 欄位。  ONTAP系統使用 SAN 欄位來識別叢集和 SVM 管理 LIF。

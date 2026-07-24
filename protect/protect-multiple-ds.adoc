@@ -1,0 +1,62 @@
+---
+permalink: protect/protect-multiple-ds.html 
+sidebar: sidebar 
+keywords: granular datastore protection, protection groups, SnapMirror relationship, AutomatedFailOverDuplex, uniform host configuration, non-uniform host configuration 
+summary: 透過將資料儲存分組到保護群組並套用 SnapMirror 原則，保護主機叢集中的多個 VMFS 資料儲存。 
+---
+= 使用 ONTAP tools 保護叢集中的資料存放區
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當主機叢集包含來自多個儲存虛擬機器 (SVM) 的資料存放區，且需要使用不同原則保護選定的資料存放區時，請使用精細的資料存放區保護。
+
+.開始之前
+在保護主機叢集中的資料存放區之前，請確認您符合下列要求：
+
+* 這些資料儲存是使用 iSCSI 或 FC 協定的 VMFS 資料儲存。
+* 資料存放區已探索完畢，可在 ONTAP tools 中使用。
+* 來源和目標儲存 VM 已設定為 SnapMirror 關係。
+
+
+.步驟
+. 登入 vSphere Client。
+. 右鍵點選主機或主機叢集，然後選擇 *NetApp ONTAP tools* > *保護資料存放區*。
+. 選擇叢集中的*儲存虛擬機器*。
++
+顯示所選 SVM 的資料儲存。
+
+. *資料儲存類型* 欄位已預先填入 VMFS，因為 VMFS 是唯一受支援的保護資料儲存類型，且該欄位已停用。
+. 根據資格條件填入的清單中，選取您要保護的資料存放區，然後按一下 *Next*。
+. 在「保護設定」視窗中，選擇是否要在現有保護群組或新保護群組中保護選定的資料存放區。
+. 如果選擇 *Create new*，請為保護群組提供名稱，然後選擇 *Add Relationship*。
+. 在 * 新增 SnapMirror 關係 * 視窗中、選取 * 目標儲存虛擬機器 * 和 * 原則 * 類型。
++
+原則類型可以是非同步或 AutomatedFailOverDuplex。AutomatedFailOverDuplex 僅支援在 ONTAP 9.15.1 上使用 iSCSI 或 FC 協定佈建並掛載至主機叢集的資料存放區。
+
++
+如果您將 SnapMirror 關係新增為 AutomatedFailOverDuplex，請將目標儲存設備新增為儲存設備後端，並與部署 ONTAP tools for VMware vSphere 的同一個 vCenter Server 建立關聯。
+
++
+在 AutomatedFailOverDuplex 原則類型中，有統一和非統一叢集組態。對於統一叢集組態，主機啟動器群組組態會複寫至目標網站。如需更多資訊，請參閱 link:../concepts/ontap-tools-concepts-terms.html["關鍵概念與詞彙"]。
+
+. 對於非統一叢集組態，請為叢集中的每個主機選擇主機存取（來源或目標）。ONTAP tools 會在目標儲存設備上建立對應的主機啟動器群組組態，以提供主機對目標儲存設備物件的存取。
+. 選擇*保存*。
+. 在「摘要」視窗中查看組態，然後選擇「保護」。
+. 要檢視所有可用保護群組的詳細資訊，請前往 *NetApp ONTAP tools* > *保護* > *保護群組*。
+
+
+.結果
+系統會建立一個包含所選資料儲存的新保護群組，並將 SnapMirror 關係新增至該保護群組。系統會建立一個含有作業 ID 詳細資訊的 vCenter 工作，並在「最近任務」面板中顯示其進度。這是一個非同步工作；使用者介面僅顯示請求提交狀態，不會等待工作完成。
+
+[NOTE]
+====
+對於 ONTAP 儲存設備（ONTAP 9）叢集，如果保護群組具有非同步關係，則不支援取消對非最後一個資料存放區的保護。
+
+====
+.相關資訊
+* link:../manage/protect-ds.html["保護 VMFS 資料存放區"]
+* link:../manage/unprotect-ds.html["取消對 VMFS 資料儲存設備的保護"]
+

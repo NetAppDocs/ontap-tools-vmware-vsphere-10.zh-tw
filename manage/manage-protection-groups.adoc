@@ -1,0 +1,105 @@
+---
+permalink: manage/manage-protection-groups.html 
+sidebar: sidebar 
+keywords: manage protection groups, SnapMirror relationships, datastore disaster recovery, ONTAP tools replication groups 
+summary: 在 ONTAP tools 中檢視、編輯和刪除保護群組及其關係。 
+---
+= 在 ONTAP tools 中管理保護群組
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+使用此工作可在 ONTAP tools 的「保護群組」頁面中檢視、編輯和刪除保護群組及其關係。
+
+.開始之前
+* 請確保您擁有 vSphere 的管理員權限。
+* 請確保您的 ONTAP tools 使用者帳戶擁有管理保護群組的權限。
+
+
+
+IMPORTANT: 在編輯或移除保護之前，請審查對話方塊中的警告訊息。移除關聯關係可能會影響備份和一致性行為。
+
+.關於這項工作
+* ONTAP tools 會更新所選 ONTAP tools 執行個體中的本機保護記錄。
+* 如果選擇 *Delete associated storage elements*，ONTAP tools 將移除保護群組中的儲存設備元素。
+* 如果您不選擇 *Delete associated storage elements*，請在 ONTAP 中手動移除目標端關係和儲存設備元素。
+
+
+
+
+[[view-protection-groups]]
+== 檢視保護群組
+
+.步驟
+. 在 ONTAP tools 外掛中，導覽至「保護」>「保護群組」。
++
+保護群組清單顯示相關聯的關係，包括一致性群組、SnapMirror 原則和受保護的資料存放區。
+
+. 審查保護群組詳細資料，包括受保護資料存放區的數量。
+
+
+
+
+[[edit-protection-group-relationships]]
+== 編輯保護群組關係
+
+.步驟
+. 在 ONTAP tools 外掛中，導覽至「保護」>「保護群組」。
+. 選擇要編輯的保護群組旁的垂直省略號（三個點）。
+. 選擇 *編輯保護群組*。
+. 更新關係設定：
++
+.. 如果保護群組具有自動故障轉移雙工 (AFD) 關係，則可以新增非同步關係。
+.. 如果保護群組具有非同步關係，則可以新增自動故障轉移雙工 (AFD) 關係。
+.. 如果一個保護群組同時具有 Automated Failover Duplex （AFD） 和非同步關係，則可以從「編輯保護群組」視窗中移除任一關係。
+.. 每個保護群組只能有一個 Automated Failover Duplex （AFD） 關係和一個非同步關係。
+.. 若要使用不同的 AFD 關係，請移除現有的 AFD 關係，然後新增新的 AFD 關係。
+.. 如果在「編輯保護群組」視窗中移除現有關係，請審查有關移除關係可能影響備份和一致性的警告。
+.. 如果在「編輯保護群組」視窗中移除非同步關係，目標端儲存資源不會自動刪除。請在 ONTAP 中手動移除目標端關係和儲存設備元素。
+
+
+
+
+
+NOTE: 編輯操作僅限於支援的關係設定。在儲存變更前，請參閱您的保護原則和工作流程要求。
+
+
+
+[[remove-a-protection-group]]
+== 移除保護群組
+
+.步驟
+. 在 ONTAP tools 外掛中，導覽至「保護」>「保護群組」。
+. 選擇要移除的保護群組旁的垂直省略號（三個點）。
+. 選擇 *移除保護*。
+. 在「移除保護」對話方塊中，審查移除主機叢集保護會導致資料存放區不受保護的訊息。
+. 選用：選擇「刪除關聯的儲存設備元素」（清除工件）以移除保護群組中的儲存設備元素。
++
+儲存元素可以包括一致性群組、Volume、儲存設備單元和快照。
+
+. 如果您不選擇 *Delete associated storage elements*，ONTAP tools 只會移除本機保護記錄。請在 ONTAP 中手動移除目標端關係和儲存設備元素。
+
+
+[cols="1,1,1,1"]
+|===
+| 關係類型 | 刪除範圍 | 自動清理 | 需要人工清理 
+
+
+| 自動故障轉移雙工（AFD） | 在任一站台上刪除保護，都會刪除兩個站台上的關係。 | 關係記錄會在工作流程中移除。 | 如果您未選擇 *刪除關聯的儲存設備元素*，請視需要手動移除剩餘的儲存設備元素。 
+
+
+| 非同步 | 刪除操作僅適用於本機 ONTAP tools 執行個體；不支援跨站點刪除。 | 本地保護記錄已移除。 | 手動移除 ONTAP 中的目標端關係和儲存設備元素。 
+|===
+.結果
+* ONTAP tools 會移除所選保護群組的本機保護記錄。
+* 如果您選擇了 *Delete associated storage elements*，ONTAP tools 將移除保護群組中所選的儲存設備元素。
+* 如果目標端關係或儲存設備元素仍然存在，請在 ONTAP 中手動移除它們。
+
+
+.相關主題
+* link:../manage/protect-ds.html["保護 VMFS 資料存放區"]
+* link:../protect/protect-multiple-ds.html["保護多個資料存放區"]
+* link:../protect/config-proximity.html["使用 ONTAP tools 設定叢集以保護資料存放區"]
+

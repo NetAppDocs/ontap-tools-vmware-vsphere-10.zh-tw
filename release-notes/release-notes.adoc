@@ -1,22 +1,22 @@
 ---
 permalink: release-notes/release-notes.html 
 sidebar: sidebar 
-keywords: release notes, ontap tools for VMware vSphere 
-summary: 提供ONTAP 本次VMware vSphere之VMware vSphere版本的重要資訊、包括新功能與增強功能、修正問題、已知問題、注意事項及限制。 
+keywords: release notes, ONTAP tools for VMware vSphere, 10.6 
+summary: 查看 ONTAP tools for VMware vSphere 10.6 版本說明，以了解其功能、相容性和支援的移轉路徑。 
 ---
-= ONTAP 工具發布說明
+= 適用於 VMware vSphere 10.6 的 ONTAP tools for VMware vSphere 發行說明
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-了解適用於ONTAP tools for VMware vSphere中的新功能和增強功能。
+請查看此頁面，以了解 ONTAP tools for VMware vSphere 10.6 的重要資訊，然後依照連結的主題了解功能詳細資料、相容性及移轉資訊。
 
-如需新功能與增強功能的完整清單，請參閱 xref:whats-new.adoc[適用於ONTAP tools for VMware vSphere的新功能]。
+有關新增功能和改進的完整列表，請參閱xref:whats-new.adoc[ONTAP tools for VMware vSphere 10.6 的新增功能]。
 
 如需最新的相容性資訊，請參閱 https://mysupport.netapp.com/matrix["NetApp 互通性對照表工具"^]。
 
-支援從適用於ONTAP tools for VMware vSphere遷移到ONTAP tools for VMware vSphere。
+支援從 ONTAP tools for VMware vSphere 9.12D1、9.13D2 和 9.13P2 版本移轉至 ONTAP tools for VMware vSphere 10.6。
 
-如需更多資訊、請參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP3358876["ONTAP tools for VMware vSphere發行說明"^]。您必須使用 NetApp 帳戶登入或建立帳戶、才能存取版本資訊。
+如需更多資訊，請參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP3383264["ONTAP tools for VMware vSphere 10.6 發行說明"^]。您必須使用您的 NetApp 帳戶登入或建立帳戶才能存取此文件。

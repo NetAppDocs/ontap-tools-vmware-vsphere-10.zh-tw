@@ -1,0 +1,35 @@
+---
+permalink: manage/manage-host-proximity.html 
+sidebar: sidebar 
+keywords: host cluster configuration, manage host proximity, SVM mapping, ONTAP tools host cluster protection 
+summary: 檢視、編輯和移除主機叢集保護的主機叢集組態設定。 
+---
+= 在 ONTAP tools 中管理叢集組態
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+使用此工作可在 ONTAP tools 中檢視、編輯和移除主機叢集組態設定，以確保站台指派對主機叢集保護保持準確。
+
+.開始之前
+* 請確保您擁有 vSphere 的管理員權限。
+* 請確保您的 ONTAP tools 使用者帳戶具有管理主機叢集保護設定的權限。
+
+
+.步驟
+. 在 ONTAP tools 外掛中，導覽至 *保護* > *叢集保護組態*。
++
+主機叢集組態設定依組態類型、SVM 和主機列出。
+
+. 選擇要管理的主機叢集組態設定旁邊的垂直省略號（三個點）：
++
+.. 若要編輯組態，請選擇「編輯」並更新所需設定。如需詳細資訊，請參閱 link:../protect/config-proximity.html["使用 ONTAP tools 設定叢集以保護資料存放區"]。
++
+當新增主機至叢集時，現有的叢集組態設定不會自動套用於該主機。請編輯現有的叢集組態，並將新主機指派到對應的站點。
+
+.. 若要移除組態，請選擇 *Remove* ，然後在對話方塊中確認刪除。
+
+
+

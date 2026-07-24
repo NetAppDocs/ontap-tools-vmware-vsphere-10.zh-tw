@@ -1,8 +1,8 @@
 ---
 permalink: upgrade/upgrade-error-codes.html 
 sidebar: sidebar 
-keywords: upgrade 
-summary: 本頁概述適用於 VMware vSphere 系統的 ONTAP 工具升級作業的錯誤代碼。 
+keywords: upgrade error codes, ONTAP tools, VMware vSphere, troubleshooting, Ansible logs 
+summary: 使用 ONTAP tools 升級錯誤代碼來識別失敗的工作流程，並疑難排解 VMware vSphere 中的升級問題。 
 ---
 = ONTAP tools 升級錯誤代碼
 :allow-uri-read: 
@@ -65,7 +65,7 @@ NOTE: 本頁提供的錯誤代碼僅供參考。如果錯誤仍然存在或未�
 | 052 | ISO 可能與目前版本相同或高於目前版本的兩個版本。 | 使用與 ISO 版本相容的版本，從您目前的版本升級。 
 
 
-| 068 | Debian 套件復原失敗 | 請使用零 RPO 或快照型還原，然後重試升級。 
+| 068 | Debian 作業系統套件回滾失敗 | 請使用零 RPO 或快照型還原，然後重試升級。 
 
 
 | 069 | 還原檔案失敗 | 請使用零 RPO 或快照型還原，然後重試升級。 
@@ -77,7 +77,7 @@ NOTE: 本頁提供的錯誤代碼僅供參考。如果錯誤仍然存在或未�
 | 071 | Kubernetes 叢集不健全 | - 
 
 
-| 074 | 掛載 ISO 失敗 | 請檢查 /var/log/upgrade-run.log ，然後重試升級。 
+| 074 | 掛載 ISO 失敗 | 檢查 /var/log/otvng/upgrade-run.log 檔案並重試升級。 
 
 
 | 075 | 升級預先檢查失敗 | 重試升級。 
@@ -107,10 +107,10 @@ NOTE: 本頁提供的錯誤代碼僅供參考。如果錯誤仍然存在或未�
 | 083 | 刪除備份失敗 | 請使用零 RPO 或快照型還原，然後重試升級。 
 
 
-| 084 | 將 JobManager 變更回正式作業失敗 | 請執行下列步驟以復原 / 完成升級。1.啟用 Diagnostic Shell 2.執行指令：_sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postupgrade_ 3.檢查 /var/log/post-deploy-upgrade.log 中的日誌 
+| 084 | 將 JobManager 變更回正式作業失敗 | 請執行下列步驟以恢復/完成升級。1.啟用診斷 Shell 2.執行命令：_sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postupgrade_ 3.檢查 /var/log/otvng/post-deploy-upgrade.log 中的日誌 
 
 
-| 087 | 升級後步驟失敗。 | 請執行下列步驟以恢復 / 完成升級。1.啟用診斷 Shell 2 。執行 _Sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postupgrade 命令 3.請至 /var/log/post-deploy-upgrade.log 查看記錄 
+| 087 | 升級後步驟失敗。 | 請執行下列步驟以恢復/完成升級。1.啟用診斷 Shell 2.執行 _sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postupgrade_ 命令 3.檢查 /var/log/otvng/post-deploy-upgrade.log 中的日誌 
 
 
 | 088 | 設定日誌輪轉為日誌檔失敗 | 檢查虛擬機器的網路設定是否與虛擬機器所在的主機相容。您可以嘗試將虛擬機器遷移到另一台主機並重新啟動。 
@@ -128,10 +128,13 @@ NOTE: 本頁提供的錯誤代碼僅供參考。如果錯誤仍然存在或未�
 | 097 | 解除安裝服務以進行升級失敗 | 請使用零 RPO 或快照型還原，然後重試升級。 
 
 
-| 098 | 將 dockercred 秘密從 NTV 系統複製到動態儲存資源配置程式命名空間失敗 | 檢查升級記錄，然後重試升級。 
+| 098 | 將 dockercred 金鑰從 ntv-system 複製到 rook-ceph 命名空間失敗 | 檢查升級記錄，然後重試升級。 
 
 
 | 099 | 無法驗證新增的 HDD | 在 HA 的情況下，將新的 HDD 新增至所有節點，在非 HA 部署的情況下新增至一個節點。 
+
+
+| 108 | 植入指令碼失敗 | - 
 
 
 | 109 | 備份持續磁碟區資料失敗 | 檢查升級記錄，然後重試升級。 
@@ -161,7 +164,7 @@ NOTE: 本頁提供的錯誤代碼僅供參考。如果錯誤仍然存在或未�
 | 056 | 刪除移轉備份失敗 | 不適用 
 
 
-| 090 | 儲存後端和 vCenter 的憑證驗證失敗 | 檢查升級日誌和日誌檔案 /var/log/cert_validation_error.log 並重試升級。 
+| 090 | 儲存後端和 vCenter 的憑證驗證失敗 | 檢查升級日誌和日誌檔 /var/log/otvng/cert_validation_error.log，然後重試升級。 
 
 
 | 114 | MongoDB 集合中的內部憑證更新失敗  a| 
@@ -216,7 +219,7 @@ sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postupgrade
 +
 [listing]
 ----
-tail -f /var/log/post-deploy-upgrade.log
+tail -f /var/log/otvng/post-deploy-upgrade.log
 ----
 +
 尋找成功訊息： `Completed post 10.5 upgrade steps.`

@@ -1,8 +1,8 @@
 ---
 permalink: manage/backup-settings.html 
 sidebar: sidebar 
-keywords:  
-summary: 輸入 NTP 伺服器詳細資料，以同步 ONTAP 工具應用裝置的時間時鐘。 
+keywords: ONTAP tools backup settings, configure backup schedule, appliance backup configuration, ONTAP tools data protection 
+summary: 啟用或停用 ONTAP tools 備份，並設定備份頻率，範圍為 10 到 60 分鐘。 
 ---
 = 編輯 ONTAP tools 備份設定
 :allow-uri-read: 

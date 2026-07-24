@@ -1,8 +1,8 @@
 ---
 permalink: manage/mount-datastores-on-host.html 
 sidebar: sidebar 
-keywords:  
-summary: 安裝資料存放區可讓儲存設備存取其他主機。將主機新增至VMware環境之後、即可將資料存放區掛載到其他主機上。 
+keywords: mount NFS VMFS datastore, datastore host access, ONTAP tools datastore mounting, add datastore to ESXi host 
+summary: 將主機新增至 VMware 環境後，將資料存放區裝載到其他主機上。 
 ---
 = 在 ONTAP tools 中掛載 NFS 和 VMFS 資料存放區
 :allow-uri-read: 
@@ -14,7 +14,7 @@ summary: 安裝資料存放區可讓儲存設備存取其他主機。將主機�
 安裝資料存放區可讓儲存設備存取其他主機。將主機新增至VMware環境之後、即可將資料存放區掛載到其他主機上。
 
 
-NOTE: 當您使用以下方式新增新的 ESXi 主機時： https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/use-quickstart-to-add---host-to-a-cluster.html["將 ESX 主機新增至 vSphere 叢集工作流程"]等待計劃的主機發現完成，然後它才會出現在ONTAP工具中。或者，您可以從NetApp ONTAP工具概覽畫面手動執行發現。
+NOTE: 新增主機後，請等待已排程的主機探索完成，該主機才會顯示在 ONTAP tools 中。或者，您也可以從 NetApp ONTAP tools 總覽畫面手動執行探索。如需如何將 ESXi 主機新增至 vSphere 叢集的相關資訊，請參閱 https://techdocs.broadcom.com/["Broadcom 技術文件"]。
 
 .關於這項工作
 * 視 vSphere 用戶端版本和選取的資料存放區類型而定，某些按滑鼠右鍵動作會停用或無法使用。
@@ -24,6 +24,7 @@ NOTE: 當您使用以下方式新增新的 ESXi 主機時： https://techdocs.br
 
 
 * 當主機叢集受到統一配置保護時，vSphere 會停用掛載資料儲存選項。
+* 當具有 nconnect 的資料存放區裝載到新主機上時，如果資料存放區的 nconnect 值超過主機的設定值，ONTAP tools 會套用該資料存放區的 nconnect 值。
 
 
 .步驟

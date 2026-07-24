@@ -1,8 +1,8 @@
 ---
 permalink: manage/change-valid-flag.html 
 sidebar: sidebar 
-keywords:  
-summary: 您可以使用維護控制台變更憑證驗證標誌。 
+keywords: certificate validation flag, ONTAP tools certificate check, maintenance console certificate settings, TLS validation toggle 
+summary: 使用維護主控台變更憑證驗證旗標。 
 ---
 = 在 ONTAP tools 中變更憑證驗證標誌
 :allow-uri-read: 
@@ -17,8 +17,9 @@ summary: 您可以使用維護控制台變更憑證驗證標誌。
 您必須擁有維護使用者登入認證。
 
 .步驟
-. 從 vCenter Server 開啟 ONTAP 工具的主控台。
-. 以維護使用者身分登入。
+. 登入 vCenter 伺服器。
+. 找到 ONTAP tools 虛擬機器並開啟 Web 主控台。
+. 請使用 `maint`憑證登入。
 . 進入 `1`選擇“應用程式配置”選單。
 . 進入 `3`更改證書驗證標誌。
 +

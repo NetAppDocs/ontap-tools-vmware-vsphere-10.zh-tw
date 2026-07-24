@@ -1,34 +1,34 @@
 ---
 permalink: upgrade/upgrade-ontap-tools.html 
 sidebar: sidebar 
-keywords: upgrade 
-summary: HA 和非 HA 部署均支援升級。 
+keywords: upgrade, ONTAP tools, VMware vSphere, HA, non-HA, low RPO backup, SRA adapter, vCenter Server 
+summary: 使用必要的預檢查和備份步驟，將 VMware vSphere 的 ONTAP tools 從 10.4 或 10.5 升級至 10.6，以支援 HA 和非 HA 部署。 
 ---
-= 將適用於ONTAP tools for VMware vSphere升級至 10.5
+= 將 ONTAP tools for VMware vSphere 10.x 升級至 10.6
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-您可以從ONTAP tools for VMware vSphere升級到 10.5。但是，要從ONTAP工具 10.0、10.1 或 10.2 升級到 10.5，必須先升級到 10.3 或 10.4，然後再升級到 10.5。
+您可以直接將 ONTAP tools for VMware vSphere 10.4 或 10.5 升級至 10.6。若要從 ONTAP tools 10.0、10.1、10.2 或 10.3 升級至 10.6，請先升級至 10.4 或 10.5。
 
 [NOTE]
 ====
-* 對於 ASA r2 系統，在設定更多儲存可用區（SAZ）之前，請確保將 ONTAP tools for VMware vSphere 升級至 10.5，並將 ONTAP 升級至 9.16.1。
-* 如果從ONTAP tools for VMware vSphere升級到 10.5 失敗，則無法回滾。使用低 RPO 或快照恢復來恢復設定。對於ONTAP tools for VMware vSphere，使用零 RPO 來還原設定。
+* 對於 ASA r2 系統，在設定更多儲存可用度區域 （SAZ） 之前，請確保將 ONTAP tools for VMware vSphere 升級至 10.6，並將 ONTAP 升級至 9.16.1。
+* 如果從 ONTAP tools for VMware vSphere 10.4 或 10.5 升級至 10.6 失敗，則無法回復。請使用低 RPO 或快照恢復來還原設定。對於 ONTAP tools for VMware vSphere 10.3 及更早版本，請使用零 RPO 來還原設定。在受保護的環境中還原後，請重新驗證資料存放區保護，並確認保護群組的狀態和關係。
 
 
 ====
 .開始之前
-* 確保所有節點均處於活動狀態。
+* 升級前請確保所有節點均已啟動。
 * 確保ONTAP系統憑證和已加入的 vCenter 憑證有效期限至少為 5 天。如果憑證提前過期，升級將失敗。
 * 確保所有節點上都有第五個磁碟，容量為 100 GB。
 * 驗證節點配置是否符合下表中的規格。
 
 
 |===
-| 部署類型 | 每個節點的 CPU （核心） | 每個節點的記憶體（ GB ） | 每個節點的磁碟空間（ GB ） | CPU 總計（核心） | 記憶體（ GB ） | 磁碟空間總計（ GB ） 
+| 部署類型 | 每個節點的 CPU 核心數 | 每個節點的記憶體（GB） | 每個節點的磁碟空間（GB） | CPU 核心總數 | 總記憶體容量（GB） | 總磁碟空間（GB） 
 
 
 | 非 HA 小型 | 9 | 18 | 350 | 9 | 18 | 350 
@@ -45,8 +45,7 @@ summary: HA 和非 HA 部署均支援升級。
 
 | HA 大型 | 17 | 34 | 350 | 51 | 102. | 1050 
 |===
-* 確保已啟用 CPU 和 RAM 的熱插拔。
-* 啟用低 RPO 備份，並確保 vCenter Client 介面中可見一個備份。升級前請下載備份資料夾。
+* 啟用低 RPO 備份，並確保在 vSphere Client 介面中可見一個備份。升級前請下載備份資料夾。
 * 建議採用低 RPO 備份。但是，在非高可用性部署中，您可以在升級之前對ONTAP工具虛擬機器進行靜默快照。
 +
 請參閱 link:../manage/backup-settings.html["編輯備份設定"] 和 link:../manage/recover-backup.html["恢復ONTAP工具設定"] 有關備份和復原的更多資訊。
@@ -64,8 +63,9 @@ summary: HA 和非 HA 部署均支援升級。
 
 . 在編輯設定視窗中的*CD/DVD 磁碟機*欄位下選擇*內容庫 ISO 檔案*。
 . 選擇 ISO 文件，選取 *CD/DVD 磁碟機* 欄位的 *已連接* 框，然後按一下 *確定*。
-. 從 vCenter Server 開啟 ONTAP 工具的主控台。
-. 以維護使用者身分登入。
+. 登入 vCenter 伺服器。
+. 找到主要 ONTAP tools VM 並啟動 Web 主控台。
+. 請使用 `maint`憑證登入。
 . 輸入*2*選擇*系統配置*選單。
 . 輸入 *6* 以選擇 *升級* 選項。
 . 當系統提示時，請提供 vCenter 認證。這是託管 ONTAP tools 的 vCenter 實例。
@@ -80,28 +80,30 @@ summary: HA 和非 HA 部署均支援升級。
 
 . 升級時、系統會自動執行下列動作：
 +
-.. 網關憑證續期，有效期限為1年。當您移除先前的 SRA 轉接器並上傳新的 10.5 轉接器時，SRA 憑證有效期將從 10 年變為 1 年。
+.. 閘道憑證已續期，有效期限為 1 年。當您移除先前的 SRA 介面卡並上傳新的 10.6 介面卡時，SRA 憑證的有效期將從 10 年變為 1 年。
 .. 遠端插件已升級
 .. ONTAP和 vCenter Server 憑證經過驗證並新增至ONTAP工具中
 .. 已啟用備份
+.. 如果主機叢集保護設定存在於 10.5 或更早版本中，ONTAP tools 會在升級期間建立一個分隔的 *Cluster protection configuration* 導覽項目。
 
 
 
 
 .下一步
-升級到適用ONTAP tools for VMware vSphere後：
+升級至 ONTAP tools for VMware vSphere 10.6 之後：
 
 * 監控系統警報並計劃在一年內網關證書到期之前更新它。
-* 刪除ONTAP工具 10.4 或 10.3 SRA 適配器並上傳 10.5 SRA 適配器 tar 檔案。
+* 移除 ONTAP tools 10.4 或 10.5 SRA 介面卡，並上傳 10.6 SRA 介面卡 tar 檔案。
 * 上傳 SRA 適配器 tar 檔案後，執行安裝指令。然後，重新掃描 SRA 適配器以更新 VMware Site Recovery Storage Replication Adapters 頁面。
+* 開啟 *Cluster protection configuration*，並驗證現有主機叢集保護設定是否存在且映射正確。
 
 
 升級後您可以：
 
-* 從管理員使用者介面停用服務
+* 透過 ONTAP tools Manager 停用服務
 * 從非 HA 設定移至 HA 設定
 * 將非 HA 小型配置擴展為非 HA 中型配置，或擴展為 HA 中型或大型配置。
 
 
 .相關資訊
-link:../migrate/migrate-to-latest-ontaptools.html["從ONTAP tools for VMware vSphere遷移到 10.5"]
+link:../migrate/migrate-to-latest-ontaptools.html["將 ONTAP tools for VMware vSphere 9.x 移轉至 10.6"]

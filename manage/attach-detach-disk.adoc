@@ -1,8 +1,8 @@
 ---
 permalink: manage/attach-detach-disk.html 
 sidebar: sidebar 
-keywords:  
-summary: 將資料磁碟附加至虛擬機器，以擴充儲存容量。 
+keywords: attach data disk VM, detach VM disk, ONTAP tools virtual machine disk, VMware VM storage expansion 
+summary: 連接或分離虛擬機器資料磁碟以管理儲存容量。 
 ---
 = 在 ONTAP 工具中將資料磁碟附加至 VM 或從 VM 分離資料磁碟
 :allow-uri-read: 

@@ -1,8 +1,8 @@
 ---
 permalink: manage/recover-backup.html 
 sidebar: sidebar 
-keywords:  
-summary: 從 VMware vSphere 10.3 的 ONTAP 工具開始，此應用裝置使用動態儲存資源配置程式，您無法達成零 RPO 。不過，您可以達成接近零 RPO 的目標。 
+keywords: recover ONTAP tools setup, appliance recovery workflow, near zero RPO recovery, restore ONTAP tools configuration 
+summary: 從備份還原 ONTAP tools，並依版本了解零 RPO 和接近零 RPO 的行為。 
 ---
 = 恢復ONTAP工具設定
 :allow-uri-read: 
@@ -26,8 +26,9 @@ ONTAP tools for VMware vSphere的資料儲存庫用於儲存備份檔案。以ON
 
 
 . 關閉現有虛擬機器。然後，使用與原始部署相同的 OVA 檔案部署新的虛擬機器。
-. 從 vCenter Server 開啟維護主控台。
-. 以維護使用者身分登入。
+. 登入 vCenter 伺服器。
+. 找到新部署的 ONTAP tools 虛擬機器並啟動 Web 控制台。
+. 請使用 `maint`憑證登入。
 . 輸入 `4`以選擇 * 支援與診斷 * 。
 . 輸入 `2`以選擇 * 啟用遠端診斷存取 * 選項，並建立新的診斷存取密碼。
 . 從下載的目錄中選擇一個備份檔。請參閱_OTV_backup_info.txt_檔案來識別最新的備份。
@@ -48,7 +49,7 @@ NOTE: 不要改變指令中提到的目標路徑和檔案名稱（/home/diag/sys
 sudo perl /home/maint/scripts/post-deploy-upgrade.pl -recovery
 ----
 +
-記錄會記錄在 /var/log/post-deploy-upgrade 記錄檔中。
+日誌記錄在 _/var/log/otvng/post-deploy-upgrade.log_ 檔案中。
 
 
 

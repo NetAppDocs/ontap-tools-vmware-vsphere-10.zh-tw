@@ -1,8 +1,8 @@
 ---
 permalink: protect/configure-protection-groups.html 
 sidebar: sidebar 
-keywords:  
-summary: 您應該建立保護群組、以保護受保護站台上的一組虛擬機器。 
+keywords: protection groups, VMware Live Site Recovery, SnapMirror, datastore protection, ONTAP tools 
+summary: 為受保護網站虛擬機器建立保護群組，並在將資料存放區新增至受保護磁碟區後更新儲存設備探索。 
 ---
 = 在 ONTAP tools 中設定受保護站台和復原站台
 :allow-uri-read: 
@@ -23,10 +23,10 @@ summary: 您應該建立保護群組、以保護受保護站台上的一組虛�
 您應該配對使用 vSphere Client 建立的受保護網站和還原網站、以啟用 Storage Replication Adapter （ SRA ）來探索儲存系統。
 
 
-NOTE: Storage Replication Adapter（SRA）支援扇出，其中一種同步關係類型為 Automated Failover Duplex，另一種為一致性群組上的非同步 SnapMirror 關係。但是，不支援在一致性群組上建立兩種非同步 SnapMirror 關係的扇出，也不支援在磁碟區上建立扇出 SnapMirror 關係。Vault 類型的 SnapMirror 關係不包含在這些扇出限制中。SRA 對一致性群組的支援僅限於 Unified 和 ASA r2 儲存系統上的 SAN 協定（iSCSI 和光纖通道）。一致性群組不支援 NFS。如果將 NFS 資料儲存磁碟區置於一致性群組下，則探索裝置操作將會失敗。
+NOTE: Storage Replication Adapter （SRA） 支援連出，其中一個同步關係類型為 Automated Failover Duplex，以及一致性群組上的非同步 SnapMirror 關係。但是，不支援一致性群組上兩個非同步 SnapMirror 關係的連出，也不支援磁碟區上的連出 SnapMirror 關係。Vault 類型的 SnapMirror 關係不包含在這些連出限制中。SRA 中的一致性群組支援僅限於 ONTAP 儲存設備和 ASA r2 儲存系統上的 SAN 協定（iSCSI 和 Fibre Channel）。NFS 不支援一致性群組。如果將 NFS 資料存放區磁碟區置於一致性群組下，則探索裝置作業將會失敗。
 
 .開始之前
-* 您應該在受保護的網站和還原網站上安裝 VMware Live Site Recovery 。
+* 您應該在受保護網站和恢復網站上安裝 VMware Live Site Recovery （VLSR）。
 * 您應該在受保護的網站和還原網站上安裝 SRA 。
 
 
@@ -54,7 +54,7 @@ NOTE: Storage Replication Adapter（SRA）支援扇出，其中一種同步關�
 .開始之前
 您應確保來源站台和目標站台均設定為下列項目：
 
-* 安裝的 VMware Live Site Recovery 版本相同
+* 安裝的 VLSR 版本相同
 * 虛擬機器
 * 配對的受保護與恢復站台
 * 來源與目的地資料存放區應掛載於個別站台

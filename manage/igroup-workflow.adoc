@@ -1,8 +1,8 @@
 ---
 permalink: manage/igroup-workflow.html 
 sidebar: sidebar 
-keywords:  
-summary:  
+keywords: ONTAP tools igroup workflow, export policy management, initiator group mapping, VMware datastore access control 
+summary: 了解 ONTAP tools 如何建立和管理 igroup 及匯出原則，以供資料存放區存取。 
 ---
 = ONTAP tools 如何管理 igroup 和匯出原則
 :allow-uri-read: 
@@ -13,7 +13,7 @@ summary:
 [role="lead"]
 啟動器群組 (igroup) 是 FC 協定主機全球連接埠名稱 (WWPN) 或 iSCSI 主機限定節點名稱的資料表。您可以定義igroup並將其對應至LUN、以控制哪些啟動器可以存取LUN。
 
-在ONTAP tools for VMware vSphere中，igroup 是在扁平結構中建立和管理的，其中 vCenter 中的每個資料儲存都與單一 igroup 相關聯。此模型限制了跨多個資料儲存的 igroup 的靈活性和重複使用性。ONTAP tools for VMware vSphere引入了巢狀 igroup，其中 vCenter 中的每個資料儲存都與一個父 igroup 相關聯，而每個主機都連結到該父 igroup 下的子 igroup。您可以使用使用者定義的名稱定義自訂父 igroup，以便在資料儲存區之間重複使用，從而使 igroup 管理更加容易。了解 igroup 工作流程，以便在ONTAP tools for VMware vSphere中管理 LUN 和資料儲存庫。不同的工作流程會產生不同的 igroup 配置，如下範例所示：
+在 ONTAP tools for VMware vSphere 9.x 中，igroup 的建立和管理採用扁平結構，vCenter 中的每個資料儲存區都關聯到單一 igroup。這種模型限制了 igroup 在多個資料儲存區之間的靈活度和重複使用性。ONTAP tools for VMware vSphere 10.4 引入了巢狀 igroup，其中 vCenter 中的每個資料儲存區都關聯到一個父 igroup，而每個主機則連結到該父 igroup 下的子 igroup。您可以定義具有使用者自訂名稱的自訂父 igroup，以便在多個資料儲存區之間重複使用，從而簡化 igroup 管理。了解 ONTAP tools for VMware vSphere 中的 igroup 工作流程，以便管理 LUN 和資料儲存區。不同的工作流程會產生不同的 igroup 組態，如下列範例所示：
 
 
 NOTE: 所提及的名稱僅用於說明目的，並不代表真實的 igroup 名稱。 ONTAP工具管理的 igroup 使用前綴「otv_」。自訂 igroup 可以賦予任意名稱。

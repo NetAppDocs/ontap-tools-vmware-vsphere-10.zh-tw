@@ -1,0 +1,57 @@
+---
+permalink: manage/unprotect-ds.html 
+sidebar: sidebar 
+keywords: unprotect VMFS datastore, remove datastore protection group, SnapMirror protection removal, ONTAP tools DR cleanup 
+summary: 取消對 VMFS 資料儲存的保護，並可選擇移除關聯的目標端儲存設備元素。 
+---
+= 取消對 VMFS 資料儲存設備的保護
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+使用此工作可以取消對 VMFS 資料儲存的保護，並可選擇移除次要站台上關聯的目標端儲存設備元素。
+
+.關於這項工作
+取消對 VMFS 資料儲存設備的保護時，請注意以下行為：
+
+* 取消對保護群組中最後一個資料存放區的保護會刪除該保護群組及其保護設定名稱。
+* 對於最後一個資料存放區，ONTAP tools 會顯示保護設定名稱。
+
+
+.開始之前
+* 請確保您擁有 vSphere 的管理員權限。
+* 請確保您的 ONTAP tools 使用者帳戶擁有管理保護設定的權限。
+* 審查取消保護保護群組中最後一個資料存放區的影響。
+* 在 ONTAP 9 叢集上，非最後一個資料儲存設備取消保護僅支援 AutomatedFailOverDuplex 關係。
+
+
+.步驟
+. 登入 vSphere Client。
+. 選擇主機叢集，然後選擇 *Datastores*。
+. 右鍵點選要取消保護的符合條件的 VMFS 資料存放區，然後選擇 *NetApp ONTAP tools* > *Unprotect datastore*。
++
+
+NOTE: 一次只能取消保護一個資料存放區。不支援多選取消保護。
+
+. 在確認對話方塊中，審查訊息 *This action removes datastore protection.Do you want to continue?*。
+. 可選：選擇 *Delete associated storage elements (LUNs) and igroups from the secondary storage* 以移除目標網站上的複製 LUN 和一致性群組。
+. 選擇 *Unprotect datastore*。
++
+
+NOTE: 對於非最後的資料存放區，其行為因儲存設備類型而異：
+
++
+** 對於 ASA r2，取消保護非最後一個資料存放區會顯示相同的確認訊息，並允許您從對話方塊中刪除次要網站資源。
+** 對於具有非同步 SnapMirror 關係的 ONTAP 儲存設備，不支援取消保護非最後一個資料存放區。
+** 對於具有 AutomatedFailOverDuplex （AFD） 關係的 ONTAP 儲存設備，取消保護非最後一個資料存放區會移除 AFD 關係並重新建立，因為不支援縮小一致性群組。
++
+取消保護操作會啟動工作，您可以在 ONTAP tools Manager 中監控工作。
+
+
+
+
+
+.結果
+資料儲存設備已從保護中移除。如果它是保護群組中的最後一個資料儲存設備，ONTAP tools 將刪除該保護群組及其保護設定。如果您選擇了刪除選項，目標端的複寫 LUN 和一致性群組也會移除。對於 ONTAP 儲存設備上符合條件的非最後一個資料儲存設備（AutomatedFailOverDuplex 僅限此情況），ONTAP tools 會在操作過程中移除並重新建立 AFD 關係。

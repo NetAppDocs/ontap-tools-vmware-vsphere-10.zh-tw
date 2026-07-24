@@ -1,8 +1,8 @@
 ---
 permalink: protect/configure-on-srm-appliance.html 
 sidebar: sidebar 
-keywords:  
-summary: '部署 VMware Live Site Recovery 設備後，設定儲存複製適配器 (SRA) 以啟用災難復原管理。' 
+keywords: SRA configuration, VMware Live Site Recovery, ONTAP tools, disaster recovery, Site Recovery Manager appliance 
+summary: 在 VMware Live Site Recovery 應用裝置上設定 SRA，以啟用與 ONTAP tools 配合使用的災難恢復工作流程。 
 ---
 = 使用 ONTAP tools 在 VMware Live Site Recovery 應用裝置上設定 SRA
 :allow-uri-read: 

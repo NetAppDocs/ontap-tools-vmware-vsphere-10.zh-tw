@@ -1,0 +1,33 @@
+---
+permalink: manage/nconnect-change-default.html 
+sidebar: sidebar 
+keywords: change nconnect default, ESXi NFS nconnect, ONTAP tools host nconnect settings, vCenter NFS performance tuning 
+summary: 變更 vCenter Server 中 ESXi 主機的預設 nconnect 值。 
+---
+= 在 ONTAP tools 中變更 ESXi 主機的預設 nconnect 值
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+使用此工作變更所選 vCenter 伺服器中 ESXi 主機的預設連線數 (nconnect)。
+
+.關於這項工作
+* 本頁設定的 nconnect 值是主機等級的預設值。
+* 此設定適用於所選 vCenter Server 中所有支援 NFSv3 和 NFSv4 協定的 ESXi 主機。
+* 如果建立的 NFS 資料儲存設備的 nconnect 值高於目前主機層級的設定，ONTAP tools 會將主機層級的設定更新為與之相符。
+
+
+
+NOTE: 此變更將套用至所選 vCenter 伺服器中的所有 ESXi 主機。.步驟
+
+. 登入 vSphere Client。
+. 在外掛程式區段下，選取 * 快速鍵 * > * NetApp ONTAP tools* 。
+. 選擇 *Settings* > *Default nconnect value*。
+. ${post_edited_translations.segment}
+. 輸入 ESXi 主機的新預設 nconnect 值，然後選擇 *Save*。
+
+
+.結果
+更新後的 nconnect 值將套用至所選 vCenter Server 中所有支援 NFSv3 和 NFSv4 協定的 ESXi 主機。

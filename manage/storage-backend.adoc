@@ -1,8 +1,8 @@
 ---
 permalink: manage/storage-backend.html 
 sidebar: sidebar 
-keywords:  
-summary: 儲存設備後端是 ESXi 主機用於資料儲存的系統。 
+keywords: manage storage backends, ONTAP backend systems, storage backend operations, VMware datastore backend configuration 
+summary: 管理 ESXi 主機用於資料儲存設備的儲存設備後端。 
 ---
 = 在 ONTAP tools 中管理儲存後端
 :allow-uri-read: 
@@ -26,7 +26,7 @@ summary: 儲存設備後端是 ESXi 主機用於資料儲存的系統。
 . 登入 vSphere 用戶端。
 . 在捷徑頁面中，選取外掛程式區段下方的 * NetApp ONTAP tools* 。
 . 在ONTAP工具的左側窗格中，前往 *儲存後端* 並選擇一個儲存後端。
-. 選取垂直省略符號功能表，然後選取 * 探索儲存設備 *
+. 選擇垂直省略號選單，然後選擇 *Discover storage*。
 
 
 您可以在「最近的工作」面板中追蹤進度。
@@ -45,7 +45,7 @@ summary: 儲存設備後端是 ESXi 主機用於資料儲存的系統。
 . 登入 vSphere 用戶端。
 . 在捷徑頁面中，選取外掛程式區段下方的 * NetApp ONTAP tools* 。
 . 在ONTAP工具的左側窗格中，前往 *儲存後端* 並選擇一個儲存後端。
-. 選取垂直省略符號功能表，然後選取 * 修改 * 以修改認證或連接埠名稱。您可以在「最近的工作」面板中追蹤進度。
+. 選擇垂直省略號選單，然後選擇 *Modify* 以修改憑證或連接埠名稱。您可以在「最近工作」面板中追蹤進度。
 
 
 使用ONTAP工具管理器修改全域ONTAP集群，如下所示。
@@ -54,7 +54,7 @@ summary: 儲存設備後端是 ESXi 主機用於資料儲存的系統。
 . 使用您在部署期間提供的 VMware vSphere 管理員認證 ONTAP 工具登入。
 . 從側邊列選取儲存設備後端。
 . 選取您要修改的儲存後端。
-. 選取垂直省略符號功能表，然後選取 * 修改 * 。
+. 選擇垂直省略號選單，然後選擇 *Modify*。
 . 您可以修改認證或連接埠。輸入 * 使用者名稱 * 和 * 密碼 * 以修改儲存後端。
 
 
@@ -68,7 +68,7 @@ summary: 儲存設備後端是 ESXi 主機用於資料儲存的系統。
 . 登入 vSphere 用戶端。
 . 在捷徑頁面中，選取外掛程式區段下方的 * NetApp ONTAP tools* 。
 . 在ONTAP工具的左側窗格中，前往 *儲存後端* 並選擇一個儲存後端。
-. 選擇垂直省略號選單並選擇*刪除*。確保儲存後端不包含任何資料儲存。您可以在最近任務面板中追蹤進度。
+. 選擇垂直省略號選單，然後選擇「移除」。確保儲存設備後端不包含任何資料儲存。您可以在「最近工作」面板中追蹤進度。
 
 
 您可以使用 ONTAP tools Manager 刪除全域 ONTAP 叢集。
@@ -77,7 +77,7 @@ summary: 儲存設備後端是 ESXi 主機用於資料儲存的系統。
 . 使用您在部署期間提供的 VMware vSphere 管理員認證 ONTAP 工具登入。
 . 從側欄中選擇 * 儲存後端 * 。
 . 選取您要移除的儲存後端
-. 選取垂直省略符號功能表，然後選取 * 移除 * 。
+. 選擇垂直省略號選單，然後選擇「移除」。
 
 
 

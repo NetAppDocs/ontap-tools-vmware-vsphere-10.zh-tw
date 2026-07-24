@@ -1,8 +1,8 @@
 ---
 permalink: deploy/pre-deploy-checks.html 
 sidebar: sidebar 
-keywords: ONTAP tools,Storage Replication Adapter 
-summary: 在部署ONTAP VMware vSphere的支援功能之前、您應該先熟悉部署套件的空間需求、以及一些基本的主機系統需求。 
+keywords: pre-deployment checklist, deployment worksheet, certificates, vCenter Server 
+summary: 完成 ONTAP tools 的部署前檢查清單，包括 vSphere 相容性、規模、憑證和網路需求。 
 ---
 = ONTAP tools 的部署前要求
 :allow-uri-read: 
@@ -58,14 +58,15 @@ summary: 在部署ONTAP VMware vSphere的支援功能之前、您應該先熟悉
 
 使用下列工作表收集適用於 VMware vSphere 的 ONTAP 工具初始部署所需的資訊：
 
+[cols="3,1"]
 |===
 | 需求 | 您的價值 
 
 
-| ONTAP 工具應用程式的 IP 位址。這是用於存取 ONTAP 工具管理器 Web 介面（負載平衡器）的 IP 位址，位於 `\https://<ip>:8443/virtualization/ui/` |  
+| ONTAP tools IP 位址（以前稱為負載平衡器）。此外部 IP 位址用於存取 ONTAP tools Manager 介面（位於 `\https://<ip>:8443/virtualization/ui/`）、發送 API 呼叫，以及從 vCenter 介面存取 ONTAP tools 外掛。 |  
 
 
-| ONTAP tools 用於內部通訊的虛擬 IP 位址。此 IP 位址用於包含多個 ONTAP tools 執行個體的環境中的內部通訊。此 IP 位址不應與 ONTAP tools 應用程式的 IP 位址相同。（Kubernetes Control Plane） |  
+| ONTAP tools 虛擬 IP 位址（以前為節點互連 IP 位址）。此 IP 位址指派給 Kubernetes API 伺服器，並作為單節點和多節點部署中 Kubernetes 控制平面的虛擬 IP 位址。它用於內部叢集通訊和 Kubernetes 管理，且必須與 ONTAP tools IP 位址不同。 |  
 
 
 | ONTAP工具管理節點的 DNS 主機名 |  
@@ -80,7 +81,7 @@ summary: 在部署ONTAP VMware vSphere的支援功能之前、您應該先熟悉
 | DNS 搜尋網域 |  
 
 
-| ONTAP 工具管理節點的 IPv4 位址。它是管理網路上節點管理介面的唯一 IPv4 位址。此位址用於透過 SSH 連接到 ONTAP 工具應用裝置，以進行遠端診斷存取。 |  
+| ONTAP tools 管理節點的 IPv4 位址。在單一節點部署中，此位址會對應到 ONTAP tools VM 的指定主機名稱。在 HA 部署中，您必須為另外兩台 ONTAP tools VM 提供額外的 IPv4 位址。 |  
 
 
 | IPv4 位址的子網路遮罩 |  
@@ -107,6 +108,7 @@ NOTE: 為上述所有 IP 位址建立 DNS 記錄。在指派主機名稱之前�
 
 除了單一節點部署需求之外，您還需要下列 HA 部署資訊：
 
+[cols="3,1"]
 |===
 
 

@@ -1,8 +1,8 @@
 ---
 permalink: manage/storage-view-datastore.html 
 sidebar: sidebar 
-keywords: Remove vVol datastore 
-summary: ONTAP tools for VMware vSphere 的 Configure 標籤下的 ONTAP 儲存檢視提供與資料存放區及其磁碟區相關的資料。 
+keywords: ONTAP storage view datastores, datastore volume details, NFS VMFS vVol datastore insights, ONTAP tools storage visibility 
+summary: 在 ONTAP tools for VMware vSphere 的 ONTAP Storage 頁面中檢視資料存放區和 Volume 詳細資訊。 
 ---
 = ONTAP tools 中資料存放區的 ONTAP 儲存檢視
 :allow-uri-read: 
@@ -11,10 +11,10 @@ summary: ONTAP tools for VMware vSphere 的 Configure 標籤下的 ONTAP 儲存�
 
 
 [role="lead"]
-適用於 VMware vSphere 的 ONTAP 工具會在「組態」索引標籤中顯示資料存放區及其磁碟區的 ONTAP 儲存側視圖。
+使用 *Configure* 索引標籤中的 ONTAP Storage 頁面檢視資料存放區和 Volume 資訊。
 
 .步驟
-. 從 vSphere 用戶端轉到資料儲存。
+. 在 vSphere Client 清單中，選取資料存放區。
 . 選擇右窗格中的 * 組態 * 標籤。
 . 選擇 * NetApp ONTAP工具* > * ONTAP儲存*。視圖會根據資料儲存類型而變更。請參考下表：
 
@@ -25,11 +25,13 @@ summary: ONTAP tools for VMware vSphere 的 Configure 標籤下的 ONTAP 儲存�
 | * 資料存放區類型 * | * 可用資訊 * 
 
 
-| NFS 資料存放區 | 「 * 儲存詳細資料 * 」頁面包含儲存後端，集合和磁碟區資訊。「 *NFS 詳細資料」頁面包含與 NFS 資料存放區相關的資料。 
+| NFS 資料存放區 | 「儲存詳情」頁面包含儲存設備後端、彙總和 Volume 資訊。「NFS 詳情」頁面包含與 NFS 資料儲存相關的資料。附註：如果在 ONTAP tools 外部變更了 nconnect 值，則 ONTAP tools 中顯示的值可能不會反映該外部變更。 
 
 
-| VMFS 資料存放區 | 「 * 儲存詳細資料 * 」頁面包含儲存後端，集合體，磁碟區和儲存可用性區域（ SAZ ）詳細資料。「 * 儲存單元詳細資料 * 」頁面包含儲存單元的詳細資料。 
+| VMFS 資料存放區 | 「Storage details」頁面包含儲存設備後端、彙總、Volume 和儲存可用度區域 （SAZ） 的詳細資訊。「Storage unit details」頁面包含儲存設備單元的詳細資訊。 
 
 
 | VVols 資料存放區 | 列出所有捲。您可以從ONTAP儲存窗格擴充或刪除儲存。ONTAP工具不支援基於ASA r2 系統的vVols資料儲存的此視圖。 
 |===
+.結果
+您可以根據所選資料儲存類型審查 ONTAP 端資料儲存詳細資料。

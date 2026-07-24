@@ -1,8 +1,8 @@
 ---
 permalink: deploy/ha-workflow.html 
 sidebar: sidebar 
-keywords: ONTAP tools,Storage Replication Adapter 
-summary: VMware vSphere ONTAP 工具入門包括幾個步驟。 
+keywords: high availability deployment, HA workflow, VASA Provider, VMware Live Site Recovery 
+summary: 將 ONTAP tools 部署擴充至高可用性 （HA） 組態，以提高彈性並支援每個服務更多的 Container。 
 ---
 = ONTAP 工具的高可用性部署工作流程
 :allow-uri-read: 

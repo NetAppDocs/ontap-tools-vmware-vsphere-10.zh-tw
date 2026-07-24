@@ -1,0 +1,158 @@
+---
+permalink: manage/audit-logs.html 
+sidebar: sidebar 
+keywords: ONTAP tools audit logs, security logging, compliance audit trail, audit log retention 
+summary: 查看 ONTAP tools 如何擷取、保留和監控稽核日誌，以確保安全性和法規遵循。 
+---
+= 管理 ONTAP tools 的稽核日誌
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+使用此工作管理 ONTAP tools for VMware vSphere 中的稽核記錄行為和操作回應。稽核日誌提供事件追蹤，顯示誰執行了行動、執行了什麼行動、操作發生的時間、請求來源以及操作是成功還是失敗。
+
+.開始之前
+* 請確保您擁有 ONTAP tools Manager 的系統管理員存取權限。
+* 如果您打算變更本機保留設定，請確保您擁有維護主控台存取權限。
+* 審查貴組織在保留、轉發和事件回應方面的安全性與法規遵循要求。
+
+
+.關於這項工作
+ONTAP tools 可擷取全面的稽核事件，以實現營運和法規遵循可見度。
+
+稽核範圍包括：
+
+* 使用者和 API 操作，例如資料儲存的建立/刪除、vCenter 註冊和儲存設備後端操作
+* 內部服務呼叫，包括 VASA Provider 服務互動
+* 作業，包括探索、保護和彙總作業
+* 維護主控台活動
+
+
+稽核項目可能包括：
+
+* 使用者名稱（如有）
+* 執行的操作
+* 時間戳記
+* 請求來源（UI、API 或跨服務）
+* 請求和回應詳情及狀態
+
+
+稽核歸檔每日產生，並可透過 ONTAP tools Manager 產生的支援套裝組合取得。當日的歸檔將於隔日提供。
+
+稽核記錄存在以下操作限制：
+
+* 不支援停用稽核日誌記錄。
+* 稽核日誌檔大小不可由使用者設定。
+
+
+內建敏感資料處理功能：
+
+* 敏感資料（例如密碼、權杖和私密金鑰內容）均已遮蔽處理。
+* 過長的請求與回應有效負載可能會被截斷。
+
+
+.步驟
+. 從 ONTAP tools Manager 產生支援套裝組合：
++
+.. 從網路瀏覽器啟動 ONTAP 工具管理員： `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+.. 使用 ONTAP tools for VMware vSphere 系統管理員憑證登入。
+.. 從側欄中選擇 * 日誌套件 * 。
+.. 選擇 *Generate* 。
+.. 輸入日誌套裝組合的標籤，然後選擇 *Generate*。
++
+稽核日誌可在下載的支援套裝組合中稽核目錄下的每日歸檔中找到。
+
+
+
+. 選用：從維護主控台設定本機保留：
++
+.. 登入 vCenter 伺服器。
+.. 找到 ONTAP tools 虛擬機器並開啟 Web 主控台。
+.. 請使用 `maint`憑證登入。
+.. 輸入 `1`以選擇 *Application Configuration*。
+.. 輸入 `4`以選擇 *Change Audit Log Retention*。
+.. 請輸入保留天數並確認變更。
++
+預設保留為 30 天，支援的範圍為 1 至 180 天。
+
++
+
+WARNING: 更改稽核日誌保留會重新啟動服務，屬於中斷性操作。
+
+
+
+. 在 ONTAP tools Manager 中監控稽核日誌完整性狀態：
++
+.. 在 ONTAP tools Manager 儀表板上，查看 *Alerts* 卡片以了解是否有活動警報。
+.. 選擇警報計數超連結，或開啟 *Manage alerts* 以檢視警報詳情和狀態。
++
+ONTAP tools 每 3 分鐘檢查稽核日誌歸檔的完整性。ONTAP tools 會維護一份預期歸檔的記錄。如果歸檔缺失或遭到竄改，ONTAP tools 會在 ONTAP tools Manager 中發出警報。
+
+
+
+. 可選：從維護主控台變更稽核完整性檢查間隔：
++
+.. 登入 vCenter 伺服器。
+.. 找到 ONTAP tools 虛擬機器並開啟 Web 主控台。
+.. 請使用 `maint`憑證登入。
+.. 輸入 `4`以選擇*支援與診斷*。
+.. 輸入 `2`以選擇 *Enable diag access*。
+.. 以該 `diag`使用者登入。
+.. 執行以下命令以更改間隔時間（以秒為單位）：
++
+`bash /home/maint/scripts/change_audit_integrity_check_interval.sh <value_in_seconds>`
+
++
+最小支援的間隔時間為 60 秒。
+
++
+
+WARNING: 更改稽核完整性檢查間隔會重新啟動服務，屬於中斷性操作。
+
+
+
+. 可選：將稽核日誌轉送至外部 syslog 目的地。當您需要集中監控、長期保留或與安全資訊和事件管理 （SIEM） 系統關聯時，請使用 syslog 轉送。請遵循您組織關於 TLS、憑證、連接埠和保留的標準。
+. 如果發生完整性警報，請執行事件回應措施。
++
+.. 盡快收集支援套裝組合。
+.. 根據貴組織的事件回應流程保存匯出的套裝組合和封存檔案。
+.. 請在 ONTAP tools Manager 中審查警示詳細資料，如有需要請聯絡 NetApp 支援。
+
+
+
+
+
+
+[[example-audit-record]]
+== 稽核記錄範例
+
+稽核記錄包含一組一致的欄位，以支援可追溯性。典型欄位包括：
+
+* 時間戳記 （UTC）
+* 使用者名稱（已驗證使用者身分）
+* 操作（HTTP 方法和請求 URI）
+* 請求來源（UI、API 或跨服務）
+* 狀態（成功或故障以及狀態碼）
+* 用戶代理程式（用戶端身分，如有）
+* 請求識別碼（如有）（例如，關聯 ID）
+* 作業識別碼（如有）（適用於非同步工作流程）
+* 租戶或 vCenter 識別碼（如有）
+
+
+以下範例展示了所擷取的資訊類型。確切的欄位集可能因工作流程而異。
+
+[source, json]
+----
+{
+  "timestamp": "2026-01-29T08:21:51Z",
+  "username": "administrator",
+  "operation": "POST /virtualization/api/v1/vcenters/{vcguid}/traditional/datastores",
+  "status": "Success 202",
+  "user_agent": "Mozilla/5.0 ...",
+  "correlation_id": "9ee9a89e-900d-4538-bcab-79830d4ab7cc",
+  "job_id": "3416",
+  "type": "audit"
+}
+----

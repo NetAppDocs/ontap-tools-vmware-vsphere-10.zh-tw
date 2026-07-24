@@ -1,8 +1,8 @@
 ---
 permalink: manage/nested-igroups.html 
 sidebar: sidebar 
-keywords:  
-summary: 了解 ONTAP tools for VMware vSphere 如何表示和管理 igroup，包括巢狀 igroup 行為、重複使用和 10.5 P2 清理變更。 
+keywords: ONTAP tools igroups, nested igroup management, initiator group handling, VMware host access mapping 
+summary: 了解 ONTAP tools 如何表示和管理巢狀 igroup，以實現高效的主機和資料存放區映射。 
 ---
 = ONTAP tools 如何管理 igroups
 :allow-uri-read: 

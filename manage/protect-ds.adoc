@@ -1,0 +1,55 @@
+---
+permalink: manage/protect-ds.html 
+sidebar: sidebar 
+keywords: protect VMFS datastore, SnapMirror datastore protection, create protection group, ONTAP tools disaster recovery 
+summary: 將符合條件的 VMFS 資料存放區新增至具有 SnapMirror 複寫的保護群組，以保護該資料存放區。 
+---
+= 保護 VMFS 資料存放區
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+使用此工作將符合條件的 VMFS 資料儲存新增至保護群組，從而保護該資料儲存。
+
+.開始之前
+* 確保資料存放區使用 iSCSI 或 FC 協定。
+* 確認您擁有 vSphere 的系統管理員權限。
+* 確認資料存放區尚未屬於任何保護群組。
+
+
+.步驟
+. 登入 vSphere Client。
+. 選擇主機叢集，然後選擇 *Datastores*。
+. 右鍵單擊要保護的符合條件的 VMFS 資料存放區，然後選擇 *NetApp ONTAP tools* > *保護*。
++
+系統會檢查資料儲存設備是否符合保護條件。如果資料儲存設備符合條件，則保護工作流程繼續進行。如果資料儲存設備不符合條件，則會顯示一則訊息說明原因，且您無法繼續操作。
+
+. 選擇將資料儲存區新增至現有保護群組還是建立新的保護群組。
++
+.. 若要使用現有的保護群組，請選取該保護群組並繼續。
+.. 建立新的保護群組：
++
+... 請為保護群組提供名稱。
+... 選取 * 新增關係 * 。
+... 在 * 新增 SnapMirror 關係 * 視窗中、選取 * 目標儲存虛擬機器 * 和 * 原則 * 類型。
++
+原則類型可以是*非同步*或*AutomatedFailOverDuplex*。
+
++
+如果您選取 *AutomatedFailOverDuplex*，請將目標儲存設備 VM 作為儲存設備後端新增至部署 ONTAP tools for VMware vSphere 的同一個 vCenter Server。
+
++
+對於 *AutomatedFailOverDuplex*，請選擇統一或非統一主機組態。選取 *統一主機組態* 切換後，主機啟動器群組組態將隱式複寫至目標站台。如需詳細資訊，請參閱 link:../concepts/ontap-tools-concepts-terms.html["關鍵概念與詞彙"]。
+
+... 如果選擇非統一主機組態，請為叢集中的每個主機選擇主機存取（來源/目標）。
+
+
+
+
+. 選擇「確定」以啟動保護工作流程。
+
+
+.結果
+資料存放區會出現在所選的保護群組中。您可以透過 ONTAP tools 外掛檢視和管理保護狀態。

@@ -1,8 +1,8 @@
 ---
 permalink: configure/dashboard-overview.html 
 sidebar: sidebar 
-keywords: user roles 
-summary: 當您在 vCenter 用戶端的捷徑區域選取 ONTAP tools for VMware vSphere 外掛程式圖示時，使用者介面會導向總覽頁面。此頁面作為儀表板，提供 ONTAP tools for VMware vSphere 外掛程式的摘要。 
+keywords: ONTAP tools dashboard, vCenter plug-in overview, datastore and backend summary, Enhanced Linked Mode dashboard 
+summary: 查看 ONTAP tools 儀表板，以了解外掛狀態、資料存放區和 vCenter Server 資料的摘要。 
 ---
 = 了解 ONTAP tools 儀表板
 :allow-uri-read: 
@@ -16,6 +16,10 @@ summary: 當您在 vCenter 用戶端的捷徑區域選取 ONTAP tools for VMware
 在增強連結模式 (ELM) 中，會出現 vCenter Server 下拉選單。選擇一個 vCenter Server 來檢視其資料。此下拉式選單在插件的所有清單視圖中均可使用。當您在一個頁面上選擇一個 vCenter Server 時，請在外掛程式中切換標籤時，該 vCenter Server 保持不變。image:../media/remote-plugin-dashboard.png["儀表板總覽"]
 
 從概覽頁面，您可以執行*發現*操作。發現操作偵測 vCenter 等級新新增或更新的儲存後端、主機、資料儲存區以及保護狀態或關係。運行按需發現，無需等待計劃的發現。
+
+如果向受保護的主機叢集新增主機，保護設定將變更為*部分保護*。
+
+若要解決此狀態，請開啟「修改叢集組態」，將主機指派給正確的網站（來源或目標），然後選取「修改」。
 
 
 NOTE: 只有在您擁有執行探索所需的權限時，才會啟用 *Discovery* 按鈕。

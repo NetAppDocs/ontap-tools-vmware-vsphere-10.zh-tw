@@ -1,0 +1,83 @@
+---
+permalink: protect/granular-datastore-protection-concept.html 
+sidebar: sidebar 
+keywords: granular datastore protection, VMFS datastore eligibility, protection group criteria, ONTAP tools datastore protection 
+summary: 在保護主機叢集中的資料存放區之前，請先了解精細的資料存放區保護和資料存放區資格標準。 
+---
+= 細粒度資料儲存保護資格標準
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+使用精細的資料存放區保護功能，保護主機叢集中選定的 VMFS 資料存放區，而非保護整個叢集。
+
+精細的資料存放區保護功能適用於 ONTAP tools for VMware vSphere 10.6 及更新版本。此功能提供資料存放區層級的保護規劃，而非叢集範圍的選取。
+
+此功能可讓您：
+
+* 僅保護主機叢集中選定的資料存放區。
+* 將選定的資料存放區分組到保護群組。
+* 在保護群組層級套用 SnapMirror 關係和原則。
+* 在同一叢集中，對不同的資料存放區群組採用不同的保護方法。
+
+
+此功能僅支援使用 iSCSI 或 FC 協定的 VMFS 資料儲存。
+
+您可以對符合條件的資料儲存使用下列原則類型：
+
+* *AutomatedFailOverDuplex （AFD）*
++
+** *統一主機組態*：兩個站台的主機均可存取受保護的資料存放區。
+** *非統一主機組態*：主機存取範圍僅限於特定站台的主機。
+
+
+* *非同步*：目標站台維護非同步複本以供恢復。
+
+
+連出保護可以將主要站台之間的 AFD 與到第三站台的非同步複寫結合。
+
+
+
+[[eligibility-evaluation]]
+== 資格評估
+
+資格評估分兩個階段進行：列入名單和篩選。
+
+只有符合以下所有條件的資料存放區，才會列入精細化資料存放區保護清單：
+
+* 資料儲存類型為 VMFS。
+* 協定為 iSCSI 或 FC。
+* 資料儲存僅掛載在所選主機叢集中的主機上。
+* 當資料儲存位於 vCenter 伺服器中選定的主機叢集中時，ONTAP tools 可以評估資料儲存的保護情況。
+
+
+資料存放區列出後，只有滿足以下所有要求時，才能選取以進行保護：
+
+* 資料儲存尚未受到保護。
+* 資料儲存僅掛載在選定的主機叢集中。
+* 來源 SVM 和目標 SVM 已在 ONTAP tools 中建立對等關係並完成上線。
+* ONTAP 版本為 9.15.1 或更高版本。
+* 僅支援 2x2 和 4x4 來源和目的地叢集節點組合。
+* MetroCluster 組態不符合要求。
+* FlexVol Volume 或支援資料儲存區的 LUN 不屬於現有的一致性群組。
+* 支援資料存放區的 FlexVol Volume 或 LUN 不屬於現有 SnapMirror 關係的一部分。
+
+
+請考慮以下操作限制和行為：
+
+* 在設定資料存放區保護之前，請先設定叢集鄰近性。
+* 單一主機叢集可以使用統一或非統一的 AFD 組態，但不能同時使用兩者。
+* 不支援在保護群組之間移動資料存放區。請先取消保護，然後在目標群組中重新保護。
+* 不支援在同一主機叢集中，使用一個來源和多個不同目標進行跨 SVM 保護。
+* 不支援自訂非同步原則。請使用預設的 ONTAP 非同步原則。
+* 在第三或僅非同步組態中，非同步關係清理是手動的。
+* 從 ONTAP System Manager 觸發容錯移轉。在 ONTAP tools 之外設定 ONTAP Mediator。
+
+
+從 ONTAP tools 10.5 升級時，現有的主機叢集保護組態將移轉至精細的資料存放區保護格式。升級後，請驗證保護群組和資料存放區成員關係。
+
+.相關資訊
+* link:../protect/protect-multiple-ds.html["使用 ONTAP tools 保護叢集中的資料存放區"]
+

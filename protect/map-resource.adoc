@@ -1,8 +1,8 @@
 ---
 permalink: protect/map-resource.html 
 sidebar: sidebar 
-keywords:  
-summary: 您應該對應受保護站台和還原站台上的資源、以便將虛擬機器設定為容錯移轉至一組主機或另一組主機。 
+keywords: resource mappings, ESXi hosts and clusters, VMware Live Site Recovery, failover configuration, ONTAP tools 
+summary: 在容錯移轉期間，將受保護站台與恢復站台之間的資源池、主機或叢集進行對應，以正確放置虛擬機器。 
 ---
 = 在 ONTAP tools 中設定資源映射
 :allow-uri-read: 

@@ -2,8 +2,12 @@
 section: protect
 title: 保護資料存放區和虛擬機器
 entries:
-- title: 使用主機叢集保護來保護
-  url: "/configure/protect-cluster.html"
+- title: 精細資料存放區保護概念與資格判斷
+  url: "/protect/granular-datastore-protection-concept.html"
+- title: 設定叢集以保護資料存放區
+  url: "/protect/config-proximity.html"
+- title: 保護叢集中的資料存放區
+  url: "/protect/protect-multiple-ds.html"
 - title: 使用 SRA 保護來保護
   entries:
   - title: 配置 SRA 以保護資料存儲

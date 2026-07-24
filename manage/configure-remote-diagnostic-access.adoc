@@ -1,8 +1,8 @@
 ---
 permalink: manage/configure-remote-diagnostic-access.html 
 sidebar: sidebar 
-keywords:  
-summary: 您可以為 VMware vSphere 設定 ONTAP 工具、以啟用對診斷使用者的 SSH 存取。 
+keywords: remote diagnostic access, ONTAP tools SSH diag user, enable SSH diagnostics, appliance troubleshooting access 
+summary: 在 ONTAP tools for VMware vSphere 中為 diag 使用者啟用 SSH 存取。 
 ---
 = 配置 ONTAP 工具的遠端診斷存取權限
 :allow-uri-read: 
@@ -32,8 +32,9 @@ summary: 您可以為 VMware vSphere 設定 ONTAP 工具、以啟用對診斷使
 
 
 .步驟
-. 從vCenter Server開啟主控台至VASA Provider。
-. 以維護使用者身分登入。
+. 登入 vCenter 伺服器。
+. 找到 ONTAP tools 虛擬機器並開啟 Web 主控台。
+. 請使用 `maint`憑證登入。
 . 輸入 `4`以選擇 * 支援與診斷 * 。
 . 進入 `2`選擇*啟用遠端診斷存取*。
 . 輸入 `y` 在確認對話方塊中、啟用遠端診斷存取。

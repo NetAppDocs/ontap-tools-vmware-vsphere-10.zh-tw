@@ -1,8 +1,8 @@
 ---
 permalink: manage/migrate-standard-virtual-machines-to-vvols-datastores.html 
 sidebar: sidebar 
-keywords: Migrate NFS and VMFS virtual machines 
-summary: 您可以將虛擬機器從 NFS 和 VMFS 資料存放區移轉至虛擬磁碟區（ vVols\ ）資料存放區、以利用原則型 VM 管理和其他 vVols 功能。vVols資料存放區可讓您滿足不斷增加的工作負載需求。 
+keywords: migrate VMs to vVols, NFS VMFS to vVol migration, virtual machine storage migration, policy-based VM storage 
+summary: 將虛擬機器從 NFS 和 VMFS 資料存放區遷移至 vVols 資料存放區，以進行原則型管理。 
 ---
 = 將虛擬機器遷移到 ONTAP tools 中的 vVols 資料存放區
 :allow-uri-read: 
