@@ -3122,4 +3122,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="3d3b22ece01725fa79df30b77fa3a31a" category="sidebar">將 ONTAP tools for VMware vSphere 9.xx 移轉至 10.6</block>
   <block id="41a5e22b558335c66fd0b39340507737" category="sidebar">精細資料存放區保護概念與資格判斷</block>
   <block id="78b8a2472e1c8fa0502b3ca56bf4d2c2" category="sidebar">設定叢集以保護資料存放區</block>
+  <block id="6449edcecf1e41dc6b7285ef82391ccf" category="section-title">儲存設備後端探索的配置限制</block>
+  <block id="1bf037add08fddef448fa6335970a313" category="paragraph">ONTAP tools 支援最多 200 個 SVM 和約 10,000 個 LUN 的儲存設備後端探索。</block>
 </blocks>
