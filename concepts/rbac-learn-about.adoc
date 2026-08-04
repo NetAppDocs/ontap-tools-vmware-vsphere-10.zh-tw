@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: RBAC framework, role-based access control, authorization, security 
 summary: 了解 RBAC 如何定義具有特定權限層級的角色，以控制存取並簡化 ONTAP tools 中的使用者管理。 
 ---
-= 了解 ONTAP tools RBAC
+= 了解 ONTAP tools 中的 RBAC
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 了解 RBAC 如何定義具有特定權限層級的角色，以控制�
 
 
 [role="lead"]
-角色型存取控制（ RBAC ）是控制組織內資源存取的安全架構。RBAC 可定義具有特定權限層級的角色來執行動作，而非將授權指派給個別使用者，藉此簡化管理。已定義的角色會指派給使用者，有助於降低錯誤風險，並簡化整個組織的存取控制管理。
+角色型存取控制 （RBAC） 是一種用於控制組織內資源存取的安全性架構。ONTAP tools for VMware vSphere 在兩個不同的環境（VMware vCenter Server 和 ONTAP 叢集）中使用 RBAC，以管理哪些使用者可以執行儲存設備作業及存取 vSphere 物件。RBAC 透過定義具有特定權限層級的角色來簡化管理，而非為單一使用者指派授權，從而降低出錯風險並簡化存取控制管理。
 
 RBAC 標準模式包含數種實作技術或複雜度增加的階段。結果是，根據軟體廠商及其客戶的需求，實際的 RBAC 部署可能會有所不同，而且範圍從相對簡單到非常複雜。
 
@@ -23,13 +23,13 @@ RBAC 標準模式包含數種實作技術或複雜度增加的階段。結果是
 [[rbac-components]]
 == RBAC元件
 
-從總體上看，每個 RBAC 實作通常包含幾個元件。這些元件以不同的方式結合在一起，共同定義授權流程。
+每個角色型存取控制 （RBAC） 實作都包含多個元件，這些元件以不同的方式結合在一起，以定義授權程序。
 
 .權限
 _權限_ 是指可以允許或拒絕的操作或能力。它可以是簡單的權限，例如讀取檔案，也可以是特定於某個軟體系統的更抽象的操作。Privileges 也可以用於限制對 REST API 端點和 CLI 命令的存取。每個 RBAC 實作都包含預先定義的權限，並且可能允許管理員建立自訂權限。
 
 .角色
-_role_ 是包含一或多個 Privileges 的容器。角色通常是根據特定工作或工作功能來定義。將角色指派給使用者時，會將角色中包含的所有 Privileges 授予使用者。與 Privileges 一樣，實作也包括預先定義的角色，通常允許建立自訂角色。
+角色是一個包含一個或多個權限的容器。角色通常根據特定的工作或工作職能來定義。當角色指派給使用者時，該使用者將獲得該角色中包含的所有權限。與權限一樣，實作中包含預先定義的角色，並且通常允許建立自訂角色。
 
 .物件
 _object_ 代表在 RBAC 環境中識別的真實或抽象資源。透過 Privileges 定義的動作會在相關的物件上執行或與相關的物件一起執行。視實作而定， Privileges 可授予物件類型或特定物件執行個體。
@@ -48,7 +48,7 @@ _permission_ 是將使用者或群組與角色繫結至物件的定義。權限�
 在使用ONTAP tools for VMware vSphere 10 時，需要考慮兩種不同的 RBAC 環境。ONTAP tools for VMware vSphere需要在 vCenter 和ONTAP中都擁有特定的權限才能執行操作。雖然ONTAP工具可以自動執行儲存管理任務，但它不會在 vCenter 或ONTAP中建立使用者帳戶。服務帳戶必須由 vSphere 管理員根據需要建立。本文檔為管理員提供指導，以便分配必要的角色和權限，從而有效地管理ONTAP工具。
 
 .VMware vCenter Server
-VMware vCenter Server 中的 RBAC 實作可用於限制存取透過 vSphere Client 使用者介面公開的物件。在安裝適用於 VMware vSphere 10 的 ONTAP 工具時， RBAC 環境會延伸至包含代表 ONTAP 工具功能的其他物件。這些物件的存取是透過遠端外掛程式提供。如需詳細資訊，請參閱link:../concepts/rbac-vcenter-environment.html["vCenter Server RBAC 環境"]。
+VMware vCenter Server 中的角色型存取控制實作限制了透過 vSphere Client 使用者介面所公開物件的存取。在為 VMware vSphere 10 安裝 ONTAP tools 時，角色型存取控制環境會擴充以包含代表 ONTAP tools 功能的其他物件。這些物件的存取是透過遠端外掛提供的。請參閱 link:../concepts/rbac-vcenter-environment.html["vCenter Server RBAC 環境"] 以取得更多資訊。
 
 .叢集ONTAP
-適用於 VMware vSphere 10 的 ONTAP 工具會透過 ONTAP REST API 連線至 ONTAP 叢集，以執行與儲存相關的作業。存取儲存資源是透過與驗證期間提供的 ONTAP 使用者相關聯的 ONTAP 角色來控制。如需詳細資訊、請參閱 link:../concepts/rbac-ontap-environment.html["ONTAP RBAC 環境"] 。
+ONTAP tools for VMware vSphere 10 透過 ONTAP REST API 連線至 ONTAP 叢集，以執行儲存相關作業。儲存資源的存取由與驗證期間所提供之 ONTAP 使用者相關聯的 ONTAP 角色控制。如需詳細資訊，請參閱 link:../concepts/rbac-ontap-environment.html["ONTAP RBAC 環境"]。

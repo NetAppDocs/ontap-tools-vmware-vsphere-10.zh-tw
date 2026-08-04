@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: virtual machine migration considerations, ONTAP tools VM cloning guidance, VMware storage vMotion considerations, VM migration best practices 
 summary: 在遷移資料中心中現有的虛擬機器之前，請先審查關鍵注意事項。 
 ---
-= ONTAP 工具的虛擬機器遷移和複製注意事項
+= 了解 ONTAP tools 中的虛擬機器移轉和複製
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-ONTAP tools for VMware vSphere 支援所有主要類型的虛擬機器移轉，包括僅運算（vMotion）、僅儲存（Storage vMotion）以及跨所有資料存放區的運算和儲存組合移轉。本主題概述了確保虛擬機器成功移轉和複製的關鍵考量和最佳實務做法，無論底層資料存放區類型為何。
+ONTAP tools for VMware vSphere 支援所有主要類型的虛擬機器移轉，包括僅運算移轉（vMotion）、僅儲存設備移轉（Storage vMotion）以及跨所有資料存放區的運算與儲存設備組合移轉。了解這些移轉和複製的注意事項及最佳實務，有助於您無論使用何種底層資料存放區類型，都能達成成功的結果。
 
 
 
@@ -25,7 +25,7 @@ ONTAP tools for VMware vSphere 支援所有主要類型的虛擬機器移轉，�
 * 位於不同 ESXi 主機上的不同相容資料存放區
 
 
-如果將虛擬機器遷移到不同的 FlexVol Volume，系統會使用虛擬機器資訊更新該磁碟區的中繼資料檔案。如果將虛擬機器遷移到不同的 ESXi 主機但使用相同的儲存設備，則底層 FlexVol Volume 中繼資料檔案不會被修改。
+如果將虛擬機器移轉到不同的 FlexVol Volume，系統會使用虛擬機器資訊更新該 Volume 的中繼資料檔案。如果將虛擬機器移轉到不同的 ESXi 主機但儲存設備相同，則底層 FlexVol Volume 中繼資料檔案不會修改。
 
 有關遷移虛擬機器的資訊，請參閱 https://techdocs.broadcom.com/["Broadcom 技術文件"]
 
@@ -38,15 +38,15 @@ ONTAP tools for VMware vSphere 支援所有主要類型的虛擬機器移轉，�
 
 * 使用複寫群組的相同 FlexVol Volume 的相同容器
 +
-同一 FlexVol volume 的中繼資料檔案會更新為複製虛擬機器的詳細資料。
+ONTAP tools 使用複製的虛擬機器詳細資料更新同一 FlexVol Volume 的中繼資料檔案。
 
 * 使用複寫群組的不同 FlexVol Volume 的相同容器
 +
-在放置複製虛擬機器的 FlexVol volume 中，中繼資料檔案會更新為複製虛擬機器的詳細資料。
+在放置複製虛擬機器的 FlexVol Volume 中，ONTAP tools 會使用複製虛擬機器的詳細資訊更新中繼資料檔案。
 
 * 不同的容器或 vVols 資料存放區
 +
-在放置複製虛擬機器的 FlexVol volume 中，中繼資料檔案會更新為虛擬機器詳細資料。
+在放置複製虛擬機器的 FlexVol Volume 中，ONTAP tools 會使用虛擬機器詳細資料更新中繼資料檔案。
 
 
 

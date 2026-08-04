@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: uninstall ONTAP tools, remove ONTAP tools deployment, appliance decommission workflow, graceful deployment termination 
 summary: 正常終止 ONTAP tools for VMware vSphere 的部署。 
 ---
-= 卸載 ONTAP tools
+= 解除安裝 ONTAP tools for VMware vSphere 部署
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-解除安裝適用於 VMware vSphere 的 ONTAP 工具會刪除工具中的所有資料。
+解除安裝 ONTAP tools for VMware vSphere 會刪除工具中的所有資料，因此您必須完成這些步驟，才能正常終止部署並避免意外的資料遺失。
 
 .步驟
 . 從 VMware vSphere 託管資料存放區的 ONTAP 工具移除或移動所有虛擬機器。

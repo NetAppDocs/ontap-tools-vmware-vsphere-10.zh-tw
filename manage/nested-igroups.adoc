@@ -11,7 +11,7 @@ summary: 了解 ONTAP tools 如何表示和管理巢狀 igroup，以實現高效
 
 
 [role="lead"]
-如果您同時管理 ONTAP tools 虛擬機器和 ONTAP 儲存系統，了解 igroup 的行為至關重要，尤其是在將資料儲存區從非 ONTAP tools 管理的環境遷移到 ONTAP tools 管理的環境時。本頁說明 ONTAP tools for VMware vSphere 如何呈現和管理 igroup。這是概念性資訊，用於了解早期版本與目前巢狀 igroup 模型之間的行為差異。
+如果您同時管理 ONTAP tools 虛擬機器和 ONTAP 儲存設備系統，則需要了解 igroup 的行為，尤其是在將資料儲存體從非 ONTAP tools 管理的環境移轉到 ONTAP tools 代管的環境時。ONTAP tools for VMware vSphere 使用巢狀 igroup 模型來表示和管理 igroup，了解此模型有助於您理解早期版本與目前實作之間的行為差異。
 
 從 ONTAP tools for VMware vSphere 10.4 開始，ONTAP tools 會自動建立和維護 ONTAP 和 vCenter 物件，從而簡化 VMware 資料中心環境中的資料存放區管理。從 ONTAP tools for VMware vSphere 10.5 P2 開始，遷移後的 igroup 在不再使用時也會自動刪除。
 
@@ -41,7 +41,7 @@ image:../media/non-otv-managed.png["非ONTAP工具管理的 igroup"]
 .ONTAP工具管理的 igroup
 建立資料存放區時，ONTAP tools for VMware vSphere 會以巢狀結構建立 igroup。
 
-例如，當在主機 1、2 和 3 上建立並掛載 datastore1，並在主機 3、4 和 5 上建立並掛載新的 datastore（datastore2）時， ONTAP工具會重複使用主機級 igroup 以實現高效管理。
+例如，如果您建立 datastore1 並將其裝載到主機 1、2 和 3 上，然後建立 datastore2 並將其裝載到主機 3、4 和 5 上，ONTAP tools 將重複使用主機層級 igroup 以進行有效管理。
 
 image:../media/otv-managed.png["ONTAP工具管理的 igroup"]
 
@@ -98,7 +98,7 @@ NOTE: 只有自訂的 igroup 才能重複使用。從 ONTAP tools 9.x 移轉過�
 [[native-to-managed-conversion-view]]
 == 原生到託管的轉換檢視
 
-如果在 ONTAP 系統和 VMware 環境中直接建立 igroup 和資料存儲，ONTAP tools 最初不會管理這些物件。這將導致 igroup 結構扁平化。
+如果直接在 ONTAP 系統和 VMware 環境中建立 igroup 和資料存放區，ONTAP tools 最初不會管理這些物件，從而導致 igroup 結構扁平。
 
 image:../media/vmfsds-native.png["本地建立的資料儲存區和 igroup"]
 

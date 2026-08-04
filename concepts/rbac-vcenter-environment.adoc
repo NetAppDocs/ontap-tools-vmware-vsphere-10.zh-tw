@@ -14,14 +14,14 @@ summary: 查看 vCenter Server RBAC 如何控制對 vSphere 物件的存取，�
 
 
 [role="lead"]
-VMware vCenter Server 提供 RBAC 功能，可讓您控制對 vSphere 物件的存取。這是 vCenter 集中式驗證和授權安全服務的重要部分。
+VMware vCenter Server 提供角色型存取控制 （RBAC），使您能夠控制對 vSphere 物件的存取。瞭解 vCenter Server RBAC 如何與 ONTAP tools for VMware vSphere 整合，有助於您有效管理權限並確保儲存資源的存取安全性。
 
 
 
 [[illustration-of-a-vcenter-server-permission]]
 == vCenter Server 權限的圖例
 
-權限是在 vCenter Server 環境中強制執行存取控制的基礎。它會套用至具有權限定義所包含之使用者或群組的 vSphere 物件。下圖提供 vCenter 權限的高階圖例。
+權限是在 vCenter Server 環境中實施存取控制的基礎。它應用於 vSphere 物件，並在權限定義中包含使用者或群組。下圖展示了 vCenter Server 權限的高階示意圖。
 
 image:vc-permission.png["vCenter 權限"]
 
@@ -44,7 +44,7 @@ vCenter Server 權限是一組包含多個元件的套件，這些元件會在�
 [[privileges-and-roles]]
 === Privileges 和角色
 
-ONTAP 工具適用於 VMware vSphere 10 的 vSphere Privileges 有兩種類型。為了簡化在此環境中使用 RBAC 的作業， ONTAP 工具提供包含所需原生和自訂 Privileges 的角色。Privileges 包括：
+ONTAP tools for VMware vSphere 使用兩種類型的 vSphere 權限。為了簡化此環境中角色型存取控制 （RBAC） 的使用，ONTAP tools 提供了包含所需原生和自訂權限的角色。這些權限包括：
 
 * 原生vCenter Server權限
 +
@@ -61,4 +61,4 @@ ONTAP 工具適用於 VMware vSphere 10 的 vSphere Privileges 有兩種類型�
 [[users-and-groups]]
 === 使用者與群組
 
-您可以使用 Active Directory 或本機 vCenter Server 執行個體定義使用者和群組。結合角色，您可以建立對 vSphere 物件層次結構中物件的權限。此權限根據關聯角色中的特權授予存取權限。請注意，角色並非直接指派給單獨使用者。相反，使用者和群組透過角色特權獲得對物件的存取權限，這是更大的 vCenter Server 權限的一部分。
+您可以使用 Active Directory 或本機 vCenter Server 執行個體定義使用者和群組。結合角色，您可以在 vSphere 物件階層中的物件上建立權限。此權限根據關聯角色中的權限授予存取。角色並非直接單獨指派給使用者。使用者和群組會透過角色權限，作為較大範圍的 vCenter Server 權限的一部分，取得對物件的存取。

@@ -11,7 +11,7 @@ summary: 在 ONTAP tools for VMware vSphere 的 ONTAP Storage 頁面中檢視資
 
 
 [role="lead"]
-使用 *Configure* 索引標籤中的 ONTAP Storage 頁面檢視資料存放區和 Volume 資訊。
+ONTAP tools for VMware vSphere 在「設定」標籤上顯示資料存放區及其 Volume 的 ONTAP 儲存端檢視，包括每種資料存放區類型的儲存設備後端、彙總及 Volume 詳細資料。
 
 .步驟
 . 在 vSphere Client 清單中，選取資料存放區。
@@ -25,13 +25,13 @@ summary: 在 ONTAP tools for VMware vSphere 的 ONTAP Storage 頁面中檢視資
 | * 資料存放區類型 * | * 可用資訊 * 
 
 
-| NFS 資料存放區 | 「儲存詳情」頁面包含儲存設備後端、彙總和 Volume 資訊。「NFS 詳情」頁面包含與 NFS 資料儲存相關的資料。附註：如果在 ONTAP tools 外部變更了 nconnect 值，則 ONTAP tools 中顯示的值可能不會反映該外部變更。 
+| NFS 資料存放區 | *Storage details* 頁面包含儲存設備後端、彙總和 Volume 資訊。*NFS details* 頁面包含與 NFS 資料儲存區相關的資料。注意：如果在 ONTAP tools 外部變更了 nconnect 值，則 ONTAP tools 中顯示的值可能不會反映該外部變更。 
 
 
-| VMFS 資料存放區 | 「Storage details」頁面包含儲存設備後端、彙總、Volume 和儲存可用度區域 （SAZ） 的詳細資訊。「Storage unit details」頁面包含儲存設備單元的詳細資訊。 
+| VMFS 資料存放區 | *Storage details* 頁面包含儲存設備後端、彙總、Volume 和儲存可用度區域 （SAZ） 的詳細資訊。*Storage unit details* 頁面包含儲存設備單元的詳細資訊。 
 
 
-| VVols 資料存放區 | 列出所有捲。您可以從ONTAP儲存窗格擴充或刪除儲存。ONTAP工具不支援基於ASA r2 系統的vVols資料儲存的此視圖。 
+| VVols 資料存放區 | 此頁面列出了所有 Volume。您可以從 ONTAP 儲存設備窗格擴充或移除儲存設備。ONTAP tools for VMware vSphere 不支援以 ASA r2 系統為基礎的 vVols 資料存放區的此檢視。 
 |===
 .結果
 您可以根據所選資料儲存類型審查 ONTAP 端資料儲存詳細資料。

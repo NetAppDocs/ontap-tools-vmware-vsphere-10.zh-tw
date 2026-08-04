@@ -11,11 +11,11 @@ summary: 僅當所選資料儲存中沒有剩餘 vVols 時，才刪除 vVols 資
 
 
 [role="lead"]
-本頁介紹如何從vVols資料儲存中刪除磁碟區。
+使用 ONTAP tools 中的「從資料存放區移除儲存設備」行動，可從 vVols 資料存放區移除 Volume，在不再需要額外儲存容量時縮小其容量。
 
 在 vCenter Server 中，對由ONTAP工具管理的任何vVols資料儲存使用「從資料儲存中刪除儲存」操作。
 
-如果卷包含vVols，則無法從卷中刪除儲存；對於此類卷，刪除選項將被停用。從資料儲存中刪除磁碟區時，您也可以選擇從ONTAP儲存中刪除選定的磁碟區。
+如果 Volume 包含 vVols，則無法從中移除儲存設備；此類 Volume 的移除選項已停用。從資料存放區移除 Volume 時，您也可以選擇從 ONTAP 儲存設備中刪除所選 Volume。
 
 
 NOTE: 基於ASA r2 系統的vVols資料儲存不支援縮小vVols資料儲存操作。
@@ -27,7 +27,7 @@ NOTE: 基於ASA r2 系統的vVols資料儲存不支援縮小vVols資料儲存操
 . 選擇沒有vVols 的捲，然後選擇「刪除」。
 +
 
-NOTE: 選擇vVols所在磁碟區的選項已停用。
+NOTE: 選擇 vVols 所在 Volume 的選項已停用。
 
-. 在 * 移除儲存 * 快顯視窗中，選取 * 從 ONTAP 叢集刪除磁碟區 * 核取方塊，從資料存放區和 ONTAP 儲存區刪除磁碟區，然後選取 * 刪除 * 。
+. 在「移除儲存設備」彈出視窗中，選取「從 ONTAP 叢集刪除 Volume」核取方塊，從資料存放區和 ONTAP 儲存設備中刪除 Volume，然後選取「刪除」。
 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: vCenter RBAC implementation, custom roles, vSphere permissions, ONTAP tools access 
 summary: 在正式作業環境中使用 ONTAP tools 之前，請先審查 vCenter Server RBAC 注意事項。 
 ---
-= vCenter Server 對 ONTAP 工具的 RBAC 注意事項
+= vCenter 伺服器 RBAC 如何與 ONTAP tools for VMware vSphere 搭配運作
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 在正式作業環境中使用 ONTAP tools 之前，請先審查 vCente
 
 
 [role="lead"]
-在正式作業環境中使用 VMware vSphere 10 RBAC 實作的 ONTAP 工具有幾個層面，您應該先考慮這些層面。
+ONTAP tools for VMware vSphere 透過 vCenter Server 實作角色型存取控制 （RBAC），以控制對 vSphere 物件和管理工作的存取。了解 RBAC 模型（包括預先定義的角色、權限指派，以及 vCenter 與 ONTAP 權限之間的互動方式）有助於您在正式作業環境中部署 ONTAP tools 之前設定適當的存取控制。
 
 
 
@@ -44,7 +44,7 @@ vSphere 物件詳細目錄是以階層架構來組織。例如，您可以依照
 
 NOTE: 如有需要，您可以建立新的自訂角色。為此，請複製現有的 ONTAP tools 角色之一，並根據需要進行編輯。進行組態變更後，受影響的 vSphere 用戶端使用者需要登出並重新登入以啟動變更。
 
-若要檢視 ONTAP tools for VMware vSphere 角色、請在 vSphere Client 頂端選取 *Menu* 、然後按一下 *Administration* 、再按一下左側的 *Roles* 。指派給負責部署或上線 vCenter Server 之 vCenter 使用者的角色、必須包含下列權限。請確保將這些權限設定為部署或上線程序的先決條件。
+若要檢視 ONTAP tools for VMware vSphere 角色，請在 vSphere Client 頂端選取 *Menu*，然後選取 *Administration*，再於左側選取 *Roles*。指派給負責部署或就職 vCenter Server 的 vCenter 使用者角色必須包含下列權限。在開始部署或就職程序之前，請確認這些權限已設定。
 
 * 警報
 +
@@ -217,7 +217,7 @@ NOTE: 如有需要，您可以建立新的自訂角色。為此，請複製現�
 
 
 
-有三個預先定義的角色，如下所述。
+ONTAP tools for VMware vSphere 包含三個預先定義的角色。
 
 .適用於 VMware vSphere 管理員的 NetApp ONTAP 工具
 提供執行核心 ONTAP 工具以執行 VMware vSphere 管理員工作所需的所有原生 vCenter Server Privileges 和 ONTAP 工具專屬 Privileges 。
@@ -237,25 +237,25 @@ NOTE: 如有需要，您可以建立新的自訂角色。為此，請複製現�
 [[vsphere-objects-and-ontap-storage-backends]]
 == vSphere 物件和 ONTAP 儲存設備後端
 
-這兩種 RBAC 環境可一起運作。在 vSphere 用戶端介面中執行工作時，會先檢查定義至 vCenter Server 的 ONTAP 工具角色。如果 vSphere 允許此作業，則會檢查 ONTAP 角色 Privileges 。第二個步驟是根據建立及設定儲存後端時指派給使用者的 ONTAP 角色來執行。
+這兩個角色型存取控制 （RBAC） 環境協同運作。當您在 vSphere Client 中執行工作時，ONTAP tools 會先檢查 vCenter Server 角色。如果 vSphere 允許該作業，則會檢查 ONTAP 角色權限。第二個步驟是根據建立和設定儲存設備後端時指派給使用者的 ONTAP 角色來執行。
 
 
 
 [[working-with-vcenter-server-rbac]]
 == 使用 vCenter Server RBAC
 
-使用 vCenter Server Privileges 和權限時，需要考量一些事項。
+使用 vCenter Server 權限時，請記住以下事項。
 
 
 
 [[required-privileges]]
 === 必要權限
 
-若要存取適用於 VMware vSphere 10 使用者介面的 ONTAP 工具，您必須擁有 ONTAP 工具專屬的 _ 檢視 _ 權限。如果您在沒有此權限的情況下登入 vSphere ，並按一下 NetApp 圖示，適用於 VMware vSphere 的 ONTAP 工具會顯示錯誤訊息，並阻止您存取使用者介面。
+要存取 ONTAP tools for VMware vSphere 10 使用者介面，您需要擁有 ONTAP tools 專屬的「檢視」權限。如果您在未具備此權限的情況下登入 vSphere 並選取 NetApp 圖示，ONTAP tools for VMware vSphere 將顯示錯誤訊息，並阻止您存取使用者介面。
 
 vSphere 物件階層中的指派層級會決定您可以存取的使用者介面部分。將檢視權限指派給根物件可讓您按一下 NetApp 圖示來存取適用於 VMware vSphere 的 ONTAP 工具。
 
-您可以將檢視權限指派給另一個較低的 vSphere 物件層級。不過，這會限制您可以存取和使用的 VMware vSphere ONTAP 工具功能表。
+您也可以將「檢視」權限指派給較低的 vSphere 物件層級。但是，這會限制您可以存取的 ONTAP tools for VMware vSphere 功能表。
 
 
 
@@ -269,6 +269,6 @@ TIP: 除非您需要定義更嚴格的存取，否則在根物件或根資料夾
 
 適用於 VMware vSphere 10 的 ONTAP 工具所提供的權限適用於自訂非 vSphere 物件，例如儲存系統。如果可能，您應該將這些權限指派給 VMware vSphere 根物件的 ONTAP 工具，因為沒有您可以指派的 vSphere 物件。例如，任何包含適用於 VMware vSphere 「新增 / 修改 / 移除儲存系統」權限的 ONTAP 工具權限，都應在根物件層級指派。
 
-在物件階層中定義較高層級的權限時，您可以設定權限，讓子物件向下傳遞並繼承權限。如果需要，您可以指派額外權限給子物件，這些子物件會覆寫從父物件繼承的權限。
+在物件層次結構的較高層級定義權限時，您可以設定該權限，使其向下傳遞並由子物件繼承。如有需要，您可以為子物件指派額外的權限，以置換從父物件繼承的權限。
 
 您可以隨時修改權限。如果您在權限內變更任何 Privileges ，則與權限相關的使用者必須登出 vSphere ，然後重新登入才能啟用變更。

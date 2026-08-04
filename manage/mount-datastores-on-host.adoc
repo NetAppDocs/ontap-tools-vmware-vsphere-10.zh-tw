@@ -11,7 +11,7 @@ summary: 將主機新增至 VMware 環境後，將資料存放區裝載到其他
 
 
 [role="lead"]
-安裝資料存放區可讓儲存設備存取其他主機。將主機新增至VMware環境之後、即可將資料存放區掛載到其他主機上。
+裝載資料存放區可在您將其他主機新增至 VMware 環境後，為這些主機提供儲存設備存取。
 
 
 NOTE: 新增主機後，請等待已排程的主機探索完成，該主機才會顯示在 ONTAP tools 中。或者，您也可以從 NetApp ONTAP tools 總覽畫面手動執行探索。如需如何將 ESXi 主機新增至 vSphere 叢集的相關資訊，請參閱 https://techdocs.broadcom.com/["Broadcom 技術文件"]。
@@ -20,11 +20,10 @@ NOTE: 新增主機後，請等待已排程的主機探索完成，該主機才�
 * 視 vSphere 用戶端版本和選取的資料存放區類型而定，某些按滑鼠右鍵動作會停用或無法使用。
 +
 ** 如果您使用的是 vSphere Client 8.0 或更新版本、則會隱藏一些按滑鼠右鍵選項。
-** 從 vSphere 7.0U3 到 vSphere 8.0 版本，即使出現選項，動作仍會停用。
+** 從 vSphere 7.0U3 到 vSphere 8.0，即使選項出現，行動也會停用。
 
 
 * 當主機叢集受到統一配置保護時，vSphere 會停用掛載資料儲存選項。
-* 當具有 nconnect 的資料存放區裝載到新主機上時，如果資料存放區的 nconnect 值超過主機的設定值，ONTAP tools 會套用該資料存放區的 nconnect 值。
 
 
 .步驟
