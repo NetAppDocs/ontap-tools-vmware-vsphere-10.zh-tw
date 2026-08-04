@@ -2694,7 +2694,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="dedc388dd2af036ba5f75e3d7d7681d3" category="list-text">如果建立的 NFS 資料儲存設備的 nconnect 值高於目前主機層級的設定，ONTAP tools 會將主機層級的設定更新為與之相符。</block>
   <block id="1d48fb1b4293c8b559e62497a0067c48" category="admonition">此變更將套用至所選 vCenter 伺服器中的所有 ESXi 主機。.步驟</block>
   <block id="2ddf586776180c19d743e6d1949c7364" category="list-text">選擇 *Settings* &gt; *Default nconnect value*。</block>
-  <block id="071ef8ace6c74c9a1515550077974172" category="list-text">${post_edited_translations.segment}</block>
   <block id="c13fac0e61b5369693f94547467073c7" category="list-text">輸入 ESXi 主機的新預設 nconnect 值，然後選擇 *Save*。</block>
   <block id="f20c88166e7bbea07c5cf15053f83c1d" category="paragraph">更新後的 nconnect 值將套用至所選 vCenter Server 中所有支援 NFSv3 和 NFSv4 協定的 ESXi 主機。</block>
   <block id="e1620370e4671f717a99af5794fc3ec5" category="summary">了解 ONTAP tools 如何表示和管理巢狀 igroup，以實現高效的主機和資料存放區映射。</block>
@@ -3123,4 +3122,5 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="f02ba84a6292d236b6193eb515758b58" category="cell">此頁面列出了所有 Volume。您可以從 ONTAP 儲存設備窗格擴充或移除儲存設備。ONTAP tools for VMware vSphere 不支援以 ASA r2 系統為基礎的 vVols 資料存放區的此檢視。</block>
   <block id="d6ac92fc703f8db58239689a33a3a860" category="doc">解除安裝 ONTAP tools for VMware vSphere 部署</block>
   <block id="675f332e8d70702f8454fa3cd1db7207" category="paragraph">解除安裝 ONTAP tools for VMware vSphere 會刪除工具中的所有資料，因此您必須完成這些步驟，才能正常終止部署並避免意外的資料遺失。</block>
+  <block id="071ef8ace6c74c9a1515550077974172" category="list-text">選擇 *Edit*。</block>
 </blocks>

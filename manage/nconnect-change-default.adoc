@@ -25,7 +25,7 @@ NOTE: 此變更將套用至所選 vCenter 伺服器中的所有 ESXi 主機。.�
 . 登入 vSphere Client。
 . 在外掛程式區段下，選取 * 快速鍵 * > * NetApp ONTAP tools* 。
 . 選擇 *Settings* > *Default nconnect value*。
-. ${post_edited_translations.segment}
+. 選擇 *Edit*。
 . 輸入 ESXi 主機的新預設 nconnect 值，然後選擇 *Save*。
 
 
