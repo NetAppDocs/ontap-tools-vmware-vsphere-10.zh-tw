@@ -2016,8 +2016,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="dc99d10a215fcfc7c9cc258f6b526f04" category="doc">使用 ONTAP 工具中的陣列管理器設定 SRA</block>
   <block id="f825d08cca5235c68d18f5f167189a42" category="doc">使用 ONTAP tools 在 VMware Live Site Recovery 應用裝置上設定 SRA</block>
   <block id="8c8cc20f279873e3e2c26985f73dde50" category="doc">在 ONTAP 工具中設定佔位符資料存放區</block>
-  <block id="7daa54a7e34530faf73a185cac6ff92e" category="doc">在 ONTAP tools 中設定受保護站台和復原站台</block>
-  <block id="7f76078e340f36a84d5f402d8a9e9ed2" category="doc">在 ONTAP tools 中為高擴展性環境配置 SRA</block>
   <block id="366099eedc535323fc065faade609247" category="doc">在 ONTAP tools 中為 SAN 和 NAS 環境配置 SRA</block>
   <block id="36acaddf44788c31be5317a19ff8bcfa" category="doc">在 ONTAP 工具中設定 SRA 以保護資料儲存區</block>
   <block id="866ca228b7c9c7c4dd7f33b4edfe6343" category="doc">ONTAP 工具中的扇出保護</block>
@@ -2850,7 +2848,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="41d5b3331c49688beabf64a476565b2f" category="paragraph">如需更多資訊，請參閱 <block ref="63042c288d643bd286f708c30aa7eeb1" category="inline-link-rx"></block></block>
   <block id="70ada8320af8255a677b6ffe7e62fb77" category="list-text">請依照 <block ref="606bd525eb6add3259ec861686535f41" category="inline-link-macro-rx"></block> 將資料存放區新增至主機叢集保護。新增非同步和同步原則類型。</block>
   <block id="30c3acc62ace9fe8b9f51083513c9b1f" category="summary">在保護主機叢集中的資料存放區之前，請先了解精細的資料存放區保護和資料存放區資格標準。</block>
-  <block id="f8bdb2b4320068538b2e660cf5594097" category="doc">細粒度資料儲存保護資格標準</block>
   <block id="7a6c5f13c11ac0091369e5de3372b041" category="paragraph">使用精細的資料存放區保護功能，保護主機叢集中選定的 VMFS 資料存放區，而非保護整個叢集。</block>
   <block id="94ba1053dfcb4c2f50ecb31c2a3a48e9" category="paragraph">精細的資料存放區保護功能適用於 ONTAP tools for VMware vSphere 10.6 及更新版本。此功能提供資料存放區層級的保護規劃，而非叢集範圍的選取。</block>
   <block id="5885c3f17ed13c3b9ddcd82efb888751" category="paragraph">此功能可讓您：</block>
@@ -3123,4 +3120,7 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="d6ac92fc703f8db58239689a33a3a860" category="doc">解除安裝 ONTAP tools for VMware vSphere 部署</block>
   <block id="675f332e8d70702f8454fa3cd1db7207" category="paragraph">解除安裝 ONTAP tools for VMware vSphere 會刪除工具中的所有資料，因此您必須完成這些步驟，才能正常終止部署並避免意外的資料遺失。</block>
   <block id="071ef8ace6c74c9a1515550077974172" category="list-text">選擇 *Edit*。</block>
+  <block id="61aba9a185948f67b0e30c93c8bd8745" category="doc">在 ONTAP tools 中配對站台並設定保護群組</block>
+  <block id="2f1ee6929021bf5cd62c7d2d50b7d710" category="doc">ONTAP tools 中高擴充性環境的 SRA 逾時設定</block>
+  <block id="ead0b27d7cf57e3420b139c5b99f4200" category="doc">ONTAP tools 中精細資料存放區保護資格標準</block>
 </blocks>

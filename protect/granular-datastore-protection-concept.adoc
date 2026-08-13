@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: granular datastore protection, VMFS datastore eligibility, protection group criteria, ONTAP tools datastore protection 
 summary: 在保護主機叢集中的資料存放區之前，請先了解精細的資料存放區保護和資料存放區資格標準。 
 ---
-= 細粒度資料儲存保護資格標準
+= ONTAP tools 中精細資料存放區保護資格標準
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
