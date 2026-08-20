@@ -11,7 +11,7 @@ summary: 使用 ONTAP tools Manager 垂直擴充 ONTAP tools 應用裝置並設�
 
 
 [role="lead"]
-使用 ONTAP tools Manager 垂直擴充您的應用裝置並設定高可用性 （HA）。預設情況下，ONTAP tools for VMware vSphere 部署為單一節點、非 HA 組態。
+使用 ONTAP tools Manager 可以垂直擴充應用裝置或設定高可用性 (HA)。預設情況下，ONTAP tools for VMware vSphere 部署為單一節點、非 HA 組態。
 
 .開始之前
 * 確保您的 OVA 模板與 Node 1 （初始部署節點）的版本相符。
@@ -30,7 +30,7 @@ NOTE: 您只能增加節點規模，不能減少。超小型 （XS） 部署會�
 . 在「組態」部分，選擇新的節點大小，然後切換 HA 交換器以啟用高可用性。
 . 在「HA 設定」頁面上，驗證以下內容：
 +
-** 內容庫與 ONTAP tools 虛擬機器所在的 vCenter Server 位於同一伺服器上。
+** 內容庫位於與 ONTAP tools 虛擬機器 （VM） 執行所在的同一台 vCenter Server 上。
 ** ONTAP tools 虛擬機器部署在叢集或資源池，而不是直接部署在 ESXi 主機上。
 +
 
@@ -40,7 +40,7 @@ IMPORTANT: 啟用 HA 後，無法回復到非 HA 單節點組態。
 
 . 在 *HA 設定* 部分，輸入節點 2 和 3 的網路詳細資料。ONTAP tools 支援 HA 模式下的三個節點。
 +
-ONTAP tools 會預先填入大多數欄位，其中包含節點 1 的網路設定。您可以在完成精靈之前編輯這些值。只有當管理節點上啟用了 IPv6 時，IPv6 位址條目才可用。請確保每個 ESXi 主機僅託管一個 ONTAP tools VM。
+ONTAP tools 會預先填入大多數欄位，其中包含節點 1 的網路設定。您可以在完成精靈之前編輯這些值。只有當管理節點上啟用了 IPv6 時，IPv6 位址項目才可用。請確保每個 ESXi 主機僅執行一個 ONTAP tools 虛擬機器。
 
 . 審查摘要並按一下「儲存」。
 

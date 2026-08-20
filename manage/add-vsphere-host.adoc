@@ -11,15 +11,15 @@ summary: 將 VMware vSphere 主機新增至 ONTAP tools for VMware vSphere。
 
 
 [role="lead"]
-將新的 VMware vSphere 主機新增至ONTAP tools for VMware vSphere，以管理和保護主機上的資料儲存。
+將新的 VMware vSphere 主機新增至 ONTAP tools for VMware vSphere，以便管理和保護主機資料存放區。
 
 .步驟
 . 請依照下列步驟將主機新增至 VMware vSphere 叢集 https://techdocs.broadcom.com/["Broadcom 技術文件"]。
-. 新增主機後，請前往ONTAP工具主選單，然後在概覽面板中選擇「發現」。等待調查過程完成。或者，您可以等待已規劃的主機發現完成。
+. 新增主機後，請前往 ONTAP tools 主選單，然後在總覽面板中選取 *探索*，或等待已排程的主機探索完成。
 
 
 .結果
-現在， ONTAP tools for VMware vSphere可以發現並管理新的主機。您可以繼續在新主機上管理資料儲存。
+新主機現在已由 ONTAP tools for VMware vSphere 探索並代管。您現在可以管理主機上的資料存放區。
 
 .相關主題
 * link:../manage/mount-a-vvols-datastore.html["掛載vVols資料存放區"]在新主機上。

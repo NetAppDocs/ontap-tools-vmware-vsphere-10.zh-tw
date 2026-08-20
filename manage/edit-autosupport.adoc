@@ -11,7 +11,7 @@ summary: 設定 AutoSupport ONTAP tools 的設定並審查預設支援訊息行�
 
 
 [role="lead"]
-首次ONTAP tools for VMware vSphere時， AutoSupport預設為啟用狀態。啟用後 24 小時內向技術支援發送訊息。
+AutoSupport 在您首次設定 ONTAP tools for VMware vSphere 時預設為啟用。啟用後 24 小時，系統會將訊息傳送給技術支援。
 
 
 
@@ -21,7 +21,7 @@ summary: 設定 AutoSupport ONTAP tools 的設定並審查預設支援訊息行�
 當您停用AutoSupport時，您將不再獲得主動支援和監控。
 
 
-NOTE: 建議保持AutoSupport啟用，因為它有助於加速問題偵測和解決。即使停用AutoSupport ，系統仍會繼續在本地收集和儲存訊息，但不會透過網路發送報告。
+NOTE: 保持 AutoSupport 啟用狀態，因為它有助於加快問題偵測和解決速度。即使 AutoSupport 停用，系統仍會繼續在本機收集和儲存資訊，但不會透過網路傳送報告。
 
 .步驟
 . 從網路瀏覽器啟動 ONTAP 工具管理員： `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`

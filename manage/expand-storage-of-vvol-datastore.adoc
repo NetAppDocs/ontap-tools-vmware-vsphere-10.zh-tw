@@ -4,17 +4,17 @@ sidebar: sidebar
 keywords: expand vVols datastore, increase vVol datastore capacity, ONTAP tools vVol storage expansion, VMware virtual volumes scaling 
 summary: 使用 ONTAP tools 行動從 vCenter 物件檢視擴充 vVols 資料存放區儲存設備。 
 ---
-= 在 ONTAP 工具中擴充 vVols 資料存放區
+= 在 ONTAP tools 中擴充 vVols 資料儲存庫
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-在 vCenter 物件視圖中以滑鼠右鍵按一下資料儲存物件時，「外掛程式」部分會顯示適用於ONTAP tools for VMware vSphere支援的操作。根據資料儲存的類型和目前使用者權限啟用特定操作。
+在 vCenter 物件檢視中右鍵點選資料存放區物件時，外掛區段會顯示 ONTAP tools for VMware vSphere 支援的行動。可用的行動取決於資料存放區類型和目前使用者的 Privileges。
 
 
-NOTE: 展開 vVols 資料存放區作業不適用於 ASA R2 系統型 vVols 資料存放區。
+NOTE: 此程序不適用於基於 ASA r2 系統的 vVols 資料儲存。
 
 .步驟
 . 從 vSphere Client 首頁、選取 * 主機與叢集 * 。

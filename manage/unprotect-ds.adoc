@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: unprotect VMFS datastore, remove datastore protection group, SnapMirror protection removal, ONTAP tools DR cleanup 
 summary: 取消對 VMFS 資料儲存的保護，並可選擇移除關聯的目標端儲存設備元素。 
 ---
-= 取消對 VMFS 資料儲存設備的保護
+= 在 ONTAP tools 中取消保護 VMFS 資料存放區
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -16,7 +16,7 @@ summary: 取消對 VMFS 資料儲存的保護，並可選擇移除關聯的目�
 .關於這項工作
 取消對 VMFS 資料儲存設備的保護時，請注意以下行為：
 
-* 取消對保護群組中最後一個資料存放區的保護會刪除該保護群組及其保護設定名稱。
+* 取消保護群組中最後一個資料存放區的保護，將會刪除該保護群組及其保護設定。
 * 對於最後一個資料存放區，ONTAP tools 會顯示保護設定名稱。
 
 

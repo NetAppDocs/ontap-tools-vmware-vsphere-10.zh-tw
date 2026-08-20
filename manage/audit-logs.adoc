@@ -11,7 +11,7 @@ summary: 查看 ONTAP tools 如何擷取、保留和監控稽核日誌，以確�
 
 
 [role="lead"]
-使用此工作管理 ONTAP tools for VMware vSphere 中的稽核記錄行為和操作回應。稽核日誌提供事件追蹤，顯示誰執行了行動、執行了什麼行動、操作發生的時間、請求來源以及操作是成功還是失敗。
+在 ONTAP tools for VMware vSphere 中管理稽核記錄。稽核日誌顯示誰執行了行動、發生了什麼、何時發生、請求來源，以及行動是成功還是失敗。
 
 .開始之前
 * 請確保您擁有 ONTAP tools Manager 的系統管理員存取權限。

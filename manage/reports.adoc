@@ -11,10 +11,10 @@ summary: 在 ONTAP tools 外掛中檢視虛擬機器和資料存放區報告。
 
 
 [role="lead"]
-ONTAP tools for VMware vSphere 外掛提供報告，可協助您監控由 ONTAP 儲存設備支援的虛擬機器和資料儲存區。若要檢視這些報告，請選取 vCenter 用戶端捷徑區段中的 ONTAP tools for VMware vSphere 外掛圖示，然後選取「報告」索引標籤。
+ONTAP tools for VMware vSphere 外掛提供報告，可協助您監控由 ONTAP 儲存設備支援的虛擬機器和資料存放區。若要檢視報告，請在 vSphere Client 的捷徑區段中選擇 ONTAP tools for VMware vSphere 外掛圖示，然後選擇 *Reports* 索引標籤。
 
-「虛擬機器」報告列出已探索的虛擬機器，這些虛擬機器在基於 ONTAP 儲存設備的資料儲存中至少擁有一個磁碟，以及效能計量。擴充虛擬機器記錄後，介面會顯示所有與磁碟相關的資料儲存資訊。
+「虛擬機器」報告列出已探索到的虛擬機器，這些虛擬機器在 ONTAP 儲存設備型資料存放區上至少有一個磁碟，以及效能計量。擴充虛擬機器記錄後，即可查看其磁碟的所有資料存放區資訊。
 
 資料存放區報告列出 ONTAP tools for VMware vSphere 探索到的、使用 ONTAP 儲存設備的資料存放區，以及效能計量。
 
-您可以使用「管理欄」選項來隱藏或顯示不同的欄。
+您可以使用「Manage Columns」選項來隱藏或顯示欄位。

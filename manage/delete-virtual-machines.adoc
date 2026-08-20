@@ -11,14 +11,14 @@ summary: 刪除虛擬機器後執行 VASA 清理程式。
 
 
 [role="lead"]
-若要完成 VASA 清理流程，請依照下列步驟操作。
+請依照以下步驟在 ONTAP tools 中完成 VASA 清理。
 
 
-NOTE: 建議在開始 VASA 清理之前刪除所有vVols資料儲存。
+NOTE: 在開始 VASA 清理之前，請先移除所有 vVols 資料存放區。
 
 .步驟
-. 移至 \https://OTV_IP:8143/Register.html 以取消登錄外掛程式
+. 開啟 `\https://OTV_IP:8143/Register.html`以取消登錄外掛。
 . 確認 vCenter Server 上不再提供外掛程式。
-. 關閉適用於 VMware vSphere VM 的 ONTAP 工具。
+. 關閉 ONTAP tools for VMware vSphere 虛擬機器（VM）。
 . 刪除適用於 VMware vSphere VM 的 ONTAP 工具。
 

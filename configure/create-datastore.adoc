@@ -11,9 +11,12 @@ summary: 在主機或主機叢集層級，使用 ONTAP tools 建立 NFS、VMFS �
 
 
 [role="lead"]
-當您在主機叢集層級建立資料儲存庫時， ONTAP工具會將其掛載到所有目標主機上，並且僅當您擁有所需的權限時才啟用此操作。
+在主機或主機叢集層級建立 NFS、VMFS 或 vVols 資料存放區。當您在主機叢集層級建立資料存放區時，只要您擁有所需的 Privileges，ONTAP tools 就會將其裝載到所有目的地主機上。
 
-*本機資料儲存與 vCenter Server 與 ONTAP 工具管理的資料儲存之間的互通性*
+
+
+[[interoperability-between-native-datastores-and-ontap-tools-managed-datastores]]
+== 原生資料儲存與 ONTAP tools 代管的資料儲存之間的互通性
 
 從適用於ONTAP tools for VMware vSphere開始， ONTAP工具為資料儲存區建立巢狀 igroup，其中父 igroup 特定於資料儲存區，子 igroup 對應到主機。您可以從ONTAP系統管理員建立平面 igroup，並使用它們建立 VMFS 資料儲存庫，而無需使用ONTAP工具。參考 https://docs.netapp.com/us-en/ontap/san-admin/manage-san-initiators-task.html["管理 SAN 啟動器和 igroup"]了解更多。
 
@@ -43,7 +46,7 @@ NOTE: ASA R2 系統支援 VVols 的 iSCSI 和 FC 傳輸協定。
 . 選取您要建立資料存放區的儲存 VM 。
 . 在*進階選項*下：
 +
-** 如果選擇*自訂匯出原則*，請先在 vCenter 中對所有物件執行探索程序，然後再繼續。建議不要使用此選項。
+** 如果選擇*自訂匯出原則*，請在繼續操作之前在 vCenter 中對所有物件執行探索。NetApp 建議不要使用此選項。
 ** 您可以為 iSCSI 和 FC 傳輸協定選取*自訂啟動器群組*名稱。
 +
 
@@ -61,7 +64,7 @@ NOTE: 對於 ASA r2 SVM，不會建立儲存單元（LUN/命名空間），因�
 --
 .建立 NFS 資料存放區
 --
-NFS 資料儲存使用 NFS 協定將 ESXi 主機連接到共享儲存設備。它簡單且靈活，常用於 VMware vSphere 環境中。
+NFS 資料儲存使用 NFS 協定將 ESXi 主機連接到共享儲存設備。它簡單且靈活，VMware vSphere 環境通常使用它。
 
 .步驟
 . 登入 vSphere Client。
@@ -84,7 +87,7 @@ NOTE: Kerberos 驗證只有在選取 NFS 4.1 傳輸協定時才能使用。
 NOTE: 您不能使用 SVM 的預設或根磁碟區策略建立 NFS 資料儲存庫。
 
 +
-** 在「進階選項」中，「非對稱」切換按鈕僅在平台下拉式選單中選擇「效能」或「容量」時才會顯示。但是，「非對稱」選項不適用於 NFS 資料存放區的建立。
+** 在「進階選項」中，「非對稱」切換按鈕僅在平台下拉清單中選擇「效能」或「容量」時才會顯示。但是，「非對稱」選項不適用於 NFS 資料存放區的建立。
 ** 當您在平台下拉式選單中選擇「任意」選項時，vCenter 中的所有 SVM 均可見。平台設定和非對稱設定不影響可見度。
 
 

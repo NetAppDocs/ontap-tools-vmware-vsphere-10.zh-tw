@@ -4,16 +4,16 @@ sidebar: sidebar
 keywords: ONTAP tools igroup workflow, export policy management, initiator group mapping, VMware datastore access control 
 summary: 了解 ONTAP tools 如何建立和管理 igroup 及匯出原則，以供資料存放區存取。 
 ---
-= ONTAP tools 如何管理 igroup 和匯出原則
+= ONTAP tools 中的 Igroup 和匯出原則工作流程
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-啟動器群組 (igroup) 是 FC 協定主機全球連接埠名稱 (WWPN) 或 iSCSI 主機限定節點名稱的資料表。您可以定義igroup並將其對應至LUN、以控制哪些啟動器可以存取LUN。
+利用這些資訊了解 ONTAP tools for VMware vSphere 如何建立和管理資料存放區存取的 igroup 和匯出原則。
 
-在 ONTAP tools for VMware vSphere 9.x 中，igroup 的建立和管理採用扁平結構，vCenter 中的每個資料儲存區都關聯到單一 igroup。這種模型限制了 igroup 在多個資料儲存區之間的靈活度和重複使用性。ONTAP tools for VMware vSphere 10.4 引入了巢狀 igroup，其中 vCenter 中的每個資料儲存區都關聯到一個父 igroup，而每個主機則連結到該父 igroup 下的子 igroup。您可以定義具有使用者自訂名稱的自訂父 igroup，以便在多個資料儲存區之間重複使用，從而簡化 igroup 管理。了解 ONTAP tools for VMware vSphere 中的 igroup 工作流程，以便管理 LUN 和資料儲存區。不同的工作流程會產生不同的 igroup 組態，如下列範例所示：
+在 ONTAP tools for VMware vSphere 9.x 中，igroup 的建立和管理採用扁平結構，vCenter 中的每個資料存放區都關聯到單一 igroup。這種模型限制了 igroup 在多個資料存放區之間的靈活度和重複使用性。ONTAP tools for VMware vSphere 10.4 引入了巢狀 igroup，其中 vCenter 中的每個資料存放區都關聯到一個父 igroup，而每個主機則連結到該父 igroup 下的子 igroup。您可以定義具有使用者自訂名稱的自訂父 igroup，以便在多個資料存放區之間重複使用，從而簡化 igroup 管理。請利用這些資訊，了解 ONTAP tools for VMware vSphere 如何透過 igroup 工作流程管理 LUN 和資料存放區。不同的工作流程會產生不同的 igroup 組態，如下列範例所示：
 
 
 NOTE: 所提及的名稱僅用於說明目的，並不代表真實的 igroup 名稱。 ONTAP工具管理的 igroup 使用前綴「otv_」。自訂 igroup 可以賦予任意名稱。
@@ -78,7 +78,7 @@ ONTAP為 DS1 建立父 igroup DS1Igroup，並將子 igroup host1Igroup 對應到
 
 
 
-ONTAP tools for VMware vSphere建立一個子 igroup host2Igroup 並將其新增至現有的父 igroup DS1Igroup。
+ONTAP tools for VMware vSphere 建立子 igroup host2Igroup 並將其新增至現有的父 igroup DS1Igroup。
 
 .範例 3：
 從主機卸載資料存儲
@@ -203,7 +203,7 @@ ONTAP tools for VMware vSphere從層次結構中移除 host1Igroup。系統不�
 
 *工作流程*
 
-VMware vSPhere 9.x 版本的ONTAP工具不支援分層 igroup。在遷移到 10.3 或更高版本期間，必須將 igroup 規範化到層次結構中。
+ONTAP tools for VMware vSphere 9.x 版本不支援階層式 igroup。移轉至 10.3 或更高版本時，igroup 必須規範化為階層式結構。
 
 遷移之前：
 
@@ -243,7 +243,7 @@ https://docs.netapp.com/us-en/ontap/san-admin/igroups-concept.html["關於igroup
 
 在新的 ESXi 主機上掛載 NFS 資料儲存庫時，適用於 VMware vSphere 的 ONTAP 工具會將該主機的 IP 位址新增至與該資料儲存庫關聯的現有匯出策略中。這樣，新主機無需建立新的匯出策略即可存取該資料儲存庫。
 
-當您從 ESXi 主機移除或解除安裝 NFS 資料儲存庫時，ONTAP tools for VMware vSphere會從匯出原則中移除該主機的 IP 位址。如果沒有其他主機使用該匯出策略，它將被刪除。刪除 NFS 資料儲存庫時，如果該資料儲存庫未被任何其他資料儲存庫重複使用，則ONTAP tools for VMware vSphere會移除與該資料儲存庫關聯的匯出策略。如果重複使用匯出策略，它會保留主機IP位址並且不會改變。當您刪除資料儲存庫時，匯出策略會取消指派主機 IP 位址並指派預設匯出策略，以便ONTAP系統可以在需要時存取它們。
+當您從 ESXi 主機刪除或取下 NFS 資料儲存時，ONTAP tools for VMware vSphere 會從匯出原則移除該主機的 IP 位址。如果沒有其他主機使用該匯出原則，則會將其刪除。當您刪除 NFS 資料儲存時，如果該匯出原則未被任何其他資料儲存重複使用，ONTAP tools for VMware vSphere 會移除與該資料儲存相關聯的匯出原則。如果匯出原則被重複使用，則會保留主機 IP 位址，不會變更。當您刪除資料儲存時，如果 ONTAP 需要存取，ONTAP tools 會從匯出原則移除主機 IP 位址，並指派預設匯出原則。
 
 在不同資料儲存之間重複使用匯出策略時，指派匯出策略的方式會有所不同。重複使用匯出策略時，您可以將新的主機 IP 位址附加到政策中。刪除或解除安裝使用共用匯出策略的資料儲存體時，該原則不會被刪除。它會保持不變，並且主機 IP 位址不會被移除，因為它與其他資料儲存共享。不建議重複使用匯出策略，因為這可能會導致存取和延遲問題。
 

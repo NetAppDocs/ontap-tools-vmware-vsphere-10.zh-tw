@@ -11,14 +11,14 @@ summary: 使用 ONTAP tools 管理 vCenter 執行個體，以控制主機、虛�
 
 
 [role="lead"]
-vCenter 伺服器執行個體是集中管理平台，可用於控制主機、虛擬機器和儲存設備後端。在 ONTAP tools 中，您可以解除儲存設備後端關聯、修改執行個體詳細資料、移除執行個體以及續約 vCenter 伺服器憑證。
+使用 ONTAP tools 取消儲存設備後端關聯、修改 vCenter 伺服器執行個體詳細資料、移除執行個體、續約 vCenter 伺服器憑證。
 
 
 
 [[dissociate-storage-backends-from-a-vcenter-server-instance]]
 == 將儲存設備後端與 vCenter Server 執行個體分離
 
-vCenter Server 清單頁面會顯示相關的儲存後端數量。每個 vCenter Server 執行個體都可以選擇與儲存後端建立關聯或取消關聯。
+vCenter 伺服器清單頁面顯示關聯的儲存設備後端數量。每個 vCenter 伺服器執行個體都可以與儲存設備後端關聯或解除關聯。
 
 .步驟
 . 從網路瀏覽器啟動 ONTAP 工具管理員： `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
@@ -33,7 +33,7 @@ vCenter Server 清單頁面會顯示相關的儲存後端數量。每個 vCenter
 [[modify-a-vcenter-server-instance]]
 == 修改 vCenter Server 執行個體
 
-請完成下列步驟以修改 vCenter Server 執行個體。
+若要修改 vCenter 伺服器執行個體，請完成下列步驟。
 
 . 從網路瀏覽器啟動 ONTAP 工具管理員： `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . 使用您在部署期間提供的 VMware vSphere 管理員認證 ONTAP 工具登入。
@@ -100,7 +100,7 @@ vCenter 伺服器執行個體不再由 ONTAP tools 管理。
 如果 vCenter Server 在刪除過程中無法存取：
 
 * ONTAP tools 會移除 vCenter Server 記錄。
-* 外掛程式未取消登錄。
+* 外掛取消註冊不會發生。
 * 螢幕上會顯示警告訊息。
 * 您必須手動從 VMware vCenter Server 中取消註冊該外掛程式。
 
@@ -155,7 +155,7 @@ iVm0cl+2BZNi/QTMh/MkWV2dYXJ3NuNlqqfzFY+bUfkzkR4SneMk0HX3joNNYDJv
 siO7bL+k/Pxql27NVIhuCoVJAlcI7ak=
 ---{}END CERTIFICATE{}---
 ----
-. 複製輸出結果並將其另存為文字檔案。 `.pem` 桌面擴充程式。
+. 複製輸出結果並將其儲存為 `.pem`檔案，放在您的桌面上。
 . 從網路瀏覽器啟動 ONTAP 工具管理員： `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . 使用您在部署期間提供的 VMware vSphere 管理員認證 ONTAP 工具登入。
 . 從側邊列選取適用的 vCenter Server 執行個體

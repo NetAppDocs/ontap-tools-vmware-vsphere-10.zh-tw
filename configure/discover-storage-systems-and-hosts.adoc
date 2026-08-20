@@ -11,7 +11,7 @@ summary: 在首次產品發表 ONTAP tools 時，即可探索 ESXi 主機、LUN�
 
 
 [role="lead"]
-當首次在 vSphere Client 中啟動ONTAP tools for VMware vSphere時，它會自動發現 ESXi 主機、其關聯的 LUN 和 NFS 匯出，以及擁有這些資源的NetApp儲存系統。
+當您首次在 vSphere Client 中產品發表 ONTAP tools for VMware vSphere 時，它會自動探索 ESXi 主機、其關聯的 LUN 和 NFS 匯出，以及擁有這些資源的 NetApp 儲存系統。
 
 .開始之前
 * 確保所有 ESXi 主機都已開啟並連線。

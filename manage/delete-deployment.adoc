@@ -11,15 +11,15 @@ summary: 在移除 ONTAP tools 部署後，請移除未使用的 FlexVol® Volum
 
 
 [role="lead"]
-當您使用專屬的 ONTAP 叢集 ONTAP 來部署 VMware 工具時，它會建立許多未使用的 FlexVol 磁碟區。移除 VMware vSphere 的 ONTAP 工具之後，您應該移除 FlexVol 磁碟區，以避免可能的效能影響。
+在專用 ONTAP 叢集上部署 ONTAP tools for VMware vSphere 時，部署會建立許多未使用的 FlexVol® 磁碟區。移除 ONTAP tools 後，請刪除這些未使用的 FlexVol® 磁碟區，以避免可能的效能影響。
 
 .步驟
-. 從ONTAP工具管理節點 VM 中尋找ONTAP tools for VMware vSphere。執行下列指令檢查部署類型：_cat /opt/netapp/meta/ansible_vars.yaml | grep -i protocol_
+. 從 ONTAP tools 管理節點 VM 判斷 ONTAP tools for VMware vSphere 的部署類型。執行下列命令以檢查部署類型：_cat /opt/netapp/meta/ansible_vars.yaml | grep -i protocol_
 +
-如果是 iSCSI 部署，也需要刪除 igroups。
+如果部署使用 iSCSI，也需要刪除 igroups。
 
 . 取得FlexVol磁碟區的列表。_kubectl 描述持久性磁碟區 | grep internalName | awk -F'=' '{print $2}'_
 . 從 vCenter Server 移除 VM 。請參閱 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-virtual-machine-administration-guide-8-0/managing-virtual-machinesvsphere-vm-admin/adding-and-removing-virtual-machinesvsphere-vm-admin.html#GUID-376174FE-F936-4BE4-B8C2-48EED42F110B-en["移除並重新登錄 VM 和 VM 範本"]。
 . 刪除FlexVol磁碟區。參考 https://docs.netapp.com/us-en/ontap/volumes/delete-flexvol-task.html["刪除FlexVol 一個流通量"]。在 CLI 命令中輸入確切的FlexVol volume名稱以刪除磁碟區。
-. 如果是 iSCSI 部署，請從 ONTAP 儲存系統刪除 SAN igroup 。請參閱 https://docs.netapp.com/us-en/ontap/san-admin/manage-san-initiators-task.html["檢視及管理SAN啟動器和群組"]。
+. 對於 iSCSI 部署，請從 ONTAP 儲存設備後端刪除 SAN igroup。請參閱 https://docs.netapp.com/us-en/ontap/san-admin/manage-san-initiators-task.html["檢視及管理SAN啟動器和群組"]。
 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enable ONTAP tools services, enable VASA provider, enable SRA service, vVols service configuration 
 summary: 啟用選購的 ONTAP tools 服務，包括 VASA Provider、vVols 組態導入和災難恢復 （SRA）。 
 ---
-= 啟用 ONTAP tools 服務
+= 在 ONTAP tools Manager 中啟用選用服務
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

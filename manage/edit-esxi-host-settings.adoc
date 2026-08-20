@@ -11,23 +11,23 @@ summary: 從 ONTAP tools 儀表板編輯 ESXi 主機設定。
 
 
 [role="lead"]
-使用 VMware vSphere 中的ONTAP工具儀表板來識別配置問題、選擇 ESXi 主機、查看NetApp建議的設定並套用它們。
+使用 VMware vSphere 中的 ONTAP tools 儀表板來識別組態問題、審查NetApp針對所選 ESXi 主機的建議設定，並套用這些設定。
 
 .開始之前
 ESXi 主機系統 portlet 顯示 ESXi 主機設定有問題。選擇問題以查看主機名稱或 IP 位址。
 
 .步驟
-. 登入 vSphere 用戶端。
-. 在捷徑頁面中，選取外掛程式區段下方的 * NetApp ONTAP tools* 。
-. 前往 VMware vSphere 外掛程式 ONTAP 工具概觀（儀表板）中的 * ESXi 主機相容性 * 入口小工具。
-. 選取 * 套用建議的設定 * 連結。
-. 在「應用程式推薦主機設定」視窗中，選擇要使用NetApp推薦主機設定的主機，然後選擇「下一步」。
+. 登入 vSphere Client。
+. 在「捷徑」頁面上，選取「外掛」區段下的 *NetApp ONTAP tools*。
+. 前往 ONTAP tools for VMware vSphere 外掛的總覽儀表板上的 *ESXi 主機法規遵循* portlet。
+. 選擇*套用建議設定*連結。
+. 在「套用推薦主機設定」視窗中，選擇要套用 NetApp 建議主機設定的主機，然後選擇「下一步」。
 +
 
 NOTE: 您可以展開 ESXi 主機以查看目前的值。
 
-. 在「設定」頁面中、視需要選取建議的值。
-. 在摘要窗格中，檢查值並選擇 * 完成 * 。您可以在最近的工作面板中追蹤進度。
+. 在「設定」頁面上，根據需要選擇建議值。
+. 在總結窗格中，檢查各項值並選擇「完成」。您可以在「最近任務」面板中追蹤進度。
 
 
 .相關資訊

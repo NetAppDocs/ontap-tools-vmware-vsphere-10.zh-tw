@@ -11,7 +11,7 @@ summary: 刪除 NFS、VMFS 或 vVols 資料存放區，並在移除前審查使�
 
 
 [role="lead"]
-使用此工作，透過 vCenter Server 中的 ONTAP tools 來刪除 NFS、VMFS 或 vVols 資料儲存庫。刪除行為和清理選項因資料儲存庫類型而異。
+使用 ONTAP tools 在 vCenter Server 中刪除 NFS、VMFS 或 vVols 資料存放區。刪除行為和清理選項因資料存放區類型而異。
 
 .NFS 和 VMFS 資料存放區的刪除行為
 * 您無法刪除虛擬機器使用的資料儲存。
@@ -24,7 +24,7 @@ summary: 刪除 NFS、VMFS 或 vVols 資料存放區，並在移除前審查使�
 * vVol 容器已卸載。
 * 如果 igroup 未使用，則會從 igroup 中移除其啟動器。
 * vVol 容器已被刪除。
-* 彈性卷留在儲存陣列上。
+* FlexVol® 磁碟區保留在儲存設備後端。
 
 
 對於 vVols 資料存放區，只有當所選資料存放區上不存在任何 vVols 時，才能刪除該資料存放區。
@@ -50,7 +50,7 @@ summary: 刪除 NFS、VMFS 或 vVols 資料存放區，並在移除前審查使�
 |===
 .步驟
 . 登入 vSphere Client。
-. 右鍵點選主機系統、主機叢集或資料中心，然後選擇 * NetApp ONTAP工具* > * 刪除資料儲存*。
+. 右鍵點選主機系統、主機叢集或資料中心，然後選擇 *NetApp ONTAP tools* > *刪除資料存放區*。
 +
 
 NOTE: 您無法刪除虛擬機器使用的資料存放區。請先將虛擬機器移至另一個資料存放區，再進行刪除。

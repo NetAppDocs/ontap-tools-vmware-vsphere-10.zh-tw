@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ONTAP tools maintenance console, appliance system management, support bundle generation, TLS and network configuration 
 summary: 管理 ONTAP tools 組態、重設密碼、產生支援套件及設定 TLS 設定。 
 ---
-= 了解 ONTAP tools 維護主控台
+= ONTAP tools 維護主控台
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,12 +13,12 @@ summary: 管理 ONTAP tools 組態、重設密碼、產生支援套件及設定 
 [role="lead"]
 ONTAP tools for VMware vSphere的維護控制台可讓您管理應用程式、系統和網路設定。您可以更新管理員和維護密碼、產生支援包、設定日誌等級、管理 TLS 設定以及啟用遠端診斷。
 
-部署適用ONTAP tools for VMware vSphere後，如果無法存取維護控制台，請從 vCenter Server 安裝 VMware 工具。使用以下方式登入 `maint`部署期間設定的使用者名稱和密碼。使用 *nano* 在維護控制台或 root 登入控制台中編輯檔案。
+部署 ONTAP tools for VMware vSphere 後，如果維護主控台無法存取，請從 vCenter Server 安裝 VMware Tools。使用 `maint`部署期間設定的使用者名稱和密碼登入。在維護主控台或根目錄登入主控台中使用 *nano* 編輯檔案。
 
 
-NOTE: 您應該設定的密碼 `diag` 使用者同時啟用遠端診斷。
+NOTE: 啟用遠端診斷時，請為  `diag` 使用者設定密碼。
 
-您應該使用部署的 ONTAP 工具 for VMware vSphere 的 * Summary （摘要） * 索引標籤來存取維護主控台。選取image:../media/launch-maintenance-console.gif["播放按鈕"]時，維護主控台即會啟動。
+使用已部署的 ONTAP tools for VMware vSphere 的*摘要*索引標籤來存取維護主控台。選擇 image:../media/launch-maintenance-console.gif["播放按鈕"] 以啟動維護主控台。
 
 |===
 

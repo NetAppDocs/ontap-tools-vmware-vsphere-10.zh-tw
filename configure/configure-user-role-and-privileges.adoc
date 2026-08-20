@@ -11,10 +11,10 @@ summary: 使用 ONTAP tools 和 ONTAP System Manager 中的 JSON 檔案來設定
 
 
 [role="lead"]
-使用此部分配置適用ONTAP tools for VMware vSphere和ONTAP System Manager 的 ONTAP 工具，以設定儲存後端的ONTAP使用者角色和權限。您可以使用提供的 JSON 檔案指派角色，手動建立使用者和角色，並為非管理員帳戶套用所需的最低權限。
+使用 ONTAP tools for VMware vSphere 和 ONTAP System Manager，為儲存設備後端設定 ONTAP 使用者角色和 Privileges。您可以使用提供的 JSON 檔案指派角色、手動建立使用者和角色，或為非管理員帳戶套用所需的最低 Privileges。
 
 .開始之前
-* 使用 _\https://<ONTAPtoolsIP>:8443/virtualization/user-privileges/users_roles.zip_ 從ONTAP tools for VMware vSphere下載ONTAPPrivileges檔。下載 zip 檔案後，您會發現兩個 JSON 檔案。設定ASA r2 系統時使用ASA r2 特定的 JSON 檔案。
+* 從 ONTAP tools for VMware vSphere 下載 ONTAP Privileges 檔案，網址為 _\https://<ONTAPtoolsIP>:8443/virtualization/user-privileges/users_roles.zip_。此 zip 檔案包含兩個 JSON 檔案。設定 ASA r2 系統時，請使用 ASA r2 專用的 JSON 檔案。
 +
 
 NOTE: 您可以在叢集層級或直接在儲存虛擬機器 (SVM) 層級建立使用者。如果您不使用 user_roles.json 文件，請確保使用者俱有所需的最低 SVM 權限。
@@ -35,7 +35,7 @@ NOTE: 您可以在叢集層級或直接在儲存虛擬機器 (SVM) 層級建立�
 +
 ONTAP工具會自動填入產品欄位。
 
-.. 從下拉式選單中選擇產品功能為*VSC、VASA Provider 和 SRA*。
+.. 從下拉清單中選擇產品功能為 *VSC、VASA Provider 和 SRA*。
 +
 ONTAP工具會根據您選擇的產品功能自動填入 *角色* 欄位。
 
@@ -104,10 +104,10 @@ sti115_vsim_ucs630f_aggr1 vserver show-aggregates                               
 
 
 
-[[list-of-minimum-privileges-required-for-non-admin-global-scoped-cluster-user]]
-=== 非管理員全域範圍叢集使用者所需的最低權限清單
+[[list-of-minimum-privileges-required-for-a-non-admin-global-scoped-cluster-user]]
+=== 非管理員全域範圍叢集使用者所需的最低 Privileges 清單
 
-本頁列出了沒有 JSON 檔案的非管理員全域作用域叢集使用者所需的最低權限。如果叢集處於本機範圍內，請使用 JSON 檔案建立用戶，因為適用ONTAP tools for VMware vSphere需要的不僅僅是在ONTAP上進行設定的讀取權限。
+本頁列出非管理員全域範圍叢集使用者在沒有 JSON 檔案的情況下所需的最低權限。如果叢集處於本機範圍，請使用 JSON 檔案建立使用者，因為 ONTAP tools for VMware vSphere 在 ONTAP 上進行佈建時，僅擁有讀取權限是不夠的。
 
 您可以使用 API 存取功能：
 

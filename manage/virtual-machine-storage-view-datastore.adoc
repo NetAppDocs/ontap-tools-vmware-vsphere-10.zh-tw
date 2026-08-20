@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: virtual machine storage view, vVols list per VM, ONTAP tools VM storage details, datastore usage by virtual machine 
 summary: 從儲存設備檢視查看虛擬機器建立的 vVols 清單。 
 ---
-= ONTAP 工具中的虛擬機器儲存視圖
+= 在 ONTAP tools 中檢視虛擬機器儲存設備詳細資訊
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-儲存視圖顯示虛擬機器建立的vVols清單。
+使用儲存設備檢視查看與虛擬機器關聯的 vVols。
 
 
 NOTE: 此視圖適用於至少有一個來自ONTAP tools for VMware vSphere管理的vVols資料儲存的磁碟的虛擬機器。
@@ -19,8 +19,8 @@ NOTE: 此視圖適用於至少有一個來自ONTAP tools for VMware vSphere管�
 .步驟
 . 從 vSphere Client 轉到虛擬機器。
 . 選取右窗格中的 * 監控 * 標籤。
-. 選擇 * NetApp ONTAP tools* > * Storage* 。「儲存 * 」詳細資料會顯示在右窗格中。您可以看到 VM 上存在的 vVols 清單。
+. 選取 *NetApp ONTAP tools* > *儲存設備*。*儲存設備* 詳細資料會顯示在右側窗格中。您可以檢視虛擬機器上的 vVols 清單。
 +
-您可以使用「管理欄」選項來隱藏或顯示不同的欄。
+您可以使用「Manage Columns」選項來隱藏或顯示欄位。
 
 

@@ -11,7 +11,7 @@ summary: 變更 vCenter Server 中 ESXi 主機的預設 nconnect 值。
 
 
 [role="lead"]
-使用此工作變更所選 vCenter 伺服器中 ESXi 主機的預設連線數 (nconnect)。
+變更所選 vCenter Server 中 ESXi 主機的預設連線數 (nconnect)。
 
 .關於這項工作
 * 本頁設定的 nconnect 值是主機等級的預設值。

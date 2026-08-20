@@ -11,13 +11,13 @@ summary: 將虛擬機器從 NFS 和 VMFS 資料存放區遷移至 vVols 資料�
 
 
 [role="lead"]
-您可以將虛擬機器從 NFS 和 VMFS 資料存放區移轉至虛擬磁碟區（ vVols ）資料存放區、以利用原則型 VM 管理和其他 vVols 功能。vVols資料存放區可讓您滿足不斷增加的工作負載需求。
+您可以將虛擬機器從 NFS 或 VMFS 資料存放區移轉到 Virtual Volumes （vVols）資料存放區，以使用原則型 VM 管理和其他 vVols 功能。
 
 .開始之前
 請確認您計劃移轉的任何虛擬機器上均未執行 VASA Provider。如果您將執行 VASA Provider 的虛擬機器移轉到 vVols 資料存放區，則無法執行任何管理作業，包括啟動 vVols 資料存放區上的虛擬機器。
 
 .關於這項工作
-當您從 NFS 和 VMFS 資料存放區移轉至 vVols 資料存放區時、 vCenter Server 會使用 vStorage API 進行陣列整合（ VAAI ）、從 VMFS 資料存放區移除資料、而非從 NFS VMDK 檔案移除資料。VAAI通常會卸載、減少主機上的負載。
+當您從 NFS 或 VMFS 資料儲存移轉到 vVols 資料儲存時，vCenter 伺服器會使用 vStorage 陣列整合 API （VAAI） 對從 VMFS 資料儲存移轉的資料進行卸載，但不會對從 NFS VMDK 檔案移轉的資料進行卸載。VAAI 卸載通常會降低主機負載。
 
 .步驟
 . 在您要移轉的虛擬機器上按一下滑鼠右鍵，然後選取 * 移轉 * 。

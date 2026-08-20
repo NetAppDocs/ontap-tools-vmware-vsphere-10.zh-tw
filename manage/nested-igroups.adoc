@@ -4,16 +4,16 @@ sidebar: sidebar
 keywords: ONTAP tools igroups, nested igroup management, initiator group handling, VMware host access mapping 
 summary: 了解 ONTAP tools 如何表示和管理巢狀 igroup，以實現高效的主機和資料存放區映射。 
 ---
-= ONTAP tools 如何管理 igroups
+= ONTAP tools 中的巢狀 igroup 管理
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-如果您同時管理 ONTAP tools 虛擬機器和 ONTAP 儲存設備系統，則需要了解 igroup 的行為，尤其是在將資料儲存體從非 ONTAP tools 管理的環境移轉到 ONTAP tools 代管的環境時。ONTAP tools for VMware vSphere 使用巢狀 igroup 模型來表示和管理 igroup，了解此模型有助於您理解早期版本與目前實作之間的行為差異。
+如果您將資料儲存區從非 ONTAP tools 代管的環境移動到由其代管的環境，請了解 igroup 的運作行為。ONTAP tools for VMware vSphere 採用巢狀 igroup 模型，這有助於解釋較早版本與目前實作之間的行為差異。
 
-從 ONTAP tools for VMware vSphere 10.4 開始，ONTAP tools 會自動建立和維護 ONTAP 和 vCenter 物件，從而簡化 VMware 資料中心環境中的資料存放區管理。從 ONTAP tools for VMware vSphere 10.5 P2 開始，遷移後的 igroup 在不再使用時也會自動刪除。
+從 ONTAP tools for VMware vSphere 10.4 開始，ONTAP tools 會自動建立並維護 ONTAP 和 vCenter 物件，從而簡化 VMware 資料中心環境中的資料存放區管理。從 ONTAP tools for VMware vSphere 10.5 P2 開始，ONTAP tools 也會在移轉的 igroup 不再使用時自動將其刪除。
 
 
 

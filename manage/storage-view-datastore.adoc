@@ -11,7 +11,7 @@ summary: 在 ONTAP tools for VMware vSphere 的 ONTAP Storage 頁面中檢視資
 
 
 [role="lead"]
-ONTAP tools for VMware vSphere 在「設定」標籤上顯示資料存放區及其 Volume 的 ONTAP 儲存端檢視，包括每種資料存放區類型的儲存設備後端、彙總及 Volume 詳細資料。
+ONTAP tools for VMware vSphere 在 *Configure* 索引標籤上顯示資料存放區及其 Volume 的 ONTAP 端詳細資料，包括每種資料存放區類型的儲存設備後端、彙總和 Volume 詳細資料。
 
 .步驟
 . 在 vSphere Client 清單中，選取資料存放區。

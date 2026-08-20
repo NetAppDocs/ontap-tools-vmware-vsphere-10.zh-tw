@@ -11,10 +11,10 @@ summary: 將 vVols 資料儲存裝載到其他主機，以便在虛擬化環境�
 
 
 [role="lead"]
-您可以將 VMware Virtual Volumes （vVols） 資料儲存裝載到一個或多個其他主機，以便為其他主機提供儲存設備存取。您只能透過主機層級 API 取下 vVols 資料儲存。不支援叢集層級資料儲存取下。
+將 VMware Virtual Volumes （vVols） 資料存放區裝載到一個或多個額外主機，以擴充儲存設備存取。您只能透過主機層級 API 取下 vVols 資料存放區。不支援叢集層級資料存放區取下。
 
 
-NOTE: 新增主機後，請等待已排程的主機探索完成，該主機才會顯示在 ONTAP tools 中。或者，您也可以從 NetApp ONTAP tools 總覽畫面手動執行探索。如需如何將 ESXi 主機新增至 vSphere 叢集的相關資訊，請參閱 https://techdocs.broadcom.com/["Broadcom 技術文件"]。
+NOTE: 新增主機後，請等待已排程的主機探索程序完成，之後主機才會出現在 ONTAP tools 中。或者，您也可以從 NetApp ONTAP tools 總覽畫面手動執行探索。如需將 ESXi 主機新增至 vSphere 叢集的相關資訊，請參閱 https://techdocs.broadcom.com/["Broadcom 技術文件"]。
 
 .步驟
 . 從 vSphere Client 首頁、選取 * 主機與叢集 * 。

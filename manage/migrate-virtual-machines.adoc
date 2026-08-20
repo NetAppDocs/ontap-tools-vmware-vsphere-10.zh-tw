@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: virtual machine migration considerations, ONTAP tools VM cloning guidance, VMware storage vMotion considerations, VM migration best practices 
 summary: 在遷移資料中心中現有的虛擬機器之前，請先審查關鍵注意事項。 
 ---
-= 了解 ONTAP tools 中的虛擬機器移轉和複製
+= ONTAP tools 中的虛擬機器移轉與複製
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-ONTAP tools for VMware vSphere 支援所有主要類型的虛擬機器移轉，包括僅運算移轉（vMotion）、僅儲存設備移轉（Storage vMotion）以及跨所有資料存放區的運算與儲存設備組合移轉。了解這些移轉和複製的注意事項及最佳實務，有助於您無論使用何種底層資料存放區類型，都能達成成功的結果。
+審查 ONTAP tools for VMware vSphere 的虛擬機器移轉和複製注意事項，包括僅運算 （vMotion）、僅儲存設備 （Storage vMotion），以及跨支援的資料存放區類型的運算和儲存設備組合移轉。
 
 
 

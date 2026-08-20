@@ -6,17 +6,21 @@ summary: 設定 ESXi 主機多路徑和 HBA 逾時設定，以獲得最佳 NetAp
 ---
 = 在 ONTAP 工具中設定 ESXi 主機設定
 :allow-uri-read: 
+:firstname: = Configure ESXi host settings in ONTAP tools
+:author: = Configure ESXi host settings in ONTAP tools
+:authorinitials: =
+:authors: = Configure ESXi host settings in ONTAP tools
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-配置 ESXi 伺服器多路徑和逾時設定有助於維護資料可用性和完整性。如果主路徑不可用，它可以自動故障轉移到備份儲存路徑。
+設定 ESXi 主機的多重路徑和逾時設定有助於維護資料可用度和完整性。如果主要路徑無法使用，它可以自動容錯移轉至備份儲存設備路徑。
 
 
 
-[[configure-esxi-server-multipath-and-timeout-settings]]
-== 設定 ESXi 伺服器多重路徑和逾時設定
+[[apply-recommended-esxi-host-settings]]
+== 套用建議的 ESXi 主機設定
 
 VMware vSphere的支援VMware vSphere工具可檢查及設定ESXi主機多重路徑設定、以及最適合搭配NetApp儲存系統使用的HBA逾時設定。ONTAP
 
@@ -27,7 +31,7 @@ VMware vSphere的支援VMware vSphere工具可檢查及設定ESXi主機多重路
 . 從 VMware vSphere Web 用戶端首頁，選取 * 主機與叢集 * 。
 . 在 VMware vSphere Web Client 的捷徑頁面上，選取外掛程式區段下方的 * NetApp ONTAP tools* 。
 . 前往 VMware vSphere 外掛程式 ONTAP 工具概觀（儀表板）中的 * ESXi 主機相容性 * 卡。
-. 選取 * 套用建議的設定 * 連結。
+. 選擇*套用建議設定*連結。
 . 在「套用建議的主機設定」視窗中，選擇要更新以使用NetApp推薦設定的主機，然後選擇「下一步」。
 +
 
@@ -51,7 +55,7 @@ NOTE: 您可以展開 ESXi 主機以查看目前的值。
 [[hbacna-adapter-settings]]
 === HA/CNA 介面卡設定
 
-將下列參數設定為預設值：
+ONTAP tools 將以下參數設定為預設值：
 
 * disk.QFullSampleSize.
 * disk.QFullThreshold
@@ -64,7 +68,7 @@ NOTE: 您可以展開 ESXi 主機以查看目前的值。
 [[mpio-settings]]
 === MPIO 設定
 
-MPIO 設定為NetApp儲存系統選擇最佳路徑。  MPIO 設定選擇最佳路徑並使用它。
+MPIO 設定會選擇並使用 NetApp 儲存系統的最佳可用路徑。
 
 對於高效能環境或使用單一 LUN 資料儲存進行測試時，請調整循環 (VMW_PSP_RR) 路徑選擇策略 (PSP) 的負載平衡設定以提高效能。將預設 IOPS 值從 1000 設定為 1。
 
@@ -77,8 +81,6 @@ NOTE: MPIO 設定不適用於 NVMe、NVMe/FC 和 NVMe/TCP 協定。
 === NFS設定
 
 |===
-
-
 | 參數 | 將此值設為 ... 
 
 

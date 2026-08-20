@@ -14,8 +14,8 @@ summary: 在 vCenter Server 中設定 Volume 和彙總容量等級的臨界值�
 您可以設定儲存設備閾值，以便在 Volume 或彙總容量達到一定層級時，在 vCenter Server 中接收通知。
 
 .步驟
-. 登入 vSphere 用戶端。
-. 在捷徑頁面中，選取外掛程式區段下方的 * NetApp ONTAP tools* 。
+. 登入 vSphere Client。
+. 在「快捷方式」頁面上，在「外掛」部分選擇「NetApp ONTAP tools」。
 . 在ONTAP工具的左側窗格中，前往 *設定* > *閾值設定* > *編輯*。
 . 在「編輯臨界值」視窗中，分別在「接近滿」和「滿」欄位中輸入所需值，然後選擇「儲存」。
 +
