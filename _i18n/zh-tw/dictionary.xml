@@ -1838,7 +1838,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="e6452e8e9c18000281aae81760220823" category="list-text">從診斷 shell 取得更新後的 vCenter 憑證：</block>
   <block id="60576f3967d7db42ad4e62e1f5d6edc4" category="paragraph"><block ref="60576f3967d7db42ad4e62e1f5d6edc4" category="inline-link-macro-rx"></block></block>
   <block id="15a0f68745546e63813c4df1c8d72ba3" category="paragraph">在使用ONTAP tools for VMware vSphere 10 時，需要考慮兩種不同的 RBAC 環境。ONTAP tools for VMware vSphere需要在 vCenter 和ONTAP中都擁有特定的權限才能執行操作。雖然ONTAP工具可以自動執行儲存管理任務，但它不會在 vCenter 或ONTAP中建立使用者帳戶。服務帳戶必須由 vSphere 管理員根據需要建立。本文檔為管理員提供指導，以便分配必要的角色和權限，從而有效地管理ONTAP工具。</block>
-  <block id="85f52c3a4cf68ed98d733bd16d720806" category="doc">ONTAP tools REST API 參考</block>
   <block id="3e6657795439746877b7825a3d38e9ee" category="doc">進行第一次 ONTAP tools REST API 呼叫</block>
   <block id="d3aa1a65fd672d6117cbd17f19ef3713" category="doc">了解 ONTAP tools REST API</block>
   <block id="5a605ad8e95d1a9f3283371391a80135" category="doc">ONTAP tools REST API 實作詳情</block>
@@ -1851,9 +1850,7 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="95d5cac81150e067965210d361bbfb2f" category="doc">在 ONTAP 工具中建立資料存放區</block>
   <block id="287275745bfa919e80da387835621319" category="doc">在 ONTAP tools 中探索儲存系統和主機</block>
   <block id="e697d4e8f25b738f21f477e610eec27a" category="doc">在 ONTAP 工具中將 VASA Provider 註冊到 vCenter Server 執行個體</block>
-  <block id="7f3151e275294a9f61ed00de889273e2" category="doc">疑難排解 ONTAP 工具部署錯誤</block>
   <block id="294a9fea24dd193e76e09982dc7598f8" category="doc">ONTAP 工具的高可用性部署工作流程</block>
-  <block id="3d7fe3e43f9f24fffe5ed0d546d12f13" category="doc">部署 ONTAP tools</block>
   <block id="a852f7bb9ca4b2463cb324f20a03a33f" category="doc">ONTAP tools 的部署前要求</block>
   <block id="b5d2d3a15a4fc37813f0e8d92c8df16d" category="cell">最高可達 12K</block>
   <block id="1075c55fd78c4ee15842761b6be2c749" category="cell">最高可達 24K</block>
@@ -2992,7 +2989,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="c0f9e2b5a70cb22ffbaec35e0963504a" category="cell">此卡片顯示按效能指標排序的前 10 個資料儲存區。您可以選擇標題，以遞增或遞減順序排列所選指標的前 10 個資料儲存區。卡片上的排序和篩選變更將保留，直到您變更或清除瀏覽器快取。使用「資料儲存區類型」下拉式清單選擇資料儲存區類型：NFS、VMFS 或 vVols。</block>
   <block id="12de44e04cf272eb16b72ae12e77adcd" category="paragraph">當您首次在 vSphere Client 中產品發表 ONTAP tools for VMware vSphere 時，它會自動探索 ESXi 主機、其關聯的 LUN 和 NFS 匯出，以及擁有這些資源的 NetApp 儲存系統。</block>
   <block id="87aa71b46d12fe17cac2c0b855f379a3" category="list-text">右鍵點選所需的資料中心，然後選擇 *NetApp ONTAP tools* &gt; *更新主機和儲存設備資料*。</block>
-  <block id="f5eb38e0d7510dc50906995da5266ad4" category="doc">使用 ONTAP tools 安裝 NFS VAAI 外掛</block>
   <block id="aa73e1a501dc6e18d7c4e895589d2005" category="paragraph">NFS vStorage API for Array Integration （NFS VAAI） 外掛將 VMware vSphere 連接至 NFS 儲存陣列，使儲存陣列能夠處理某些儲存設備作業，而非由 ESXi 主機處理。使用 ONTAP tools for VMware vSphere 安裝 VAAI 外掛。</block>
   <block id="a3b203702a6097601122fe2faf910248" category="list-text">在「外掛」部分下，選擇「捷徑」&gt;「NetApp ONTAP tools」。</block>
   <block id="7c0e08714c4cb3e8da61be850118b1f9" category="paragraph">輸入 NTP 伺服器詳細資料以同步 ONTAP tools 應用裝置時脈。</block>
@@ -3052,7 +3048,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="3e7ddae4cf1db8d9c002c8ea20899198" category="doc">在 ONTAP tools 中擴充 vVols 資料儲存庫</block>
   <block id="b0b62f1236c5866a65b083c891ba140b" category="paragraph">在 vCenter 物件檢視中右鍵點選資料存放區物件時，外掛區段會顯示 ONTAP tools for VMware vSphere 支援的行動。可用的行動取決於資料存放區類型和目前使用者的 Privileges。</block>
   <block id="95e9c1a7d2cfd152c5a51f8703f540dc" category="admonition">此程序不適用於基於 ASA r2 系統的 vVols 資料儲存。</block>
-  <block id="eb50753fe343f5a3bd1299b243db9237" category="doc">ONTAP tools 中的 Igroup 和匯出原則工作流程</block>
   <block id="f8b2875ad5502793710c9bdefd26c541" category="paragraph">利用這些資訊了解 ONTAP tools for VMware vSphere 如何建立和管理資料存放區存取的 igroup 和匯出原則。</block>
   <block id="e71c2200ee51ec842f21452effc78de6" category="paragraph">在 ONTAP tools for VMware vSphere 9.x 中，igroup 的建立和管理採用扁平結構，vCenter 中的每個資料存放區都關聯到單一 igroup。這種模型限制了 igroup 在多個資料存放區之間的靈活度和重複使用性。ONTAP tools for VMware vSphere 10.4 引入了巢狀 igroup，其中 vCenter 中的每個資料存放區都關聯到一個父 igroup，而每個主機則連結到該父 igroup 下的子 igroup。您可以定義具有使用者自訂名稱的自訂父 igroup，以便在多個資料存放區之間重複使用，從而簡化 igroup 管理。請利用這些資訊，了解 ONTAP tools for VMware vSphere 如何透過 igroup 工作流程管理 LUN 和資料存放區。不同的工作流程會產生不同的 igroup 組態，如下列範例所示：</block>
   <block id="b4620fbb34dbdb976eca43eee22b9fc4" category="paragraph">ONTAP tools for VMware vSphere 建立子 igroup host2Igroup 並將其新增至現有的父 igroup DS1Igroup。</block>
@@ -3129,4 +3124,18 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="ae70d77fff05174738fe4cb76f19e0a2" category="doc">在 ONTAP tools 中檢視虛擬機器儲存設備詳細資訊</block>
   <block id="cac5f85fabd72ec42e30d493b57a81da" category="paragraph">使用儲存設備檢視查看與虛擬機器關聯的 vVols。</block>
   <block id="82199557859e59cf6898b255cd98ea3f" category="list-text">選取 *NetApp ONTAP tools* &gt; *儲存設備*。*儲存設備* 詳細資料會顯示在右側窗格中。您可以檢視虛擬機器上的 vVols 清單。</block>
+  <block id="5a66ba13a8dc00ed8bcea0c5323f9dec" category="doc">在 Swagger UI 中檢視 ONTAP tools REST API 文件</block>
+  <block id="152eb457072cc3f0d1daeb3318bbc7f4" category="doc">在 ONTAP 工具中將儲存後端與 vCenter Server 執行個體建立關聯</block>
+  <block id="8761e266bba00679b7078b2ece451295" category="doc">使用 ONTAP tools 安裝 NFS VAAI 外掛</block>
+  <block id="2476099c83b7793808f5ba708e5b592c" category="doc">ONTAP tools 部署錯誤程式碼</block>
+  <block id="8dee8cc33274cb62a45a4ac35700d849" category="doc">將 ONTAP tools 部署為單節點應用裝置</block>
+  <block id="6d538e124b476aff2397c149a69e279b" category="doc">ONTAP tools 如何管理 igroup 和匯出原則</block>
+  <block id="30e47efa2040640e7c0056e2bfb71a7b" category="doc">ONTAP tools for VMware vSphere 各版本功能比較</block>
+  <block id="ebf11048b18616fbd6ba58d38a1858be" category="cell">094</block>
+  <block id="dc8434651b9231a4a07cd70651df6cb2" category="cell">NTP 組態失敗，系統已回復至 NTPsec。</block>
+  <block id="deffa26efb6f3e7347013d7b1e7145cb" category="paragraph">如果因為 Chrony 安裝故障導致升級失敗：</block>
+  <block id="1b4d213b917b2a9601c255e522c420e3" category="list-text">檢查 Chrony 是否已安裝：</block>
+  <block id="4ea2f2639373a757d002c323f4650ae1" category="list-text">如果 Chrony 已安裝且問題出在您提供的 NTP 伺服器上，請檢查這些伺服器是否可存取：</block>
+  <block id="4db51794b7899f8781b7e514861f9c54" category="paragraph">如果伺服器可連線，則問題與伺服器可連線性無關。如果伺服器確實無法連線，請將其從 ONTAP tools Manager 中移除，並提供可連線的 NTP 伺服器作為替代方案。</block>
+  <block id="58d802804e6af6816051d4101a78cd4b" category="list-text">如果在 NTP 升級過程中因其他問題導致升級失敗，請檢查下列日誌：</block>
 </blocks>

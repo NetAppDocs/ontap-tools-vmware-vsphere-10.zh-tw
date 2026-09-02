@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: deploy ONTAP tools, OVA, content library, single-node configuration 
 summary: 將 ONTAP tools for VMware vSphere 部署為超小型單節點應用裝置。 
 ---
-= 部署 ONTAP tools
+= 將 ONTAP tools 部署為單節點應用裝置
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -119,6 +119,37 @@ NOTE: 本頁提供的錯誤代碼僅供參考。如果錯誤仍然存在或未�
 | 089 | 變更摘要記錄輪轉組態檔的擁有權失敗 | 重試升級。 
 
 
+| 094 | NTP 組態失敗，系統已回復至 NTPsec。  a| 
+如果因為 Chrony 安裝故障導致升級失敗：
+
+. 檢查 Chrony 是否已安裝：
++
+[listing]
+----
+systemctl status chrony
+----
+. 如果 Chrony 已安裝且問題出在您提供的 NTP 伺服器上，請檢查這些伺服器是否可存取：
++
+[listing]
+----
+sudo chronyc -N sources -v
+sudo chronyc tracking
+----
++
+如果伺服器可連線，則問題與伺服器可連線性無關。如果伺服器確實無法連線，請將其從 ONTAP tools Manager 中移除，並提供可連線的 NTP 伺服器作為替代方案。
+
+. 如果在 NTP 升級過程中因其他問題導致升級失敗，請檢查下列日誌：
++
+[listing]
+----
+/var/log/otvng/ansible-perl-errors.log
+/var/log/otvng/ntp_configure.log
+/var/log/ansible-perl-errors.log
+----
+
+
+
+
 | 095 | 作業系統升級失敗 | 作業系統升級無法恢復。ONTAP 工具服務已升級，新的 Pod 將會執行。 
 
 

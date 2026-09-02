@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ONTAP tools feature comparison, VMware vSphere, version upgrade, compatibility, NetApp tools 
 summary: 比較 ONTAP tools for VMware vSphere 9 和 10 的功能，以決定是否要移轉到 ONTAP tools 10.2 或更新版本。 
 ---
-= ONTAP tools for VMware vSphere 9 與 10 功能比較
+= ONTAP tools for VMware vSphere 各版本功能比較
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

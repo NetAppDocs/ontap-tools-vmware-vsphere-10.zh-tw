@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ONTAP tools igroup workflow, export policy management, initiator group mapping, VMware datastore access control 
 summary: 了解 ONTAP tools 如何建立和管理 igroup 及匯出原則，以供資料存放區存取。 
 ---
-= ONTAP tools 中的 Igroup 和匯出原則工作流程
+= ONTAP tools 如何管理 igroup 和匯出原則
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
