@@ -1910,7 +1910,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="6f8b3b7e42dadd9b7806e6e98d7d0a77" category="list-text">vCenter Server 的主網路識別碼（PNID）必須包含在 SAN 詳細資訊中。PNID 和 DNS 名稱應相同，並且可在 DNS 中解析。</block>
   <block id="dbabfcb48125f6c3a069313029fdada8" category="list-text">如需更多資訊，請參閱 VMware 文件：</block>
   <block id="381b5a0822c9882ced35624a3338ea81" category="inline-link">不同解決方案路徑的 vSphere 憑證需求</block>
-  <block id="38e7ce10f91b93ef8eecb43d98853cb3" category="list-text"><block ref="38e7ce10f91b93ef8eecb43d98853cb3" category="inline-link-rx"></block></block>
   <block id="bab39c0d7f700e0dbd68e4761a2c9ac4" category="inline-link">替換 vCenter Machine SSL 憑證自訂憑證授權單位簽署憑證</block>
   <block id="81c3c30e39dc6db9cf179ead4dc53c00" category="list-text"><block ref="81c3c30e39dc6db9cf179ead4dc53c00" category="inline-link-rx"></block></block>
   <block id="4ce004ede8d7c5a94bcc602e81d0dd46" category="inline-link">錯誤：主題備用名稱（SAN）欄位不包含 PNID。請提供有效的證書</block>
@@ -3138,4 +3137,5 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="4ea2f2639373a757d002c323f4650ae1" category="list-text">如果 Chrony 已安裝且問題出在您提供的 NTP 伺服器上，請檢查這些伺服器是否可存取：</block>
   <block id="4db51794b7899f8781b7e514861f9c54" category="paragraph">如果伺服器可連線，則問題與伺服器可連線性無關。如果伺服器確實無法連線，請將其從 ONTAP tools Manager 中移除，並提供可連線的 NTP 伺服器作為替代方案。</block>
   <block id="58d802804e6af6816051d4101a78cd4b" category="list-text">如果在 NTP 升級過程中因其他問題導致升級失敗，請檢查下列日誌：</block>
+  <block id="f5589bd09ceeb2368f74d5725fa2dcc7" category="list-text"><block ref="f5589bd09ceeb2368f74d5725fa2dcc7" category="inline-link-rx"></block></block>
 </blocks>

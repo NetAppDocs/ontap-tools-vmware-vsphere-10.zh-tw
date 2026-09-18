@@ -40,7 +40,7 @@ X509v3 extensions:
 * 使用完整網域名稱 (FQDN) 部署 vCenter Server，並確保憑證中的 SAN 包含 DNS Name=machine_FQDN，以獲得最佳相容性和支援。
 * 如需更多資訊，請參閱 VMware 文件：
 +
-** https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-authentication/vsphere-security-certificates-authentication/certificate-requirements-for-different-solution-paths-authentication.html["不同解決方案路徑的 vSphere 憑證需求"]
+** https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-authentication/vsphere-security-certificates/certificate-requirements-for-different-solution-paths.html["不同解決方案路徑的 vSphere 憑證需求"]
 ** https://knowledge.broadcom.com/external/article/316601/replace-vcenter-machine-ssl-certificate.html["替換 vCenter Machine SSL 憑證自訂憑證授權單位簽署憑證"]
 ** https://knowledge.broadcom.com/external/article/406282/error-subject-alternate-name-san-field-d.html["錯誤：主題備用名稱（SAN）欄位不包含 PNID。請提供有效的證書"]
 
