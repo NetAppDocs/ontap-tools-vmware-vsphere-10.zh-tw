@@ -850,7 +850,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="cd976ca49583a8080802261ae61aa5a0" category="list-text">選取您要掛載的資料存放區，然後選取 * 掛載 * 。</block>
   <block id="267de19ac03e71a99875cacf87972c29" category="list-text">從側邊列選取 * 設定 * 。</block>
   <block id="f0833ce92c23eb056dde238669740988" category="list-text"><block ref="523efdef8100699453c6b07ce8f4921c" category="inline-link-macro-rx"></block>在適用於 VMware vSphere 的 ONTAP 工具上建立。</block>
-  <block id="b2aac3a919762e9dd0f89ef1b3999500" category="list-text">刪除所有儲存設備後端。請參閱 <block ref="c97897721457f9108ce9caf2b3f0d235" category="inline-link-macro-rx"></block>。</block>
   <block id="11e59432e8c34141d30396d503dc7c73" category="list-text">選取 * 儲存複寫介面卡 * 。</block>
   <block id="51853e46fcef4ee8c2608d1c9995935a" category="list-text">確認您知道刪除介面卡的結果，然後選取 * 刪除 * 。</block>
   <block id="7ecf25a7ff85dee8180a09f0f8a71a56" category="list-text">在 VMware Live Site Recovery 中，選擇 *Array Manager* &gt; *Add Array Manager* 。</block>
@@ -938,9 +937,7 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="c961da7f498e50ff48715252d593d099" category="cell">* 可用資訊 *</block>
   <block id="b5380e34617914719b059f6d55b97b66" category="cell">VMFS 資料存放區</block>
   <block id="e122a7a507ac1f580cc5b9f2632a851c" category="cell">VVols 資料存放區</block>
-  <block id="5a43e80953e87c7df463deaedcab9879" category="section-title">將儲存設備後端與 vCenter Server 執行個體分離</block>
   <block id="9a9ef84d994bd8c482cd3e98feba5977" category="list-text">選擇 * 取消關聯儲存後端 * 。</block>
-  <block id="02a713a12e2b216b65a52896d0728a0a" category="list-text">取消所有儲存後端與 vCenter Server 執行個體的關聯。請參閱 <block ref="8f766e539ddb39a7c07c0c84dded1670" category="inline-link-macro-rx"></block>。</block>
   <block id="f75d6048a8fcc9f4822dcc0f5eef23d2" category="inline-link-macro">在 VMware Live Site Recovery 應用裝置上設定 SRA</block>
   <block id="7f17c0be45130bf2b12d5bf5ec2ead98" category="list-text">您應該已<block ref="d6f1afa70d6145a212d9dc6bc8a2fa64" prefix=" " category="inline-code"></block>從下載過 SRA 介面卡檔案<block ref="db8756d7f65d6a8e593e69ba45adbb2e" category="inline-link-rx"></block>。</block>
   <block id="bc7d4efb983c07650bf67ebd23206b42" category="doc">瞭解適用於 VMware vSphere 10 RBAC 的 ONTAP 工具</block>
@@ -1047,7 +1044,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="cdb9fe2a322209ab095ba01e8388697d" category="list-text">從 VMware Live Site Recovery 移除 SRA 介面卡：</block>
   <block id="1435a5cf1efdb19e83d0f140a2ca4f4f" category="list-text">以管理員身分使用連接埠 5480 登入 VMware Live Site Recovery 應用裝置管理介面。</block>
   <block id="2ec2edd0a7db2ac9b3f23b9db6dda124" category="list-text">選取適當的 SRA 卡，然後從下拉式功能表中選取 * 刪除 * 。</block>
-  <block id="d34cead72810ffa475c9303607018d30" category="list-text">刪除已登入 VMware vSphere ONTAP 工具的 vCenter 伺服器執行個體。請參閱 <block ref="71e9ea3cb5165d1231d572643ddb35cb" category="inline-link-macro-rx"></block>。</block>
   <block id="3014a29195e86ef40c71c31cde3ad9e7" category="list-text">從 vCenter Server 關閉適用於 VMware vSphere VM 的 ONTAP 工具，然後刪除 VM 。</block>
   <block id="056110d308abee4fb5305efd8c8994d0" category="paragraph"><block ref="056110d308abee4fb5305efd8c8994d0" category="inline-link-macro-rx"></block></block>
   <block id="af97740fd99b637615a0fe129d5fc42f" category="list-text">從網路瀏覽器啟動 ONTAP 工具管理員：<block ref="a2fad8db83c338dbc95675bd05c70607" prefix=" " category="inline-code"></block></block>
@@ -2698,7 +2694,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="1ecc48e7d703ccee72239ae065025e8b" category="list-text">僅保護主機叢集中選定的資料存放區。</block>
   <block id="36c8c92fa35e1f64c72f630ce6180299" category="list-text">將選定的資料存放區分組到保護群組。</block>
   <block id="7d99b8f7ded10f4f2921239a1a9c9a43" category="list-text">在保護群組層級套用 SnapMirror 關係和原則。</block>
-  <block id="76b1a8b712394da72e5366b816d6419b" category="list-text">在同一叢集中，對不同的資料存放區群組採用不同的保護方法。</block>
   <block id="1947b0d44f9e85eca7623e1cab6b8bae" category="paragraph">此功能僅支援使用 iSCSI 或 FC 協定的 VMFS 資料儲存。</block>
   <block id="632923e99d3fb84490cf1fed11f3d12a" category="paragraph">您可以對符合條件的資料儲存使用下列原則類型：</block>
   <block id="b1f095471f89f11c20fe033a35afe72f" category="list-text">*AutomatedFailOverDuplex （AFD）*</block>
@@ -2730,7 +2725,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="ab5d207d269446dad86a9b15cec92d6a" category="list-text">不支援自訂非同步原則。請使用預設的 ONTAP 非同步原則。</block>
   <block id="224a5056830c20959480843b73cf0533" category="list-text">在第三或僅非同步組態中，非同步關係清理是手動的。</block>
   <block id="4f948c7d9b938caffddb97c0d0f8394c" category="list-text">從 ONTAP System Manager 觸發容錯移轉。在 ONTAP tools 之外設定 ONTAP Mediator。</block>
-  <block id="9aab7c7432877f8502ee090eee7abdc2" category="paragraph">從 ONTAP tools 10.5 升級時，現有的主機叢集保護組態將移轉至精細的資料存放區保護格式。升級後，請驗證保護群組和資料存放區成員關係。</block>
   <block id="7f6120908ce94360b9a41585185a9108" category="inline-link-macro">使用 ONTAP tools 保護叢集中的資料存放區</block>
   <block id="c1b7f8376d6217ab8332bd89d741aae1" category="list-text"><block ref="c1b7f8376d6217ab8332bd89d741aae1" category="inline-link-macro-rx"></block></block>
   <block id="aa80a3d8f54a41c521c248368b7227fa" category="summary">在受保護站點和恢復站點之間對應資料夾，以準備 VMware Live Site Recovery 容錯移轉工作流程。</block>
@@ -2854,7 +2848,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="a6e5efc1d16eb34745bb75a77226d583" category="list-text">啟用低 RPO 備份，並確保在 vSphere Client 介面中可見一個備份。升級前請下載備份資料夾。</block>
   <block id="bbac914a781e9dc109fcf5bab03d2c11" category="list-text">找到主要 ONTAP tools VM 並啟動 Web 主控台。</block>
   <block id="034b9e64b5ae759244f5eecd018ed221" category="list-text">閘道憑證已續期，有效期限為 1 年。當您移除先前的 SRA 介面卡並上傳新的 10.6 介面卡時，SRA 憑證的有效期將從 10 年變為 1 年。</block>
-  <block id="9b63ec403219c80e52e7dae8c3a61d23" category="list-text">如果主機叢集保護設定存在於 10.5 或更早版本中，ONTAP tools 會在升級期間建立一個分隔的 *Cluster protection configuration* 導覽項目。</block>
   <block id="1e271ba64f48de298f8de2968b529b3a" category="paragraph">升級至 ONTAP tools for VMware vSphere 10.6 之後：</block>
   <block id="7e07903e1b79156be237c3f4f9194ffe" category="list-text">移除 ONTAP tools 10.4 或 10.5 SRA 介面卡，並上傳 10.6 SRA 介面卡 tar 檔案。</block>
   <block id="2d96dfea27764d22dbafb174af190a36" category="list-text">開啟 *Cluster protection configuration*，並驗證現有主機叢集保護設定是否存在且映射正確。</block>
@@ -3138,4 +3131,18 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="4db51794b7899f8781b7e514861f9c54" category="paragraph">如果伺服器可連線，則問題與伺服器可連線性無關。如果伺服器確實無法連線，請將其從 ONTAP tools Manager 中移除，並提供可連線的 NTP 伺服器作為替代方案。</block>
   <block id="58d802804e6af6816051d4101a78cd4b" category="list-text">如果在 NTP 升級過程中因其他問題導致升級失敗，請檢查下列日誌：</block>
   <block id="f5589bd09ceeb2368f74d5725fa2dcc7" category="list-text"><block ref="f5589bd09ceeb2368f74d5725fa2dcc7" category="inline-link-rx"></block></block>
+  <block id="345a87b70523fdb5dd79038a7e873845" category="admonition">請勿在 vCenter Server 的 VMware vApp 中部署 ONTAP tools 虛擬機器。</block>
+  <block id="b86439358b560760313055a90bd5812c" category="list-text">移除已加入 ONTAP tools for VMware vSphere 的 vCenter Server 執行個體。請參閱 <block ref="71e9ea3cb5165d1231d572643ddb35cb" category="inline-link-macro-rx"></block>。</block>
+  <block id="26adf559940dd20d02f0bdec74d0cc28" category="paragraph">當您移除 vCenter Server 執行個體時，ONTAP tools 可以指南您完成所需的清理工作。如果在 *移除 vCenter* 對話方塊中出現提示，請選取 *從此 vCenter Server 移除所有儲存設備項目* 和 *我瞭解關聯的資料存放區將不再由 ONTAP tools 代管*，然後選取 *強制刪除*。</block>
+  <block id="c4d716c88a05e0d00551ac8ea6da15a0" category="paragraph">在使用 *Force delete* 之前，請確保所有 vVols 資料儲存都已移除或遷移，所有受保護的資料儲存都已取消保護，且沒有探索作業正在執行。</block>
+  <block id="7eb5227d0f36e7346167a93b856b0fa7" category="paragraph">如果在刪除期間無法連線至 vCenter Server，ONTAP tools 只會移除 vCenter Server 記錄。您必須手動從 VMware vCenter Server 取消註冊外掛。</block>
+  <block id="38fbd92f67469b25016c6a83c8a94171" category="list-text">在同一主機叢集中，對不同的資料儲存群組採用不同的保護方法。</block>
+  <block id="a56b4b9b7649b05781df3dab1c45651b" category="list-text">將多個保護設定指派給單一主機叢集。</block>
+  <block id="4bf2e3d77c651d3fb73aa4b90e436796" category="list-text">在同一儲存設備虛擬機器（SVM）、不同 SVM 或不同儲存設備系統中設定保護設定。</block>
+  <block id="20d81ee1f8e1f28cd4b2b539fbf352ee" category="list-text">讓主機叢集中的某些資料儲存區保持不受保護。</block>
+  <block id="e472ea4c0e1a3e6d590c155e00c141db" category="list-text">移除個別資料儲存區的保護。</block>
+  <block id="aa398ba1f850bdbde5e4cba259662cc0" category="list-text">在配置過程中保護資料儲存。</block>
+  <block id="47d11b58a635ad0e3f489449a130c627" category="paragraph">當您從 ONTAP tools for VMware vSphere 10.5 升級時，現有的主機叢集保護設定會自動轉換為精細的資料存放區保護。升級後，請驗證保護群組和資料存放區成員資格。</block>
+  <block id="c3f0c8b4da16f3b290431c535f98a9f7" category="list-text">如果 ONTAP tools for VMware vSphere 10.5 或更早版本中存在主機叢集保護設定，ONTAP tools 會將其轉換為精細的資料存放區保護，並建立一個分隔的 *叢集保護組態* 導覽項目。</block>
+  <block id="744e01cbfcb5b5f86287c1c9beac6075" category="list-text">如需精細資料儲存區保護能力與資格的詳細資訊，請參閱<block ref="9a8072c85e6a05ec4ad84b9967b3caa6" category="inline-link-macro-rx"></block>。</block>
 </blocks>

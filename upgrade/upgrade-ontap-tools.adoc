@@ -84,7 +84,7 @@ summary: 使用必要的預檢查和備份步驟，將 VMware vSphere 的 ONTAP 
 .. 遠端插件已升級
 .. ONTAP和 vCenter Server 憑證經過驗證並新增至ONTAP工具中
 .. 已啟用備份
-.. 如果主機叢集保護設定存在於 10.5 或更早版本中，ONTAP tools 會在升級期間建立一個分隔的 *Cluster protection configuration* 導覽項目。
+.. 如果 ONTAP tools for VMware vSphere 10.5 或更早版本中存在主機叢集保護設定，ONTAP tools 會將其轉換為精細的資料存放區保護，並建立一個分隔的 *叢集保護組態* 導覽項目。
 
 
 
@@ -96,6 +96,7 @@ summary: 使用必要的預檢查和備份步驟，將 VMware vSphere 的 ONTAP 
 * 移除 ONTAP tools 10.4 或 10.5 SRA 介面卡，並上傳 10.6 SRA 介面卡 tar 檔案。
 * 上傳 SRA 適配器 tar 檔案後，執行安裝指令。然後，重新掃描 SRA 適配器以更新 VMware Site Recovery Storage Replication Adapters 頁面。
 * 開啟 *Cluster protection configuration*，並驗證現有主機叢集保護設定是否存在且映射正確。
+* 如需精細資料儲存區保護能力與資格的詳細資訊，請參閱link:../protect/granular-datastore-protection-concept.html["ONTAP tools 中精細資料存放區保護資格標準"]。
 
 
 升級後您可以：

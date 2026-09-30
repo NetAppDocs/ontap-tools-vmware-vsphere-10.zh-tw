@@ -117,7 +117,8 @@ ONTAP工具會在 vCenter 憑證即將到期或已過期時通知您。更新 vC
 +
 [listing]
 ----
-echo | openssl s_client connect <vcenter>:443 2>&1 | sed -n '/-BEGIN CERTIFICATE/,/END CERTIFICATE/p'
+echo | openssl s_client -connect <vcenter>:443 2>&1 | sed -n '/-BEGIN CERTIFICATE/,/END CERTIFICATE/p'
+// OTVDOC-378 updates
 ----
 . 確認憑證為 Base 64 ASCII 格式，並包含起始行和結束行，例如：
 +
