@@ -14,7 +14,7 @@ summary: 透過在兩個目的地 ONTAP 叢集之間使用同步和非同步複�
 使用連出保護來保護跨兩個目的地 ONTAP 叢集的一致性群組。ONTAP tools 透過建立、編輯和刪除 SnapMirror 主動同步保護工作流程來維護同步關係，而 VMware Live Site Recovery 透過容錯移轉和重新保護工作流程來維護非同步關係。
 
 
-NOTE: SVM 使用者不支援扇出功能。
+NOTE: SVM 使用者不支援扇出保護。扇出保護除了 AutomatedFailOverDuplex 關係外，還需要非同步關係，而 ONTAP 工具不支援為使用 SVM 使用者憑證新增的儲存設備後端建立非同步保護。
 
 若要設定扇出保護，請將三個站點叢集和 SVM 對等連接。
 

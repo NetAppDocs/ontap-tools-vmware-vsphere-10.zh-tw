@@ -2010,7 +2010,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="fd1fec484c752a0ad18686c59991b35b" category="list-text">使用 Array Manager 精靈將陣列新增至 VMware Live Site Recovery 時，請確保在 *NFS Addresses* 欄位中指定了 NFS 匯出所在的有效 IP 位址。請勿在 *NFS Addresses* 欄位中使用 NFS 主機名稱或 FQDN。</block>
   <block id="35dd3c34f9d3e59e75b956c68339650a" category="list-text">您應該已經設定好 vCenter Server 實例並配置 ESXi 主機。</block>
   <block id="c7ea02d052f1b1d128bc360d103cdf7e" category="list-text">使用 URL 登入 VMware Live Site Recovery 裝置管理介面:<block ref="2a7ebd2b210bd0162c7e7a99192bd2aa" prefix=" " category="inline-code"></block>,然後前往 VMware Live Site Recovery 裝置管理介面中的「儲存複製適配器」。</block>
-  <block id="e9f5fe18bf493055ffe64fce990aa01c" category="admonition">SVM 使用者不支援扇出功能。</block>
   <block id="55f4391cb93210149bb7ca85177e180e" category="list-text">選取新的預留位置資料存放區。分階段保護的預留位置資料存放區選取條件如下：</block>
   <block id="579c905a6e5880a07ad75a967ef305ce" category="list-text">如果需要將佔位資料儲存區包含在主機叢集中，請在設定 SnapMirror 主動式同步保護之前將其新增至 VMware Live Site Recovery 應用裝置。透過此設定，您可以將佔位資料儲存區排除在保護範圍之外。</block>
   <block id="bb77456a0c0176e391a7fcc54c7d640c" category="paragraph">「資料夾對應」頁面會顯示受保護站台資源和還原站台資源。您可以針對環境中的其他資料夾執行相同的步驟。</block>
@@ -3237,4 +3236,5 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="b9b1d3880586c1123a9bd1eb1d0efc3d" category="paragraph">僅支援從特定 ONTAP tools 9.x 版本進行移轉。移轉路徑取決於您的環境是否使用 vVols：使用 vVols 的環境會移轉 VASA Provider 並更新 SRA，而僅使用 NFS 和 VMFS 資料儲存的環境則移除 9.x 部署並部署 10.x。使用 NVMe/FC 的 vVols 資料儲存在移轉後將無法運作，因為 ONTAP tools 10.x 僅支援搭配 VMFS 資料儲存的 NVMe-oF。如需支援的來源版本和步驟，請參閱 <block ref="27c624a79bb0117c5523d04d3b8af0f1" category="inline-link-macro-rx"></block>。</block>
   <block id="ea4b665c1a45f1eeb347dcc5ac156f2d" category="paragraph-title">我可以使用 REST API 自動化 ONTAP tools 作業嗎？</block>
   <block id="ace000412a4686f2d39bcff385c7f9a9" category="paragraph">是的。ONTAP tools 提供用於自動化的 REST API，與 ONTAP 叢集 REST API 分隔。API 存取使用 ONTAP tools IP 位址和連接埠 8443；使用 ONTAP tools Manager 認證進行驗證以取得存取權杖，然後在<block ref="27e609fa34c63bdd66a44eac9027c817" prefix=" " category="inline-code"></block>標頭中傳送權杖。長時間執行的作業可以非同步執行，並傳回要監控的作業。請參閱 <block ref="d6e36bb958210663cc4b017ad9ad5fc2" category="inline-link-macro-rx"></block> 和 <block ref="e80b3414f41f200b08ca92f57c0602dd" category="inline-link-macro-rx"></block> 以開始使用。</block>
+  <block id="cb0bf506e37053e61b7bc79a19047980" category="admonition">SVM 使用者不支援扇出保護。扇出保護除了 AutomatedFailOverDuplex 關係外，還需要非同步關係，而 ONTAP 工具不支援為使用 SVM 使用者憑證新增的儲存設備後端建立非同步保護。</block>
 </blocks>
