@@ -1036,10 +1036,8 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="413560adb5f032ce013265b1080e4df5" category="list-text">選取電腦資源，然後選取 * 下一步 * 。（可選）選中複選框以 * 自動啓動已部署的 VM* 。</block>
   <block id="fc670824c9b9087edaedbd8931be914a" category="doc">移除 FlexVol Volume</block>
   <block id="fde79a3ad6359be293ba5687504ff1e1" category="inline-link">移除並重新登錄 VM 和 VM 範本</block>
-  <block id="0e430f76e438c52f413b9c67136dbe04" category="list-text">從 vCenter Server 移除 VM 。請參閱<block ref="c16fb322315174fa2c9720c74541cf45" category="inline-link-rx"></block>。</block>
   <block id="23829b8d6575f7cd3e20a5e92b475a9e" category="doc">解除安裝適用於 VMware vSphere 的 ONTAP 工具</block>
   <block id="82a00fc1c0ae6d437f6d942c64bee898" category="list-text">從 VMware vSphere 託管資料存放區的 ONTAP 工具移除或移動所有虛擬機器。</block>
-  <block id="4ad237c48098cfd8973e73475bded403" category="list-text">若要移除虛擬機器，請參閱<block ref="c16fb322315174fa2c9720c74541cf45" category="inline-link-rx"></block></block>
   <block id="cdb9fe2a322209ab095ba01e8388697d" category="list-text">從 VMware Live Site Recovery 移除 SRA 介面卡：</block>
   <block id="1435a5cf1efdb19e83d0f140a2ca4f4f" category="list-text">以管理員身分使用連接埠 5480 登入 VMware Live Site Recovery 應用裝置管理介面。</block>
   <block id="2ec2edd0a7db2ac9b3f23b9db6dda124" category="list-text">選取適當的 SRA 卡，然後從下拉式功能表中選取 * 刪除 * 。</block>
@@ -3237,4 +3235,6 @@ Sudo rke2-uninstall.sh （所有 VM ）。</block>
   <block id="ace000412a4686f2d39bcff385c7f9a9" category="paragraph">是的。ONTAP tools 提供用於自動化的 REST API，與 ONTAP 叢集 REST API 分隔。API 存取使用 ONTAP tools IP 位址和連接埠 8443；使用 ONTAP tools Manager 認證進行驗證以取得存取權杖，然後在<block ref="27e609fa34c63bdd66a44eac9027c817" prefix=" " category="inline-code"></block>標頭中傳送權杖。長時間執行的作業可以非同步執行，並傳回要監控的作業。請參閱 <block ref="d6e36bb958210663cc4b017ad9ad5fc2" category="inline-link-macro-rx"></block> 和 <block ref="e80b3414f41f200b08ca92f57c0602dd" category="inline-link-macro-rx"></block> 以開始使用。</block>
   <block id="cb0bf506e37053e61b7bc79a19047980" category="admonition">SVM 使用者不支援扇出保護。扇出保護除了 AutomatedFailOverDuplex 關係外，還需要非同步關係，而 ONTAP 工具不支援為使用 SVM 使用者憑證新增的儲存設備後端建立非同步保護。</block>
   <block id="f12b92f1d5668f1f94a0ad1f11f6cfe8" category="list-text"><block ref="c3933049d26fccba0396e7760f0fba06" prefix="" category="inline-code"></block></block>
+  <block id="885d21dec9edfd9e47c0de1b52512a21" category="list-text">從 vCenter Server 中移除 VM。請參閱<block ref="f91a993b6f6c788bbf2a6ee8baba0206" category="inline-link-rx"></block>。</block>
+  <block id="6e0fe697d4f7df604cb13a3a0b92121e" category="list-text">若要移除虛擬機器，請參閱<block ref="f91a993b6f6c788bbf2a6ee8baba0206" category="inline-link-rx"></block></block>
 </blocks>
